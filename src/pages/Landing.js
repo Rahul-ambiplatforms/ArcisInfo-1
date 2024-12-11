@@ -592,8 +592,7 @@ function Landing() {
                 />
               </HStack>
             </Box>
-
-            {/* Navigation Links */}
+            {/* Navigation Links
             <HStack
               spacing={{ base: 4, md: 6 }}
               divider={<Divider orientation="vertical" borderColor="white" />}
@@ -618,7 +617,7 @@ function Landing() {
               <Link href="#" isExternal _hover={{ textDecoration: "none" }}>
                 WARRANTY POLICY
               </Link>
-            </HStack>
+            </HStack> */}
           </Flex>
 
           <Text textAlign="center" mt={4} fontSize="sm" color="white">

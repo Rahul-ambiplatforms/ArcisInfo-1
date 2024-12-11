@@ -22,20 +22,7 @@ function Header() {
           h="24px"
         />
       </Flex>
-      <Flex gap="4">
-        <Link href="#" fontSize="sm">
-          Privacy Policy
-        </Link>
-        <Link href="#" fontSize="sm">
-          Terms of Services
-        </Link>
-        <Link href="#" fontSize="sm">
-          Warranty Service
-        </Link>
-        <Link href="#" fontSize="sm">
-          Warranty Policy
-        </Link>
-      </Flex>
+
       <Button
         size="sm"
         variant={"solid"}
