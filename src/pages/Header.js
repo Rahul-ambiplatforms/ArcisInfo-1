@@ -34,6 +34,15 @@ function Header() {
         <Button
           size={{ base: "xs", md: "sm" }}
           variant={"solid"}
+          // rightIcon={<DownloadIcon />}
+          color={"black"}
+          onClick={() => (window.location.href = "https://agent.arcisai.io/")}
+        >
+          Visual Bot Demo
+        </Button>
+        <Button
+          size={{ base: "xs", md: "sm" }}
+          variant={"solid"}
           rightIcon={<DownloadIcon />}
           color={"black"}
           onClick={handleDownlaod}
