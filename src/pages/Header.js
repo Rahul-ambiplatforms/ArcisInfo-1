@@ -44,7 +44,7 @@ function Header() {
           size={{ base: "xs", md: "sm" }}
           variant={"solid"}
           color={"black"}
-          onClick={() => (window.location.href = "https://zeta.arcisai.io/")}
+          onClick={() => (window.location.href = "https://view.arcisai.io/")}
         >
           Login
         </Button>

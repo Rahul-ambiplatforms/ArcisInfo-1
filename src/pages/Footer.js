@@ -107,7 +107,7 @@ function Footer() {
             _hover={"none"}
             w={{ base: "full", md: "auto" }}
             onClick={() =>
-              (window.location.href = "https://zeta.arcisai.io/signup")
+              (window.location.href = "https://view.arcisai.io/signup")
             }
           >
             Get Started

@@ -53,7 +53,7 @@ function Landing() {
           flexShrink={0}
           _hover={"none"}
           onClick={() =>
-            (window.location.href = "https://zeta.arcisai.io/signup")
+            (window.location.href = "https://view.arcisai.io/signup")
           }
           fontSize={["sm", "md"]} // Adjust button size for mobile
         >
