@@ -27,7 +27,9 @@ function GenAiInfo() {
     },
   ];
   return (
-    <Box w={"100%"}>
+    <Box w={"100%"} position="relative" minH="700px">
+
+
       {/* Main Flex Container */}
       <Flex
         direction={{ base: "column", lg: "row" }}
@@ -35,11 +37,15 @@ function GenAiInfo() {
         justify="space-between"
         gap={{ base: 6, lg: 0 }}
         p={{ base: 4, lg: 8 }}
+        zIndex={2}
+        position="relative"
       >
         {/* Left Section (Image with Callouts) */}
-        <Box flex={1} position="relative">
+        <Flex alignSelf="flex-start" flex={1} position="relative">
+          <Box position="absolute" zIndex={1} bg="#9678E1" width="100%" height="349px" top="25%" />
+
           {/* Image Container */}
-          <Box position="relative" height={{ base: "400px", md: "600px" }}>
+          <Box position="relative" zIndex={2}>
             <Image
               src="./images/arcisGPT.png" // Replace with actual image path
               alt="Generative AI Feature"
@@ -47,80 +53,12 @@ function GenAiInfo() {
               h="100%"
               objectFit="cover"
             />
-
-            {/* Callouts */}
-            <Box
-              position="absolute"
-              top={{ base: "2%", md: "5%" }}
-              left={{ base: "2%", md: "5%" }}
-              bg="white"
-              p={{ base: 2, md: 3 }}
-              boxShadow="md"
-              borderRadius="md"
-              maxW={{ base: "150px", sm: "200px", md: "250px" }}
-              textAlign="left"
-              zIndex="1"
-            >
-              <Text
-                fontSize={{ base: "xs", sm: "sm" }}
-                fontWeight="bold"
-                color="gray.800"
-              >
-                Smart Retrieval
-              </Text>
-              <Text fontSize={{ base: "xx-small", sm: "xs" }} color="gray.600">
-                Find moments instantly with keywords.
-              </Text>
-            </Box>
-
-            <Box
-              position="absolute"
-              top={{ base: "30%", md: "40%" }}
-              left={{ base: "5%", md: "10%" }}
-              bg="white"
-              p={{ base: 2, md: 3 }}
-              maxW="250px"
-              textAlign="left"
-              zIndex="1"
-            >
-              <Text
-                fontSize={{ base: "xs", sm: "sm" }}
-                fontWeight="bold"
-                color="gray.800"
-              >
-                Track Anything
-              </Text>
-              <Text fontSize={{ base: "xx-small", sm: "xs" }} color="gray.600">
-                Upload an image to locate and track objects.
-              </Text>
-            </Box>
-
-            <Box
-              position="absolute"
-              bottom={{ base: "2%", md: "5%" }}
-              left={{ base: "10%", md: "15%" }}
-              bg="white"
-              p={{ base: 2, md: 3 }}
-              textAlign="left"
-              zIndex="1"
-              maxW="250px"
-            >
-              <Text
-                fontSize={{ base: "xs", sm: "sm" }}
-                fontWeight="bold"
-                color="gray.800"
-              >
-                Enhanced Action/Activity Recognition
-              </Text>
-              <Text fontSize={{ base: "xx-small", sm: "xs" }} color="gray.600">
-                Detect actions or unauthorized access instantly.
-              </Text>
-            </Box>
           </Box>
-        </Box>
+        </Flex>
 
         {/* Right Section (Text and Features) */}
-        <Box flex={1} ml={{ lg: 8 }} textAlign={{ base: "center", lg: "left" }}>
+        <Box flex={1} ml={{ lg: 8 }} textAlign={{ base: "center", lg: "left" }}
+        >
           {/* Heading */}
           <Heading as="h2" size="xl" color="purple.500" mb={4}>
             Generative AI
@@ -148,7 +86,7 @@ function GenAiInfo() {
                 maxW="400px"
               >
                 <Icon as={feature.icon} boxSize={6} color="purple.500" mr={4} />
-                <Box>
+                <Box bg-test w="full">
                   <Text fontWeight="bold" fontSize="md" color="gray.800">
                     {feature.title}
                   </Text>
@@ -161,22 +99,25 @@ function GenAiInfo() {
           </Stack>
 
           {/* Second Image */}
-          <Box mt={6}>
+          <Box mt={6} zIndex={4} position="relative">
             <Image
               src="./images/camera2.png" // Replace with actual image path
               alt="Camera Feature"
               maxW={{ base: "100%", md: "80%" }}
             />
           </Box>
+
+
         </Box>
       </Flex>
-
-      {/* Full-Width Image */}
-      <Box mt={10}>
+      {/* Full-Width Image (Background) */}
+      <Box position="relative" zIndex={2} top="70%" left={0} w="100%" h="100%">
         <Image
-          src="./images/GPTStartedView.png" // Replace with actual image path
+          src="./images/GPTStartedView.png"
           alt="Generative AI Full View"
           w="100%"
+          h="100%"
+          objectFit="cover"
         />
       </Box>
     </Box>

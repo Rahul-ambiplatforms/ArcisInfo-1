@@ -10,11 +10,13 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { AiOutlineGlobal, AiOutlineOpenAI } from "react-icons/ai";
+
 import { BsJoystick } from "react-icons/bs";
 import { FaClock, FaCogs } from "react-icons/fa";
 import { FaRegCirclePlay } from "react-icons/fa6";
 import { GoThumbsup } from "react-icons/go";
 import { RiCheckboxMultipleBlankLine } from "react-icons/ri";
+import ArcisGPTWithoutBg from "./ArcisGPTWithoutBg";
 
 function MiddlePart() {
   const gridData = [
@@ -27,7 +29,7 @@ function MiddlePart() {
     },
     { icon: FaCogs, title: "Third-Party System Integration" },
     { icon: FaRegCirclePlay, title: "Real-Time Playback and Live View" },
-    { icon: AiOutlineOpenAI, title: "GPT-Powered User Interaction" },
+    { icon: ArcisGPTWithoutBg, title: "GPT-Powered User Interaction" },
     { icon: BsJoystick, title: "PTZ (Pan-Tilt-Zoom) Control" },
   ];
 

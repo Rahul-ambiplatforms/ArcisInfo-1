@@ -1,17 +1,22 @@
 import { Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 
 function Landing() {
+  const [imageLoaded, setImageLoaded] = useState(false);
   return (
     <Flex
       direction={["column", "row"]}
       align="center"
       justify="space-around"
       p={{ base: 4, md: 8 }}
-      bg={{
-        base: "linear-gradient(to bottom, white 66%, #9678E1 34%)",
-        md: "linear-gradient(to right, white 68%, #9678E1 32%)",
-      }}
+      bg={
+        imageLoaded
+          ? {
+              base: "linear-gradient(to bottom, white 66%, #9678E1 34%)",
+              md: "linear-gradient(to right, white 68%, #9678E1 32%)",
+            }
+          : "white"
+      }
       w={"100%"}
     >
       <Box flex="1" textAlign={["center", "left"]} p={{ base: 4, md: 0 }}>
@@ -61,7 +66,11 @@ function Landing() {
         </Button>
       </Box>
       <Flex flex="1" justify="center" mt={["6", "0"]}>
-        <Image src="./images/DeviceImage.png" alt="Laptop" />
+        <Image
+          src="./images/DeviceImage.png"
+          alt="Laptop"
+          onLoad={() => setImageLoaded(true)}
+        />
       </Flex>
     </Flex>
   );
