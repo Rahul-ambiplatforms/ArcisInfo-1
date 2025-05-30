@@ -98,7 +98,6 @@ function Header() {
         <Menu>
           <MenuButton
             as={Button}
-            // size={buttonSize}
             size={{ base: "xs", md: "sm" }}
             rightIcon={<ChevronDownIcon />}
             bg="white"
@@ -109,20 +108,20 @@ function Header() {
           >
             Download App
           </MenuButton>
-          <MenuList zIndex={10}>
+          <MenuList zIndex={10} minW="auto" w="150px" p={0}>
             <MenuItem
               as="a"
               href="https://play.google.com/store/apps/details?id=com.arcisadiance.app"
-              icon={<Icon as={FaGooglePlay} color="green.500" />}
+              icon={<Icon as={FaGooglePlay} color="green.500" boxSize={4}/>}
             >
-              Download from Play Store
+               Android App
             </MenuItem>
             <MenuItem
               as="a"
               href="https://apps.apple.com/in/app/arcisai/id6743403804"
-              icon={<Icon as={FaApple} color="black" />}
+              icon={<Icon as={FaApple} color="black" boxSize={4} />}
             >
-              Download from App Store
+              iOS App
             </MenuItem>
           </MenuList>
         </Menu>
