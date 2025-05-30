@@ -1,4 +1,13 @@
-import { Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Avatar,
+  AvatarGroup,
+  Image,
+  Text,
+} from "@chakra-ui/react";
 import React, { useState } from "react";
 
 function Landing() {
@@ -9,14 +18,11 @@ function Landing() {
       align="center"
       justify="space-around"
       p={{ base: 4, md: 8 }}
-      bg={
-        imageLoaded
-          ? {
-              base: "linear-gradient(to bottom, white 66%, #9678E1 34%)",
-              md: "linear-gradient(to right, white 68%, #9678E1 32%)",
-            }
-          : "white"
-      }
+      z="10"
+      bg={{
+        base: "linear-gradient(to bottom, white 66%, #9678E1 34%)",
+        md: "linear-gradient(to right, white 68%, #9678E1 32%)",
+      }}
       w={"100%"}
     >
       <Box flex="1" textAlign={["center", "left"]} p={{ base: 4, md: 0 }}>
@@ -48,6 +54,29 @@ function Landing() {
           solution for organizations seeking advanced, reliable, and efficient
           surveillance systems.
         </Text>
+        <Box mb="6">
+          <Flex>
+            {[
+              "https://bit.ly/kent-c-dodds",
+              "https://bit.ly/ryan-florence",
+              "https://bit.ly/prosper-baba",
+              // "https://bit.ly/dev-john-doe",
+              // "https://bit.ly/code-jane-smith",
+              "https://bit.ly/kent-c-dodds",
+              "https://bit.ly/sage-adebayo",
+              "https://bit.ly/ryan-florence",
+            ].map((src, index) => (
+              <Box
+                key={index}
+                ml={index === 0 ? "0" : "-15px"} // Adjust this for overlap amount
+                zIndex={10 - index} // Maintain layering
+              >
+                <Avatar size="md" src={src} />
+              </Box>
+            ))}
+          </Flex>
+        </Box>
+
         <Button
           variant={"solid"}
           bgColor={"black"}
@@ -61,16 +90,21 @@ function Landing() {
             (window.location.href = "https://view.arcisai.io/signup")
           }
           fontSize={["sm", "md"]} // Adjust button size for mobile
+          fontWeight="700"
+          lineHeight="24px"
+          textTransform="uppercase"
         >
           Get Started
         </Button>
       </Box>
-      <Flex flex="1" justify="center" mt={["6", "0"]}>
-        <Image
-          src="./images/DeviceImage.png"
-          alt="Laptop"
-          onLoad={() => setImageLoaded(true)}
-        />
+      <Flex
+        flex="1"
+        justify="center"
+        mt={["6", "0"]}
+        position="relative"
+        zIndex={10}
+      >
+        <Image src="./images/DeviceImage.png" alt="Laptop" />
       </Flex>
     </Flex>
   );
