@@ -43,8 +43,8 @@ function Footer() {
   };
   const [isLoading, setIsLoading] = useState(false);
   const toast = useToast();
-  // const BACKEND_URL = 'https://vmukti.com/backend/api/send-email'
-  const BACKEND_URL = "http://localhost:5000/api/send-email-arcis";
+  const BACKEND_URL = 'https://vmukti.com/backend/api/send-email-arcis';
+  // const BACKEND_URL = "http://localhost:5000/api/send-email-arcis";
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -150,7 +150,7 @@ function Footer() {
         <VStack spacing={4} maxW="500px" mx="auto" w="100%">
           <FormControl>
             {/* <FormLabel fontSize={{ base: "sm", md: "md" }}>Name</FormLabel> */}
-            <Input placeholder="Name" name="name" onChange={handleChange} />
+            <Input placeholder="Name" name="name" onChange={handleChange} value={formData.name} />
           </FormControl>
           <FormControl>
             {/* <FormLabel fontSize={{ base: "sm", md: "md" }}>
@@ -211,13 +211,13 @@ function Footer() {
           direction={{ base: "column", md: "row" }}
           textAlign={{ base: "center", md: "left" }}
         >
-          <Box color="purple.500" mb={{ base: 4, md: 0 }}>
-            <Flex justifyContent="center" alignItems="center">
-              <Text as="span" fontWeight="700" fontSize="40px" mr={2}>
+          <Flex color="purple.500" mb={{ base: 4, md: 0 }} gap={2} direction={"column"}>
+            <Flex justifyContent="center" alignItems="center" gap={2} direction={{ base: "column", md: "row" }}>
+              <Text fontWeight="700" fontSize={{base:"24px",sm:"28px",md:"40px"}}>
                 Secure
               </Text>
               <Text
-                fontSize="32px"
+                fontSize={{base:"16px",sm:"24px",md:"32px"}}
                 height="100%"
                 fontWeight="400"
                 color="black"
@@ -227,14 +227,14 @@ function Footer() {
             </Flex>
 
             <Text
-              fontSize="40px"
+              fontSize={{base:"24px",sm:"28px",md:"40px"}}
               display="block"
               color="purple.500"
               fontWeight="700"
             >
               AI-Powered Surveillance
             </Text>
-          </Box>
+          </Flex>
           <Button
             variant={"solid"}
             bgColor={"black"}
@@ -306,13 +306,14 @@ function Footer() {
             <Image src="./images/arcisGPTcolorWhite.png" alt="Logo" w="120px" />
 
             {/* Navigation Links */}
-            {/* <HStack
-              spacing={{ base: 3, md: 6 }}
+            {/* <VStack
+              // spacing={{ base: 3, md: 6 }}
               mt={{ base: 4, md: 0 }}
               fontSize="14px"
               color="white"
-            >
-              <Link href="#" _hover={{ textDecoration: "none" }}>
+              textAlign={"right"}
+            > */}
+            {/* <Link href="#" _hover={{ textDecoration: "none" }}>
                 OUR PRODUCTS
               </Link>
               <Link href="#" _hover={{ textDecoration: "none" }}>
@@ -326,8 +327,15 @@ function Footer() {
               </Link>
               <Link href="#" _hover={{ textDecoration: "none" }}>
                 WARRANTY POLICY
-              </Link>
-            </HStack> */}
+              </Link> */}
+            {/* <span>Contact us at :</span> */}
+            <Flex color="white" gap={2} direction={{ base: "row", md: "column" }}
+              mt={{ base: 4, md: 0 }} textAlign={{ base: "center", md: "right" }}
+            >
+              <Text >marketing@arcisai.io</Text>
+              <Text >(+91) 96877 79999</Text>
+            </Flex>
+            {/* </VStack> */}
           </Flex>
 
           {/* Divider */}
