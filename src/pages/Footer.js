@@ -13,6 +13,7 @@ import {
   VStack,
   useToast,
   Divider,
+  Select,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
@@ -24,6 +25,11 @@ function Footer() {
     name: "",
     phone: "",
     email: "",
+    company: "",
+    location: "",
+    camerasFor: "",
+    customerQuantity: "",
+    leadType: "Arcis Website", // Static value
   });
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -43,17 +49,26 @@ function Footer() {
   };
   const [isLoading, setIsLoading] = useState(false);
   const toast = useToast();
-  const BACKEND_URL = 'https://vmukti.com/backend/api/send-email-arcis';
+
+  const BACKEND_URL = "https://vmukti.com/backend/api/send-email-arcis";
   // const BACKEND_URL = "http://localhost:5000/api/send-email-arcis";
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Email validation regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    // Phone validation: only digits, 10-15 digits
+    // Phone validation: only digits, 10 digits
     const phoneRegex = /^\d{10}$/;
 
-    if (!formData.name || !formData.email || !formData.phone) {
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.phone ||
+      !formData.company ||
+      !formData.location ||
+      !formData.camerasFor
+    ) {
       toast({
         title: "Missing required fields",
         description: "Please fill in all required fields",
@@ -78,7 +93,7 @@ function Footer() {
     if (!phoneRegex.test(formData.phone)) {
       toast({
         title: "Invalid Phone Number",
-        description: "Please enter a valid phone number (10-15 digits).",
+        description: "Please enter a valid 10-digit phone number.",
         status: "error",
         duration: 5000,
         isClosable: true,
@@ -112,6 +127,11 @@ function Footer() {
           name: "",
           phone: "",
           email: "",
+          company: "",
+          location: "",
+          camerasFor: "",
+          customerQuantity: "",
+          leadType: "Arcis Website",
         });
       } else {
         throw new Error(data.error || "Failed to send message");
@@ -135,61 +155,130 @@ function Footer() {
       {/* Contact Section */}
       <Box
         as="section"
-        textAlign="center"
-        py={{ base: 6, md: 10 }}
-        px={{ base: 3, md: 5 }}
+        py={{ base: 10, md: 16 }}
+        px={{ base: 4, md: 8 }}
+        bg="gray.50"
       >
-        <Text
-          fontSize={{ base: "2xl", md: "48px" }}
-          fontWeight="700"
-          color={"Get in touch"}
-          mb={5}
+        <Box
+          maxW="600px"
+          mx="auto"
+          bg="white"
+          p={{ base: 6, md: 10 }}
+          borderRadius="xl"
+          boxShadow="lg"
         >
-          Get in touch
-        </Text>
-        <VStack spacing={4} maxW="500px" mx="auto" w="100%">
-          <FormControl>
-            {/* <FormLabel fontSize={{ base: "sm", md: "md" }}>Name</FormLabel> */}
-            <Input placeholder="Name" name="name" onChange={handleChange} value={formData.name} />
-          </FormControl>
-          <FormControl>
-            {/* <FormLabel fontSize={{ base: "sm", md: "md" }}>
-              Phone number
-            </FormLabel> */}
-            <Input
-              placeholder="Phone number"
-              name="phone"
-              onChange={handleChange}
-              value={formData.phone}
-              maxLength={10}
-            />
-          </FormControl>
-          <FormControl>
-            {/* <FormLabel fontSize={{ base: "sm", md: "md" }}>Email</FormLabel> */}
-            <Input
-              placeholder="Email"
-              name="email"
-              onChange={handleChange}
-              value={formData.email}
-            />
-          </FormControl>
-          <Button
-            variant={"solid"}
-            bgColor={"black"}
-            onClick={handleSubmit}
-            color={"white"}
-            type="submit"
-            isLoading={isLoading}
-            h={"34px"}
-            p={"10px 40px"}
-            gap={"8px"}
-            flexShrink={0}
-            _hover={"none"}
-            w={{ base: "full", md: "auto" }}
+          <Text
+            fontSize={{ base: "3xl", md: "4xl" }}
+            fontWeight="bold"
+            color="gray.800"
+            mb={6}
+            textAlign="center"
           >
-            Send
-          </Button>
-        </VStack>
+            Get in touch
+          </Text>
+          <VStack spacing={5} as="form" onSubmit={handleSubmit}>
+            <FormControl isRequired>
+              <FormLabel>Name</FormLabel>
+              <Input
+                placeholder="Enter your name"
+                name="name"
+                onChange={handleChange}
+                value={formData.name}
+                focusBorderColor="purple.500"
+                borderRadius="md"
+              />
+            </FormControl>
+            <FormControl isRequired>
+              <FormLabel>Phone number</FormLabel>
+              <Input
+                placeholder="Enter your phone number"
+                name="phone"
+                onChange={handleChange}
+                value={formData.phone}
+                maxLength={10}
+                focusBorderColor="purple.500"
+                borderRadius="md"
+              />
+            </FormControl>
+            <FormControl isRequired>
+              <FormLabel>Email</FormLabel>
+              <Input
+                placeholder="Enter your email"
+                name="email"
+                type="email"
+                onChange={handleChange}
+                value={formData.email}
+                focusBorderColor="purple.500"
+                borderRadius="md"
+              />
+            </FormControl>
+            <FormControl isRequired>
+              <FormLabel>Company</FormLabel>
+              <Input
+                placeholder="Enter your company name"
+                name="company"
+                onChange={handleChange}
+                value={formData.company}
+                focusBorderColor="purple.500"
+                borderRadius="md"
+              />
+            </FormControl>
+            <FormControl isRequired>
+              <FormLabel>Location</FormLabel>
+              <Input
+                placeholder="Enter your location"
+                name="location"
+                onChange={handleChange}
+                value={formData.location}
+                focusBorderColor="purple.500"
+                borderRadius="md"
+              />
+            </FormControl>
+            <FormControl isRequired>
+              <FormLabel>I want cameras for</FormLabel>
+              <Select
+                placeholder="Select an option"
+                name="camerasFor"
+                onChange={handleChange}
+                value={formData.camerasFor}
+                focusBorderColor="purple.500"
+                borderRadius="md"
+              >
+                <option value="Office">Office</option>
+                <option value="Factory">Factory</option>
+                <option value="Home">Home</option>
+                <option value="Other">Other</option>
+              </Select>
+            </FormControl>
+            <FormControl>
+              <FormLabel>Customer Quantity (Optional)</FormLabel>
+              <Input
+                placeholder="e.g., 10-20"
+                name="customerQuantity"
+                onChange={handleChange}
+                value={formData.customerQuantity}
+                focusBorderColor="purple.500"
+                borderRadius="md"
+              />
+            </FormControl>
+            <Button
+              type="submit"
+              colorScheme="purple"
+              isLoading={isLoading}
+              w="full"
+              py={6}
+              fontSize="lg"
+              mt={4}
+              borderRadius="md"
+              _hover={{
+                bgGradient: "linear(to-r, purple.500, pink.500)",
+                boxShadow: "lg",
+              }}
+            >
+              Send Message
+            </Button>
+          </VStack>
+        </Box>
       </Box>
 
       {/* Footer Section */}
@@ -211,13 +300,26 @@ function Footer() {
           direction={{ base: "column", md: "row" }}
           textAlign={{ base: "center", md: "left" }}
         >
-          <Flex color="purple.500" mb={{ base: 4, md: 0 }} gap={2} direction={"column"}>
-            <Flex justifyContent="center" alignItems="center" gap={2} direction={{ base: "column", md: "row" }}>
-              <Text fontWeight="700" fontSize={{base:"24px",sm:"28px",md:"40px"}}>
+          <Flex
+            color="purple.500"
+            mb={{ base: 4, md: 0 }}
+            gap={2}
+            direction={"column"}
+          >
+            <Flex
+              justifyContent="center"
+              alignItems="center"
+              gap={2}
+              direction={{ base: "column", md: "row" }}
+            >
+              <Text
+                fontWeight="700"
+                fontSize={{ base: "24px", sm: "28px", md: "40px" }}
+              >
                 Secure
               </Text>
               <Text
-                fontSize={{base:"16px",sm:"24px",md:"32px"}}
+                fontSize={{ base: "16px", sm: "24px", md: "32px" }}
                 height="100%"
                 fontWeight="400"
                 color="black"
@@ -227,7 +329,7 @@ function Footer() {
             </Flex>
 
             <Text
-              fontSize={{base:"24px",sm:"28px",md:"40px"}}
+              fontSize={{ base: "24px", sm: "28px", md: "40px" }}
               display="block"
               color="purple.500"
               fontWeight="700"
@@ -329,11 +431,15 @@ function Footer() {
                 WARRANTY POLICY
               </Link> */}
             {/* <span>Contact us at :</span> */}
-            <Flex color="white" gap={2} direction={{ base: "row", md: "column" }}
-              mt={{ base: 4, md: 0 }} textAlign={{ base: "center", md: "right" }}
+            <Flex
+              color="white"
+              gap={2}
+              direction={{ base: "row", md: "column" }}
+              mt={{ base: 4, md: 0 }}
+              textAlign={{ base: "center", md: "right" }}
             >
-              <Text >marketing@arcisai.io</Text>
-              <Text >(+91) 96877 79999</Text>
+              <Text>marketing@arcisai.io</Text>
+              <Text>(+91) 96877 79999</Text>
             </Flex>
             {/* </VStack> */}
           </Flex>
