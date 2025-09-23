@@ -1,60 +1,74 @@
-// ContactUs.js
 import React, { useState } from "react";
 import {
   Box,
-  Flex,
-  Heading,
+  Button,
+  FormControl,
+  FormLabel,
+  Input,
+  Select,
   Text,
   VStack,
-  Input,
-  Textarea,
-  Select,
-  Checkbox,
   useToast,
-  Button,
+  Textarea, // Imported Textarea
+  Checkbox, // Imported Checkbox
 } from "@chakra-ui/react";
-import { Helmet } from "react-helmet-async";
+// If you are using react-router-dom, uncomment the next line
+// import { useNavigate } from "react-router-dom";
 
-// const BACKEND_URL = "https://vmukti.com/backend/api/send-email-arcis";
-const BACKEND_URL = "http://localhost:5000/api/send-email-arcis";
-
-const ContactUs = () => {
+const ContactSection = () => {
+  // const navigate = useNavigate(); // Kept for context, uncomment if needed
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     company: "",
     location: "",
-    clientCategory: "",
+    clientCategory: "", // Added from ContactUs.js
     camerasFor: "",
-    message: "",
-    customerQuantity: "",
+    message: "", // Added from ContactUs.js
+    customerQuantity: "", // This will be used for "Number of Cameras Needed"
     leadType: "Arcis Website",
-    updates: false,
+    updates: false, // Added from ContactUs.js
   });
-
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData({
-      ...formData,
-      [name]: type === "checkbox" ? checked : value,
-    });
-  };
 
   const [isLoading, setIsLoading] = useState(false);
   const toast = useToast();
 
+  const BACKEND_URL = "https://vmukti.com/backend/api/send-email-arcis";
+  // const BACKEND_URL = "http://localhost:5000/api/send-email-arcis";
+
+  // This handler now supports phone number formatting and checkboxes
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    if (name === "phone") {
+      const digitsOnly = value.replace(/\D/g, "").slice(0, 10);
+      setFormData((prev) => ({
+        ...prev,
+        [name]: digitsOnly,
+      }));
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        [name]: type === "checkbox" ? checked : value,
+      }));
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const phoneRegex = /^\d{10}$/;
+
+    // Updated validation to include new required fields
     if (
       !formData.name ||
       !formData.email ||
       !formData.phone ||
       !formData.company ||
       !formData.location ||
-      !formData.camerasFor
+      !formData.camerasFor ||
+      !formData.clientCategory // Added validation for clientCategory
     ) {
       toast({
         title: "Missing required fields",
@@ -65,6 +79,7 @@ const ContactUs = () => {
       });
       return;
     }
+
     if (!emailRegex.test(formData.email)) {
       toast({
         title: "Invalid Email",
@@ -90,195 +105,230 @@ const ContactUs = () => {
     setIsLoading(true);
 
     try {
-      const res = await fetch(BACKEND_URL, {
+      const response = await fetch(BACKEND_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(formData),
       });
-      console.log("object",res)
-      console.log("FORM DATA",formData)
-      // if (res.ok) {
-      //   window.location.href = "/thank-you";
-      // } else {
-      //   console.error("Form submission failed");
-      // }
-    } catch (err) {
-      console.error(err);
+
+      const data = await response.json();
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: "We'll get back to you soon.",
+          status: "success",
+          duration: 5000,
+          isClosable: true,
+        });
+
+        // navigate("/thank-you"); // Uncomment if using react-router-dom
+        
+        // Resetting the form with all new and old fields
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          location: "",
+          clientCategory: "",
+          camerasFor: "",
+          message: "",
+          customerQuantity: "",
+          leadType: "Arcis Website",
+          updates: false,
+        });
+      } else {
+        throw new Error(data.error || "Failed to send message");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      toast({
+        title: "Failed to send message",
+        description: error.message || "Please try again later.",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
-    <>
-      <Helmet>
-        <title>Contact Us - ArcisAI</title>
-        <meta
-          name="description"
-          content="Get in touch with ArcisAI for intelligent security solutions. AI CCTV with EdgeAI, ArcisGPT summaries, and Indian cloud compliance."
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://arcisai.io/contact-us/" />
-      </Helmet>
-
+    <Box
+      as="section"
+      py={{ base: 10, md: 16 }}
+      px={{ base: 4, md: 8 }}
+      bg="gray.50"
+    >
       <Box
-        bgGradient="linear(to-tr, #261947ff, #9d82e3ff)"
-        minH="100vh"
-        px={{ base: 4, md: 16 }}
-        py={12}
-        mt="4%"
+        maxW="600px"
+        mx="auto"
+        bg="white"
+        p={{ base: 6, md: 10 }}
+        borderRadius="xl"
+        boxShadow="lg"
       >
-        <Flex
-          direction={{ base: "column", lg: "row" }}
-          maxW="1200px"
-          mx="auto"
-          gap={12}
+        <Text
+          fontSize={{ base: "3xl", md: "4xl" }}
+          fontWeight="bold"
+          color="gray.800"
+          mb={6}
+          textAlign="center"
         >
-          {/* Left Side Content */}
-          <Box flex="1" color="white">
-            <Heading as="h1" mb={6} fontSize={{ base: "3xl", md: "4xl" }}>
-              You Deserve More Than Just a Camera - You Deserve Intelligence
-            </Heading>
-            <Text mb={4}>
-              We’re not just another CCTV brand, we are your intelligent
-              security partner - combining EdgeAI cameras, ArcisGPT summaries,
-              and a STQC-certified Indian VMS. We deliver real-time alerts,
-              secure access and smart surveillance built for homes, offices,
-              businesses and your needs.
-            </Text>
-            <VStack align="start" spacing={2} mb={6}>
-              <Text>
-                ✅ Built-in EdgeAI Detection – Smart alerts within the camera
-              </Text>
-              <Text>
-                ✅ ArcisGPT Summaries – GenAI-powered video insights in seconds
-              </Text>
-              <Text>
-                ✅ STQC-Certified VMS – Indian government-grade data security
-              </Text>
-              <Text>
-                ✅ Mobile + Desktop Monitoring – Real-time control across
-                devices
-              </Text>
-              <Text>
-                ✅ 🇮🇳 Made for India – Designed for local compliance and
-                conditions
-              </Text>
-            </VStack>
-            <Text mt={4}>Let’s Secure your Space</Text>
-          </Box>
-
-          {/* Right Side Form */}
-          <Box
-            flex="1"
-            bg="white"
-            borderRadius="24px"
-            p={8}
-            boxShadow="lg"
-            color="black"
+          Get in touch
+        </Text>
+        <VStack spacing={5} as="form" onSubmit={handleSubmit}>
+          <FormControl isRequired>
+            <FormLabel>Name</FormLabel>
+            <Input
+              placeholder="Enter your name"
+              name="name"
+              onChange={handleChange}
+              value={formData.name}
+              focusBorderColor="purple.500"
+              borderRadius="md"
+            />
+          </FormControl>
+          <FormControl isRequired>
+            <FormLabel>Email</FormLabel>
+            <Input
+              placeholder="Enter your email"
+              name="email"
+              type="email"
+              onChange={handleChange}
+              value={formData.email}
+              focusBorderColor="purple.500"
+              borderRadius="md"
+            />
+          </FormControl>
+          <FormControl isRequired>
+            <FormLabel>Phone number</FormLabel>
+            <Input
+              placeholder="Enter your 10-digit phone number"
+              name="phone"
+              type="tel"
+              onChange={handleChange}
+              value={formData.phone}
+              maxLength={10}
+              focusBorderColor="purple.500"
+              borderRadius="md"
+            />
+          </FormControl>
+          <FormControl isRequired>
+            <FormLabel>Company</FormLabel>
+            <Input
+              placeholder="Enter your company name"
+              name="company"
+              onChange={handleChange}
+              value={formData.company}
+              focusBorderColor="purple.500"
+              borderRadius="md"
+            />
+          </FormControl>
+          <FormControl isRequired>
+            <FormLabel>Location</FormLabel>
+            <Input
+              placeholder="Enter your city"
+              name="location"
+              onChange={handleChange}
+              value={formData.location}
+              focusBorderColor="purple.500"
+              borderRadius="md"
+            />
+          </FormControl>
+          <FormControl isRequired>
+            <FormLabel>I want cameras for</FormLabel>
+            <Select
+              placeholder="Select an option"
+              name="camerasFor"
+              onChange={handleChange}
+              value={formData.camerasFor}
+              focusBorderColor="purple.500"
+              borderRadius="md"
+            >
+              <option value="Office">Office</option>
+              <option value="Factory">Factory</option>
+              <option value="Home">Home</option>
+              <option value="Other">Other</option>
+            </Select>
+          </FormControl>
+          {/* New field from ContactUs.js */}
+          <FormControl isRequired>
+            <FormLabel>Client Category</FormLabel>
+            <Select
+              placeholder="Select client category"
+              name="clientCategory"
+              value={formData.clientCategory}
+              onChange={handleChange}
+              focusBorderColor="purple.500"
+              borderRadius="md"
+            >
+              <option>Stockist</option>
+              <option>Distributer</option>
+              <option>Dealer</option>
+              <option>End-User</option>
+              <option>System Integrator</option>
+            </Select>
+          </FormControl>
+          {/* Updated field to be "Number of Cameras" */}
+          <FormControl>
+            <FormLabel>Number of Cameras Needed</FormLabel>
+            <Input
+              placeholder="e.g., 10"
+              name="customerQuantity"
+              type="number"
+              onChange={handleChange}
+              value={formData.customerQuantity}
+              focusBorderColor="purple.500"
+              borderRadius="md"
+            />
+          </FormControl>
+          {/* New field from ContactUs.js */}
+          <FormControl>
+            <FormLabel>Your Message</FormLabel>
+            <Textarea
+              placeholder="Enter your message here"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              focusBorderColor="purple.500"
+              borderRadius="md"
+            />
+          </FormControl>
+          {/* New field from ContactUs.js */}
+          <FormControl>
+            <Checkbox
+              name="updates"
+              isChecked={formData.updates}
+              onChange={handleChange}
+              colorScheme="purple"
+            >
+              I’d like to receive updates and offers from ArcisAI.
+            </Checkbox>
+          </FormControl>
+          <Button
+            type="submit"
+            colorScheme="purple"
+            isLoading={isLoading}
+            w="full"
+            py={6}
+            fontSize="lg"
+            mt={4}
+            borderRadius="md"
+            _hover={{
+              bgGradient: "linear(to-r, purple.500, pink.500)",
+              boxShadow: "lg",
+            }}
           >
-            <form onSubmit={handleSubmit}>
-              <VStack spacing={4}>
-                <Input
-                  placeholder="Full Name*"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  isRequired
-                />
-                <Input
-                  placeholder="Email Address*"
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  isRequired
-                />
-                <Input
-                  placeholder="Phone Number*"
-                  name="phone"
-                  type="tel"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  maxLength={10}
-                  isRequired
-                />
-                <Input
-                  placeholder="Company Name"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleChange}
-                />
-                <Input
-                  placeholder="City*"
-                  name="location"
-                  value={formData.location}
-                  onChange={handleChange}
-                  isRequired
-                />
-                <Select
-                  placeholder="I want cameras for"
-                  name="camerasFor"
-                  onChange={handleChange}
-                  value={formData.camerasFor}
-                  focusBorderColor="purple.500"
-                  borderRadius="md"
-                >
-                  <option value="Office">Office</option>
-                  <option value="Factory">Factory</option>
-                  <option value="Home">Home</option>
-                  <option value="Other">Other</option>
-                </Select>
-                <Select
-                  placeholder="Client Category*"
-                  name="clientCategory"
-                  value={formData.clientCategory}
-                  onChange={handleChange}
-                  isRequired
-                >
-                  <option>Stockist</option>
-                  <option>Distributer</option>
-                  <option>Dealer</option>
-                  <option>End-User</option>
-                  <option>System Integrator</option>
-                </Select>
-                <Input
-                  placeholder="Number of Cameras Needed*"
-                  name="camerasFor"
-                  type="number"
-                  value={formData.camerasFor}
-                  onChange={handleChange}
-                  isRequired
-                />
-                <Textarea
-                  placeholder="Your Message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                />
-                <Checkbox
-                  name="updates"
-                  isChecked={formData.updates}
-                  onChange={handleChange}
-                >
-                  I’d like to receive updates and offers from ArcisAI.
-                </Checkbox>
-
-                <Button
-                  type="submit"
-                  bg="#3F77A5"
-                  color="white"
-                  w="full"
-                  mt={4}
-                  _hover={{ bg: "#2c5a7d" }}
-                >
-                  Submit
-                </Button>
-              </VStack>
-            </form>
-          </Box>
-        </Flex>
+            Send Message
+          </Button>
+        </VStack>
       </Box>
-    </>
+    </Box>
   );
 };
 
-export default ContactUs;
+export default ContactSection;

@@ -53,8 +53,8 @@ function Footer() {
   const [isLoading, setIsLoading] = useState(false);
   const toast = useToast();
 
-  const BACKEND_URL = "https://vmukti.com/backend/api/send-email-arcis";
-  // const BACKEND_URL = "http://localhost:5000/api/send-email-arcis";
+  // const BACKEND_URL = "https://vmukti.com/backend/api/send-email-arcis";
+  const BACKEND_URL = "http://localhost:5000/api/send-email-arcis";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -124,7 +124,7 @@ function Footer() {
         });
 
         // navigate("/thank-you");
-        window.location.href = "/thank-you";
+        // window.location.href = "/thank-you";
 
         setFormData({
           name: "",

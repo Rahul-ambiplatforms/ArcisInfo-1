@@ -82,7 +82,7 @@ function Landing() {
             lineHeight={["1.2", "1.4"]} // Adjust line-height for better spacing
             w={["100%", "544px"]} // Full width for mobile
           >
-            Explore the Future of
+            Explore the Future of{" "}
             <span style={{ color: "#9678E1" }}>Smarter Surveillance </span> with
             <span style={{ color: "#9678E1" }}> AI CCTV Ecosystem</span>
           </Heading>
