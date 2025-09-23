@@ -1,14 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { HelmetProvider } from "react-helmet-async";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ChakraProvider } from "@chakra-ui/react";
+import { BrowserRouter } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <ChakraProvider>
-      <App />
+      <HelmetProvider>
+        {/* <BrowserRouter> */}
+          <App />
+        {/* </BrowserRouter> */}
+      </HelmetProvider>
     </ChakraProvider>
   </React.StrictMode>
 );

@@ -16,10 +16,13 @@ import {
   Select,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { Navigate } from "react-router-dom";
 // import { Link } from "react-router-dom";
 
 function Footer() {
+  const navigate = useNavigate();
   const year = new Date().getFullYear();
   const [formData, setFormData] = useState({
     name: "",
@@ -29,7 +32,7 @@ function Footer() {
     location: "",
     camerasFor: "",
     customerQuantity: "",
-    leadType: "Arcis Website", // Static value
+    leadType: "Arcis Website", 
   });
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -56,9 +59,7 @@ function Footer() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Email validation regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    // Phone validation: only digits, 10 digits
     const phoneRegex = /^\d{10}$/;
 
     if (
@@ -113,7 +114,6 @@ function Footer() {
       });
 
       const data = await response.json();
-
       if (response.ok) {
         toast({
           title: "Message Sent!",
@@ -122,6 +122,9 @@ function Footer() {
           duration: 5000,
           isClosable: true,
         });
+
+        // navigate("/thank-you");
+        window.location.href = "/thank-you";
 
         setFormData({
           name: "",
@@ -316,7 +319,7 @@ function Footer() {
                 fontWeight="700"
                 fontSize={{ base: "24px", sm: "28px", md: "40px" }}
               >
-                Secure
+                Your Security
               </Text>
               <Text
                 fontSize={{ base: "16px", sm: "24px", md: "32px" }}
@@ -324,7 +327,7 @@ function Footer() {
                 fontWeight="400"
                 color="black"
               >
-                What Matters with Advanced
+                Deserves an Upgrade -
               </Text>
             </Flex>
 
@@ -334,7 +337,7 @@ function Footer() {
               color="purple.500"
               fontWeight="700"
             >
-              AI-Powered Surveillance
+              ArcisAI, the Future of AI CCTV
             </Text>
           </Flex>
           <Button
@@ -351,7 +354,7 @@ function Footer() {
               (window.location.href = "https://view.arcisai.io/signup")
             }
           >
-            Get Started
+            Buy ArcisAI Cameras Now
           </Button>
         </Flex>
         <Flex

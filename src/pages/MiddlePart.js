@@ -150,7 +150,7 @@ function MiddlePart() {
           />
         </svg>
       ),
-      title: "Multiple Cameras Integration",
+      title: "Multi-Camera Integration",
     },
     {
       svgicon: (
@@ -194,7 +194,7 @@ function MiddlePart() {
           />
         </svg>
       ),
-      title: "Third-Party System Integration",
+      title: "Real-Time Notifications",
     },
     {
       svgicon: (
@@ -219,7 +219,7 @@ function MiddlePart() {
           />
         </svg>
       ),
-      title: "Real-Time Playback and Live View",
+      title: "Live View & Playback",
     },
     {
       svgicon: (
@@ -263,7 +263,7 @@ function MiddlePart() {
           />
         </svg>
       ),
-      title: "GPT-Powered User Interaction",
+      title: "Event-Based Reports",
     },
     {
       svgicon: (
@@ -290,7 +290,34 @@ function MiddlePart() {
           />
         </svg>
       ),
-      title: "PTZ (Pan-Tilt-Zoom) Control",
+      title: "Auto Firmware Updates",
+    },
+    {
+      svgicon: (
+        <svg
+          width="51"
+          height="51"
+          viewBox="0 0 51 51"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="0.235352"
+            y="0.61792"
+            width="50.382"
+            height="50.382"
+            rx="5"
+            fill="#9678E1"
+          />
+          <path
+            d="M25.4258 8.47337C28.481 8.47361 30.9648 10.9735 30.9648 14.0456C30.9648 15.8709 30.0878 17.4919 28.7354 18.5076L28.6025 20.4206H35.6064C37.2817 20.4206 38.68 21.7021 38.8379 23.3796L40.0947 36.8054L40.1045 36.9148H40.1006C40.1039 36.9686 40.1058 37.0223 40.1064 37.0759C40.1075 37.0911 40.1104 37.1065 40.1104 37.1218L40.0977 40.3708L40.1074 40.5417C40.1346 41.3371 39.8713 42.1159 39.3682 42.7302L39.2559 42.8591C38.6403 43.5334 37.7736 43.9186 36.8643 43.9187H13.9873C13.135 43.9187 12.3194 43.5806 11.7148 42.9841L11.5967 42.8611C10.9848 42.189 10.6784 41.2914 10.7529 40.3835L10.7422 37.1238L10.7432 37.1228C10.7431 37.1166 10.744 37.1104 10.7441 37.1042C10.7444 37.0056 10.7476 36.9065 10.7568 36.8074L12.0029 23.49H12.001L12.0117 23.3806L12.0557 23.072C12.3454 21.55 13.6724 20.4226 15.2432 20.4226H22.2471L22.1113 18.5036C20.7609 17.4864 19.8858 15.8643 19.8857 14.0408C19.8857 10.9701 22.3705 8.47337 25.4258 8.47337ZM38.8594 39.6833C38.2933 40.129 37.5923 40.3776 36.8643 40.3777H13.9873C13.2584 40.3777 12.5557 40.1291 11.9893 39.6833L11.9922 40.3581H12.0029L11.9932 40.4675C11.9411 41.0323 12.1274 41.5943 12.5068 42.0134L12.6562 42.1618C13.021 42.4885 13.4942 42.6716 13.9873 42.6716H36.8643C37.3573 42.6716 37.8312 42.4884 38.1973 42.1618L38.3477 42.0124C38.7268 41.5918 38.9133 41.0306 38.8613 40.4646L38.8604 40.4548L38.8594 40.4382C38.8587 40.4303 38.8574 40.417 38.8574 40.4031L38.8594 39.6833ZM28.3369 24.2224C29.4599 24.7466 30.4249 25.5653 31.1299 26.5964L31.2744 26.8161C31.9726 27.9275 32.3438 29.2185 32.3438 30.5368C32.3435 34.3741 29.24 37.4966 25.4258 37.4968C21.6115 37.4968 18.5061 34.3743 18.5059 30.5368C18.5059 29.1305 18.9309 27.7571 19.7217 26.5964L19.874 26.3826C20.5617 25.452 21.4688 24.7098 22.5127 24.2224L22.334 21.6687H15.2441C14.2094 21.6642 13.342 22.4572 13.248 23.4949V23.4958L11.9922 36.9216C11.9386 37.4877 12.124 38.0497 12.5049 38.4704H12.5059L12.6553 38.6199C13.0202 38.9474 13.4942 39.1306 13.9873 39.1306H36.8643C37.428 39.1306 37.9667 38.893 38.3477 38.4724L38.4805 38.3083C38.7284 37.9679 38.864 37.5578 38.8691 37.1355L38.8613 36.9236L37.6035 23.4958V23.4949C37.5169 22.5205 36.7487 21.7629 35.7988 21.6745L35.6064 21.6658H28.5156L28.3369 24.2224ZM28.0273 28.6667L28.0283 28.6677C27.9618 30.0625 26.8167 31.1603 25.4258 31.1589V31.1599C24.0352 31.1615 22.8901 30.0638 22.8242 28.6697L22.6074 25.5759C20.8685 26.5827 19.7471 28.4827 19.7471 30.5368C19.7473 33.688 22.2941 36.2495 25.4248 36.2497C28.5557 36.2497 31.1033 33.688 31.1035 30.5368C31.1035 28.4822 29.9824 26.5826 28.2422 25.5759L28.0273 28.6667ZM25.4248 9.71947C23.6865 9.71969 22.1189 10.7735 21.4531 12.3894C20.7873 14.0056 21.1551 15.8679 22.3857 17.1042L22.623 17.3259C23.8447 18.3829 25.5644 18.6685 27.0713 18.0408L27.3652 17.905C27.4888 17.8423 27.607 17.7715 27.7227 17.698C27.7248 17.696 27.7264 17.6931 27.7285 17.6911L27.8291 17.6179C27.8456 17.6083 27.8636 17.6015 27.8809 17.5935C29.0192 16.7968 29.7246 15.4801 29.7246 14.0456L29.7188 13.823C29.6023 11.5373 27.7241 9.72099 25.4248 9.71947ZM24.0615 28.6033L24.0742 28.739C24.1705 29.4064 24.7421 29.9128 25.4238 29.9128C26.1511 29.9128 26.7514 29.3388 26.7871 28.6081V28.5886L26.8877 28.5954L26.7881 28.5886L27.0625 24.6579C27.0592 24.603 27.0631 24.548 27.0742 24.4939L27.4424 19.2292C26.817 19.4757 26.1373 19.613 25.4258 19.613C24.7133 19.613 24.0324 19.4748 23.4062 19.2273L24.0615 28.5886V28.6033Z"
+            fill="white"
+            stroke="white"
+            stroke-width="0.2"
+          />
+        </svg>
+      ),
+      title: "Two-Way Audio",
     },
   ];
 
@@ -329,7 +356,7 @@ function MiddlePart() {
               align="left"
               textAlign={"justify"}
             >
-              Your complete security suite
+              AI Security Surveillance Suite: ArcisVMS & App
             </Heading>
             <Text
               w="85%"
@@ -337,9 +364,14 @@ function MiddlePart() {
               align="left"
               textAlign={"justify"}
             >
-              The ArcisAI VMS provides a complete portfolio of end-to-end video
-              security products and services, powered by intelligence, so you
-              can react faster when it matters most.
+              With ArcisAI, you don’t just get CCTV cameras - you get a
+              connected ecosystem. Our STQC-certified VMS and mobile app give
+              you real-time alerts, event-based reports, and instant playback so
+              you’re always in control. You can easily manage multiple cameras,
+              talk through two-way audio, control access and switch between
+              custom view modes. Automatic updates and seamless third-party
+              compatibility keep your system secure and future-ready, so you can
+              trust that your surveillance grows smarter with you.
             </Text>
           </VStack>
         </Box>
@@ -379,7 +411,7 @@ function MiddlePart() {
         px={4}
         bg="white"
         mb="5%"
-        mt={{base:"5%",md:"20%"}}
+        mt={{ base: "5%", md: "20%" }}
         boxShadow="6px 6px 6px -1px rgba(0, 0, 0, 0.1), -1px 6px 6px -2px rgba(0, 0, 0, 0.1)"
         // boxShadow="lg"
         borderRadius="0 0 24px 24px"
@@ -387,10 +419,11 @@ function MiddlePart() {
         <Heading
           textAlign="center"
           mb={12}
+          mt="4%"
           size={{ base: "lg", md: "xl" }}
           color="#5B5B5C"
         >
-          Features of ArcisAI VMS
+          ArcisAI – VMS & Mobile App Features
         </Heading>
         <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 4, md: 2 }}>
           {gridData.map(({ svgicon, title }, index) => (

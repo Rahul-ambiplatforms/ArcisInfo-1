@@ -355,7 +355,7 @@ function GenAiInfo() {
             bg="#9678E1"
             width="100%"
             // height="349px"
-            height={{base:"190px",md:"349px"}}
+            height={{ base: "190px", md: "349px" }}
             top="25%"
           />
 
@@ -372,7 +372,11 @@ function GenAiInfo() {
         </Flex>
 
         {/* Right Section (Text and Features) */}
-        <Box flex={1} ml={{base:0, lg: 8 }} textAlign={{ base: "center", lg: "left" }}>
+        <Box
+          flex={1}
+          ml={{ base: 0, lg: 8 }}
+          textAlign={{ base: "center", lg: "left" }}
+        >
           {/* Heading */}
           <Heading as="h2" size="xl" color="black" mb={4}>
             <Text as="span" color="#9678E1">
@@ -382,11 +386,17 @@ function GenAiInfo() {
           </Heading>
 
           {/* Subheading */}
-          <Text fontSize="lg" color="#5B5B5C" mb={8} ml={{base:"8",md:"0"}} w={{base:"80%",md:"70%"}} >
-            Unlock the Power of India's First Gen AI Solutions in Video
+          <Text
+            fontSize="lg"
+            color="#5B5B5C"
+            mb={8}
+            ml={{ base: "8", md: "0" }}
+            w={{ base: "80%", md: "70%" }}
+          >
+            Unlock the Power of India's First Gen AI Solution in Video
             Surveillance –{" "}
             <Text as="span" fontWeight="bold" color="#9678E1">
-              Proudly Made in India.
+              ArcisGPT Proudly Made in India.
             </Text>
           </Text>
 

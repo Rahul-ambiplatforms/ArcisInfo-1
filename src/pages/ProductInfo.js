@@ -34,7 +34,7 @@ function ProductInfo() {
         gap={6}
       >
         {/* Text Section */}
-        <Box w={{ base: "100%", md: "50%" }} p={{base:0, md:4}}>
+        <Box w={{ base: "100%", md: "50%" }} p={{ base: 0, md: 4 }}>
           <VStack
             spacing={4}
             textAlign={{ base: "center", md: "left" }}
@@ -44,39 +44,45 @@ function ProductInfo() {
             mt={{ base: "-10px", md: "-150px" }}
             // bg="red"
           >
-            <Heading fontWeight="700" color="#5B5B5C" fontSize={{ base: "32px", md: "40px" }}>
-              Our product{" "}
+            <Heading
+              fontWeight="700"
+              color="#5B5B5C"
+              fontSize={{ base: "32px", md: "40px" }}
+            >
+              Our{" "}
               <Text as="span" color="#9678E1">
-                ranges
+                AI CCTV Camera{" "}
               </Text>
+              Ranges
             </Heading>
             <Text
               fontSize={{ base: "sm", md: "md" }}
               color="#5B5B5C"
-              w="80%"
+              w="100%"
               align="justify"
             >
-              The S Series cameras by Adiance Technologies are cutting-edge
-              surveillance solutions designed to deliver unparalleled
-              performance through advanced Edge At capabilities.{" "}
+              ArcisAI brings you the S-Series AI CCTV cameras designed for every
+              need. Whether you need wireless flexibility, mobile connectivity,
+              or wired stability, there’s a camera that fits your setup.{" "}
             </Text>
             <Text
               fontSize={{ base: "sm", md: "md" }}
               color="#5B5B5C"
-              w="80%"
+              w="100%"
               align="justify"
             >
-              These cameras are equipped with sophisticated AI analytics,
-              ensuring real-time intelligence, precise detection, and seamless
-              integration across various environments. Ideal for industries like
-              Banking: Infrastructure, Mobility, and Smart Cities, the S Series
-              cameras enhance security, operational efficiency, and situational
-              awareness.
+              Each S-Series camera includes 8 inbuilt EdgeAI detections such as
+              unattended object, missing object, area, and line crossing, along
+              with customer count, face, human, and motion detection. With
+              real-time alerts, instant notifications, and detailed reports
+              available through our mobile app and STQC-certified VMS, ArcisAI
+              ensures your surveillance is always smart, reliable, and easy to
+              manage.
             </Text>
             <Heading size="md">
               S-SERIES{" "}
               <Text as="span" color="purple.500">
-                CAMERAS
+                AI CAMERAS
               </Text>
             </Heading>
             <Flex
@@ -87,8 +93,8 @@ function ProductInfo() {
               gap={{ base: "4", md: "1" }}
             >
               <Text fontSize={{ base: "sm", md: "14px" }}>• DOME</Text>
-              <Text fontSize={{ base: "sm", md: "14px" }}>• PTZ</Text>
               <Text fontSize={{ base: "sm", md: "14px" }}>• BULLET</Text>
+              <Text fontSize={{ base: "sm", md: "14px" }}>• PTZ</Text>
             </Flex>
           </VStack>
         </Box>
@@ -99,9 +105,9 @@ function ProductInfo() {
           p={4}
           display="flex"
           alignItems="center"
-          h={{base:"350px",md:"600px"}}
+          h={{ base: "350px", md: "600px" }}
           flexDirection={{ base: "column", md: "row" }}
-          mt={{base:"0",md:"100px"}}
+          mt={{ base: "0", md: "100px" }}
           mb="-30px"
           gap={{ base: "4", md: 0 }}
         >
@@ -109,7 +115,7 @@ function ProductInfo() {
           <Image
             src="./images/productType.png"
             alt="Dome Camera"
-            w={{ base: "500px", md: "700px", lg: "950px"}}
+            w={{ base: "500px", md: "700px", lg: "950px" }}
             h="auto"
             objectFit="cover"
             zIndex="1"
