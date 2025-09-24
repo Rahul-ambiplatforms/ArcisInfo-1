@@ -329,6 +329,7 @@ function MiddlePart() {
         position="relative"
         direction={{ base: "column", md: "row" }}
         h={{ base: "auto", md: "600px" }}
+        
       >
         {/* Purple Background with Text */}
         <Box
@@ -354,7 +355,7 @@ function MiddlePart() {
               fontSize={{ base: "2xl", md: "4xl" }}
               mt={{ base: "4", md: "10" }}
               align="left"
-              textAlign={"justify"}
+              // textAlign={"justify"}
             >
               AI Security Surveillance Suite: ArcisVMS & App
             </Heading>
@@ -363,6 +364,7 @@ function MiddlePart() {
               fontSize={{ base: "sm", md: "sm" }}
               align="left"
               textAlign={"justify"}
+              lineHeight="1.1"
             >
               With ArcisAI, you don’t just get CCTV cameras - you get a
               connected ecosystem. Our STQC-certified VMS and mobile app give
@@ -382,7 +384,7 @@ function MiddlePart() {
           src="./images/screen.png"
           alt="Security Suite"
           position="absolute"
-          top={{ base: "0", md: "80%" }}
+          top={{ base: "0", md: "85%" }}
           left={{ base: "0", md: "-10%" }}
           transform={{ base: "none", md: "translateY(-50%)" }}
           w={{ base: "90%", md: "100%" }} // Smaller width for mobile
