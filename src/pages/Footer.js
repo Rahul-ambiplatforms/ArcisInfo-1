@@ -18,21 +18,24 @@ import {
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { Navigate } from "react-router-dom";
-// import { Link } from "react-router-dom";
+import { FaXTwitter } from "react-icons/fa6";
+import { Link as RouterLink } from "react-router-dom";
+import ContactUs from "./ContactUs"
 
 function Footer() {
   const navigate = useNavigate();
   const year = new Date().getFullYear();
   const [formData, setFormData] = useState({
     name: "",
-    phone: "",
     email: "",
+    phone: "",
     company: "",
     location: "",
+    customerType: "",
     camerasFor: "",
     customerQuantity: "",
-    leadType: "Arcis Website", 
+    leadType: "Arcis Website",
+    updates: false,
   });
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -68,7 +71,8 @@ function Footer() {
       !formData.phone ||
       !formData.company ||
       !formData.location ||
-      !formData.camerasFor
+      !formData.camerasFor ||
+      !formData.customerType
     ) {
       toast({
         title: "Missing required fields",
@@ -123,19 +127,22 @@ function Footer() {
           isClosable: true,
         });
 
-        // navigate("/thank-you");
+        navigate("/thank-you");
         // window.location.href = "/thank-you";
 
-        // setFormData({
-        //   name: "",
-        //   phone: "",
-        //   email: "",
-        //   company: "",
-        //   location: "",
-        //   camerasFor: "",
-        //   customerQuantity: "",
-        //   leadType: "Arcis Website",
-        // });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          location: "",
+          customerType: "",
+          camerasFor: "",
+          message: "",
+          customerQuantity: "",
+          leadType: "Arcis Website",
+          updates: false,
+        });
       } else {
         throw new Error(data.error || "Failed to send message");
       }
@@ -156,7 +163,8 @@ function Footer() {
   return (
     <Box w={"100%"}>
       {/* Contact Section */}
-      <Box
+      <ContactUs />
+      {/* <Box
         as="section"
         py={{ base: 10, md: 16 }}
         px={{ base: 4, md: 8 }}
@@ -282,7 +290,7 @@ function Footer() {
             </Button>
           </VStack>
         </Box>
-      </Box>
+      </Box> */}
 
       {/* Footer Section */}
       <Box
@@ -340,22 +348,30 @@ function Footer() {
               ArcisAI, the Future of AI CCTV
             </Text>
           </Flex>
-          <Button
-            variant={"solid"}
-            bgColor={"black"}
-            color={"white"}
-            h={"34px"}
-            p={"10px 28px"}
-            gap={"8px"}
-            flexShrink={0}
-            _hover={"none"}
+          <Link
+            as={RouterLink} // Use React Router's Link for client-side routing
+            to="/contact-us" // The path to your contact page
+            isExternal={false} // Set to false for internal routing
+            _hover={{ textDecoration: "none" }} // Prevents the default link underline on hover
             w={{ base: "full", md: "auto" }}
-            onClick={() =>
-              (window.location.href = "https://view.arcisai.io/signup")
-            }
           >
-            Buy ArcisAI Cameras Now
-          </Button>
+            <Button
+              variant={"solid"}
+              bgColor={"black"}
+              color={"white"}
+              h={"34px"}
+              p={"10px 28px"}
+              gap={"8px"}
+              flexShrink={0}
+              _hover={{
+                // You can add a subtle hover effect for the button itself if you like
+                bgColor: "gray.700",
+              }}
+              w={"full"} // Make the button take the full width of the parent Link
+            >
+              Buy ArcisAI Cameras Now
+            </Button>
+          </Link>
         </Flex>
         <Flex
           justify="center"
@@ -461,7 +477,7 @@ function Footer() {
             <HStack spacing={1} color="white">
               <IconButton
                 as="a"
-                href="#"
+                href="https://www.facebook.com/thearcisai/"
                 aria-label="Facebook"
                 icon={<FaFacebook />}
                 variant="ghost"
@@ -470,16 +486,16 @@ function Footer() {
               />
               <IconButton
                 as="a"
-                href="#"
-                aria-label="Twitter"
-                icon={<FaTwitter />}
+                href="https://x.com/arcisai"
+                aria-label="X (formerly Twitter)"
+                icon={<FaXTwitter />}
                 variant="ghost"
                 color="white"
                 _hover={{ color: "purple.500", bg: "white" }}
               />
               <IconButton
                 as="a"
-                href="#"
+                href="https://www.instagram.com/_arcisai_/"
                 aria-label="Instagram"
                 icon={<FaInstagram />}
                 variant="ghost"
@@ -488,7 +504,7 @@ function Footer() {
               />
               <IconButton
                 as="a"
-                href="#"
+                href="https://www.linkedin.com/company/thearcisai/"
                 aria-label="LinkedIn"
                 icon={<FaLinkedin />}
                 variant="ghost"

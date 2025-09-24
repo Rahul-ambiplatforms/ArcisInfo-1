@@ -13,29 +13,29 @@ import {
   Checkbox, // Imported Checkbox
 } from "@chakra-ui/react";
 // If you are using react-router-dom, uncomment the next line
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const ContactSection = () => {
-  // const navigate = useNavigate(); // Kept for context, uncomment if needed
+  const navigate = useNavigate(); // Kept for context, uncomment if needed
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     company: "",
     location: "",
-    clientCategory: "", // Added from ContactUs.js
+    customerType: "",
     camerasFor: "",
-    message: "", // Added from ContactUs.js
-    customerQuantity: "", // This will be used for "Number of Cameras Needed"
+    message: "",
+    customerQuantity: "",
     leadType: "Arcis Website",
-    updates: false, // Added from ContactUs.js
+    updates: false,
   });
 
   const [isLoading, setIsLoading] = useState(false);
   const toast = useToast();
 
-  const BACKEND_URL = "https://vmukti.com/backend/api/send-email-arcis";
-  // const BACKEND_URL = "http://localhost:5000/api/send-email-arcis";
+  // const BACKEND_URL = "https://vmukti.com/backend/api/send-email-arcis";
+  const BACKEND_URL = "http://localhost:5000/api/send-email-arcis";
 
   // This handler now supports phone number formatting and checkboxes
   const handleChange = (e) => {
@@ -68,7 +68,7 @@ const ContactSection = () => {
       !formData.company ||
       !formData.location ||
       !formData.camerasFor ||
-      !formData.clientCategory // Added validation for clientCategory
+      !formData.customerType
     ) {
       toast({
         title: "Missing required fields",
@@ -114,6 +114,7 @@ const ContactSection = () => {
       });
 
       const data = await response.json();
+      console.log("DATA SEND EMAIL",formData)
       if (response.ok) {
         toast({
           title: "Message Sent!",
@@ -123,22 +124,22 @@ const ContactSection = () => {
           isClosable: true,
         });
 
-        // navigate("/thank-you"); // Uncomment if using react-router-dom
-        
+        // navigate("/thank-you");
+
         // Resetting the form with all new and old fields
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          company: "",
-          location: "",
-          clientCategory: "",
-          camerasFor: "",
-          message: "",
-          customerQuantity: "",
-          leadType: "Arcis Website",
-          updates: false,
-        });
+        // setFormData({
+        //   name: "",
+        //   email: "",
+        //   phone: "",
+        //   company: "",
+        //   location: "",
+        //   customerType: "",
+        //   camerasFor: "",
+        //   message: "",
+        //   customerQuantity: "",
+        //   leadType: "Arcis Website",
+        //   updates: false,
+        // });
       } else {
         throw new Error(data.error || "Failed to send message");
       }
@@ -193,18 +194,6 @@ const ContactSection = () => {
             />
           </FormControl>
           <FormControl isRequired>
-            <FormLabel>Email</FormLabel>
-            <Input
-              placeholder="Enter your email"
-              name="email"
-              type="email"
-              onChange={handleChange}
-              value={formData.email}
-              focusBorderColor="purple.500"
-              borderRadius="md"
-            />
-          </FormControl>
-          <FormControl isRequired>
             <FormLabel>Phone number</FormLabel>
             <Input
               placeholder="Enter your 10-digit phone number"
@@ -213,6 +202,18 @@ const ContactSection = () => {
               onChange={handleChange}
               value={formData.phone}
               maxLength={10}
+              focusBorderColor="purple.500"
+              borderRadius="md"
+            />
+          </FormControl>
+          <FormControl isRequired>
+            <FormLabel>Email</FormLabel>
+            <Input
+              placeholder="Enter your email"
+              name="email"
+              type="email"
+              onChange={handleChange}
+              value={formData.email}
               focusBorderColor="purple.500"
               borderRadius="md"
             />
@@ -260,8 +261,8 @@ const ContactSection = () => {
             <FormLabel>Client Category</FormLabel>
             <Select
               placeholder="Select client category"
-              name="clientCategory"
-              value={formData.clientCategory}
+              name="customerType"
+              value={formData.customerType}
               onChange={handleChange}
               focusBorderColor="purple.500"
               borderRadius="md"
