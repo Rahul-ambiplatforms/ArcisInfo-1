@@ -267,11 +267,13 @@ const ContactSection = () => {
               focusBorderColor="purple.500"
               borderRadius="md"
             >
+              <option>Government</option>
               <option>Stockist</option>
-              <option>Distributer</option>
+              <option>Distributor</option>
               <option>Dealer</option>
-              <option>End-User</option>
-              <option>System Integrator</option>
+              <option>Customer</option>
+              <option>New Customer</option>
+              <option>Other</option>
             </Select>
           </FormControl>
           {/* Updated field to be "Number of Cameras" */}
