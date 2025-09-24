@@ -21,6 +21,7 @@ import {
   useBreakpointValue,
   Icon,
 } from "@chakra-ui/react";
+import { Link as RouterLink } from "react-router-dom";
 import React from "react";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
 
@@ -49,13 +50,16 @@ function Header() {
     >
       {/* logo*/}
       <Flex alignItems="center">
-        <Image
-          src="./images/ArcisAi.png"
-          alt="Company Logo"
-          boxSize="40px"
-          w="107px"
-          h="24px"
-        />
+        <Link as={RouterLink} to="/">
+          <Image
+            src="./images/ArcisAi.png"
+            alt="Company Logo"
+            boxSize="40px"
+            w="107px"
+            h="24px"
+            cursor="pointer" // Makes it clear the image is clickable
+          />
+        </Link>
       </Flex>
       {/* Hamburger Icon for mobile */}
       <IconButton
@@ -112,9 +116,9 @@ function Header() {
             <MenuItem
               as="a"
               href="https://play.google.com/store/apps/details?id=com.arcisadiance.app"
-              icon={<Icon as={FaGooglePlay} color="green.500" boxSize={4}/>}
+              icon={<Icon as={FaGooglePlay} color="green.500" boxSize={4} />}
             >
-               Android App
+              Android App
             </MenuItem>
             <MenuItem
               as="a"

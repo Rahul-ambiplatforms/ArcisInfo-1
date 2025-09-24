@@ -241,7 +241,7 @@ const ContactSection = () => {
             />
           </FormControl>
           <FormControl isRequired>
-            <FormLabel>I want cameras for</FormLabel>
+            <FormLabel>I want cameras for:</FormLabel>
             <Select
               placeholder="Select an option"
               name="camerasFor"
@@ -258,7 +258,7 @@ const ContactSection = () => {
           </FormControl>
           {/* New field from ContactUs.js */}
           <FormControl isRequired>
-            <FormLabel>Client Category</FormLabel>
+            <FormLabel>I am a:</FormLabel>
             <Select
               placeholder="Select client category"
               name="customerType"
