@@ -34,8 +34,8 @@ const ContactSection = () => {
   const [isLoading, setIsLoading] = useState(false);
   const toast = useToast();
 
-  // const BACKEND_URL = "https://vmukti.com/backend/api/send-email-arcis";
-  const BACKEND_URL = "http://localhost:5000/api/send-email-arcis";
+  const BACKEND_URL = "https://vmukti.com/backend/api/send-email-arcis";
+  // const BACKEND_URL = "http://localhost:5000/api/send-email-arcis";
 
   // This handler now supports phone number formatting and checkboxes
   const handleChange = (e) => {
