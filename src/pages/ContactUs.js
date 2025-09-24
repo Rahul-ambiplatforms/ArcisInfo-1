@@ -124,22 +124,22 @@ const ContactSection = () => {
           isClosable: true,
         });
 
-        // navigate("/thank-you");
+        navigate("/thank-you");
 
         // Resetting the form with all new and old fields
-        // setFormData({
-        //   name: "",
-        //   email: "",
-        //   phone: "",
-        //   company: "",
-        //   location: "",
-        //   customerType: "",
-        //   camerasFor: "",
-        //   message: "",
-        //   customerQuantity: "",
-        //   leadType: "Arcis Website",
-        //   updates: false,
-        // });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          location: "",
+          customerType: "",
+          camerasFor: "",
+          message: "",
+          customerQuantity: "",
+          leadType: "Arcis Website",
+          updates: false,
+        });
       } else {
         throw new Error(data.error || "Failed to send message");
       }
