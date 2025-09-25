@@ -114,7 +114,7 @@ const ContactSection = () => {
       });
 
       const data = await response.json();
-      console.log("DATA SEND EMAIL",formData)
+      // console.log("DATA SEND EMAIL",formData)
       if (response.ok) {
         toast({
           title: "Message Sent!",
