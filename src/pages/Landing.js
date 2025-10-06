@@ -60,6 +60,121 @@ function Landing() {
           name="twitter:image"
           content="https://arcisai.io//images/DeviceImage.png"
         />
+        {/* --- Schema Markup: Organization, LocalBusiness, and WebPage --- */}
+        <script type="application/ld+json">
+          {JSON.stringify(
+            {
+              "@context": "http://schema.org",
+              "@type": "Organization",
+              url: "https://arcisai.io/",
+              name: "ArcisAI - AI CCTV Camera Brand",
+              logo: "https://arcisai.io/images/ArcisAi.png",
+              email: "marketing@arcisai.io",
+              telePhone: "+91 9687779999",
+              address: [
+                {
+                  "@type": "PostalAddress",
+                  addressCountry: "India",
+                  streetAddress:
+                    "7, Arista@Eight corporate House, Near Satyam House, Behind Rajpath Club, Bodakdev",
+                  addressLocality: "Ahmedabad",
+                  addressRegion: "Gujarat",
+                  postalCode: "380054",
+                },
+              ],
+            },
+            null,
+            2
+          )}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify(
+            {
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "ArcisAI - AI CCTV Camera Brand",
+              address: {
+                "@type": "PostalAddress",
+                addressCountry: "India",
+                streetAddress:
+                  "Arista@Eight corporate House, Near Satyam House, Behind Rajpath Club, Bodakdev",
+                addressLocality: "Ahmedabad",
+                addressRegion: "Gujarat",
+                postalCode: "380054",
+              },
+              pricerange: "$$$",
+              email: "marketing@arcisai.io",
+              telePhone: "+91 9687779999",
+              openingHours: "Mo,Tu,We,Th,Fr,Sa 09:30-18:30",
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                  ],
+                  opens: "09:30",
+                  closes: "18:30",
+                },
+              ],
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: "43.115852",
+                longitude: "5.846040",
+              },
+              image: "https://arcisai.io/images/ArcisAi.png",
+            },
+            null,
+            2
+          )}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify(
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              name: "India’s First AI CCTV Camera Brand with EdgeAI Detections | ArcisAI",
+              description:
+                "Discover ArcisAI – India’s first AI CCTV camera brand with 8 inbuilt EdgeAI detections, delivering smarter & faster surveillance via cloud VMS & Free mobile app.",
+              url: "https://arcisai.io/",
+              datePublished: "2024-07-24",
+              dateModified: "2025-10-06",
+              publisher: {
+                "@type": "Organization",
+                name: "ArcisAI - AI CCTV Camera Brand",
+                url: "https://arcisai.io/",
+                logo: {
+                  "@type": "ImageObject",
+                  url: "https://arcisai.io/images/ArcisAi.png",
+                  width: 107,
+                  height: 24,
+                },
+                sameAs: [
+                  "https://www.facebook.com/thearcisai/",
+                  "https://www.instagram.com/_arcisai_/",
+                  "https://www.linkedin.com/company/thearcisai/",
+                  "https://x.com/arcisai",
+                ],
+              },
+              primaryImageOfPage: {
+                "@type": "ImageObject",
+                url: "https://arcisai.io/images/DeviceImage.png",
+                width: 538,
+                height: 475,
+                caption: "AI-Powered Security Camera Brand",
+              },
+              inLanguage: "en-US",
+            },
+            null,
+            2
+          )}
+        </script>
       </Helmet>
       <Flex
         direction={["column", "row"]}
@@ -137,9 +252,7 @@ function Landing() {
             gap={"8px"}
             flexShrink={0}
             _hover={"none"}
-            onClick={() =>
-              (window.location.href = "/contact-us")
-            }
+            onClick={() => (window.location.href = "/contact-us")}
             fontSize={["sm", "md"]} // Adjust button size for mobile
             fontWeight="700"
             lineHeight="24px"
