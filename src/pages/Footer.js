@@ -20,7 +20,7 @@ import { useNavigate } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link as RouterLink } from "react-router-dom";
-import ContactUs from "./ContactUs"
+import ContactUs from "./ContactUs";
 
 function Footer() {
   const navigate = useNavigate();
@@ -424,8 +424,19 @@ function Footer() {
             mb={4}
           >
             {/* Logo */}
-            <Image src="./images/arcisGPTcolorWhite.png" alt="Logo" w="120px" />
-
+            <Flex direction="column" gap={2}>
+              <Image
+                src="./images/arcisGPTcolorWhite.png"
+                alt="Logo"
+                w="120px"
+              />
+              <Box w="50%">
+                <Text fontSize="14px" color="white">
+                  7, Arista@Eight corporate House, Near Satyam House, Behind
+                  Rajpath Club, Bodakdev, Ahmedabad - 380054
+                </Text>
+              </Box>
+            </Flex>
             {/* Navigation Links */}
             {/* <VStack
               // spacing={{ base: 3, md: 6 }}
