@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // process.env.REACT_APP_API_URL || 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://vmukti.com/backend/api' ||  'http://localhost:5000/api';
 // const API_URL = 'https://vmukti.com/backend/api';
 
 
