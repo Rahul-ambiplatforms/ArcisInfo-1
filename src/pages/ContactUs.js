@@ -11,7 +11,12 @@ import {
   useToast,
   Textarea, // Imported Textarea
   Checkbox, // Imported Checkbox
+  Flex, // Imported for layout
+  Heading, // Imported for the main title
+  HStack, // Imported for the feature list items
+  Icon, // Imported to use icons
 } from "@chakra-ui/react";
+import { CheckCircleIcon } from "@chakra-ui/icons"; // Imported for the feature list
 // If you are using react-router-dom, uncomment the next line
 import { useNavigate } from "react-router-dom";
 
@@ -114,7 +119,6 @@ const ContactSection = () => {
       });
 
       const data = await response.json();
-      // console.log("DATA SEND EMAIL",formData)
       if (response.ok) {
         toast({
           title: "Message Sent!",
@@ -158,30 +162,81 @@ const ContactSection = () => {
   };
 
   return (
-    <Box
-      as="section"
-      py={{ base: 10, md: 16 }}
+    <Flex
+      direction={{ base: "column", lg: "row" }}
+      w="100%"
+      bgGradient="linear(to-br, #1A202C, #5A3F8A, #9678E1)"
+      py={{ base: 10, md: 20 }}
       px={{ base: 4, md: 8 }}
-      bg="gray.50"
+      align="center"
+      justify="center"
     >
+      {/* Left Content Section */}
       <Box
+        flex="1"
+        color="white"
+        pr={{ base: 0, lg: 12 }}
+        pb={{ base: 10, lg: 0 }}
+        maxW={{ base: "100%", lg: "600px" }}
+      >
+        <Heading
+          as="h1"
+          size={{ base: "2xl", md: "3xl" }}
+          fontWeight="bold"
+          lineHeight="shorter"
+        >
+          One platform.
+          <br />
+          Superior performance.
+        </Heading>
+        <Text fontSize={{ base: "lg", md: "xl" }} mt={6}>
+          We help the most complex organizations to build, deploy and operate AI
+          vision. Accelerate the entire lifecycle of AI vision.
+        </Text>
+        <VStack spacing={4} mt={8} align="flex-start">
+          <HStack align="center">
+            <Icon as={CheckCircleIcon} color="green.300" w={6} h={6} />
+            <Text fontSize="lg">Connect large scale camera systems</Text>
+          </HStack>
+          <HStack align="center">
+            <Icon as={CheckCircleIcon} color="green.300" w={6} h={6} />
+            <Text fontSize="lg">
+              Build powerful, custom AI vision applications
+            </Text>
+          </HStack>
+          <HStack align="center">
+            <Icon as={CheckCircleIcon} color="green.300" w={6} h={6} />
+            <Text fontSize="lg">
+              Deploy real-time AI vision to the Edge or Cloud
+            </Text>
+          </HStack>
+          <HStack align="center">
+            <Icon as={CheckCircleIcon} color="green.300" w={6} h={6} />
+            <Text fontSize="lg">
+              Operate and maintain a portfolio of applications
+            </Text>
+          </HStack>
+          <HStack align="center">
+            <Icon as={CheckCircleIcon} color="green.300" w={6} h={6} />
+            <Text fontSize="lg">
+              Scale on robust infrastructure for any AI model
+            </Text>
+          </HStack>
+        </VStack>
+      </Box>
+
+      {/* Right Form Section */}
+      <Box
+        flex="1"
         maxW="600px"
-        mx="auto"
+        w="100%"
         bg="white"
         p={{ base: 6, md: 10 }}
         borderRadius="xl"
-        boxShadow="lg"
+        boxShadow="2xl"
       >
-        <Text
-          fontSize={{ base: "3xl", md: "4xl" }}
-          fontWeight="bold"
-          color="gray.800"
-          mb={6}
-          textAlign="center"
-        >
-          Get in touch
-        </Text>
         <VStack spacing={5} as="form" onSubmit={handleSubmit}>
+          {/* All form controls from your original code are here */}
           <FormControl isRequired>
             <FormLabel>Name</FormLabel>
             <Input
@@ -273,6 +328,8 @@ const ContactSection = () => {
               <option>Dealer</option>
               <option>Customer</option>
               <option>New Customer</option>
+              <option>End User</option>
+              <option>System Integrator</option>
               <option>Other</option>
             </Select>
           </FormControl>
@@ -330,7 +387,7 @@ const ContactSection = () => {
           </Button>
         </VStack>
       </Box>
-    </Box>
+    </Flex>
   );
 };
 

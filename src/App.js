@@ -1,6 +1,6 @@
 // App.js
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { Box } from "@chakra-ui/react";
 
 import Header from "./pages/Header";
@@ -12,11 +12,27 @@ import GenAiInfo from "./pages/GenAiInfo";
 import Thankyou from "./pages/Thankyou";
 import ContactUs from "./pages/ContactUs";
 
+import LoginDash from "./ArcisAdmin/pages/LoginDash";
+import Reset from "./ArcisAdmin/pages/ForgotPassword/Reset";
+import Dashboard from "./ArcisAdmin/pages/Dashboard/Dashboard";
+import OtpVerification from "./ArcisAdmin/pages/OTP/OtpVerification";
+
 function App() {
   return (
     <BrowserRouter>
-      <Header />
-      <Box pt={{ base: "12", md: "2" }}>
+      <InnerApp />
+    </BrowserRouter>
+  );
+}
+
+function InnerApp() {
+  const location = useLocation();
+  const hideHeader = location.pathname.startsWith("/admin");
+
+  return (
+    <>
+      {!hideHeader && <Header />}
+      <Box pt={hideHeader ? "0" : { base: "12", md: "2" }}>
         <Routes>
           <Route
             path="/"
@@ -32,11 +48,17 @@ function App() {
           />
           <Route path="/thank-you" element={<Thankyou />} />
           <Route path="/contact-us" element={<ContactUs />} />
+
+          {/* -----Admin Routes------ */}
+          <Route path="/admin" element={<LoginDash />} />
+          <Route path="/admin/reset" element={<Reset />} />
+          <Route path="/admin/dashboard" element={<Dashboard />} />
+          <Route path="/admin/verify" element={<OtpVerification />} />
         </Routes>
       </Box>
       {/* Optional: Footer outside routes if needed globally */}
       {/* <Footer /> */}
-    </BrowserRouter>
+    </>
   );
 }
 

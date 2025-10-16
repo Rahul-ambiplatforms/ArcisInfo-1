@@ -27,13 +27,6 @@ import { FaApple, FaGooglePlay } from "react-icons/fa";
 
 function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  // const handleDownlaod = () => {
-  //   const apkUrl = "/arcisai.apk";
-  //   const link = document.createElement("a");
-  //   link.href = apkUrl;
-  //   link.download = "arcisAi.apk";
-  //   link.click();
-  // };
 
   const buttonSize = useBreakpointValue({ base: "xs", md: "sm" });
 
@@ -57,7 +50,7 @@ function Header() {
             boxSize="40px"
             w="107px"
             h="24px"
-            cursor="pointer" // Makes it clear the image is clickable
+            cursor="pointer" 
           />
         </Link>
       </Flex>

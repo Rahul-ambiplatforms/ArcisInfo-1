@@ -53,7 +53,7 @@ const Thankyou = () => {
             textAlign={{ base: "center", lg: "center" }}
           >
             <Heading as="h1" fontSize={{ base: "48px", md: "64px" }}>
-              <Text as="span" color="#3F77A5">
+              <Text as="span" color="#9678E1">
                 Thank{" "}
               </Text>
               <Text as="span" color="#DB7B3A">
@@ -74,14 +74,14 @@ const Thankyou = () => {
               Want to talk sooner? Call us at{" "}
               <a
                 href="tel:+919687779999"
-                style={{ color: "#3F77A5", fontWeight: 500 }}
+                style={{ color: "#9678E1", fontWeight: 500 }}
               >
                 (+91) 968 777 9999
               </a>{" "}
               or email us at{" "}
               <a
                 href="mailto:marketing@arcisai.io"
-                style={{ color: "#3F77A5", fontWeight: 500 }}
+                style={{ color: "#9678E1", fontWeight: 500 }}
               >
                 marketing@arcisai.io
               </a>
@@ -94,7 +94,7 @@ const Thankyou = () => {
             </Text>
 
             <Button
-              bg="#3F77A5"
+              bg="#9678E1"
               color="white"
               size="lg"
               px={8}
