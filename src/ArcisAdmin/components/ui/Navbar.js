@@ -103,6 +103,21 @@ const Navbar = () => {
   const contactBtnSize = useBreakpointValue({ base: "120px", md: "146px" });
   const contactBtnHeight = useBreakpointValue({ base: "50px", md: "50px" });
   const [menuOpen, setMenuOpen] = useState(false);
+  const getEmailFromStorageOrToken = () => {
+    const stored = localStorage.getItem('userEmail');
+    if (stored) return stored;
+    try {
+      const token = localStorage.getItem('jwtToken');
+      if (!token) return '';
+      const payload = JSON.parse(atob(token.split('.')[1] || ''));
+      return payload && payload.email ? payload.email : '';
+    } catch {
+      return '';
+    }
+  };
+
+  const roleLabel = (localStorage.getItem('userRole') || '').toUpperCase();
+  const emailLabel = getEmailFromStorageOrToken();
 
   const handleMouseEnter = () => setMenuOpen(true);
   const handleMouseLeave = () => setMenuOpen(false);
@@ -112,6 +127,7 @@ const Navbar = () => {
   const logout = () => {
     localStorage.removeItem("jwtToken");
     localStorage.removeItem("userRole");
+    localStorage.removeItem("userEmail");
     navigate("/admin", { replace: true });
   };
   // const handleMouseEnter = (menuName) => {
@@ -250,7 +266,7 @@ const Navbar = () => {
                           whiteSpace: "nowrap",
                         }}
                       >
-                        Username
+                        {`${roleLabel}${emailLabel ? ' - ' + emailLabel : ''}`}
                       </MenuItem>
                       <Box width="100%" height="1px" bg="#BECEDC" />
                       <MenuItem

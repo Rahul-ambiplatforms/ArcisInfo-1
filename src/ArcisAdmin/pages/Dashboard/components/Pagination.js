@@ -72,7 +72,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange, disabled }) => {
               key={`page-${page}`}
               size="sm"
               variant={currentPage === page ? "solid" : "ghost"}
-              colorScheme={currentPage === page ? "blue" : "gray"}
+              colorScheme={currentPage === page ? "purple" : "gray"}
               onClick={() => onPageChange(page)}
             >
               {page}

@@ -222,7 +222,7 @@ const HRJobListPage = ({ onShowCreate, onEdit }) => {
         </Button>
         <Button
           size="sm"
-          colorScheme="blue"
+          colorScheme="purple"
           variant="solid"
           borderRadius="24px"
         >
@@ -275,17 +275,17 @@ const HRJobListPage = ({ onShowCreate, onEdit }) => {
               p={4}
               border="2px solid"
               borderColor={
-                draggedJob?._id === job._id ? "blue.300" : "gray.200"
+                draggedJob?._id === job._id ? "purple.300" : "gray.200"
               }
               borderRadius="md"
-              bg={draggedJob?._id === job._id ? "blue.50" : "white"}
+              bg={draggedJob?._id === job._id ? "purple.50" : "white"}
               cursor="move"
               draggable
               onDragStart={(e) => handleDragStart(e, job)}
               onDragOver={handleDragOver}
               onDrop={(e) => handleDrop(e, job)}
               transition="all 0.2s"
-              _hover={{ borderColor: "blue.300", bg: "blue.50" }}
+              _hover={{ borderColor: "purple.300", bg: "purple.50" }}
             >
               <Flex align="center" gap={3}>
                 <IconButton
@@ -510,13 +510,13 @@ const HRJobListPage = ({ onShowCreate, onEdit }) => {
                   borderColor:
                     deleteConfirmation === jobToDelete?.jobRole
                       ? "green.500"
-                      : "blue.500",
+                      : "purple.500",
                 }}
               />
             </FormControl>
 
             <Flex gap={3} justify="flex-end">
-              <Button variant="ghost" onClick={handleDeleteCancel}>
+              <Button variant="ghost" onClick={handleDeleteCancel}> 
                 Cancel
               </Button>
               <Button

@@ -93,6 +93,7 @@ const Dashboard = () => {
         )}
         {role === "ADMIN" && (
           <>
+          {/* I need to change the position of this. */}
             {adminSection && (
               <Box position="fixed" top="72px" right="24px" zIndex={1000}>
                 <Flex gap={3} align="center">
@@ -100,7 +101,7 @@ const Dashboard = () => {
                     <MenuButton
                       as={Button}
                       size="sm"
-                      colorScheme="blue"
+                      colorScheme="purple"
                       variant="solid"
                     >
                       {adminSection === "BLOG" ? "Blogs" : "Jobs"}
@@ -117,7 +118,7 @@ const Dashboard = () => {
                   <Button
                     size="sm"
                     variant="ghost"
-                    colorScheme="blue"
+                    colorScheme="purple"
                     onClick={() => setAdminSection(null)}
                   >
                     Back to selection

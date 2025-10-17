@@ -206,7 +206,7 @@ const HRAddJobPage = ({ onShowList, editJob }) => {
       >
         <Button
           size="sm"
-          colorScheme="blue"
+          colorScheme="purple"
           variant="solid"
           borderRadius="24px"
         >
@@ -327,7 +327,7 @@ const HRAddJobPage = ({ onShowList, editJob }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     size="xs"
-                    colorScheme="blue"
+                    colorScheme="purple"
                     variant="outline"
                   >
                     View
@@ -346,7 +346,7 @@ const HRAddJobPage = ({ onShowList, editJob }) => {
         </Box>
 
         <Flex gap={3}>
-          <Button type="submit" colorScheme="blue">
+          <Button type="submit" colorScheme="purple">
             Submit
           </Button>
         </Flex>

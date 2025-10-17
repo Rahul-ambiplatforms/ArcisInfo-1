@@ -41,6 +41,9 @@ const OtpVerification = () => {
             if (response?.data?.user?.role) {
               localStorage.setItem('userRole', response.data.user.role);
             }
+            if (response?.data?.user?.email) {
+              localStorage.setItem('userEmail', response.data.user.email);
+            }
             toast({
               title: 'OTP Verified',
               description: 'Your OTP has been verified successfully.',
@@ -49,7 +52,7 @@ const OtpVerification = () => {
               isClosable: true,
             });
             setIsVerified(true);
-            navigate('/admin/dashboard', { replace: true, state: { email: response.data.email } });
+            navigate('/admin/dashboard', { replace: true });
           } else {
             // console.log("error occur")
             toast({
@@ -161,7 +164,7 @@ const OtpVerification = () => {
             </PinInput>
           </HStack>
 
-          <Button colorScheme="blue" size="lg" width="100%" onClick={handleVerify}>
+          <Button colorScheme="purple" size="lg" width="100%" onClick={handleVerify}>
             Verify
           </Button>
         </VStack>

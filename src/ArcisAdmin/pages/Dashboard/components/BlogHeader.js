@@ -17,7 +17,7 @@ const BlogHeader = ({ onSearch, searchQuery, statusFilter, onChangeStatus }) => 
           <ButtonGroup isAttached size="sm" variant="outline">
             <Button
               onClick={() => onChangeStatus('all')}
-              colorScheme={statusFilter === 'all' ? 'blue' : 'gray'}
+              colorScheme={statusFilter === 'all' ? 'purple' : 'gray'}
               variant={statusFilter === 'all' ? 'solid' : 'outline'}
             >
               All
