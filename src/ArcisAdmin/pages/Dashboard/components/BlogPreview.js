@@ -27,7 +27,7 @@ import { useEffect, useState } from "react";
 const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
 // const API_IMAGE_URL = process.env.REACT_APP_API_IMAGE_URL || "http://localhost:5000";
 
-const API_IMAGE_URL = "https://res.cloudinary.com/dzs02ecai/image/upload/v1758361869";
+const API_IMAGE_URL = "https://res.cloudinary.com/dzs02ecai/image/upload/v1760695912/upload_arcis";
 
 // const API_URL = 'https://vmukti.com/backend/api';
 // const API_IMAGE_URL = 'https://vmukti.com/backend';

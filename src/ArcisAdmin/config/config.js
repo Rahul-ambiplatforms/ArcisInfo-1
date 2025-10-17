@@ -1,7 +1,7 @@
 const config = {
   // Change this URL based on your deployment environment
 
-  BACKEND_URL: "https://res.cloudinary.com/dzs02ecai/image/upload/v1758361869", 
+  BACKEND_URL: "https://res.cloudinary.com/dzs02ecai/image/upload/v1760695912/upload_arcis", 
 };
 
 export const getImageUrl = (imagePath) => {

@@ -34,6 +34,7 @@ import {
   Radio,
   Checkbox,
   InputLeftElement, 
+  Spinner,
 } from "@chakra-ui/react";
 import {
   FaUpload,
@@ -61,7 +62,7 @@ const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
 
 // const API_IMAGE_URL = process.env.REACT_APP_API_IMAGE_URL || "http://localhost:5000";
 const API_IMAGE_URL =
-  "https://res.cloudinary.com/dzs02ecai/image/upload/v1758361869";
+  "https://res.cloudinary.com/dzs02ecai/image/upload/v1760695912/upload_arcis";
 
 const createNewComponent = (type) => {
   const newComponent = {
@@ -140,7 +141,7 @@ const CreateBlogPage = () => {
                 <Checkbox
                   isChecked={preserveUpdatedAt}
                   onChange={(e) => setPreserveUpdatedAt(e.target.checked)}
-                  colorScheme="blue"
+                  colorScheme="purple"
                 >
                   Minor update (keep previous date)
                 </Checkbox>
@@ -239,6 +240,7 @@ const CreateBlogForm = ({ blog, preserveUpdatedAt }) => {
 
   const [mainImagePath, setMainImagePath] = useState("");
   const [newMainImage, setNewMainImage] = useState(null);
+  const [isImageUploading, setIsImageUploading] = useState(false);
   const [formData, setFormData] = useState({
     urlWords: "",
     metaTitle: "",
@@ -498,6 +500,7 @@ const CreateBlogForm = ({ blog, preserveUpdatedAt }) => {
 
   const handleImageUpload = async (file) => {
     try {
+      setIsImageUploading(true);
       if (file) {
         const uploadResponse = await uploadFile(file);
         if (uploadResponse.status === "success") {
@@ -519,6 +522,8 @@ const CreateBlogForm = ({ blog, preserveUpdatedAt }) => {
         duration: 5000,
         isClosable: true,
       });
+    } finally {
+      setIsImageUploading(false);
     }
   };
 
@@ -803,9 +808,10 @@ const CreateBlogForm = ({ blog, preserveUpdatedAt }) => {
             file={
               newMainImage ||
               (mainImagePath
-                ? { path: `${API_IMAGE_URL}/uploads/${mainImagePath}` }
+                ? { path: `${API_IMAGE_URL}/${mainImagePath}` }
                 : null)
             }
+            isLoading={isImageUploading}
           />
           <Divider borderStyle="dashed" />
           <Text fontWeight="medium" mb={1}>
@@ -1077,7 +1083,7 @@ const CreateBlogForm = ({ blog, preserveUpdatedAt }) => {
                 mainImage: newMainImage
                   ? URL.createObjectURL(newMainImage)
                   : mainImagePath
-                  ? `${API_IMAGE_URL}/uploads/${mainImagePath}`
+                  ? `${API_IMAGE_URL}/${mainImagePath}`
                   : null,
               }}
               components={[
@@ -1090,7 +1096,7 @@ const CreateBlogForm = ({ blog, preserveUpdatedAt }) => {
                         url: item.content.file
                           ? URL.createObjectURL(item.content.file)
                           : item.content.imagePath
-                          ? `${API_IMAGE_URL}/uploads/${item.content.imagePath}`
+                          ? `${API_IMAGE_URL}/${item.content.imagePath}`
                           : null,
                       },
                     };
@@ -1298,7 +1304,7 @@ const DynamicComponent = ({ component, onContentChange, onFileUpload }) => {
             file={
               content.file ||
               (content.imagePath
-                ? { path: `${API_IMAGE_URL}/uploads/${content.imagePath}` }
+                ? { path: `${API_IMAGE_URL}/${content.imagePath}` }
                 : null)
             }
           />
@@ -1406,7 +1412,7 @@ const CTAComponent = ({ component, onContentChange }) => {
 };
 // ===================================================================
 
-const FileUploadBox = ({ onFileUpload, file }) => {
+const FileUploadBox = ({ onFileUpload, file, isLoading }) => {
   const { getRootProps, getInputProps } = useDropzone({
     accept: { "image/*": [], "video/*": [] },
     maxSize: 10 * 1024 * 1024,
@@ -1442,7 +1448,12 @@ const FileUploadBox = ({ onFileUpload, file }) => {
       position="relative"
     >
       <input {...getInputProps()} />
-      {file ? (
+      {isLoading ? (
+        <Flex direction="column" align="center" justify="center">
+          <Spinner thickness='3px' speed='0.65s' emptyColor='gray.200' color='#9678E1' size='lg' />
+          <Text mt={2} fontSize="sm" color="gray.600">Uploading...</Text>
+        </Flex>
+      ) : file ? (
         <>
           <Image
             src={getImageSource(file)}
