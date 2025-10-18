@@ -137,7 +137,7 @@ const CreateBlogPage = () => {
                     : "Create/manage your blogs here."
                   : "Edit/delete your existing blogs"}
               </Heading>
-              {activeView === "create" && (
+              {activeView === "create" && editingBlog &&  (
                 <Checkbox
                   isChecked={preserveUpdatedAt}
                   onChange={(e) => setPreserveUpdatedAt(e.target.checked)}
@@ -241,6 +241,7 @@ const CreateBlogForm = ({ blog, preserveUpdatedAt }) => {
   const [mainImagePath, setMainImagePath] = useState("");
   const [newMainImage, setNewMainImage] = useState(null);
   const [isImageUploading, setIsImageUploading] = useState(false);
+  const [uploadingComponents, setUploadingComponents] = useState(new Set());
   const [formData, setFormData] = useState({
     urlWords: "",
     metaTitle: "",
@@ -344,6 +345,9 @@ const CreateBlogForm = ({ blog, preserveUpdatedAt }) => {
   const handleComponentImageUpload = async (id, file) => {
     try {
       if (file) {
+        // Add component to uploading set
+        setUploadingComponents(prev => new Set(prev).add(id));
+        
         const uploadResponse = await uploadFile(file);
         if (uploadResponse.status === "success") {
           const filename = uploadResponse.data.filename;
@@ -389,6 +393,13 @@ const CreateBlogForm = ({ blog, preserveUpdatedAt }) => {
         status: "error",
         duration: 5000,
         isClosable: true,
+      });
+    } finally {
+      // Remove component from uploading set
+      setUploadingComponents(prev => {
+        const newSet = new Set(prev);
+        newSet.delete(id);
+        return newSet;
       });
     }
   };
@@ -917,6 +928,7 @@ const CreateBlogForm = ({ blog, preserveUpdatedAt }) => {
                     onFileUpload={(file) =>
                       handleComponentImageUpload(component.id, file)
                     }
+                    isUploading={uploadingComponents.has(component.id)}
                   />
                 </Box>
               </Reorder.Item>
@@ -1255,7 +1267,7 @@ const AddComponentModal = ({ isOpen, onClose, onConfirm }) => {
   );
 };
 
-const DynamicComponent = ({ component, onContentChange, onFileUpload }) => {
+const DynamicComponent = ({ component, onContentChange, onFileUpload, isUploading = false }) => {
   const { type, content = {} } = component;
 
   switch (type) {
@@ -1307,6 +1319,7 @@ const DynamicComponent = ({ component, onContentChange, onFileUpload }) => {
                 ? { path: `${API_IMAGE_URL}/${content.imagePath}` }
                 : null)
             }
+            isLoading={isUploading}
           />
         </Box>
       );
