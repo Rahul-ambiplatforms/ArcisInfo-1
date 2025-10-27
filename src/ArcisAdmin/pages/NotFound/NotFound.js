@@ -26,7 +26,7 @@ const NotFound = () => {
                         The page you're looking for doesn't exist or has been moved.
                     </Text>
                     <Button
-                        colorScheme="blue"
+                        colorScheme="purple"
                         // bgGradient="linear(to-r, blue.400, blue.500, blue.600)"
                         bg="#9678E1"
                         color="white"

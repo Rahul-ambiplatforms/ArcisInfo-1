@@ -690,7 +690,7 @@ const CreateBlogForm = ({ blog, preserveUpdatedAt }) => {
           <Button
             leftIcon={<FaEye />}
             variant="outline"
-            colorScheme="blue"
+            colorScheme="purple"
             color="#9678E1"
             size="sm"
             borderRadius="md"
@@ -721,7 +721,7 @@ const CreateBlogForm = ({ blog, preserveUpdatedAt }) => {
             formData.status = "published";
             handleSubmit();
           }}
-          colorScheme="blue"
+          colorScheme="purple"
           bg="#9678E1"
           color="white"
           size="sm"
@@ -1063,7 +1063,7 @@ const CreateBlogForm = ({ blog, preserveUpdatedAt }) => {
               Save Draft
             </Button>
             <Button
-              colorScheme="blue"
+              colorScheme="purple"
               bg="#9678E1"
               color="white"
               onClick={() => {
@@ -1127,7 +1127,7 @@ const CreateBlogForm = ({ blog, preserveUpdatedAt }) => {
           </ModalBody>
           <ModalFooter>
             <Button
-              colorScheme="blue"
+              colorScheme="purple"
               mr={3}
               bg="#9678E1"
               color="white"
@@ -1185,7 +1185,7 @@ const CreateBlogForm = ({ blog, preserveUpdatedAt }) => {
               Open in new tab
             </Button>
             <Button
-              colorScheme="blue"
+              colorScheme="purple"
               bg="#9678E1"
               color="white"
               mr={3}
@@ -1258,7 +1258,7 @@ const AddComponentModal = ({ isOpen, onClose, onConfirm }) => {
           <Button onClick={onClose} mr={3}>
             Cancel
           </Button>
-          <Button colorScheme="blue" bg="#9678E1" onClick={handleConfirm}>
+          <Button colorScheme="purple" bg="#9678E1" onClick={handleConfirm}>
             Add Component
           </Button>
         </ModalFooter>

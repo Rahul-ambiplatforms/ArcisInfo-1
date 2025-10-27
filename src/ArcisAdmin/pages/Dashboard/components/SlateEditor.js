@@ -68,10 +68,10 @@ const TEXT_ALIGN_TYPES = ["left", "center", "right", "justify"];
 
 // Color options for text
 const colorOptions = [
-  { name: "Blue", value: "#9678E1" },
+  { name: "purple", value: "#9678E1" },
   { name: "Black", value: "#000000" },
   { name: "Gray", value: "#696969" },
-  { name: "Light Blue", value: "#BECEDC" },
+  { name: "Light purple", value: "#bba5f1ff" },
   { name: "Orange", value: "#DB7B3A" },
 ];
 
@@ -504,7 +504,7 @@ const LinkButton = () => {
             <Button variant="ghost" mr={3} onClick={handleClose}>
               Cancel
             </Button>
-            <Button colorScheme="blue" onClick={insertLink}>
+            <Button colorScheme="purple" onClick={insertLink}>
               Insert Link
             </Button>
           </ModalFooter>
@@ -624,7 +624,7 @@ const Element = ({ attributes, children, element }) => {
             href={element.url}
             style={{
               ...style,
-              color: "#2B6CB0", // Chakra UI blue.600
+              color: "#2B6CB0", // Chakra UI purple.600
               textDecoration: "underline",
               cursor: "pointer",
             }}

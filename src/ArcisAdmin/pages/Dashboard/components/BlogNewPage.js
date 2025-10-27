@@ -68,9 +68,9 @@ const renderSlateContent = (content) => {
               href={node.url}
               target="_blank"
               rel={relAttrs}
-              color="blue.600"
+              color="purple.600"
               textDecoration="underline"
-              _hover={{ color: "blue.700" }}
+              _hover={{ color: "purple.700" }}
               display="inline"
             >
               {children}
@@ -567,13 +567,13 @@ const BlogNewPage = () => {
                           return (
                             <Box
                               key={component.id}
-                              bg="blue.50"
+                              bg="purple.50"
                               p={6}
                               borderRadius="lg"
                               textAlign="center"
                               my={6}
                               border="1px"
-                              borderColor="blue.100"
+                              borderColor="purple.100"
                             >
                               <Text fontSize="xl" mb={4} fontWeight="medium">
                                 {component.content.ctaText ||
@@ -588,7 +588,7 @@ const BlogNewPage = () => {
                                     ? component.content.buttonLink
                                     : `https://${component.content.buttonLink}`
                                 }
-                                colorScheme="blue"
+                                colorScheme="purple"
                                 size="lg"
                                 target="_blank"
                                 rel="noopener noreferrer"

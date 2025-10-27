@@ -46,7 +46,7 @@ const BlogList = ({ blogs, isLoading, onEdit, onBlogDeleted, highlight }) => {
   if (isLoading) {
     return (
       <Center py={8}>
-        <Spinner size="xl" color="blue.500" thickness="4px" />
+        <Spinner size="xl" color="purple.500" thickness="4px" />
       </Center>
     )
   }
