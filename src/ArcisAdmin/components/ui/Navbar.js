@@ -38,7 +38,7 @@ const dropdownItems = {
   ],
 };
 
-const Navbar = () => {
+const Navbar = ({ adminSection, setAdminSection }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const {
     isOpen: isChangePasswordOpen,
@@ -51,6 +51,10 @@ const Navbar = () => {
   const [menuOpenStates, setMenuOpenStates] = useState({});
   const [isNavbarVisible, setIsNavbarVisible] = useState(true);
   const [openAccordion, setOpenAccordion] = useState(null); // Track the currently opened accordion
+  const [userInfo, setUserInfo] = useState({
+    role: localStorage.getItem("userRole") || "",
+    email: localStorage.getItem("userEmail") || "",
+  });
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -72,6 +76,14 @@ const Navbar = () => {
     //     setActiveLink(currentLink);
     // }
     // }, [location]);
+  }, []);
+
+  useEffect(() => {
+    // Update user info from localStorage
+    setUserInfo({
+      role: localStorage.getItem("userRole") || "",
+      email: localStorage.getItem("userEmail") || "",
+    });
   }, []);
 
   useEffect(() => {
@@ -104,19 +116,19 @@ const Navbar = () => {
   const contactBtnHeight = useBreakpointValue({ base: "50px", md: "50px" });
   const [menuOpen, setMenuOpen] = useState(false);
   const getEmailFromStorageOrToken = () => {
-    const stored = localStorage.getItem('userEmail');
+    const stored = localStorage.getItem("userEmail");
     if (stored) return stored;
     try {
-      const token = localStorage.getItem('jwtToken');
-      if (!token) return '';
-      const payload = JSON.parse(atob(token.split('.')[1] || ''));
-      return payload && payload.email ? payload.email : '';
+      const token = localStorage.getItem("jwtToken");
+      if (!token) return "";
+      const payload = JSON.parse(atob(token.split(".")[1] || ""));
+      return payload && payload.email ? payload.email : "";
     } catch {
-      return '';
+      return "";
     }
   };
 
-  const roleLabel = (localStorage.getItem('userRole') || '').toUpperCase();
+  const roleLabel = (localStorage.getItem("userRole") || "").toUpperCase();
   const emailLabel = getEmailFromStorageOrToken();
 
   const handleMouseEnter = () => setMenuOpen(true);
@@ -128,6 +140,7 @@ const Navbar = () => {
     localStorage.removeItem("jwtToken");
     localStorage.removeItem("userRole");
     localStorage.removeItem("userEmail");
+    setUserInfo({ role: "", email: "" });
     navigate("/admin", { replace: true });
   };
   // const handleMouseEnter = (menuName) => {
@@ -187,6 +200,43 @@ const Navbar = () => {
                     cursor="pointer"
                   />
                 </div>
+              </Box>
+              <Box>
+                {/* Admin Section Management */}
+                {userInfo.role === "ADMIN" && adminSection && (
+                  <Box zIndex={1000} bg="#EDF2F7" borderRadius="24px">
+                    <Flex gap={1} align="center" borderRadius="24px">
+                      <Menu>
+                        <MenuButton
+                          as={Button}
+                          size="sm"
+                          colorScheme="purple"
+                          variant="solid"
+                          borderRadius="24px"
+                        >
+                          {adminSection === "BLOG" ? "Blogs" : "Jobs"}
+                        </MenuButton>
+                        <MenuList>
+                          <MenuItem onClick={() => setAdminSection("BLOG")}>
+                            Blogs
+                          </MenuItem>
+                          <MenuItem onClick={() => setAdminSection("JOB")}>
+                            Jobs
+                          </MenuItem>
+                        </MenuList>
+                      </Menu>
+                      <Button
+                        size="sm"
+                        variant="ghost"
+                        colorScheme="purple"
+                        borderRadius="24px"
+                        onClick={() => setAdminSection(null)}
+                      >
+                        Back to selection
+                      </Button>
+                    </Flex>
+                  </Box>
+                )}
               </Box>
               <Flex align="center" position="relative">
                 <Menu isOpen={menuOpen} onClose={() => setMenuOpen(false)}>
@@ -266,7 +316,7 @@ const Navbar = () => {
                           whiteSpace: "nowrap",
                         }}
                       >
-                        {`${roleLabel}${emailLabel ? ' - ' + emailLabel : ''}`}
+                        {`${roleLabel}${emailLabel ? " - " + emailLabel : ""}`}
                       </MenuItem>
                       <Box width="100%" height="1px" bg="#BECEDC" />
                       <MenuItem

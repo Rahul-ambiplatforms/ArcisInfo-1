@@ -57,7 +57,7 @@ const Dashboard = () => {
   };
   return (
     <Box bg="gray.50" minH="100vh">
-      <Navbar />
+      <Navbar adminSection={adminSection} setAdminSection={setAdminSection} />
       <PageContentWrapper>
         {role === "HR" && (
           <>
@@ -93,39 +93,6 @@ const Dashboard = () => {
         )}
         {role === "ADMIN" && (
           <>
-          {/* I need to change the position of this. */}
-            {adminSection && (
-              <Box position="fixed" top="72px" right="24px" zIndex={1000}>
-                <Flex gap={3} align="center">
-                  <Menu>
-                    <MenuButton
-                      as={Button}
-                      size="sm"
-                      colorScheme="purple"
-                      variant="solid"
-                    >
-                      {adminSection === "BLOG" ? "Blogs" : "Jobs"}
-                    </MenuButton>
-                    <MenuList>
-                      <MenuItem onClick={() => setAdminSection("BLOG")}>
-                        Blogs
-                      </MenuItem>
-                      <MenuItem onClick={() => setAdminSection("JOB")}>
-                        Jobs
-                      </MenuItem>
-                    </MenuList>
-                  </Menu>
-                  <Button
-                    size="sm"
-                    variant="ghost"
-                    colorScheme="purple"
-                    onClick={() => setAdminSection(null)}
-                  >
-                    Back to selection
-                  </Button>
-                </Flex>
-              </Box>
-            )}
             {!adminSection && (
               <Box
                 display="flex"
