@@ -258,8 +258,8 @@ const BlogsOverviewDash = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/send-email-arcis",
-        // "https://vmukti.com/backend/api/send-email-arcis",
+        // "http://localhost:5000/api/send-email-arcis",
+        "https://vmukti.com/backend/api/send-email-arcis",
         {
           method: "POST",
           headers: {
