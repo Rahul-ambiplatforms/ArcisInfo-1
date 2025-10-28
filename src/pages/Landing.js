@@ -253,7 +253,7 @@ function Landing() {
             flexShrink={0}
             _hover={"none"}
             onClick={() => (window.location.href = "/contact-us")}
-            fontSize={["sm", "md"]} // Adjust button size for mobile
+            fontSize={["sm", "md"]}
             fontWeight="700"
             lineHeight="24px"
             textTransform="uppercase"

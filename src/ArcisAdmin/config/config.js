@@ -22,7 +22,7 @@ export const getImageUrl = (imagePath) => {
 
   // Add uploads/ prefix if not present
   // console.log("configured : ", `${config.BACKEND_URL}/uploads/${cleanPath}`);
-  return `${config.BACKEND_URL}/uploads/${cleanPath}`;
+  return `${config.BACKEND_URL}/${cleanPath}`;
 };
 
 export default config;

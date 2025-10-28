@@ -1,4 +1,4 @@
-import { ChevronDownIcon, DownloadIcon, HamburgerIcon } from "@chakra-ui/icons";
+import { ChevronDownIcon, HamburgerIcon } from "@chakra-ui/icons";
 import {
   Box,
   Button,
@@ -18,7 +18,6 @@ import {
   MenuList,
   Menu,
   MenuButton,
-  useBreakpointValue,
   Icon,
 } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
@@ -28,80 +27,85 @@ import { FaApple, FaGooglePlay } from "react-icons/fa";
 function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const buttonSize = useBreakpointValue({ base: "xs", md: "sm" });
-
   return (
     <Flex
       position={"fixed"}
-      justify="space-between"
+      justify="space-between" // This now works on Logo vs. Main Nav Group
       align="center"
       p="4"
       w={"100%"}
       boxShadow="md"
-      bg="linear-gradient(to right, white 68%, #9678E1 32%)"
+      bg="white"
       zIndex={"999"}
     >
-      {/* logo*/}
+      {/* CHILD 1: Logo (Extreme Left) */}
       <Flex alignItems="center">
         <Link as={RouterLink} to="/">
           <Image
             src="./images/ArcisAi.png"
             alt="Company Logo"
-            boxSize="40px"
             w="107px"
             h="24px"
-            cursor="pointer" 
+            cursor="pointer"
           />
         </Link>
       </Flex>
-      {/* Hamburger Icon for mobile */}
+
+      {/* CHILD 2: Hamburger Icon (Mobile Only) */}
       <IconButton
         aria-label="Open menu"
         icon={<HamburgerIcon />}
-        display={{ base: "flex", md: "none" }}
+        display={{ base: "flex", md: "none" }} // Only show on mobile
         onClick={onOpen}
-        background="#FFFFFF"
+        variant="ghost"
       />
-      {/* Links (hidden on mobile) */}
+
       <Flex
-        flexGrow={1}
-        justifyContent={"right"}
-        pr="2%"
-        display={{ base: "none", md: "flex" }}
+        alignItems="center" // Vertically center all nav items
+        gap={4} // Space between each item
+        display={{ base: "none", md: "flex" }} // Only show on desktop
+        fontSize="14px"
+        fontWeight="400"
       >
-        <Box>
-          <Flex
-            direction="row"
-            gap={6}
-            alignItems="center"
-            fontSize="14px"
-            fontWeight="400"
-            color="#606060"
-          >
-            {/* <Link href="#">PRIVACY POLICY</Link>
-            <Link href="#">TERMS OF SERVICES</Link>
-            <Link href="#">WARRANTY SERVICES</Link>
-            <Link href="#">WARRANTY POLICY</Link> */}
-          </Flex>
-        </Box>
-      </Flex>
-      {/* Buttons (hidden on mobile) */}
-      <Flex
-        justifyContent={"flex-end"}
-        w="32%"
-        gap={4}
-        display={{ base: "none", md: "flex" }}
-      >
+        {/* <Link href="#">Blogs</Link> */}
+        {/* <Link href="#">ContactUs</Link> */}
+        <Button
+          as={RouterLink}
+          to="/blog"
+          bg="white"
+          size="sm"
+          variant={"solid"}
+          color={"black"}
+          fontWeight="400"
+          fontSize="14px"
+          _hover={{ bg: "gray.50" }}
+        >
+          Blogs
+        </Button>
+        <Button
+          as={RouterLink}
+          to="/contact-us"
+          bg="white"
+          size="sm"
+          variant={"solid"}
+          color={"black"}
+          fontWeight="400"
+          fontSize="14px"
+          _hover={{ bg: "gray.50" }}
+        >
+          Contact Us
+        </Button>
         <Menu>
           <MenuButton
             as={Button}
-            size={{ base: "xs", md: "sm" }}
+            size="sm"
             rightIcon={<ChevronDownIcon />}
             bg="white"
             color="black"
-            // _hover={{ bg: "gray.400" }}
-            // _active={{ bg: "gray.900" }}
-            px={6}
+            fontWeight="400"
+            fontSize="14px"
+            _hover={{ bg: "gray.50" }}
+            _active={{ bg: "gray.100" }}
           >
             Download App
           </MenuButton>
@@ -123,26 +127,31 @@ function Header() {
           </MenuList>
         </Menu>
         <Button
-          background="#FFFFFF"
-          size={{ base: "xs", md: "sm" }}
+          bg="white"
+          size="sm"
           variant={"solid"}
           color={"black"}
+          fontWeight="400"
+          fontSize="14px"
+          _hover={{ bg: "gray.50" }}
           onClick={() => (window.location.href = "https://agent.arcisai.io/")}
         >
           Visual Bot Demo
         </Button>
         <Button
-          size={{ base: "xs", md: "sm" }}
+          size="sm"
           variant={"solid"}
-          color={"black"}
-          background="#FFFFFF"
+          color={"white"} // Changed to white for readability
+          bg="#9678E1" // Correct background color
           fontSize="14px"
-          w="25%"
+          // w="25%"          // Removed fixed width
+          _hover={{ bg: "#8266C9" }}
           onClick={() => (window.location.href = "https://view.arcisai.io/")}
         >
           Login
         </Button>
       </Flex>
+
       {/* Drawer for mobile menu */}
       <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
@@ -156,23 +165,9 @@ function Header() {
             <Image
               src="./images/ArcisAi.png"
               alt="Company Logo"
-              boxSize="40px"
               w="107px"
               h="24px"
             />
-            <Button
-              size="sm"
-              variant={"solid"}
-              color={"white"}
-              w="25%"
-              background="#9678E1"
-              fontSize="14px"
-              onClick={() =>
-                (window.location.href = "https://view.arcisai.io/")
-              }
-            >
-              Login
-            </Button>
           </DrawerHeader>
           <DrawerBody>
             <Flex
@@ -183,20 +178,19 @@ function Header() {
               fontWeight="400"
               color="#606060"
             >
-              {/* <Link href="#">PRIVACY POLICY</Link>
-              <Link href="#">TERMS OF SERVICES</Link>
-              <Link href="#">WARRANTY SERVICES</Link>
-              <Link href="#">WARRANTY POLICY</Link> */}
+              <Link href="#">Blogs</Link>
+              <Link href="#">ContactUs</Link>
+              <Link href="https://view.arcisai.io/">Login</Link>
             </Flex>
-            <Flex direction="column" gap={4} mt={8}></Flex>
           </DrawerBody>
-          <DrawerFooter>
+          <DrawerFooter borderTopWidth="1px">
             <Stack direction="column" spacing={3} width="100%">
               <Button
                 background="#9678E1"
                 size="sm"
                 variant="solid"
                 color="white"
+                _hover={{ bg: "#8266C9" }}
                 onClick={() =>
                   (window.location.href = "https://agent.arcisai.io/")
                 }
@@ -208,6 +202,7 @@ function Header() {
                 variant="solid"
                 color="white"
                 background="#9678E1"
+                _hover={{ bg: "#8266C9" }}
                 onClick={() =>
                   window.open(
                     "https://play.google.com/store/apps/details?id=com.arcisadiance.app"
@@ -221,6 +216,7 @@ function Header() {
                 variant="solid"
                 color="white"
                 background="#9678E1"
+                _hover={{ bg: "#8266C9" }}
                 onClick={() =>
                   window.open(
                     "https://apps.apple.com/in/app/arcisai/id6743403804"

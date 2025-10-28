@@ -11,6 +11,8 @@ import MiddlePart from "./pages/MiddlePart";
 import GenAiInfo from "./pages/GenAiInfo";
 import Thankyou from "./pages/Thankyou";
 import ContactUs from "./pages/ContactUs";
+import BlogsDashboard from "./pages/Blogs/BlogsDashboard";
+import BlogsContent from "./pages/Blogs/BlogsContents";
 
 import LoginDash from "./ArcisAdmin/pages/LoginDash";
 import Reset from "./ArcisAdmin/pages/ForgotPassword/Reset";
@@ -48,7 +50,8 @@ function InnerApp() {
           />
           <Route path="/thank-you" element={<Thankyou />} />
           <Route path="/contact-us" element={<ContactUs />} />
-
+          <Route path="/blog" element={<BlogsDashboard />} />
+          <Route path="/blog/:urlWords" element={<BlogsContent />} />
           {/* -----Admin Routes------ */}
           <Route path="/admin" element={<LoginDash />} />
           <Route path="/admin/reset" element={<Reset />} />

@@ -373,7 +373,7 @@ function Footer() {
             </Button>
           </Link>
         </Flex>
-        <Flex
+        {/* <Flex
           justify="center"
           align="center"
           mt={{ base: 10, md: 16 }}
@@ -396,7 +396,6 @@ function Footer() {
             />
           </Link>
 
-          {/* App Store Button */}
           <Link
             href="https://apps.apple.com/in/app/arcisai/id6743403804"
             isExternal
@@ -412,66 +411,66 @@ function Footer() {
               _hover={{ filter: "brightness(110%)" }}
             />
           </Link>
-        </Flex>
-
+        </Flex> */}
         <Box px={6} py={6} mt="12">
-          {/* Top Row: Logo and Nav Links */}
           <Flex
             direction={{ base: "column", md: "row" }}
+            justify="space-between" // Puts Logo block on left, Nav block on right
+            align="flex-start"
+            flexWrap="wrap"
+            w="100%"
+            mb={4}
+            gap={4}
+          >
+            {/* Column 1: Logo, Address, Contact */}
+            <Flex direction="column" gap={4}>
+              <Flex direction="column" gap={2}>
+                <Image src="./images/ArcisAi_1.png" alt="Logo" w="120px" />
+                <Box w={{ base: "100%", md: "60%" }}>
+                  <Text fontSize="14px" color="white">
+                    7, Arista@Eight corporate House, Near Satyam House, Behind
+                    Rajpath Club, Bodakdev, Ahmedabad - 380054
+                  </Text>
+                </Box>
+              </Flex>
+            </Flex>
+          </Flex>
+          <Flex
             justify="space-between"
             align="center"
             flexWrap="wrap"
+            gap={4}
             mb={4}
           >
-            {/* Logo */}
-            <Flex direction="column" gap={2}>
-              <Image
-                src="./images/arcisGPTcolorWhite.png"
-                alt="Logo"
-                w="120px"
-              />
-              <Box w="50%">
-                <Text fontSize="14px" color="white">
-                  7, Arista@Eight corporate House, Near Satyam House, Behind
-                  Rajpath Club, Bodakdev, Ahmedabad - 380054
-                </Text>
-              </Box>
-            </Flex>
-            {/* Navigation Links */}
-            {/* <VStack
-              // spacing={{ base: 3, md: 6 }}
-              mt={{ base: 4, md: 0 }}
-              fontSize="14px"
-              color="white"
-              textAlign={"right"}
-            > */}
-            {/* <Link href="#" _hover={{ textDecoration: "none" }}>
-                OUR PRODUCTS
-              </Link>
-              <Link href="#" _hover={{ textDecoration: "none" }}>
-                PRIVACY POLICY
-              </Link>
-              <Link href="#" _hover={{ textDecoration: "none" }}>
-                TERMS OF SERVICES
-              </Link>
-              <Link href="#" _hover={{ textDecoration: "none" }}>
-                WARRANTY SERVICES
-              </Link>
-              <Link href="#" _hover={{ textDecoration: "none" }}>
-                WARRANTY POLICY
-              </Link> */}
-            {/* <span>Contact us at :</span> */}
-            <Flex
-              color="white"
-              gap={2}
-              direction={{ base: "row", md: "column" }}
-              mt={{ base: 4, md: 0 }}
-              textAlign={{ base: "center", md: "right" }}
-            >
+            <Flex color="white" gap={1} direction="column" textAlign="left">
               <Text>marketing@arcisai.io</Text>
               <Text>(+91) 96877 79999</Text>
             </Flex>
-            {/* </VStack> */}
+            <Flex
+              direction="row" /* <-- Set back to "column" */
+              align="flex-start" /* <-- Aligns text to the left */
+              gap={4} /* <-- Use a smaller gap for vertical stacking */
+              color="white"
+            >
+              <Link
+                href="https://agent.arcisai.io/"
+                _hover={{ textDecoration: "none", color: "gray.300" }}
+              >
+                Visual Bot Demo
+              </Link>
+              <Link
+                onClick={() => (window.location.href = "/blog")}
+                _hover={{ textDecoration: "none", color: "gray.300" }}
+              >
+                Blogs
+              </Link>
+              <Link
+                onClick={() => (window.location.href = "/contact-us")}
+                _hover={{ textDecoration: "none", color: "gray.300" }}
+              >
+                Contact Us
+              </Link>
+            </Flex>
           </Flex>
 
           {/* Divider */}
