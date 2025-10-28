@@ -798,7 +798,7 @@ const CreateBlogForm = ({ blog, preserveUpdatedAt }) => {
             value={formData.blogAuthor}
             onChange={(e) => handleFormChange("blogAuthor", e.target.value)}
           >
-            {["Hardik Sanghvi", "Kushal Sanghvi", "Pratik Parikh"].map(
+            {["Hardik Sanghvi", "Kushal Sanghvi", "Parimal Panchal"].map(
               (author) => (
                 <option key={author} value={author}>
                   {author}

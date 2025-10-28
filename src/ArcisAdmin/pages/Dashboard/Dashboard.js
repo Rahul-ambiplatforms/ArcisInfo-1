@@ -16,6 +16,7 @@ import CreateBlogPage from "./components/CreateBlogPage";
 import HRAddJobPage from "./components/HRAddJobPage";
 import HRJobListPage from "./components/HRJobListPage";
 import PageContentWrapper from "../../components/ui/PageContentWrapper";
+import { Helmet } from "react-helmet-async";
 
 const Dashboard = () => {
   const jwt = localStorage.getItem("jwtToken");
@@ -56,143 +57,148 @@ const Dashboard = () => {
     setCurrentPage(1); // Reset to first page when searching
   };
   return (
-    <Box bg="gray.50" minH="100vh">
-      <Navbar adminSection={adminSection} setAdminSection={setAdminSection} />
-      <PageContentWrapper>
-        {role === "HR" && (
-          <>
-            {jobView === "create" && (
-              <HRAddJobPage
-                onShowList={() => {
-                  setJobView("list");
-                  setEditingJob(null);
-                }}
-                editJob={editingJob}
-              />
-            )}
-            {jobView === "list" && (
-              <>
-                <HRJobListPage
-                  onShowCreate={() => {
+    <>
+      <Helmet>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
+      <Box bg="gray.50" minH="100vh">
+        <Navbar adminSection={adminSection} setAdminSection={setAdminSection} />
+        <PageContentWrapper>
+          {role === "HR" && (
+            <>
+              {jobView === "create" && (
+                <HRAddJobPage
+                  onShowList={() => {
+                    setJobView("list");
                     setEditingJob(null);
-                    setJobView("create");
                   }}
-                  onEdit={(job) => {
-                    setEditingJob(job);
-                    setJobView("create");
-                  }}
+                  editJob={editingJob}
                 />
-              </>
-            )}
-          </>
-        )}
-        {role === "MARKETING" && (
-          <>
-            <CreateBlogPage />
-          </>
-        )}
-        {role === "ADMIN" && (
-          <>
-            {!adminSection && (
-              <Box
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-                height="100vh"
-                bg="gray.50"
-              >
-                <Box
-                  bg="white"
-                  borderRadius="md"
-                  p={6}
-                  boxShadow="sm"
-                  textAlign="center"
-                >
-                  Select a section to manage:
-                  <Box h={4} />
-                  <Flex gap={4} justify="center">
-                    <Box
-                      as="button"
-                      onClick={() => setAdminSection("BLOG")}
-                      bg="#9678E1"
-                      color="white"
-                      px={4}
-                      py={2}
-                      borderRadius="md"
-                    >
-                      Blogs
-                    </Box>
-                    <Box
-                      as="button"
-                      onClick={() => setAdminSection("JOB")}
-                      bg="#9678E1"
-                      color="white"
-                      px={4}
-                      py={2}
-                      borderRadius="md"
-                    >
-                      Jobs
-                    </Box>
-                  </Flex>
-                </Box>
-              </Box>
-            )}
-            {adminSection === "BLOG" && (
-              <>
-                <CreateBlogPage />
-              </>
-            )}
-            {adminSection === "JOB" && (
-              <>
-                {jobView === "create" && (
-                  <HRAddJobPage
-                    onShowList={() => {
-                      setJobView("list");
+              )}
+              {jobView === "list" && (
+                <>
+                  <HRJobListPage
+                    onShowCreate={() => {
                       setEditingJob(null);
+                      setJobView("create");
                     }}
-                    editJob={editingJob}
+                    onEdit={(job) => {
+                      setEditingJob(job);
+                      setJobView("create");
+                    }}
                   />
-                )}
-                {jobView === "list" && (
-                  <>
-                    <HRJobListPage
-                      onShowCreate={() => {
+                </>
+              )}
+            </>
+          )}
+          {role === "MARKETING" && (
+            <>
+              <CreateBlogPage />
+            </>
+          )}
+          {role === "ADMIN" && (
+            <>
+              {!adminSection && (
+                <Box
+                  display="flex"
+                  justifyContent="center"
+                  alignItems="center"
+                  height="100vh"
+                  bg="gray.50"
+                >
+                  <Box
+                    bg="white"
+                    borderRadius="md"
+                    p={6}
+                    boxShadow="sm"
+                    textAlign="center"
+                  >
+                    Select a section to manage:
+                    <Box h={4} />
+                    <Flex gap={4} justify="center">
+                      <Box
+                        as="button"
+                        onClick={() => setAdminSection("BLOG")}
+                        bg="#9678E1"
+                        color="white"
+                        px={4}
+                        py={2}
+                        borderRadius="md"
+                      >
+                        Blogs
+                      </Box>
+                      <Box
+                        as="button"
+                        onClick={() => setAdminSection("JOB")}
+                        bg="#9678E1"
+                        color="white"
+                        px={4}
+                        py={2}
+                        borderRadius="md"
+                      >
+                        Jobs
+                      </Box>
+                    </Flex>
+                  </Box>
+                </Box>
+              )}
+              {adminSection === "BLOG" && (
+                <>
+                  <CreateBlogPage />
+                </>
+              )}
+              {adminSection === "JOB" && (
+                <>
+                  {jobView === "create" && (
+                    <HRAddJobPage
+                      onShowList={() => {
+                        setJobView("list");
                         setEditingJob(null);
-                        setJobView("create");
                       }}
-                      onEdit={(job) => {
-                        setEditingJob(job);
-                        setJobView("create");
-                      }}
+                      editJob={editingJob}
                     />
-                  </>
-                )}
-              </>
-            )}
-          </>
-        )}
-        {!role ? (
-          <Box
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            height="100vh"
-            bg="gray.50"
-          >
+                  )}
+                  {jobView === "list" && (
+                    <>
+                      <HRJobListPage
+                        onShowCreate={() => {
+                          setEditingJob(null);
+                          setJobView("create");
+                        }}
+                        onEdit={(job) => {
+                          setEditingJob(job);
+                          setJobView("create");
+                        }}
+                      />
+                    </>
+                  )}
+                </>
+              )}
+            </>
+          )}
+          {!role ? (
             <Box
-              bg="white"
-              borderRadius="md"
-              p={6}
-              boxShadow="sm"
-              textAlign="center"
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              height="100vh"
+              bg="gray.50"
             >
-              You do not have access. Please contact an administrator to assign
-              a role.
+              <Box
+                bg="white"
+                borderRadius="md"
+                p={6}
+                boxShadow="sm"
+                textAlign="center"
+              >
+                You do not have access. Please contact an administrator to
+                assign a role.
+              </Box>
             </Box>
-          </Box>
-        ) : null}
-      </PageContentWrapper>
-    </Box>
+          ) : null}
+        </PageContentWrapper>
+      </Box>
+    </>
   );
 };
 
