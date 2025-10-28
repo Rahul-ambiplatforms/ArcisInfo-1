@@ -35,7 +35,7 @@ const BlogsDashboard = () => {
           name="twitter:description"
           content="Discover the latest AI CCTV and smart security insights from ArcisAI. Explore trends, innovations, and expert tips shaping the future of surveillance in India."
         />
-        <link rel="canonical" href="https://www.arcisai.io/blog" />
+        <link rel="canonical" href="https://arcisai.io/blog" />
         {/* {blogsPageSchemas.map((schema, index) => (
           <script
             key={`schema-${index}`}
