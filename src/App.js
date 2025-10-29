@@ -18,6 +18,7 @@ import LoginDash from "./ArcisAdmin/pages/LoginDash";
 import Reset from "./ArcisAdmin/pages/ForgotPassword/Reset";
 import Dashboard from "./ArcisAdmin/pages/Dashboard/Dashboard";
 import OtpVerification from "./ArcisAdmin/pages/OTP/OtpVerification";
+import CTA from "./pages/CTA";
 
 function App() {
   return (
@@ -44,14 +45,15 @@ function InnerApp() {
                 <ProductInfo />
                 <MiddlePart />
                 <GenAiInfo />
+                <CTA />
                 <Footer />
               </>
             }
           />
           <Route path="/thank-you" element={<Thankyou />} />
-          <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/blog" element={<BlogsDashboard />} />
-          <Route path="/blog/:urlWords" element={<BlogsContent />} />
+          <Route path="/contact-us" element={<><ContactUs /><Footer /></>} />
+          <Route path="/blog" element={<><BlogsDashboard /><Footer /></>} />
+          <Route path="/blog/:urlWords" element={<><BlogsContent /><Footer /></>} />
           {/* -----Admin Routes------ */}
           <Route path="/admin" element={<LoginDash />} />
           <Route path="/admin/reset" element={<Reset />} />

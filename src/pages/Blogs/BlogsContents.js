@@ -725,9 +725,10 @@ const BlogsOverviewDash = () => {
               <Box
                 // p="2%"
                 mb={{ base: "0", md: "4%" }}
-                bg="white"
+                // bg="white"
                 borderRadius={{ base: "20px", md: "24px" }}
                 display={{ base: "block", md: "none" }}
+                boxShadow="lg"
               >
                 <TableOfContents components={components} />
               </Box>
@@ -936,10 +937,8 @@ const BlogsOverviewDash = () => {
             width={{ base: "100%", md: "30%" }}
             position={{ base: "relative", md: "sticky" }}
             top={{ base: "20px", md: "50px" }} //85px
-            // bg="red"
-            // top="20px"
             borderRadius={{ base: "20px", md: "24px" }}
-            boxShadow="sm"
+            // boxShadow="sm"
           >
             <Box
               p="2%"
@@ -947,6 +946,7 @@ const BlogsOverviewDash = () => {
               bg="white"
               borderRadius={{ base: "20px", md: "24px" }}
               display={{ base: "none", md: "block" }}
+              boxShadow="lg"
             >
               <TableOfContents components={components} />
             </Box>
@@ -956,6 +956,7 @@ const BlogsOverviewDash = () => {
               maxH="50vh"
               display="flex"
               flexDirection="column"
+              boxShadow="lg"
             >
               {/* Heading (fixed / non-scrollable) */}
               <Heading

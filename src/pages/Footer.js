@@ -161,145 +161,17 @@ function Footer() {
   };
 
   return (
-    <Box w={"100%"}>
+    <Box w={"100%"} mt="-5%">
       {/* Contact Section */}
-      <ContactUs />
-      {/* <Box
-        as="section"
-        py={{ base: 10, md: 16 }}
-        px={{ base: 4, md: 8 }}
-        bg="gray.50"
-      >
-        <Box
-          maxW="600px"
-          mx="auto"
-          bg="white"
-          p={{ base: 6, md: 10 }}
-          borderRadius="xl"
-          boxShadow="lg"
-        >
-          <Text
-            fontSize={{ base: "3xl", md: "4xl" }}
-            fontWeight="bold"
-            color="gray.800"
-            mb={6}
-            textAlign="center"
-          >
-            Get in touch
-          </Text>
-          <VStack spacing={5} as="form" onSubmit={handleSubmit}>
-            <FormControl isRequired>
-              <FormLabel>Name</FormLabel>
-              <Input
-                placeholder="Enter your name"
-                name="name"
-                onChange={handleChange}
-                value={formData.name}
-                focusBorderColor="purple.500"
-                borderRadius="md"
-              />
-            </FormControl>
-            <FormControl isRequired>
-              <FormLabel>Phone number</FormLabel>
-              <Input
-                placeholder="Enter your phone number"
-                name="phone"
-                onChange={handleChange}
-                value={formData.phone}
-                maxLength={10}
-                focusBorderColor="purple.500"
-                borderRadius="md"
-              />
-            </FormControl>
-            <FormControl isRequired>
-              <FormLabel>Email</FormLabel>
-              <Input
-                placeholder="Enter your email"
-                name="email"
-                type="email"
-                onChange={handleChange}
-                value={formData.email}
-                focusBorderColor="purple.500"
-                borderRadius="md"
-              />
-            </FormControl>
-            <FormControl isRequired>
-              <FormLabel>Company</FormLabel>
-              <Input
-                placeholder="Enter your company name"
-                name="company"
-                onChange={handleChange}
-                value={formData.company}
-                focusBorderColor="purple.500"
-                borderRadius="md"
-              />
-            </FormControl>
-            <FormControl isRequired>
-              <FormLabel>Location</FormLabel>
-              <Input
-                placeholder="Enter your location"
-                name="location"
-                onChange={handleChange}
-                value={formData.location}
-                focusBorderColor="purple.500"
-                borderRadius="md"
-              />
-            </FormControl>
-            <FormControl isRequired>
-              <FormLabel>I want cameras for</FormLabel>
-              <Select
-                placeholder="Select an option"
-                name="camerasFor"
-                onChange={handleChange}
-                value={formData.camerasFor}
-                focusBorderColor="purple.500"
-                borderRadius="md"
-              >
-                <option value="Office">Office</option>
-                <option value="Factory">Factory</option>
-                <option value="Home">Home</option>
-                <option value="Other">Other</option>
-              </Select>
-            </FormControl>
-            <FormControl>
-              <FormLabel>Customer Quantity (Optional)</FormLabel>
-              <Input
-                placeholder="e.g., 10-20"
-                name="customerQuantity"
-                onChange={handleChange}
-                value={formData.customerQuantity}
-                focusBorderColor="purple.500"
-                borderRadius="md"
-              />
-            </FormControl>
-            <Button
-              type="submit"
-              colorScheme="purple"
-              isLoading={isLoading}
-              w="full"
-              py={6}
-              fontSize="lg"
-              mt={4}
-              borderRadius="md"
-              _hover={{
-                bgGradient: "linear(to-r, purple.500, pink.500)",
-                boxShadow: "lg",
-              }}
-            >
-              Send Message
-            </Button>
-          </VStack>
-        </Box>
-      </Box> */}
-
+      {/* <ContactUs /> */}
       {/* Footer Section */}
       <Box
         as="footer"
-        background={"linear-gradient(to bottom, white 35%, #9678E1 0%)"}
+        background={"linear-gradient(to bottom, white 5%, #9678E1 0%)"}
         py={{ base: 8, md: 10 }}
         px={{ base: 3, md: 5 }}
       >
-        <Flex
+        {/* <Flex
           maxW="80%"
           mx="auto"
           bg="white"
@@ -372,7 +244,7 @@ function Footer() {
               Buy ArcisAI Cameras Now
             </Button>
           </Link>
-        </Flex>
+        </Flex> */}
         {/* <Flex
           justify="center"
           align="center"
