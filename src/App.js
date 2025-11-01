@@ -51,6 +51,7 @@ function InnerApp() {
             }
           />
           <Route path="/thank-you" element={<Thankyou />} />
+          <Route path="/blog-thank-you" element={<Thankyou />} />
           <Route path="/contact-us" element={<><ContactUs /><Footer /></>} />
           <Route path="/blog" element={<><BlogsDashboard /><Footer /></>} />
           <Route path="/blog/:urlWords" element={<><BlogsContent /><Footer /></>} />

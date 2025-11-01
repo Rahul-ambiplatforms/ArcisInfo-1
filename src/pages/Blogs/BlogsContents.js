@@ -27,6 +27,7 @@ import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getBlogs, getBlogById, getBlogByUrlWords } from "./blog";
 import { Helmet } from "react-helmet-async";
+import { useNavigate } from "react-router-dom";
 // import ContactUs from "../ContactUs/Contactus";
 // import ImagePop from "../../components/Animation/Image/ImagePop";
 
@@ -225,6 +226,8 @@ const BlogsOverviewDash = () => {
   const [isLoading, setIsLoading] = useState(false);
   const toast = useToast();
 
+  const navigate = useNavigate();
+
   const sectionRef = useRef(null); // Reference for the section containing the image
   const ellipseSize = useBreakpointValue({
     base: "200px",
@@ -268,6 +271,7 @@ const BlogsOverviewDash = () => {
           body: JSON.stringify({
             ...formData,
             formType: "Blog",
+            pageUrl: currentUrl,
           }),
         }
       );
@@ -275,13 +279,15 @@ const BlogsOverviewDash = () => {
       const data = await response.json();
 
       if (response.ok) {
-        toast({
-          title: "Message Sent!",
-          description: "We'll get back to you soon.",
-          status: "success",
-          duration: 5000,
-          isClosable: true,
-        });
+        // toast({
+        //   title: "Message Sent!",
+        //   description: "We'll get back to you soon.",
+        //   status: "success",
+        //   duration: 5000,
+        //   isClosable: true,
+        // });
+
+        navigate("/blog-thank-you");
 
         setFormData({
           name: "",
