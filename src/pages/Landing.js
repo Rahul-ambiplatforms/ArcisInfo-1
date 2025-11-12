@@ -18,11 +18,12 @@ function Landing() {
       <Helmet>
         {/* Primary Meta Tags */}
         <title>
-          India’s First AI CCTV Camera Brand with EdgeAI Detections | ArcisAI
+          India’s First Edge AI CCTV Camera Brand | Security Camera Company -
+          ArcisAI
         </title>
         <meta
           name="description"
-          content="Discover ArcisAI – India’s first AI CCTV camera brand with 8 inbuilt EdgeAI detections, delivering smarter & faster surveillance via cloud VMS & Free mobile app."
+          content="ArcisAI – India’s first AI CCTV camera brand & security camera company with 8 EdgeAI detections, faster and smarter surveillance with cloud VMS and a free mobile app."
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://arcisai.io/" />
@@ -30,11 +31,11 @@ function Landing() {
         {/* Open Graph / Facebook */}
         <meta
           property="og:title"
-          content="India’s First AI CCTV Camera Brand with EdgeAI Detections | ArcisAI"
+          content="India’s First Edge AI CCTV Camera Brand | Security Camera Company - ArcisAI"
         />
         <meta
           property="og:description"
-          content="Discover ArcisAI – India’s first AI CCTV camera brand with 8 inbuilt EdgeAI detections, delivering smarter & faster surveillance via cloud VMS & Free mobile app."
+          content="ArcisAI – India’s first AI CCTV camera brand & security camera company with 8 EdgeAI detections, faster and smarter surveillance with cloud VMS and a free mobile app."
         />
         <meta
           property="og:image"
@@ -50,11 +51,11 @@ function Landing() {
         <meta name="twitter:site" content="@arcisai" />
         <meta
           name="twitter:title"
-          content="India’s First AI CCTV Camera Brand with EdgeAI Detections | ArcisAI"
+          content="India’s First Edge AI CCTV Camera Brand | Security Camera Company - ArcisAI"
         />
         <meta
           name="twitter:description"
-          content="Discover ArcisAI – India’s first AI CCTV camera brand with 8 inbuilt EdgeAI detections, delivering smarter & faster surveillance via cloud VMS & Free mobile app."
+          content="ArcisAI – India’s first AI CCTV camera brand & security camera company with 8 EdgeAI detections, faster and smarter surveillance with cloud VMS and a free mobile app."
         />
         <meta
           name="twitter:image"
