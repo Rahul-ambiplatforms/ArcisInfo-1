@@ -140,9 +140,9 @@ function Landing() {
             {
               "@context": "https://schema.org",
               "@type": "WebPage",
-              name: "India’s First AI CCTV Camera Brand with EdgeAI Detections | ArcisAI",
+              name: "India’s First Edge AI CCTV Camera Brand | Security Camera Company - ArcisAI",
               description:
-                "Discover ArcisAI – India’s first AI CCTV camera brand with 8 inbuilt EdgeAI detections, delivering smarter & faster surveillance via cloud VMS & Free mobile app.",
+                "ArcisAI – India’s first AI CCTV camera brand & security camera company with 8 EdgeAI detections, faster and smarter surveillance with cloud VMS and a free mobile app.",
               url: "https://arcisai.io/",
               datePublished: "2024-07-24",
               dateModified: "2025-10-06",
