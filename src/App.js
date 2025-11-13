@@ -19,6 +19,8 @@ import Reset from "./ArcisAdmin/pages/ForgotPassword/Reset";
 import Dashboard from "./ArcisAdmin/pages/Dashboard/Dashboard";
 import OtpVerification from "./ArcisAdmin/pages/OTP/OtpVerification";
 import CTA from "./pages/CTA";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 
 function App() {
   return (
@@ -50,11 +52,37 @@ function InnerApp() {
               </>
             }
           />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/thank-you" element={<Thankyou />} />
           <Route path="/blog-thank-you" element={<Thankyou />} />
-          <Route path="/contact-us" element={<><ContactUs /><Footer /></>} />
-          <Route path="/blog" element={<><BlogsDashboard /><Footer /></>} />
-          <Route path="/blog/:urlWords" element={<><BlogsContent /><Footer /></>} />
+          <Route
+            path="/contact-us"
+            element={
+              <>
+                <ContactUs />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/blog"
+            element={
+              <>
+                <BlogsDashboard />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/blog/:urlWords"
+            element={
+              <>
+                <BlogsContent />
+                <Footer />
+              </>
+            }
+          />
           {/* -----Admin Routes------ */}
           <Route path="/admin" element={<LoginDash />} />
           <Route path="/admin/reset" element={<Reset />} />

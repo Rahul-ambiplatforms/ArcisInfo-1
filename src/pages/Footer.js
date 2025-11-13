@@ -325,6 +325,18 @@ function Footer() {
               color="white"
             >
               <Link
+                onClick={() => (window.location.href = "/terms-of-service")}
+                _hover={{ textDecoration: "none", color: "gray.300" }}
+              >
+                Terms of Service
+              </Link>
+              <Link
+                onClick={() => (window.location.href = "/privacy-policy")}
+                _hover={{ textDecoration: "none", color: "gray.300" }}
+              >
+                Privacy Policy
+              </Link>
+              <Link
                 href="https://agent.arcisai.io/"
                 _hover={{ textDecoration: "none", color: "gray.300" }}
               >
