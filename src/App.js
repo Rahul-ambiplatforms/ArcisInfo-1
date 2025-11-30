@@ -13,6 +13,7 @@ import Thankyou from "./pages/Thankyou";
 import ContactUs from "./pages/ContactUs";
 import BlogsDashboard from "./pages/Blogs/BlogsDashboard";
 import BlogsContent from "./pages/Blogs/BlogsContents";
+import Event from "./pages/Events/Event";
 
 import LoginDash from "./ArcisAdmin/pages/LoginDash";
 import Reset from "./ArcisAdmin/pages/ForgotPassword/Reset";
@@ -43,6 +44,7 @@ function InnerApp() {
             path="/"
             element={
               <>
+                <Event />
                 <Landing />
                 <ProductInfo />
                 <MiddlePart />
