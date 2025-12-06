@@ -190,20 +190,31 @@ const Footer = () => {
               objectFit="contain"
             />
             <HStack spacing={3}>
-              <Image
-                src="/images/footer-app-store.png"
-                alt="App Store"
-                h={{ base: "35px", md: "40px" }}
-                cursor="pointer"
-                objectFit="contain"
-              />
-              <Image
-                src="/images/footer-play-store.png"
-                alt="Google Play"
-                h={{ base: "35px", md: "40px" }}
-                cursor="pointer"
-                objectFit="contain"
-              />
+              <Link
+                href="https://apps.apple.com/in/app/arcisai/id6743403804"
+                isExternal
+              >
+                <Image
+                  src="/images/footer-app-store.png"
+                  alt="App Store"
+                  h={{ base: "35px", md: "40px" }}
+                  cursor="pointer"
+                  objectFit="contain"
+                />
+              </Link>
+
+              <Link
+                href="https://play.google.com/store/apps/details?id=com.arcisadiance.app"
+                isExternal
+              >
+                <Image
+                  src="/images/footer-play-store.png"
+                  alt="Google Play"
+                  h={{ base: "35px", md: "40px" }}
+                  cursor="pointer"
+                  objectFit="contain"
+                />
+              </Link>
             </HStack>
             {/* <RouterLink to="/">
               <Image

@@ -228,14 +228,14 @@ const ProductList = () => {
         </Box>
 
         {/* More Products Button */}
-        <Flex justify="center" mt={10}>
+        {/* <Flex justify="center" mt={10}>
           <CustomButton
             width="180px"
             onClick={() => navigate("/products")} // Assuming a products page exists
           >
             More Products
           </CustomButton>
-        </Flex>
+        </Flex> */}
       </Box>
     </Box>
   );
