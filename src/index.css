@@ -1,16 +1,36 @@
+@font-face {
+  font-family: "WixMadeforDisplay";
+  src: url("./fonts/WixMadeforDisplay-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  background-color: #171717;
+  min-height: 100%;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "WixMadeforDisplay", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
- max-height: 100vh;
-  width: '100%';
+  background-color: #171717;
+  min-height: 100vh;
+  width: 100%;
+}
+
+#root {
+  background-color: #171717;
+  min-height: 100vh;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
 }

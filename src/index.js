@@ -4,12 +4,30 @@ import { HelmetProvider } from "react-helmet-async";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { BrowserRouter } from "react-router-dom";
+
+const theme = extendTheme({
+  styles: {
+    global: {
+      body: {
+        bg: "#171717",
+      },
+      html: {
+        bg: "#171717",
+      },
+    },
+  },
+  fonts: {
+    heading: "'WixMadeforDisplay', sans-serif",
+    body: "'WixMadeforDisplay', sans-serif",
+  },
+});
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <HelmetProvider>
         {/* <BrowserRouter> */}
           <App />

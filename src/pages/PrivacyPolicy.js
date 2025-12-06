@@ -22,7 +22,7 @@ function PrivacyPolicy() {
   //   theme.colors.custom.darkSecondaryText
   // );
   return (
-    <Box mt="6%" p="2%" maxW={"1440px"} mx={"auto"} overflow={"hidden"} textAlign={"justify"}>
+    <Box mt="6%" p="2%" maxW={"1440px"} mx={"auto"} overflow={"hidden"} textAlign={"justify"} color="white">
       <Flex
         direction={{ base: "column", md: "row" }}
         justify={{ base: "flex-start", md: "space-between" }}

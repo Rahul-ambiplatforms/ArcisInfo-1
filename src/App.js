@@ -2,9 +2,15 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { Box } from "@chakra-ui/react";
+import "./App.css";
 
-import Header from "./pages/Header";
-import Footer from "./pages/Footer";
+import Header from "./Components/Header/Header";
+import HomeDashboard from "./pages/HomePage/HomeDashboard";
+import Products from "./pages/Product/Products"; // Import Products page
+import AboutUs from "./pages/AboutUs/AboutUs";
+import WhyArcisAI from "./pages/WhyArcisAI/WhyArcisAI";
+import Footer from "./Components/Footer/Footer";
+
 import Landing from "./pages/Landing";
 import ProductInfo from "./pages/ProductInfo";
 import MiddlePart from "./pages/MiddlePart";
@@ -22,6 +28,7 @@ import OtpVerification from "./ArcisAdmin/pages/OTP/OtpVerification";
 import CTA from "./pages/CTA";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
+import Solutions from "./pages/Solution/Solutions";
 
 function App() {
   return (
@@ -34,13 +41,56 @@ function App() {
 function InnerApp() {
   const location = useLocation();
   const hideHeader = location.pathname.startsWith("/admin");
+  const SHOW_EVENT_BANNER = true; // Toggle this to show/hide the event banner
 
   return (
     <>
-      {!hideHeader && <Header />}
-      <Box pt={hideHeader ? "0" : { base: "12", md: "2" }}>
+      {!hideHeader && <Header showEvent={SHOW_EVENT_BANNER} />}
+      <Box
+        pt={
+          hideHeader
+            ? "0"
+            : SHOW_EVENT_BANNER
+            ? { base: "150px", md: "150px" }
+            : { base: "100px", md: "100px" }
+        }
+      >
         <Routes>
+          <Route path="/" element={<HomeDashboard />} />
+          <Route path="/s-series/:productId" element={<Products />} />
+          <Route path="/solution/:solutionId" element={<Solutions />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/why-choose-arcisai" element={<WhyArcisAI />} />
           <Route
+            path="/contact-us"
+            element={
+              <>
+                <ContactUs />
+              </>
+            }
+          />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/thank-you" element={<Thankyou />} />
+          <Route path="/blog-thank-you" element={<Thankyou />} />
+          <Route
+            path="/blog"
+            element={
+              <>
+                <BlogsDashboard />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/blog/:urlWords"
+            element={
+              <>
+                <BlogsContent />
+              </>
+            }
+          />
+          {/* <Route
             path="/"
             element={
               <>
@@ -54,10 +104,6 @@ function InnerApp() {
               </>
             }
           />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms-of-service" element={<TermsOfService />} />
-          <Route path="/thank-you" element={<Thankyou />} />
-          <Route path="/blog-thank-you" element={<Thankyou />} />
           <Route
             path="/contact-us"
             element={
@@ -81,10 +127,9 @@ function InnerApp() {
             element={
               <>
                 <BlogsContent />
-                <Footer />
               </>
             }
-          />
+          /> */}
           {/* -----Admin Routes------ */}
           <Route path="/admin" element={<LoginDash />} />
           <Route path="/admin/reset" element={<Reset />} />
@@ -92,8 +137,7 @@ function InnerApp() {
           <Route path="/admin/verify" element={<OtpVerification />} />
         </Routes>
       </Box>
-      {/* Optional: Footer outside routes if needed globally */}
-      {/* <Footer /> */}
+      {!hideHeader && <Footer />}
     </>
   );
 }
