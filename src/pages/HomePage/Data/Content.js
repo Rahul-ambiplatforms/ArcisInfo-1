@@ -128,36 +128,36 @@ export const homeContent = {
           },
         ],
       },
-      {
-        product_type: "ECO-Series",
-        productarray: [
-          {
-            image: "/images/bullet_hero.png",
-            product_name: "Eco Bullet Camera",
-            link: "#",
-          },
-          {
-            image: "/images/dome_hero.png",
-            product_name: "Eco Dome Camera",
-            link: "#",
-          },
-        ],
-      },
-      {
-        product_type: "NVR/DVR",
-        productarray: [
-          {
-            image: "/images/screen.png",
-            product_name: "8 Channel NVR",
-            link: "#",
-          },
-          {
-            image: "/images/screen.png",
-            product_name: "16 Channel DVR",
-            link: "#",
-          },
-        ],
-      },
+      // {
+      //   product_type: "ECO-Series",
+      //   productarray: [
+      //     {
+      //       image: "/images/bullet_hero.png",
+      //       product_name: "Eco Bullet Camera",
+      //       link: "#",
+      //     },
+      //     {
+      //       image: "/images/dome_hero.png",
+      //       product_name: "Eco Dome Camera",
+      //       link: "#",
+      //     },
+      //   ],
+      // },
+      // {
+      //   product_type: "NVR/DVR",
+      //   productarray: [
+      //     {
+      //       image: "/images/screen.png",
+      //       product_name: "8 Channel NVR",
+      //       link: "#",
+      //     },
+      //     {
+      //       image: "/images/screen.png",
+      //       product_name: "16 Channel DVR",
+      //       link: "#",
+      //     },
+      //   ],
+      // },
     ],
   },
   Certifications: {

@@ -572,28 +572,28 @@ export const Product = {
           heading: "CloudAI Analytics",
           description:
             "CloudAI is an optional upgrade — choose and pay for deeper analytics beyond basic alerts, including reports and trend insights.",
-          image: "/images/screen.png",
+          image: "/images/solution_surveillance_1.png",
           link: "#",
         },
         {
           heading: "STQC-Certified VMS",
           description:
             "Securely manage and monitor live feeds, playback, and alerts from a unified ArcisAI dashboard.",
-          image: "/images/screen.png",
+          image: "/images/solution_surveillance_1.png",
           link: "#",
         },
         {
           heading: "ArcisGPT",
           description:
             "Your AI-powered assistant for smart video search — ask natural questions like “Show vehicle movement at Gate 2 last night” and get instant clips.",
-          image: "/images/screen.png",
+          image: "/images/solution_surveillance_1.png",
           link: "#",
         },
         {
           heading: "Cloud Storage",
           description:
             "Encrypted cloud storage with flexible retention and retrieval options for compliance and evidence management.",
-          image: "/images/screen.png",
+          image: "/images/solution_surveillance_1.png",
           link: "#",
         },
       ],
@@ -911,35 +911,35 @@ export const Product = {
           heading: "EdgeAI Analytics",
           description:
             "AI intelligence operates directly on the camera, detecting and responding to events instantly on-site.",
-          image: "/images/screen.png",
+          image: "/images/solution_surveillance_1.png",
           link: "#",
         },
         {
           heading: "CloudAI Analytics",
           description:
             "CloudAI add-on — pay only for advanced analytics like reports and multi-site insights.",
-          image: "/images/screen.png",
+          image: "/images/solution_surveillance_1.png",
           link: "#",
         },
         {
           heading: "STQC-Certified VMS",
           description:
             "A secure, unified platform to view, manage, and control all cameras, events, and users from a single dashboard.",
-          image: "/images/screen.png",
+          image: "/images/solution_surveillance_1.png",
           link: "#",
         },
         {
           heading: "ArcisGPT",
           description:
             "An AI assistant that allows you to search and analyze video footage using natural language queries.",
-          image: "/images/screen.png",
+          image: "/images/solution_surveillance_1.png",
           link: "#",
         },
         {
           heading: "Cloud Storage",
           description:
             "Encrypted and scalable video storage with flexible retention options for seamless evidence management.",
-          image: "/images/screen.png",
+          image: "/images/solution_surveillance_1.png",
           link: "#",
         },
       ],
