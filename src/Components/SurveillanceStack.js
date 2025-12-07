@@ -40,7 +40,7 @@ const SurveillanceStack = ({ data }) => {
         w="100%"
         h={{ base: "100%", md: "90%" }}
         objectFit="cover"
-        opacity={1}
+        opacity={0.4}
         zIndex={0}
         // bg="red"
       />

@@ -52,7 +52,7 @@ const WhyArcisAI = () => {
         right="0"
         bottom="0"
         zIndex="0"
-        opacity="1"
+        opacity="0.4"
         pointerEvents="none"
       >
         <Image
@@ -156,6 +156,7 @@ const WhyArcisAI = () => {
                         textColor="white"
                         hoverTextColor="white"
                         showGlow={isOpen}
+                        showTicks={false}
                         glowColor="#A4FF79"
                         onClick={(e) => {
                           e.stopPropagation();

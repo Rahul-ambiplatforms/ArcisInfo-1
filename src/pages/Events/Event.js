@@ -24,9 +24,6 @@ import {
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
-// Global variable to track if popup has been shown in this session (module scope)
-let hasShownPopup = false;
-
 const Event = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -34,11 +31,8 @@ const Event = () => {
   const toast = useToast();
 
   useEffect(() => {
-    // Only open if it hasn't been shown yet in this session
-    if (!hasShownPopup) {
-      onOpen();
-      hasShownPopup = true;
-    }
+    // Open on every page load/refresh
+    onOpen();
   }, [onOpen]);
 
   const [formData, setFormData] = useState({

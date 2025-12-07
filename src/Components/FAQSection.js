@@ -91,6 +91,7 @@ const FAQSection = ({ data }) => {
                     hoverTextColor="white"
                     showGlow={isOpen}
                     glowColor="#A4FF79"
+                    showTicks={false}
                     onClick={(e) => {
                       e.stopPropagation();
                       handleToggle(index);

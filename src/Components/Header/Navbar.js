@@ -233,15 +233,17 @@ const Navbar = () => {
         </HStack>
 
         {/* MOBILE BURGER */}
-        <IconButton
-          display={{ base: "flex", lg: "none" }}
-          icon={<HamburgerIcon boxSize={6} />}
-          variant="ghost"
-          color="white"
-          onClick={onOpen}
-          aria-label="Open Menu"
-          _hover={{ bg: "whiteAlpha.200" }}
-        />
+        <CustomButton w="50px" h="50px" display={{ base: "flex", lg: "none" }}>
+          <IconButton
+            display={{ base: "flex", lg: "none" }}
+            icon={<HamburgerIcon boxSize={6} />}
+            variant="ghost"
+            color="white"
+            onClick={onOpen}
+            aria-label="Open Menu"
+            _hover={{ bg: "whiteAlpha.200" }}
+          />
+        </CustomButton>
       </Flex>
 
       {/* MOBILE MENU DRAWER */}

@@ -10,10 +10,12 @@ import OurClient from "./Components/OurClient";
 import WhyArcisAI from "./Components/WhyArcisAI";
 import FAQSection from "../../Components/FAQSection";
 import { FAQ_DATA } from "../../data/FAQData";
+import Event from "../Events/Event";
 
 const HomeDashboard = () => {
   return (
     <>
+      <Event />
       <HeroSection data={homeContent.hero} />
       <ProductList />
       <Certifications />

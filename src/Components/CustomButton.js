@@ -17,6 +17,7 @@ import { Box, Text } from "@chakra-ui/react";
  * @param {string} fontWeight - Text font weight (default: "medium")
  * @param {boolean} showGlow - Show glow effect on hover (default: true)
  * @param {string} glowColor - Glow color (defaults to hoverBorderColor)
+ * @param {boolean} showTicks - Show middle ticks on left and right (default: true)
  * @param {object} sx - Additional styles to override (merged with existing styles)
  * @param {function} onClick - Click handler
  * @param {string} as - HTML element type (default: "button")
@@ -36,6 +37,7 @@ const CustomButton = ({
   fontWeight = "medium",
   showGlow = true,
   glowColor,
+  showTicks = true,
   sx = {},
   onClick,
   as = "button",
@@ -50,7 +52,7 @@ const CustomButton = ({
     transition: "all 0.2s ease-in-out",
   };
 
-  // Middle Tick Base Styles
+  // Middle Tick Base Styles (inside the button)
   const tickBase = {
     position: "absolute",
     bg: props.borderGradient || borderColor,
@@ -76,11 +78,15 @@ const CustomButton = ({
     _hover: {
       bg: hoverBgColor,
       "& .corner-h": {
-        w: "50%",
+        w: "calc(50% + 4px)",
         bg: props.borderGradient || hoverBorderColor,
       },
-      "& .corner-v": {
-        h: "calc(50% - 8px)",
+      "& .corner-v-top": {
+        h: "calc(50% - 4px)",
+        bg: props.borderGradient || hoverBorderColor,
+      },
+      "& .corner-v-bottom": {
+        h: "calc(50% - 4px)",
         bg: props.borderGradient || hoverBorderColor,
       },
       "& > .tick": {
@@ -115,7 +121,7 @@ const CustomButton = ({
         h="2px"
       />
       <Box
-        className="corner-v"
+        className="corner-v corner-v-top"
         {...cornerLineBase}
         top={`-${offset}`}
         left={`-${offset}`}
@@ -133,7 +139,7 @@ const CustomButton = ({
         h="2px"
       />
       <Box
-        className="corner-v"
+        className="corner-v corner-v-top"
         {...cornerLineBase}
         top={`-${offset}`}
         right={`-${offset}`}
@@ -151,7 +157,7 @@ const CustomButton = ({
         h="2px"
       />
       <Box
-        className="corner-v"
+        className="corner-v corner-v-bottom"
         {...cornerLineBase}
         bottom={`-${offset}`}
         right={`-${offset}`}
@@ -169,7 +175,7 @@ const CustomButton = ({
         h="2px"
       />
       <Box
-        className="corner-v"
+        className="corner-v corner-v-bottom"
         {...cornerLineBase}
         bottom={`-${offset}`}
         left={`-${offset}`}
@@ -178,10 +184,14 @@ const CustomButton = ({
       />
 
       {/* LEFT MIDDLE TICK */}
-      <Box className="tick" {...tickBase} left={`-${offset}`} />
+      {showTicks && (
+        <Box className="tick" {...tickBase} left="4px" />
+      )}
 
       {/* RIGHT MIDDLE TICK */}
-      <Box className="tick" {...tickBase} right={`-${offset}`} />
+      {showTicks && (
+        <Box className="tick" {...tickBase} right="4px" />
+      )}
 
       {/* BUTTON TEXT */}
       <Text

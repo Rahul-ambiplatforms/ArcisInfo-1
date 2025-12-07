@@ -108,7 +108,7 @@ const VisionMission = ({ visionData, missionData }) => {
         w="100%"
         h={{ base: "50%", md: "100%" }}
         objectFit="cover"
-        opacity={1}
+        opacity={0.4}
         zIndex={0}
         pointerEvents="none"
       />

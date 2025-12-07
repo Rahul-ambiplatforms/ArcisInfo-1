@@ -48,7 +48,17 @@ const ProductList = () => {
       backgroundPosition="center"
       backgroundRepeat="no-repeat"
     >
-      {/* <Box position="absolute" top={0} left={0} w="full" h="full" bg="blackAlpha.600" /> */}
+      {/* Overlay to make GIF appear at 40% opacity */}
+      <Box 
+        position="absolute" 
+        top={0} 
+        left={0} 
+        w="full" 
+        h="full" 
+        bg="black" 
+        opacity={0.6}
+        zIndex={0}
+      />
 
       <Box
         w="100%"
@@ -211,6 +221,7 @@ const ProductList = () => {
                       navigate(product.link);
                     }}
                     sx={{ padding: 0 }}
+                    showTicks={false}
                   >
                     <Image
                       src={
