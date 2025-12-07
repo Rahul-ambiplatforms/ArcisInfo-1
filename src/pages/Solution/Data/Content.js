@@ -25,63 +25,68 @@ export const Solution = {
     AIFeatures: {
       heading:
         "AI Features That Work Inside Every ArcisAI EdgeAI Security Camera",
+
       description:
-        "At ArcisAI, we don't just offer cameras - we provide intelligent tools that act as your first line of defense. Every AI feature below is built directly into our security cameras, delivering fast, accurate detection without relying on external servers or systems.",
+        "At ArcisAI, we don’t just offer cameras — we provide intelligent tools that act as your first line of defense. Every AI feature below is built directly into our security cameras, delivering fast, accurate detection without relying on external servers or systems.",
+
       subHeading:
-        "Each feature is engineered to operate independently, on-device, ensuring high performance, fast alerts and total reliability - with no need for offloading to external systems.",
+        "Each feature is engineered to operate independently, on-device, ensuring high performance, fast alerts and total reliability — with no need for offloading to external systems.",
+
       bgColor: "#171717",
       textColor: "#FFFFFF",
+
       features: [
         {
           name: "Line Crossing Detection",
           description:
-            "Notifies when someone crosses a virtual boundary or restricted path.",
+            "Detects when a person or vehicle crosses a predefined virtual line within the camera’s field of view.",
           image: "/images/whyarcisai_edgeai_feature_1.png",
-        },
-        {
-          name: "Area Detection",
-          description:
-            "Alerts when a person enters a defined no-go zone or sensitive space.",
-          image: "/images/whyarcisai_edgeai_feature_2.png",
         },
         {
           name: "Customer Traffic Statistics",
           description:
-            "Counts visitors, observes movement patterns, and detects crowd build-ups — enabling smarter space management.",
+            "Counts and tracks the number of individuals entering or exiting a monitored area in real time.",
           image: "/images/whyarcisai_edgeai_feature_3.png",
+        },
+        {
+          name: "Area Detection",
+          description:
+            "Monitors defined zones and alerts when motion or presence is detected within those boundaries.",
+          image: "/images/whyarcisai_edgeai_feature_2.png",
         },
         {
           name: "Unattended Object Detection",
           description:
-            "Detects suspicious, left-behind items like bags or boxes in public areas.",
+            "Identifies objects left behind within the scene, such as bags, packages, or other items.",
           image: "/images/whyarcisai_edgeai_feature_4.png",
         },
         {
           name: "Missing Object Detection",
           description:
-            "Alerts when an object is removed from its place — keeping assets accounted for.",
+            "Detects the removal or disappearance of predefined objects from the monitored area.",
           image: "/images/whyarcisai_edgeai_feature_5.png",
-        },
-        {
-          name: "Human Detection",
-          description:
-            "Detects when a person appears in view — enabling real-time activity awareness.",
-          image: "/images/whyarcisai_edgeai_feature_6.png",
         },
         {
           name: "Face Detection",
           description:
-            "Identifies when a human face appears in view — enabling real-time presence awareness and activity monitoring.",
+            "Detects when a human face enters the camera’s view and triggers a detection event.",
           image: "/images/whyarcisai_edgeai_feature_7.png",
+        },
+        {
+          name: "Human Detection",
+          description:
+            "Identifies the presence of a person within the frame, distinguishing them from other objects or motion.",
+          image: "/images/whyarcisai_edgeai_feature_6.png",
         },
         {
           name: "Motion Detection",
           description:
-            "Detects movement within the frame and triggers instant notifications.",
+            "Senses movement within the camera’s field of view and initiates immediate alerting or action.",
           image: "/images/whyarcisai_edgeai_feature_8.png",
         },
       ],
     },
+
     AISolutionIndustry: {
       heading:
         "An Indian CCTV Camera Brand Delivering AI Solutions for Every Industry",
@@ -253,13 +258,13 @@ export const Solution = {
       {
         heading: "Cloud AI CCTV - Scalable Intelligence in the Cloud",
         description: [
-          "Leverage the power of the cloud for advanced analytics, unlimited storage, and centralized management of your security infrastructure.",
+          "With ArcisAI CloudAI, your EdgeAI cameras become even smarter. CloudAI adds an advanced layer of intelligence through the cloud, offering new AI detections, analytics, and insights — available as simple, on-demand add-ons.",
         ],
         buttonText: "Request a Demo",
         buttonLink: "/contact-us",
         image: "/images/camera3.png",
-        d_image: "/images/solution_cloudai_hero.png", // Using placeholder for now
-        m_image: "/images/solution_cloudai_hero.png", // Using placeholder for now
+        d_image: "/images/solution_cloudai_hero.png",
+        m_image: "/images/solution_cloudai_hero.png",
       },
     ],
     WhatIsAI: {
@@ -271,70 +276,70 @@ export const Solution = {
       image: "/images/solution_all_whatisai.png", // Placeholder
     },
     AIFeatures: {
-      heading:
-        "AI Features That Work Inside Every ArcisAI EdgeAI Security Camera",
+      heading: "Advanced CloudAI Add-On Detections and Insights",
       description:
-        "At ArcisAI, we don't just offer cameras - we provide intelligent tools that act as your first line of defense. Every AI feature below is built directly into our security cameras, delivering fast, accurate detection without relying on external servers or systems.",
-      subHeading:
-        "Each feature is engineered to operate independently, on-device, ensuring high performance, fast alerts and total reliability - with no need for offloading to external systems.",
-      bgColor: "#E6E6E6",
+        "ArcisAI CloudAI unlocks premium detections and analytics beyond the standard EdgeAI features — all powered by secure cloud computing and accessible through your ArcisAI dashboard. Giving you the flexibility to choose the intelligence you need.",
+      subHeading: "",
+
+      bgColor: "#FFFFFF",
       textColor: "#000000",
+
       features: [
         {
-          name: "Line Crossing Detection",
+          name: "Face Recognition",
           description:
-            "Notifies when someone crosses a virtual boundary or restricted path.",
-          image: "/images/whyarcisai_edgeai_feature_1.png",
+            "Recognizes and matches faces for attendance, identity verification, VIP recognition, and real-time security alerts.",
+          image: "/images/cloudai_feature_1.png",
         },
         {
-          name: "Area Detection",
+          name: "PPE Kit Detection",
           description:
-            "Alerts when a person enters a defined no-go zone or sensitive space.",
-          image: "/images/whyarcisai_edgeai_feature_2.png",
+            "Detects people, helmets, and safety vests — alerting you when required safety gear is missing in critical workplaces.",
+          image: "/images/cloudai_feature_2.png",
         },
         {
-          name: "Customer Traffic Statistics",
+          name: "Crowd Count Detection",
           description:
-            "Counts visitors, observes movement patterns, and detects crowd build-ups — enabling smarter space management.",
-          image: "/images/whyarcisai_edgeai_feature_3.png",
+            "Counts people in real time and alerts when occupancy or crowd density exceeds defined limits — improving space safety and planning.",
+          image: "/images/cloudai_feature_3.png",
         },
         {
-          name: "Unattended Object Detection",
+          name: "Fire Detection",
           description:
-            "Detects suspicious, left-behind items like bags or boxes in public areas.",
-          image: "/images/whyarcisai_edgeai_feature_4.png",
+            "Identifies smoke and flames instantly using cloud analytics, reducing response times and minimizing risk.",
+          image: "/images/cloudai_feature_4.png",
         },
         {
-          name: "Missing Object Detection",
+          name: "Vehicle Counting & Detection",
           description:
-            "Alerts when an object is removed from its place — keeping assets accounted for.",
-          image: "/images/whyarcisai_edgeai_feature_5.png",
+            "Counts and classifies vehicles such as cars, bikes, buses, and trucks — enabling traffic analytics and movement insights.",
+          image: "/images/cloudai_feature_5.png",
         },
         {
-          name: "Human Detection",
+          name: "Helmet Detection",
           description:
-            "Detects when a person appears in view — enabling real-time activity awareness.",
-          image: "/images/whyarcisai_edgeai_feature_6.png",
+            "Detects whether workers or riders are wearing helmets to ensure compliance with safety standards.",
+          image: "/images/cloudai_feature_6.png",
         },
         {
-          name: "Face Detection",
+          name: "Gender Detection",
           description:
-            "Identifies when a human face appears in view — enabling real-time presence awareness and activity monitoring.",
-          image: "/images/whyarcisai_edgeai_feature_7.png",
+            "Uses AI-powered analytics to estimate visitor gender patterns — valuable for retail intelligence and facility planning.",
+          image: "/images/cloudai_feature_7.png",
         },
         {
-          name: "Motion Detection",
+          name: "General Object Detection",
           description:
-            "Detects movement within the frame and triggers instant notifications.",
-          image: "/images/whyarcisai_edgeai_feature_8.png",
+            "Identifies and tracks predefined objects in real time for enhanced activity monitoring and situational awareness.",
+          image: "/images/cloudai_feature_8.png",
         },
       ],
     },
+
     AISolutionIndustry: {
-      heading:
-        "An Indian CCTV Camera Brand Delivering AI Solutions for Every Industry",
+      heading: "Where CloudAI CCTV Makes the Difference",
       description:
-        "From retail stores to housing societies, factories to warehouses and public infrastructure - We deliver smart surveillance solutions tailored to each industry’s unique challenges. Our AI-powered security cameras help you detect threats, monitor activity and respond faster.",
+        "ArcisAI CloudAI empowers industries that demand advanced analytics, safety compliance, and intelligent decision-making. By combining EdgeAI speed with CloudAI intelligence, it delivers meaningful insights across diverse environments.",
       industries: [
         {
           name: "Manufacturing & Factory Plants",
@@ -382,7 +387,7 @@ export const Solution = {
     },
 
     CTAButton: {
-      data: "Move from Ordinary Cameras into Decision Makers With AI-based CCTV by ArcisAI",
+      data: "Upgrade Your EdgeAI CCTV Cameras With Cloud-Powered Intelligence",
       buttonText: "Talk To Our Expert",
       d_image: "/images/solution_cloudai_cta.png",
       m_Image: "/images/solution_cloudai_cta.png",
@@ -425,51 +430,52 @@ export const Solution = {
       textAlign: "left",
     },
     WhyChoose: {
-      heading:
-        "Why Choose ArcisAI's EdgeAI CCTV Cameras for Smart Surveillance",
+      heading: "Why Choose ArcisAI’s CloudAI Security Cameras",
+
       features: [
         {
-          title: "Pioneers in Edge Intelligence",
+          title: "Smart AI Add-Ons",
           description:
-            "Built on years of applied research to deliver real-time decisions directly inside every security camera.",
+            "Unlock premium AI detections like PPE, Fire, or Crowd Monitoring through simple cloud-based subscriptions — activate only what you need.",
         },
         {
-          title: "Proven AI Vision Expertise",
+          title: "Seamless Edge + Cloud Integration",
           description:
-            "A cross-functional team in vision and embedded systems, with production deployments across diverse environments.",
+            "Works hand-in-hand with ArcisAI EdgeAI cameras, combining on-device speed with cloud analytics for deeper intelligence and unified control.",
         },
         {
-          title: "Enterprise-Grade Reliability",
+          title: "Scalable Cloud Architecture",
           description:
-            "Engineered for 24/7 uptime with rigorous QA, field-hardened firmware and resilient edge processing.",
+            "Expand effortlessly from one site to thousands — CloudAI manages all cameras, detections, and insights under one centralized platform.",
         },
         {
-          title: "Privacy-First Architecture",
+          title: "Continuous AI Upgrades",
           description:
-            "On-camera analytics keep sensitive data localized, controllable, supporting modern privacy and governance standards.",
+            "Stay ahead with automatic AI model updates and new detections delivered directly through the cloud — no hardware changes required.",
         },
         {
-          title: "Trusted by Leaders",
+          title: "Predictive & Actionable Insights",
           description:
-            "Selected by organizations that demand accuracy, operational clarity, and measurable improvements in response times.",
+            "Use cloud analytics to detect trends, analyze behaviors, and anticipate incidents before they occur.",
         },
         {
-          title: "Partner-Centric Support",
+          title: "Pay-As-You-Grow Flexibility",
           description:
-            "Dedicated solution engineers, enablement resources, and responsive SLAs ensure smooth rollout and ongoing success.",
+            "Choose and pay only for the detections you need. Add, remove, or upgrade AI capabilities anytime through your ArcisAI dashboard.",
         },
         {
-          title: "Scalable by Design",
+          title: "Secure & Compliant by Design",
           description:
-            "Start at one site and expand effortlessly to many, managed through unified tooling and consistent policies.",
+            "Your video data is encrypted end-to-end with role-based access controls and regional data compliance.",
         },
         {
-          title: "Security & Compliance",
+          title: "Unified Monitoring Dashboard",
           description:
-            "End-to-end encryption, role-based access controls, and detailed audit logs align with organizational requirements.",
+            "Access all detections, alerts, and insights from one easy-to-use ArcisAI dashboard — available anytime, anywhere.",
         },
       ],
     },
+
     FAQsData: {
       heading: "Frequently Asked Questions About CloudAI",
       data: [
@@ -515,70 +521,72 @@ export const Solution = {
       image: "/images/solution_all_whatisai.png",
     },
     AIFeatures: {
-      heading:
-        "AI Features That Work Inside Every ArcisAI EdgeAI Security Camera",
+      heading: "Smarter Surveillance with ArcisAI GenAI Visual Intelligence",
+
       description:
-        "At ArcisAI, we don't just offer cameras - we provide intelligent tools that act as your first line of defense. Every AI feature below is built directly into our security cameras, delivering fast, accurate detection without relying on external servers or systems.",
-      subHeading:
-        "Each feature is engineered to operate independently, on-device, ensuring high performance, fast alerts and total reliability - with no need for offloading to external systems.",
+        "ArcisAI GenAI brings new intelligence to your CCTV system — enabling video understanding, summarization, and fast retrieval through simple AI interaction.",
+
+      subHeading: "",
+
       bgColor: "#000000",
       textColor: "#FFFFFF",
+
       features: [
         {
-          name: "Line Crossing Detection",
+          name: "Smart Data Retrieval",
           description:
-            "Notifies when someone crosses a virtual boundary or restricted path.",
+            "Retrieve specific moments from vast video archives using natural language queries — eliminating hours of manual review.",
           image: "/images/whyarcisai_edgeai_feature_1.png",
         },
         {
-          name: "Area Detection",
+          name: "Track Anything - Object / Person",
           description:
-            "Alerts when a person enters a defined no-go zone or sensitive space.",
+            "Track any person, vehicle, or object across multiple cameras and timestamps with intelligent contextual linking.",
           image: "/images/whyarcisai_edgeai_feature_2.png",
         },
         {
-          name: "Customer Traffic Statistics",
+          name: "Visual Intelligence with GPT",
           description:
-            "Counts visitors, observes movement patterns, and detects crowd build-ups — enabling smarter space management.",
+            "Convert lengthy CCTV footage into concise highlight reels or text summaries that focus only on meaningful events.",
           image: "/images/whyarcisai_edgeai_feature_3.png",
         },
         {
-          name: "Unattended Object Detection",
+          name: "Action / Activity Recognition",
           description:
-            "Detects suspicious, left-behind items like bags or boxes in public areas.",
+            "Automatically detect and classify actions like running, falling, fighting, or loitering for faster incident response.",
           image: "/images/whyarcisai_edgeai_feature_4.png",
         },
         {
-          name: "Missing Object Detection",
+          name: "Reports from Any Custom Video Data",
           description:
-            "Alerts when an object is removed from its place — keeping assets accounted for.",
+            "Generate AI-written summaries and reports from selected video clips — ideal for audits, investigations, and documentation.",
           image: "/images/whyarcisai_edgeai_feature_5.png",
         },
         {
-          name: "Human Detection",
+          name: "Crowd Count Detection",
           description:
-            "Detects when a person appears in view — enabling real-time activity awareness.",
-          image: "/images/whyarcisai_edgeai_feature_6.png",
+            "Counts people in real time and alerts when occupancy or crowd density exceeds defined limits — improving space safety and planning.",
+          image: "/images/cloudai_feature_3.png",
         },
         {
-          name: "Face Detection",
+          name: "Fire Detection",
           description:
-            "Identifies when a human face appears in view — enabling real-time presence awareness and activity monitoring.",
-          image: "/images/whyarcisai_edgeai_feature_7.png",
+            "Identifies smoke and flames instantly using cloud analytics, reducing response times and minimizing risk.",
+          image: "/images/cloudai_feature_4.png",
         },
         {
-          name: "Motion Detection",
+          name: "Vehicle Counting & Detection",
           description:
-            "Detects movement within the frame and triggers instant notifications.",
-          image: "/images/whyarcisai_edgeai_feature_8.png",
+            "Counts and classifies vehicles such as cars, bikes, buses, and trucks — enabling traffic analytics and movement insights.",
+          image: "/images/cloudai_feature_5.png",
         },
       ],
     },
+
     AISolutionIndustry: {
-      heading:
-        "An Indian CCTV Camera Brand Delivering AI Solutions for Every Industry",
+      heading: "How GenAI Transforms CCTV Surveillance Across Industries",
       description:
-        "From retail stores to housing societies, factories to warehouses and public infrastructure - We deliver smart surveillance solutions tailored to each industry’s unique challenges. Our AI-powered security cameras help you detect threats, monitor activity and respond faster.",
+        "ArcisAI GenAI adds deep search and summarization capabilities across industries — turning video footage into searchable, understandable, and actionable data.",
       industries: [
         {
           name: "Manufacturing & Factory Plants",
@@ -670,50 +678,52 @@ export const Solution = {
     },
     WhyChoose: {
       heading:
-        "Why Choose ArcisAI's EdgeAI CCTV Cameras for Smart Surveillance",
+        "Why ArcisAI GenAI Is the Smarter Way to Manage Video Surveillance",
+
       features: [
         {
-          title: "Pioneers in Edge Intelligence",
+          title: "Search-Based Intelligence",
           description:
-            "Built on years of applied research to deliver real-time decisions directly inside every security camera.",
+            "Ask questions in natural language to instantly locate relevant moments in recorded footage.",
         },
         {
-          title: "Proven AI Vision Expertise",
+          title: "Subscription-Based Flexibility",
           description:
-            "A cross-functional team in vision and embedded systems, with production deployments across diverse environments.",
+            "GenAI is a paid add-on that lets users activate advanced video intelligence features as needed.",
         },
         {
-          title: "Enterprise-Grade Reliability",
+          title: "Automatic Video Summaries",
           description:
-            "Engineered for 24/7 uptime with rigorous QA, field-hardened firmware and resilient edge processing.",
+            "Generate short visual summaries and text highlights without manual editing or reviewing.",
         },
         {
-          title: "Privacy-First Architecture",
+          title: "Smart Action Recognition",
           description:
-            "On-camera analytics keep sensitive data localized, controllable, supporting modern privacy and governance standards.",
+            "Detect and label actions or behaviors automatically to prioritize security responses.",
         },
         {
-          title: "Trusted by Leaders",
+          title: "Cross-Camera Correlation",
           description:
-            "Selected by organizations that demand accuracy, operational clarity, and measurable improvements in response times.",
+            "Track a person or object seamlessly across multiple cameras and timelines.",
         },
         {
-          title: "Partner-Centric Support",
+          title: "Seamless Edge & Cloud Integration",
           description:
-            "Dedicated solution engineers, enablement resources, and responsive SLAs ensure smooth rollout and ongoing success.",
+            "Works effortlessly with ArcisAI EdgeAI and CloudAI systems — enhancing existing setups without extra hardware.",
         },
         {
-          title: "Scalable by Design",
+          title: "Data Security & Privacy",
           description:
-            "Start at one site and expand effortlessly to many, managed through unified tooling and consistent policies.",
+            "All video data is processed securely with encryption and governed by privacy standards.",
         },
         {
-          title: "Security & Compliance",
+          title: "Faster Decisions, Less Review Time",
           description:
-            "End-to-end encryption, role-based access controls, and detailed audit logs align with organizational requirements.",
+            "Reduce investigation time from hours to seconds — empowering teams with clarity and speed.",
         },
       ],
     },
+
     FAQsData: {
       heading: "Frequently Asked Questions About ArcisAI GenAI",
       data: [

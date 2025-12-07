@@ -34,7 +34,7 @@ const WhyChoose = ({ data }) => {
   if (!data) return null;
 
   return (
-    <Box as="section" py={{ base: "10%", md: "5%" }} bg="black" color="white">
+    <Box as="section" py={{ base: "10%", md: "5%" }} color="white">
       <VStack spacing={16} textAlign="center" w="90%" mx="auto">
         <Heading
           as="h2"
