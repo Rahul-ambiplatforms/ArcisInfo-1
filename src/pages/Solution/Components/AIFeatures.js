@@ -27,7 +27,7 @@ const AIFeatures = ({ data }) => {
         <VStack spacing={6} textAlign="center" mb={16}>
           <Heading
             as="h2"
-            w={{ base: "100%", md: "80%" }}
+            w={{ base: "100%", md: "100%" }}
             fontSize={{ base: "30px", md: "60px" }}
             color={textColor}
             fontWeight="400"

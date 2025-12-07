@@ -295,7 +295,7 @@ export const homeContent = {
       desktop: {
         textColor: "white",
         borderColor: "white",
-        bgColor: "",
+        bgColor: "rgba(255, 255, 255, 0.2)",
         width: "",
         height: "",
       },

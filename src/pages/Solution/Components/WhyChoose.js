@@ -5,30 +5,9 @@ import {
   Text,
   SimpleGrid,
   VStack,
-  Icon,
   Center,
+  Icon,
 } from "@chakra-ui/react";
-import {
-  FaBrain,
-  FaEye,
-  FaShieldAlt,
-  FaLock,
-  FaUserTie,
-  FaHandshake,
-  FaExpandArrowsAlt,
-  FaFileContract,
-} from "react-icons/fa";
-
-const iconMapping = {
-  "Pioneers in Edge Intelligence": FaBrain,
-  "Proven AI Vision Expertise": FaEye,
-  "Enterprise-Grade Reliability": FaShieldAlt,
-  "Privacy-First Architecture": FaLock,
-  "Trusted by Leaders": FaUserTie,
-  "Partner-Centric Support": FaHandshake,
-  "Scalable by Design": FaExpandArrowsAlt,
-  "Security & Compliance": FaFileContract,
-};
 
 const WhyChoose = ({ data }) => {
   if (!data) return null;
@@ -53,20 +32,22 @@ const WhyChoose = ({ data }) => {
           w="100%"
         >
           {data.features.map((feature, index) => {
-            const IconComponent = iconMapping[feature.title] || FaBrain;
             return (
               <VStack key={index} spacing={6}>
                 <Center
                   w={{ base: "80px", md: "130px" }}
                   h={{ base: "80px", md: "130px" }}
                   bg="rgba(255, 255, 255, 0.2)"
+                  borderRadius="md"
                 >
-                  <Icon
-                    as={IconComponent}
-                    w={{ base: "30px", md: "50px" }}
-                    h={{ base: "30px", md: "50px" }}
-                    color="white"
-                  />
+                  {feature.icon ? (
+                    <Icon
+                      as={feature.icon}
+                      w={{ base: "50px", md: "80px" }}
+                      h={{ base: "50px", md: "80px" }}
+                      color="white"
+                    />
+                  ) : null}
                 </Center>
                 <VStack spacing={3}>
                   <Text

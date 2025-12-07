@@ -64,14 +64,13 @@ const FAQSection = ({ data }) => {
                 pt={2}
                 cursor="pointer"
                 onClick={() => handleToggle(index)}
-                // mx="auto" 
+                // mx="auto"
               >
                 <Flex justify="space-between" align="center">
                   <Heading
                     as="h3"
                     fontSize={{ base: "14px", md: "20px" }}
                     fontWeight="400"
-                    fontWeight="medium"
                     // color={isOpen ? "white" : "gray.400"}
                     _hover={{ color: "white" }}
                     transition="color 0.2s"
@@ -111,7 +110,7 @@ const FAQSection = ({ data }) => {
                     w="80%"
                     mt="2"
                     mb="4"
-                    fontSize={{ base: "12px", md: "14px" }}
+                    fontSize={{ base: "12px", md: "16px" }}
                     textAlign="justify"
                     lineHeight={{ base: "15px", md: "20px" }}
                   >

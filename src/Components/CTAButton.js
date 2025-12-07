@@ -13,7 +13,7 @@ import CustomButton from "./CustomButton";
 const CTAButton = ({
   d_image,
   m_image,
-  m_Image, // Handle capital I from data
+  m_Image,
   data,
   buttonText,
   link,
@@ -33,8 +33,8 @@ const CTAButton = ({
   const isGradient = (color) =>
     color &&
     (color.includes("gradient") ||
-     color.includes("linear(") ||
-     color.includes("radial("));
+      color.includes("linear(") ||
+      color.includes("radial("));
 
   // Resolve responsive text styles
   const baseTextColor = txtMobile?.textColor || textColor;
@@ -148,7 +148,10 @@ const CTAButton = ({
                 base: btnMobile?.bgColor || "rgba(23, 23, 23, 0.05)",
                 md: btnDesktop?.bgColor || "rgba(23, 23, 23, 0.05)",
               }}
-              hoverBgColor="rgba(23, 23, 23, 0.1)"
+              hoverBgColor={{
+                base: btnMobile?.bgColor || "rgba(23, 23, 23, 0.05)",
+                md: btnDesktop?.bgColor || "rgba(23, 23, 23, 0.05)",
+              }}
               borderColor={{
                 base: btnMobile?.borderColor || "transparent",
                 md: btnDesktop?.borderColor || "transparent",

@@ -373,9 +373,9 @@ export const Product = {
     hero: [
       {
         title: "AI PTZ CCTV Camera",
-        image: "/images/ptz_hero.png",
-        d_image: "/images/ptz_hero.png",
-        m_image: "/images/ptz_hero.png",
+        image: "/images/product_ptz_main.png",
+        d_image: "/images/product_ptz_main.png",
+        m_image: "/images/product_ptz_main_mobile.png",
         buttonText: "Get Your AI CCTV",
         buttonLink: "/contact-us",
       },
@@ -719,9 +719,9 @@ export const Product = {
     hero: [
       {
         title: "AI Dome CCTV Camera",
-        image: "/images/dome_hero.png",
-        d_image: "/images/dome_hero.png",
-        m_image: "/images/dome_hero.png",
+        image: "/images/product_dome_main.png",
+        d_image: "/images/product_dome_main.png",
+        m_image: "/images/product_dome_main_mobile.png",
         buttonText: "Get Your AI CCTV",
         buttonLink: "contact-us",
       },
