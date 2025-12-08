@@ -327,7 +327,7 @@ export const homeContent = {
     heading: "Why ArcisAI Is India’s Most Advanced AI CCTV Camera Brand",
     description:
       "ArcisAI is an AI-powered CCTV camera company offering smart, responsive surveillance built for real-world Indian conditions. Our AI-based security camera solutions combine edge detection, cloud intelligence and GPT insights to deliver fast alerts, intelligent playback and total control - anytime, anywhere.",
-    mainImage: "/images/home_whyarcis_main.png", 
+    mainImage: "/images/home_whyarcis_main.png",
     features: [
       {
         title: "Built-in AI Detection",
