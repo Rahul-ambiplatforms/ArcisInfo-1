@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import {
   Box,
   FormControl,
@@ -18,8 +19,9 @@ import {
   Center,
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
-import OurClient from "./HomePage/Components/OurClient";
-import CustomButton from "../Components/CustomButton";
+import OurClient from "../HomePage/Components/OurClient";
+import CustomButton from "../../Components/CustomButton";
+import { contactUsSEO } from "./Data/SEOContent";
 
 const ContactSection = () => {
   const navigate = useNavigate();
@@ -176,15 +178,60 @@ const ContactSection = () => {
   ];
 
   return (
-    <Box
-      bg="#171717"
-      color="white"
-      w="100%"
-      position="relative"
-      overflow="hidden"
-    >
-      {/* Content Section */}
-      <Box position="relative" zIndex={1}>
+    <>
+      <Helmet>
+        {/* Primary Meta Tags */}
+        <title>{contactUsSEO.metatitle}</title>
+        <meta name="description" content={contactUsSEO.metadescription} />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={contactUsSEO.canonical} />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:title" content={contactUsSEO.metatitle} />
+        <meta property="og:description" content={contactUsSEO.metadescription} />
+        <meta property="og:image" content={contactUsSEO.ogimage} />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:url" content={contactUsSEO.canonical} />
+        <meta property="og:site_name" content="ArcisAI" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@arcisai" />
+        <meta name="twitter:title" content={contactUsSEO.metatitle} />
+        <meta name="twitter:description" content={contactUsSEO.metadescription} />
+        <meta name="twitter:image" content={contactUsSEO.ogimage} />
+
+        {/* Additional Meta Tags */}
+        <meta name="keywords" content="ArcisAI, Contact ArcisAI, AI CCTV, Edge AI, ArcisGPT, Indian Cloud Compliance, Security Solutions, Contact Us" />
+        <meta name="author" content="ArcisAI" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="distribution" content="global" />
+        <meta name="rating" content="general" />
+
+        {/* Schema Markup */}
+        {contactUsSEO.schema && contactUsSEO.schema.length > 0 && contactUsSEO.schema.map((schema, index) => (
+          <script
+            key={`schema-${index}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(schema),
+            }}
+          />
+        ))}
+      </Helmet>
+      <Box
+        bg="#171717"
+        color="white"
+        w="100%"
+        position="relative"
+        overflow="hidden"
+      >
+        {/* Content Section */}
+        <Box position="relative" zIndex={1}>
         {/* Top Content Section with GIF Background */}
         <Box
           w="100%"
@@ -217,101 +264,101 @@ const ContactSection = () => {
 
           {/* Content with higher z-index */}
           <Box position="relative" zIndex={1}>
-          <VStack
-            spacing={{ base: "4px", md: "12px", lg: "12px" }}
-            textAlign="center"
-          >
-            {/* Contact Us Text */}
-            <Text
-              fontSize={{ base: "14px", md: "16px", lg: "18px" }}
-              fontWeight="400"
-              color="white"
+            <VStack
+              spacing={{ base: "4px", md: "12px", lg: "12px" }}
+              textAlign="center"
             >
-              Contact Us
-            </Text>
+              {/* Contact Us Text */}
+              <Text
+                fontSize={{ base: "14px", md: "16px", lg: "18px" }}
+                fontWeight="400"
+                color="white"
+              >
+                Contact Us
+              </Text>
 
-            {/* Main Heading */}
-            <Heading
-              as="h1"
-              fontSize={{ base: "28px", md: "40px", lg: "48px" }}
-              fontWeight="400"
-              lineHeight={{ base: "36px", md: "48px", lg: "56px" }}
-              maxW="1200px"
-              mx="auto"
-            >
-              You Deserve More Than Just a Camera - You Deserve Intelligence
-            </Heading>
+              {/* Main Heading */}
+              <Heading
+                as="h1"
+                fontSize={{ base: "28px", md: "40px", lg: "48px" }}
+                fontWeight="400"
+                lineHeight={{ base: "36px", md: "48px", lg: "56px" }}
+                maxW="1200px"
+                mx="auto"
+              >
+                You Deserve More Than Just a Camera - You Deserve Intelligence
+              </Heading>
 
-            {/* Description Paragraph */}
-            <Text
-              fontSize={{ base: "14px", md: "16px", lg: "18px" }}
-              fontWeight="400"
-              lineHeight={{ base: "20px", md: "24px", lg: "28px" }}
-              maxW="1000px"
-              mx="auto"
-              textAlign="justify"
-              px={{ base: "16px", md: "32px", lg: "0" }}
-            >
-              We're not just another CCTV brand, we are your intelligent
-              security partner - combining EdgeAI cameras, ArcisGPT summaries,
-              and a STQC-certified Indian VMS. We deliver real-time alerts,
-              secure access and smart surveillance built for homes, offices,
-              businesses and your needs.
-            </Text>
+              {/* Description Paragraph */}
+              <Text
+                fontSize={{ base: "14px", md: "16px", lg: "18px" }}
+                fontWeight="400"
+                lineHeight={{ base: "20px", md: "24px", lg: "28px" }}
+                maxW="1000px"
+                mx="auto"
+                textAlign="justify"
+                px={{ base: "16px", md: "32px", lg: "0" }}
+              >
+                We're not just another CCTV brand, we are your intelligent
+                security partner - combining EdgeAI cameras, ArcisGPT summaries,
+                and a STQC-certified Indian VMS. We deliver real-time alerts,
+                secure access and smart surveillance built for homes, offices,
+                businesses and your needs.
+              </Text>
 
-            {/* Features Heading */}
-            <Heading
-              as="h2"
-              fontSize={{ base: "20px", md: "28px", lg: "32px" }}
-              fontWeight="400"
-              mt={{ base: "16px", md: "24px", lg: "32px" }}
-            >
-              8 Inbuilt Edge AI Features
-            </Heading>
+              {/* Features Heading */}
+              <Heading
+                as="h2"
+                fontSize={{ base: "20px", md: "28px", lg: "32px" }}
+                fontWeight="400"
+                mt={{ base: "16px", md: "24px", lg: "32px" }}
+              >
+                8 Inbuilt Edge AI Features
+              </Heading>
 
-            {/* Features Grid */}
-            <SimpleGrid
-              columns={{ base: 2, md: 4 }}
-              spacing={{ base: "8px", md: "16px", lg: "16px" }}
-              w="100%"
-              mx="auto"
-              mt={{ base: "8px", md: "12px", lg: "16px" }}
-              mb={{ base: "8px", md: "12px", lg: "32px" }}
-            >
-              {edgeAIFeatures.map((feature, index) => (
-                <VStack key={index}>
-                  {/* Icon Box with Dashed Border */}
-                  <Center
-                    w={{ base: "80px", md: "100px", lg: "120px" }}
-                    // h={{ base: "80px", md: "100px", lg: "120px" }}
-                    position="relative"
-                    // border="2px dashed"
-                    // borderColor="#A4FF79"
-                    // borderRadius="8px"
-                    // bg="transparent"
-                  >
-                    <Image
-                      src={feature.image}
-                      alt={feature.name}
-                      w={{ base: "50px", md: "60px", lg: "70px" }}
-                      h={{ base: "50px", md: "60px", lg: "70px" }}
-                      objectFit="contain"
-                      // filter="brightness(0) invert(1)"
-                    />
-                  </Center>
-                  {/* Feature Name */}
-                  <Text
-                    fontSize={{ base: "12px", md: "14px", lg: "16px" }}
-                    fontWeight="400"
-                    textAlign="center"
-                    color="white"
-                  >
-                    {feature.name}
-                  </Text>
-                </VStack>
-              ))}
-            </SimpleGrid>
-          </VStack>
+              {/* Features Grid */}
+              <SimpleGrid
+                columns={{ base: 2, md: 4 }}
+                spacing={{ base: "8px", md: "16px", lg: "16px" }}
+                w="100%"
+                mx="auto"
+                mt={{ base: "8px", md: "12px", lg: "16px" }}
+                mb={{ base: "8px", md: "12px", lg: "32px" }}
+              >
+                {edgeAIFeatures.map((feature, index) => (
+                  <VStack key={index}>
+                    {/* Icon Box with Dashed Border */}
+                    <Center
+                      w={{ base: "80px", md: "100px", lg: "120px" }}
+                      // h={{ base: "80px", md: "100px", lg: "120px" }}
+                      position="relative"
+                      // border="2px dashed"
+                      // borderColor="#A4FF79"
+                      // borderRadius="8px"
+                      // bg="transparent"
+                    >
+                      <Image
+                        src={feature.image}
+                        alt={feature.name}
+                        w={{ base: "50px", md: "60px", lg: "70px" }}
+                        h={{ base: "50px", md: "60px", lg: "70px" }}
+                        objectFit="contain"
+                        // filter="brightness(0) invert(1)"
+                      />
+                    </Center>
+                    {/* Feature Name */}
+                    <Text
+                      fontSize={{ base: "12px", md: "14px", lg: "16px" }}
+                      fontWeight="400"
+                      textAlign="center"
+                      color="white"
+                    >
+                      {feature.name}
+                    </Text>
+                  </VStack>
+                ))}
+              </SimpleGrid>
+            </VStack>
           </Box>
         </Box>
 
@@ -590,7 +637,7 @@ const ContactSection = () => {
                     boxShadow: "0 0 0 1px #9678E1",
                   }}
                   fontSize={{ base: "14px", md: "15px", lg: "16px" }}
-                  px="16px" 
+                  px="16px"
                 >
                   <option
                     value="Office"
@@ -832,7 +879,9 @@ const ContactSection = () => {
         <OurClient />
       </Box>
     </Box>
+    </>
   );
 };
 
 export default ContactSection;
+

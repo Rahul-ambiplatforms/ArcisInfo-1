@@ -1,7 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import HeroSection from "../../Components/HeroSection";
 import { Product } from "./Data/Content";
+import { getProductSEO } from "./Data/SEOContent";
 import CameraFeature from "./Components/CameraFeature";
 import CameraComparision from "./Components/CameraComparision";
 import ProductIndustries from "./Components/ProductIndustries";
@@ -24,6 +26,7 @@ const Products = () => {
   );
 
   const productData = Product[productKey];
+  const productSEO = getProductSEO(productKey);
 
   if (!productData) {
     return <div>Product Page not found</div>;
@@ -31,6 +34,50 @@ const Products = () => {
 
   return (
     <>
+      <Helmet>
+        {/* Primary Meta Tags */}
+        <title>{productSEO.metatitle}</title>
+        <meta name="description" content={productSEO.metadescription} />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={productSEO.canonical} />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:title" content={productSEO.metatitle} />
+        <meta property="og:description" content={productSEO.metadescription} />
+        <meta property="og:image" content={productSEO.ogimage} />
+        <meta property="og:type" content="product" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:url" content={productSEO.canonical} />
+        <meta property="og:site_name" content="ArcisAI" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@arcisai" />
+        <meta name="twitter:title" content={productSEO.metatitle} />
+        <meta name="twitter:description" content={productSEO.metadescription} />
+        <meta name="twitter:image" content={productSEO.ogimage} />
+
+        {/* Additional Meta Tags */}
+        <meta name="keywords" content="AI CCTV Camera, Security Camera, EdgeAI, Surveillance Camera, ArcisAI, Smart CCTV, AI Camera" />
+        <meta name="author" content="ArcisAI" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="distribution" content="global" />
+        <meta name="rating" content="general" />
+
+        {/* Schema Markup */}
+        {productSEO.schema && productSEO.schema.length > 0 && productSEO.schema.map((schema, index) => (
+          <script
+            key={`schema-${index}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(schema),
+            }}
+          />
+        ))}
+      </Helmet>
       <HeroSection data={productData.hero} />
       <CameraFeature data={productData.features} />
       <CameraComparision data={productData.comparisonData} />

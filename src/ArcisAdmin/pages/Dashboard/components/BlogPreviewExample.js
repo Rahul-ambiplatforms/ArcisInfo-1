@@ -25,7 +25,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getBlogs, getBlogById } from "./blog";
 import { Helmet } from "react-helmet-async";
-import ContactUs from "../ContactUs/Contactus";
+import ContactUs from "../../../pages/ContactUs/ContactUs";
 import ImagePop from "../../components/Animation/Image/ImagePop";
 
 // Helper function to render Slate content

@@ -20,7 +20,7 @@ import { useNavigate } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link as RouterLink } from "react-router-dom";
-import ContactUs from "./ContactUs";
+import ContactUs from "./ContactUs/ContactUs";
 
 function Footer() {
   const navigate = useNavigate();

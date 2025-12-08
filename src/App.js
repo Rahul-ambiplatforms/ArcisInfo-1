@@ -16,7 +16,7 @@ import ProductInfo from "./pages/ProductInfo";
 import MiddlePart from "./pages/MiddlePart";
 import GenAiInfo from "./pages/GenAiInfo";
 import Thankyou from "./pages/Thankyou";
-import ContactUs from "./pages/ContactUs";
+import ContactUs from "./pages/ContactUs/ContactUs";
 import BlogsDashboard from "./pages/Blogs/BlogsDashboard";
 import BlogsContent from "./pages/Blogs/BlogsContents";
 import Event from "./pages/Events/Event";
