@@ -11,10 +11,13 @@ import {
 import { homeContent } from "../Data/Content";
 
 const AISolutionIndustry = ({ data }) => {
-  const content = data || homeContent.AISolutionIndustry;
-  const { heading, description, industries } = content;
   const [activeIndex, setActiveIndex] = useState(null);
   const isMobile = useBreakpointValue({ base: true, lg: false });
+
+  if (!data) return;
+
+  const content = data;
+  const { heading, description, industries } = content;
 
   const handleItemClick = (index) => {
     if (isMobile) {
@@ -33,7 +36,11 @@ const AISolutionIndustry = ({ data }) => {
   };
 
   return (
-    <Box bg="black" mt={{ base: "-5%", md: "-3%" }}>
+    <Box
+      bg="black"
+      mt={{ base: "-5%", md: "-3%" }}
+      py={{ base: "5%", md: "2%" }}
+    >
       <Box w="full" px={{ base: 4, lg: 8 }}>
         <Heading
           as="h2"

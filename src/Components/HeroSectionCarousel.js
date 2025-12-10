@@ -13,7 +13,7 @@ import CustomButton from "./CustomButton";
 import LeftButtonIcon from "./Icons/LeftButton.svg";
 import RightButtonIcon from "./Icons/RightButton.svg";
 
-const HeroSection = ({ data }) => {
+const HeroSectionCarousel = ({ data }) => {
   const slides = data || [];
   const [currentSlide, setCurrentSlide] = useState(0);
   const [direction, setDirection] = useState(0); // -1 for left, 1 for right
@@ -74,10 +74,18 @@ const HeroSection = ({ data }) => {
   return (
     <Box
       w="full"
-      h={{ base: "100vh", md: "100vh" }}
+      h="100vh"
+      // h={{ base: "812px", md: "982px" }}
       position="relative"
       overflow="hidden"
-      mt={{ base: "-50%", md: "-11%" }}
+      bgImage={{ base: `url(${bgImageMobile})`, md: `url(${bgImageDesktop})` }}
+      bgSize="cover"
+      bgPosition="center"
+      bgRepeat="no-repeat"
+      mt={{
+        base: activeSlide?.sectionProps?.mobile?.marginTop || "-35%",
+        md: activeSlide?.sectionProps?.desktop?.marginTop || "-11%",
+      }}
     >
       <AnimatePresence initial={false} custom={direction} mode="popLayout">
         <motion.div
@@ -100,55 +108,27 @@ const HeroSection = ({ data }) => {
           }}
         >
           {/* Background Image */}
-          <Image
-            src={bgImageDesktop}
-            sx={{
-              content: {
-                base: `url("${bgImageMobile}")`,
-                md: `url("${bgImageDesktop}")`,
-              },
-            }}
-            alt="Hero Background"
-            objectFit="cover"
-            w="100%"
-            h="100%"
-            position="absolute"
-            top={{base:"0",md:"2%"}}
-            left={0}
-            zIndex={-1}
-          />
-          {/* Fallback Image */}
-          {/* <Box
-            position="absolute"
-            top={0}
-            left={0}
-            w="100%"
-            h="100%"
-            zIndex={-1}
-            backgroundImage={{ base: `url(${bgImageMobile})`, md: `url(${bgImageDesktop})` }}
-            backgroundSize="cover"
-            backgroundPosition="center"
-           /> */}
-
-          {/* Overlay Gradient */}
-          {/* <Box
-            position="absolute"
-            top={0}
-            left={0}
-            w="100%"
-            h="100%"
-            bgGradient={{
-              base: "linear(to-t, blackAlpha.800, transparent)",
-              md: "linear(to-r, blackAlpha.700, transparent)",
-            }}
-            zIndex={0}
-          /> */}
+          {/* <picture>
+            <source media="(max-width: 768px)" srcSet={bgImageMobile} />
+            <source media="(min-width: 769px)" srcSet={bgImageDesktop} />
+            <Image
+              src={bgImageDesktop}
+              alt="Hero Background"
+              objectFit="cover"
+              w="100%"
+              h="100%"
+              position="absolute"
+              top="0"
+              left="0"
+              zIndex={-1}
+            />
+          </picture> */}
 
           {title ? (
             <>
               <Box
                 position="absolute"
-                bottom={{ base: "80px", md: "50px" }}
+                bottom={{ base: "88px", md: "50px" }}
                 left="50%"
                 transform="translateX(-50%)"
                 zIndex={2}
@@ -189,16 +169,45 @@ const HeroSection = ({ data }) => {
               w="100%"
               mx="auto"
               px={{ base: 4, lg: 8 }}
-              align={{ base: "flex-end", md: "center" }}
-              pb={{ base: 20, md: 0 }}
+              align={{
+                base: activeSlide?.textProps?.mobile?.alignItems || "flex-end",
+                md: activeSlide?.textProps?.desktop?.alignItems || "flex-start",
+              }}
+              justify={{
+                base:
+                  activeSlide?.textProps?.mobile?.textAlign === "center"
+                    ? "center"
+                    : "flex-end",
+                md:
+                  activeSlide?.textProps?.desktop?.textAlign === "center"
+                    ? "center"
+                    : "flex-start",
+              }}
+              pb={{ base: 16, md: 0 }}
               position="relative"
               zIndex={1}
             >
               <Box
-                mt="5%" //temporary
-                w={{ base: "100%", md: "65%" }}
-                color="white"
-                textAlign={{ base: "left", md: "left" }}
+                mt={{
+                  base: activeSlide?.textProps?.mobile?.top || "25%",
+                  md: activeSlide?.textProps?.desktop?.top || "5%",
+                }}
+                ml={{
+                  base: activeSlide?.textProps?.mobile?.left || "0",
+                  md: activeSlide?.textProps?.desktop?.left || "0",
+                }}
+                w={{
+                  base: activeSlide?.textProps?.mobile?.width || "100%",
+                  md: activeSlide?.textProps?.desktop?.width || "65%",
+                }}
+                color={{
+                  base: activeSlide?.textProps?.mobile?.textColor || "white",
+                  md: activeSlide?.textProps?.desktop?.textColor || "white",
+                }}
+                textAlign={{
+                  base: activeSlide?.textProps?.mobile?.textAlign || "left",
+                  md: activeSlide?.textProps?.desktop?.textAlign || "left",
+                }}
               >
                 <Heading
                   as="h1"
@@ -206,18 +215,28 @@ const HeroSection = ({ data }) => {
                   fontWeight="400"
                   lineHeight={["38px", "60px", "60px", "76px"]}
                   mb={2}
-                  w="80%" //temporary
+                  w="100%"
                 >
                   {activeSlide.heading}
                 </Heading>
                 <Text
                   as="p"
-                  fontSize={["14px", "18px", "18px", "20px"]}
+                  fontSize={["14px", "18px", "18px", "18px"]}
                   fontWeight="400"
                   lineHeight={["18px", "20px", "20px", "25px"]}
-                  mb={2}
-                  opacity={0.9}
+                  mb={6}
+                  // opacity={0.9}
                   maxW="600px"
+                  mx={{
+                    base:
+                      activeSlide?.textProps?.mobile?.textAlign === "center"
+                        ? "auto"
+                        : "0",
+                    md:
+                      activeSlide?.textProps?.desktop?.textAlign === "center"
+                        ? "auto"
+                        : "0",
+                  }}
                 >
                   {activeSlide.description}
                 </Text>
@@ -225,8 +244,37 @@ const HeroSection = ({ data }) => {
                   onClick={() =>
                     window.open(activeSlide.buttonLink || "#", "_self")
                   }
-                  width={{ base: "145px", md: "160px" }}
-                  height={{ base: "40px", md: "50px" }}
+                  width={{
+                    base: activeSlide?.buttonProps?.mobile?.width || "146px",
+                    md: activeSlide?.buttonProps?.desktop?.width || "171px",
+                  }}
+                  height={{
+                    base: activeSlide?.buttonProps?.mobile?.height || "36px",
+                    md: activeSlide?.buttonProps?.desktop?.height || "40px",
+                  }}
+                  bgColor={
+                    activeSlide?.buttonProps?.desktop?.bgColor ||
+                    "rgba(255,255,255,0.2)"
+                  }
+                  borderColor={{
+                    base:
+                      activeSlide?.buttonProps?.mobile?.borderColor || "white",
+                    md:
+                      activeSlide?.buttonProps?.desktop?.borderColor || "white",
+                  }}
+                  textColor={{
+                    base:
+                      activeSlide?.buttonProps?.mobile?.textColor || "white",
+                    md: activeSlide?.buttonProps?.desktop?.textColor || "white",
+                  }}
+                  hoverBorderColor={
+                    activeSlide?.buttonProps?.desktop?.borderHover ||
+                    activeSlide?.buttonProps?.desktop?.borderColor ||
+                    "#A4FF79"
+                  }
+                  hoverTextColor={
+                    activeSlide?.buttonProps?.desktop?.textHover || "#A4FF79"
+                  }
                 >
                   {activeSlide.buttonText}
                 </CustomButton>
@@ -274,6 +322,7 @@ const HeroSection = ({ data }) => {
               width={{ base: "40px", md: "50px" }}
               height={{ base: "40px", md: "50px" }}
               showGlow={false}
+              showTicks={false}
               sx={{
                 padding: 0,
                 "& img": { transition: "filter 0.2s" },
@@ -297,6 +346,7 @@ const HeroSection = ({ data }) => {
               width={{ base: "40px", md: "50px" }}
               height={{ base: "40px", md: "50px" }}
               showGlow={false}
+              showTicks={false}
               sx={{
                 padding: 0,
                 "& img": { transition: "filter 0.2s" },
@@ -322,4 +372,4 @@ const HeroSection = ({ data }) => {
   );
 };
 
-export default HeroSection;
+export default HeroSectionCarousel;

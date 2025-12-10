@@ -35,13 +35,13 @@ const CameraFeature = ({ data }) => {
   const featureColor = styles?.featureColor || "white";
 
   return (
-    <Box w="100%" mt={{ base: "5%", md: "4%" }} >
+    <Box w="100%" mt={{ base: "5%", md: "2%" }}>
       <Box w="full" mx="auto">
         {/* Heading - Outside the Image */}
         <Heading
           as="h2"
           fontSize={{ base: "24px", md: "36px" }}
-          fontWeight="600"  
+          fontWeight="600"
           textAlign="center"
           color="white"
           mb={{ base: 4, md: 6 }}
@@ -82,7 +82,7 @@ const CameraFeature = ({ data }) => {
                 fontSize={{ base: "14px", md: "16px" }}
                 color={descriptionColor}
                 textAlign="justify"
-                w={{base:"95%",md:"80%"}}
+                w={{ base: "95%", md: "80%" }}
                 lineHeight={{ base: "15px", md: "20px" }}
               >
                 {description}

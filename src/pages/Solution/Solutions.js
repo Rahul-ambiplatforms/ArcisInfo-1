@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Box, Text, Center } from "@chakra-ui/react";
-import HeroSection from "../../Components/HeroSection"; // Assuming this is the correct path for the reusable HeroSection
+import HeroSectionCarousel from "../../Components/HeroSectionCarousel";
 import WhatIsAI from "./Components/WhatIsAI";
 import OurClient from "../../pages/HomePage/Components/OurClient";
 import AIFeatures from "./Components/AIFeatures";
@@ -12,6 +12,7 @@ import WhyChoose from "./Components/WhyChoose";
 import FAQSection from "../../Components/FAQSection";
 import { Solution } from "./Data/Content";
 import { getSolutionSEO } from "./Data/SEOContent";
+import PageContentWrapper from "../../Components/PageContentWrapper";
 
 const Solutions = () => {
   const { solutionId } = useParams();
@@ -54,11 +55,17 @@ const Solutions = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@arcisai" />
         <meta name="twitter:title" content={solutionSEO.metatitle} />
-        <meta name="twitter:description" content={solutionSEO.metadescription} />
+        <meta
+          name="twitter:description"
+          content={solutionSEO.metadescription}
+        />
         <meta name="twitter:image" content={solutionSEO.ogimage} />
 
         {/* Additional Meta Tags */}
-        <meta name="keywords" content="AI CCTV Camera, EdgeAI, CloudAI, GenAI, Security Camera, Surveillance Camera, ArcisAI, Smart CCTV, AI Camera, Video Analytics" />
+        <meta
+          name="keywords"
+          content="AI CCTV Camera, EdgeAI, CloudAI, GenAI, Security Camera, Surveillance Camera, ArcisAI, Smart CCTV, AI Camera, Video Analytics"
+        />
         <meta name="author" content="ArcisAI" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
@@ -68,25 +75,31 @@ const Solutions = () => {
         <meta name="rating" content="general" />
 
         {/* Schema Markup */}
-        {solutionSEO.schema && solutionSEO.schema.length > 0 && solutionSEO.schema.map((schema, index) => (
-          <script
-            key={`schema-${index}`}
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(schema),
-            }}
-          />
-        ))}
+        {solutionSEO.schema &&
+          solutionSEO.schema.length > 0 &&
+          solutionSEO.schema.map((schema, index) => (
+            <script
+              key={`schema-${index}`}
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(schema),
+              }}
+            />
+          ))}
       </Helmet>
-      <HeroSection data={solutionData.hero} />
-      <WhatIsAI data={solutionData.WhatIsAI} />
-      <OurClient />
-      <AIFeatures data={solutionData.AIFeatures} />
-      <AISolutionIndustry data={solutionData.AISolutionIndustry} />
-      <WhyChoose data={solutionData.WhyChoose} />
-      <CTAButton {...solutionData.CTAButton} />
-      <FAQSection data={solutionData.FAQsData} />
-      {/* Add other sections here as needed */}
+      <PageContentWrapper noPadding>
+        <HeroSectionCarousel data={solutionData.hero} />
+        <WhatIsAI data={solutionData.WhatIsAI} />
+        <Box mt={{ base: "0", md: "-5%" }}>
+          <OurClient />
+        </Box>
+        <AIFeatures data={solutionData.AIFeatures} />
+        <AISolutionIndustry data={solutionData.AISolutionIndustry} />
+        <WhyChoose data={solutionData.WhyChoose} />
+        <CTAButton {...solutionData.CTAButton} />
+        <FAQSection data={solutionData.FAQsData} />
+        {/* Add other sections here as needed */}
+      </PageContentWrapper>
     </>
   );
 };

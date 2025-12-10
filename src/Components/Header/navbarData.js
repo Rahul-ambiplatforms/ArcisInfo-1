@@ -5,15 +5,15 @@ export const dropdownData = {
     title: "SOLUTIONS",
     items: [
       {
-        label: "Edge AI CCTV Camera",
+        label: "Edge-AI",
         link: "/solution/edge-ai-cctv-camera",
       },
       {
-        label: "Cloud AI CCTV Camera",
+        label: "Cloud-AI",
         link: "/solution/cloud-ai-cctv-camera",
       },
       {
-        label: "Gen AI CCTV Camera",
+        label: "Generative-AI",
         link: "/solution/gen-ai-cctv-camera",
       },
     ],
@@ -23,6 +23,7 @@ export const dropdownData = {
     items: [
       {
         group: "S-Series",
+        groupLink: "/s-series",
         items: [
           {
             label: "AI Bullet Camera",
@@ -41,6 +42,39 @@ export const dropdownData = {
           },
         ],
       },
+      {
+        group: "Eco Series",
+        groupLink: "/eco-series",
+        items: [
+          {
+            label: "AI Bullet Camera",
+            link: "/eco-series/bullet-cctv-camera",
+            icon: "camera",
+          },
+          {
+            label: "AI PTZ Camera",
+            link: "/eco-series/ptz-cctv-camera",
+            icon: "video",
+          },
+          {
+            label: "AI Dome Camera",
+            link: "/eco-series/dome-cctv-camera",
+            icon: "eye",
+          },
+        ],
+      },
+      // {
+      //   label: "Arcis Bridge Device",
+      //   link: "/abd",
+      // },
+      // {
+      //   label: "STQC Cloud VMS",
+      //   link: "/arcis-vms",
+      // },
+      // {
+      //   label: "NVR/DVR",
+      //   link: "/arcis-vms",
+      // },
     ],
   },
   company: {

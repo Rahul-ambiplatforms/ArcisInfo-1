@@ -1,38 +1,15 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import {
   Box,
   Heading,
   Text,
   Grid,
   Image,
-  Flex,
   useBreakpointValue,
 } from "@chakra-ui/react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const ProductIndustries = ({ data }) => {
-  const topSectionRef = useRef(null);
-  const titleRef = useRef(null);
   const isDesktop = useBreakpointValue({ base: false, md: true });
-
-  useEffect(() => {
-    if (isDesktop && topSectionRef.current && titleRef.current) {
-      const ctx = gsap.context(() => {
-        ScrollTrigger.create({
-          trigger: topSectionRef.current,
-          start: "top top",
-          end: "bottom 65%",
-          pin: titleRef.current,
-          pinSpacing: false,
-        });
-      }, topSectionRef);
-
-      return () => ctx.revert();
-    }
-  }, [isDesktop]);
 
   if (!data) return null;
   const { heading, items } = data;
@@ -44,8 +21,8 @@ const ProductIndustries = ({ data }) => {
   const cornerBase = {
     position: "absolute",
     borderColor: "#A4FF79",
-    width: "20px",
-    height: "20px",
+    width: "15px",
+    height: "15px",
     transition: "all 0.3s ease",
     opacity: 0,
   };
@@ -57,7 +34,7 @@ const ProductIndustries = ({ data }) => {
       minW={{ base: "85vw", sm: "300px", md: "auto" }}
       scrollSnapAlign="center"
     >
-      <Box position="relative" mb={4} p="8px" maxW="327px">
+      <Box position="relative" mb={4} p="8px">
         {/* Corners */}
         <Box
           {...cornerBase}
@@ -108,6 +85,7 @@ const ProductIndustries = ({ data }) => {
         mb={2}
         fontWeight="400"
         align="left"
+        ml={{ base: "2%", md: "2%" }}
       >
         {item.name}
       </Heading>
@@ -116,6 +94,8 @@ const ProductIndustries = ({ data }) => {
         fontSize={{ base: "14px", md: "16px", lg: "16px" }}
         lineHeight={{ base: "15px", md: "20px", lg: "20px" }}
         align="justify"
+        ml={{ base: "2%", md: "2%" }}
+        w="95%"
       >
         {item.description}
       </Text>
@@ -123,7 +103,7 @@ const ProductIndustries = ({ data }) => {
   );
 
   return (
-    <Box bg="black" color="white" py={20}>
+    <Box color="white" pt="%">
       <Box
         w="100%"
         mx="auto"
@@ -143,7 +123,7 @@ const ProductIndustries = ({ data }) => {
           </Heading>
           <Box
             display="flex"
-            gap={6}
+            gap={{ base: 1, md: 6 }}
             overflowX="auto"
             pb={6}
             sx={{
@@ -162,15 +142,15 @@ const ProductIndustries = ({ data }) => {
         <Box display={{ base: "none", md: "block" }}>
           {/* Top Section: Grid (2 cols) -> Title + Main Items */}
           <Grid
-            ref={topSectionRef}
             templateColumns="repeat(2, 1fr)"
-            gap={{ md: 6, lg: 10 }}
-            mb={{ md: 6, lg: 10 }}
+            gap={{ md: 6, lg: 8 }}
+            mb={{ md: 6, lg: 8 }}
             alignItems="start"
           >
             {/* Sticky Title */}
             <Box
-              ref={titleRef}
+              position="sticky"
+              top="15%"
               display="flex"
               flexDirection="column"
               justifyContent="center"

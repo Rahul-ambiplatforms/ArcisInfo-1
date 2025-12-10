@@ -6,7 +6,7 @@ const Certifications = () => {
   const { Certifications } = homeContent;
 
   return (
-    <Box my={{ base: "6%" }} mt={{ md: "4%" }} mb={{ md: "0%" }} py={10}>
+    <Box my={{ base: "6%" }} mt={{ md: "2%" }} mb={{ md: "0%" }} py={10}>
       <Box w="100%" px={{ base: 5, lg: 8 }}>
         {/* Heading removed to match the reference image style */}
         <Heading

@@ -1,36 +1,15 @@
 import React from "react";
 import {
   Box,
-  Container,
   Heading,
   Text,
   SimpleGrid,
   VStack,
-  Icon,
   Flex,
+  Image,
 } from "@chakra-ui/react";
-import {
-  FaEye,
-  FaProjectDiagram,
-  FaRunning,
-  FaBrain,
-  FaComments,
-  FaMagic,
-} from "react-icons/fa";
-
-// Map icon strings to React Icons
-const iconMap = {
-  ComputerVision: FaEye,
-  MultimodalAI: FaProjectDiagram,
-  HAR: FaRunning,
-  ViT: FaBrain,
-  NLU: FaComments,
-  GenAI: FaMagic,
-};
 
 const InnovationCard = ({ title, description, icon }) => {
-  const IconComponent = iconMap[icon] || FaBrain;
-
   return (
     <VStack
       spacing={4}
@@ -50,7 +29,7 @@ const InnovationCard = ({ title, description, icon }) => {
         bg="rgba(255, 255, 255, 0.20)"
         mb={2}
       >
-        <Icon as={IconComponent} w={8} h={8} color="white" />
+        <Image src={icon} alt={title} boxSize={{ base: "48px", md: "72px" }} />
       </Flex>
       <Heading
         as="h3"

@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import HeroSection from "../../Components/HeroSection";
+import HeroSectionCarousel from "../../Components/HeroSectionCarousel";
 import ProductList from "./Components/ProductList";
 import Certifications from "./Components/Certifications";
 import SurveillanceStack from "../../Components/SurveillanceStack";
@@ -13,6 +13,8 @@ import WhyArcisAI from "./Components/WhyArcisAI";
 import FAQSection from "../../Components/FAQSection";
 import { FAQ_DATA } from "../../data/FAQData";
 import Event from "../Events/Event";
+import { Box } from "@chakra-ui/react";
+import PageContentWrapper from "../../Components/PageContentWrapper";
 
 const HomeDashboard = () => {
   return (
@@ -51,17 +53,19 @@ const HomeDashboard = () => {
           />
         ))}
       </Helmet>
-      <Event />
-      <HeroSection data={homeContent.hero} />
-      <ProductList />
-      <Certifications />
-      <SurveillanceStack data={homeContent.SurveillanceStack} />
-      <AISolutionIndustry />
-      <CTAButton {...homeContent.CTAButton1} />
-      <WhyArcisAI />
-      <OurClient />
-      <FAQSection data={FAQ_DATA} />
-      <CTAButton {...homeContent.CTAButton2} />
+      <PageContentWrapper noPadding>
+        <Event />
+        <HeroSectionCarousel data={homeContent.hero} />
+        <ProductList />
+        <Certifications />
+        <SurveillanceStack data={homeContent.SurveillanceStack} />
+        <AISolutionIndustry data={homeContent.AISolutionIndustry} />
+        <CTAButton {...homeContent.CTAButton1} />
+        <WhyArcisAI />
+        <OurClient />
+        <FAQSection data={FAQ_DATA} />
+        <CTAButton {...homeContent.CTAButton2} />
+      </PageContentWrapper>
     </>
   );
 };

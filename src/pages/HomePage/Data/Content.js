@@ -5,11 +5,56 @@ export const homeContent = {
       heading: "India’s Most Advanced AI CCTV Brand",
       description:
         "8 AI detections on camera. Smarter insights on cloud. Instant answers from GPT.",
-      image: "/images/home_hero_1.png",
       d_image: "/images/home_hero_1.png",
       m_image: "/images/mobile_home_hero_1.png",
       buttonText: "Let's Talk",
       buttonLink: "/contact-us",
+      sectionProps: {
+        desktop: {
+          marginTop: "",
+        },
+        mobile: {
+          marginTop: "",
+        },
+      },
+      textProps: {
+        desktop: {
+          textColor: "white",
+          alignItems: "flex-start",
+          textAlign: "",
+          top: "12%",
+          left: "",
+          width: "",
+        },
+        mobile: {
+          textColor: "white",
+          alignItems: "flex-end",
+          textAlign: "",
+          top: "100%",
+          left: "",
+          width: "",
+        },
+      },
+      buttonProps: {
+        desktop: {
+          textColor: "",
+          textHover: "",
+          borderColor: "",
+          borderHover: "",
+          bgColor: "",
+          width: "",
+          height: "",
+        },
+        mobile: {
+          textColor: "",
+          borderColor: "",
+          bgColor: "",
+          width: "",
+          height: "",
+          borderHover: "",
+          textHover: "",
+        },
+      },
     },
     // {
     //   id: 2,
@@ -21,7 +66,53 @@ export const homeContent = {
     //   d_image: "/images/home_hero_1.png",
     //   m_image: "/images/mobile_home_hero_1.png",
     //   buttonText: "Let's Talk",
-    //   buttonLink: "#",
+    //   buttonLink: "/contact-us",
+    //   sectionProps: {
+    //     desktop: {
+    //       marginTop: "",
+    //     },
+    //     mobile: {
+    //       marginTop: "",
+    //     },
+    //   },
+    //   textProps: {
+    //     desktop: {
+    //       textColor: "",
+    //       alignItems: "",
+    //       textAlign: "",
+    //       top: "12%",
+    //       left: "",
+    //       width: "",
+    //     },
+    //     mobile: {
+    //       textColor: "",
+    //       alignItems: "",
+    //       textAlign: "",
+    //       top: "100%",
+    //       left: "",
+    //       width: "",
+    //     },
+    //   },
+    //   buttonProps: {
+    //     desktop: {
+    //       textColor: "",
+    //       borderColor: "",
+    //       bgColor: "",
+    //       width: "",
+    //       height: "",
+    //       borderHover: "",
+    //       textHover: "",
+    //     },
+    //     mobile: {
+    //       textColor: "",
+    //       borderColor: "",
+    //       bgColor: "",
+    //       width: "",
+    //       height: "",
+    //       borderHover: "",
+    //       textHover: "",
+    //     },
+    //   },
     // },
     // {
     //   id: 3,
@@ -31,7 +122,53 @@ export const homeContent = {
     //   d_image: "/images/home_hero_1.png",
     //   m_image: "/images/mobile_home_hero_1.png",
     //   buttonText: "Let's Talk",
-    //   buttonLink: "#",
+    //   buttonLink: "/contact-us",
+    //   sectionProps: {
+    //     desktop: {
+    //       marginTop: "",
+    //     },
+    //     mobile: {
+    //       marginTop: "",
+    //     },
+    //   },
+    //   textProps: {
+    //     desktop: {
+    //       textColor: "",
+    //       alignItems: "",
+    //       textAlign: "",
+    //       top: "",
+    //       left: "",
+    //       width: "",
+    //     },
+    //     mobile: {
+    //       textColor: "",
+    //       alignItems: "",
+    //       textAlign: "",
+    //       top: "",
+    //       left: "",
+    //       width: "",
+    //     },
+    //   },
+    //   buttonProps: {
+    //     desktop: {
+    //       textColor: "",
+    //       borderColor: "",
+    //       bgColor: "",
+    //       width: "",
+    //       height: "",
+    //       borderHover: "",
+    //       textHover: "",
+    //     },
+    //     mobile: {
+    //       textColor: "",
+    //       borderColor: "",
+    //       bgColor: "",
+    //       width: "",
+    //       height: "",
+    //       borderHover: "",
+    //       textHover: "",
+    //     },
+    //   },
     // },
     // {
     //   id: 4,
@@ -42,7 +179,53 @@ export const homeContent = {
     //   d_image: "/images/home_hero_1.png",
     //   m_image: "/images/mobile_home_hero_1.png",
     //   buttonText: "Let's Talk",
-    //   buttonLink: "#",
+    //   buttonLink: "/contact-us",
+    //   sectionProps: {
+    //     desktop: {
+    //       marginTop: "",
+    //     },
+    //     mobile: {
+    //       marginTop: "",
+    //     },
+    //   },
+    //   textProps: {
+    //     desktop: {
+    //       textColor: "",
+    //       alignItems: "",
+    //       textAlign: "",
+    //       top: "",
+    //       left: "",
+    //       width: "",
+    //     },
+    //     mobile: {
+    //       textColor: "",
+    //       alignItems: "",
+    //       textAlign: "",
+    //       top: "",
+    //       left: "",
+    //       width: "",
+    //     },
+    //   },
+    //   buttonProps: {
+    //     desktop: {
+    //       textColor: "",
+    //       borderColor: "",
+    //       bgColor: "",
+    //       width: "",
+    //       height: "",
+    //       borderHover: "",
+    //       textHover: "",
+    //     },
+    //     mobile: {
+    //       textColor: "",
+    //       borderColor: "",
+    //       bgColor: "",
+    //       width: "",
+    //       height: "",
+    //       borderHover: "",
+    //       textHover: "",
+    //     },
+    //   },
     // },
     // {
     //   id: 5,
@@ -52,7 +235,53 @@ export const homeContent = {
     //   d_image: "/images/home_hero_1.png",
     //   m_image: "/images/mobile_home_hero_1.png",
     //   buttonText: "Let's Talk",
-    //   buttonLink: "#",
+    //   buttonLink: "/contact-us",
+    //   sectionProps: {
+    //     desktop: {
+    //       marginTop: "",
+    //     },
+    //     mobile: {
+    //       marginTop: "",
+    //     },
+    //   },
+    //   textProps: {
+    //     desktop: {
+    //       textColor: "",
+    //       alignItems: "",
+    //       textAlign: "",
+    //       top: "",
+    //       left: "",
+    //       width: "",
+    //     },
+    //     mobile: {
+    //       textColor: "",
+    //       alignItems: "",
+    //       textAlign: "",
+    //       top: "",
+    //       left: "",
+    //       width: "",
+    //     },
+    //   },
+    //   buttonProps: {
+    //     desktop: {
+    //       textColor: "",
+    //       borderColor: "",
+    //       bgColor: "",
+    //       width: "",
+    //       height: "",
+    //       borderHover: "",
+    //       textHover: "",
+    //     },
+    //     mobile: {
+    //       textColor: "",
+    //       borderColor: "",
+    //       bgColor: "",
+    //       width: "",
+    //       height: "",
+    //       borderHover: "",
+    //       textHover: "",
+    //     },
+    //   },
     // },
     // {
     //   id: 6,
@@ -63,7 +292,53 @@ export const homeContent = {
     //   d_image: "/images/home_hero_1.png",
     //   m_image: "/images/mobile_home_hero_1.png",
     //   buttonText: "Let's Talk",
-    //   buttonLink: "#",
+    //   buttonLink: "/contact-us",
+    //   sectionProps: {
+    //     desktop: {
+    //       marginTop: "",
+    //     },
+    //     mobile: {
+    //       marginTop: "",
+    //     },
+    //   },
+    //   textProps: {
+    //     desktop: {
+    //       textColor: "",
+    //       alignItems: "",
+    //       textAlign: "",
+    //       top: "",
+    //       left: "",
+    //       width: "",
+    //     },
+    //     mobile: {
+    //       textColor: "",
+    //       alignItems: "",
+    //       textAlign: "",
+    //       top: "",
+    //       left: "",
+    //       width: "",
+    //     },
+    //   },
+    //   buttonProps: {
+    //     desktop: {
+    //       textColor: "",
+    //       borderColor: "",
+    //       bgColor: "",
+    //       width: "",
+    //       height: "",
+    //       borderHover: "",
+    //       textHover: "",
+    //     },
+    //     mobile: {
+    //       textColor: "",
+    //       borderColor: "",
+    //       bgColor: "",
+    //       width: "",
+    //       height: "",
+    //       borderHover: "",
+    //       textHover: "",
+    //     },
+    //   },
     // },
     // {
     //   id: 7,
@@ -74,7 +349,53 @@ export const homeContent = {
     //   d_image: "/images/home_hero_1.png",
     //   m_image: "/images/mobile_home_hero_1.png",
     //   buttonText: "Let's Talk",
-    //   buttonLink: "#",
+    //   buttonLink: "/contact-us",
+    //   sectionProps: {
+    //     desktop: {
+    //       marginTop: "",
+    //     },
+    //     mobile: {
+    //       marginTop: "",
+    //     },
+    //   },
+    //   textProps: {
+    //     desktop: {
+    //       textColor: "",
+    //       alignItems: "",
+    //       textAlign: "",
+    //       top: "",
+    //       left: "",
+    //       width: "",
+    //     },
+    //     mobile: {
+    //       textColor: "",
+    //       alignItems: "",
+    //       textAlign: "",
+    //       top: "",
+    //       left: "",
+    //       width: "",
+    //     },
+    //   },
+    //   buttonProps: {
+    //     desktop: {
+    //       textColor: "",
+    //       borderColor: "",
+    //       bgColor: "",
+    //       width: "",
+    //       height: "",
+    //       borderHover: "",
+    //       textHover: "",
+    //     },
+    //     mobile: {
+    //       textColor: "",
+    //       borderColor: "",
+    //       bgColor: "",
+    //       width: "",
+    //       height: "",
+    //       borderHover: "",
+    //       textHover: "",
+    //     },
+    //   },
     // },
   ],
   productList: {
@@ -255,7 +576,7 @@ export const homeContent = {
     link: "/contact-us",
     textPosition: {
       desktop: { top: "50%", left: "5%" },
-      mobile: { top: "60%", left: "5%" },
+      mobile: { top: "70%", left: "5%" },
     },
     buttonProps: {
       desktop: {
@@ -269,17 +590,24 @@ export const homeContent = {
         textColor: "black",
         borderColor: "#7F56D9",
         bgColor: "",
-        width: "",
+        width: "200px",
         height: "",
       },
     },
     textProps: {
-      desktop: { textColor: "", alignItems: "", textAlign: "" },
-      mobile: { textColor: "", alignItems: "", textAlign: "" },
+      desktop: {
+        textColor: "linear(30deg, #171717, #7F56D9)",
+        alignItems: "flex-start",
+        textAlign: "left",
+        width: "",
+      },
+      mobile: {
+        textColor: "linear(30deg, #171717, #7F56D9)",
+        alignItems: "flex-start",
+        textAlign: "left",
+        width: "80%",
+      },
     },
-    textColor: "linear(30deg, #171717, #7F56D9)",
-    alignItems: "flex-start",
-    textAlign: "left",
   },
   CTAButton2: {
     data: "Experience the Power of AI-Driven CCTV Cameras With ArcisAI",
@@ -289,7 +617,7 @@ export const homeContent = {
     link: "/contact-us",
     textPosition: {
       desktop: { top: "50%", left: "-2%" },
-      mobile: { top: "10%", left: "5%" },
+      mobile: { top: "2%", left: "0%" },
     },
     buttonProps: {
       desktop: {
@@ -302,7 +630,7 @@ export const homeContent = {
       mobile: {
         textColor: "white",
         borderColor: "white",
-        bgColor: "",
+        bgColor: "rgba(255, 255, 255, 0.2)",
         width: "",
         height: "",
       },
@@ -312,11 +640,13 @@ export const homeContent = {
         textColor: "white",
         alignItems: "flex-end",
         textAlign: "right",
+        width: "",
       },
       mobile: {
         textColor: "white",
         alignItems: "flex-end",
         textAlign: "right",
+        width: "90%",
       },
     },
     textColor: "white",

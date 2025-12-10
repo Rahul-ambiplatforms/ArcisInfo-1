@@ -55,7 +55,7 @@ const EdgeAIFeatures = ({ data }) => {
             w="95%"
             lineHeight={{ base: "15px", md: "20px" }}
             fontWeight="400"
-            mt={{ base: "35%", md: "0" }}
+            mt={{ base: "60%", md: "0" }}
           >
             {data.description}
           </Text>
@@ -72,7 +72,7 @@ const EdgeAIFeatures = ({ data }) => {
         {/* Desktop Zig-Zag Grid View */}
         <SimpleGrid
           columns={4}
-          spacing={6}
+          spacing={{base:4,md:2}}
           display={{ base: "none", md: "grid" }}
           px="4%"
         >

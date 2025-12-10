@@ -65,6 +65,11 @@ const CTAButton = ({
     md: txtDesktop?.textAlign || textAlign,
   };
 
+  const responsiveBtnBgClip = {
+    base: isGradient(btnMobile?.textColor) ? "text" : "border-box",
+    md: isGradient(btnDesktop?.textColor) ? "text" : "border-box",
+  };
+
   return (
     <Box
       position="relative"
@@ -111,6 +116,7 @@ const CTAButton = ({
             md: desktop?.top === "50%" ? "translateY(-50%)" : "none",
           }}
           w="100%"
+          // align={responsiveAlign}
           align={responsiveAlign}
           textAlign={responsiveTextAlign}
           pointerEvents="auto"
@@ -121,8 +127,8 @@ const CTAButton = ({
             fontSize={{ base: "30px", md: "48px", lg: "60px" }}
             fontWeight="400"
             lineHeight={{ base: "38px", md: "56px", lg: "76px" }}
-            mb={4}
-            w="55%"
+            mb={{ base: 4, md: 6 }}
+            w={{ base: txtMobile?.width || "55%", md: txtDesktop?.width || "55%" }}
           >
             <Text
               as="span"
@@ -167,12 +173,8 @@ const CTAButton = ({
                   "transparent",
               }}
               textColor={{
-                base: isGradient(btnMobile?.textColor)
-                  ? "transparent"
-                  : btnMobile?.textColor || "transparent",
-                md: isGradient(btnDesktop?.textColor)
-                  ? "transparent"
-                  : btnDesktop?.textColor || "transparent",
+                base: btnMobile?.textColor || btnDesktop?.textColor || "white",
+                md: btnDesktop?.textColor || "white",
               }}
               hoverTextColor={{
                 base: isGradient(btnMobile?.textColor)
@@ -194,6 +196,7 @@ const CTAButton = ({
                   ? btnDesktop?.textColor
                   : "none",
               }}
+              textBgClip={responsiveBtnBgClip}
               fontSize="20px"
               fontWeight="700"
               showGlow={false}

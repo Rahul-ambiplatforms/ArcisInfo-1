@@ -29,80 +29,94 @@ const CameraComparision = ({ data }) => {
         </Heading>
 
         <Box overflowX="auto" pb={4}>
-          <Box minW={{ base: "900px", lg: "100%" }}>
-            {/* Header */}
+          <Box minW={{ base: "900px", md: "100%", lg: "100%" }}>
             <Grid
-              templateColumns="1.5fr 1fr 1fr 1fr"
-              gap={6}
-              mb={{ base: 0, md: 4 }}
-              bg="rgba(255, 255, 255, 0.2)"
-              backdropFilter="blur(2px)"
-              // bg="red"
-              p={4}
+              templateColumns={
+                headers.length > 4
+                  ? `1.5fr repeat(${headers.length - 1}, minmax(120px, 1fr))`
+                  : `1.5fr repeat(${headers.length - 1}, 1fr)`
+              }
+              // gap={0} implies we handle spacing via padding/borders in cells
             >
+              {/* Header Cells */}
               {headers.map((header, index) => (
-                <Text
-                  key={index}
-                  fontWeight="700"
-                  fontSize={{ base: "14px", md: "20px" }}
-                  color={index === 0 ? "white" : "white"}
-                  opacity={index === 0 ? 0.8 : 1}
+                <Box
+                  key={`header-${index}`}
+                  bg="rgba(255, 255, 255, 0.2)"
+                  backdropFilter="blur(2px)"
+                  p={4}
+                  borderBottom="1px solid white"
                 >
-                  {header}
-                </Text>
+                  <Text
+                    fontWeight="700"
+                    fontSize={{ base: "14px", md: "20px" }}
+                    color="white"
+                    opacity={index === 0 ? 0.8 : 1}
+                  >
+                    {header}
+                  </Text>
+                </Box>
+              ))}
+
+              {/* Rows */}
+              {rows.map((row, rowIndex) => (
+                <React.Fragment key={`row-${rowIndex}`}>
+                  {/* Label Cell */}
+                  <Box
+                    p={4}
+                    borderBottom="0.5px solid white"
+                    borderColor="rgba(255,255,255,0.3)"
+                    display="flex"
+                    alignItems="center"
+                  >
+                    <Text
+                      fontWeight="700"
+                      color="white"
+                      fontSize={{ base: "14px", md: "16px" }}
+                    >
+                      {row.label}
+                    </Text>
+                  </Box>
+
+                  {/* Value Cells */}
+                  {row.values.map((val, valIndex) => (
+                    <Box
+                      key={`val-${rowIndex}-${valIndex}`}
+                      p={4}
+                      borderBottom="0.5px solid white"
+                      borderColor="rgba(255,255,255,0.3)"
+                      display="flex"
+                      alignItems="center"
+                    >
+                      {row.isButton ? (
+                        <CustomButton
+                          width="100%"
+                          maxWidth="160px"
+                          height="40px"
+                          fontSize="14px"
+                          onClick={() => {
+                            if (row.links && row.links[valIndex]) {
+                              window.open(row.links[valIndex], "_blank");
+                            } else {
+                              console.log("No PDF link found");
+                            }
+                          }}
+                        >
+                          {val}
+                        </CustomButton>
+                      ) : (
+                        <Text
+                          fontSize={{ base: "14px", md: "16px" }}
+                          fontWeight="400"
+                        >
+                          {val}
+                        </Text>
+                      )}
+                    </Box>
+                  ))}
+                </React.Fragment>
               ))}
             </Grid>
-
-            {/* Rows */}
-            {rows.map((row, rowIndex) => (
-              <Grid
-                key={rowIndex}
-                templateColumns="1.5fr 1fr 1fr 1fr"
-                gap={6}
-                py={4}
-                px={{ base: 4, md: 4 }}
-                borderBottom="0.5px solid"
-                borderColor="#fff"
-                alignItems="center"
-                // _last={{ borderBottom: "none" }}
-              >
-                <Text
-                  fontWeight="700"
-                  color="white"
-                  fontSize={{ base: "14px", md: "16px" }}
-                >
-                  {row.label}
-                </Text>
-                {row.values.map((val, valIndex) => (
-                  <Box key={valIndex}>
-                    {row.isButton ? (
-                      <CustomButton
-                        width="100%"
-                        maxWidth="160px"
-                        height="40px"
-                        fontSize="14px"
-                        onClick={() => {
-                          if (row.links && row.links[valIndex]) {
-                            window.open(row.links[valIndex], "_blank");
-                          } else {
-                            console.log("No PDF link found");
-                          }
-                        }}
-                      >
-                        {val}
-                      </CustomButton>
-                    ) : (
-                      <Text
-                        fontSize={{ base: "14px", md: "16px" }}
-                        fontWeight="400"
-                      >
-                        {val}
-                      </Text>
-                    )}
-                  </Box>
-                ))}
-              </Grid>
-            ))}
           </Box>
         </Box>
       </Box>

@@ -65,7 +65,13 @@ const WhyChooseArcis = ({ data }) => {
   return (
     <Box>
       {/* Top Section (Black BG) */}
-      <Box bg="black" py={4} position="relative" overflow="hidden">
+      <Box
+        bg="black"
+        pt={{ base: "", md: "2%" }}
+        mt={{ base: "", md: "3%" }}
+        position="relative"
+        overflow="hidden"
+      >
         <Box w="100%" mx="auto" px={{ base: 4, lg: 8 }}>
           {/* Title (Desktop: Absolute Right, Mobile: Top) */}
           <Box

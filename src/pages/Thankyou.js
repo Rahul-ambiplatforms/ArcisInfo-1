@@ -93,7 +93,10 @@ const Thankyou = () => {
             </Text>
 
             {/* Want to talk sooner? Section */}
-            <VStack spacing={{ base: "16px", md: "20px" }} mt={{ base: "8px", md: "16px" }}>
+            <VStack
+              spacing={{ base: "16px", md: "20px" }}
+              mt={{ base: "8px", md: "16px" }}
+            >
               <Text
                 fontSize={{ base: "18px", md: "20px", lg: "22px" }}
                 fontWeight="400"
@@ -184,7 +187,7 @@ const Thankyou = () => {
                 fontSize={{ base: "14px", md: "16px" }}
                 fontWeight="400"
                 showGlow={false}
-                showTicks={false}
+                // showTicks={false}
                 onClick={handleReturn}
               >
                 Back to home

@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import HeroSection from "../../Components/HeroSection";
+import HeroSectionCarousel from "../../Components/HeroSectionCarousel";
 import EdgeAIFeatures from "./Components/EdgeAIFeatures";
 import CCTVFeatures from "./Components/CCTVFeaatures";
 import GoodbyeNVR from "./Components/GoodbyeNVR";
@@ -10,6 +10,7 @@ import FAQSection from "../../Components/FAQSection";
 import { WhyArcisAIContent } from "./Data/Content";
 import { whyArcisAISEO } from "./Data/SEOContent";
 import CTAButton from "../../Components/CTAButton";
+import PageContentWrapper from "../../Components/PageContentWrapper";
 
 const WhyArcisAI = () => {
   return (
@@ -23,7 +24,10 @@ const WhyArcisAI = () => {
 
         {/* Open Graph / Facebook */}
         <meta property="og:title" content={whyArcisAISEO.metatitle} />
-        <meta property="og:description" content={whyArcisAISEO.metadescription} />
+        <meta
+          property="og:description"
+          content={whyArcisAISEO.metadescription}
+        />
         <meta property="og:image" content={whyArcisAISEO.ogimage} />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_US" />
@@ -34,11 +38,17 @@ const WhyArcisAI = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@arcisai" />
         <meta name="twitter:title" content={whyArcisAISEO.metatitle} />
-        <meta name="twitter:description" content={whyArcisAISEO.metadescription} />
+        <meta
+          name="twitter:description"
+          content={whyArcisAISEO.metadescription}
+        />
         <meta name="twitter:image" content={whyArcisAISEO.ogimage} />
 
         {/* Additional Meta Tags */}
-        <meta name="keywords" content="ArcisAI, Edge AI, Cloud AI, AI CCTV, VMS, ArcisGPT, STQC VMS, Intelligent Surveillance, CCTV Platform, India Surveillance" />
+        <meta
+          name="keywords"
+          content="ArcisAI, Edge AI, Cloud AI, AI CCTV, VMS, ArcisGPT, STQC VMS, Intelligent Surveillance, CCTV Platform, India Surveillance"
+        />
         <meta name="author" content="ArcisAI" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
@@ -48,25 +58,29 @@ const WhyArcisAI = () => {
         <meta name="rating" content="general" />
 
         {/* Schema Markup */}
-        {whyArcisAISEO.schema && whyArcisAISEO.schema.length > 0 && whyArcisAISEO.schema.map((schema, index) => (
-          <script
-            key={`schema-${index}`}
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(schema),
-            }}
-          />
-        ))}
+        {whyArcisAISEO.schema &&
+          whyArcisAISEO.schema.length > 0 &&
+          whyArcisAISEO.schema.map((schema, index) => (
+            <script
+              key={`schema-${index}`}
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(schema),
+              }}
+            />
+          ))}
       </Helmet>
-      <HeroSection data={WhyArcisAIContent.hero} />
-      <EdgeAIFeatures data={WhyArcisAIContent.EdgeAIFeatures} />
-      <CCTVFeatures data={WhyArcisAIContent.ArcisGPTFeatures} />
-      <CTAButton {...WhyArcisAIContent.CTAButton} />
-      <GoodbyeNVR data={WhyArcisAIContent.GoodbyeNVR} />
-      <ArcisVMS data={WhyArcisAIContent.ArcisVMS} />
-      <Services data={WhyArcisAIContent.Services} />
-      <CTAButton {...WhyArcisAIContent.CTAButton2} />
-      <FAQSection data={WhyArcisAIContent.FAQsData} />
+      <PageContentWrapper noPadding>
+        <HeroSectionCarousel data={WhyArcisAIContent.hero} />
+        <EdgeAIFeatures data={WhyArcisAIContent.EdgeAIFeatures} />
+        <CCTVFeatures data={WhyArcisAIContent.ArcisGPTFeatures} />
+        <CTAButton {...WhyArcisAIContent.CTAButton} />
+        <GoodbyeNVR data={WhyArcisAIContent.GoodbyeNVR} />
+        <ArcisVMS data={WhyArcisAIContent.ArcisVMS} />
+        <Services data={WhyArcisAIContent.Services} />
+        <CTAButton {...WhyArcisAIContent.CTAButton2} />
+        <FAQSection data={WhyArcisAIContent.FAQsData} />
+      </PageContentWrapper>
     </>
   );
 };

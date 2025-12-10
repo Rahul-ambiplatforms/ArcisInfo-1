@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import HeroSection from "../../Components/HeroSection";
+import HeroSectionCarousel from "../../Components/HeroSectionCarousel";
 import { Product } from "./Data/Content";
 import { getProductSEO } from "./Data/SEOContent";
 import CameraFeature from "./Components/CameraFeature";
@@ -11,6 +11,11 @@ import WhyChooseArcis from "./Components/WhyChooseArcis";
 import SurveillanceStack from "../../Components/SurveillanceStack";
 import CTAButton from "../../Components/CTAButton";
 import FAQSection from "../../Components/FAQSection";
+import { Box } from "@chakra-ui/react";
+import CCTVFeatures from "../WhyArcisAI/Components/CCTVFeaatures";
+import AISolutionIndustry from "../HomePage/Components/AISolutionIndustry";
+import NotFound from "../NotFound";
+import PageContentWrapper from "../../Components/PageContentWrapper";
 
 const Products = () => {
   const { productId } = useParams();
@@ -29,7 +34,13 @@ const Products = () => {
   const productSEO = getProductSEO(productKey);
 
   if (!productData) {
-    return <div>Product Page not found</div>;
+    return (
+      <>
+        <Box h="100vh">
+          <NotFound />
+        </Box>
+      </>
+    );
   }
 
   return (
@@ -58,7 +69,10 @@ const Products = () => {
         <meta name="twitter:image" content={productSEO.ogimage} />
 
         {/* Additional Meta Tags */}
-        <meta name="keywords" content="AI CCTV Camera, Security Camera, EdgeAI, Surveillance Camera, ArcisAI, Smart CCTV, AI Camera" />
+        <meta
+          name="keywords"
+          content="AI CCTV Camera, Security Camera, EdgeAI, Surveillance Camera, ArcisAI, Smart CCTV, AI Camera"
+        />
         <meta name="author" content="ArcisAI" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
@@ -68,24 +82,31 @@ const Products = () => {
         <meta name="rating" content="general" />
 
         {/* Schema Markup */}
-        {productSEO.schema && productSEO.schema.length > 0 && productSEO.schema.map((schema, index) => (
-          <script
-            key={`schema-${index}`}
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(schema),
-            }}
-          />
-        ))}
+        {productSEO.schema &&
+          productSEO.schema.length > 0 &&
+          productSEO.schema.map((schema, index) => (
+            <script
+              key={`schema-${index}`}
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(schema),
+              }}
+            />
+          ))}
       </Helmet>
-      <HeroSection data={productData.hero} />
-      <CameraFeature data={productData.features} />
-      <CameraComparision data={productData.comparisonData} />
-      <SurveillanceStack data={productData.surveillanceStack} />
-      <ProductIndustries data={productData.industries} />
-      <WhyChooseArcis data={productData.whychoosearcis} />
-      <CTAButton {...productData.CTAButton} />
-      <FAQSection data={productData.FAQsData} />
+      <PageContentWrapper noPadding>
+        <HeroSectionCarousel data={productData.hero} />
+        <CameraFeature data={productData.features} />
+        <CameraComparision data={productData.comparisonData} />
+        <AISolutionIndustry data={productData.AISolutionIndustry} />
+        <Box my={{ base: "4%", md: "-3%" }}>
+          <SurveillanceStack data={productData.surveillanceStack} />
+        </Box>
+        <ProductIndustries data={productData.industries} />
+        <WhyChooseArcis data={productData.whychoosearcis} />
+        <CTAButton {...productData.CTAButton} />
+        <FAQSection data={productData.FAQsData} />
+      </PageContentWrapper>
     </>
   );
 };

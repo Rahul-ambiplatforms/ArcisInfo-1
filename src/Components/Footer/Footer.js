@@ -17,11 +17,11 @@ import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
-  FaHome,
-  FaEnvelope,
-  FaPhone,
-  FaMapMarkerAlt,
 } from "react-icons/fa";
+import { ReactComponent as HomeIcon } from "../Icons/Home.svg";
+import { ReactComponent as MailIcon } from "../Icons/Mail.svg";
+import { ReactComponent as PhoneIcon } from "../Icons/phone.svg";
+import { ReactComponent as LocationIcon } from "../Icons/Location.svg";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link as RouterLink } from "react-router-dom";
 
@@ -83,12 +83,25 @@ const Footer = () => {
 
   return (
     <Box bg="black" color="white">
-      <Container
-        as={Stack}
-        maxW={"container.xl"}
+      <Box
+        // maxW={"container.xl"}
+        w="100%"
         py={{ base: 6, md: 8 }}
         px={{ base: 4, md: 6 }}
       >
+        <Box display={{ base: "block", md: "none" }} mb="10%">
+          <RouterLink to="/">
+            <Image
+              display={{ base: "block", md: "none" }}
+              src="/images/ArcisAi_logo.png"
+              alt="ArcisAI"
+              h={{ base: "30px", md: "35px" }}
+              objectFit="contain"
+              cursor="pointer"
+              _hover={{ opacity: 0.8 }}
+            />
+          </RouterLink>
+        </Box>
         {/* Top Section: 4 Columns + Social Media */}
         <Flex
           direction={{ base: "column", md: "row" }}
@@ -106,15 +119,46 @@ const Footer = () => {
             {/* PRODUCTS */}
             <Stack align={"flex-start"} spacing={2}>
               <ListHeader>PRODUCTS</ListHeader>
-              <FooterLink href={"/s-series/ai-ptz-cctv-camera"}>
-                AI PTZ Camera
+
+              {/* S-Series */}
+              <FooterLink href={"/s-series"} color="white" fontWeight="bold">
+                S-Series
               </FooterLink>
-              <FooterLink href={"/s-series/ai-bullet-cctv-camera"}>
-                AI Bullet Camera
+              <Box pl={4}>
+                <Stack spacing={1}>
+                  <FooterLink href={"/s-series/ai-bullet-cctv-camera"}>
+                    AI Bullet Camera
+                  </FooterLink>
+                  <FooterLink href={"/s-series/ai-ptz-cctv-camera"}>
+                    AI PTZ Camera
+                  </FooterLink>
+                  <FooterLink href={"/s-series/ai-dome-cctv-camera"}>
+                    AI Dome Camera
+                  </FooterLink>
+                </Stack>
+              </Box>
+
+              {/* Eco Series */}
+              <FooterLink href={"/eco-series"} color="white" fontWeight="bold">
+                Eco Series
               </FooterLink>
-              <FooterLink href={"/s-series/ai-dome-cctv-camera"}>
-                AI Dome Camera
-              </FooterLink>
+              <Box pl={4}>
+                <Stack spacing={1}>
+                  <FooterLink href={"/eco-series/ai-bullet-camera"}>
+                    AI Bullet Camera
+                  </FooterLink>
+                  {/* <FooterLink href={"/eco-series/ai-baby-bullet-camera"}>AI Baby Bullet Camera</FooterLink> */}
+                  <FooterLink href={"/eco-series/ai-ptz-camera"}>
+                    AI PTZ Camera
+                  </FooterLink>
+                  <FooterLink href={"/eco-series/ai-dome-camera"}>
+                    AI Dome Camera
+                  </FooterLink>
+                </Stack>
+              </Box>
+
+              {/* <FooterLink href={"/abd"}>ABD</FooterLink>
+              <FooterLink href={"/arcis-vms"}>ArcisVMS</FooterLink> */}
             </Stack>
 
             {/* SOLUTIONS */}
@@ -175,14 +219,14 @@ const Footer = () => {
 
         {/* Middle Section: Left (Logo + Apps) | Right (Contact Info) */}
         <Flex
-          direction={{ base: "column", md: "row" }}
+          direction={{ base: "column-reverse", md: "row" }}
           justify="space-between"
-          align={{ base: "center", md: "flex-start" }}
+          align={{ base: "flex-start", md: "flex-start" }}
           mb={{ base: 6, md: 4 }}
           gap={{ base: 6, md: 8 }}
         >
           {/* Left Side: Make In India, App Stores, Logo */}
-          <VStack align={{ base: "center", md: "flex-start" }} spacing={3}>
+          <VStack align={{ base: "flex-start", md: "flex-start" }} spacing={3}>
             <Image
               src="/images/footer_makeinindia.png"
               alt="Make in India"
@@ -230,23 +274,30 @@ const Footer = () => {
           </VStack>
 
           {/* Right Side: Partner/Contact Links + Contact Info */}
-          <VStack align={{ base: "center", md: "flex-end" }} spacing={3}>
+          <VStack align={{ base: "flex-start", md: "flex-end" }} spacing={3}>
             {/* Partner and Contact Links */}
-            <HStack spacing={3} fontSize="sm" fontWeight="bold" mb={2}>
+            <HStack
+              spacing={3}
+              fontSize={{ base: "14px", md: "16px" }}
+              fontWeight="700"
+              mb={2}
+            >
               {/* <Link
                 as={RouterLink}
                 to="/partner-with-us"
-                color="gray.400"
-                _hover={{ color: "white", textDecoration: "none" }}
+                 color="white"
+                textDecoration="underline"
+                _hover={{ color: "gray.300" }}
               >
                 PARTNER WITH US
               </Link>
-              <Text color="gray.400">|</Text> */}
+              <Text color="white">|</Text> */}
               <Link
                 as={RouterLink}
                 to="/contact-us"
-                color="gray.400"
-                _hover={{ color: "white", textDecoration: "none" }}
+                color="white"
+                textDecoration="underline"
+                _hover={{ color: "gray.300" }}
               >
                 CONTACT US
               </Link>
@@ -254,13 +305,16 @@ const Footer = () => {
 
             {/* Contact Information */}
             <VStack
-              align={{ base: "center", md: "flex-end" }}
+              align={{ base: "flex-start", md: "flex-end" }}
               spacing={2}
               color="white"
             >
-              <HStack>
+              <Flex
+                direction={{ base: "column", md: "row" }}
+                gap={{ base: "2", md: "4" }}
+              >
                 <HStack>
-                  <Icon as={FaHome} w={4} h={4} />
+                  <Icon as={HomeIcon} w={4} h={4} />
                   <Link
                     href="https://www.arcisai.io"
                     target="_blank"
@@ -273,7 +327,7 @@ const Footer = () => {
                   </Link>
                 </HStack>
                 <HStack>
-                  <Icon as={FaEnvelope} w={4} h={4} />
+                  <Icon as={MailIcon} w={4} h={4} />
                   <Link
                     href="mailto:marketing@arcisai.io"
                     color="white"
@@ -284,7 +338,7 @@ const Footer = () => {
                   </Link>
                 </HStack>
                 <HStack>
-                  <Icon as={FaPhone} w={4} h={4} />
+                  <Icon as={PhoneIcon} w={4} h={4} />
                   <Link
                     href="tel:+919687779999"
                     color="white"
@@ -294,14 +348,14 @@ const Footer = () => {
                     (+91) 968 777 9999
                   </Link>
                 </HStack>
-              </HStack>
+              </Flex>
               <HStack align="flex-start">
-                <Icon as={FaMapMarkerAlt} w={4} h={4} mt={1} />
+                <Icon as={LocationIcon} w={4} h={4} mt={1} />
                 <Text
                   color="white"
-                  fontSize="sm"
+                  fontSize={{ base: "12px", md: "14px" }}
                   maxW={{ base: "100%", md: "420px" }}
-                  textAlign={{ base: "center", md: "right" }}
+                  textAlign={{ base: "left", md: "right" }}
                 >
                   House No. 7, Arista Eight, Corporate House, Rajpath Rangoli
                   Rd, behind Satyam House, Bodakdev, Ahmedabad, Gujarat 380059
@@ -313,9 +367,9 @@ const Footer = () => {
 
         {/* Bottom Section: Arcis Logo | Copyright | Adiance */}
         <Flex
-          direction={{ base: "column", md: "row" }}
+          direction={{ base: "column-reverse", md: "row" }}
           justify="space-between"
-          align={{ base: "center", md: "center" }}
+          align={{ base: "left", md: "center" }}
           pt={4}
           borderTop="1px solid"
           borderColor="gray.800"
@@ -324,6 +378,7 @@ const Footer = () => {
           {/* Left: Arcis Logo */}
           <RouterLink to="/">
             <Image
+              display={{ base: "none", md: "block" }}
               src="/images/ArcisAi_logo.png"
               alt="ArcisAI"
               h={{ base: "30px", md: "35px" }}
@@ -335,9 +390,9 @@ const Footer = () => {
 
           {/* Middle: Copyright */}
           <Text
-            fontSize={"xs"}
-            textAlign={{ base: "center", md: "center" }}
-            color="gray.500"
+            fontSize={{ base: "10px", md: "12px" }}
+            textAlign={{ base: "left", md: "center" }}
+            color="white"
             flex="1"
           >
             Copyright © 2025 ArcisAI. All rights reserved. An ISO 27001:2022,
@@ -345,15 +400,15 @@ const Footer = () => {
           </Text>
 
           {/* Right: Powered By */}
-          <VStack align={{ base: "center", md: "flex-end" }} spacing={0}>
-            <Text fontSize="xs" color="gray.500" mb={1}>
+          <VStack align={{ base: "left", md: "flex-end" }} spacing={0}>
+            <Text fontSize={{ base: "12px", md: "14px" }} color="white" mb={1}>
               POWERED BY
             </Text>
             <Link
               href="https://www.adiance.com"
               target="_blank"
               rel="noopener noreferrer"
-              fontSize="xs"
+              fontSize={{ base: "12px", md: "14px" }}
               textDecoration="underline"
               color="gray.400"
               _hover={{ color: "white" }}
@@ -362,7 +417,7 @@ const Footer = () => {
             </Link>
           </VStack>
         </Flex>
-      </Container>
+      </Box>
     </Box>
   );
 };

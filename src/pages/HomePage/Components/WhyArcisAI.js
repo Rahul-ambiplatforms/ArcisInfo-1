@@ -88,7 +88,7 @@ const WhyArcisAI = () => {
           <Box
             flex="1"
             w="100%"
-            h={{ base: "300px", lg: "500px" }}
+            h={{ base: "300px", lg: "712px" }}
             position="relative"
             display="flex"
             alignItems="center"
@@ -103,14 +103,15 @@ const WhyArcisAI = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4 }}
-                maxH="100%"
-                objectFit="contain"
+                w="100%"
+                h="100%"
+                objectFit="cover"
               />
             </AnimatePresence>
           </Box>
 
           {/* Right Side: Feature List (Accordion) */}
-          <Box flex="1" w="100%">
+          <Box flex="1" w="100%" mt={{ base: 0, lg: "-10%" }}>
             <VStack align="stretch" spacing={4}>
               {data.features.map((feature, index) => {
                 const isOpen = activeIndex === index;

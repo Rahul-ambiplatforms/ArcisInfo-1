@@ -11,8 +11,7 @@ import {
   Icon,
 } from "@chakra-ui/react";
 import { motion, useScroll } from "framer-motion";
-import { TbLocationDiscount } from "react-icons/tb";
-// import { Location } from "../../../Components/Icons/Location.svg";
+import { ReactComponent as LocationIcon } from "../../../Components/Icons/Location.svg";
 
 // Data Constants
 const TESTIMONIALS_DATA = [
@@ -31,7 +30,7 @@ const TESTIMONIALS_DATA = [
     location: "Pune",
   },
   {
-    name: "Priya Desai",
+    name: "Jenil Jaiswal",
     designation: "Logistics Manager",
     description:
       "With ArcisAI's multi-camera view and cloud storage, we no longer miss incidents. It helped us reduce losses and speed up issue resolution.",
@@ -100,7 +99,7 @@ const OurClient = () => {
     <Box
       position="relative"
       bg="black"
-      py={{ base: 2, md: 10 }}
+      py={{ base: 2, md: 8 }}
       overflow="hidden"
       color="white"
     >
@@ -125,7 +124,7 @@ const OurClient = () => {
       </Box>
 
       <Box w="100%" position="relative" zIndex="1">
-        <Text textAlign="center" fontSize={{ base: "14px", md: "24px" }} mb={2}>
+        <Text textAlign="center" fontSize={{ base: "20px", md: "24px" }} mb={2}>
           Our Clientele
         </Text>
         <Heading
@@ -184,9 +183,8 @@ const OurClient = () => {
                       {testimonial.description}
                     </Text>
                   </Box>
-                  <Flex align="flex-start" direction="column">
-                    <Icon as={TbLocationDiscount} w={5} h={5} />
-                    {/* <Location /> */}
+                  <Flex align="flex-start" gap="1" direction="column">
+                    <Icon as={LocationIcon} w={5} h={5} />
                     <Text
                       fontSize={{ base: "14px", md: "16px" }}
                       fontWeight="700"
@@ -211,7 +209,6 @@ const OurClient = () => {
           {CLIENT_LOGOS_DATA.map((client, index) => (
             <Box
               key={index}
-              bg="red"
               // p={4}
               w="100%"
               // h="80px"

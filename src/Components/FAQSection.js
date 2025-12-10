@@ -24,23 +24,31 @@ const UpIcon = (props) => (
 );
 
 const FAQSection = ({ data }) => {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0); // First question open by default
 
   const handleToggle = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
+    // If clicking the currently open item, close it
+    // Otherwise, open the clicked item
+    if (activeIndex === index) {
+      setActiveIndex(null);
+    } else {
+      setActiveIndex(index);
+    }
   };
 
   if (!data) return null;
 
   return (
     <Box py={{ base: 4, md: 8 }} color="white">
-      <Box w="100%">
+      <Box justifyContent="center" alignItems="center" mx="auto">
         <Heading
           as="h2"
           fontSize={{ base: "30px", md: "60px" }}
           fontWeight="400"
           textAlign="center"
           mb={8}
+          w={{ base: "100%", md: "80%" }}
+          mx="auto"
         >
           {data.heading}
         </Heading>
@@ -49,7 +57,7 @@ const FAQSection = ({ data }) => {
           spacing={4}
           align="stretch"
           p={{ base: 2, md: 4 }}
-          w={{ base: "100%", md: "70%" }}
+          w={{ base: "100%", md: "60%" }}
           mx="auto"
         >
           {data.data.map((item, index) => {

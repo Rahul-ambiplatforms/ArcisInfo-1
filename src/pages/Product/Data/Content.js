@@ -13,6 +13,8 @@ import { ReactComponent as FeatureIcon11 } from "../../../Components/Icons/produ
 import { ReactComponent as FeatureIcon12 } from "../../../Components/Icons/product_all_camerafeatures_12.svg";
 import { ReactComponent as FeatureIcon13 } from "../../../Components/Icons/product_all_camerafeatures_13.svg";
 import { ReactComponent as FeatureIcon14 } from "../../../Components/Icons/product_all_camerafeatures_14.svg";
+import { ReactComponent as FeatureIcon15 } from "../../../Components/Icons/product_all_camerafeatures_15.svg";
+import { ReactComponent as FeatureIcon16 } from "../../../Components/Icons/product_all_camerafeatures_16.svg";
 import { ReactComponent as WhyChooseIcon1 } from "../../../Components/Icons/product_all_whychoose_1.svg";
 import { ReactComponent as WhyChooseIcon2 } from "../../../Components/Icons/product_all_whychoose_2.svg";
 import { ReactComponent as WhyChooseIcon3 } from "../../../Components/Icons/product_all_whychoose_3.svg";
@@ -23,6 +25,7 @@ import { ReactComponent as WhyChooseIcon7 } from "../../../Components/Icons/prod
 import { ReactComponent as WhyChooseIcon8 } from "../../../Components/Icons/product_all_whychoose_8.svg";
 
 export const Product = {
+  //----------S SERIES----------\\
   aibulletcctvcamera: {
     hero: [
       {
@@ -32,6 +35,52 @@ export const Product = {
         m_image: "/images/product_bullet_main_mobile.png",
         buttonText: "Get Your AI CCTV",
         buttonLink: "/contact-us",
+        sectionProps: {
+          desktop: {
+            marginTop: "-9%",
+          },
+          mobile: {
+            marginTop: "",
+          },
+        },
+        textProps: {
+          desktop: {
+            textColor: "",
+            alignItems: "",
+            textAlign: "",
+            top: "",
+            left: "",
+            width: "",
+          },
+          mobile: {
+            textColor: "",
+            alignItems: "",
+            textAlign: "",
+            top: "",
+            left: "",
+            width: "",
+          },
+        },
+        buttonProps: {
+          desktop: {
+            textColor: "",
+            borderColor: "",
+            bgColor: "",
+            width: "",
+            height: "",
+            borderHover: "",
+            textHover: "",
+          },
+          mobile: {
+            textColor: "",
+            borderColor: "",
+            bgColor: "",
+            width: "",
+            height: "",
+            borderHover: "",
+            textHover: "",
+          },
+        },
       },
     ],
     features: {
@@ -311,10 +360,10 @@ export const Product = {
       buttonText: "Schedule a Demo",
       d_image: "/images/product_cta_bullet.png",
       m_image: "/images/product_cta_bullet_mobile.png",
-      link: "#",
+      link: "/contact-us",
       textPosition: {
         desktop: { top: "50%", left: "-4%" },
-        mobile: { top: "60%", left: "-40%" },
+        mobile: { top: "60%", left: "4%" },
       },
       buttonProps: {
         desktop: {
@@ -328,7 +377,7 @@ export const Product = {
           textColor: "linear(45deg, #171717, #7F56D9)",
           borderColor: "#7F56D9",
           bgColor: "",
-          width: "",
+          width: "200px",
           height: "",
         },
       },
@@ -337,11 +386,13 @@ export const Product = {
           textColor: "linear(45deg, #171717, #7F56D9)",
           alignItems: "flex-end",
           textAlign: "right",
+          width: "",
         },
         mobile: {
           textColor: "linear(45deg, #171717, #7F56D9)",
-          alignItems: "flex-end",
-          textAlign: "right",
+          alignItems: "flex-start",
+          textAlign: "left",
+          width: "60%",
         },
       },
       textColor: "linear(45deg, #171717, #7F56D9)",
@@ -378,14 +429,60 @@ export const Product = {
         m_image: "/images/product_ptz_main_mobile.png",
         buttonText: "Get Your AI CCTV",
         buttonLink: "/contact-us",
+        sectionProps: {
+          desktop: {
+            marginTop: "-9%",
+          },
+          mobile: {
+            marginTop: "",
+          },
+        },
+        textProps: {
+          desktop: {
+            textColor: "",
+            alignItems: "",
+            textAlign: "",
+            top: "",
+            left: "",
+            width: "",
+          },
+          mobile: {
+            textColor: "",
+            alignItems: "",
+            textAlign: "",
+            top: "",
+            left: "",
+            width: "",
+          },
+        },
+        buttonProps: {
+          desktop: {
+            textColor: "",
+            borderColor: "",
+            bgColor: "",
+            width: "",
+            height: "",
+            borderHover: "",
+            textHover: "",
+          },
+          mobile: {
+            textColor: "",
+            borderColor: "",
+            bgColor: "",
+            width: "",
+            height: "",
+            borderHover: "",
+            textHover: "",
+          },
+        },
       },
     ],
     features: {
       d_image: "/images/product_feature_ptz_bg.png",
       m_image: "/images/product_feature_ptz_bg_mobile.png",
-      heading: "AI CCTV Camera Range for Every Need",
+      heading: "AI CCTV Camera Built for Smarter Outdoor Surveillance",
       description:
-        "The ArcisAI Wi-Fi Bullet Camera is an advanced outdoor security camera built for homes, shops, offices, and businesses that already have Wi-Fi. With powerful EdgeAI analytics, 2K HD clarity, and event-based intelligent alerts, it ensures proactive monitoring and secure visibility — all without needing cables or network complexity. Designed for fast plug-n-play setup, 24×7 reliability, and high-quality surveillance, this is your ultimate choice for smart wireless protection.",
+        "The ArcisAI S-Series 4G AI PTZ Camera combines intelligent motion tracking, long-range  zoom and 350° coverage, making it ideal for open areas, perimeters, parking zones, factory yards, and large campuses. Powered by built-in 4G and EdgeAI analytics, Its 10× digital zoom and auto-tracking ensure every movement is captured with precision, while color night vision maintains clear visibility even in low light. With STQC-certified Cloud VMS, instant mobile alerts, and two-way communication, it provides complete control, clarity and command for modern outdoor security environments.",
       styles: {
         contentMarginTop: {
           mobile: "5%",
@@ -394,7 +491,7 @@ export const Product = {
           bigscreen: "1%",
         },
         featuresMarginTop: {
-          mobile: "25%",
+          mobile: "70%",
           tablet: "55%",
           laptop: "10%",
           bigscreen: "10%",
@@ -405,7 +502,7 @@ export const Product = {
       },
       featuresList: [
         { name: "3MP HD Resolution", icon: <FeatureIcon1 /> },
-        { name: "Dual-band Wi-Fi (2.4GHz / 5GHz)", icon: <FeatureIcon2 /> },
+        { name: "4G Network Connectivity", icon: <FeatureIcon2 /> },
         { name: "EdgeAI Technology", icon: <FeatureIcon3 /> },
         { name: "Two-Way Audio", icon: <FeatureIcon4 /> },
         { name: "Active Defense", icon: <FeatureIcon5 /> },
@@ -421,6 +518,7 @@ export const Product = {
         { name: "Plug-and-Play Setup", icon: <FeatureIcon12 /> },
         { name: "Instant AI Alerts On Mobile", icon: <FeatureIcon13 /> },
         { name: "Multi-User Secure Access", icon: <FeatureIcon14 /> },
+        { name: "350° Panoramic View", icon: <FeatureIcon15 /> },
       ],
     },
     comparisonData: {
@@ -565,35 +663,35 @@ export const Product = {
           heading: "EdgeAI Analytics",
           description:
             "AI runs directly on the camera for faster, bandwidth-free event detection, tracking, and classification.",
-          image: "/images/screen.png",
+          image: "/images/product_ptz_surveillance_1.png",
           link: "#",
         },
         {
           heading: "CloudAI Analytics",
           description:
             "CloudAI is an optional upgrade — choose and pay for deeper analytics beyond basic alerts, including reports and trend insights.",
-          image: "/images/solution_surveillance_1.png",
+          image: "/images/product_ptz_surveillance_1.png",
           link: "#",
         },
         {
           heading: "STQC-Certified VMS",
           description:
             "Securely manage and monitor live feeds, playback, and alerts from a unified ArcisAI dashboard.",
-          image: "/images/solution_surveillance_1.png",
+          image: "/images/product_ptz_surveillance_1.png",
           link: "#",
         },
         {
           heading: "ArcisGPT",
           description:
             "Your AI-powered assistant for smart video search — ask natural questions like “Show vehicle movement at Gate 2 last night” and get instant clips.",
-          image: "/images/solution_surveillance_1.png",
+          image: "/images/product_ptz_surveillance_1.png",
           link: "#",
         },
         {
           heading: "Cloud Storage",
           description:
             "Encrypted cloud storage with flexible retention and retrieval options for compliance and evidence management.",
-          image: "/images/solution_surveillance_1.png",
+          image: "/images/product_ptz_surveillance_1.png",
           link: "#",
         },
       ],
@@ -656,11 +754,10 @@ export const Product = {
       buttonText: "Book a Live Demo",
       d_image: "/images/product_cta_ptz.png",
       m_image: "/images/product_cta_ptz_mobile.png",
-      bgImage: "",
-      link: "#",
+      link: "/contact-us",
       textPosition: {
-        desktop: { top: "50%", left: "-5%" },
-        mobile: { top: "60%", left: "5%" },
+        desktop: { top: "50%", left: "-6%" },
+        mobile: { top: "65%", left: "-5%" },
       },
       buttonProps: {
         desktop: {
@@ -674,7 +771,7 @@ export const Product = {
           textColor: "linear(45deg, #171717, #7F56D9)",
           borderColor: "#7F56D9",
           bgColor: "",
-          width: "",
+          width: "200px",
           height: "",
         },
       },
@@ -683,11 +780,13 @@ export const Product = {
           textColor: "linear(45deg, #171717, #7F56D9)",
           alignItems: "flex-end",
           textAlign: "right",
+          width: "65%",
         },
         mobile: {
           textColor: "linear(45deg, #171717, #7F56D9)",
           alignItems: "flex-end",
           textAlign: "right",
+          width: "90%",
         },
       },
       textColor: "linear(45deg, #171717, #7F56D9)",
@@ -724,6 +823,52 @@ export const Product = {
         m_image: "/images/product_dome_main_mobile.png",
         buttonText: "Get Your AI CCTV",
         buttonLink: "contact-us",
+        sectionProps: {
+          desktop: {
+            marginTop: "-8%",
+          },
+          mobile: {
+            marginTop: "-50%",
+          },
+        },
+        textProps: {
+          desktop: {
+            textColor: "",
+            alignItems: "",
+            textAlign: "",
+            top: "",
+            left: "",
+            width: "",
+          },
+          mobile: {
+            textColor: "",
+            alignItems: "",
+            textAlign: "",
+            top: "",
+            left: "",
+            width: "",
+          },
+        },
+        buttonProps: {
+          desktop: {
+            textColor: "",
+            borderColor: "",
+            bgColor: "",
+            width: "",
+            height: "",
+            borderHover: "",
+            textHover: "",
+          },
+          mobile: {
+            textColor: "",
+            borderColor: "",
+            bgColor: "",
+            width: "",
+            height: "",
+            borderHover: "",
+            textHover: "",
+          },
+        },
       },
     ],
     features: {
@@ -731,7 +876,7 @@ export const Product = {
       m_image: "/images/product_feature_dome_bg_mobile.png",
       heading: "AI CCTV Camera Range for Every Need",
       description:
-        "The ArcisAI Wi-Fi Bullet Camera is an advanced outdoor security camera built for homes, shops, offices, and businesses that already have Wi-Fi. With powerful EdgeAI analytics, 2K HD clarity, and event-based intelligent alerts, it ensures proactive monitoring and secure visibility — all without needing cables or network complexity. Designed for fast plug-n-play setup, 24×7 reliability, and high-quality surveillance, this is your ultimate choice for smart wireless protection.",
+        "The ArcisAI S-Series dome blends into ceilings for discreet, wide coverage in lobbies, corridors, cash counters, classrooms, meeting rooms and more places. Crisp 2K video with balanced exposure keeps faces and badges clear, while the low-profile design hides the viewing angle and deters tampering. With built-in 4G and on-device AI (8 detections, including people/face and line-cross/zone intrusion), plus silent IR and instant alerts with STQC-certified Cloud VMS, it delivers reliable, unobtrusive indoor security.",
       styles: {
         contentMarginTop: {
           mobile: "85%",
@@ -911,35 +1056,35 @@ export const Product = {
           heading: "EdgeAI Analytics",
           description:
             "AI intelligence operates directly on the camera, detecting and responding to events instantly on-site.",
-          image: "/images/solution_surveillance_1.png",
+          image: "/images/product_dome_surveillance_1.png",
           link: "#",
         },
         {
           heading: "CloudAI Analytics",
           description:
             "CloudAI add-on — pay only for advanced analytics like reports and multi-site insights.",
-          image: "/images/solution_surveillance_1.png",
+          image: "/images/product_dome_surveillance_1.png",
           link: "#",
         },
         {
           heading: "STQC-Certified VMS",
           description:
             "A secure, unified platform to view, manage, and control all cameras, events, and users from a single dashboard.",
-          image: "/images/solution_surveillance_1.png",
+          image: "/images/product_dome_surveillance_1.png",
           link: "#",
         },
         {
           heading: "ArcisGPT",
           description:
             "An AI assistant that allows you to search and analyze video footage using natural language queries.",
-          image: "/images/solution_surveillance_1.png",
+          image: "/images/product_dome_surveillance_1.png",
           link: "#",
         },
         {
           heading: "Cloud Storage",
           description:
             "Encrypted and scalable video storage with flexible retention options for seamless evidence management.",
-          image: "/images/solution_surveillance_1.png",
+          image: "/images/product_dome_surveillance_1.png",
           link: "#",
         },
       ],
@@ -998,15 +1143,14 @@ export const Product = {
       ],
     },
     CTAButton: {
-      data: "Ready to See ArcisAI in Action? Book a Quick Demo",
-      buttonText: "Schedule a Demo",
+      data: "Secure Every Corner That Matters with ArcisAI’s Dome Camera",
+      buttonText: "Request a Demo",
       d_image: "/images/product_cta_dome.png",
       m_image: "/images/product_cta_dome_mobile.png",
-      bgImage: "",
-      link: "#",
+      link: "/contact-us",
       textPosition: {
         desktop: { top: "50%", left: "5%" },
-        mobile: { top: "60%", left: "5%" },
+        mobile: { top: "65%", left: "5%" },
       },
       buttonProps: {
         desktop: {
@@ -1020,7 +1164,7 @@ export const Product = {
           textColor: "linear(45deg, #171717, #7F56D9)",
           borderColor: "#7F56D9",
           bgColor: "",
-          width: "",
+          width: "200px",
           height: "",
         },
       },
@@ -1029,11 +1173,13 @@ export const Product = {
           textColor: "linear(45deg, #171717, #7F56D9)",
           alignItems: "flex-start",
           textAlign: "left",
+          width: "",
         },
         mobile: {
           textColor: "linear(45deg, #171717, #7F56D9)",
           alignItems: "flex-start",
           textAlign: "left",
+          width: "90%",
         },
       },
       textColor: "linear(45deg, #171717, #7F56D9)",
@@ -1057,6 +1203,1065 @@ export const Product = {
           question: "Is cloud storage mandatory, or can I use local recording?",
           answer:
             "You can choose either or both. The S-Series supports MicroSD cards up to 256 GB for local recording, as well as ArcisCloud backup for redundancy and remote access. This flexibility allows you to balance cost, retention, and security needs.",
+        },
+      ],
+    },
+  },
+
+  //----------ECO SERIES----------\\
+  bulletcctvcamera: {
+    hero: [
+      {
+        title: "Eco-Series Bullet Camera",
+        d_image: "/images/product_ecoseries_bullet_main.png",
+        m_image: "/images/product_ecoseries_bullet_main_mobile.png",
+        buttonText: "Get Your AI CCTV",
+        buttonLink: "/contact-us",
+        sectionProps: {
+          desktop: {
+            marginTop: "-9%",
+          },
+          mobile: {
+            marginTop: "-28%",
+          },
+        },
+        textProps: {
+          desktop: {
+            textColor: "",
+            alignItems: "",
+            textAlign: "",
+            top: "",
+            left: "",
+            width: "",
+          },
+          mobile: {
+            textColor: "",
+            alignItems: "",
+            textAlign: "",
+            top: "",
+            left: "",
+            width: "",
+          },
+        },
+        buttonProps: {
+          desktop: {
+            textColor: "",
+            borderColor: "",
+            bgColor: "",
+            width: "",
+            height: "",
+            borderHover: "",
+            textHover: "",
+          },
+          mobile: {
+            textColor: "",
+            borderColor: "",
+            bgColor: "",
+            width: "",
+            height: "",
+            borderHover: "",
+            textHover: "",
+          },
+        },
+      },
+    ],
+    features: {
+      d_image: "/images/product_ecoseries_feature_bullet_bg.png",
+      m_image: "/images/product_ecoseries_feature_bullet_bg_mobile.png",
+      heading: "AI CCTV Camera Range for Every Need",
+      description:
+        "The ArcisAI Wi-Fi Bullet Camera is an advanced outdoor security camera built for homes, shops, offices, and businesses that already have Wi-Fi. With powerful EdgeAI analytics, 2K HD clarity, and event-based intelligent alerts, it ensures proactive monitoring and secure visibility — all without needing cables or network complexity. Designed for fast plug-n-play setup, 24×7 reliability, and high-quality surveillance, this is your ultimate choice for smart wireless protection.",
+      styles: {
+        contentMarginTop: {
+          mobile: "5%",
+          tablet: "5%",
+          laptop: "1%",
+          bigscreen: "1%",
+        },
+        featuresMarginTop: {
+          mobile: "85%",
+          tablet: "55%",
+          laptop: "60%",
+          bigscreen: "60%",
+        },
+        alignment: "center",
+        descriptionColor: "black",
+        featureColor: "white",
+      },
+      featuresList: [
+        { name: "High-Resolution Imaging", icon: <FeatureIcon1 /> },
+        { name: "Stable Network Connectivity", icon: <FeatureIcon2 /> },
+        { name: "Easy Mounting Design", icon: <FeatureIcon3 /> },
+        { name: "Two-Way Audio", icon: <FeatureIcon4 /> },
+        { name: "ONVIF-Compatible", icon: <FeatureIcon16 /> }, //----
+        { name: "Color Night Vision", icon: <FeatureIcon6 /> },
+        { name: "Live View with 5x Digital Zoom", icon: <FeatureIcon7 /> },
+        { name: "Infrared Night Vision", icon: <FeatureIcon8 /> },
+        { name: "Remote Access via Mobile App", icon: <FeatureIcon9 /> },
+        { name: "IP66 Weatherproof Design", icon: <FeatureIcon11 /> },
+        {
+          name: "Plug-and-Play Setup",
+          icon: <FeatureIcon12 />,
+        },
+      ],
+    },
+    comparisonData: {
+      heading: "AI CCTV Camera Range for Every Need",
+      d_image: "/images/product_cameracomparision.png",
+      m_image: "/images/product_cameracomparision_mobile.png",
+      headers: [
+        "Category",
+        "Bullet 4G",
+        "Bullet Wi-Fi",
+        "Bullet PoE",
+        "Bullet 4G",
+        "Bullet Wi-Fi",
+        "Bullet PoE",
+      ],
+      rows: [
+        {
+          label: "Primary Connectivity",
+          values: [
+            "4G SIM (LTE CAT1)",
+            "Dual-Band Wi-Fi 2.4GHz/5GHz",
+            "Wired LAN RJ-45",
+            "4G SIM (LTE CAT1)",
+            "Dual-Band Wi-Fi 2.4GHz/5GHz",
+            "Wired LAN RJ-45",
+          ],
+        },
+        { label: "SIM Slot", values: ["Yes", "No", "No", "Yes", "No", "No"] },
+        {
+          label: "Wi-Fi Support",
+          values: ["No", "Yes", "No", "No", "Yes", "No"],
+        },
+        {
+          label: "Ethernet Port",
+          values: [
+            "No (optional fallback only?)",
+            "No",
+            "Yes – 10/100 Mbps",
+            "No (optional fallback only?)",
+            "No",
+            "Yes – 10/100 Mbps",
+          ],
+        },
+        {
+          label: "Power Method",
+          values: [
+            "DC 12V 1A",
+            "DC 12V 1A",
+            "PoE / DC 12V 1A",
+            "DC 12V 1A",
+            "DC 12V 1A",
+            "PoE / DC 12V 1A",
+          ],
+        },
+        {
+          label: "Installation Difficulty",
+          values: [
+            "Plug-N-Play",
+            "Plug-N-Play",
+            "Plug-N-Play",
+            "Plug-N-Play",
+            "Plug-N-Play",
+            "Plug-N-Play",
+          ],
+        },
+        {
+          label: "Cabling Required",
+          values: [
+            "No cable required",
+            "Only power cable",
+            "Single cable for power + network",
+            "No cable required",
+            "Only power cable",
+            "Single cable for power + network",
+          ],
+        },
+        {
+          label: "Monthly Cost",
+          values: [
+            "SIM recharge needed",
+            "No recurring cost",
+            "No recurring cost",
+            "SIM recharge needed",
+            "No recurring cost",
+            "No recurring cost",
+          ],
+        },
+        {
+          label: "Full Details",
+          values: [
+            "Download PDF",
+            "Download PDF",
+            "Download PDF",
+            "Download PDF",
+            "Download PDF",
+            "Download PDF",
+          ],
+          links: [
+            "/pdfs/S Series Bullet 4G.pdf",
+            "/pdfs/S Series Bullet WiFi.pdf",
+            "/pdfs/S Series Bullet POE.pdf",
+          ],
+          isButton: true,
+        },
+      ],
+    },
+    AISolutionIndustry: {
+      heading:
+        "An Indian CCTV Camera Brand Delivering AI Solutions for Every Industry",
+      description:
+        "From retail stores to housing societies, factories to warehouses and public infrastructure - We deliver smart surveillance solutions tailored to each industry’s unique challenges. Our AI-powered security cameras help you detect threats, monitor activity and respond faster.",
+      industries: [
+        {
+          name: "Manufacturing & Factory Plants",
+          image: "/images/home_aisolutionindustry_1.png",
+        }, // Placeholder
+        {
+          name: "Warehouses & Logistics",
+          image: "/images/home_aisolutionindustry_2.png",
+        },
+        {
+          name: "Smart Cities",
+          image: "/images/home_aisolutionindustry_3.png",
+        },
+        {
+          name: "Construction Sites",
+          image: "/images/home_aisolutionindustry_4.png",
+        },
+        { name: "Hospitality", image: "/images/home_aisolutionindustry_5.png" },
+        {
+          name: "Banks & ATMs",
+          image: "/images/home_aisolutionindustry_6.png",
+        },
+        { name: "Hospitals", image: "/images/home_aisolutionindustry_7.png" },
+        {
+          name: "Airports, Bus & Railway Stations",
+          image: "/images/home_aisolutionindustry_8.png",
+        },
+        {
+          name: "Retail Stores",
+          image: "/images/home_aisolutionindustry_9.png",
+        },
+        {
+          name: "Corporate Offices",
+          image: "/images/home_aisolutionindustry_10.png",
+        },
+        {
+          name: "Housing Societies",
+          image: "/images/home_aisolutionindustry_11.png",
+        },
+        {
+          name: "Educational Premises",
+          image: "/images/home_aisolutionindustry_12.png",
+        },
+      ],
+    },
+    whychoosearcis: {
+      heading: "Trusted Bullet CCTV Cameras for Every Business",
+      items: [
+        {
+          name: "Made for India",
+          description:
+            "Designed to withstand harsh Indian weather, dust, and extreme temperatures, ensuring long-lasting performance.",
+          icon: <WhyChooseIcon5 />,
+        },
+        {
+          name: "High-Quality Construction",
+          description:
+            "Choose from metal and plastic bullet CCTV cameras, with IP66/IP67 protection for indoor and outdoor surveillance.",
+          icon: <WhyChooseIcon6 />,
+        },
+        {
+          name: "Flexible Installation",
+          description:
+            "Supports POE, IP, and 4G connectivity, suitable for commercial, industrial, and residential setups.",
+          icon: <WhyChooseIcon7 />,
+        },
+        {
+          name: "Reliable Performance",
+          description:
+            "Continuous, stable video monitoring with 3MP and 5MP bullet CCTV cameras, delivering clear footage for every environment.",
+          icon: <WhyChooseIcon8 />,
+        },
+        {
+          name: "Cost-Effective",
+          description:
+            "Get premium bullet CCTV cameras, ideal for budget-conscious businesses and institutions.",
+          icon: <WhyChooseIcon8 />,
+        },
+        {
+          name: "Multiple Variants",
+          description:
+            "Various lens sizes, enclosure types, and connectivity options to meet diverse surveillance requirements.",
+          icon: <WhyChooseIcon8 />,
+        },
+      ],
+    },
+    CTAButton: {
+      data: "Protect Your Facility with ArcisAI Eco-Series Bullet Security CCTV Cameras",
+      buttonText: "Schedule a Demo",
+      d_image: "/images/product_cta_bullet.png",
+      m_image: "/images/product_cta_bullet_mobile.png",
+      link: "/contact-us",
+      textPosition: {
+        desktop: { top: "50%", left: "-4%" },
+        mobile: { top: "70%", left: "4%" },
+      },
+      buttonProps: {
+        desktop: {
+          textColor: "linear(45deg, #171717, #7F56D9)",
+          borderColor: "#7F56D9",
+          bgColor: "",
+          width: "",
+          height: "",
+        },
+        mobile: {
+          textColor: "linear(45deg, #171717, #7F56D9)",
+          borderColor: "#7F56D9",
+          bgColor: "",
+          width: "200px",
+          height: "",
+        },
+      },
+      textProps: {
+        desktop: {
+          textColor: "linear(45deg, #171717, #7F56D9)",
+          alignItems: "flex-end",
+          textAlign: "right",
+          width: "",
+        },
+        mobile: {
+          textColor: "linear(45deg, #171717, #7F56D9)",
+          alignItems: "flex-start",
+          textAlign: "left",
+          width: "100%",
+        },
+      },
+      textColor: "linear(45deg, #171717, #7F56D9)",
+      alignItems: "flex-end",
+      textAlign: "right",
+    },
+    FAQsData: {
+      heading: "Eco-Series Bullet Camera FAQs",
+      data: [
+        {
+          question: "Are Eco-Series Bullet Cameras suitable for outdoor use?",
+          answer:
+            "Yes. Eco-Series Bullet Cameras come in IP66/IP67 rated enclosures (metal and plastic), making them weatherproof and ideal for both indoor and outdoor installations.",
+        },
+        {
+          question:
+            "What types of connectivity do Eco-Series Bullet Cameras support?",
+          answer:
+            "They support IP network connectivity, PoE, 12V battery, and some 4G models. This allows flexible installation across commercial, industrial, and residential sites.",
+        },
+      ],
+    },
+  },
+  ptzcctvcamera: {
+    hero: [
+      {
+        title: "Eco-Series PTZ CCTV Cameras",
+        image: "/images/product_ptz_main.png",
+        d_image: "/images/product_ptz_main.png",
+        m_image: "/images/product_ptz_main_mobile.png",
+        buttonText: "Get Your PTZ Cameras",
+        buttonLink: "/contact-us",
+        sectionProps: {
+          desktop: {
+            marginTop: "",
+          },
+          mobile: {
+            marginTop: "",
+          },
+        },
+        textProps: {
+          desktop: {
+            textColor: "",
+            alignItems: "",
+            textAlign: "",
+            top: "",
+            left: "",
+            width: "",
+          },
+          mobile: {
+            textColor: "",
+            alignItems: "",
+            textAlign: "",
+            top: "",
+            left: "",
+            width: "",
+          },
+        },
+        buttonProps: {
+          desktop: {
+            textColor: "",
+            borderColor: "",
+            bgColor: "",
+            width: "",
+            height: "",
+            borderHover: "",
+            textHover: "",
+          },
+          mobile: {
+            textColor: "",
+            borderColor: "",
+            bgColor: "",
+            width: "",
+            height: "",
+            borderHover: "",
+            textHover: "",
+          },
+        },
+      },
+    ],
+    features: {
+      d_image: "/images/product_feature_ptz_bg.png",
+      m_image: "/images/product_feature_ptz_bg_mobile.png",
+      heading: "Next-Level PTZ CCTV Cameras Built for 24/7 Monitoring",
+      description:
+        "ArcisAI Eco-Series PTZ CCTV Cameras deliver 360° rotatable surveillance with long-range coverage, making them ideal for Indian businesses, offices, factories, apartments, and outdoor areas. Built for durable performance in Indian conditions, these cameras feature infrared night vision, IP66 weatherproof housing, and flexible PoE/IP/WiFi/4G connectivity for reliable monitoring anywhere. Whether you require a full PTZ for wide-area coverage, a Mini PTZ for compact spaces, or a Baby PTZ for discreet surveillance, ArcisAI offers the perfect solution for every security setup.",
+      styles: {
+        contentMarginTop: {
+          mobile: "5%",
+          tablet: "5%",
+          laptop: "1%",
+          bigscreen: "1%",
+        },
+        featuresMarginTop: {
+          mobile: "70%",
+          tablet: "55%",
+          laptop: "10%",
+          bigscreen: "10%",
+        },
+        alignment: "center",
+        descriptionColor: "black",
+        featureColor: "black",
+      },
+      featuresList: [
+        { name: "Superior Image Quality", icon: <FeatureIcon1 /> },
+        { name: "Stable Network Connectivity", icon: <FeatureIcon2 /> },
+        { name: "Easy Mounting Design", icon: <FeatureIcon3 /> },
+        { name: "Two-Way Talk", icon: <FeatureIcon4 /> },
+        { name: "Temper Proof", icon: <FeatureIcon5 /> },
+        { name: "Color Night Vision", icon: <FeatureIcon6 /> },
+        { name: "Infrared Night Vision", icon: <FeatureIcon6 /> },
+        { name: "Fixed Lens Options", icon: <FeatureIcon7 /> },
+        { name: "Strong Build Quality", icon: <FeatureIcon8 /> },
+        { name: "Remote Access via Mobile App", icon: <FeatureIcon9 /> },
+        { name: "ONVIF-Compatible", icon: <FeatureIcon16 /> },
+        { name: "IP66/IP67 Weatherproof Design", icon: <FeatureIcon11 /> },
+        { name: "Plug-and-Play Setup", icon: <FeatureIcon12 /> },
+        { name: "360° PTZ Coverage", icon: <FeatureIcon15 /> },
+      ],
+    },
+    comparisonData: {
+      heading: "AI CCTV Camera Range for Every Need",
+      d_image: "/images/product_cameracomparision.png",
+      m_image: "/images/product_cameracomparision_mobile.png",
+      headers: [
+        "Category",
+        "Bullet 4G",
+        "Bullet Wi-Fi",
+        "Bullet PoE",
+        "Bullet 4G",
+        "Bullet Wi-Fi",
+        "Bullet PoE",
+      ],
+      rows: [
+        {
+          label: "Primary Connectivity",
+          values: [
+            "4G SIM (LTE CAT1)",
+            "Dual-Band Wi-Fi 2.4GHz/5GHz",
+            "Wired LAN RJ-45",
+            "4G SIM (LTE CAT1)",
+            "Dual-Band Wi-Fi 2.4GHz/5GHz",
+            "Wired LAN RJ-45",
+          ],
+        },
+        { label: "SIM Slot", values: ["Yes", "No", "No", "Yes", "No", "No"] },
+        {
+          label: "Wi-Fi Support",
+          values: ["No", "Yes", "No", "No", "Yes", "No"],
+        },
+        {
+          label: "Ethernet Port",
+          values: [
+            "No (optional fallback only?)",
+            "No",
+            "Yes – 10/100 Mbps",
+            "No (optional fallback only?)",
+            "No",
+            "Yes – 10/100 Mbps",
+          ],
+        },
+        {
+          label: "Power Method",
+          values: [
+            "DC 12V 1A",
+            "DC 12V 1A",
+            "PoE / DC 12V 1A",
+            "DC 12V 1A",
+            "DC 12V 1A",
+            "PoE / DC 12V 1A",
+          ],
+        },
+        {
+          label: "Installation Difficulty",
+          values: [
+            "Plug-N-Play",
+            "Plug-N-Play",
+            "Plug-N-Play",
+            "Plug-N-Play",
+            "Plug-N-Play",
+            "Plug-N-Play",
+          ],
+        },
+        {
+          label: "Cabling Required",
+          values: [
+            "No cable required",
+            "Only power cable",
+            "Single cable for power + network",
+            "No cable required",
+            "Only power cable",
+            "Single cable for power + network",
+          ],
+        },
+        {
+          label: "Monthly Cost",
+          values: [
+            "SIM recharge needed",
+            "No recurring cost",
+            "No recurring cost",
+            "SIM recharge needed",
+            "No recurring cost",
+            "No recurring cost",
+          ],
+        },
+        {
+          label: "Full Details",
+          values: [
+            "Download PDF",
+            "Download PDF",
+            "Download PDF",
+            "Download PDF",
+            "Download PDF",
+            "Download PDF",
+          ],
+          links: [
+            "/pdfs/S Series Bullet 4G.pdf",
+            "/pdfs/S Series Bullet WiFi.pdf",
+            "/pdfs/S Series Bullet POE.pdf",
+          ],
+          isButton: true,
+        },
+      ],
+    },
+    AISolutionIndustry: {
+      heading:
+        "An Indian CCTV Camera Brand Delivering AI Solutions for Every Industry",
+      description:
+        "From retail stores to housing societies, factories to warehouses and public infrastructure - We deliver smart surveillance solutions tailored to each industry’s unique challenges. Our AI-powered security cameras help you detect threats, monitor activity and respond faster.",
+      industries: [
+        {
+          name: "Manufacturing & Factory Plants",
+          image: "/images/home_aisolutionindustry_1.png",
+        }, // Placeholder
+        {
+          name: "Warehouses & Logistics",
+          image: "/images/home_aisolutionindustry_2.png",
+        },
+        {
+          name: "Smart Cities",
+          image: "/images/home_aisolutionindustry_3.png",
+        },
+        {
+          name: "Construction Sites",
+          image: "/images/home_aisolutionindustry_4.png",
+        },
+        { name: "Hospitality", image: "/images/home_aisolutionindustry_5.png" },
+        {
+          name: "Banks & ATMs",
+          image: "/images/home_aisolutionindustry_6.png",
+        },
+        { name: "Hospitals", image: "/images/home_aisolutionindustry_7.png" },
+        {
+          name: "Airports, Bus & Railway Stations",
+          image: "/images/home_aisolutionindustry_8.png",
+        },
+        {
+          name: "Retail Stores",
+          image: "/images/home_aisolutionindustry_9.png",
+        },
+        {
+          name: "Corporate Offices",
+          image: "/images/home_aisolutionindustry_10.png",
+        },
+        {
+          name: "Housing Societies",
+          image: "/images/home_aisolutionindustry_11.png",
+        },
+        {
+          name: "Educational Premises",
+          image: "/images/home_aisolutionindustry_12.png",
+        },
+      ],
+    },
+    whychoosearcis: {
+      heading: "What Makes ArcisAI PTZ Cameras Stand Out",
+      items: [
+        {
+          name: "Built for Indian Conditions",
+          description:
+            "Cameras are heat, dust, humidity, and low-light resistant, providing stable performance year-round.",
+          icon: <WhyChooseIcon1 />,
+        },
+        {
+          name: "360° Coverage",
+          description:
+            "Rotatable PTZ cameras monitor every angle, eliminating blind spots in large areas.",
+          icon: <WhyChooseIcon2 />,
+        },
+        {
+          name: "Easy Upgrade & Integration",
+          description:
+            "Seamlessly connect with ArcisAI NVRs, VMS, and ONVIF-compatible systems without replacing existing setups.",
+          icon: <WhyChooseIcon3 />,
+        },
+        {
+          name: "Advanced Monitoring",
+          description:
+            "Get night vision, remote access, and smart recording on your existing network.",
+          icon: <WhyChooseIcon4 />,
+        },
+        {
+          name: "Trusted by Professionals",
+          description:
+            "System integrators, companies, and residential societies rely on ArcisAI for long-term, consistent surveillance.",
+          icon: <WhyChooseIcon5 />,
+        },
+        {
+          name: "Flexible Deployment Options",
+          description:
+            "Full PTZ, Mini PTZ, and Baby PTZ options adapt to any space—large or compact.",
+          icon: <WhyChooseIcon6 />,
+        },
+      ],
+    },
+    CTAButton: {
+      data: "Let’s Secure Your Space With ArcisAI PTZ Cameras",
+      buttonText: "Get Your PTZ CCTV Quote",
+      d_image: "/images/product_cta_ptz.png",
+      m_image: "/images/product_cta_ptz_mobile.png",
+      link: "/contact-us",
+      textPosition: {
+        desktop: { top: "50%", left: "-6%" },
+        mobile: { top: "65%", left: "-5%" },
+      },
+      buttonProps: {
+        desktop: {
+          textColor: "linear(45deg, #171717, #7F56D9)",
+          borderColor: "#7F56D9",
+          bgColor: "",
+          width: "",
+          height: "",
+        },
+        mobile: {
+          textColor: "linear(45deg, #171717, #7F56D9)",
+          borderColor: "#7F56D9",
+          bgColor: "",
+          width: "200px",
+          height: "",
+        },
+      },
+      textProps: {
+        desktop: {
+          textColor: "linear(45deg, #171717, #7F56D9)",
+          alignItems: "flex-end",
+          textAlign: "right",
+          width: "65%",
+        },
+        mobile: {
+          textColor: "linear(45deg, #171717, #7F56D9)",
+          alignItems: "flex-end",
+          textAlign: "right",
+          width: "90%",
+        },
+      },
+      textColor: "linear(45deg, #171717, #7F56D9)",
+      alignItems: "flex-end",
+      textAlign: "right",
+    },
+    FAQsData: {
+      heading: "PTZ CCTV Camera FAQs",
+      data: [
+        {
+          question: "Can PTZ cameras provide 360° coverage?",
+          answer:
+            "Absolutely. The rotatable PTZ mechanism allows full 360° monitoring, minimizing blind spots for large areas like warehouses, offices, and factories.",
+        },
+        {
+          question: "Do these cameras work in low-light areas?",
+          answer:
+            "Yes. All PTZ models include infrared night vision, ensuring clear footage even in dark or poorly lit spaces.",
+        },
+      ],
+    },
+  },
+  domecctvcamera: {
+    hero: [
+      {
+        title: "Eco-Series Dome Camera",
+        image: "/images/product_dome_main.png",
+        d_image: "/images/product_dome_main.png",
+        m_image: "/images/product_dome_main_mobile.png",
+        buttonText: "Get Your Security Cameras",
+        buttonLink: "contact-us",
+        sectionProps: {
+          desktop: {
+            marginTop: "",
+          },
+          mobile: {
+            marginTop: "",
+          },
+        },
+        textProps: {
+          desktop: {
+            textColor: "",
+            alignItems: "",
+            textAlign: "",
+            top: "",
+            left: "",
+            width: "",
+          },
+          mobile: {
+            textColor: "",
+            alignItems: "",
+            textAlign: "",
+            top: "",
+            left: "",
+            width: "",
+          },
+        },
+        buttonProps: {
+          desktop: {
+            textColor: "",
+            borderColor: "",
+            bgColor: "",
+            width: "",
+            height: "",
+            borderHover: "",
+            textHover: "",
+          },
+          mobile: {
+            textColor: "",
+            borderColor: "",
+            bgColor: "",
+            width: "",
+            height: "",
+            borderHover: "",
+            textHover: "",
+          },
+        },
+      },
+    ],
+    features: {
+      d_image: "/images/product_feature_dome_bg.png",
+      m_image: "/images/product_feature_dome_bg_mobile.png",
+      heading:
+        "Professional-Grade Dome CCTV Cameras for Businesses, Offices & Homes",
+      description:
+        "ArcisAI dome security cameras are built for clear monitoring, stable performance and long-lasting protection in Indian conditions. With strong night vision, durable housing, and smooth connectivity options, these cameras deliver dependable security for shops, buildings, factories, apartments, and indoor/outdoor spaces. Whether you need a compact dome for discreet surveillance or a stronger metal variant for harsh environments, the ArcisAI Dome Series offers the perfect fit for every setup.",
+      styles: {
+        contentMarginTop: {
+          mobile: "85%",
+          tablet: "35%",
+          laptop: "40%",
+          bigscreen: "40%",
+        },
+        featuresMarginTop: {
+          mobile: "5%",
+          tablet: "5%",
+          laptop: "5%",
+          bigscreen: "5%",
+        },
+        alignment: "center",
+        descriptionColor: "white",
+        featureColor: "white",
+      },
+      featuresList: [
+        { name: "Fixed Lens Options", icon: <FeatureIcon1 /> },
+        { name: "Stable Network Connectivity", icon: <FeatureIcon2 /> },
+        { name: "Easy Mounting Design", icon: <FeatureIcon3 /> },
+        { name: "Two-Way Talk", icon: <FeatureIcon4 /> },
+        { name: "Temper Proof", icon: <FeatureIcon5 /> },
+        { name: "Color Night Vision", icon: <FeatureIcon6 /> },
+        { name: "Superior Image Quality", icon: <FeatureIcon7 /> },
+        { name: "Infrared Night Vision", icon: <FeatureIcon8 /> },
+        { name: "Remote Access via Mobile App", icon: <FeatureIcon9 /> },
+        { name: "ONVIF-Compatible", icon: <FeatureIcon16 /> },
+        { name: "IP66/IP67 Weatherproof Design", icon: <FeatureIcon11 /> },
+        { name: "Plug-and-Play Setup", icon: <FeatureIcon12 /> },
+        { name: "Strong Build Quality", icon: <FeatureIcon14 /> },
+      ],
+    },
+    comparisonData: {
+      d_image: "/images/product_cameracomparision.png",
+      m_image: "/images/product_cameracomparision_mobile.png",
+      heading: "Find the Right Dome CCTV Camera for Your Security Needs",
+      headers: [
+        "Category",
+        "Bullet 4G",
+        "Bullet Wi-Fi",
+        "Bullet PoE",
+        "Bullet 4G",
+        "Bullet Wi-Fi",
+        "Bullet PoE",
+      ],
+      rows: [
+        {
+          label: "Primary Connectivity",
+          values: [
+            "4G SIM (LTE CAT1)",
+            "Dual-Band Wi-Fi 2.4GHz/5GHz",
+            "Wired LAN RJ-45",
+            "4G SIM (LTE CAT1)",
+            "Dual-Band Wi-Fi 2.4GHz/5GHz",
+            "Wired LAN RJ-45",
+          ],
+        },
+        { label: "SIM Slot", values: ["Yes", "No", "No", "Yes", "No", "No"] },
+        {
+          label: "Wi-Fi Support",
+          values: ["No", "Yes", "No", "No", "Yes", "No"],
+        },
+        {
+          label: "Ethernet Port",
+          values: [
+            "No (optional fallback only?)",
+            "No",
+            "Yes – 10/100 Mbps",
+            "No (optional fallback only?)",
+            "No",
+            "Yes – 10/100 Mbps",
+          ],
+        },
+        {
+          label: "Power Method",
+          values: [
+            "DC 12V 1A",
+            "DC 12V 1A",
+            "PoE / DC 12V 1A",
+            "DC 12V 1A",
+            "DC 12V 1A",
+            "PoE / DC 12V 1A",
+          ],
+        },
+        {
+          label: "Installation Difficulty",
+          values: [
+            "Plug-N-Play",
+            "Plug-N-Play",
+            "Plug-N-Play",
+            "Plug-N-Play",
+            "Plug-N-Play",
+            "Plug-N-Play",
+          ],
+        },
+        {
+          label: "Cabling Required",
+          values: [
+            "No cable required",
+            "Only power cable",
+            "Single cable for power + network",
+            "No cable required",
+            "Only power cable",
+            "Single cable for power + network",
+          ],
+        },
+        {
+          label: "Monthly Cost",
+          values: [
+            "SIM recharge needed",
+            "No recurring cost",
+            "No recurring cost",
+            "SIM recharge needed",
+            "No recurring cost",
+            "No recurring cost",
+          ],
+        },
+        {
+          label: "Full Details",
+          values: [
+            "Download PDF",
+            "Download PDF",
+            "Download PDF",
+            "Download PDF",
+            "Download PDF",
+            "Download PDF",
+          ],
+          links: [
+            "/pdfs/S Series Bullet 4G.pdf",
+            "/pdfs/S Series Bullet WiFi.pdf",
+            "/pdfs/S Series Bullet POE.pdf",
+          ],
+          isButton: true,
+        },
+      ],
+    },
+    AISolutionIndustry: {
+      heading:
+        "An Indian CCTV Camera Brand Delivering AI Solutions for Every Industry",
+      description:
+        "From retail stores to housing societies, factories to warehouses and public infrastructure - We deliver smart surveillance solutions tailored to each industry’s unique challenges. Our AI-powered security cameras help you detect threats, monitor activity and respond faster.",
+      industries: [
+        {
+          name: "Manufacturing & Factory Plants",
+          image: "/images/home_aisolutionindustry_1.png",
+        }, // Placeholder
+        {
+          name: "Warehouses & Logistics",
+          image: "/images/home_aisolutionindustry_2.png",
+        },
+        {
+          name: "Smart Cities",
+          image: "/images/home_aisolutionindustry_3.png",
+        },
+        {
+          name: "Construction Sites",
+          image: "/images/home_aisolutionindustry_4.png",
+        },
+        { name: "Hospitality", image: "/images/home_aisolutionindustry_5.png" },
+        {
+          name: "Banks & ATMs",
+          image: "/images/home_aisolutionindustry_6.png",
+        },
+        { name: "Hospitals", image: "/images/home_aisolutionindustry_7.png" },
+        {
+          name: "Airports, Bus & Railway Stations",
+          image: "/images/home_aisolutionindustry_8.png",
+        },
+        {
+          name: "Retail Stores",
+          image: "/images/home_aisolutionindustry_9.png",
+        },
+        {
+          name: "Corporate Offices",
+          image: "/images/home_aisolutionindustry_10.png",
+        },
+        {
+          name: "Housing Societies",
+          image: "/images/home_aisolutionindustry_11.png",
+        },
+        {
+          name: "Educational Premises",
+          image: "/images/home_aisolutionindustry_12.png",
+        },
+      ],
+    },
+
+    whychoosearcis: {
+      heading: "Trusted Bullet CCTV Cameras for Every Business",
+      items: [
+        {
+          name: "Made for Indian",
+          description:
+            "ArcisAI Dome Cameras are built to handle heat, dust, humidity, and low light—making them reliable for Indian homes, shops, offices, and industries all year round.",
+          icon: <WhyChooseIcon1 />,
+        },
+        {
+          name: "Clear Footage Day & Night",
+          description:
+            "Every camera is designed to capture sharp details, whether it’s bright daytime or low-light indoor conditions, ensuring your space stays protected 24/7.",
+          icon: <WhyChooseIcon2 />,
+        },
+        {
+          name: "Perfect for Any Location",
+          description:
+            "Whether you need a dome camera for a small shop, a corporate building, an apartment, or a warehouse, ArcisAI offers the right model for every need.",
+          icon: <WhyChooseIcon3 />,
+        },
+        {
+          name: "Easy to Install",
+          description:
+            "The compact dome design fits cleanly on ceilings and walls, making installation quick, neat, and suitable for both indoor and outdoor areas.",
+          icon: <WhyChooseIcon4 />,
+        },
+        {
+          name: "Compatible Security Setup",
+          description:
+            "Our dome cameras work smoothly with ArcisAI NVRs, VMS, and other ONVIF-supported systems, so you can upgrade or expand without replacing everything.",
+          icon: <WhyChooseIcon5 />,
+        },
+        {
+          name: "Trusted Quality",
+          description:
+            "Businesses, system integrators, and residential societies choose ArcisAI because our dome cameras stay stable, consistent, and effective for years.",
+          icon: <WhyChooseIcon6 />,
+        },
+      ],
+    },
+    CTAButton: {
+      data: "Ready to Secure Your Space With Reliable Dome CCTV Cameras?",
+      buttonText: "Request CCTV Quote",
+      d_image: "/images/product_cta_dome.png",
+      m_image: "/images/product_cta_dome_mobile.png",
+      link: "/contact-us",
+      textPosition: {
+        desktop: { top: "50%", left: "5%" },
+        mobile: { top: "65%", left: "5%" },
+      },
+      buttonProps: {
+        desktop: {
+          textColor: "linear(45deg, #171717, #7F56D9)",
+          borderColor: "#7F56D9",
+          bgColor: "",
+          width: "",
+          height: "",
+        },
+        mobile: {
+          textColor: "linear(45deg, #171717, #7F56D9)",
+          borderColor: "#7F56D9",
+          bgColor: "",
+          width: "200px",
+          height: "",
+        },
+      },
+      textProps: {
+        desktop: {
+          textColor: "linear(45deg, #171717, #7F56D9)",
+          alignItems: "flex-start",
+          textAlign: "left",
+          width: "",
+        },
+        mobile: {
+          textColor: "linear(45deg, #171717, #7F56D9)",
+          alignItems: "flex-start",
+          textAlign: "left",
+          width: "90%",
+        },
+      },
+      textColor: "linear(45deg, #171717, #7F56D9)",
+      alignItems: "flex-start",
+      textAlign: "left",
+    },
+    FAQsData: {
+      heading: "Dome Security Camera FAQs",
+      data: [
+        {
+          question: "Are Dome Cameras suitable for indoor and outdoor use?",
+          answer:
+            "Yes. Our Dome CCTV Cameras are designed to work reliably in both indoor and outdoor environments, with protection against dust, heat, humidity, and low light.",
+        },
+        {
+          question: "Can I use ArcisAI Dome Cameras in low-light areas?",
+          answer:
+            "Absolutely. Every Dome camera comes with IR night vision, ensuring clear monitoring in dark or poorly lit environments.",
         },
       ],
     },

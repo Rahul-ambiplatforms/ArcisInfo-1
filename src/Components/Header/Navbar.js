@@ -51,6 +51,12 @@ const NavDropdown = ({ title, data }) => {
     return icons[iconName] || null;
   };
 
+  const isMegaMenu = title === "PRODUCTS";
+
+  // Separate items into groups and standalone items for Mega Menu
+  const groups = data.items?.filter((item) => item.group) || [];
+  const standaloneItems = data.items?.filter((item) => !item.group) || [];
+
   return (
     <Menu
       isOpen={isOpen}
@@ -80,55 +86,151 @@ const NavDropdown = ({ title, data }) => {
         bg="#0a0a0a"
         borderColor="gray.800"
         boxShadow="dark-lg"
-        py={2}
-        minW={data.items?.[0]?.group ? "250px" : "200px"}
+        py={4}
+        px={isMegaMenu ? 6 : 2}
+        minW={isMegaMenu ? "300px" : data.items?.[0]?.group ? "250px" : "200px"}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        {data.items?.map((item, index) => {
-          if (item.group) {
-            // Grouped items (like S-Series)
-            return (
-              <MenuGroup
-                key={index}
-                title={item.group}
-                color="gray.500"
-                fontSize="12px"
-                letterSpacing="1px"
-                ml={3}
-              >
-                {item.items?.map((subItem, subIndex) => (
-                  <MenuItem
-                    key={subIndex}
-                    as={RouterLink}
-                    to={subItem.link}
-                    bg="transparent"
-                    _hover={{ bg: "gray.800" }}
-                    color="white"
-                    fontSize="14px"
-                  >
-                    {subItem.label}
-                  </MenuItem>
-                ))}
-              </MenuGroup>
-            );
-          } else {
-            // Regular items
-            return (
-              <MenuItem
-                key={index}
-                as={RouterLink}
-                to={item.link}
-                bg="transparent"
-                _hover={{ bg: "gray.800" }}
-                color="white"
-                fontSize="14px"
-              >
-                {item.label}
-              </MenuItem>
-            );
-          }
-        })}
+        {isMegaMenu ? (
+          <Flex justify="space-between" align="flex-start" gap={8}>
+            {/* Render Groups */}
+            {groups.map((item, index) => (
+              <Box key={index}>
+                <Box
+                  mb={2}
+                  color="gray.500"
+                  fontSize="14px"
+                  letterSpacing="1px"
+                  fontWeight="bold"
+                  textTransform="uppercase"
+                >
+                  {item.groupLink ? (
+                    <Link
+                      as={RouterLink}
+                      to={item.groupLink}
+                      _hover={{ color: "white", textDecoration: "none" }}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.group}
+                    </Link>
+                  ) : (
+                    item.group
+                  )}
+                </Box>
+                <Stack spacing={1}>
+                  {item.items?.map((subItem, subIndex) => (
+                    <MenuItem
+                      key={subIndex}
+                      as={RouterLink}
+                      to={subItem.link}
+                      bg="transparent"
+                      _hover={{ bg: "gray.800", color: "white" }}
+                      color="gray.300"
+                      fontSize="14px"
+                      px={2}
+                      py={1}
+                    >
+                      {subItem.label}
+                    </MenuItem>
+                  ))}
+                </Stack>
+              </Box>
+            ))}
+
+            {/* Render Standalone Items in a column */}
+            {standaloneItems.length > 0 && (
+              <Box>
+                <Box
+                  mb={2}
+                  color="gray.500"
+                  fontSize="12px"
+                  letterSpacing="1px"
+                  fontWeight="bold"
+                  textTransform="uppercase"
+                  opacity={0}
+                >
+                  Others
+                </Box>
+                <Stack spacing={1}>
+                  {standaloneItems.map((item, index) => (
+                    <MenuItem
+                      key={index}
+                      as={RouterLink}
+                      to={item.link}
+                      bg="transparent"
+                      _hover={{ bg: "gray.800", color: "white" }}
+                      color="gray.300"
+                      fontSize="14px"
+                      px={2}
+                      py={1}
+                      borderRadius="md"
+                    >
+                      {item.label}
+                    </MenuItem>
+                  ))}
+                </Stack>
+              </Box>
+            )}
+          </Flex>
+        ) : (
+          // Standard Vertical Menu
+          data.items?.map((item, index) => {
+            if (item.group) {
+              return (
+                <MenuGroup
+                  key={index}
+                  title={
+                    item.groupLink ? (
+                      <Link
+                        as={RouterLink}
+                        to={item.groupLink}
+                        _hover={{ color: "white", textDecoration: "none" }}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.group}
+                      </Link>
+                    ) : (
+                      item.group
+                    )
+                  }
+                  color="gray.500"
+                  fontSize="12px"
+                  letterSpacing="1px"
+                  ml={3}
+                >
+                  {item.items?.map((subItem, subIndex) => (
+                    <MenuItem
+                      key={subIndex}
+                      as={RouterLink}
+                      to={subItem.link}
+                      bg="transparent"
+                      _hover={{ bg: "gray.800" }}
+                      color="white"
+                      fontSize="14px"
+                    >
+                      {subItem.label}
+                    </MenuItem>
+                  ))}
+                </MenuGroup>
+              );
+            } else {
+              return (
+                <MenuItem
+                  key={index}
+                  as={RouterLink}
+                  to={item.link}
+                  bg="transparent"
+                  _hover={{ bg: "gray.800" }}
+                  color="white"
+                  fontSize="14px"
+                >
+                  {item.label}
+                </MenuItem>
+              );
+            }
+          })
+        )}
       </MenuList>
     </Menu>
   );
@@ -246,7 +348,7 @@ const Navbar = () => {
         </CustomButton>
       </Flex>
 
-      {/* MOBILE MENU DRAWER */}
+      {/* ----------------- MOBILE MENU DRAWER ----------------- */}
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
         <DrawerOverlay backdropFilter="blur(5px)" />
         <DrawerContent bg="black" borderLeft="1px solid" borderColor="gray.800">
@@ -256,7 +358,16 @@ const Navbar = () => {
             borderBottom="1px solid"
             borderColor="gray.800"
           >
-            Menu
+            <RouterLink to="/" onClick={onClose}>
+              <Image
+                src="/images/ArcisAi_logo.png"
+                alt="ArcisAI Logo"
+                w="150px"
+                h="30px"
+                cursor="pointer"
+                _hover={{ opacity: 0.8 }}
+              />
+            </RouterLink>
           </DrawerHeader>
           <DrawerBody px={0}>
             <Stack
@@ -286,15 +397,35 @@ const Navbar = () => {
                         if (item.group) {
                           return (
                             <Box key={itemIndex} mb={4}>
-                              <Text
-                                color="gray.500"
-                                fontSize="xs"
-                                mb={2}
-                                textTransform="uppercase"
-                                letterSpacing="1px"
-                              >
-                                {item.group}
-                              </Text>
+                              {item.groupLink ? (
+                                <Link
+                                  as={RouterLink}
+                                  to={item.groupLink}
+                                  color="gray.500"
+                                  fontSize="16px"
+                                  mb={2}
+                                  textTransform="uppercase"
+                                  letterSpacing="1px"
+                                  display="block"
+                                  _hover={{
+                                    color: "white",
+                                    textDecoration: "none",
+                                  }}
+                                  onClick={onClose}
+                                >
+                                  {item.group}
+                                </Link>
+                              ) : (
+                                <Text
+                                  color="gray.500"
+                                  fontSize="xs"
+                                  mb={2}
+                                  textTransform="uppercase"
+                                  letterSpacing="1px"
+                                >
+                                  {item.group}
+                                </Text>
+                              )}
                               <Stack spacing={3} pl={4}>
                                 {item.items?.map((subItem, subIndex) => (
                                   <Link
@@ -336,7 +467,7 @@ const Navbar = () => {
               ))}
 
               {/* Action Links */}
-              {actionLinks.map((link, index) => (
+              {/* {actionLinks.map((link, index) => (
                 <Button
                   key={index}
                   as={RouterLink}
@@ -356,7 +487,25 @@ const Navbar = () => {
                 >
                   {link.label}
                 </Button>
-              ))}
+              ))} */}
+              <Button
+                as={RouterLink}
+                to={actionLinks[1].link}
+                variant="ghost"
+                color="white"
+                w="full"
+                h="60px"
+                justifyContent="flex-start"
+                // px={6}
+                borderRadius={0}
+                fontSize="16px"
+                fontWeight="400"
+                textTransform="uppercase"
+                _hover={{ bg: "gray.900", color: "white" }}
+                onClick={onClose}
+              >
+                {actionLinks[1].label}
+              </Button>
 
               {/* Login Button */}
               <Box p={6} display="flex" justifyContent="center">

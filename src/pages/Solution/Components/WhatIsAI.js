@@ -16,10 +16,10 @@ const WhatIsAI = ({ data }) => {
       bgRepeat="no-repeat"
       position="relative"
       display="flex"
-    //   alignItems="center"
-    //   justifyContent="center"
+        alignItems="center"
+        justifyContent="center"
       py={{ base: 4, md: 8 }}
-    //   px={{ base: 4, md: 8 }}
+      //   px={{ base: 4, md: 8 }}
     >
       {/* Dark Overlay for readability */}
       {/* <Box
@@ -43,8 +43,8 @@ const WhatIsAI = ({ data }) => {
           >
             {heading}
           </Heading>
-          
-          <VStack spacing={1} w={{base:"100%",md:"90%"}}  mx="auto">
+
+          <VStack spacing={1} w={{ base: "100%", md: "90%" }} mx="auto">
             {description.map((paragraph, index) => (
               <Text
                 key={index}

@@ -41,7 +41,7 @@ const AIFeatures = ({ data }) => {
             w="95%"
             lineHeight={{ base: "15px", md: "20px" }}
             fontWeight="400"
-            mt={{ base: "35%", md: "0" }}
+            mt={{ base: "0%", md: "0" }}
           >
             {data.description}
           </Text>
@@ -122,7 +122,7 @@ const AIFeatures = ({ data }) => {
             scrollSnapType: "x mandatory",
           }}
           gap={4}
-          pb={4}
+          pb={0}
           px="5%"
         >
           {data.features.map((feature, index) => (
@@ -144,9 +144,9 @@ const AIFeatures = ({ data }) => {
           fontSize={{ base: "16px", md: "20px" }}
           fontWeight="700"
           color={textColor}
-          mt={16}
+          mt={{ base: 4, md: 12 }}
           px={4}
-          maxW="container.xl"
+          w="100%"
           mx="auto"
         >
           {data.subHeading}

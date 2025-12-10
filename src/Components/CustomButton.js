@@ -38,6 +38,7 @@ const CustomButton = ({
   showGlow = true,
   glowColor,
   showTicks = true,
+  textBgClip, // New prop
   sx = {},
   onClick,
   as = "button",
@@ -198,7 +199,7 @@ const CustomButton = ({
         className="btn-text"
         color={textColor}
         bgGradient={props.textGradient}
-        bgClip={props.textGradient ? "text" : undefined}
+        bgClip={textBgClip !== undefined ? textBgClip : (props.textGradient ? "text" : undefined)}
         fontSize={fontSize}
         fontWeight={fontWeight}
         transition="color 0.1s"

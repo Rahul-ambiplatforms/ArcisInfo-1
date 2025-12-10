@@ -1,8 +1,61 @@
+import InnovationIcon1 from "../../../Components/Icons/aboutus_innovation_1.svg";
+import InnovationIcon2 from "../../../Components/Icons/aboutus_innovation_2.svg";
+import InnovationIcon3 from "../../../Components/Icons/aboutus_innovation_3.svg";
+import InnovationIcon4 from "../../../Components/Icons/aboutus_innovation_4.svg";
+import InnovationIcon5 from "../../../Components/Icons/aboutus_innovation_5.svg";
+import InnovationIcon6 from "../../../Components/Icons/aboutus_innovation_6.svg";
+
 export const AboutUsContent = {
   hero: {
     image: "/images/ArcisAi_logo.png",
     d_image: "/images/aboutus_home.png",
     m_image: "/images/aboutus_home.png",
+    sectionProps: {
+      desktop: {
+        marginTop: "",
+      },
+      mobile: {
+        marginTop: "",
+      },
+    },
+    textProps: {
+      desktop: {
+        textColor: "",
+        alignItems: "",
+        textAlign: "",
+        top: "",
+        left: "",
+        width: "",
+      },
+      mobile: {
+        textColor: "",
+        alignItems: "",
+        textAlign: "",
+        top: "",
+        left: "",
+        width: "",
+      },
+    },
+    buttonProps: {
+      desktop: {
+        textColor: "",
+        borderColor: "",
+        bgColor: "",
+        width: "",
+        height: "",
+        borderHover: "",
+        textHover: "",
+      },
+      mobile: {
+        textColor: "",
+        borderColor: "",
+        bgColor: "",
+        width: "",
+        height: "",
+        borderHover: "",
+        textHover: "",
+      },
+    },
     heading: "India’s First Complete AI CCTV Ecosystem",
     subheading:
       "Smarter Surveillance. Real-Time Intelligence. Trusted Performance.",
@@ -65,37 +118,37 @@ export const AboutUsContent = {
         title: "Computer Vision",
         description:
           "enabling cameras to detect, identify, and understand what they see.",
-        icon: "ComputerVision",
+        icon: InnovationIcon1,
       },
       {
         title: "Multimodal AI",
         description:
           "combining video, audio, and contextual data for richer analysis.",
-        icon: "MultimodalAI",
+        icon: InnovationIcon2,
       },
       {
         title: "Human Activity Recognition (HAR)",
         description:
           "interpreting human motion, behavior, and intent in real time.",
-        icon: "HAR",
+        icon: InnovationIcon3,
       },
       {
         title: "Vision Transformers (ViT)",
         description:
           "enhancing visual perception and pattern recognition accuracy.",
-        icon: "ViT",
+        icon: InnovationIcon4,
       },
       {
         title: "Natural Language Understanding (NLU)",
         description:
           "allowing users to search and interact with surveillance data naturally.",
-        icon: "NLU",
+        icon: InnovationIcon5,
       },
       {
         title: "Generative AI for Video Summarization",
         description:
           "transforming hours of footage into meaningful, actionable highlights.",
-        icon: "GenAI",
+        icon: InnovationIcon6,
       },
     ],
   },
@@ -103,25 +156,25 @@ export const AboutUsContent = {
     data: "The Future of Intelligent Surveillance is Already Here — Don’t Get Left Behind.",
     buttonText: "Connect Now",
     d_image: "/images/aboutus_cta.png",
-    m_Image: "/images/aboutus_cta.png",
+    m_Image: "/images/aboutus_cta_mobile.png",
     // m_Image: "/images/aboutus_cta_mobile.png",
     link: "#",
     textPosition: {
       desktop: { top: "50%", left: "-5%" },
-      mobile: { top: "10%", left: "5%" },
+      mobile: { top: "2%", left: "1%" },
     },
     buttonProps: {
       desktop: {
         textColor: "white",
         borderColor: "white",
-        bgColor: "",
+        bgColor: "rgba(255, 255, 255, 0.2)",
         width: "",
         height: "",
       },
       mobile: {
         textColor: "white",
         borderColor: "white",
-        bgColor: "",
+        bgColor: "rgba(255, 255, 255, 0.2)",
         width: "",
         height: "",
       },
@@ -131,11 +184,13 @@ export const AboutUsContent = {
         textColor: "white",
         alignItems: "flex-end",
         textAlign: "right",
+        width: "",
       },
       mobile: {
         textColor: "white",
         alignItems: "flex-end",
         textAlign: "right",
+        width: "100%",
       },
     },
   },

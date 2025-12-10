@@ -1,12 +1,13 @@
-import React from 'react'
+import React from "react";
 import { Helmet } from "react-helmet-async";
-import HeroSection from './Components/HeroSection'
+import HeroSection from "./Components/HeroSection";
 import { AboutUsContent } from "./Data/Content";
 import { aboutUsSEO } from "./Data/SEOContent";
-import PoweredBy from './Components/PoweredBy';
-import VisionMission from './Components/VisionMission';
-import Innovation from './Components/Innovation';
+import PoweredBy from "./Components/PoweredBy";
+import VisionMission from "./Components/VisionMission";
+import Innovation from "./Components/Innovation";
 import CTAButton from "../../Components/CTAButton";
+import PageContentWrapper from "../../Components/PageContentWrapper";
 
 const AboutUs = () => {
   return (
@@ -35,7 +36,10 @@ const AboutUs = () => {
         <meta name="twitter:image" content={aboutUsSEO.ogimage} />
 
         {/* Additional Meta Tags */}
-        <meta name="keywords" content="ArcisAI, Adiance Technologies, AI CCTV Camera, Edge AI, Cloud AI, GenAI, STQC-certified VMS, Surveillance Intelligence, Security Camera Brand, About ArcisAI" />
+        <meta
+          name="keywords"
+          content="ArcisAI, Adiance Technologies, AI CCTV Camera, Edge AI, Cloud AI, GenAI, STQC-certified VMS, Surveillance Intelligence, Security Camera Brand, About ArcisAI"
+        />
         <meta name="author" content="ArcisAI" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
@@ -45,26 +49,30 @@ const AboutUs = () => {
         <meta name="rating" content="general" />
 
         {/* Schema Markup */}
-        {aboutUsSEO.schema && aboutUsSEO.schema.length > 0 && aboutUsSEO.schema.map((schema, index) => (
-          <script
-            key={`schema-${index}`}
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(schema),
-            }}
-          />
-        ))}
+        {aboutUsSEO.schema &&
+          aboutUsSEO.schema.length > 0 &&
+          aboutUsSEO.schema.map((schema, index) => (
+            <script
+              key={`schema-${index}`}
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(schema),
+              }}
+            />
+          ))}
       </Helmet>
-      <HeroSection data={AboutUsContent.hero} />
-      <PoweredBy data={AboutUsContent.poweredBy} />
-      <VisionMission 
-        visionData={AboutUsContent.Vision} 
-        missionData={AboutUsContent.Mission} 
-      />
-      <Innovation data={AboutUsContent.Innovation} />
-      <CTAButton {...AboutUsContent.CTAButton} />
+      <PageContentWrapper noPadding>
+        <HeroSection data={AboutUsContent.hero} />
+        <PoweredBy data={AboutUsContent.poweredBy} />
+        <VisionMission
+          visionData={AboutUsContent.Vision}
+          missionData={AboutUsContent.Mission}
+        />
+        <Innovation data={AboutUsContent.Innovation} />
+        <CTAButton {...AboutUsContent.CTAButton} />
+      </PageContentWrapper>
     </>
-  )
-}
+  );
+};
 
-export default AboutUs
+export default AboutUs;

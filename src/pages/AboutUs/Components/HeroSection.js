@@ -8,13 +8,18 @@ const HeroSection = ({ data }) => {
     <Box
       as="section"
       w="100%"
-      h={{ base: "90vh", md: "100vh" }}
+      h={{ base: "812px", md: "982px" }}
       position="relative"
       overflow="hidden"
-      mt={{ base: "-15%", md: "-9%" }}
+      mt={{
+        base: data?.sectionProps?.mobile?.marginTop || "-15%",
+        md: data?.sectionProps?.desktop?.marginTop || "-9%",
+      }}
     >
       {/* Background Images */}
-      {data.d_image && (
+      <picture>
+        <source media="(max-width: 768px)" srcSet={data.m_image} />
+        <source media="(min-width: 769px)" srcSet={data.d_image} />
         <Image
           src={data.d_image}
           alt={data.heading}
@@ -25,23 +30,8 @@ const HeroSection = ({ data }) => {
           top="0"
           left="0"
           zIndex="0"
-          display={{ base: data.m_image ? "none" : "block", md: "block" }}
         />
-      )}
-      {data.m_image && (
-        <Image
-          src={data.m_image}
-          alt="Hero Background Mobile"
-          w="100%"
-          h="100%"
-          position="absolute"
-          objectFit="cover"
-          top="0"
-          left="0"
-          zIndex="0"
-          display={{ base: "block", md: "none" }}
-        />
-      )}
+      </picture>
 
       {/* Content Overlay */}
       <Box
@@ -108,7 +98,7 @@ const HeroSection = ({ data }) => {
             {data.description.map((desc, index) => (
               <Text
                 key={index}
-                fontSize={{ base: "14px", md: "20px", lg: "24px" }}
+                fontSize={{ base: "14px", md: "20px", lg: "20px" }}
                 color="white"
                 lineHeight={{ base: "20px", md: "24px", lg: "30px" }}
                 fontWeight="400"

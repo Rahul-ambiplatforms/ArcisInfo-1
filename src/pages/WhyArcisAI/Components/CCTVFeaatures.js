@@ -47,7 +47,7 @@ const CCTVFeatures = ({ data }) => {
         <Heading
           as="h3"
           fontSize={{ base: "16px", md: "20px" }}
-          fontWeight={{base:"700",md:"400"}}
+          fontWeight={{ base: "700", md: "400" }}
           color={isDarkBg ? "white" : "black"}
           mb={2}
         >

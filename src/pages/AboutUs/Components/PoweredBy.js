@@ -50,7 +50,7 @@ const PoweredBy = ({ data }) => {
               {data.description.map((desc, index) => (
                 <Text
                   key={index}
-                  fontSize={{ base: "16px", md: "24px" }}
+                  fontSize={{ base: "16px", md: "20px" }}
                   lineHeight={{ base: "20px", md: "28px" }}
                   fontWeight="400"
                   align="justify"

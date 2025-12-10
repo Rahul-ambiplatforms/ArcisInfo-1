@@ -40,8 +40,53 @@ export const Solution = {
         buttonLink: "/contact-us",
         image: "/images/camera3.png",
         d_image: "/images/solution_edgeai_hero.png",
-        m_image: "/images/solution_edgeai_hero.png",
-        // m_image: "/images/solution_edgeai_hero_mobile.png",
+        m_image: "/images/solution_edgeai_hero_mobile.png",
+        sectionProps: {
+          desktop: {
+            marginTop: "",
+          },
+          mobile: {
+            marginTop: "-20%",
+          },
+        },
+        textProps: {
+          desktop: {
+            textColor: "white",
+            alignItems: "",
+            textAlign: "",
+            top: "12%",
+            left: "",
+            width: "",
+          },
+          mobile: {
+            textColor: "white",
+            alignItems: "flex-start",
+            textAlign: "",
+            top: "25%",
+            left: "",
+            width: "",
+          },
+        },
+        buttonProps: {
+          desktop: {
+            textColor: "",
+            borderColor: "",
+            bgColor: "",
+            width: "",
+            height: "",
+            borderHover: "",
+            textHover: "",
+          },
+          mobile: {
+            textColor: "white",
+            borderColor: "",
+            bgColor: "",
+            width: "",
+            height: "",
+            borderHover: "",
+            textHover: "",
+          },
+        },
       },
     ],
     WhatIsAI: {
@@ -172,12 +217,11 @@ export const Solution = {
       data: "Move from Ordinary Cameras into Decision Makers With AI-based CCTV by ArcisAI",
       buttonText: "Talk To Our Expert",
       d_image: "/images/solution_edgeai_cta.png",
-      m_Image: "/images/solution_edgeai_cta.png",
-      // m_Image: "/images/solution_edgeai_cta_mobile.png",
+      m_Image: "/images/solution_edgeai_cta_mobile.png",
       link: "/contact-us",
       textPosition: {
         desktop: { top: "50%", left: "5%" },
-        mobile: { top: "60%", left: "5%" },
+        mobile: { top: "55%", left: "5%" },
       },
       buttonProps: {
         desktop: {
@@ -191,7 +235,7 @@ export const Solution = {
           textColor: "linear(30deg, #171717, #7F56D9)",
           borderColor: "#7F56D9",
           bgColor: "",
-          width: "",
+          width: "200px",
           height: "",
         },
       },
@@ -200,11 +244,13 @@ export const Solution = {
           textColor: "linear(30deg, #171717, #7F56D9)",
           alignItems: "flex-start",
           textAlign: "left",
+          width: "55%",
         },
         mobile: {
           textColor: "linear(30deg, #171717, #7F56D9)",
           alignItems: "flex-start",
           textAlign: "left",
+          width: "70%",
         },
       },
       textColor: "linear(30deg, #171717, #7F56D9)",
@@ -294,7 +340,8 @@ export const Solution = {
   "cloud-ai-cctv-camera": {
     hero: [
       {
-        heading: "Cloud AI CCTV - Scalable Intelligence in the Cloud",
+        heading:
+          "Cloud AI CCTV – Unlock More Intelligence With Every Subscription",
         description: [
           "With ArcisAI CloudAI, your EdgeAI cameras become even smarter. CloudAI adds an advanced layer of intelligence through the cloud, offering new AI detections, analytics, and insights — available as simple, on-demand add-ons.",
         ],
@@ -302,8 +349,111 @@ export const Solution = {
         buttonLink: "/contact-us",
         image: "/images/camera3.png",
         d_image: "/images/solution_cloudai_hero.png",
-        m_image: "/images/solution_cloudai_hero.png",
+        m_image: "/images/solution_cloudai_hero_mobile.png",
+        sectionProps: {
+          desktop: {
+            marginTop: "",
+          },
+          mobile: {
+            marginTop: "",
+          },
+        },
+        textProps: {
+          desktop: {
+            textColor: "",
+            alignItems: "",
+            textAlign: "",
+            top: "12%",
+            left: "",
+            width: "70%",
+          },
+          mobile: {
+            textColor: "",
+            alignItems: "flex-end",
+            textAlign: "",
+            top: "",
+            left: "",
+            width: "",
+          },
+        },
+        buttonProps: {
+          desktop: {
+            textColor: "",
+            borderColor: "",
+            bgColor: "",
+            width: "",
+            height: "",
+            borderHover: "",
+            textHover: "",
+          },
+          mobile: {
+            textColor: "",
+            borderColor: "",
+            bgColor: "",
+            width: "",
+            height: "",
+            borderHover: "",
+            textHover: "",
+          },
+        },
       },
+      // {
+      //   heading: "Cloud AI CCTV - Scalable Intelligence in the Cloud",
+      //   description: [
+      //     "With ArcisAI CloudAI, your EdgeAI cameras become even smarter. CloudAI adds an advanced layer of intelligence through the cloud, offering new AI detections, analytics, and insights — available as simple, on-demand add-ons.",
+      //   ],
+      //   buttonText: "Request a Demo",
+      //   buttonLink: "/contact-us",
+      //   image: "/images/camera3.png",
+      //   d_image: "/images/solution_cloudai_hero.png",
+      //   m_image: "/images/solution_cloudai_hero_mobile.png",
+      //   sectionProps: {
+      //     desktop: {
+      //       marginTop: "",
+      //     },
+      //     mobile: {
+      //       marginTop: "",
+      //     },
+      //   },
+      //   textProps: {
+      //     desktop: {
+      //       textColor: "",
+      //       alignItems: "",
+      //       textAlign: "",
+      //       top: "12%",
+      //       left: "",
+      //       width: "",
+      //     },
+      //     mobile: {
+      //       textColor: "",
+      //       alignItems: "",
+      //       textAlign: "",
+      //       top: "",
+      //       left: "",
+      //       width: "",
+      //     },
+      //   },
+      //   buttonProps: {
+      //     desktop: {
+      //       textColor: "",
+      //       borderColor: "",
+      //       bgColor: "",
+      //       width: "",
+      //       height: "",
+      //       borderHover: "",
+      //       textHover: "",
+      //     },
+      //     mobile: {
+      //       textColor: "",
+      //       borderColor: "",
+      //       bgColor: "",
+      //       width: "",
+      //       height: "",
+      //       borderHover: "",
+      //       textHover: "",
+      //     },
+      //   },
+      // },
     ],
     WhatIsAI: {
       heading: "What Is Cloud AI in CCTV Surveillance?",
@@ -428,12 +578,12 @@ export const Solution = {
       data: "Upgrade Your EdgeAI CCTV Cameras With Cloud-Powered Intelligence",
       buttonText: "Talk To Our Expert",
       d_image: "/images/solution_cloudai_cta.png",
-      m_Image: "/images/solution_cloudai_cta.png",
+      m_Image: "/images/solution_cloudai_cta_mobile.png",
       // m_Image: "/images/solution_edgeai_cta_mobile.png",
       link: "/contact-us",
       textPosition: {
         desktop: { top: "50%", left: "5%" },
-        mobile: { top: "60%", left: "5%" },
+        mobile: { top: "58%", left: "5%" },
       },
       buttonProps: {
         desktop: {
@@ -447,7 +597,7 @@ export const Solution = {
           textColor: "linear(30deg, #171717, #7F56D9)",
           borderColor: "#7F56D9",
           bgColor: "",
-          width: "",
+          width: "200px",
           height: "",
         },
       },
@@ -456,11 +606,13 @@ export const Solution = {
           textColor: "linear(30deg, #171717, #7F56D9)",
           alignItems: "flex-start",
           textAlign: "left",
+          width: "",
         },
         mobile: {
           textColor: "linear(30deg, #171717, #7F56D9)",
           alignItems: "flex-start",
           textAlign: "left",
+          width: "65%",
         },
       },
       textColor: "linear(30deg, #171717, #7F56D9)",
@@ -553,9 +705,54 @@ export const Solution = {
         ],
         buttonText: "Request a Demo",
         buttonLink: "/contact-us",
-        image: "/images/camera3.png",
         d_image: "/images/solution_genai_hero.png",
-        m_image: "/images/solution_genai_hero.png",
+        m_image: "/images/solution_genai_hero_mobile.png",
+        sectionProps: {
+          desktop: {
+            marginTop: "-5%",
+          },
+          mobile: {
+            marginTop: "",
+          },
+        },
+        textProps: {
+          desktop: {
+            textColor: "",
+            alignItems: "",
+            textAlign: "",
+            top: "5%",
+            left: "",
+            width: "",
+          },
+          mobile: {
+            textColor: "",
+            alignItems: "flex-start",
+            textAlign: "",
+            top: "40%",
+            left: "",
+            width: "",
+          },
+        },
+        buttonProps: {
+          desktop: {
+            textColor: "",
+            borderColor: "",
+            bgColor: "",
+            width: "",
+            height: "",
+            borderHover: "",
+            textHover: "",
+          },
+          mobile: {
+            textColor: "",
+            borderColor: "",
+            bgColor: "",
+            width: "",
+            height: "",
+            borderHover: "",
+            textHover: "",
+          },
+        },
       },
     ],
     WhatIsAI: {
@@ -683,12 +880,12 @@ export const Solution = {
       data: "Upgrade to Intelligent Video Search & Summaries with ArcisAI GenAI",
       buttonText: "Talk To Our Expert",
       d_image: "/images/solution_genai_cta.png",
-      m_Image: "/images/solution_genai_cta.png",
+      m_Image: "/images/solution_genai_cta_mobile.png",
       // m_Image: "/images/solution_edgeai_cta_mobile.png",
       link: "/contact-us",
       textPosition: {
         desktop: { top: "50%", left: "5%" },
-        mobile: { top: "60%", left: "5%" },
+        mobile: { top: "55%", left: "5%" },
       },
       buttonProps: {
         desktop: {
@@ -702,7 +899,7 @@ export const Solution = {
           textColor: "linear(30deg, #171717, #7F56D9)",
           borderColor: "#7F56D9",
           bgColor: "",
-          width: "",
+          width: "200px",
           height: "",
         },
       },
@@ -711,11 +908,13 @@ export const Solution = {
           textColor: "linear(30deg, #171717, #7F56D9)",
           alignItems: "flex-start",
           textAlign: "left",
+          width: "",
         },
         mobile: {
           textColor: "linear(30deg, #171717, #7F56D9)",
           alignItems: "flex-start",
           textAlign: "left",
+          width: "60%",
         },
       },
       textColor: "linear(30deg, #171717, #7F56D9)",
