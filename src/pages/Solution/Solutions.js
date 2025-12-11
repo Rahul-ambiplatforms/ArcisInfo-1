@@ -62,7 +62,7 @@ const Solutions = () => {
         <meta name="twitter:image" content={solutionSEO.ogimage} />
 
         {/* Additional Meta Tags */}
-        <meta
+        {/* <meta
           name="keywords"
           content="AI CCTV Camera, EdgeAI, CloudAI, GenAI, Security Camera, Surveillance Camera, ArcisAI, Smart CCTV, AI Camera, Video Analytics"
         />
@@ -72,7 +72,7 @@ const Solutions = () => {
         <meta name="language" content="English" />
         <meta name="revisit-after" content="7 days" />
         <meta name="distribution" content="global" />
-        <meta name="rating" content="general" />
+        <meta name="rating" content="general" /> */}
 
         {/* Schema Markup */}
         {solutionSEO.schema &&

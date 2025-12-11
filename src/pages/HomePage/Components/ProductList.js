@@ -69,6 +69,8 @@ const ProductList = ({ data }) => {
     activeProducts = validProducts[0]?.productarray;
   }
 
+  const isThreeProducts = activeProducts?.length === 3;
+
   // Corner Styles (from AISolutionIndustry)
   const cornerBase = {
     position: "absolute",
@@ -149,6 +151,7 @@ const ProductList = ({ data }) => {
           >
             {validProducts.map((category) => (
               <CustomButton
+                as="h3"
                 key={category.product_type}
                 onClick={() => setActiveTab(category.product_type)}
                 // bgColor={activeTab === category.product_type ? "rgba(127, 86, 217, 0.5)" : "rgba(255, 255, 255, 0.1)"}
@@ -174,13 +177,13 @@ const ProductList = ({ data }) => {
         {/* Product Grid / Scrollable List */}
         {activeProducts && activeProducts.length > 0 && (
           <Box
-            display={{ base: "flex", md: "grid" }}
+            display={{ base: "flex", md: isThreeProducts ? "flex" : "grid" }}
             gridTemplateColumns={{
-              md: "repeat(2, 1fr)",
               md: "repeat(3, 1fr)",
               lg: "repeat(4, 1fr)",
             }}
-            gap={{base:4,md:6}}
+            flexWrap={{ base: "nowrap", md: "wrap" }}
+            gap={{ base: 4, md: 6 }}
             overflowX={{ base: "auto", md: "visible" }}
             pb={{ base: 6, md: 0 }}
             pt={{ base: 4, md: 0 }}
@@ -269,7 +272,8 @@ const ProductList = ({ data }) => {
 
                   <HStack w="full" justify="space-between" align="center">
                     <Text
-                      w={{base:"40%",md:"50%"}}
+                      as="h3"
+                      w={{ base: "40%", md: "50%" }}
                       fontSize={{ base: "16px", md: "20px" }}
                       lineHeight={{ base: "20px", md: "25px" }}
                     >

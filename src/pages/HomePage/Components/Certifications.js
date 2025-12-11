@@ -10,7 +10,7 @@ const Certifications = () => {
       <Box w="100%" px={{ base: 5, lg: 8 }}>
         {/* Heading removed to match the reference image style */}
         <Heading
-          as="h2"
+          as="p"
           textAlign="center"
           color="white"
           fontSize={{ base: "30px", md: "60px" }}

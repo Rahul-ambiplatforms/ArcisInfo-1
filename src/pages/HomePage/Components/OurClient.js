@@ -168,7 +168,7 @@ const OurClient = () => {
               >
                 <Flex direction="column" h="100%" justify="space-between">
                   <Box>
-                    <Heading fontSize="20px" fontWeight="400" mb={1}>
+                    <Heading as="p" fontSize="20px" fontWeight="400" mb={1}>
                       {testimonial.name}
                     </Heading>
                     <Text fontSize="16px" fontWeight="400" mb={4}>

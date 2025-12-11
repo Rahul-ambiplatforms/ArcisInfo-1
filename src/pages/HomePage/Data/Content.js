@@ -697,4 +697,29 @@ export const homeContent = {
       },
     ],
   },
+  FAQsData: {
+    heading: "FAQs About AI Security CCTV Cameras",
+    data: [
+      {
+        question: "What makes us different from traditional CCTV systems?",
+        answer:
+          "We have combined EdgeAI, CloudAI and GPT-powered interaction in one surveillance platform - offering real-time alerts, smart playback and intelligent video analysis that traditional systems can’t match.",
+      },
+      {
+        question: "Is ArcisAI a truly Indian CCTV camera brand?",
+        answer:
+          "Yes. ArcisAI is a proudly AI-based Indian CCTV camera company, designed and manufactured by Adiance Technologies, a leading Indian OEM in surveillance and electronics. We’re committed to Make-in-India innovation and real-world protection.",
+      },
+      {
+        question: "Can I monitor my cameras remotely?",
+        answer:
+          "Yes. You can access live feeds, playback, alerts and more from anywhere using our platform on your desktop or mobile.",
+      },
+      {
+        question: "Can your cameras be integrated with existing systems?",
+        answer:
+          "Yes. Our cameras support standard protocols (like ONVIF) and can be integrated with most third-party NVRs, VMS or access control systems.",
+      },
+    ],
+  },
 };

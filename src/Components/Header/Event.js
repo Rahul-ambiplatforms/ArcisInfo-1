@@ -1,6 +1,7 @@
 import React from "react";
-import { Box, Text, Flex } from "@chakra-ui/react";
+import { Box, Text, Flex, useDisclosure } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import EventPopup from "../../pages/Events/Event";
 
 const MarqueeText = ({ children }) => {
   return (
@@ -33,33 +34,48 @@ const MarqueeText = ({ children }) => {
 };
 
 const Event = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const eventText =
-    "MEET ARCISAI AT IFSEC INDIA 2025 FROM 11-13 DECEMBER AT BHARAT MANDAPAM, NEW DELHI. VISIT BOOTH I10, HALL NO. 4 TO EXPLORE OUR LATEST EDGE AI CAMERAS, VMS, AND CLOUD SOLUTIONS.";
+    "Meet ArcisAI At IFSEC India 2025 From 11-13 December At Bharat Mandapam, New Delhi. Visit Booth I10, Hall No. 4 To Explore Our Latest AI-Powered CCTV Cameras, VMS & Cloud Solutions.";
 
   return (
-    <Box
-      w="100%"
-      h="50px"
-      position="fixed"
-      top="96px"
-      bg="rgba(255,255,255,0.2)"
-      backdropFilter="blur(25px)"
-      zIndex={999}
-      overflow="hidden"
-    >
-      <Flex h="100%" align="center">
-        <MarqueeText>
-          <Text
-            color="white" 
-            fontSize="16px"
-            fontWeight="700"
-            mx={4}
-          >
-            {eventText}
-          </Text>
-        </MarqueeText>
-      </Flex>
-    </Box>
+    <>
+      <Box
+        w="100%"
+        h="50px"
+        position="fixed"
+        top="96px"
+        bg="rgba(255,255,255,0.2)"
+        backdropFilter="blur(25px)"
+        zIndex={999}
+        overflow="hidden"
+      >
+        <Flex h="100%" align="center">
+          <MarqueeText>
+            <Text
+              color="white"
+              fontSize="16px"
+              fontWeight="700"
+              mx={4}
+              textTransform="uppercase"
+            >
+              {eventText}
+              <Text
+                as="span"
+                ml={2}
+                cursor="pointer"
+                textDecoration="underline"
+                _hover={{ color: "purple.300" }}
+                onClick={onOpen}
+              >
+                Book a Meeting Slot
+              </Text>
+            </Text>
+          </MarqueeText>
+        </Flex>
+      </Box>
+      <EventPopup isOpen={isOpen} onClose={onClose} />
+    </>
   );
 };
 

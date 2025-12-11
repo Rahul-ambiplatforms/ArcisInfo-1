@@ -116,6 +116,7 @@ const CameraFeature = ({ data }) => {
                       {feature.icon}
                     </Box>
                     <Text
+                      as="h3"
                       fontSize={{ base: "14px", md: "20px" }}
                       fontWeight="400"
                       color={featureColor}

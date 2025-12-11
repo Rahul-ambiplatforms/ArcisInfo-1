@@ -128,10 +128,14 @@ const CTAButton = ({
             fontWeight="400"
             lineHeight={{ base: "38px", md: "56px", lg: "76px" }}
             mb={{ base: 4, md: 6 }}
-            w={{ base: txtMobile?.width || "55%", md: txtDesktop?.width || "55%" }}
+            w={{
+              base: txtMobile?.width || "55%",
+              md: txtDesktop?.width || "55%",
+            }}
           >
             <Text
               as="span"
+              textTransform="capitalize"
               bgGradient={responsiveBgGradient}
               bgClip={responsiveBgClip}
               color={responsiveColor}
@@ -142,6 +146,7 @@ const CTAButton = ({
 
           <Link href={link} style={{ textDecoration: "none" }}>
             <CustomButton
+              as="h3"
               width={{
                 base: btnMobile?.width || "160px",
                 md: btnDesktop?.width || "220px",

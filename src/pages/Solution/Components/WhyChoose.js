@@ -50,6 +50,7 @@ const WhyChoose = ({ data }) => {
                 </Center>
                 <VStack spacing={2}>
                   <Text
+                    as={"h3"}
                     fontSize={{ base: "16px", md: "20px" }}
                     fontWeight="700"
                     textAlign="center"

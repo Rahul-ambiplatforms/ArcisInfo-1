@@ -154,7 +154,13 @@ const AISolutionIndustry = ({ data }) => {
                   />
                 </Box>
 
-                <Text color="white" fontSize="16px" fontWeight="700" mx="auto">
+                <Text
+                  as="h3"
+                  color="white"
+                  fontSize="16px"
+                  fontWeight="700"
+                  mx="auto"
+                >
                   {item.name}
                 </Text>
               </Box>

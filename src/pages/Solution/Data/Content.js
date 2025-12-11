@@ -29,7 +29,7 @@ import { ReactComponent as GenAIWhyChoose7 } from "../../../Components/Icons/sol
 import { ReactComponent as GenAIWhyChoose8 } from "../../../Components/Icons/solution_genai_whychoose_8.svg";
 
 export const Solution = {
-  "edge-ai-cctv-camera": {
+  "edge-ai": {
     hero: [
       {
         heading: "Edge AI CCTV - Real‑Time Intelligence Inside the Camera",
@@ -163,10 +163,9 @@ export const Solution = {
     },
 
     AISolutionIndustry: {
-      heading:
-        "An Indian CCTV Camera Brand Delivering AI Solutions for Every Industry",
+      heading: "Where Edge AI for CCTV Makes the Difference",
       description:
-        "From retail stores to housing societies, factories to warehouses and public infrastructure - We deliver smart surveillance solutions tailored to each industry’s unique challenges. Our AI-powered security cameras help you detect threats, monitor activity and respond faster.",
+        "At ArcisAI, we provide AI-powered CCTV cameras that adapt to every environment and act in real time. With our AI surveillance cameras, you get instant awareness, actionable insights and automated security - without server dependency.",
       industries: [
         {
           name: "Manufacturing & Factory Plants",
@@ -337,7 +336,7 @@ export const Solution = {
       ],
     },
   },
-  "cloud-ai-cctv-camera": {
+  "cloud-ai": {
     hero: [
       {
         heading:
@@ -695,7 +694,7 @@ export const Solution = {
       ],
     },
   },
-  "gen-ai-cctv-camera": {
+  "gen-ai": {
     hero: [
       {
         heading:

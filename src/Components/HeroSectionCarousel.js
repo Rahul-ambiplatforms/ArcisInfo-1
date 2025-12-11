@@ -136,6 +136,7 @@ const HeroSectionCarousel = ({ data }) => {
                 w="full"
               >
                 <Text
+                  as="h1"
                   color="#fff"
                   fontSize={{ base: "24px", md: "36px" }}
                   fontWeight="400"
@@ -220,7 +221,7 @@ const HeroSectionCarousel = ({ data }) => {
                   {activeSlide.heading}
                 </Heading>
                 <Text
-                  as="p"
+                  as="h2"
                   fontSize={["14px", "18px", "18px", "18px"]}
                   fontWeight="400"
                   lineHeight={["18px", "20px", "20px", "25px"]}

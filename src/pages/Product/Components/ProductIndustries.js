@@ -90,7 +90,82 @@ const ProductIndustries = ({ data }) => {
         {item.name}
       </Heading>
       <Text
-        color="gray.400"
+        color="white"
+        fontSize={{ base: "14px", md: "16px", lg: "16px" }}
+        lineHeight={{ base: "15px", md: "20px", lg: "20px" }}
+        align="justify"
+        ml={{ base: "2%", md: "2%" }}
+        w="95%"
+      >
+        {item.description}
+      </Text>
+    </Box>
+  );
+
+  const IndustryCardMobile = ({ item }) => (
+    <Box
+      role="group"
+      cursor="pointer"
+      minW={{ base: "85vw", sm: "300px", md: "auto" }}
+      scrollSnapAlign="center"
+    >
+      <Box position="relative" mb={4} p="8px">
+        {/* Corners */}
+        <Box
+          {...cornerBase}
+          top="0"
+          left="0"
+          borderTopWidth="2px"
+          borderLeftWidth="2px"
+          _groupHover={{ opacity: 1 }}
+        />
+        <Box
+          {...cornerBase}
+          top="0"
+          right="0"
+          borderTopWidth="2px"
+          borderRightWidth="2px"
+          _groupHover={{ opacity: 1 }}
+        />
+        <Box
+          {...cornerBase}
+          bottom="0"
+          right="0"
+          borderBottomWidth="2px"
+          borderRightWidth="2px"
+          _groupHover={{ opacity: 1 }}
+        />
+        <Box
+          {...cornerBase}
+          bottom="0"
+          left="0"
+          borderBottomWidth="2px"
+          borderLeftWidth="2px"
+          _groupHover={{ opacity: 1 }}
+        />
+
+        <Image
+          src={item.image}
+          alt={item.name}
+          w="100%"
+          aspectRatio="1/1"
+          objectFit="cover"
+          transition="all 0.3s"
+        />
+      </Box>
+
+      <Heading
+        as="p"
+        fontSize={{ base: "16px", md: "20px", lg: "20px" }}
+        mb={2}
+        fontWeight="400"
+        align="left"
+        ml={{ base: "2%", md: "2%" }}
+      >
+        {item.name}
+      </Heading>
+      <Text
+        color="white"
         fontSize={{ base: "14px", md: "16px", lg: "16px" }}
         lineHeight={{ base: "15px", md: "20px", lg: "20px" }}
         align="justify"
@@ -133,7 +208,7 @@ const ProductIndustries = ({ data }) => {
             }}
           >
             {items.map((item, index) => (
-              <IndustryCard key={index} item={item} />
+              <IndustryCardMobile key={index} item={item} />
             ))}
           </Box>
         </Box>
@@ -157,7 +232,7 @@ const ProductIndustries = ({ data }) => {
               h="100vh"
             >
               <Heading
-                as="h2"
+                as="p"
                 fontSize={{ md: "30px", lg: "60px" }}
                 fontWeight="400"
                 lineHeight={{ base: "38px", md: "76px" }}

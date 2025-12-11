@@ -75,6 +75,7 @@ const SurveillanceStack = ({ data }) => {
 
         {data.description && (
           <Text
+            as="p"
             color="white"
             textAlign="center"
             fontSize={{ base: "md", md: "lg" }}
@@ -127,6 +128,7 @@ const SurveillanceStack = ({ data }) => {
                 w="100%"
               >
                 <CustomButton
+                  as="h3"
                   onClick={() => setActiveIndex(index)}
                   width={{ base: "200px", md: "200px" }} // Fixed width for uniformity
                   height="50px"

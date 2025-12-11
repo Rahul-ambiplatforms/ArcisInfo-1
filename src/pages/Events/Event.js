@@ -27,19 +27,25 @@ import { FaXTwitter } from "react-icons/fa6";
 // Track if popup has been shown in this session (resets on refresh)
 let hasShownPopup = false;
 
-const Event = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
+  const { isOpen: internalIsOpen, onOpen: internalOnOpen, onClose: internalOnClose } = useDisclosure();
+  
+  const isControlled = controlledIsOpen !== undefined;
+  const isOpen = isControlled ? controlledIsOpen : internalIsOpen;
+  const onClose = isControlled ? controlledOnClose : internalOnClose;
+
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const toast = useToast();
 
   useEffect(() => {
     // Open only if not shown before in this session (resets on reload)
-    if (!hasShownPopup) {
-      onOpen();
+    // Only apply this logic if NOT controlled, or if we want it to auto-open even when controlled (probably not if controlled from header)
+    if (!isControlled && !hasShownPopup) {
+      internalOnOpen();
       hasShownPopup = true;
     }
-  }, [onOpen]);
+  }, [isControlled, internalOnOpen]);
 
   const [formData, setFormData] = useState({
     name: "",

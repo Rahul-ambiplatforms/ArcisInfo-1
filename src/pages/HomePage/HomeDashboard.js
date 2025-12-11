@@ -63,7 +63,7 @@ const HomeDashboard = () => {
         <CTAButton {...homeContent.CTAButton1} />
         <WhyArcisAI />
         <OurClient />
-        <FAQSection data={FAQ_DATA} />
+        <FAQSection data={homeContent.FAQsData} />
         <CTAButton {...homeContent.CTAButton2} />
       </PageContentWrapper>
     </>

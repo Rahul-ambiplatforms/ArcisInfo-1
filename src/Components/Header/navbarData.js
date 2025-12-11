@@ -6,15 +6,15 @@ export const dropdownData = {
     items: [
       {
         label: "Edge-AI",
-        link: "/solution/edge-ai-cctv-camera",
+        link: "/solution/edge-ai",
       },
       {
         label: "Cloud-AI",
-        link: "/solution/cloud-ai-cctv-camera",
+        link: "/solution/cloud-ai",
       },
       {
         label: "Generative-AI",
-        link: "/solution/gen-ai-cctv-camera",
+        link: "/solution/gen-ai",
       },
     ],
   },

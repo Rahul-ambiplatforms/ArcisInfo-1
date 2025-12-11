@@ -13,11 +13,7 @@ import {
   HStack,
   Divider,
 } from "@chakra-ui/react";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-} from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { ReactComponent as HomeIcon } from "../Icons/Home.svg";
 import { ReactComponent as MailIcon } from "../Icons/Mail.svg";
 import { ReactComponent as PhoneIcon } from "../Icons/phone.svg";
@@ -358,7 +354,7 @@ const Footer = () => {
                   textAlign={{ base: "left", md: "right" }}
                 >
                   House No. 7, Arista Eight, Corporate House, Rajpath Rangoli
-                  Rd, behind Satyam House, Bodakdev, Ahmedabad, Gujarat 380059
+                  Rd, behind Satyam House, Bodakdev, Ahmedabad, Gujarat 380054
                 </Text>
               </HStack>
             </VStack>
