@@ -126,7 +126,7 @@ export const Series = {
       textProps: {
         desktop: {
           textColor: "",
-          alignItems: "",
+          alignItems: "flex-start",
           textAlign: "",
           top: "",
           left: "",
@@ -185,28 +185,13 @@ export const Series = {
               product_name: "AI PTZ camera",
               link: "/eco-series/ptz-cctv-camera",
             },
-            {
-              image: "/images/home_productlist_sseries_1.png",
-              product_name: "AI Baby PTZ camera",
-              link: "eco-series/baby-ptz-cctv-camera",
-            },
+            // {
+            //   image: "/images/home_productlist_sseries_1.png",
+            //   product_name: "AI Baby PTZ camera",
+            //   link: "eco-series/baby-ptz-cctv-camera",
+            // },
           ],
         },
-        // {
-        //   product_type: "NVR/DVR",
-        //   productarray: [
-        //     {
-        //       image: "/images/screen.png",
-        //       product_name: "8 Channel NVR",
-        //       link: "#",
-        //     },
-        //     {
-        //       image: "/images/screen.png",
-        //       product_name: "16 Channel DVR",
-        //       link: "#",
-        //     },
-        //   ],
-        // },
       ],
     },
     CTAButton: {
