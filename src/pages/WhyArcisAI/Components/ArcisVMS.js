@@ -7,7 +7,7 @@ const ArcisVMS = ({ data }) => {
   return (
     <Box
       bgImage={{ base: `url(${data.m_image})`, md: `url(${data.d_image})` }}
-      bgSize="100% 100%"
+      // bgSize="100% 100%"
       bgSize="cover"
       bgPosition="center"
       bgRepeat="no-repeat"

@@ -157,8 +157,7 @@ export const AboutUsContent = {
     buttonText: "Connect Now",
     d_image: "/images/aboutus_cta.png",
     m_Image: "/images/aboutus_cta_mobile.png",
-    // m_Image: "/images/aboutus_cta_mobile.png",
-    link: "#",
+    link: "/contact-us",
     textPosition: {
       desktop: { top: "50%", left: "-5%" },
       mobile: { top: "2%", left: "1%" },

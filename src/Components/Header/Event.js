@@ -1,7 +1,13 @@
 import React from "react";
 import { Box, Text, Flex, useDisclosure } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { keyframes } from "@emotion/react";
+
 import EventPopup from "../../pages/Events/Event";
+
+const marquee = keyframes`
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+`;
 
 const MarqueeText = ({ children }) => {
   return (
@@ -12,23 +18,15 @@ const MarqueeText = ({ children }) => {
       w="full"
       h="full"
     >
-      <motion.div
-        initial={{ x: "100%" }}
-        animate={{ x: "-100%" }}
-        transition={{
-          repeat: Infinity,
-          ease: "linear",
-          duration: 20, // Adjust speed as needed
-        }}
-        style={{
-          display: "inline-block",
-          height: "100%",
-          alignItems: "center",
-          display: "flex",
-        }}
+      <Box
+        animation={`${marquee} 20s linear infinite`}
+        display="flex"
+        height="100%"
+        alignItems="center"
+        _hover={{ animationPlayState: "paused" }}
       >
         {children}
-      </motion.div>
+      </Box>
     </Box>
   );
 };

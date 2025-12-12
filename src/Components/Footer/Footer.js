@@ -140,14 +140,14 @@ const Footer = () => {
               </FooterLink>
               <Box pl={4}>
                 <Stack spacing={1}>
-                  <FooterLink href={"/eco-series/ai-bullet-camera"}>
+                  <FooterLink href={"/eco-series/bullet-cctv-camera"}>
                     Bullet CCTV Camera
                   </FooterLink>
                   {/* <FooterLink href={"/eco-series/ai-baby-bullet-camera"}>AI Baby Bullet Camera</FooterLink> */}
-                  <FooterLink href={"/eco-series/ai-ptz-camera"}>
+                  <FooterLink href={"/eco-series/ptz-cctv-camera"}>
                     PTZ CCTV Camera
                   </FooterLink>
-                  <FooterLink href={"/eco-series/ai-dome-camera"}>
+                  <FooterLink href={"/eco-series/dome-cctv-camera"}>
                     Dome CCTV Camera
                   </FooterLink>
                 </Stack>
@@ -162,7 +162,9 @@ const Footer = () => {
               <ListHeader>SOLUTIONS</ListHeader>
               <FooterLink href={"/solution/edge-ai"}>Edge AI</FooterLink>
               <FooterLink href={"/solution/cloud-ai"}>Cloud AI</FooterLink>
-              <FooterLink href={"/solution/generative-ai"}>Generative AI</FooterLink>
+              <FooterLink href={"/solution/generative-ai"}>
+                Generative AI
+              </FooterLink>
             </Stack>
 
             {/* COMPANY */}
@@ -306,7 +308,7 @@ const Footer = () => {
                 <HStack>
                   <Icon as={HomeIcon} w={4} h={4} />
                   <Link
-                    href="https://www.arcisai.io"
+                    href="https://arcisai.io"
                     target="_blank"
                     rel="noopener noreferrer"
                     color="white"

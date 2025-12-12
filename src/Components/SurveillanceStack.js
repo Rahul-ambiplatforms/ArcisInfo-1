@@ -171,7 +171,7 @@ const SurveillanceStack = ({ data }) => {
                     <Text color="white" fontSize="16px" mb={4}>
                       {item.description}
                     </Text>
-                    {/* <Link
+                    <Link
                       href={item.link}
                       color="#fff"
                       fontSize="sm"
@@ -180,7 +180,7 @@ const SurveillanceStack = ({ data }) => {
                       _hover={{ textDecoration: "underline" }}
                     >
                       KNOW MORE
-                    </Link> */}
+                    </Link>
                   </Box>
                 </Collapse>
               </Flex>

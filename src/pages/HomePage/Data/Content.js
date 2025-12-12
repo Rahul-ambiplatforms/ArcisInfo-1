@@ -502,28 +502,28 @@ export const homeContent = {
         description:
           "Get instant on-camera intelligence with real-time detections and alerts right at the device.",
         image: "/images/home_surveillance_1.png",
-        link: "/contact-us",
+        link: "/solution/edge-ai",
       },
       {
         heading: "Cloud-AI",
         description:
           "Get deeper insights with powerful cloud analytics that scale as your video data grows.",
         image: "/images/home_surveillance_1.png",
-        link: "/contact-us",
+        link: "/solution/cloud-ai",
       },
       {
         heading: "Gen-AI",
         description:
           "Get answers instantly—just ask your cameras anything and let AI explain what’s happening.",
         image: "/images/home_surveillance_1.png",
-        link: "/contact-us",
+        link: "/solution/generative-ai",
       },
       {
         heading: "STQC-VMS",
         description:
           "Get complete control from anywhere with a secure, all-in-one cloud video management system and Mobile App.",
         image: "/images/home_surveillance_1.png",
-        link: "/contact-us",
+        link: "/",
       },
     ],
   },

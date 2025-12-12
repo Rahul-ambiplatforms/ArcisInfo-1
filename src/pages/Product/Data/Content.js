@@ -127,9 +127,9 @@ export const Product = {
       ],
     },
     comparisonData: {
-      heading: "AI CCTV Camera Range for Every Need",
       d_image: "/images/product_cameracomparision.png",
       m_image: "/images/product_cameracomparision_mobile.png",
+      heading: "Discover Our Smart CCTV Bullet Camera Range",
       headers: ["Category", "Bullet 4G", "Bullet Wi-Fi", "Bullet PoE"],
       rows: [
         {
@@ -183,45 +183,44 @@ export const Product = {
       ],
     },
     surveillanceStack: {
-      mainHeading:
-        "A Complete AI-Powered Security Suite with AI-Based Bullet CCTV Camera",
+      mainHeading: "AI Security Stack for Modern Surveillance",
       description:
-        "Built for connected environments, our AI-powered Bullet Camera delivers instant intelligence, smart alerts and centralized control over your secure network.",
+        "Lead every moment with our AI PTZ camera — intelligent surveillance designed for critical outdoor security.",
       stack: [
         {
           heading: "EdgeAI Analytics",
           description:
             "8 Powerful real-time detection on camera — humans, intrusions, line crossing & more.",
           image: "/images/solution_surveillance_1.png",
-          link: "#",
+          link: "/solution/edge-ai",
         },
         {
           heading: "CloudAI Analytics",
           description:
             "CloudAI features are available as modular paid add-ons. Users can enable specific analytics packs as required.",
           image: "/images/solution_surveillance_1.png",
-          link: "#",
+          link: "/solution/cloud-ai",
         },
         {
           heading: "STQC-Certified VMS",
           description:
             "Manage multiple locations, cameras, alerts & users through a unified government-certified platform.",
           image: "/images/solution_surveillance_1.png",
-          link: "#",
+          link: "/",
         },
         {
           heading: "ArcisGPT",
           description:
             "Search video by asking questions — e.g., “Show events where a person entered after 10 PM”.",
           image: "/images/solution_surveillance_1.png",
-          link: "#",
+          link: "/solution/generative-ai",
         },
         {
           heading: "Cloud Storage",
           description:
             "Secure video retention online to protect footage even if the device or SD card is damaged.",
           image: "/images/solution_surveillance_1.png",
-          link: "#",
+          link: "/",
         },
       ],
     },
@@ -479,9 +478,9 @@ export const Product = {
     features: {
       d_image: "/images/product_feature_ptz_bg.png",
       m_image: "/images/product_feature_ptz_bg_mobile.png",
-      heading: "AI CCTV Camera Built for Smarter Outdoor Surveillance",
+      heading: "AI PTZ CCTV Camera Built for Smarter Outdoor Surveillance",
       description:
-        "The ArcisAI S-Series 4G AI PTZ Camera combines intelligent motion tracking, long-range  zoom and 350° coverage, making it ideal for open areas, perimeters, parking zones, factory yards, and large campuses. Powered by built-in 4G and EdgeAI analytics, Its 10× digital zoom and auto-tracking ensure every movement is captured with precision, while color night vision maintains clear visibility even in low light. With STQC-certified Cloud VMS, instant mobile alerts, and two-way communication, it provides complete control, clarity and command for modern outdoor security environments.",
+        "The ArcisAI S-Series AI PTZ Camera combines intelligent motion tracking, long-range  zoom and 350° coverage, making it ideal for open areas, perimeters, parking zones, factory yards, and large campuses. Powered by built-in EdgeAI analytics, Its 10× digital zoom and auto-tracking ensure every movement is captured with precision, while color night vision maintains clear visibility even in low light. With STQC-certified Cloud VMS, instant mobile alerts, and two-way communication, it provides complete control, clarity and command for modern outdoor security environments.",
       styles: {
         contentMarginTop: {
           mobile: "5%",
@@ -521,7 +520,7 @@ export const Product = {
       ],
     },
     comparisonData: {
-      heading: "AI CCTV Camera Range for Every Need",
+      heading: "Explore Our AI-Powered PTZ Camera Range",
       d_image: "/images/product_cameracomparision.png",
       m_image: "/images/product_cameracomparision_mobile.png",
       headers: ["Category", "PTZ 4G", "PTZ Wi-Fi", "PTZ PoE"],
@@ -577,7 +576,8 @@ export const Product = {
       ],
     },
     industries: {
-      heading: "AI 4G Security Cameras Built for Every Industry",
+      heading:
+        "AI PTZ Cameras Built for Wide-Area Surveillance Across Industries",
       items: [
         {
           name: "Manufacturing",
@@ -654,44 +654,45 @@ export const Product = {
       ],
     },
     surveillanceStack: {
-      mainHeading: "AI Security Stack for Modern Surveillance",
+      mainHeading:
+        "Complete AI Security Stack for Modern Video Surveillance Need",
       description:
-        "Lead every moment with our 4G AI PTZ camera — intelligent surveillance designed for critical outdoor security.",
+        "Lead every moment with our AI PTZ CCTV cameras — intelligent surveillance designed for critical outdoor security.",
       stack: [
         {
           heading: "EdgeAI Analytics",
           description:
             "AI runs directly on the camera for faster, bandwidth-free event detection, tracking, and classification.",
           image: "/images/product_ptz_surveillance_1.png",
-          link: "#",
+          link: "/solution/edge-ai",
         },
         {
           heading: "CloudAI Analytics",
           description:
             "CloudAI is an optional upgrade — choose and pay for deeper analytics beyond basic alerts, including reports and trend insights.",
           image: "/images/product_ptz_surveillance_1.png",
-          link: "#",
+          link: "/solution/cloud-ai",
         },
         {
           heading: "STQC-Certified VMS",
           description:
             "Securely manage and monitor live feeds, playback, and alerts from a unified ArcisAI dashboard.",
           image: "/images/product_ptz_surveillance_1.png",
-          link: "#",
+          link: "/",
         },
         {
           heading: "ArcisGPT",
           description:
             "Your AI-powered assistant for smart video search — ask natural questions like “Show vehicle movement at Gate 2 last night” and get instant clips.",
           image: "/images/product_ptz_surveillance_1.png",
-          link: "#",
+          link: "/solution/generative-ai",
         },
         {
           heading: "Cloud Storage",
           description:
             "Encrypted cloud storage with flexible retention and retrieval options for compliance and evidence management.",
           image: "/images/product_ptz_surveillance_1.png",
-          link: "#",
+          link: "/",
         },
       ],
     },
@@ -749,7 +750,7 @@ export const Product = {
       ],
     },
     CTAButton: {
-      data: "AI-Powered 4G PTZ Camera - Top Security CCTV Camera for Large-Area Monitoring",
+      data: "AI-Powered PTZ Camera - Top Security CCTV Camera for Large-Area Monitoring",
       buttonText: "Book a Live Demo",
       d_image: "/images/product_cta_ptz.png",
       m_image: "/images/product_cta_ptz_mobile.png",
@@ -873,9 +874,9 @@ export const Product = {
     features: {
       d_image: "/images/product_feature_dome_bg.png",
       m_image: "/images/product_feature_dome_bg_mobile.png",
-      heading: "AI CCTV Camera Range for Every Need",
+      heading: "AI Dome CCTV Camera — Built for Smarter Indoor Security",
       description:
-        "The ArcisAI S-Series dome blends into ceilings for discreet, wide coverage in lobbies, corridors, cash counters, classrooms, meeting rooms and more places. Crisp 2K video with balanced exposure keeps faces and badges clear, while the low-profile design hides the viewing angle and deters tampering. With built-in 4G and on-device AI (8 detections, including people/face and line-cross/zone intrusion), plus silent IR and instant alerts with STQC-certified Cloud VMS, it delivers reliable, unobtrusive indoor security.",
+        "The ArcisAI S-Series dome blends into ceilings for discreet, wide coverage in lobbies, corridors, cash counters, classrooms, meeting rooms and more places. Crisp 2K video with balanced exposure keeps faces and badges clear, while the low-profile design hides the viewing angle and deters tampering. With built-in on-device AI (8 detections, including people/face and line-cross/zone intrusion), plus silent IR and instant alerts with STQC-certified Cloud VMS, it delivers reliable, unobtrusive indoor security.",
       styles: {
         contentMarginTop: {
           mobile: "85%",
@@ -914,7 +915,7 @@ export const Product = {
       ],
     },
     comparisonData: {
-      heading: "AI CCTV Camera Range for Every Need",
+      heading: "Explore Our S-Series AI-based Dome Camera Range",
       d_image: "/images/product_cameracomparision.png",
       m_image: "/images/product_cameracomparision_mobile.png",
       headers: ["Category", "Dome 4G", "Dome Wi-Fi", "Dome PoE"],
@@ -970,7 +971,7 @@ export const Product = {
       ],
     },
     industries: {
-      heading: "AI 4G Security Cameras Built for Every Industry",
+      heading: "AI Security Cameras Built for Every Industry",
       items: [
         {
           name: "Manufacturing",
@@ -1049,42 +1050,42 @@ export const Product = {
     surveillanceStack: {
       mainHeading: "A Complete AI-Powered Security Surveillance Suite",
       description:
-        "Stay ahead with the ArcisAI S-Series 4G Dome CCTV - an intelligent surveillance system built to deliver clarity, control, and confidence indoors.",
+        "Stay ahead with the ArcisAI S-Series Dome CCTV - an intelligent surveillance system built to deliver clarity, control, and confidence indoors.",
       stack: [
         {
           heading: "EdgeAI Analytics",
           description:
             "AI intelligence operates directly on the camera, detecting and responding to events instantly on-site.",
           image: "/images/product_dome_surveillance_1.png",
-          link: "#",
+          link: "/solution/edge-ai",
         },
         {
           heading: "CloudAI Analytics",
           description:
             "CloudAI add-on — pay only for advanced analytics like reports and multi-site insights.",
           image: "/images/product_dome_surveillance_1.png",
-          link: "#",
+          link: "/solution/cloud-ai",
         },
         {
           heading: "STQC-Certified VMS",
           description:
             "A secure, unified platform to view, manage, and control all cameras, events, and users from a single dashboard.",
           image: "/images/product_dome_surveillance_1.png",
-          link: "#",
+          link: "/",
         },
         {
           heading: "ArcisGPT",
           description:
             "An AI assistant that allows you to search and analyze video footage using natural language queries.",
           image: "/images/product_dome_surveillance_1.png",
-          link: "#",
+          link: "/solution/generative-ai",
         },
         {
           heading: "Cloud Storage",
           description:
             "Encrypted and scalable video storage with flexible retention options for seamless evidence management.",
           image: "/images/product_dome_surveillance_1.png",
-          link: "#",
+          link: "/",
         },
       ],
     },
@@ -1267,9 +1268,9 @@ export const Product = {
     features: {
       d_image: "/images/product_ecoseries_feature_bullet_bg.png",
       m_image: "/images/product_ecoseries_feature_bullet_bg_mobile.png",
-      heading: "AI CCTV Camera Range for Every Need",
+      heading: "India’s Best Bullet CCTV Cameras for Reliable Surveillance",
       description:
-        "The ArcisAI Wi-Fi Bullet Camera is an advanced outdoor security camera built for homes, shops, offices, and businesses that already have Wi-Fi. With powerful EdgeAI analytics, 2K HD clarity, and event-based intelligent alerts, it ensures proactive monitoring and secure visibility — all without needing cables or network complexity. Designed for fast plug-n-play setup, 24×7 reliability, and high-quality surveillance, this is your ultimate choice for smart wireless protection.",
+        "Durable, high-quality bullet CCTV cameras engineered specifically for clear video output, stable 24/7 performance, and long-lasting protection for commercial, industrial, and residential security needs - making them one of the most trusted CCTV camera solutions in India.",
       styles: {
         contentMarginTop: {
           mobile: "5%",
@@ -1305,7 +1306,7 @@ export const Product = {
       ],
     },
     comparisonData: {
-      heading: "AI CCTV Camera Range for Every Need",
+      heading: "Choose the Perfect Bullet Security Camera for Your Site",
       d_image: "/images/product_cameracomparision.png",
       m_image: "/images/product_cameracomparision_mobile.png",
       headers: [
@@ -1473,9 +1474,9 @@ export const Product = {
     },
     AISolutionIndustry: {
       heading:
-        "An Indian CCTV Camera Brand Delivering AI Solutions for Every Industry",
+        "An Indian Security CCTV Camera Brand Delivering AI Solutions for Every Industry",
       description:
-        "From retail stores to housing societies, factories to warehouses and public infrastructure - We deliver smart surveillance solutions tailored to each industry’s unique challenges. Our AI-powered security cameras help you detect threats, monitor activity and respond faster.",
+        "From retail stores to housing societies, factories to warehouses and public infrastructure - We deliver smart surveillance solutions tailored to each industry’s unique challenges. Our CCTV security cameras help you detect threats, monitor activity and respond faster.",
       industries: [
         {
           name: "Manufacturing & Factory Plants",
@@ -1630,7 +1631,7 @@ export const Product = {
         image: "/images/product_ptz_main.png",
         d_image: "/images/product_ptz_main.png",
         m_image: "/images/product_ptz_main_mobile.png",
-        buttonText: "Get Your PTZ Cameras",
+        buttonText: "Get PTZ Cameras",
         buttonLink: "/contact-us",
         sectionProps: {
           desktop: {
@@ -1721,7 +1722,7 @@ export const Product = {
       ],
     },
     comparisonData: {
-      heading: "AI CCTV Camera Range for Every Need",
+      heading: "Find Your Ideal PTZ CCTV Camera for Your Security Needs",
       d_image: "/images/product_cameracomparision.png",
       m_image: "/images/product_cameracomparision_mobile.png",
       headers: [
@@ -1871,9 +1872,9 @@ export const Product = {
     },
     AISolutionIndustry: {
       heading:
-        "An Indian CCTV Camera Brand Delivering AI Solutions for Every Industry",
+        "An Indian Security CCTV Camera Brand Delivering AI Solutions for Every Industry",
       description:
-        "From retail stores to housing societies, factories to warehouses and public infrastructure - We deliver smart surveillance solutions tailored to each industry’s unique challenges. Our AI-powered security cameras help you detect threats, monitor activity and respond faster.",
+        "From retail stores to housing societies, factories to warehouses and public infrastructure - We deliver smart surveillance solutions tailored to each industry’s unique challenges. Our security cameras help you detect threats, monitor activity and respond faster.",
       industries: [
         {
           name: "Manufacturing & Factory Plants",
@@ -1968,21 +1969,21 @@ export const Product = {
       link: "/contact-us",
       textPosition: {
         desktop: { top: "50%", left: "-6%" },
-        mobile: { top: "65%", left: "-5%" },
+        mobile: { top: "65%", left: "-2%" },
       },
       buttonProps: {
         desktop: {
           textColor: "linear(45deg, #171717, #7F56D9)",
           borderColor: "#7F56D9",
           bgColor: "",
-          width: "",
+          width: "290px",
           height: "",
         },
         mobile: {
           textColor: "linear(45deg, #171717, #7F56D9)",
           borderColor: "#7F56D9",
           bgColor: "",
-          width: "200px",
+          width: "270px",
           height: "",
         },
       },
@@ -1997,7 +1998,7 @@ export const Product = {
           textColor: "linear(45deg, #171717, #7F56D9)",
           alignItems: "flex-end",
           textAlign: "right",
-          width: "90%",
+          width: "100%",
         },
       },
       textColor: "linear(45deg, #171717, #7F56D9)",
@@ -2123,109 +2124,155 @@ export const Product = {
       heading: "Find the Right Dome CCTV Camera for Your Security Needs",
       headers: [
         "Category",
-        "Bullet 4G",
-        "Bullet Wi-Fi",
-        "Bullet PoE",
-        "Bullet 4G",
-        "Bullet Wi-Fi",
-        "Bullet PoE",
+        "AD-90AI4GBDPD",
+        "AD-90NRE5DP",
+        "AD-90NRE5DM",
+        "AD-90NRP5DP",
+        "AD-90NRP5DM",
+        "AD-90ARE3DP",
+        "AD-90ARE3DM",
+        "AD-90ARE3DP2",
+        "AD-90ARP3DP",
+        "AD-90ARP3DM",
+        "AD-90ARP3DP2",
       ],
+
       rows: [
         {
-          label: "Primary Connectivity",
+          label: "Enclosure (Type)",
           values: [
-            "4G SIM (LTE CAT1)",
-            "Dual-Band Wi-Fi 2.4GHz/5GHz",
-            "Wired LAN RJ-45",
-            "4G SIM (LTE CAT1)",
-            "Dual-Band Wi-Fi 2.4GHz/5GHz",
-            "Wired LAN RJ-45",
-          ],
-        },
-        { label: "SIM Slot", values: ["Yes", "No", "No", "Yes", "No", "No"] },
-        {
-          label: "Wi-Fi Support",
-          values: ["No", "Yes", "No", "No", "Yes", "No"],
-        },
-        {
-          label: "Ethernet Port",
-          values: [
-            "No (optional fallback only?)",
-            "No",
-            "Yes – 10/100 Mbps",
-            "No (optional fallback only?)",
-            "No",
-            "Yes – 10/100 Mbps",
+            "Dome (Plastic)",
+            "Dome (Plastic)",
+            "Dome (Metal)",
+            "Dome (Plastic)",
+            "Dome (Metal)",
+            "Dome (Plastic)",
+            "Dome (Metal)",
+            "Dome (Plastic)",
+            "Dome (Plastic)",
+            "Dome (Metal)",
+            "Dome (Plastic)",
           ],
         },
         {
-          label: "Power Method",
+          label: "Resolution",
           values: [
-            "DC 12V 1A",
-            "DC 12V 1A",
-            "PoE / DC 12V 1A",
-            "DC 12V 1A",
-            "DC 12V 1A",
-            "PoE / DC 12V 1A",
+            "3MP",
+            "5MP",
+            "5MP",
+            "5MP",
+            "5MP",
+            "3MP",
+            "3MP",
+            "3MP",
+            "3MP",
+            "3MP",
+            "3MP",
           ],
         },
         {
-          label: "Installation Difficulty",
+          label: "Lens",
           values: [
-            "Plug-N-Play",
-            "Plug-N-Play",
-            "Plug-N-Play",
-            "Plug-N-Play",
-            "Plug-N-Play",
-            "Plug-N-Play",
+            "4 mm",
+            "2.8 mm",
+            "2.8 mm",
+            "2.8 mm",
+            "2.8 mm",
+            "4 mm",
+            "4 mm",
+            "2.8 mm",
+            "4 mm",
+            "4 mm",
+            "2.8 mm",
           ],
         },
         {
-          label: "Cabling Required",
+          label: "Dynamic Range",
           values: [
-            "No cable required",
-            "Only power cable",
-            "Single cable for power + network",
-            "No cable required",
-            "Only power cable",
-            "Single cable for power + network",
+            "DWDR, 3D-DNR",
+            "HDR",
+            "HDR",
+            "HDR",
+            "HDR",
+            "HDR",
+            "HDR",
+            "HDR",
+            "HDR",
+            "HDR",
+            "HDR",
           ],
         },
         {
-          label: "Monthly Cost",
+          label: "IR Distance",
           values: [
-            "SIM recharge needed",
-            "No recurring cost",
-            "No recurring cost",
-            "SIM recharge needed",
-            "No recurring cost",
-            "No recurring cost",
+            "20 m",
+            "30 m",
+            "30 m",
+            "30 m",
+            "30 m",
+            "20 m",
+            "20 m",
+            "20 m",
+            "20 m",
+            "20 m",
+            "20 m",
           ],
         },
         {
-          label: "Full Details",
+          label: "Connectivity",
           values: [
-            "Download PDF",
-            "Download PDF",
-            "Download PDF",
-            "Download PDF",
-            "Download PDF",
-            "Download PDF",
+            "SIM, PoE (optional)",
+            "10/100 (IP)",
+            "10/100 (IP)",
+            "PoE",
+            "PoE",
+            "10/100 (IP)",
+            "10/100 (IP)",
+            "10/100 (IP)",
+            "PoE",
+            "PoE",
+            "PoE",
           ],
-          links: [
-            "/pdfs/S Series Bullet 4G.pdf",
-            "/pdfs/S Series Bullet WiFi.pdf",
-            "/pdfs/S Series Bullet POE.pdf",
+        },
+        {
+          label: "SD Card",
+          values: [
+            "Up to 128GB",
+            "Supported",
+            "Supported",
+            "Supported",
+            "Supported",
+            "Supported",
+            "Supported",
+            "Supported",
+            "Supported",
+            "Supported",
+            "Supported",
           ],
-          isButton: true,
+        },
+        {
+          label: "IP Rating",
+          values: [
+            "IP66",
+            "IP67",
+            "IP67",
+            "IP67",
+            "IP67",
+            "IP66",
+            "IP66",
+            "IP66",
+            "IP66",
+            "IP66",
+            "IP66",
+          ],
         },
       ],
     },
     AISolutionIndustry: {
       heading:
-        "An Indian CCTV Camera Brand Delivering AI Solutions for Every Industry",
+        "A CCTV Camera Brand in India Delivering AI Solutions for Every Industry",
       description:
-        "From retail stores to housing societies, factories to warehouses and public infrastructure - We deliver smart surveillance solutions tailored to each industry’s unique challenges. Our AI-powered security cameras help you detect threats, monitor activity and respond faster.",
+        "From retail stores to housing societies, factories to warehouses and public infrastructure - We deliver smart surveillance solutions tailored to each industry’s unique challenges. Our security cameras help you detect threats, monitor activity and respond faster.",
       industries: [
         {
           name: "Manufacturing & Factory Plants",
@@ -2271,9 +2318,8 @@ export const Product = {
         },
       ],
     },
-
     whychoosearcis: {
-      heading: "Trusted Bullet CCTV Cameras for Every Business",
+      heading: "Trusted Dome CCTV Cameras for Every Business",
       items: [
         {
           name: "Made for Indian",

@@ -203,7 +203,7 @@ const FeatureTextCard = ({ feature }) => {
   return (
     <Box textAlign="left" w="100%">
       <Heading
-        as="h3"
+        as="p"
         fontSize={{ base: "16px", md: "20px" }}
         mb={2}
         color="#171717"

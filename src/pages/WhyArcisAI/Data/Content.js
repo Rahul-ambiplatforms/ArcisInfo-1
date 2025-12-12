@@ -77,11 +77,11 @@ export const WhyArcisAIContent = {
   ],
   EdgeAIFeatures: {
     image: "/images/whyarcisai_edgeai_main.png",
-    heading: "AI CCTV That Works at the Edge. No Servers. No Waiting",
+    heading: "AI CCTV That Works at the Edge",
     description:
       "With EdgeAI, the intelligence lives inside the camera - not in a server. That means faster alerts, smarter detection and less dependency on NVRs or heavy setups. Unlike traditional CCTV that just records, our security cameras detect and notify in real time, keeping you informed the moment something happens.",
-    subHeading:
-      "Here are the EdgeAI powered features that work instantly inside our cameras",
+    // subHeading:
+    // "Here are the EdgeAI powered features that work instantly inside our cameras",
     features: [
       {
         name: "Line Crossing Detection",
@@ -225,8 +225,7 @@ export const WhyArcisAIContent = {
     m_image: "/images/whyarcis_goodbyenvr.png",
   },
   ArcisVMS: {
-    heading:
-      "All Your AI CCTV Intelligence in One Platform - Welcome to the ArcisVMS",
+    heading: "AI CCTV Intelligence in One Platform - ArcisVMS",
     description:
       "ArcisVMS is the all-in-one AI CCTV platform that unifies EdgeAI alerts, CloudAI analytics, ArcisGPT video summaries, and cloud storage into one powerful system. Access it seamlessly via the VMS and mobile app for real-time visibility, smart alerts, and complete control — whether you're overseeing retail, industrial, smart city, or gated environments. Stay secure, informed, and in command from one scalable, unified dashboard.",
     d_image: "/images/whyarcis_arcisvms.png",

@@ -19,7 +19,7 @@ export const sseriesptzSEO = {
 export const sseriesdomeSEO = {
   metatitle: "AI Dome CCTV Camera | S-Series AI CCTV Camera by ArcisAI",
   metadescription:
-    "ArcisAI S-Series AI PTZ Camera with smart tracking, digital zoom, night vision, and instant cloud alerts. Built-in 4G and EdgeAI for reliable outdoor monitoring.",
+    "ArcisAI S-Series AI PTZ Camera with smart tracking, digital zoom, night vision, and instant cloud alerts. Built-in EdgeAI for reliable outdoor monitoring.",
   ogimage: "https://arcisai.io/images/product_dome_main.png",
   canonical: "https://arcisai.io/s-series/ai-dome-cctv-camera",
   schema: [],
