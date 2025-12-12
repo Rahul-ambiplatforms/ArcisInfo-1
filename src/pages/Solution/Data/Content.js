@@ -314,24 +314,26 @@ export const Solution = {
       heading: "Frequently Asked Questions About EdgeAI",
       data: [
         {
-          question: "What makes us different from traditional CCTV systems?",
+          question: "What is ArcisAI EdgeAI?",
           answer:
-            "We offer EdgeAI and CloudAI capabilities in every camera, plus GPT-powered video summaries and STQC-certified VMS - all in one platform.",
+            "ArcisAI EdgeAI is an intelligent surveillance technology where all AI processing happens directly inside the camera. It detects, analyzes, and alerts in real time — without depending on external servers or cloud systems.",
         },
         {
-          question: "Is my CCTV footage stored securely?",
+          question: "How is EdgeAI different from traditional CCTV systems?",
           answer:
-            "Yes, ArcisAI ensures enterprise-grade security with end-to-end encryption for both data in transit and at rest, keeping your footage safe and private.",
+            "Traditional CCTV cameras record video for later review, while ArcisAI EdgeAI cameras process and interpret footage in real time. This enables instant alerts, smarter analytics, and faster responses.",
         },
         {
-          question: "Can I access cameras from my mobile phone?",
+          question:
+            "What kind of AI features are built into ArcisAI EdgeAI cameras?",
           answer:
-            "Yes, our mobile app allows you to view live feeds, receive instant alerts, and review footage from anywhere, anytime.",
+            "Each camera comes with built-in analytics such as line crossing detection, motion detection, human and face detection, area monitoring, unattended object detection, and more — all processed on the camera.",
         },
         {
-          question: "How do I get started with ArcisAI?",
+          question:
+            "Can ArcisAI EdgeAI be used for both small and large deployments?",
           answer:
-            "Simply request a demo or contact our sales team to discuss your requirements. We’ll help you choose the right solution for your needs.",
+            "Yes. The system is designed to scale effortlessly — from a single camera installation to enterprise-wide networks across multiple sites, all managed under one unified platform.",
         },
       ],
     },
@@ -694,7 +696,7 @@ export const Solution = {
       ],
     },
   },
-  "gen-ai": {
+  "generative-ai": {
     hero: [
       {
         heading:

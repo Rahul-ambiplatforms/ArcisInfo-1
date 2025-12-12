@@ -5,16 +5,16 @@ export const dropdownData = {
     title: "SOLUTIONS",
     items: [
       {
-        label: "Edge-AI",
+        label: "Edge AI",
         link: "/solution/edge-ai",
       },
       {
-        label: "Cloud-AI",
+        label: "Cloud AI",
         link: "/solution/cloud-ai",
       },
       {
-        label: "Generative-AI",
-        link: "/solution/gen-ai",
+        label: "Generative AI",
+        link: "/solution/generative-ai",
       },
     ],
   },
@@ -47,17 +47,17 @@ export const dropdownData = {
         groupLink: "/eco-series",
         items: [
           {
-            label: "AI Bullet Camera",
+            label: "Bullet CCTV Camera",
             link: "/eco-series/bullet-cctv-camera",
             icon: "camera",
           },
           {
-            label: "AI PTZ Camera",
+            label: "PTZ CCTV Camera",
             link: "/eco-series/ptz-cctv-camera",
             icon: "video",
           },
           {
-            label: "AI Dome Camera",
+            label: "Dome CCTV Camera",
             link: "/eco-series/dome-cctv-camera",
             icon: "eye",
           },

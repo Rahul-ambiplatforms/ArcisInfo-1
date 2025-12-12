@@ -140,6 +140,7 @@ const AIFeatures = ({ data }) => {
         </Flex>
 
         <Text
+          as="p"
           textAlign="center"
           fontSize={{ base: "16px", md: "20px" }}
           fontWeight="700"
@@ -200,7 +201,7 @@ const FeatureTextCard = ({ feature, textColor }) => {
   return (
     <Box textAlign="left" w="100%">
       <Heading
-        // as="h3"
+        as="p"
         fontSize={{ base: "16px", md: "20px" }}
         mb={2}
         color={textColor}

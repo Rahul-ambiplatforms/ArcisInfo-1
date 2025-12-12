@@ -3,16 +3,17 @@ export const edgeAISEO = {
   metadescription:
     "Discover ArcisAI EdgeAI - AI-powered CCTV cameras that detect, analyze, and alert in real time. Smarter surveillance starts right inside the camera.",
   ogimage: "https://arcisai.io/images/solution_edgeai_hero.png",
-  canonical: "https://arcisai.io/solution/edge-ai-cctv-camera",
+  canonical: "https://arcisai.io/solution/edge-ai",
   schema: [],
 };
 
 export const cloudAISEO = {
-  metatitle: "Cloud AI CCTV Camera for Scalable, Smarter Surveillance – ArcisAI",
+  metatitle:
+    "Cloud AI CCTV Camera for Scalable, Smarter Surveillance – ArcisAI",
   metadescription:
     "Enhance your ArcisAI's AI CCTV cameras with CloudAI - a subscription-based alerts that unlocks advanced detections, analytics, and insights powered by the cloud.",
   ogimage: "https://arcisai.io/images/solution_cloudai_hero.png",
-  canonical: "https://arcisai.io/solution/cloud-ai-cctv-camera",
+  canonical: "https://arcisai.io/solution/cloud-ai",
   schema: [],
 };
 
@@ -21,7 +22,7 @@ export const genAISEO = {
   metadescription:
     "ArcisAI GenAI turns hours of CCTV footage into instant summaries. Search, analyze, and retrieve key moments with natural language commands for faster decisions.",
   ogimage: "https://arcisai.io/images/solution_genai_hero.png",
-  canonical: "https://arcisai.io/solution/gen-ai-cctv-camera",
+  canonical: "https://arcisai.io/solution/generative-ai",
   schema: [],
 };
 
@@ -31,11 +32,10 @@ export const getSolutionSEO = (solutionId) => {
 
   // Map solution IDs to SEO data
   const seoMap = {
-    "edge-ai-cctv-camera": edgeAISEO,
-    "cloud-ai-cctv-camera": cloudAISEO,
-    "gen-ai-cctv-camera": genAISEO,
+    "edge-ai": edgeAISEO,
+    "cloud-ai": cloudAISEO,
+    "generative-ai": genAISEO,
   };
 
-  return seoMap[normalizedId] || edgeAISEO; // Default to edgeAISEO if not found
+  return seoMap[normalizedId];
 };
-

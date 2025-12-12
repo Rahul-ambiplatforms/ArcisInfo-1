@@ -98,7 +98,7 @@ async function generate() {
       priority: "0.8",
     },
     {
-      loc: buildUrlLoc("//solution/gen-ai"),
+      loc: buildUrlLoc("/solution/gen-ai"),
       changefreq: "weekly",
       priority: "0.8",
     },
@@ -133,6 +133,22 @@ async function generate() {
       loc: buildUrlLoc("/eco-series/ptz-cctv-camera"),
       changefreq: "weekly",
       priority: "0.8",
+    },
+    { loc: buildUrlLoc("/about-us"), changefreq: "weekly", priority: "0.8" },
+    {
+      loc: buildUrlLoc("/why-choose-arcisai"),
+      changefreq: "weekly",
+      priority: "0.8",
+    },
+    {
+      loc: buildUrlLoc("/privacy-policy"),
+      changefreq: "monthly",
+      priority: "0.6",
+    },
+    {
+      loc: buildUrlLoc("/terms-of-service"),
+      changefreq: "monthly",
+      priority: "0.6",
     },
     { loc: buildUrlLoc("/contact-us"), changefreq: "weekly", priority: "0.8" },
     { loc: buildUrlLoc("/blog"), changefreq: "monthly", priority: "0.6" },
@@ -181,3 +197,5 @@ generate().catch((e) => {
   console.error("Sitemap generation failed:", e);
   process.exit(1);
 });
+
+// npm run sitemap

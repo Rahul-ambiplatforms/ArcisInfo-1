@@ -141,14 +141,14 @@ const Footer = () => {
               <Box pl={4}>
                 <Stack spacing={1}>
                   <FooterLink href={"/eco-series/ai-bullet-camera"}>
-                    AI Bullet Camera
+                    Bullet CCTV Camera
                   </FooterLink>
                   {/* <FooterLink href={"/eco-series/ai-baby-bullet-camera"}>AI Baby Bullet Camera</FooterLink> */}
                   <FooterLink href={"/eco-series/ai-ptz-camera"}>
-                    AI PTZ Camera
+                    PTZ CCTV Camera
                   </FooterLink>
                   <FooterLink href={"/eco-series/ai-dome-camera"}>
-                    AI Dome Camera
+                    Dome CCTV Camera
                   </FooterLink>
                 </Stack>
               </Box>
@@ -160,15 +160,9 @@ const Footer = () => {
             {/* SOLUTIONS */}
             <Stack align={"flex-start"} spacing={2}>
               <ListHeader>SOLUTIONS</ListHeader>
-              <FooterLink href={"/solution/edge-ai-cctv-camera"}>
-                Edge-AI
-              </FooterLink>
-              <FooterLink href={"/solution/cloud-ai-cctv-camera"}>
-                Cloud-AI
-              </FooterLink>
-              <FooterLink href={"/solution/gen-ai-cctv-camera"}>
-                Generative-AI
-              </FooterLink>
+              <FooterLink href={"/solution/edge-ai"}>Edge AI</FooterLink>
+              <FooterLink href={"/solution/cloud-ai"}>Cloud AI</FooterLink>
+              <FooterLink href={"/solution/generative-ai"}>Generative AI</FooterLink>
             </Stack>
 
             {/* COMPANY */}

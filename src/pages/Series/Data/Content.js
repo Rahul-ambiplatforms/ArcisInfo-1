@@ -39,7 +39,7 @@ export const Series = {
       description: "",
       products: [
         {
-          product_type: "",
+          product_type: "S-series",
           productarray: [
             {
               image: "/images/home_productlist_sseries_1.png",
@@ -112,7 +112,7 @@ export const Series = {
       d_image: "/images/sseries_hero_main.png",
       m_image: "/images/sseries_hero_main_mobile.png",
       heading:
-        "Reliable, High-Quality CCTV Cameras for India’s Everyday Security",
+        "Reliable CCTV Cameras for Everyday Security",
       description:
         "Built to handle Indian conditions with precision, the Eco-Series combines clear footage, stable operation and flexible installation options making it a trusted CCTV solution for long-lasting, essential security coverage.",
       sectionProps: {
@@ -168,21 +168,21 @@ export const Series = {
       description: "",
       products: [
         {
-          product_type: "",
+          product_type: "Eco-series",
           productarray: [
             {
               image: "/images/home_productlist_sseries_2.png",
-              product_name: "AI Bullet camera",
+              product_name: "Bullet CCTV camera",
               link: "/eco-series/bullet-cctv-camera",
             },
             {
               image: "/images/home_productlist_sseries_3.png",
-              product_name: "AI Dome camera",
+              product_name: "Dome CCTV camera",
               link: "/eco-series/dome-cctv-camera",
             },
             {
               image: "/images/home_productlist_sseries_1.png",
-              product_name: "AI PTZ camera",
+              product_name: "PTZ CCTV camera",
               link: "/eco-series/ptz-cctv-camera",
             },
             // {

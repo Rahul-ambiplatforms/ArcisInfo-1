@@ -123,7 +123,7 @@ const CTAButton = ({
           px={{ base: 4, md: 0 }}
         >
           <Heading
-            as="h2"
+            as="h4"
             fontSize={{ base: "30px", md: "48px", lg: "60px" }}
             fontWeight="400"
             lineHeight={{ base: "38px", md: "56px", lg: "76px" }}
@@ -146,7 +146,7 @@ const CTAButton = ({
 
           <Link href={link} style={{ textDecoration: "none" }}>
             <CustomButton
-              as="h3"
+              as="p"
               width={{
                 base: btnMobile?.width || "160px",
                 md: btnDesktop?.width || "220px",

@@ -455,8 +455,8 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
                           size="sm"
                           focusBorderColor="#9678E1"
                         >
-                          <option value="11th Dec 2025">11th Dec 2025</option>
-                          <option value="12th Dec 2025">12th Dec 2025</option>
+                          {/* <option value="11th Dec 2025">11th Dec 2025</option> */}
+                          {/* <option value="12th Dec 2025">12th Dec 2025</option> */}
                           <option value="13th Dec 2025">13th Dec 2025</option>
                         </Select>
                       </FormControl>

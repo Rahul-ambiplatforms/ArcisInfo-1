@@ -272,7 +272,7 @@ const ProductList = ({ data }) => {
 
                   <HStack w="full" justify="space-between" align="center">
                     <Text
-                      as="h3"
+                      as="h4"
                       w={{ base: "40%", md: "50%" }}
                       fontSize={{ base: "16px", md: "20px" }}
                       lineHeight={{ base: "20px", md: "25px" }}

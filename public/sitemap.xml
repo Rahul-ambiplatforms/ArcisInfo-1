@@ -16,7 +16,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://arcisai.io//solution/gen-ai</loc>
+    <loc>https://arcisai.io/solution/gen-ai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -59,6 +59,26 @@
     <loc>https://arcisai.io/eco-series/ptz-cctv-camera</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://arcisai.io/about-us</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://arcisai.io/why-choose-arcisai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://arcisai.io/privacy-policy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://arcisai.io/terms-of-service</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://arcisai.io/contact-us</loc>
