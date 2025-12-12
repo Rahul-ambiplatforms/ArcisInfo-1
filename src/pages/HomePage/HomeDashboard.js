@@ -11,9 +11,7 @@ import { homeSEO } from "./Data/SEOContent";
 import OurClient from "./Components/OurClient";
 import WhyArcisAI from "./Components/WhyArcisAI";
 import FAQSection from "../../Components/FAQSection";
-import { FAQ_DATA } from "../../data/FAQData";
 import Event from "../Events/Event";
-import { Box } from "@chakra-ui/react";
 import PageContentWrapper from "../../Components/PageContentWrapper";
 
 const HomeDashboard = () => {

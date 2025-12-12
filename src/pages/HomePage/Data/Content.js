@@ -449,21 +449,26 @@ export const homeContent = {
           },
         ],
       },
-      // {
-      //   product_type: "ECO-Series",
-      //   productarray: [
-      //     {
-      //       image: "/images/bullet_hero.png",
-      //       product_name: "Eco Bullet Camera",
-      //       link: "#",
-      //     },
-      //     {
-      //       image: "/images/dome_hero.png",
-      //       product_name: "Eco Dome Camera",
-      //       link: "#",
-      //     },
-      //   ],
-      // },
+      {
+        product_type: "ECO-Series",
+        productarray: [
+          {
+            image: "/images/home_productlist_sseries_2.png",
+            product_name: "Bullet CCTV camera",
+            link: "/eco-series/bullet-cctv-camera",
+          },
+          {
+            image: "/images/home_productlist_sseries_3.png",
+            product_name: "Dome CCTV camera",
+            link: "/eco-series/dome-cctv-camera",
+          },
+          {
+            image: "/images/home_productlist_sseries_1.png",
+            product_name: "PTZ CCTV camera",
+            link: "/eco-series/ptz-cctv-camera",
+          },
+        ],
+      },
       // {
       //   product_type: "NVR/DVR",
       //   productarray: [

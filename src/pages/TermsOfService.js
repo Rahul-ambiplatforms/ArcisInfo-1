@@ -20,7 +20,10 @@ function TermsOfService({ headingHide }) {
     <>
       <Helmet>
         <title>Terms Of Service</title>
-        <meta name="description" content="Thank You!" />
+        <meta
+          name="description"
+          content="Read the official Terms & Conditions of ArcisAI. Review policies on service usage, responsibilities, privacy, and compliance for all users and partners."
+        />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://arcisai.io/privacy-policy" />
       </Helmet>

@@ -26,7 +26,7 @@ function PrivacyPolicy() {
     <>
       <Helmet>
         <title>Privacy Policy</title>
-        <meta name="description" content="Thank You!" />
+        <meta name="description" content="Your privacy matters. Explore ArcisAI's policy on data protection, security measures, usage practices, and user rights to ensure a safe digital experience." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://arcisai.io/privacy-policy" />
       </Helmet>

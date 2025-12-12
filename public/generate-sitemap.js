@@ -98,7 +98,7 @@ async function generate() {
       priority: "0.8",
     },
     {
-      loc: buildUrlLoc("/solution/gen-ai"),
+      loc: buildUrlLoc("/solution/generative-ai"),
       changefreq: "weekly",
       priority: "0.8",
     },
