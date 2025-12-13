@@ -11,7 +11,7 @@ export const homeContent = {
       buttonLink: "/contact-us",
       sectionProps: {
         desktop: {
-          marginTop: "",
+          marginTop: "-7%",
         },
         mobile: {
           marginTop: "",
@@ -22,7 +22,7 @@ export const homeContent = {
           textColor: "white",
           alignItems: "flex-start",
           textAlign: "",
-          top: "12%",
+          top: "7%",
           left: "",
           width: "",
         },

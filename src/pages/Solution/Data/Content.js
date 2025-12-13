@@ -42,10 +42,10 @@ export const Solution = {
         m_image: "/images/solution_edgeai_hero_mobile.png",
         sectionProps: {
           desktop: {
-            marginTop: "",
+            marginTop: "-7%",
           },
           mobile: {
-            marginTop: "-20%",
+            marginTop: "-27%",
           },
         },
         textProps: {
@@ -53,7 +53,7 @@ export const Solution = {
             textColor: "white",
             alignItems: "",
             textAlign: "",
-            top: "12%",
+            top: "7%",
             left: "",
             width: "",
           },
@@ -352,7 +352,7 @@ export const Solution = {
         m_image: "/images/solution_cloudai_hero_mobile.png",
         sectionProps: {
           desktop: {
-            marginTop: "",
+            marginTop: "-7%",
           },
           mobile: {
             marginTop: "",
@@ -363,7 +363,7 @@ export const Solution = {
             textColor: "",
             alignItems: "",
             textAlign: "",
-            top: "12%",
+            top: "7%",
             left: "",
             width: "70%",
           },

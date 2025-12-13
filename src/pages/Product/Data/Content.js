@@ -37,7 +37,7 @@ export const Product = {
         buttonLink: "/contact-us",
         sectionProps: {
           desktop: {
-            marginTop: "-9%",
+            marginTop: "-5%",
           },
           mobile: {
             marginTop: "",
@@ -429,7 +429,7 @@ export const Product = {
         buttonLink: "/contact-us",
         sectionProps: {
           desktop: {
-            marginTop: "-9%",
+            marginTop: "-7%",
           },
           mobile: {
             marginTop: "",
@@ -825,7 +825,7 @@ export const Product = {
         buttonLink: "contact-us",
         sectionProps: {
           desktop: {
-            marginTop: "-8%",
+            marginTop: "-5%",
           },
           mobile: {
             marginTop: "-50%",
@@ -1219,7 +1219,7 @@ export const Product = {
         buttonLink: "/contact-us",
         sectionProps: {
           desktop: {
-            marginTop: "-9%",
+            marginTop: "-5%",
           },
           mobile: {
             marginTop: "-28%",
@@ -1635,7 +1635,7 @@ export const Product = {
         buttonLink: "/contact-us",
         sectionProps: {
           desktop: {
-            marginTop: "",
+            marginTop: "-7%",
           },
           mobile: {
             marginTop: "",
@@ -2028,11 +2028,11 @@ export const Product = {
         image: "/images/product_dome_main.png",
         d_image: "/images/product_dome_main.png",
         m_image: "/images/product_dome_main_mobile.png",
-        buttonText: "Get Your Security Cameras",
+        buttonText: "Get Dome Cameras",
         buttonLink: "contact-us",
         sectionProps: {
           desktop: {
-            marginTop: "",
+            marginTop: "-6%",
           },
           mobile: {
             marginTop: "",

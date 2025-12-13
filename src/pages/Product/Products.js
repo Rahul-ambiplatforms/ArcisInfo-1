@@ -68,18 +68,6 @@ const Products = () => {
         <meta name="twitter:description" content={productSEO.metadescription} />
         <meta name="twitter:image" content={productSEO.ogimage} />
 
-        {/* Additional Meta Tags */}
-        {/* <meta
-          name="keywords"
-          content="AI CCTV Camera, Security Camera, EdgeAI, Surveillance Camera, ArcisAI, Smart CCTV, AI Camera"
-        />
-        <meta name="author" content="ArcisAI" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="language" content="English" />
-        <meta name="revisit-after" content="7 days" />
-        <meta name="distribution" content="global" />
-        <meta name="rating" content="general" /> */}
 
       </Helmet>
       {/* Schema Markup */}

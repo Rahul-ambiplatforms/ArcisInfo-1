@@ -247,12 +247,11 @@ const ContactSection = () => {
         >
           {/* Content Section */}
           <Box position="relative" zIndex={1}>
-            {/* Top Content Section with GIF Background */}
             <Box
               w="100%"
               mx="auto"
               px={{ base: "16px", md: "32px", lg: "64px" }}
-              pt={{ base: "10px", md: "20px", lg: "20px" }}
+              pt={{ base: "10px", md: "20px", lg: "16px" }}
               pb={{ base: "8px", md: "8px", lg: "8px" }}
               position="relative"
               overflow="hidden"

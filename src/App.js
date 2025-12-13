@@ -13,8 +13,9 @@ import AboutUs from "./pages/AboutUs/AboutUs";
 import WhyArcisAI from "./pages/WhyArcisAI/WhyArcisAI";
 import Footer from "./Components/Footer/Footer";
 import ScrollToTop from "./Components/ScrollToTop";
-import PageTransition from "./Components/PageTransition";
 import { AnimatePresence } from "framer-motion";
+// import PageTransition from "./Components/PageTransition";
+import CustomCursor from "./Components/CustomCursor/CustomCursor";
 
 // import Landing from "./pages/Landing";
 // import ProductInfo from "./pages/ProductInfo";
@@ -35,6 +36,9 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
 
+// To disable animations, comment the import above and uncomment the line below:
+const PageTransition = ({ children }) => <>{children}</>;
+
 function App() {
   return (
     <BrowserRouter>
@@ -46,10 +50,11 @@ function App() {
 function InnerApp() {
   const location = useLocation();
   const hideHeader = location.pathname.startsWith("/admin");
-  const SHOW_EVENT_BANNER = true; // Toggle this to show/hide the event banner
+  const SHOW_EVENT_BANNER = false; 
 
   return (
     <>
+      {/* <CustomCursor /> */}
       {!hideHeader && <Header showEvent={SHOW_EVENT_BANNER} />}
       <ScrollToTop />
       <Box
@@ -213,7 +218,7 @@ function InnerApp() {
               path="*"
               element={
                 // <PageTransition>
-                  <NotFound />
+                <NotFound />
                 // </PageTransition>
               }
             />

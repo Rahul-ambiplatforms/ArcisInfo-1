@@ -28,7 +28,7 @@ export const WhyArcisAIContent = {
       m_image: "/images/whyarcis_hero.png",
       sectionProps: {
         desktop: {
-          marginTop: "",
+          marginTop: "-7%",
         },
         mobile: {
           marginTop: "",
@@ -39,7 +39,7 @@ export const WhyArcisAIContent = {
           textColor: "",
           alignItems: "",
           textAlign: "",
-          top: "",
+          top: "8%",
           left: "",
           width: "",
         },
