@@ -74,19 +74,19 @@ const Solutions = () => {
         <meta name="distribution" content="global" />
         <meta name="rating" content="general" /> */}
 
-        {/* Schema Markup */}
-        {solutionSEO.schema &&
-          solutionSEO.schema.length > 0 &&
-          solutionSEO.schema.map((schema, index) => (
-            <script
-              key={`schema-${index}`}
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify(schema),
-              }}
-            />
-          ))}
       </Helmet>
+      {/* Schema Markup */}
+      {solutionSEO.schema &&
+        solutionSEO.schema.length > 0 &&
+        solutionSEO.schema.map((schema, index) => (
+          <script
+            key={`schema-${index}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(schema),
+            }}
+          />
+        ))}
       <PageContentWrapper noPadding>
         <HeroSectionCarousel data={solutionData.hero} />
         <WhatIsAI data={solutionData.WhatIsAI} />

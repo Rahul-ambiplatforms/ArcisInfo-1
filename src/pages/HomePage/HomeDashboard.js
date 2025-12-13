@@ -40,17 +40,17 @@ const HomeDashboard = () => {
         <meta name="twitter:description" content={homeSEO.metadescription} />
         <meta name="twitter:image" content={homeSEO.ogimage} />
 
-        {/* Schema Markup */}
-        {homeSEO.schema.map((schema, index) => (
-          <script
-            key={`schema-${index}`}
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(schema),
-            }}
-          />
-        ))}
       </Helmet>
+      {/* Schema Markup */}
+      {homeSEO.schema.map((schema, index) => (
+        <script
+          key={`schema-${index}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schema),
+          }}
+        />
+      ))}
       <PageContentWrapper noPadding>
         <Event />
         <HeroSectionCarousel data={homeContent.hero} />

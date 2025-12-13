@@ -38,7 +38,6 @@ export const Solution = {
         ],
         buttonText: "Request a Demo",
         buttonLink: "/contact-us",
-        image: "/images/camera3.png",
         d_image: "/images/solution_edgeai_hero.png",
         m_image: "/images/solution_edgeai_hero_mobile.png",
         sectionProps: {

@@ -69,7 +69,7 @@ const Products = () => {
         <meta name="twitter:image" content={productSEO.ogimage} />
 
         {/* Additional Meta Tags */}
-        <meta
+        {/* <meta
           name="keywords"
           content="AI CCTV Camera, Security Camera, EdgeAI, Surveillance Camera, ArcisAI, Smart CCTV, AI Camera"
         />
@@ -79,21 +79,21 @@ const Products = () => {
         <meta name="language" content="English" />
         <meta name="revisit-after" content="7 days" />
         <meta name="distribution" content="global" />
-        <meta name="rating" content="general" />
+        <meta name="rating" content="general" /> */}
 
-        {/* Schema Markup */}
-        {productSEO.schema &&
-          productSEO.schema.length > 0 &&
-          productSEO.schema.map((schema, index) => (
-            <script
-              key={`schema-${index}`}
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify(schema),
-              }}
-            />
-          ))}
       </Helmet>
+      {/* Schema Markup */}
+      {productSEO.schema &&
+        productSEO.schema.length > 0 &&
+        productSEO.schema.map((schema, index) => (
+          <script
+            key={`schema-${index}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(schema),
+            }}
+          />
+        ))}
       <PageContentWrapper noPadding>
         <HeroSectionCarousel data={productData.hero} />
         <CameraFeature data={productData.features} />

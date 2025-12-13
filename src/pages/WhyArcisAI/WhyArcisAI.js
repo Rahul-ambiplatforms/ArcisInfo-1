@@ -57,19 +57,19 @@ const WhyArcisAI = () => {
         <meta name="distribution" content="global" />
         <meta name="rating" content="general" />
 
-        {/* Schema Markup */}
-        {whyArcisAISEO.schema &&
-          whyArcisAISEO.schema.length > 0 &&
-          whyArcisAISEO.schema.map((schema, index) => (
-            <script
-              key={`schema-${index}`}
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify(schema),
-              }}
-            />
-          ))}
       </Helmet>
+      {/* Schema Markup */}
+      {whyArcisAISEO.schema &&
+        whyArcisAISEO.schema.length > 0 &&
+        whyArcisAISEO.schema.map((schema, index) => (
+          <script
+            key={`schema-${index}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(schema),
+            }}
+          />
+        ))}
       <PageContentWrapper noPadding>
         <HeroSectionCarousel data={WhyArcisAIContent.hero} />
         <EdgeAIFeatures data={WhyArcisAIContent.EdgeAIFeatures} />
