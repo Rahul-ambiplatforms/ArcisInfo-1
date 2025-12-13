@@ -51,8 +51,8 @@ const HeroSectionCarousel = ({ data }) => {
   const activeSlide = slides[currentSlide];
   const title = activeSlide.title;
 
-  const bgImageDesktop = activeSlide.d_image || activeSlide.image;
-  const bgImageMobile = activeSlide.m_image || activeSlide.image;
+  const bgImageDesktop = activeSlide.d_image ;
+  const bgImageMobile = activeSlide.m_image;
 
   const variants = {
     enter: (direction) => ({
