@@ -661,7 +661,8 @@ const BlogsOverviewDash = () => {
                   // Check if the blog was actually updated
                   // If createdAt and updatedAt are the same (within 1 minute), it means the blog was never updated
                   // If they are different, it means the blog was updated at some point
-                  const wasUpdated = Math.abs(updated.getTime() - created.getTime()) > 60000;
+                  const wasUpdated =
+                    Math.abs(updated.getTime() - created.getTime()) > 60000;
 
                   // Always display the updatedAt field, but show appropriate label
                   const label = wasUpdated ? "Updated" : "Published";
