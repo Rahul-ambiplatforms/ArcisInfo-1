@@ -33,7 +33,7 @@ const CameraComparision = ({ data }) => {
             <Grid
               templateColumns={
                 headers.length > 4
-                  ? `1.5fr repeat(${headers.length - 1}, minmax(120px, 1fr))`
+                  ? `1.5fr repeat(${headers.length - 1}, minmax(200px, 1fr))`
                   : `1.5fr repeat(${headers.length - 1}, 1fr)`
               }
               // gap={0} implies we handle spacing via padding/borders in cells
@@ -45,6 +45,7 @@ const CameraComparision = ({ data }) => {
                   bg="rgba(255, 255, 255, 0.2)"
                   backdropFilter="blur(2px)"
                   p={4}
+                  pr={{ base: 0, md: index === 0 ? 32 : 4 }}
                   borderBottom="1px solid white"
                 >
                   <Text
@@ -64,6 +65,7 @@ const CameraComparision = ({ data }) => {
                   {/* Label Cell */}
                   <Box
                     p={4}
+                    pr={{ base: 0, md: 16 }}
                     borderBottom="0.5px solid white"
                     borderColor="rgba(255,255,255,0.3)"
                     display="flex"
