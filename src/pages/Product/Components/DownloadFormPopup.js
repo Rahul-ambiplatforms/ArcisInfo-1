@@ -26,7 +26,7 @@ const DownloadFormPopup = ({ isOpen, onClose, pdfUrl }) => {
     email: "",
     countryCode: "+91",
     phone: "",
-    message: "",
+    // message: "",
   });
   const [isLoading, setIsLoading] = useState(false);
   const toast = useToast();
@@ -105,7 +105,7 @@ const DownloadFormPopup = ({ isOpen, onClose, pdfUrl }) => {
           email: "",
           countryCode: "+91",
           phone: "",
-          message: "",
+          // message: "",
         });
       } else {
         throw new Error(data.error || "Failed to submit details");
@@ -239,7 +239,7 @@ const DownloadFormPopup = ({ isOpen, onClose, pdfUrl }) => {
                 </HStack>
               </FormControl>
 
-              <FormControl>
+              {/* <FormControl>
                 <FormLabel color="white">Message</FormLabel>
                 <Textarea
                   name="message"
@@ -258,7 +258,7 @@ const DownloadFormPopup = ({ isOpen, onClose, pdfUrl }) => {
                   resize="none"
                   minH="80px"
                 />
-              </FormControl>
+              </FormControl> */}
 
               <Button
                 type="submit"
