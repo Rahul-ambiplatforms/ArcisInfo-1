@@ -1,10 +1,21 @@
 import React from "react";
 import { Box, Heading, Text, Grid } from "@chakra-ui/react";
 import CustomButton from "../../../Components/CustomButton";
+import DownloadFormPopup from "./DownloadFormPopup";
 
 const CameraComparision = ({ data }) => {
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+  const [currentPdfUrl, setCurrentPdfUrl] = React.useState("");
+
   if (!data) return null;
   const { heading, headers, rows, d_image, m_image } = data;
+
+  const handleDownloadClick = (pdfUrl) => {
+    if (pdfUrl) {
+      setCurrentPdfUrl(pdfUrl);
+      setIsModalOpen(true);
+    }
+  };
 
   return (
     <Box
@@ -97,11 +108,11 @@ const CameraComparision = ({ data }) => {
                           height="40px"
                           fontSize="14px"
                           onClick={() => {
-                            if (row.links && row.links[valIndex]) {
-                              window.open(row.links[valIndex], "_blank");
-                            } else {
-                              console.log("No PDF link found");
-                            }
+                             if (row.links && row.links[valIndex]) {
+                                handleDownloadClick(row.links[valIndex]);
+                             } else {
+                                console.log("No PDF link found");
+                             }
                           }}
                         >
                           {val}
@@ -122,6 +133,13 @@ const CameraComparision = ({ data }) => {
           </Box>
         </Box>
       </Box>
+
+      {/* Download Popup */}
+      <DownloadFormPopup 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+        pdfUrl={currentPdfUrl} 
+      />
     </Box>
   );
 };
