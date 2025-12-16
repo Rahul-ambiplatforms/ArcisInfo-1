@@ -34,7 +34,7 @@ const ContactSection = () => {
     phone: "",
     company: "",
     location: "",
-    location2: "",
+    // location2: "",
     customerType: "",
     camerasFor: "",
     message: "",
@@ -42,6 +42,8 @@ const ContactSection = () => {
     leadType: "Arcis Website",
     updates: false,
   });
+
+  const [location2, setLocation2] = useState("");
 
   const [isLoading, setIsLoading] = useState(false);
   const toast = useToast();
@@ -56,6 +58,8 @@ const ContactSection = () => {
         ...prev,
         [name]: digitsOnly,
       }));
+    } else if (name === "location2") {
+      setLocation2(value);
     } else {
       setFormData((prev) => ({
         ...prev,
@@ -121,7 +125,8 @@ const ContactSection = () => {
         },
         body: JSON.stringify({ ...formData, formType: "Contact" }),
       });
-
+      // console.log("formData::", formData);
+      // console.log("RESPONSE::", JSON.stringify({ ...formData, "location": formData.location + " " + location2 , formType: "Contact" }));
       const data = await response.json();
       if (response.ok) {
         toast({
@@ -140,7 +145,7 @@ const ContactSection = () => {
           phone: "",
           company: "",
           location: "",
-          location2: "",
+          // location2: "",
           customerType: "",
           camerasFor: "",
           message: "",
@@ -487,7 +492,10 @@ const ContactSection = () => {
                       <CountrySelector
                         value={formData.countryCode}
                         onChange={(code) =>
-                          setFormData((prev) => ({ ...prev, countryCode: code }))
+                          setFormData((prev) => ({
+                            ...prev,
+                            countryCode: code,
+                          }))
                         }
                       />
                       <Input
@@ -592,7 +600,7 @@ const ContactSection = () => {
                     <Input
                       placeholder="Enter your city"
                       name="location2"
-                      value={formData.location2}
+                      value={location2}
                       onChange={handleChange}
                       bg="rgba(255,255,255,0.2)"
                       border="none"
