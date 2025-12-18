@@ -123,7 +123,11 @@ const ContactSection = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ ...formData, formType: "Contact" }),
+        body: JSON.stringify({
+          ...formData,
+          location: formData.location + " " + location2,
+          formType: "Contact",
+        }),
       });
       // console.log("formData::", formData);
       // console.log("RESPONSE::", JSON.stringify({ ...formData, "location": formData.location + " " + location2 , formType: "Contact" }));
@@ -635,7 +639,7 @@ const ContactSection = () => {
                       I want camera for
                     </FormLabel>
                     <Select
-                      // placeholder="Select option"
+                      placeholder="Select option"
                       name="camerasFor"
                       value={formData.camerasFor}
                       onChange={handleChange}
@@ -689,7 +693,7 @@ const ContactSection = () => {
                       Who you are
                     </FormLabel>
                     <Select
-                      // placeholder="Select option"
+                      placeholder="Select option"
                       name="customerType"
                       value={formData.customerType}
                       onChange={handleChange}
@@ -776,6 +780,7 @@ const ContactSection = () => {
                       placeholder="Eg. 50"
                       name="customerQuantity"
                       type="number"
+                      min={1}
                       value={formData.customerQuantity}
                       onChange={handleChange}
                       bg="rgba(255,255,255,0.2)"
