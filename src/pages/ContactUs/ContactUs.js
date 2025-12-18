@@ -125,7 +125,7 @@ const ContactSection = () => {
         },
         body: JSON.stringify({
           ...formData,
-          location: formData.location + " " + location2,
+          location: location2 + " " + formData.location,
           formType: "Contact",
         }),
       });
