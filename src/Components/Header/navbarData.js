@@ -121,6 +121,10 @@ export const dropdownData = {
         label: "Blog",
         link: "/blog",
       },
+      {
+        label: "Event",
+        link: "/event",
+      },
       // {
       //   label: "Downloads",
       //   link: "/downloads",

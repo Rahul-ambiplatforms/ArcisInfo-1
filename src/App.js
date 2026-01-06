@@ -38,6 +38,8 @@ import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
 import MainProduct from "./pages/Series/MainProduct";
 import SlugResolver from "./pages/Series/Resolver";
+import Event from "./pages/EventPage/Event";
+import IFSEC from "./pages/EventPage/IFSEC";
 
 // To disable animations, comment the import above and uncomment the line below:
 const PageTransition = ({ children }) => <>{children}</>;
@@ -89,14 +91,21 @@ function InnerApp() {
               }
             />
             <Route
-              path="/product/:mainproductid"
+              path="/event"
               element={
                 <PageTransition>
-                  <MainProduct />
+                  <Event />
                 </PageTransition>
               }
             />
-
+            <Route
+              path="/event/:eventId"
+              element={
+                <PageTransition>
+                  <IFSEC />
+                </PageTransition>
+              }
+            />
             <Route
               path="/s-series/:productId"
               element={
@@ -121,6 +130,7 @@ function InnerApp() {
                 </PageTransition>
               }
             />
+
             <Route
               path="/about-us"
               element={
