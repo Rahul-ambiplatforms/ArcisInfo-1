@@ -96,6 +96,7 @@ export const EventData = {
     },
   ],
   carousel: {
+    logo: "/images/event_home_logo1.png", // Shared logo for all carousel slides
     events: [
       {
         id: 1,
@@ -104,7 +105,6 @@ export const EventData = {
         eventName: "IFSEC",
         image: "/images/event_carousel_1.png",
         mobileImage: "/images/event_carousel_mobile_1.png", // Add your mobile image path here
-        logo: "/images/event_home_logo1.png",
         description:
           "Explore how ArcisAI showcased its next-gen AI CCTV cameras, EdgeAI, CloudAI, GenAI technologies and enterprise surveillance solutions at IFSEC India 2025. From product unveilings to live demos and industry interactions, get the full highlight of ArcisAI's presence at this premier security exhibition.",
         detailsLink: "/event/ifsec",
@@ -116,7 +116,6 @@ export const EventData = {
         eventName: "Smart Tech",
         image: "/images/event_carousel_2.png",
         mobileImage: "/images/event_carousel_mobile_2.png", // Add your mobile image path here
-        logo: "/images/event_home_logo3.png",
         description:
           "Explore how ArcisAI showcased its next-gen AI CCTV cameras, EdgeAI, CloudAI, GenAI technologies and enterprise surveillance solutions at IFSEC India 2025. From product unveilings to live demos and industry interactions, get the full highlight of ArcisAI's presence at this premier security exhibition.",
         detailsLink: "#", // TODO: Add event page when created

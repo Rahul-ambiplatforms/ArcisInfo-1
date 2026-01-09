@@ -33,6 +33,13 @@ const CameraFeature = ({ data, headingInBackground = false }) => {
   const alignment = styles?.alignment || "center";
   const descriptionColor = styles?.descriptionColor || "gray.300";
   const featureColor = styles?.featureColor || "white";
+  const descriptionTextAlign = styles?.descriptionTextAlign || "justify";
+  const descriptionWidth = {
+    base: styles?.descriptionWidth?.mobile || "95%",
+    md: styles?.descriptionWidth?.tablet || "80%",
+    lg: styles?.descriptionWidth?.laptop || "80%",
+    xl: styles?.descriptionWidth?.bigscreen || "80%",
+  };
 
   return (
     <Box w="100%" mt={{ base: "5%", md: "2%" }}>
@@ -54,9 +61,13 @@ const CameraFeature = ({ data, headingInBackground = false }) => {
         {/* Image Section with Overlapping Description and Features */}
         <Box
           w="100vw"
-          h={{ base: "1086px", md: "1651px" }}
+          h={d_image || m_image ? { base: "1086px", md: "1651px" } : "auto"}
           position="relative"
-          backgroundImage={{ base: `url(${m_image})`, md: `url(${d_image})` }}
+          backgroundImage={
+            d_image || m_image
+              ? { base: `url(${m_image})`, md: `url(${d_image})` }
+              : "none"
+          }
           backgroundSize="cover"
           backgroundPosition="center"
           backgroundRepeat="no-repeat"
@@ -98,8 +109,8 @@ const CameraFeature = ({ data, headingInBackground = false }) => {
               <Text
                 fontSize={{ base: "14px", md: "16px" }}
                 color={descriptionColor}
-                textAlign="justify"
-                w={{ base: "95%", md: "80%" }}
+                textAlign={descriptionTextAlign}
+                w={descriptionWidth}
                 lineHeight={{ base: "15px", md: "20px" }}
               >
                 {description}

@@ -37,7 +37,7 @@ const NVRModelSelector = ({ data }) => {
   const toggleModel = (index) => {
     setExpandedModel(expandedModel === index ? null : index);
   };
-
+  //comment
   const handleDownloadClick = (pdfUrl) => {
     if (pdfUrl) {
       setCurrentPdfUrl(pdfUrl);
@@ -111,7 +111,7 @@ const NVRModelSelector = ({ data }) => {
                     bg: model.headerHoverBgColor || "#333",
                   }}
                   flexShrink={0}
-                  w={{ base: "calc(100% - 60px)", md: "auto" }}
+                  w={{ base: "calc(100% - 60px)", md: "291px" }}
                   minW={{ base: "auto", md: "291px" }}
                 >
                   <Text
@@ -171,7 +171,7 @@ const NVRModelSelector = ({ data }) => {
               {/* Expanded Content */}
               <Collapse in={expandedModel === index} animateOpacity>
                 <Box
-                  p={{ base: "24px 2px", md: "40px 24px" }}
+                  p={{ base: "24px 2px", md: "20px 0px" }}
                   bg={model.contentBgColor || "#1a1a1a"}
                   borderRadius="0"
                   mt={0}

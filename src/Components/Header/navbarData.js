@@ -89,6 +89,10 @@ export const dropdownData = {
         link: "/why-choose-arcisai",
       },
       {
+        label: "Event",
+        link: "/event",
+      },
+      {
         label: "Privacy Policy",
         link: "/privacy-policy",
       },
@@ -120,10 +124,6 @@ export const dropdownData = {
       {
         label: "Blog",
         link: "/blog",
-      },
-      {
-        label: "Event",
-        link: "/event",
       },
       // {
       //   label: "Downloads",

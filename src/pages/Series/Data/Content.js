@@ -781,6 +781,13 @@ export const Series = {
         alignment: "center",
         descriptionColor: "black",
         featureColor: "black",
+        descriptionTextAlign: "center",
+        descriptionWidth: {
+          mobile: "95%",
+          tablet: "80%",
+          laptop: "80%",
+          bigscreen: "80%",
+        },
       },
       featuresList: [
         { name: "STQC Certified VMS", icon: <FeatureIcon1 /> },
@@ -932,7 +939,7 @@ export const Series = {
             textColor: "black",
             alignItems: "flex-start",
             textAlign: "",
-            top: "25%",
+            top: "26%",
             left: "",
             width: "",
           },
@@ -1013,8 +1020,8 @@ export const Series = {
           borderRadius: "8px",
         },
         mobile: {
-          width: "50%",
-          height: "auto",
+          width: "122px",
+          height: "122px",
           justify: "center",
         },
         logo: {
@@ -1120,8 +1127,8 @@ export const Series = {
     CTAButton1: {
       data: "Discover ArcisAI's STQC-Certified Cloud VMS for Smarter Surveillance",
       buttonText: "Try ArcisGPT",
-      d_image: "/images/abd_cta_1.png",
-      m_Image: "/images/home_cta_mobile_1.png",
+      d_image: "/images/STQC_cta.png",
+      m_Image: "/images/STQC_cta_mobile.png",
       link: "/contact-us",
       textPosition: {
         desktop: { top: "50%", left: "5%" },
@@ -1139,7 +1146,7 @@ export const Series = {
           textColor: "black",
           borderColor: "#7F56D9",
           bgColor: "",
-          width: "200px",
+          width: "150px",
           height: "",
         },
       },
@@ -1154,7 +1161,7 @@ export const Series = {
           textColor: "linear(30deg, #171717, #7F56D9)",
           alignItems: "flex-start",
           textAlign: "left",
-          width: "80%",
+          width: "full",
         },
       },
     },
@@ -1183,7 +1190,7 @@ export const Series = {
         description:
           "Connect all existing ONVIF cameras to ArcisAI VMS for cloud monitoring, centralized management, and smart features—cost-effectively and hassle-free.",
         d_image: "/images/abd_hero_main.png",
-        m_image: "/images/abd_hero_main.png",
+        m_image: "/images/abd_hero_main_mobile.png",
         buttonText: "Lets Talk",
         buttonLink: "/contact-us",
         sectionProps: {
@@ -1306,6 +1313,13 @@ export const Series = {
         alignment: "center",
         descriptionColor: "black",
         featureColor: "white",
+        descriptionTextAlign: "left", // or "center", "right", "justify"
+        descriptionWidth: {
+          mobile: "90%",
+          tablet: "70%",
+          laptop: "60%",
+          bigscreen: "50%",
+        },
       },
       featuresList: [
         { name: "Plug-and-Play Integration", icon: <ArcisIcon1 /> },
@@ -1420,7 +1434,7 @@ export const Series = {
         heading: "High-Quality NVR Recorders for Smooth CCTV Monitoring",
 
         d_image: "/images/nvr_hero_main.png",
-        m_image: "/images/nvr_hero_main.png",
+        m_image: "/images/nvr_hero_main_mobile.png",
         buttonText: "Lets Talk",
         buttonLink: "/contact-us",
         sectionProps: {
@@ -1428,7 +1442,7 @@ export const Series = {
             marginTop: "-1%",
           },
           mobile: {
-            marginTop: "",
+            marginTop: "0%",
           },
         },
         textProps: {
@@ -1444,7 +1458,7 @@ export const Series = {
             textColor: "white",
             alignItems: "center",
             textAlign: "center",
-            top: "30%",
+            top: "-100%",
             left: "0",
             width: "100%",
           },
@@ -1683,6 +1697,13 @@ export const Series = {
         alignment: "center",
         descriptionColor: "white",
         featureColor: "white",
+        descriptionTextAlign: "center", // or "center", "right", "justify"
+        descriptionWidth: {
+          mobile: "90%",
+          tablet: "70%",
+          laptop: "100%",
+          bigscreen: "100%",
+        },
       },
       featuresList: [
         { name: "Multi-Channel Support", icon: <ArcisIcon6 /> },
