@@ -91,7 +91,7 @@ const CLIENT_LOGOS_DATA = [
   { image: "/images/home_client_33.png", alt: "BSNL" },
 ];
 
-const OurClient = () => {
+const OurClient = ({ testimonials = true }) => {
   const isMobile = useBreakpointValue({ base: true, lg: false });
   const scrollRef = useRef(null);
 
@@ -127,76 +127,80 @@ const OurClient = () => {
         <Text textAlign="center" fontSize={{ base: "20px", md: "24px" }} mb={2}>
           Our Clientele
         </Text>
-        <Heading
-          as="h2"
-          textAlign="center"
-          fontSize={{ base: "30px", md: "60px" }}
-          mb={{ base: 4, md: 8 }}
-        >
-          What Our Customers Say About ArcisAI
-        </Heading>
+        {testimonials && (
+          <>
+            <Heading
+              as="h2"
+              textAlign="center"
+              fontSize={{ base: "30px", md: "60px" }}
+              mb={{ base: 4, md: 8 }}
+            >
+              What Our Customers Say About ArcisAI
+            </Heading>
 
-        {/* Testimonials Section */}
-        <Box
-          ref={scrollRef}
-          overflowX={isMobile ? "auto" : "visible"}
-          sx={{
-            "&::-webkit-scrollbar": { display: "none" },
-            scrollbarWidth: "none",
-          }}
-          mb={{ base: 8, md: 12 }}
-        >
-          <Flex
-            gap={6}
-            justify={isMobile ? "flex-start" : "center"}
-            px={isMobile ? 4 : 0}
-            w={isMobile ? "max-content" : "100%"}
-          >
-            {TESTIMONIALS_DATA.map((testimonial, index) => (
-              <Box
-                key={index}
-                bg="rgba(255, 255, 255, 0.1)"
-                backdropFilter="blur(20px)"
-                p={4}
-                w={{ base: "236px", md: "290px" }}
-                h={{ base: "236px", md: "290px" }}
-                transition="transform 0.3s"
-                _hover={{
-                  transform: "translateY(-5px)",
-                  bg: "rgba(255, 255, 255, 0.15)",
-                }}
+            {/* Testimonials Section */}
+            <Box
+              ref={scrollRef}
+              overflowX={isMobile ? "auto" : "visible"}
+              sx={{
+                "&::-webkit-scrollbar": { display: "none" },
+                scrollbarWidth: "none",
+              }}
+              mb={{ base: 8, md: 12 }}
+            >
+              <Flex
+                gap={6}
+                justify={isMobile ? "flex-start" : "center"}
+                px={isMobile ? 4 : 0}
+                w={isMobile ? "max-content" : "100%"}
               >
-                <Flex direction="column" h="100%" justify="space-between">
-                  <Box>
-                    <Heading as="p" fontSize="20px" fontWeight="400" mb={1}>
-                      {testimonial.name}
-                    </Heading>
-                    <Text fontSize="16px" fontWeight="400" mb={4}>
-                      {testimonial.designation}
-                    </Text>
-                    <Text
-                      fontSize={{ base: "12px", md: "16px" }}
-                      fontWeight="400"
-                      mb={6}
-                      lineHeight={{ base: "15px", md: "20px" }}
-                    >
-                      {testimonial.description}
-                    </Text>
+                {TESTIMONIALS_DATA.map((testimonial, index) => (
+                  <Box
+                    key={index}
+                    bg="rgba(255, 255, 255, 0.1)"
+                    backdropFilter="blur(20px)"
+                    p={4}
+                    w={{ base: "236px", md: "290px" }}
+                    h={{ base: "236px", md: "290px" }}
+                    transition="transform 0.3s"
+                    _hover={{
+                      transform: "translateY(-5px)",
+                      bg: "rgba(255, 255, 255, 0.15)",
+                    }}
+                  >
+                    <Flex direction="column" h="100%" justify="space-between">
+                      <Box>
+                        <Heading as="p" fontSize="20px" fontWeight="400" mb={1}>
+                          {testimonial.name}
+                        </Heading>
+                        <Text fontSize="16px" fontWeight="400" mb={4}>
+                          {testimonial.designation}
+                        </Text>
+                        <Text
+                          fontSize={{ base: "12px", md: "16px" }}
+                          fontWeight="400"
+                          mb={6}
+                          lineHeight={{ base: "15px", md: "20px" }}
+                        >
+                          {testimonial.description}
+                        </Text>
+                      </Box>
+                      <Flex align="flex-start" gap="1" direction="column">
+                        <Icon as={LocationIcon} w={5} h={5} />
+                        <Text
+                          fontSize={{ base: "14px", md: "16px" }}
+                          fontWeight="700"
+                        >
+                          {testimonial.location}
+                        </Text>
+                      </Flex>
+                    </Flex>
                   </Box>
-                  <Flex align="flex-start" gap="1" direction="column">
-                    <Icon as={LocationIcon} w={5} h={5} />
-                    <Text
-                      fontSize={{ base: "14px", md: "16px" }}
-                      fontWeight="700"
-                    >
-                      {testimonial.location}
-                    </Text>
-                  </Flex>
-                </Flex>
-              </Box>
-            ))}
-          </Flex>
-        </Box>
+                ))}
+              </Flex>
+            </Box>
+          </>
+        )}
 
         {/* Client Logos Grid */}
         <SimpleGrid

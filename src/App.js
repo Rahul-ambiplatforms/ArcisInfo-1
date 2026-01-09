@@ -14,6 +14,7 @@ import WhyArcisAI from "./pages/WhyArcisAI/WhyArcisAI";
 import Footer from "./Components/Footer/Footer";
 import ScrollToTop from "./Components/ScrollToTop";
 import { AnimatePresence } from "framer-motion";
+
 // import PageTransition from "./Components/PageTransition";
 import CustomCursor from "./Components/CustomCursor/CustomCursor";
 
@@ -35,6 +36,10 @@ import OtpVerification from "./ArcisAdmin/pages/OTP/OtpVerification";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
+import MainProduct from "./pages/Series/MainProduct";
+import SlugResolver from "./pages/Series/Resolver";
+import Event from "./pages/EventPage/Event";
+import IFSEC from "./pages/EventPage/IFSEC";
 
 // To disable animations, comment the import above and uncomment the line below:
 const PageTransition = ({ children }) => <>{children}</>;
@@ -50,7 +55,7 @@ function App() {
 function InnerApp() {
   const location = useLocation();
   const hideHeader = location.pathname.startsWith("/admin");
-  const SHOW_EVENT_BANNER = false; 
+  const SHOW_EVENT_BANNER = false;
 
   return (
     <>
@@ -76,11 +81,28 @@ function InnerApp() {
                 </PageTransition>
               }
             />
+
             <Route
               path="/:seriesId"
               element={
                 <PageTransition>
-                  <Series />
+                  <SlugResolver />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/event"
+              element={
+                <PageTransition>
+                  <Event />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/event/:eventId"
+              element={
+                <PageTransition>
+                  <IFSEC />
                 </PageTransition>
               }
             />
@@ -108,6 +130,7 @@ function InnerApp() {
                 </PageTransition>
               }
             />
+
             <Route
               path="/about-us"
               element={

@@ -16,7 +16,7 @@ import RightButtonIcon from "./Icons/RightButton.svg";
 const HeroSectionCarousel = ({ data }) => {
   const slides = data || [];
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [direction, setDirection] = useState(0); // -1 for left, 1 for right
+  const [direction, setDirection] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const slidesCount = slides.length;
 
@@ -35,7 +35,6 @@ const HeroSectionCarousel = ({ data }) => {
     setCurrentSlide(slide);
   };
 
-  // Auto-play
   useEffect(() => {
     if (slidesCount <= 1 || isPaused) return;
     const timer = setInterval(() => {
@@ -50,8 +49,7 @@ const HeroSectionCarousel = ({ data }) => {
 
   const activeSlide = slides[currentSlide];
   const title = activeSlide.title;
-
-  const bgImageDesktop = activeSlide.d_image ;
+  const bgImageDesktop = activeSlide.d_image;
   const bgImageMobile = activeSlide.m_image;
 
   const variants = {
@@ -75,7 +73,6 @@ const HeroSectionCarousel = ({ data }) => {
     <Box
       w="full"
       h="100vh"
-      // h={{ base: "812px", md: "982px" }}
       position="relative"
       overflow="hidden"
       bgImage={{ base: `url(${bgImageMobile})`, md: `url(${bgImageDesktop})` }}
@@ -107,23 +104,6 @@ const HeroSectionCarousel = ({ data }) => {
             left: 0,
           }}
         >
-          {/* Background Image */}
-          {/* <picture>
-            <source media="(max-width: 768px)" srcSet={bgImageMobile} />
-            <source media="(min-width: 769px)" srcSet={bgImageDesktop} />
-            <Image
-              src={bgImageDesktop}
-              alt="Hero Background"
-              objectFit="cover"
-              w="100%"
-              h="100%"
-              position="absolute"
-              top="0"
-              left="0"
-              zIndex={-1}
-            />
-          </picture> */}
-
           {title ? (
             <>
               <Box
@@ -145,12 +125,11 @@ const HeroSectionCarousel = ({ data }) => {
                 </Text>
               </Box>
 
-              {/* Button Bottom Left */}
               <Box
                 position="absolute"
                 bottom={{ base: "30px", md: "50px" }}
                 left={{ base: "50%", md: "50px" }}
-                transform={{ base: "translateX(-50%)", md: "none" }} // Center on mobile, left on desktop
+                transform={{ base: "translateX(-50%)", md: "none" }}
                 zIndex={2}
               >
                 <CustomButton
@@ -194,8 +173,14 @@ const HeroSectionCarousel = ({ data }) => {
                   md: activeSlide?.textProps?.desktop?.top || "5%",
                 }}
                 ml={{
-                  base: activeSlide?.textProps?.mobile?.left || "0",
-                  md: activeSlide?.textProps?.desktop?.left || "0",
+                  base:
+                    activeSlide?.textProps?.mobile?.textAlign === "center"
+                      ? "0"
+                      : activeSlide?.textProps?.mobile?.left || "0",
+                  md:
+                    activeSlide?.textProps?.desktop?.textAlign === "center"
+                      ? "0"
+                      : activeSlide?.textProps?.desktop?.left || "0",
                 }}
                 w={{
                   base: activeSlide?.textProps?.mobile?.width || "100%",
@@ -220,14 +205,30 @@ const HeroSectionCarousel = ({ data }) => {
                 >
                   {activeSlide.heading}
                 </Heading>
-                <Text
-                  as="p"
-                  fontSize={["14px", "18px", "18px", "18px"]}
-                  fontWeight="400"
-                  lineHeight={["18px", "20px", "20px", "25px"]}
-                  mb={6}
-                  // opacity={0.9}
-                  maxW="600px"
+                {activeSlide.description && (
+                  <Text
+                    as="p"
+                    fontSize={["14px", "18px", "18px", "18px"]}
+                    fontWeight="400"
+                    lineHeight={["18px", "20px", "20px", "25px"]}
+                    mb={6}
+                    maxW="600px"
+                    mx={{
+                      base:
+                        activeSlide?.textProps?.mobile?.textAlign === "center"
+                          ? "auto"
+                          : "0",
+                      md:
+                        activeSlide?.textProps?.desktop?.textAlign === "center"
+                          ? "auto"
+                          : "0",
+                    }}
+                  >
+                    {activeSlide.description}
+                  </Text>
+                )}
+                <Box
+                  display="inline-block"
                   mx={{
                     base:
                       activeSlide?.textProps?.mobile?.textAlign === "center"
@@ -239,59 +240,59 @@ const HeroSectionCarousel = ({ data }) => {
                         : "0",
                   }}
                 >
-                  {activeSlide.description}
-                </Text>
-                <CustomButton
-                  onClick={() =>
-                    window.open(activeSlide.buttonLink || "#", "_self")
-                  }
-                  width={{
-                    base: activeSlide?.buttonProps?.mobile?.width || "146px",
-                    md: activeSlide?.buttonProps?.desktop?.width || "171px",
-                  }}
-                  height={{
-                    base: activeSlide?.buttonProps?.mobile?.height || "36px",
-                    md: activeSlide?.buttonProps?.desktop?.height || "40px",
-                  }}
-                  bgColor={
-                    activeSlide?.buttonProps?.desktop?.bgColor ||
-                    "rgba(255,255,255,0.2)"
-                  }
-                  borderColor={{
-                    base:
-                      activeSlide?.buttonProps?.mobile?.borderColor || "white",
-                    md:
-                      activeSlide?.buttonProps?.desktop?.borderColor || "white",
-                  }}
-                  textColor={{
-                    base:
-                      activeSlide?.buttonProps?.mobile?.textColor || "white",
-                    md: activeSlide?.buttonProps?.desktop?.textColor || "white",
-                  }}
-                  hoverBorderColor={
-                    activeSlide?.buttonProps?.desktop?.borderHover ||
-                    activeSlide?.buttonProps?.desktop?.borderColor ||
-                    "#A4FF79"
-                  }
-                  hoverTextColor={
-                    activeSlide?.buttonProps?.desktop?.textHover || "#A4FF79"
-                  }
-                >
-                  {activeSlide.buttonText}
-                </CustomButton>
+                  <CustomButton
+                    onClick={() =>
+                      window.open(activeSlide.buttonLink || "#", "_self")
+                    }
+                    width={{
+                      base: activeSlide?.buttonProps?.mobile?.width || "146px",
+                      md: activeSlide?.buttonProps?.desktop?.width || "171px",
+                    }}
+                    height={{
+                      base: activeSlide?.buttonProps?.mobile?.height || "36px",
+                      md: activeSlide?.buttonProps?.desktop?.height || "40px",
+                    }}
+                    bgColor={
+                      activeSlide?.buttonProps?.desktop?.bgColor ||
+                      "rgba(255,255,255,0.2)"
+                    }
+                    borderColor={{
+                      base:
+                        activeSlide?.buttonProps?.mobile?.borderColor ||
+                        "white",
+                      md:
+                        activeSlide?.buttonProps?.desktop?.borderColor ||
+                        "white",
+                    }}
+                    textColor={{
+                      base:
+                        activeSlide?.buttonProps?.mobile?.textColor || "white",
+                      md:
+                        activeSlide?.buttonProps?.desktop?.textColor || "white",
+                    }}
+                    hoverBorderColor={
+                      activeSlide?.buttonProps?.desktop?.borderHover ||
+                      activeSlide?.buttonProps?.desktop?.borderColor ||
+                      "#A4FF79"
+                    }
+                    hoverTextColor={
+                      activeSlide?.buttonProps?.desktop?.textHover || "#A4FF79"
+                    }
+                  >
+                    {activeSlide.buttonText}
+                  </CustomButton>
+                </Box>
               </Box>
             </Flex>
           )}
         </motion.div>
       </AnimatePresence>
 
-      {/* Controls Container - Only show if > 1 slide */}
       {slidesCount > 1 && (
         <HStack
           position="absolute"
           bottom={{ base: 4, md: 8 }}
           px={{ base: 4, md: 8 }}
-          // right={{ base: 0, lg: 8 }}
           spacing={4}
           zIndex={2}
           justify={{ base: "space-between", md: "flex-end" }}
@@ -299,7 +300,6 @@ const HeroSectionCarousel = ({ data }) => {
           onMouseLeave={() => setIsPaused(false)}
           w="full"
         >
-          {/* Pagination Dots */}
           <HStack spacing={2} mr={8}>
             {slides.map((_, i) => (
               <Box
@@ -316,7 +316,6 @@ const HeroSectionCarousel = ({ data }) => {
             ))}
           </HStack>
 
-          {/* Navigation Buttons */}
           <Flex direction="row" gap={4}>
             <CustomButton
               onClick={prevSlide}

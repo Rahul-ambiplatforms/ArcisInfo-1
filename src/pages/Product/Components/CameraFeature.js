@@ -10,7 +10,7 @@ import {
   Icon,
 } from "@chakra-ui/react";
 
-const CameraFeature = ({ data }) => {
+const CameraFeature = ({ data, headingInBackground = false }) => {
   if (!data) return null;
 
   const { heading, description, d_image, m_image, featuresList, styles } = data;
@@ -33,33 +33,61 @@ const CameraFeature = ({ data }) => {
   const alignment = styles?.alignment || "center";
   const descriptionColor = styles?.descriptionColor || "gray.300";
   const featureColor = styles?.featureColor || "white";
+  const descriptionTextAlign = styles?.descriptionTextAlign || "justify";
+  const descriptionWidth = {
+    base: styles?.descriptionWidth?.mobile || "95%",
+    md: styles?.descriptionWidth?.tablet || "80%",
+    lg: styles?.descriptionWidth?.laptop || "80%",
+    xl: styles?.descriptionWidth?.bigscreen || "80%",
+  };
 
   return (
     <Box w="100%" mt={{ base: "5%", md: "2%" }}>
       <Box w="full" mx="auto">
         {/* Heading - Outside the Image */}
-        <Heading
-          as="h2"
-          fontSize={{ base: "24px", md: "36px" }}
-          fontWeight="600"
-          textAlign="center"
-          color="white"
-          mb={{ base: 4, md: 6 }}
-        >
-          {heading}
-        </Heading>
+        {!headingInBackground && (
+          <Heading
+            as="h2"
+            fontSize={{ base: "24px", md: "36px" }}
+            fontWeight="600"
+            textAlign="center"
+            color="white"
+            mb={{ base: 4, md: 6 }}
+          >
+            {heading}
+          </Heading>
+        )}
 
         {/* Image Section with Overlapping Description and Features */}
         <Box
           w="100vw"
-          h={{ base: "1086px", md: "1651px" }}
+          h={d_image || m_image ? { base: "1086px", md: "1651px" } : "auto"}
           position="relative"
-          backgroundImage={{ base: `url(${m_image})`, md: `url(${d_image})` }}
+          backgroundImage={
+            d_image || m_image
+              ? { base: `url(${m_image})`, md: `url(${d_image})` }
+              : "none"
+          }
           backgroundSize="cover"
           backgroundPosition="center"
           backgroundRepeat="no-repeat"
           overflow="hidden"
         >
+          {headingInBackground && (
+            <Heading
+              as="h2"
+              fontSize={{ base: "24px", md: "50px" }}
+              fontWeight="400"
+              textAlign="center"
+              width="100%"
+              color={styles?.headingColor || "white"}
+              mb={{ base: 4, md: 6 }}
+              px={{ base: 4, md: 8 }}
+              pt={{ base: 4, md: 6 }}
+            >
+              {heading}
+            </Heading>
+          )}
           {/* <Box
             w="100%"
             h="100%"
@@ -70,7 +98,7 @@ const CameraFeature = ({ data }) => {
           />{" "} */}
           {/* Optional overlay for readability */}
 
-          <Box position="relative" zIndex={1} px={{ base: 4, md: 8 }} pb={20}>
+          <Box position="relative" zIndex={1} px={{ base: 4, md: 2 }} pb={20}>
             {/* Description */}
             <VStack
               spacing={4}
@@ -81,8 +109,8 @@ const CameraFeature = ({ data }) => {
               <Text
                 fontSize={{ base: "14px", md: "16px" }}
                 color={descriptionColor}
-                textAlign="justify"
-                w={{ base: "95%", md: "80%" }}
+                textAlign={descriptionTextAlign}
+                w={descriptionWidth}
                 lineHeight={{ base: "15px", md: "20px" }}
               >
                 {description}
@@ -90,42 +118,49 @@ const CameraFeature = ({ data }) => {
             </VStack>
 
             {/* Features Grid */}
-            <Box mt={featuresMarginTop} w="100%">
-              <Flex
-                flexWrap="wrap"
-                justify="center"
-                gap={{ base: 2, md: 10 }} // Reduced gap for mobile to fit 3
-                textAlign={alignment}
-              >
-                {featuresList.map((feature, index) => (
-                  <VStack
-                    key={index}
-                    spacing={2}
-                    w={{ base: "30%", md: "20%" }} // 30% width for 3 items per row on mobile
-                    align="center"
-                  >
-                    <Box
-                      display="flex"
-                      alignItems="center"
-                      justifyContent="center"
-                      color={featureColor}
-                      // fontSize={{ base: "16px", md: "20px" }}
-                      w={{ base: "50px", md: "72px" }}
-                      h={{ base: "50px", md: "72px" }}
+            <Box
+              mt={featuresMarginTop}
+              w="100%"
+              display="flex"
+              justifyContent="center"
+            >
+              <Box w={{ base: "100%", md: "90%", lg: "80%" }}>
+                <Flex
+                  flexWrap="wrap"
+                  justify={styles?.justify || "center"}
+                  gap={{ base: 2, md: 10 }} // Reduced gap for mobile to fit 3
+                  textAlign={alignment}
+                >
+                  {featuresList.map((feature, index) => (
+                    <VStack
+                      key={index}
+                      spacing={2}
+                      w={{ base: "30%", md: "20%" }} // 30% width for 3 items per row on mobile
+                      align="center"
                     >
-                      {feature.icon}
-                    </Box>
-                    <Text
-                      as="h3"
-                      fontSize={{ base: "14px", md: "20px" }}
-                      fontWeight="400"
-                      color={featureColor}
-                    >
-                      {feature.name}
-                    </Text>
-                  </VStack>
-                ))}
-              </Flex>
+                      <Box
+                        display="flex"
+                        alignItems="center"
+                        justifyContent="center"
+                        color={featureColor}
+                        // fontSize={{ base: "16px", md: "20px" }}
+                        w={{ base: "50px", md: "72px" }}
+                        h={{ base: "50px", md: "72px" }}
+                      >
+                        {feature.icon}
+                      </Box>
+                      <Text
+                        as="h3"
+                        fontSize={{ base: "14px", md: "20px" }}
+                        fontWeight="400"
+                        color={featureColor}
+                      >
+                        {feature.name}
+                      </Text>
+                    </VStack>
+                  ))}
+                </Flex>
+              </Box>
             </Box>
           </Box>
         </Box>

@@ -63,18 +63,18 @@ export const dropdownData = {
           },
         ],
       },
-      // {
-      //   label: "Arcis Bridge Device",
-      //   link: "/abd",
-      // },
-      // {
-      //   label: "STQC Cloud VMS",
-      //   link: "/arcis-vms",
-      // },
-      // {
-      //   label: "NVR/DVR",
-      //   link: "/arcis-vms",
-      // },
+      {
+        label: "Arcis Bridge Device",
+        link: "/arcis-bridge-device",
+      },
+      {
+        label: "STQC Cloud VMS",
+        link: "/arcis-vms",
+      },
+      {
+        label: "NVR/DVR",
+        link: "/arcis-nvr",
+      },
     ],
   },
   company: {
@@ -87,6 +87,10 @@ export const dropdownData = {
       {
         label: "Why ArcisAI",
         link: "/why-choose-arcisai",
+      },
+      {
+        label: "Event",
+        link: "/event",
       },
       {
         label: "Privacy Policy",
