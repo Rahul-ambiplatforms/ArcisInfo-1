@@ -1132,7 +1132,7 @@ export const Series = {
       link: "/contact-us",
       textPosition: {
         desktop: { top: "50%", left: "5%" },
-        mobile: { top: "70%", left: "5%" },
+        mobile: { top: "65%", left: "5%" },
       },
       buttonProps: {
         desktop: {
@@ -1147,7 +1147,7 @@ export const Series = {
           borderColor: "#7F56D9",
           bgColor: "",
           width: "150px",
-          height: "",
+          height: "34px",
         },
       },
       textProps: {
@@ -1584,7 +1584,7 @@ export const Series = {
             { label: "Storage Capacity", value: "1× SATA, up to 6TB" },
             { label: "PoE Ports", value: "4× PoE Ports" },
           ],
-          downloadLink: "/pdfs/nvr-32-channel.pdf",
+          downloadLink: "/pdfs/NVR AD-N0481-PoE.pdf",
           downloadText: "Download PDF",
           buttonWidth: "160px",
           buttonHeight: "40px",
@@ -1609,7 +1609,7 @@ export const Series = {
             { label: "Storage Capacity", value: "1× SATA, up to 6TB" },
             { label: "PoE Ports", value: "8× PoE Ports" },
           ],
-          downloadLink: "/pdfs/nvr-32-channel.pdf",
+          downloadLink: "/pdfs/NVR AD-N0881-PoE.pdf",
           downloadText: "Download PDF",
           buttonWidth: "160px",
           buttonHeight: "40px",
@@ -1620,7 +1620,7 @@ export const Series = {
           buttonHoverTextColor: "#A4FF79",
         },
         {
-          name: "AD-N0481-PoE | 16 Channel",
+          name: "AD-N1681 | 16 Channel",
           image: "/images/nvr-4-channel.png",
           headerBgColor: "#333333", // Optional: specific color for header
           contentBgColor: "#000", // Background for expanded content
@@ -1634,7 +1634,7 @@ export const Series = {
             { label: "Storage Capacity", value: "1× SATA, up to 6TB" },
             { label: "PoE Ports", value: "1× PoE Ports" },
           ],
-          downloadLink: "/pdfs/nvr-32-channel.pdf",
+          downloadLink: "/pdfs/NVR AD-N1681.pdf",
           downloadText: "Download PDF",
           buttonWidth: "160px",
           buttonHeight: "40px",
@@ -1659,7 +1659,7 @@ export const Series = {
             { label: "Storage Capacity", value: "2× SATA, up to 6TB" },
             { label: "PoE Ports", value: "1× PoE Ports" },
           ],
-          downloadLink: "/pdfs/nvr-32-channel.pdf",
+          downloadLink: "/pdfs/NVR AD-N3251.pdf",
           downloadText: "Download PDF",
           buttonWidth: "160px",
           buttonHeight: "40px",

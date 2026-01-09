@@ -44,25 +44,31 @@ const EventCarousel = ({ data }) => {
   // Merge shared props with event-specific data
   const activeEvent = {
     ...events[currentEvent],
+    sectionTitle: data?.sectionTitle,
     bgColor: events[currentEvent]?.bgColor || data?.bgColor,
     headingProps: events[currentEvent]?.headingProps || data?.headingProps,
+    description: data?.description,
     descriptionProps:
       events[currentEvent]?.descriptionProps || data?.descriptionProps,
-    logo: data?.logo, // Use shared logo from carousel level
+    logo: data?.logo,
     logoProps: events[currentEvent]?.logoProps || data?.logoProps,
+    detailsLink: data?.detailsLink,
     buttonProps: events[currentEvent]?.buttonProps || data?.buttonProps,
   };
 
-  const variants = {
-    enter: {
+  const slideVariants = {
+    enter: (direction) => ({
+      x: direction > 0 ? "100%" : "-100%",
       opacity: 0,
-    },
+    }),
     center: {
+      x: 0,
       opacity: 1,
     },
-    exit: {
+    exit: (direction) => ({
+      x: direction > 0 ? "-100%" : "100%",
       opacity: 0,
-    },
+    }),
   };
 
   return (
@@ -108,18 +114,20 @@ const EventCarousel = ({ data }) => {
         onMouseLeave={() => setIsPaused(false)}
         px={{ base: 4, md: 8 }}
       >
-        {/* Only Image is animated */}
-        <AnimatePresence initial={false} mode="wait">
+        {/* Image with sliding animation */}
+        <AnimatePresence initial={false} custom={direction} mode="wait">
           <motion.div
             key={currentEvent}
-            variants={variants}
+            custom={direction}
+            variants={slideVariants}
             initial="enter"
             animate="center"
             exit="exit"
             transition={{
-              duration: 0.3,
-              ease: "easeInOut",
+              x: { type: "spring", stiffness: 400, damping: 35 },
+              opacity: { duration: 0.15 },
             }}
+            style={{ width: "100%" }}
           >
             {/* Event Image */}
             <Box w="full" position="relative" overflow="hidden">
@@ -167,7 +175,7 @@ const EventCarousel = ({ data }) => {
             <Flex direction="column" gap={8} align="flex-end">
               {/* Navigation Controls */}
               {eventsCount > 1 && (
-                <HStack spacing={8}>
+                <HStack spacing={4}>
                   {/* Dots */}
                   <HStack spacing={2}>
                     {events.map((_, i) => (
@@ -186,7 +194,7 @@ const EventCarousel = ({ data }) => {
                   </HStack>
 
                   {/* Arrow Buttons */}
-                  <Flex gap={2}>
+                  <Flex gap={4}>
                     <CustomButton
                       onClick={prevEvent}
                       width="40px"
@@ -347,7 +355,6 @@ const EventCarousel = ({ data }) => {
                   <CustomButton
                     onClick={() => {
                       const link = activeEvent.detailsLink;
-                      // Check if it's an internal link (starts with /)
                       if (link.startsWith("/")) {
                         navigate(link);
                       } else {
@@ -400,7 +407,7 @@ const EventCarousel = ({ data }) => {
                   </HStack>
 
                   {/* Arrow Buttons */}
-                  <Flex gap={2}>
+                  <Flex gap={4}>
                     <CustomButton
                       onClick={prevEvent}
                       width="40px"

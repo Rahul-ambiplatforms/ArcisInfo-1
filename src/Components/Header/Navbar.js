@@ -28,9 +28,10 @@ import {
   AccordionPanel,
   AccordionIcon,
 } from "@chakra-ui/react";
-import { ChevronDownIcon, HamburgerIcon } from "@chakra-ui/icons";
+import { HamburgerIcon } from "@chakra-ui/icons";
 import { FaCamera, FaVideo, FaEye } from "react-icons/fa";
 import CustomButton from "../CustomButton";
+import { ReactComponent as NavbarDownIcon } from "../Icons/Navbar_down_icon.svg";
 import { Link as RouterLink } from "react-router-dom";
 import { dropdownData, actionLinks, loginButton } from "./navbarData";
 
@@ -57,6 +58,11 @@ const NavDropdown = ({ title, data }) => {
   const groups = data.items?.filter((item) => item.group) || [];
   const standaloneItems = data.items?.filter((item) => !item.group) || [];
 
+  // State for tracking which product is being hovered (for PRODUCTS menu)
+  const [hoveredProduct, setHoveredProduct] = useState(
+    isMegaMenu ? "Eco Series" : null
+  );
+
   return (
     <Menu
       isOpen={isOpen}
@@ -68,7 +74,7 @@ const NavDropdown = ({ title, data }) => {
       <MenuButton
         as={Button}
         variant="ghost"
-        rightIcon={<ChevronDownIcon boxSize={3} />}
+        rightIcon={<Icon as={NavbarDownIcon} boxSize={3} />}
         color="white"
         _hover={{ color: "white", bg: "whiteAlpha.100" }}
         _active={{ bg: "transparent" }}
@@ -87,91 +93,110 @@ const NavDropdown = ({ title, data }) => {
         borderColor="gray.800"
         boxShadow="dark-lg"
         py={4}
-        px={isMegaMenu ? 6 : 2}
-        minW={isMegaMenu ? "300px" : data.items?.[0]?.group ? "250px" : "200px"}
+        px={isMegaMenu ? 0 : 2}
+        minW={isMegaMenu ? "500px" : data.items?.[0]?.group ? "250px" : "200px"}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
         {isMegaMenu ? (
-          <Flex justify="space-between" align="flex-start" gap={8}>
-            {/* Render Groups */}
-            {groups.map((item, index) => (
-              <Box key={index}>
-                <Box
-                  mb={2}
-                  color="gray.500"
-                  fontSize="14px"
-                  letterSpacing="1px"
-                  fontWeight="bold"
-                  textTransform="uppercase"
-                >
-                  {item.groupLink ? (
+          <Flex>
+            {/* Left Column: Main Product Names */}
+            <Box
+              w="50%"
+              borderRight="1px solid"
+              borderColor="gray.800"
+              py={2}
+              px={4}
+            >
+              <Stack spacing={0}>
+                {/* Groups with subpages */}
+                {groups.map((item, index) => (
+                  <Box
+                    key={index}
+                    position="relative"
+                    borderRadius="md"
+                    onMouseEnter={() => setHoveredProduct(item.group)}
+                  >
                     <Link
                       as={RouterLink}
                       to={item.groupLink}
-                      _hover={{ color: "white", textDecoration: "none" }}
+                      display="flex"
+                      justifyContent="space-between"
+                      alignItems="center"
+                      py={2}
+                      px={3}
+                      color="white"
+                      fontSize="14px"
+                      fontWeight="500"
+                      bg={
+                        hoveredProduct === item.group
+                          ? "gray.800"
+                          : "transparent"
+                      }
+                      _hover={{ bg: "gray.800", textDecoration: "none" }}
+                      borderRadius="md"
                       onClick={() => setIsOpen(false)}
                     >
-                      {item.group}
+                      <Text>{item.group}</Text>
+                      <Icon
+                        as={NavbarDownIcon}
+                        boxSize={3}
+                        color="gray.400"
+                        transform="rotate(-90deg)"
+                      />
                     </Link>
-                  ) : (
-                    item.group
-                  )}
-                </Box>
-                <Stack spacing={1}>
-                  {item.items?.map((subItem, subIndex) => (
-                    <MenuItem
-                      key={subIndex}
-                      as={RouterLink}
-                      to={subItem.link}
-                      bg="transparent"
-                      _hover={{ bg: "gray.800", color: "white" }}
-                      color="gray.300"
-                      fontSize="14px"
-                      px={2}
-                      py={1}
-                    >
-                      {subItem.label}
-                    </MenuItem>
-                  ))}
-                </Stack>
-              </Box>
-            ))}
+                  </Box>
+                ))}
 
-            {/* Render Standalone Items in a column */}
-            {standaloneItems.length > 0 && (
-              <Box>
-                <Box
-                  mb={2}
-                  color="gray.500"
-                  fontSize="12px"
-                  letterSpacing="1px"
-                  fontWeight="bold"
-                  textTransform="uppercase"
-                  opacity={0}
-                >
-                  Others
-                </Box>
-                <Stack spacing={1}>
-                  {standaloneItems.map((item, index) => (
-                    <MenuItem
-                      key={index}
+                {/* Standalone items without subpages */}
+                {standaloneItems.map((item, index) => (
+                  <Box key={index} borderRadius="md">
+                    <Link
                       as={RouterLink}
                       to={item.link}
-                      bg="transparent"
-                      _hover={{ bg: "gray.800", color: "white" }}
-                      color="gray.300"
+                      display="block"
+                      py={2}
+                      px={3}
+                      color="white"
                       fontSize="14px"
-                      px={2}
-                      py={1}
+                      fontWeight="500"
+                      _hover={{ bg: "gray.800", textDecoration: "none" }}
                       borderRadius="md"
+                      onClick={() => setIsOpen(false)}
                     >
                       {item.label}
-                    </MenuItem>
-                  ))}
+                    </Link>
+                  </Box>
+                ))}
+              </Stack>
+            </Box>
+
+            {/* Right Column: Subpages (shown on hover) */}
+            <Box w="50%" py={2} px={4}>
+              {hoveredProduct && (
+                <Stack spacing={1}>
+                  {groups
+                    .find((item) => item.group === hoveredProduct)
+                    ?.items?.map((subItem, subIndex) => (
+                      <MenuItem
+                        key={subIndex}
+                        as={RouterLink}
+                        to={subItem.link}
+                        bg="transparent"
+                        _hover={{ bg: "gray.800", color: "white" }}
+                        color="gray.300"
+                        fontSize="14px"
+                        px={3}
+                        py={2}
+                        borderRadius="md"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {subItem.label}
+                      </MenuItem>
+                    ))}
                 </Stack>
-              </Box>
-            )}
+              )}
+            </Box>
           </Flex>
         ) : (
           // Standard Vertical Menu
@@ -335,7 +360,12 @@ const Navbar = () => {
         </HStack>
 
         {/* MOBILE BURGER */}
-        <CustomButton w="50px" h="50px" display={{ base: "flex", lg: "none" }}>
+        <CustomButton
+          showTicks={false}
+          w="50px"
+          h="50px"
+          display={{ base: "flex", lg: "none" }}
+        >
           <IconButton
             display={{ base: "flex", lg: "none" }}
             icon={<HamburgerIcon boxSize={6} />}

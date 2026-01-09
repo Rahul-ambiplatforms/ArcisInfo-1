@@ -327,7 +327,7 @@ const Footer = () => {
 
             {/* Contact Information */}
             <VStack
-              align={{ base: "flex-start", md: "flex-end" }}
+              align={{ base: "flex-start", md: "flex-start" }}
               spacing={4}
               color="white"
             >
@@ -393,8 +393,6 @@ const Footer = () => {
           justify="space-between"
           align={{ base: "left", md: "center" }}
           pt={4}
-          borderTop="1px solid"
-          borderColor="gray.800"
           gap={4}
         >
           {/* Left: Arcis Logo */}

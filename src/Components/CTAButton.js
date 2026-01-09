@@ -111,6 +111,8 @@ const CTAButton = ({
           position="absolute"
           top={{ base: mobile?.top, md: desktop?.top }}
           left={{ base: mobile?.left, md: desktop?.left }}
+          right={{ base: mobile?.right, md: desktop?.right }}
+          bottom={{ base: mobile?.bottom, md: desktop?.bottom }}
           transform={{
             base: mobile?.top === "50%" ? "translateY(-50%)" : "none",
             md: desktop?.top === "50%" ? "translateY(-50%)" : "none",

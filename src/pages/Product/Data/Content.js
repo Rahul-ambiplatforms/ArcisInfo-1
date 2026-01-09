@@ -786,7 +786,7 @@ export const Product = {
           textColor: "linear(45deg, #171717, #7F56D9)",
           alignItems: "flex-end",
           textAlign: "right",
-          width: "90%",
+          width: "100%",
         },
       },
       textColor: "linear(45deg, #171717, #7F56D9)",
@@ -1150,7 +1150,7 @@ export const Product = {
       link: "/contact-us",
       textPosition: {
         desktop: { top: "50%", left: "5%" },
-        mobile: { top: "65%", left: "5%" },
+        mobile: { top: "65%", right: "5%" },
       },
       buttonProps: {
         desktop: {
@@ -1165,7 +1165,7 @@ export const Product = {
           borderColor: "#7F56D9",
           bgColor: "",
           width: "200px",
-          height: "",
+          height: "34px",
         },
       },
       textProps: {
@@ -1177,8 +1177,8 @@ export const Product = {
         },
         mobile: {
           textColor: "linear(45deg, #171717, #7F56D9)",
-          alignItems: "flex-start",
-          textAlign: "left",
+          alignItems: "flex-end",
+          textAlign: "right",
           width: "90%",
         },
       },
@@ -1605,7 +1605,7 @@ export const Product = {
       link: "/contact-us",
       textPosition: {
         desktop: { top: "50%", left: "-4%" },
-        mobile: { top: "70%", left: "4%" },
+        mobile: { top: "60%", left: "4%" },
       },
       buttonProps: {
         desktop: {
@@ -1620,7 +1620,7 @@ export const Product = {
           borderColor: "#7F56D9",
           bgColor: "",
           width: "200px",
-          height: "",
+          height: "34px",
         },
       },
       textProps: {
@@ -1634,7 +1634,7 @@ export const Product = {
           textColor: "linear(45deg, #171717, #7F56D9)",
           alignItems: "flex-start",
           textAlign: "left",
-          width: "100%",
+          width: "80%",
         },
       },
       textColor: "linear(45deg, #171717, #7F56D9)",
@@ -2033,7 +2033,7 @@ export const Product = {
       link: "/contact-us",
       textPosition: {
         desktop: { top: "50%", left: "-6%" },
-        mobile: { top: "65%", left: "-2%" },
+        mobile: { top: "73%", left: "-2%" },
       },
       buttonProps: {
         desktop: {
@@ -2048,7 +2048,7 @@ export const Product = {
           borderColor: "#7F56D9",
           bgColor: "",
           width: "270px",
-          height: "",
+          height: "34px",
         },
       },
       textProps: {
@@ -2474,9 +2474,10 @@ export const Product = {
         mobile: {
           textColor: "linear(45deg, #171717, #7F56D9)",
           borderColor: "#7F56D9",
+
           bgColor: "",
-          width: "200px",
-          height: "",
+          width: "250px",
+          height: "43px",
         },
       },
       textProps: {

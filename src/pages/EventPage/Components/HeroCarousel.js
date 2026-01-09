@@ -43,7 +43,7 @@ const HeroCarousel = ({ data }) => {
 
   // Auto-advance every 5 seconds
   useEffect(() => {
-    if (isPaused || imagesCount <= 1) return;
+    if (isPaused || imagesCount <= 4) return;
 
     const interval = setInterval(() => {
       nextSlide();
@@ -205,7 +205,7 @@ const HeroCarousel = ({ data }) => {
           </Box>
 
           {/* Navigation Controls - Below Images */}
-          {imagesCount > 1 && (
+          {imagesCount > 4 && (
             <HStack
               mt={8}
               spacing={4}
