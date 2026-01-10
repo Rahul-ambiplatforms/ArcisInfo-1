@@ -489,7 +489,7 @@ export const IFSECData = {
     buttonText: "View Products",
     d_image: "/images/abd_cta.png",
     m_Image: "/images/whyarcis_cta_mobile.png",
-    link: "/products",
+    link: "/s-series",
     textPosition: {
       desktop: { top: "50%", left: "0%" },
       mobile: { top: "50%", left: "0%" },
