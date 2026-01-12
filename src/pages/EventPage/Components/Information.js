@@ -1,5 +1,47 @@
 import React from "react";
 import { Box, Heading, Text, VStack } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+
+// Helper function to parse text and render links for format [text](url)
+const parseText = (text) => {
+  if (typeof text !== "string") return text;
+
+  // Regex to match [text](url)
+  const regex = /\[(.*?)\]\((.*?)\)/g;
+  const parts = [];
+  let lastIndex = 0;
+  let match;
+
+  while ((match = regex.exec(text)) !== null) {
+    // Push text before the match
+    if (match.index > lastIndex) {
+      parts.push(text.substring(lastIndex, match.index));
+    }
+
+    // Push the link component
+    parts.push(
+      <Link
+        key={match.index}
+        to={match[2]}
+        style={{
+          color: "#fff",
+          textDecoration: "underline",
+        }}
+      >
+        {match[1]}
+      </Link>
+    );
+
+    lastIndex = regex.lastIndex;
+  }
+
+  // Push remaining text
+  if (lastIndex < text.length) {
+    parts.push(text.substring(lastIndex));
+  }
+
+  return parts.length > 0 ? parts : text;
+};
 
 const Information = ({ data }) => {
   const { sections } = data;
@@ -78,7 +120,7 @@ const Information = ({ data }) => {
                       w="100%"
                       minH={paragraph === "" ? "24px" : "auto"}
                     >
-                      {paragraph || "\u00A0"}
+                      {parseText(paragraph || "\u00A0")}
                     </Text>
                   ))}
                 </VStack>
@@ -107,7 +149,7 @@ const Information = ({ data }) => {
                   whiteSpace="pre-line"
                   w="100%"
                 >
-                  {section.description}
+                  {parseText(section.description)}
                 </Text>
               )}
             </Box>

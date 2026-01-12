@@ -17,7 +17,7 @@ const MainProduct = ({ seriesType = "nvrDvrSeries" }) => {
 
   // Map URL param to data key
   let selectedSeries = seriesType;
-  if (seriesId === "arcis-vms") {
+  if (seriesId === "cloud-vms") {
     selectedSeries = "cloudVMS";
   } else if (seriesId === "arcis-bridge-device") {
     selectedSeries = "arcisBridgeDevice";
@@ -30,7 +30,7 @@ const MainProduct = ({ seriesType = "nvrDvrSeries" }) => {
 
   // Get SEO Data Key
   const getSeoKey = (param) => {
-    if (param === "arcis-vms") return "cloud-vms";
+    if (param === "cloud-vms") return "cloud-vms";
     return param;
   };
 

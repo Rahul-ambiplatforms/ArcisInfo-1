@@ -68,11 +68,11 @@ export const dropdownData = {
         link: "/arcis-bridge-device",
       },
       {
-        label: "STQC Cloud VMS",
-        link: "/arcis-vms",
+        label: "Cloud Video Management system",
+        link: "/cloud-vms",
       },
       {
-        label: "NVR/DVR",
+        label: "Network video recorder",
         link: "/arcis-nvr",
       },
     ],

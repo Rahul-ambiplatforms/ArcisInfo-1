@@ -915,7 +915,7 @@ export const Series = {
           "AI-powered, STQC-certified Cloud Video management system designed for India’s modern, large-scale surveillance needs with secure monitoring and smart analytics.",
         d_image: "/images/STQC_hero_main.png",
         m_image: "/images/STQC_hero_main_mobile.png",
-        buttonText: "Talk to our Expert",
+        buttonText: "Request Demo",
         buttonLink: "/contact-us",
         sectionProps: {
           desktop: {
@@ -1126,7 +1126,7 @@ export const Series = {
     },
     CTAButton1: {
       data: "Discover ArcisAI's STQC-Certified Cloud VMS for Smarter Surveillance",
-      buttonText: "Try ArcisGPT",
+      buttonText: "Request Demo",
       d_image: "/images/STQC_cta.png",
       m_Image: "/images/STQC_cta_mobile.png",
       link: "/contact-us",
@@ -1191,7 +1191,7 @@ export const Series = {
           "Connect all existing ONVIF cameras to ArcisAI VMS for cloud monitoring, centralized management, and smart features—cost-effectively and hassle-free.",
         d_image: "/images/abd_hero_main.png",
         m_image: "/images/abd_hero_main_mobile.png",
-        buttonText: "Lets Talk",
+        buttonText: "Get a Quote for ABD",
         buttonLink: "/contact-us",
         sectionProps: {
           desktop: {
@@ -1241,57 +1241,57 @@ export const Series = {
         },
       },
     ],
-    // informationData: {
-    //   title: "What is Arcis Bridge Device (ABD)?",
-    //   paragraphs: [
-    //     "The ArcisAI Bridge Device (ABD) is a compact, intelligent device that transforms your existing CCTV setup into a cloud-ready, smart surveillance system.",
-    //     "Most organizations want AI-enabled, cloud-based monitoring, but replacing an entire camera setup is expensive and impractical. ABD allows you to keep every existing ONVIF camera and instantly connect it to the ArcisAI VMS platform, enabling centralized control, cloud storage, alerts, and reporting—all from a single interface.",
-    //   ],
-    //   sectionProps: {
-    //     desktop: {
-    //       bgColor: "#191919",
-    //       paddingY: "50px",
-    //       paddingX: "20px",
-    //       maxWidth: "100%",
-    //       display: "flex",
-    //       justifyContent: "center",
-    //     },
-    //     mobile: {
-    //       paddingY: "40px",
-    //       paddingX: "20px",
-    //       display: "flex",
-    //       justifyContent: "center",
-    //     },
-    //   },
-    //   contentProps: {
-    //     desktop: {
-    //       flex: "1",
-    //       width: "100%", // NEW: Set to 80%, 85%, or 90% as needed
-    //       contentMaxWidth: "1500px", // OPTIONAL: Maximum width constraint
-    //       textAlign: "center",
-    //       titleSize: "60px",
-    //       titleWeight: "400",
-    //       titleColor: "#fff",
-    //       titleMarginBottom: "20px",
-    //       titleLineHeight: "50px",
-    //       descSize: "18px",
-    //       descWeight: "400",
-    //       descColor: "#b8b8b8",
-    //       descLineHeight: "22px",
-    //       descMaxWidth: "1650px",
-    //       paragraphSpacing: "16px",
-    //     },
-    //     mobile: {
-    //       textAlign: "center",
-    //       titleSize: "24px",
-    //       titleMarginBottom: "16px",
-    //       titleLineHeight: "32px",
-    //       descSize: "13px",
-    //       descLineHeight: "20px",
-    //       paragraphSpacing: "14px",
-    //     },
-    //   },
-    // },
+    informationData: {
+      title: "What is Arcis Bridge Device (ABD)?",
+      paragraphs: [
+        "The ArcisAI Bridge Device (ABD) is a compact, intelligent device that transforms your existing CCTV setup into a cloud-ready, smart surveillance system.",
+        "Most organizations want AI-enabled, cloud-based monitoring, but replacing an entire camera setup is expensive and impractical. ABD allows you to keep every existing ONVIF camera and instantly connect it to the ArcisAI VMS platform, enabling centralized control, cloud storage, alerts, and reporting—all from a single interface.",
+      ],
+      sectionProps: {
+        desktop: {
+          bgColor: "#191919",
+          paddingY: "50px",
+          paddingX: "20px",
+          maxWidth: "100%",
+          display: "flex",
+          justifyContent: "center",
+        },
+        mobile: {
+          paddingY: "40px",
+          paddingX: "20px",
+          display: "flex",
+          justifyContent: "center",
+        },
+      },
+      contentProps: {
+        desktop: {
+          flex: "1",
+          width: "100%", // NEW: Set to 80%, 85%, or 90% as needed
+          contentMaxWidth: "1500px", // OPTIONAL: Maximum width constraint
+          textAlign: "center",
+          titleSize: "60px",
+          titleWeight: "400",
+          titleColor: "#fff",
+          titleMarginBottom: "20px",
+          titleLineHeight: "50px",
+          descSize: "20px",
+          descWeight: "400",
+          descColor: "#fff",
+          descLineHeight: "22px",
+          descMaxWidth: "1650px",
+          paragraphSpacing: "16px",
+        },
+        mobile: {
+          textAlign: "center",
+          titleSize: "24px",
+          titleMarginBottom: "16px",
+          titleLineHeight: "32px",
+          descSize: "13px",
+          descLineHeight: "20px",
+          paragraphSpacing: "14px",
+        },
+      },
+    },
     features: {
       d_image: "/images/abd_features.png",
       m_image: "/images/abd_features_mobile.png",
@@ -1435,7 +1435,7 @@ export const Series = {
 
         d_image: "/images/nvr_hero_main.png",
         m_image: "/images/nvr_hero_main_mobile.png",
-        buttonText: "Lets Talk",
+        buttonText: "Request Product Details",
         buttonLink: "/contact-us",
         sectionProps: {
           desktop: {
@@ -1677,8 +1677,7 @@ export const Series = {
       heading:
         "Powerful Network Video Recorders Built for 24/7 CCTV Security Surveillance",
       description: [
-        "ArcisAI Network Video Recorders deliver stable, high-resolution recording for 4CH, 8CH, 16CH, and 32CH CCTV setups. Built with high bandwidth performance, PoE support, and long-term storage capacity, these NVRs ensure smooth video streaming, clear playback, and uninterrupted 24/7 surveillance—ideal for commercial, industrial, and enterprise environments.",
-        "Whether you’re deploying a small office system or managing multi-location surveillance, ArcisAI NVRs offer the reliability, scalability, and compatibility required for modern security infrastructures.",
+        "ArcisAI Network Video Recorders deliver stable, high-resolution recording for 4CH, 8CH, 16CH, and 32CH CCTV setups. Built with high bandwidth performance, PoE support, and long-term storage capacity, these NVRs ensure smooth video streaming, clear playback, and uninterrupted 24/7 surveillance—ideal for commercial, industrial, and enterprise environments. Whether you’re deploying a small office system or managing multi-location surveillance, ArcisAI NVRs offer the reliability, scalability, and compatibility required for modern security infrastructures.",
       ],
       styles: {
         contentMarginTop: {
@@ -1701,8 +1700,8 @@ export const Series = {
         descriptionWidth: {
           mobile: "90%",
           tablet: "70%",
-          laptop: "100%",
-          bigscreen: "100%",
+          laptop: "99%",
+          bigscreen: "99%",
         },
       },
       featuresList: [
@@ -1714,7 +1713,7 @@ export const Series = {
         { name: "ONVIF Compatible", icon: <NvrIcon4 /> },
         { name: "Secure Recording", icon: <NvrIcon2 /> },
         { name: "Multi-Site Management", icon: <NvrIcon5 /> },
-        { name: "Stable 24/7 Operation", icon: <ArcisIcon7 /> },
+        // { name: "Stable 24/7 Operation", icon: <ArcisIcon7 /> },
       ],
     },
     Innovation: {
@@ -1760,8 +1759,8 @@ export const Series = {
       ],
     },
     CTAButton1: {
-      data: "Modernize Your Existing CCTV Surveillance With Arcis Bridge Device",
-      buttonText: "Schedule a Demo",
+      data: "Choose the Right NVR Device to Power Your CCTV Surveillance System",
+      buttonText: "Enquire Now",
       d_image: "/images/abd_cta.png",
       m_Image: "/images/whyarcis_cta_mobile.png",
       link: "/contact-us",

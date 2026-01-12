@@ -97,9 +97,10 @@ export const EventData = {
   ],
   carousel: {
     sectionTitle: "A Glimpse into Past Events", // Shared heading for carousel
+    eventHeading: "IFSEC India 2025", // Dynamic heading above description
     logo: "/images/event_home_logo1.png", // Shared logo for all carousel slides
     description:
-      "Explore how ArcisAI showcased its next-gen AI CCTV cameras, EdgeAI, CloudAI, GenAI technologies and enterprise surveillance solutions at IFSEC India 2025. From product unveilings to live demos and industry interactions, get the full highlight of ArcisAI's presence at this premier security exhibition.",
+      "Explore how ArcisAI showcased its next-gen AI CCTV cameras, EdgeAI, CloudAI, GenAI technologies and enterprise surveillance solutions at IFSEC India Expo 2025. From product unveilings to live demos and industry interactions, get the full highlight of ArcisAI’s presence at this premier security exhibition.",
     detailsLink: "/event/ifsec-india-2025", // Shared button link for all carousel slides
     events: [
       {
@@ -109,26 +110,20 @@ export const EventData = {
         image: "/images/event_carousel_1.png",
         mobileImage: "/images/event_carousel_mobile_1.png",
       },
+
       {
         id: 2,
-        title: "Smart Tech Expo 2024",
-        eventName: "Smart Tech",
+        title: "IFSEC India 2024",
+        eventName: "IFSEC",
         image: "/images/event_carousel_2.png",
         mobileImage: "/images/event_carousel_mobile_2.png",
       },
       {
         id: 3,
-        title: "Event 3",
-        eventName: "Event 3",
+        title: "IFSEC India 2023",
+        eventName: "IFSEC",
         image: "/images/event_carousel_3.png",
         mobileImage: "/images/event_carousel_mobile_3.png",
-      },
-      {
-        id: 4,
-        title: "Event 4",
-        eventName: "Event 4",
-        image: "/images/event_carousel_4.png",
-        mobileImage: "/images/event_carousel_mobile_4.png",
       },
     ],
     bgColor: "#000",
@@ -144,6 +139,19 @@ export const EventData = {
         fontWeight: "400",
         color: "white",
         marginBottom: "20px", // Reduced from 38px
+      },
+    },
+    eventHeadingProps: {
+      desktop: {
+        fontSize: "20px",
+        fontWeight: "600",
+        color: "white",
+      },
+      mobile: {
+        fontSize: "16px",
+        fontWeight: "600",
+        color: "white",
+        marginBottom: "8px",
       },
     },
     descriptionProps: {
@@ -164,8 +172,8 @@ export const EventData = {
       desktop: {
         boxBg: "white",
         boxPadding: "12px",
-        logoHeight: "80px",
-        logoWidth: "80px",
+        logoHeight: "100px",
+        logoWidth: "100px",
       },
       mobile: {
         boxBg: "white",
@@ -387,7 +395,7 @@ export const IFSECData = {
         description: [
           "At IFSEC India, ArcisAI unveiled a broader surveillance ecosystem designed to give businesses more intelligent, unified and scalable monitoring options. The ArcisAI VMS continued to attract attention for its simplified multi-location control, STQC-ready framework and real-time AI alerts, but the spotlight this year shifted to the newly introduced hardware additions that extend the ArcisAI monitoring stack.",
           "Enterprise visitors explored the upgraded ArcisAI NVR solutions built for dependable AI event handling, long-duration recording and effortless integration with both AI CCTV cameras and conventional IP cameras. The NVR range demonstrated how businesses can achieve smoother playback, safer storage and centralised management across retail, industrial and smart-infrastructure setups.",
-          "Alongside the NVR lineup, ArcisAI also introduced new Eco-Series cameras, 3MP/5MP video variants, compact Baby PTZ models and the ABD integration device—enabling existing third-party CCTV installations to transition into a modern AI-powered surveillance system without hardware replacement. Together, these additions strengthened ArcisAI’s position as a leading Indian CCTV camera brand delivering end-to-end smart surveillance solutions.",
+          "Alongside the NVR lineup, ArcisAI also introduced new Eco-Series cameras, 3MP/5MP video variants, compact Baby PTZ models and the ABD integration device—enabling existing third-party CCTV installations to transition into a modern AI-powered surveillance system without hardware replacement. Together, these additions strengthened ArcisAI’s position as a [leading Indian CCTV camera brand](/) delivering end-to-end smart surveillance solutions.",
         ],
         headingProps: {
           desktop: {

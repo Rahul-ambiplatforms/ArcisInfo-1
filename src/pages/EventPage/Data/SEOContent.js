@@ -4,7 +4,7 @@ export const EventSEO = {
   metadescription:
     "Connect with the ArcisAI team at major security and tech events. Stay updated on upcoming expos and explore our latest AI surveillance showcases.",
   ogimage: "https://arcisai.io/images/event_home_main.png",
-  canonical: "https://arcisai.io/events",
+  canonical: "https://arcisai.io/event",
   schema: [
     {
       "@context": "https://schema.org",
@@ -13,8 +13,8 @@ export const EventSEO = {
       description:
         "Connect with the ArcisAI team at major security and tech events. Stay updated on upcoming expos and explore our latest AI surveillance showcases.",
       url: "https://arcisai.io/event",
-      datePublished: "2025-12-14T18:00:00+05:30",
-      dateModified: "2025-12-14T18:00:00+05:30",
+      datePublished: "2026-01-10T18:00:00+05:30",
+      dateModified: "2026-01-10T18:00:00+05:30",
       publisher: {
         "@type": "Organization",
         name: "ArcisAI",
@@ -59,8 +59,8 @@ export const IFSECSEO = {
       description:
         "At IFSEC India 2025, ArcisAI showcased its next-gen AI CCTV ecosystem, new Eco Series cameras, NVR lineup, ABD device, and cloud-ready VMS innovations.",
       url: "https://arcisai.io/event/ifsec-india-2025",
-      datePublished: "2025-12-14T18:00:00+05:30",
-      dateModified: "2025-12-14T18:00:00+05:30",
+      datePublished: "2026-01-10T18:00:00+05:30",
+      dateModified: "2026-01-10T18:00:00+05:30",
       publisher: {
         "@type": "Organization",
         name: "ArcisAI",

@@ -139,7 +139,7 @@ async function generate() {
       changefreq: "weekly",
       priority: "0.8",
     },
-    { loc: buildUrlLoc("/arcis-vms"), changefreq: "weekly", priority: "0.8" },
+    { loc: buildUrlLoc("/cloud-vms"), changefreq: "weekly", priority: "0.8" },
     { loc: buildUrlLoc("/arcis-nvr"), changefreq: "weekly", priority: "0.8" },
     { loc: buildUrlLoc("/about-us"), changefreq: "weekly", priority: "0.8" },
     {
