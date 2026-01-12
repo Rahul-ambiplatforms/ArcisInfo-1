@@ -18,7 +18,7 @@ const parseText = (text) => {
       parts.push(text.substring(lastIndex, match.index));
     }
 
-    // Push the link component
+    // Push the link component and color
     parts.push(
       <Link
         key={match.index}
