@@ -18,7 +18,8 @@ export const EventData = {
         },
         {
           name: "Smart Tech",
-          image: "/images/event_home_logo3.png", 
+          image: "/images/event_home_logo3.png", // Placeholder - replace with actual logo
+        },
       ],
       sectionProps: {
         desktop: {

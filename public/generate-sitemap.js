@@ -134,9 +134,22 @@ async function generate() {
       changefreq: "weekly",
       priority: "0.8",
     },
+    {
+      loc: buildUrlLoc("/arcis-bridge-device"),
+      changefreq: "weekly",
+      priority: "0.8",
+    },
+    { loc: buildUrlLoc("/arcis-vms"), changefreq: "weekly", priority: "0.8" },
+    { loc: buildUrlLoc("/arcis-nvr"), changefreq: "weekly", priority: "0.8" },
     { loc: buildUrlLoc("/about-us"), changefreq: "weekly", priority: "0.8" },
     {
       loc: buildUrlLoc("/why-choose-arcisai"),
+      changefreq: "weekly",
+      priority: "0.8",
+    },
+    { loc: buildUrlLoc("/event"), changefreq: "weekly", priority: "0.8" },
+    {
+      loc: buildUrlLoc("/event/ifsec-india-2025"),
       changefreq: "weekly",
       priority: "0.8",
     },
