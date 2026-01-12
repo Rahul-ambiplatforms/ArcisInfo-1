@@ -972,7 +972,7 @@ export const Series = {
         "STQC-approved Cloud video management system that allows organizations to centralize and manage all their surveillance cameras, video recordings, and AI analytics from a single platform.",
         "Designed for India's modern surveillance needs, it ensures reliable performance, easy operations, real-time monitoring, and fully compliant data management—ideal for government agencies, enterprises, and multi-location deployments.",
       ],
-      image: "/images/Standardisation_Testing_And_Quality_Certification.png",
+      image: "/images/Standardisation_Testing_and_Quality_Certification.png",
 
       sectionProps: {
         desktop: {
