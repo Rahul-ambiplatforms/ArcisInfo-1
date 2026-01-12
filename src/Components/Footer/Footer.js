@@ -168,15 +168,15 @@ const Footer = () => {
               >
                 Arcis Bridge Device
               </FooterLink>
-              <FooterLink href={"/arcis-vms"} color="#A8A8A8" fontWeight="bold">
-                STQC Cloud VMS
+              <FooterLink href={"/cloud-vms"} color="#A8A8A8" fontWeight="bold">
+                Cloud Video Management system
               </FooterLink>
               <FooterLink href={"/arcis-nvr"} color="#A8A8A8" fontWeight="bold">
-                NVR/DVR
+                Network video recorder
               </FooterLink>
 
               {/* <FooterLink href={"/abd"}>ABD</FooterLink>
-              <FooterLink href={"/arcis-vms"}>ArcisVMS</FooterLink> */}
+              <FooterLink href={"/cloud-vms"}>ArcisVMS</FooterLink> */}
             </Stack>
 
             {/* SOLUTIONS */}

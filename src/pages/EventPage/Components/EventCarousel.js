@@ -47,6 +47,8 @@ const EventCarousel = ({ data }) => {
     sectionTitle: data?.sectionTitle,
     bgColor: events[currentEvent]?.bgColor || data?.bgColor,
     headingProps: events[currentEvent]?.headingProps || data?.headingProps,
+    eventHeading: data?.eventHeading,
+    eventHeadingProps: data?.eventHeadingProps,
     description: data?.description,
     descriptionProps:
       events[currentEvent]?.descriptionProps || data?.descriptionProps,
@@ -285,7 +287,22 @@ const EventCarousel = ({ data }) => {
             </Flex>
           </Flex>
 
-          {/* Description (Full Width Below) */}
+          {/* Heading and Description (Full Width Below) */}
+          {activeEvent?.eventHeading && (
+            <Heading
+              as="h3"
+              fontSize={
+                activeEvent?.eventHeadingProps?.mobile?.fontSize || "16px"
+              }
+              fontWeight={
+                activeEvent?.eventHeadingProps?.mobile?.fontWeight || "600"
+              }
+              color={activeEvent?.eventHeadingProps?.mobile?.color || "white"}
+              mb={activeEvent?.eventHeadingProps?.mobile?.marginBottom || "8px"}
+            >
+              {activeEvent.eventHeading}
+            </Heading>
+          )}
           <Text
             color={activeEvent?.descriptionProps?.mobile?.color || "white"}
             fontSize={activeEvent?.descriptionProps?.mobile?.fontSize || "12px"}
@@ -328,6 +345,23 @@ const EventCarousel = ({ data }) => {
 
           {/* Description + (Button | Navigation) Column */}
           <Flex direction="column" gap={3} flex={1}>
+            {/* Heading */}
+            {activeEvent?.eventHeading && (
+              <Heading
+                as="h3"
+                fontSize={
+                  activeEvent?.eventHeadingProps?.desktop?.fontSize || "20px"
+                }
+                fontWeight={
+                  activeEvent?.eventHeadingProps?.desktop?.fontWeight || "600"
+                }
+                color={
+                  activeEvent?.eventHeadingProps?.desktop?.color || "white"
+                }
+              >
+                {activeEvent.eventHeading}
+              </Heading>
+            )}
             {/* Description */}
             <Text
               color={activeEvent?.descriptionProps?.desktop?.color || "white"}

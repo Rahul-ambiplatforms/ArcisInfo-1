@@ -528,7 +528,7 @@ export const homeContent = {
         description:
           "Get complete control from anywhere with a secure, all-in-one cloud video management system and Mobile App.",
         image: "/images/home_surveillance_1.png",
-        link: "/",
+        link: "/cloud-vms",
       },
     ],
   },
