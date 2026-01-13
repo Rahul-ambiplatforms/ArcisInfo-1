@@ -493,11 +493,11 @@ export const IFSECData = {
     },
   },
   cta: {
-    data: "Explore Our AI Surveillance Solutions",
-    buttonText: "View Products",
+    data: "Book a Demo Today and See How AI-Powered CCTV Cameras Can Transform Your Security",
+    buttonText: "Book a Live Demo",
     d_image: "/images/abd_cta.png",
     m_Image: "/images/whyarcis_cta_mobile.png",
-    link: "/products",
+    link: "/contact",
     textPosition: {
       desktop: { top: "50%", left: "0%" },
       mobile: { top: "50%", left: "0%" },

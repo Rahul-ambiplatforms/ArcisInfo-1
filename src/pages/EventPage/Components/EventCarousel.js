@@ -288,7 +288,7 @@ const EventCarousel = ({ data }) => {
           </Flex>
 
           {/* Heading and Description (Full Width Below) */}
-          {activeEvent?.eventHeading && (
+          {/* {activeEvent?.eventHeading && (
             <Heading
               as="h3"
               fontSize={
@@ -302,7 +302,7 @@ const EventCarousel = ({ data }) => {
             >
               {activeEvent.eventHeading}
             </Heading>
-          )}
+          )} */}
           <Text
             color={activeEvent?.descriptionProps?.mobile?.color || "white"}
             fontSize={activeEvent?.descriptionProps?.mobile?.fontSize || "12px"}

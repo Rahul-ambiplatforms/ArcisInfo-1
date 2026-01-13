@@ -469,6 +469,31 @@ export const homeContent = {
           },
         ],
       },
+      {
+        product_type: "NVR",
+        productarray: [
+          {
+            image: "/images/home_productlist_nvr.png",
+            product_name: "NVR - 8CH",
+            link: "/arcis-nvr",
+          },
+          {
+            image: "/images/home_productlist_nvr.png",
+            product_name: "NVR - 4CH",
+            link: "/arcis-nvr",
+          },
+          {
+            image: "/images/home_productlist_nvr.png",
+            product_name: "NVR - 16CH",
+            link: "/arcis-nvr",
+          },
+          {
+            image: "/images/home_productlist_nvr.png",
+            product_name: "NVR - 32CH",
+            link: "/arcis-nvr",
+          },
+        ],
+      },
       // {
       //   product_type: "NVR/DVR",
       //   productarray: [

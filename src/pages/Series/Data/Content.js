@@ -1191,7 +1191,7 @@ export const Series = {
           "Connect all existing ONVIF cameras to ArcisAI VMS for cloud monitoring, centralized management, and smart features—cost-effectively and hassle-free.",
         d_image: "/images/abd_hero_main.png",
         m_image: "/images/abd_hero_main_mobile.png",
-        buttonText: "Get a Quote for ABD",
+        buttonText: "Let’s connect",
         buttonLink: "/contact-us",
         sectionProps: {
           desktop: {
@@ -1370,7 +1370,7 @@ export const Series = {
     },
     CTAButton1: {
       data: "Modernize Your Existing CCTV Surveillance With Arcis Bridge Device",
-      buttonText: "Schedule a Demo",
+      buttonText: "Get a Quote for ABD",
       d_image: "/images/abd_cta.png",
       m_Image: "/images/whyarcis_cta_mobile.png",
       link: "/contact-us",
@@ -1435,7 +1435,7 @@ export const Series = {
 
         d_image: "/images/nvr_hero_main.png",
         m_image: "/images/nvr_hero_main_mobile.png",
-        buttonText: "Request Product Details",
+        buttonText: "Contact Us",
         buttonLink: "/contact-us",
         sectionProps: {
           desktop: {

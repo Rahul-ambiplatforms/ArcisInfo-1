@@ -72,7 +72,7 @@ export const dropdownData = {
         link: "/cloud-vms",
       },
       {
-        label: "Network video recorder",
+        label: "Network Video Recorder",
         link: "/arcis-nvr",
       },
     ],

@@ -169,10 +169,10 @@ const Footer = () => {
                 Arcis Bridge Device
               </FooterLink>
               <FooterLink href={"/cloud-vms"} color="#A8A8A8" fontWeight="bold">
-                Cloud Video Management system
+                Cloud VMS
               </FooterLink>
               <FooterLink href={"/arcis-nvr"} color="#A8A8A8" fontWeight="bold">
-                Network video recorder
+                NVR
               </FooterLink>
 
               {/* <FooterLink href={"/abd"}>ABD</FooterLink>
