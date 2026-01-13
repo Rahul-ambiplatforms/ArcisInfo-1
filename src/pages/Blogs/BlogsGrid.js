@@ -60,7 +60,8 @@ export default function BlogsContent() {
   const borderColor = useColorModeValue("gray.200", "gray.700");
   const toast = useToast();
 
-  const IMAGE_BASE_URL = "https://res.cloudinary.com/dzs02ecai/image/upload/v1761637680/upload_arcis"
+  const IMAGE_BASE_URL =
+    "https://res.cloudinary.com/dzs02ecai/image/upload/v1761637680/upload_arcis";
 
   const [searchTerm, setSearchTerm] = useState("");
   const [sortOrder, setSortOrder] = useState("latest");
@@ -139,7 +140,7 @@ export default function BlogsContent() {
         <Heading
           fontSize={{ base: "24px", md: "36px" }}
           fontWeight="600"
-          color="#000000"
+          color="#fff"
           mb={{ base: "4", md: "0" }}
           as="h1"
         >
@@ -355,16 +356,19 @@ export default function BlogsContent() {
                           {(() => {
                             const created = new Date(post.createdAt);
                             const updated = new Date(post.updatedAt);
-                            
+
                             // Always display the updatedAt field
                             // If createdAt and updatedAt are the same, it means the blog was never updated
                             // If they are different, it means the blog was updated at some point
-                            const formattedDate = updated.toLocaleDateString("en-US", {
-                              year: "numeric",
-                              month: "long",
-                              day: "numeric",
-                            });
-                            
+                            const formattedDate = updated.toLocaleDateString(
+                              "en-US",
+                              {
+                                year: "numeric",
+                                month: "long",
+                                day: "numeric",
+                              }
+                            );
+
                             return (
                               <>
                                 <span>{formattedDate}</span>
@@ -530,7 +534,7 @@ export default function BlogsContent() {
             borderColor="#9678E1"
             bg="white"
             color="#9678E1"
-            _hover={{ bg: "#ded5f5ff"}}
+            _hover={{ bg: "#ded5f5ff" }}
             isDisabled={totalPages === 1}
             onClick={() => {
               setCurrentPage((prev) => (prev === totalPages ? 1 : prev + 1));

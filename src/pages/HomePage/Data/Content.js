@@ -474,12 +474,12 @@ export const homeContent = {
         productarray: [
           {
             image: "/images/home_productlist_nvr.png",
-            product_name: "NVR - 8CH",
+            product_name: "NVR - 4CH",
             link: "/arcis-nvr",
           },
           {
             image: "/images/home_productlist_nvr.png",
-            product_name: "NVR - 4CH",
+            product_name: "NVR - 8CH",
             link: "/arcis-nvr",
           },
           {

@@ -560,6 +560,7 @@ const BlogsOverviewDash = () => {
             fontSize={{ base: "36px", md: "48px" }}
             mt="8"
             mb={{ base: 2, md: 3 }}
+            color="#fff"
           >
             {content.title}
             {/* {applyColorLogic(content.title || "Blog Title")} */}
