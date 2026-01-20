@@ -34,7 +34,7 @@ const MarqueeText = ({ children }) => {
 const Event = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const eventText =
-    "Meet ArcisAI At IFSEC India 2025 From 11-13 December At Bharat Mandapam, New Delhi. Visit Booth I10, Hall No. 4 To Explore Our Latest AI-Powered CCTV Cameras, VMS & Cloud Solutions.";
+    "Meet ArcisAI at SSSA Business Expo 2026 on 22–23 January in Rajkot. Visit us at Booth No. B5 to explore our Eco Series CCTV Cameras, along with our latest AI-powered CCTV cameras, VMS & Cloud solutions.";
 
   return (
     <>
@@ -66,7 +66,7 @@ const Event = () => {
                 _hover={{ color: "purple.300" }}
                 onClick={onOpen}
               >
-                Book a Meeting Slot
+                Book a meeting slot to connect with our team.
               </Text>
             </Text>
           </MarqueeText>

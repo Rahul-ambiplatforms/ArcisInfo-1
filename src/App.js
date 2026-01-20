@@ -55,7 +55,7 @@ function App() {
 function InnerApp() {
   const location = useLocation();
   const hideHeader = location.pathname.startsWith("/admin");
-  const SHOW_EVENT_BANNER = false;
+  const SHOW_EVENT_BANNER = true;
 
   return (
     <>
@@ -67,8 +67,8 @@ function InnerApp() {
           hideHeader
             ? "0"
             : SHOW_EVENT_BANNER
-            ? { base: "150px", md: "150px" }
-            : { base: "100px", md: "100px" }
+              ? { base: "150px", md: "150px" }
+              : { base: "100px", md: "100px" }
         }
       >
         <AnimatePresence mode="wait">
