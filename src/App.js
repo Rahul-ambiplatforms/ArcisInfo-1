@@ -192,7 +192,6 @@ function InnerApp() {
               element={
                 <PageTransition>
                   <BlogsDashboard />
-                  <Footer />
                 </PageTransition>
               }
             />

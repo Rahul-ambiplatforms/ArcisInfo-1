@@ -12,7 +12,6 @@ import {
   Select,
   Text,
   VStack,
-  useToast,
   useBreakpointValue,
   Image,
   Modal,
@@ -45,7 +44,6 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
 
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const toast = useToast();
 
   // Determine which image to show based on screen size
   const eventImageSrc = useBreakpointValue({
@@ -90,37 +88,16 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
       !formData.date ||
       !formData.time
     ) {
-      toast({
-        title: "Missing required fields",
-        description: "Please fill in all required fields",
-        status: "error",
-        duration: 5000,
-        isClosable: true,
-      });
       return;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
-      toast({
-        title: "Invalid Email",
-        description: "Please enter a valid email address.",
-        status: "error",
-        duration: 5000,
-        isClosable: true,
-      });
       return;
     }
 
     const phoneRegex = /^\d{10}$/;
     if (!phoneRegex.test(formData.phone)) {
-      toast({
-        title: "Invalid Phone Number",
-        description: "Please enter a valid 10-digit phone number.",
-        status: "error",
-        duration: 5000,
-        isClosable: true,
-      });
       return;
     }
 
@@ -131,7 +108,7 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
       email: formData.email,
       phone: formData.phone,
       slot: `${formData.date} at ${formData.time}`,
-      formType: "SSSA Business Expo 2026",
+      formType: "IFSEC Event",
     };
 
     try {
@@ -147,25 +124,11 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
 
       if (response.ok) {
         setIsSubmitted(true);
-        toast({
-          title: "Slot Booked!",
-          description: "We look forward to seeing you.",
-          status: "success",
-          duration: 5000,
-          isClosable: true,
-        });
       } else {
         throw new Error(data.error || "Failed to book slot");
       }
     } catch (error) {
       console.error("Error:", error);
-      toast({
-        title: "Failed to book slot",
-        description: error.message || "Please try again later.",
-        status: "error",
-        duration: 5000,
-        isClosable: true,
-      });
     } finally {
       setIsLoading(false);
     }
@@ -181,16 +144,19 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
       p={8}
     >
       <Heading size="lg" color="gray.800">
-        Thanks for submitting!
+        Thank You for Booking!
       </Heading>
       <Box w="50px" h="4px" bg="#9678E1" />
 
       <Box color="gray.600" fontSize="6xl">
-        ✉️
+        🎉
       </Box>
 
-      <Text fontSize="xl" color="gray.600">
-        We'll Connect With You Soon
+      <Text fontSize="xl" color="gray.600" fontWeight="500">
+        Your booth visit is confirmed
+      </Text>
+      <Text fontSize="md" color="gray.500">
+        We look forward to meeting you at our booth!
       </Text>
 
       <VStack spacing={4} mt={4}>
