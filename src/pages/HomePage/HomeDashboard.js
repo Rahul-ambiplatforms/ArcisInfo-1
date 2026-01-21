@@ -39,7 +39,6 @@ const HomeDashboard = () => {
         <meta name="twitter:title" content={homeSEO.metatitle} />
         <meta name="twitter:description" content={homeSEO.metadescription} />
         <meta name="twitter:image" content={homeSEO.ogimage} />
-
       </Helmet>
       {/* Schema Markup */}
       {homeSEO.schema.map((schema, index) => (
@@ -52,7 +51,7 @@ const HomeDashboard = () => {
         />
       ))}
       <PageContentWrapper noPadding>
-        {/* <Event /> */}
+        <Event />
         <HeroSectionCarousel data={homeContent.hero} />
         <ProductList />
         <Certifications />
