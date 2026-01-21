@@ -108,7 +108,7 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
       email: formData.email,
       phone: formData.phone,
       slot: `${formData.date} at ${formData.time}`,
-      formType: "IFSEC Event",
+      formType: "Event",
     };
 
     try {
