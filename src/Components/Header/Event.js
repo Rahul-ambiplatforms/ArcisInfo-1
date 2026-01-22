@@ -34,7 +34,7 @@ const MarqueeText = ({ children }) => {
 const Event = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const eventText =
-    "Meet ArcisAI at SSSA Business Expo 2026 on 22–23 January in Rajkot. Visit us at Booth No. B5 to explore our Eco Series CCTV Cameras, along with our latest AI-powered CCTV cameras, VMS & Cloud solutions.";
+    "Meet ArcisAI at SSSA Business Expo 2026 on 23–24 January in Rajkot. Visit us at Booth No. B5 to explore our Eco Series CCTV Cameras, along with our latest AI-powered CCTV cameras, VMS & Cloud solutions.";
 
   return (
     <>
