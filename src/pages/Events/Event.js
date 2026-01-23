@@ -62,7 +62,7 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
     name: "",
     email: "",
     phone: "",
-    date: "",
+    date: "24th Jan 2026",
     time: "",
   });
 
@@ -367,43 +367,21 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
                         >
                           Book a slot*
                         </FormLabel>
-                        <Select
-                          placeholder="Select date"
+                        <Input
                           name="date"
-                          value={formData.date}
-                          onChange={handleChange}
+                          value="24th Jan 2026"
+                          isReadOnly
                           bg="rgba(255,255,255,0.2)"
                           border="none"
                           h="52px"
                           color="white"
-                          _placeholder={{ color: "white" }}
+                          fontSize="16px"
+                          borderRadius="0"
                           _focus={{
                             border: "1px solid #A4FF79",
                             boxShadow: "0 0 0 1px #A4FF79",
                           }}
-                          fontSize="16px"
-                          borderRadius="0"
-                          sx={{
-                            option: {
-                              bg: "black",
-                              color: "white",
-                              _hover: { bg: "#333" },
-                            },
-                          }}
-                        >
-                          <option
-                            value="23rd Jan 2026"
-                            style={{ background: "black", color: "white" }}
-                          >
-                            23rd Jan 2026
-                          </option>
-                          <option
-                            value="24th Jan 2026"
-                            style={{ background: "black", color: "white" }}
-                          >
-                            24th Jan 2026
-                          </option>
-                        </Select>
+                        />
                       </FormControl>
 
                       <FormControl isRequired>
