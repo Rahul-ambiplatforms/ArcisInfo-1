@@ -51,7 +51,7 @@ const HomeDashboard = () => {
         />
       ))}
       <PageContentWrapper noPadding>
-        <Event />
+        {/* <Event /> */}
         <HeroSectionCarousel data={homeContent.hero} />
         <ProductList />
         <Certifications />
