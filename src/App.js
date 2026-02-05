@@ -7,8 +7,10 @@ import "./App.css";
 import Header from "./Components/Header/Header";
 import HomeDashboard from "./pages/HomePage/HomeDashboard";
 import Products from "./pages/Product/Products";
+import EcoSeriesProducts from "./pages/Product/EcoSeriesProducts";
 import Solutions from "./pages/Solution/Solutions";
-import Series from "./pages/Series/Series";
+import ProductDetail from "./pages/Product/ProductDetail";
+
 import AboutUs from "./pages/AboutUs/AboutUs";
 import WhyArcisAI from "./pages/WhyArcisAI/WhyArcisAI";
 import Footer from "./Components/Footer/Footer";
@@ -40,6 +42,7 @@ import MainProduct from "./pages/Series/MainProduct";
 import SlugResolver from "./pages/Series/Resolver";
 import Event from "./pages/EventPage/Event";
 import IFSEC from "./pages/EventPage/IFSEC";
+import Partner from "./pages/Partner/Partner";
 
 // To disable animations, comment the import above and uncomment the line below:
 const PageTransition = ({ children }) => <>{children}</>;
@@ -81,7 +84,6 @@ function InnerApp() {
                 </PageTransition>
               }
             />
-
             <Route
               path="/:seriesId"
               element={
@@ -118,7 +120,15 @@ function InnerApp() {
               path="/eco-series/:productId"
               element={
                 <PageTransition>
-                  <Products />
+                  <EcoSeriesProducts />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/eco-series/product/:modelId"
+              element={
+                <PageTransition>
+                  <ProductDetail />
                 </PageTransition>
               }
             />
@@ -130,7 +140,6 @@ function InnerApp() {
                 </PageTransition>
               }
             />
-
             <Route
               path="/about-us"
               element={
@@ -152,6 +161,14 @@ function InnerApp() {
               element={
                 <PageTransition>
                   <ContactUs />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/partner-with-us"
+              element={
+                <PageTransition>
+                  <Partner />
                 </PageTransition>
               }
             />

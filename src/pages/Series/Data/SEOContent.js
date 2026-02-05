@@ -13,7 +13,7 @@ export const SEOContent = {
     metaDescription:
       "Discover India’s trusted CCTV camera range—Eco-Series by ArcisAI. Clear footage, stable performance and durable design in Bullet, Dome, PTZ & Baby PTZ cameras.",
     canonical: "https://arcisai.io/eco-series",
-    ogImage: "https://arcisai.io/images/product_bullet_main.png",
+    ogImage: "https://arcisai.io/images/ecoseries_hero_main.png",
     schema: [],
   },
   "arcis-nvr": {

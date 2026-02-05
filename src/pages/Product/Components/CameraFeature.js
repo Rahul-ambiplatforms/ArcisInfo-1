@@ -31,7 +31,8 @@ const CameraFeature = ({ data, headingInBackground = false }) => {
   };
 
   const alignment = styles?.alignment || "center";
-  const descriptionColor = styles?.descriptionColor || "gray.300";
+  const descriptionColor =
+    styles?.description?.color || styles?.descriptionColor || "gray.300";
   const featureColor = styles?.featureColor || "white";
   const descriptionTextAlign = styles?.descriptionTextAlign || "justify";
   const descriptionWidth = {
@@ -41,6 +42,16 @@ const CameraFeature = ({ data, headingInBackground = false }) => {
     xl: styles?.descriptionWidth?.bigscreen || "80%",
   };
 
+  const headingFontSize = styles?.heading?.fontSize || {
+    base: "24px",
+    md: "36px",
+  };
+  const headingColor = styles?.heading?.color || "white";
+  const descriptionFontSize = styles?.description?.fontSize || {
+    base: "14px",
+    md: "16px",
+  };
+
   return (
     <Box w="100%" mt={{ base: "5%", md: "2%" }}>
       <Box w="full" mx="auto">
@@ -48,10 +59,10 @@ const CameraFeature = ({ data, headingInBackground = false }) => {
         {!headingInBackground && (
           <Heading
             as="h2"
-            fontSize={{ base: "24px", md: "36px" }}
-            fontWeight="600"
+            fontSize={headingFontSize}
+            fontWeight="400"
             textAlign="center"
-            color="white"
+            color={headingColor}
             mb={{ base: 4, md: 6 }}
           >
             {heading}
@@ -95,6 +106,12 @@ const CameraFeature = ({ data, headingInBackground = false }) => {
             position="absolute"
             top={0}
             left={0}
+            w="100%"
+            h="100%"
+            bg="blackAlpha.400"
+            position="absolute" // Duplicate line removal
+            top={0}
+            left={0}
           />{" "} */}
           {/* Optional overlay for readability */}
 
@@ -107,7 +124,7 @@ const CameraFeature = ({ data, headingInBackground = false }) => {
               mx="auto"
             >
               <Text
-                fontSize={{ base: "14px", md: "16px" }}
+                fontSize={descriptionFontSize}
                 color={descriptionColor}
                 textAlign={descriptionTextAlign}
                 w={descriptionWidth}

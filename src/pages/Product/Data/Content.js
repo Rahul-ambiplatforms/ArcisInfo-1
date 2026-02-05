@@ -1,16 +1,16 @@
 import React from "react";
 import { ReactComponent as FeatureIcon1 } from "../../../Components/Icons/product_all_camerafeatures_1.svg";
 import { ReactComponent as FeatureIcon2 } from "../../../Components/Icons/product_all_camerafeatures_2.svg";
-import { ReactComponent as FeatureIcon3 } from "../../../Components/Icons/product_all_camerafeatures_3.svg";
-import { ReactComponent as FeatureIcon4 } from "../../../Components/Icons/product_all_camerafeatures_4.svg";
-import { ReactComponent as FeatureIcon5 } from "../../../Components/Icons/product_all_camerafeatures_5.svg";
-import { ReactComponent as FeatureIcon6 } from "../../../Components/Icons/product_all_camerafeatures_6.svg";
-import { ReactComponent as FeatureIcon7 } from "../../../Components/Icons/product_all_camerafeatures_7.svg";
-import { ReactComponent as FeatureIcon8 } from "../../../Components/Icons/product_all_camerafeatures_8.svg";
+import { ReactComponent as FeatureIcon3 } from "../../../Components/Icons/product_bullet_temperproof.svg";
+import { ReactComponent as FeatureIcon4 } from "../../../Components/Icons/product_bullet_talksvg.svg";
+import { ReactComponent as FeatureIcon5 } from "../../../Components/Icons/nvr_features_4.svg";
+import { ReactComponent as FeatureIcon6 } from "../../../Components/Icons/product_bullet_nightvision.svg";
+import { ReactComponent as FeatureIcon7 } from "../../../Components/Icons/product_bullet_colornightvision.svg";
+import { ReactComponent as FeatureIcon8 } from "../../../Components/Icons/product_bullet_highresimaging.svg";
 import { ReactComponent as FeatureIcon9 } from "../../../Components/Icons/product_all_camerafeatures_9.svg";
-import { ReactComponent as FeatureIcon10 } from "../../../Components/Icons/product_all_camerafeatures_10.svg";
-import { ReactComponent as FeatureIcon11 } from "../../../Components/Icons/product_all_camerafeatures_11.svg";
-import { ReactComponent as FeatureIcon12 } from "../../../Components/Icons/product_all_camerafeatures_12.svg";
+import { ReactComponent as FeatureIcon10 } from "../../../Components/Icons/product_bullet_waterproof.svg";
+import { ReactComponent as FeatureIcon11 } from "../../../Components/Icons/product_bullet_plugandplaysetup.svg";
+import { ReactComponent as FeatureIcon12 } from "../../../Components/Icons/product_bullet_quality.svg";
 import { ReactComponent as FeatureIcon13 } from "../../../Components/Icons/product_all_camerafeatures_13.svg";
 import { ReactComponent as FeatureIcon14 } from "../../../Components/Icons/product_all_camerafeatures_14.svg";
 import { ReactComponent as FeatureIcon15 } from "../../../Components/Icons/product_all_camerafeatures_15.svg";
@@ -23,10 +23,19 @@ import { ReactComponent as WhyChooseIcon5 } from "../../../Components/Icons/prod
 import { ReactComponent as WhyChooseIcon6 } from "../../../Components/Icons/product_all_whychoose_6.svg";
 import { ReactComponent as WhyChooseIcon7 } from "../../../Components/Icons/product_all_whychoose_7.svg";
 import { ReactComponent as WhyChooseIcon8 } from "../../../Components/Icons/product_all_whychoose_8.svg";
+import InnovationIcon1 from "../../../Components/Icons/product_bullet_innovation_madeinIndia.svg";
+import InnovationIcon2 from "../../../Components/Icons/product_bullet_quality.svg";
+import InnovationIcon3 from "../../../Components/Icons/product_bullet_plugandplaysetup.svg";
+import InnovationIcon4 from "../../../Components/Icons/product_bullet_performance.svg";
+import InnovationIcon5 from "../../../Components/Icons/product_bullet_costeffective.svg";
+import InnovationIcon6 from "../../../Components/Icons/product_bullet_variants.svg";
+import InnovationIcon7 from "../../../Components/Icons/product_dome_footage.svg";
+import InnovationIcon8 from "../../../Components/Icons/product_dome_location.svg";
 
 export const Product = {
   //----------S SERIES----------\\
   aibulletcctvcamera: {
+    downloadLink: "/pdfs/S Series Bullet 4G.pdf",
     hero: [
       {
         title: "AI Bullet CCTV Camera",
@@ -419,6 +428,7 @@ export const Product = {
     },
   },
   aiptzcctvcamera: {
+    downloadLink: "/pdfs/S Series PTZ 4G 5G.pdf",
     hero: [
       {
         title: "AI PTZ CCTV Camera",
@@ -1209,455 +1219,7 @@ export const Product = {
   },
 
   //----------ECO SERIES----------\\
-  bulletcctvcamera: {
-    hero: [
-      {
-        title: "Eco-Series Bullet Camera",
-        d_image: "/images/product_ecoseries_bullet_main.png",
-        m_image: "/images/product_ecoseries_bullet_main_mobile.png",
-        buttonText: "Get Your AI CCTV",
-        buttonLink: "/contact-us",
-        sectionProps: {
-          desktop: {
-            marginTop: "-5%",
-          },
-          mobile: {
-            marginTop: "-28%",
-          },
-        },
-        textProps: {
-          desktop: {
-            textColor: "",
-            alignItems: "",
-            textAlign: "",
-            top: "",
-            left: "",
-            width: "",
-          },
-          mobile: {
-            textColor: "",
-            alignItems: "",
-            textAlign: "",
-            top: "",
-            left: "",
-            width: "",
-          },
-        },
-        buttonProps: {
-          desktop: {
-            textColor: "",
-            borderColor: "",
-            bgColor: "",
-            width: "",
-            height: "",
-            borderHover: "",
-            textHover: "",
-          },
-          mobile: {
-            textColor: "",
-            borderColor: "",
-            bgColor: "",
-            width: "",
-            height: "",
-            borderHover: "",
-            textHover: "",
-          },
-        },
-      },
-    ],
-    features: {
-      d_image: "/images/product_ecoseries_feature_bullet_bg.png",
-      m_image: "/images/product_ecoseries_feature_bullet_bg_mobile.png",
-      heading: "India’s Best Bullet CCTV Cameras for Reliable Surveillance",
-      description:
-        "Durable, high-quality bullet CCTV cameras engineered specifically for clear video output, stable 24/7 performance, and long-lasting protection for commercial, industrial, and residential security needs - making them one of the most trusted CCTV camera solutions in India.",
-      styles: {
-        contentMarginTop: {
-          mobile: "5%",
-          tablet: "5%",
-          laptop: "1%",
-          bigscreen: "1%",
-        },
-        featuresMarginTop: {
-          mobile: "85%",
-          tablet: "55%",
-          laptop: "60%",
-          bigscreen: "60%",
-        },
-        alignment: "center",
-        descriptionColor: "black",
-        featureColor: "white",
-      },
-      featuresList: [
-        { name: "High-Resolution Imaging", icon: <FeatureIcon1 /> },
-        { name: "Stable Network Connectivity", icon: <FeatureIcon2 /> },
-        { name: "Easy Mounting Design", icon: <FeatureIcon3 /> },
-        { name: "Two-Way Audio", icon: <FeatureIcon4 /> },
-        { name: "ONVIF-Compatible", icon: <FeatureIcon16 /> }, //----
-        { name: "Color Night Vision", icon: <FeatureIcon6 /> },
-        { name: "Live View with 5x Digital Zoom", icon: <FeatureIcon7 /> },
-        { name: "Infrared Night Vision", icon: <FeatureIcon8 /> },
-        { name: "Remote Access via Mobile App", icon: <FeatureIcon9 /> },
-        { name: "IP66 Weatherproof Design", icon: <FeatureIcon11 /> },
-        {
-          name: "Plug-and-Play Setup",
-          icon: <FeatureIcon12 />,
-        },
-      ],
-    },
-    comparisonData: {
-      heading: "Choose the Perfect Bullet Security Camera for Your Site",
-      d_image: "/images/product_cameracomparision.png",
-      m_image: "/images/product_cameracomparision_mobile.png",
-      headers: [
-        "Category",
-        "AD-90AIEBDP",
-        "AD-90AI4GBDPB",
-        "AD-90NRE5BM",
-        "AD-90NRE5BP",
-        "AD-90NRP5BP",
-        "AD-90NRP5BM",
-        "AD-90ARE3BP",
-        "AD-90ARE3BM",
-        "AD-90ARE3BP2",
-        "AD-90ARE3BPB",
-        "AD-90ARP3BP",
-        "AD-90ARP3BM",
-        "AD-90ARP3BP2",
-      ],
-      rows: [
-        {
-          label: "Enclosure Type",
-          values: [
-            "Bullet (Plastic)",
-            "Bullet (Plastic)",
-            "Bullet (Metal)",
-            "Bullet (Plastic)",
-            "Bullet (Plastic)",
-            "Bullet (Metal)",
-            "Bullet (Plastic)",
-            "Bullet (Metal)",
-            "Bullet (Plastic)",
-            "Bullet (12V Battery)",
-            "Bullet (Plastic)",
-            "Bullet (Metal)",
-            "Bullet (Plastic)",
-          ],
-        },
-        {
-          label: "Resolution",
-          values: [
-            "3MP",
-            "3MP",
-            "5MP",
-            "5MP",
-            "5MP",
-            "5MP",
-            "3MP",
-            "3MP",
-            "3MP",
-            "3MP",
-            "3MP",
-            "3MP",
-            "3MP",
-          ],
-        },
-        {
-          label: "Lens",
-          values: [
-            "4 mm",
-            "4 mm",
-            "2.8 mm",
-            "2.8 mm",
-            "2.8 mm",
-            "2.8 mm",
-            "4 mm",
-            "4 mm",
-            "2.8 mm",
-            "4 mm",
-            "4 mm",
-            "4 mm",
-            "2.8 mm",
-          ],
-        },
-        {
-          label: "Dynamic Range",
-          values: [
-            "DWDR, 3D-DNR",
-            "DWDR, 3D-DNR",
-            "HDR",
-            "HDR",
-            "HDR",
-            "HDR",
-            "HDR",
-            "HDR",
-            "HDR",
-            "HDR",
-            "HDR",
-            "HDR",
-            "HDR",
-          ],
-        },
-        {
-          label: "IR Distance",
-          values: [
-            "30 m",
-            "20 m",
-            "30 m",
-            "30 m",
-            "30 m",
-            "30 m",
-            "20 m",
-            "20 m",
-            "20 m",
-            "20 m",
-            "20 m",
-            "20 m",
-            "20 m",
-          ],
-        },
-        {
-          label: "Connectivity",
-          values: [
-            "10/100 (IP)",
-            "SIM, PoE (optional)",
-            "10/100 (IP)",
-            "10/100 (IP)",
-            "PoE",
-            "PoE",
-            "10/100 (IP)",
-            "10/100 (IP)",
-            "10/100 (IP)",
-            "10/100 (IP)",
-            "PoE",
-            "PoE",
-            "PoE",
-          ],
-        },
-        {
-          label: "SD Card Support",
-          values: [
-            "Up to 128 GB",
-            "Up to 128 GB",
-            "Supported",
-            "Supported",
-            "Supported",
-            "Supported",
-            "Supported",
-            "Supported",
-            "Supported",
-            "Supported",
-            "Supported",
-            "Supported",
-            "Supported",
-          ],
-        },
-        {
-          label: "IP Rating",
-          values: [
-            "IP66",
-            "IP66",
-            "IP67",
-            "IP67",
-            "IP67",
-            "IP67",
-            "IP66",
-            "IP66",
-            "IP66",
-            "IP66",
-            "IP66",
-            "IP66",
-            "IP66",
-          ],
-        },
-        {
-          label: "Full Details",
-          values: [
-            "Download PDF",
-            "Download PDF",
-            "Download PDF",
-            "Download PDF",
-            "Download PDF",
-            "Download PDF",
-            "Download PDF",
-            "Download PDF",
-            "Download PDF",
-            "Download PDF",
-            "Download PDF",
-            "Download PDF",
-            "Download PDF",
-          ],
-          links: [
-            "/pdfs/AD-90AIEBDP.pdf",
-            "/pdfs/AD-90AI4GBDPB.pdf",
-            "/pdfs/AD-90NRE5BM.pdf",
-            "/pdfs/AD-90NRE5BP.pdf",
-            "/pdfs/AD-90NRP5BP.pdf",
-            "/pdfs/AD-90NRP5BM.pdf",
-            "/pdfs/AD-90ARE3BP.pdf",
-            "/pdfs/AD-90ARE3BM.pdf",
-            "/pdfs/AD-90ARE3BP2.pdf",
-            "/pdfs/AD-90ARE3BPB.pdf",
-            "/pdfs/AD-90ARP3BP.pdf",
-            "/pdfs/AD-90ARP3BM.pdf",
-            "/pdfs/AD-90ARP3BP2.pdf",
-          ],
-          isButton: true,
-        },
-      ],
-    },
-    AISolutionIndustry: {
-      heading:
-        "An Indian Security CCTV Camera Brand Delivering AI Solutions for Every Industry",
-      description:
-        "From retail stores to housing societies, factories to warehouses and public infrastructure - We deliver smart surveillance solutions tailored to each industry’s unique challenges. Our CCTV security cameras help you detect threats, monitor activity and respond faster.",
-      industries: [
-        {
-          name: "Manufacturing & Factory Plants",
-          image: "/images/home_aisolutionindustry_1.png",
-        }, // Placeholder
-        {
-          name: "Warehouses & Logistics",
-          image: "/images/home_aisolutionindustry_2.png",
-        },
-        {
-          name: "Smart Cities",
-          image: "/images/home_aisolutionindustry_3.png",
-        },
-        {
-          name: "Construction Sites",
-          image: "/images/home_aisolutionindustry_4.png",
-        },
-        { name: "Hospitality", image: "/images/home_aisolutionindustry_5.png" },
-        {
-          name: "Banks & ATMs",
-          image: "/images/home_aisolutionindustry_6.png",
-        },
-        { name: "Hospitals", image: "/images/home_aisolutionindustry_7.png" },
-        {
-          name: "Airports, Bus & Railway Stations",
-          image: "/images/home_aisolutionindustry_8.png",
-        },
-        {
-          name: "Retail Stores",
-          image: "/images/home_aisolutionindustry_9.png",
-        },
-        {
-          name: "Corporate Offices",
-          image: "/images/home_aisolutionindustry_10.png",
-        },
-        {
-          name: "Housing Societies",
-          image: "/images/home_aisolutionindustry_11.png",
-        },
-        {
-          name: "Educational Premises",
-          image: "/images/home_aisolutionindustry_12.png",
-        },
-      ],
-    },
-    whychoosearcis: {
-      heading: "Trusted Bullet CCTV Cameras for Every Business",
-      items: [
-        {
-          name: "Made for India",
-          description:
-            "Designed to withstand harsh Indian weather, dust, and extreme temperatures, ensuring long-lasting performance.",
-          icon: <WhyChooseIcon5 />,
-        },
-        {
-          name: "High-Quality Construction",
-          description:
-            "Choose from metal and plastic bullet CCTV cameras, with IP66/IP67 protection for indoor and outdoor surveillance.",
-          icon: <WhyChooseIcon6 />,
-        },
-        {
-          name: "Flexible Installation",
-          description:
-            "Supports POE, IP, and 4G connectivity, suitable for commercial, industrial, and residential setups.",
-          icon: <WhyChooseIcon7 />,
-        },
-        {
-          name: "Reliable Performance",
-          description:
-            "Continuous, stable video monitoring with 3MP and 5MP bullet CCTV cameras, delivering clear footage for every environment.",
-          icon: <WhyChooseIcon8 />,
-        },
-        {
-          name: "Cost-Effective",
-          description:
-            "Get premium bullet CCTV cameras, ideal for budget-conscious businesses and institutions.",
-          icon: <WhyChooseIcon8 />,
-        },
-        {
-          name: "Multiple Variants",
-          description:
-            "Various lens sizes, enclosure types, and connectivity options to meet diverse surveillance requirements.",
-          icon: <WhyChooseIcon8 />,
-        },
-      ],
-    },
-    CTAButton: {
-      data: "Protect Your Facility with ArcisAI Eco-Series Bullet Security CCTV Cameras",
-      buttonText: "Schedule a Demo",
-      d_image: "/images/product_cta_bullet.png",
-      m_image: "/images/product_cta_bullet_mobile.png",
-      link: "/contact-us",
-      textPosition: {
-        desktop: { top: "50%", left: "-4%" },
-        mobile: { top: "60%", left: "4%" },
-      },
-      buttonProps: {
-        desktop: {
-          textColor: "linear(45deg, #171717, #7F56D9)",
-          borderColor: "#7F56D9",
-          bgColor: "",
-          width: "",
-          height: "",
-        },
-        mobile: {
-          textColor: "linear(45deg, #171717, #7F56D9)",
-          borderColor: "#7F56D9",
-          bgColor: "",
-          width: "200px",
-          height: "34px",
-        },
-      },
-      textProps: {
-        desktop: {
-          textColor: "linear(45deg, #171717, #7F56D9)",
-          alignItems: "flex-end",
-          textAlign: "right",
-          width: "",
-        },
-        mobile: {
-          textColor: "linear(45deg, #171717, #7F56D9)",
-          alignItems: "flex-start",
-          textAlign: "left",
-          width: "80%",
-        },
-      },
-      textColor: "linear(45deg, #171717, #7F56D9)",
-      alignItems: "flex-end",
-      textAlign: "right",
-    },
-    FAQsData: {
-      heading: "Eco-Series Bullet Camera FAQs",
-      data: [
-        {
-          question: "Are Eco-Series Bullet Cameras suitable for outdoor use?",
-          answer:
-            "Yes. Eco-Series Bullet Cameras come in IP66/IP67 rated enclosures (metal and plastic), making them weatherproof and ideal for both indoor and outdoor installations.",
-        },
-        {
-          question:
-            "What types of connectivity do Eco-Series Bullet Cameras support?",
-          answer:
-            "They support IP network connectivity, PoE, 12V battery, and some 4G models. This allows flexible installation across commercial, industrial, and residential sites.",
-        },
-      ],
-    },
-  },
+
   ptzcctvcamera: {
     hero: [
       {
@@ -2085,26 +1647,22 @@ export const Product = {
       ],
     },
   },
-  domecctvcamera: {
+  bulletcctvcamera: {
     hero: [
       {
-        title: "Eco-Series Dome Camera",
-        image: "/images/product_dome_main.png",
-        d_image: "/images/product_dome_main.png",
-        m_image: "/images/product_dome_main_mobile.png",
-        buttonText: "Get Dome Cameras",
-        buttonLink: "contact-us",
+        title: "Eco Series Bullet Camera",
+        image: "/images/product_ecoseries_bullet_main.png",
+        d_image: "/images/product_ecoseries_bullet_main.png",
+        m_image: "/images/product_ecoseries_bullet_main_mobile.png",
+        buttonText: "Get Your CCTV Cameras",
+        buttonLink: "/contact-us",
         sectionProps: {
-          desktop: {
-            marginTop: "-6%",
-          },
-          mobile: {
-            marginTop: "",
-          },
+          desktop: { marginTop: "-3.5%" },
+          mobile: { marginTop: "" },
         },
         textProps: {
           desktop: {
-            textColor: "",
+            textColor: "#000",
             alignItems: "",
             textAlign: "",
             top: "",
@@ -2112,7 +1670,7 @@ export const Product = {
             width: "",
           },
           mobile: {
-            textColor: "",
+            textColor: "#000",
             alignItems: "",
             textAlign: "",
             top: "",
@@ -2122,39 +1680,34 @@ export const Product = {
         },
         buttonProps: {
           desktop: {
-            textColor: "",
-            borderColor: "",
+            textColor: "#000",
+            textHover: "black",
+            borderColor: "black",
             bgColor: "",
-            width: "",
+            width: "120%",
             height: "",
-            borderHover: "",
-            textHover: "",
           },
           mobile: {
-            textColor: "",
-            borderColor: "",
+            textColor: "black",
+            borderColor: "black",
             bgColor: "",
-            width: "",
+            width: "120%",
             height: "",
-            borderHover: "",
-            textHover: "",
           },
         },
       },
     ],
     features: {
-      d_image: "/images/product_feature_dome_bg.png",
-      m_image: "/images/product_feature_dome_bg_mobile.png",
-      heading:
-        "Professional-Grade Dome CCTV Cameras for Businesses, Offices & Homes",
-      description:
-        "ArcisAI dome security cameras are built for clear monitoring, stable performance and long-lasting protection in Indian conditions. With strong night vision, durable housing, and smooth connectivity options, these cameras deliver dependable security for shops, buildings, factories, apartments, and indoor/outdoor spaces. Whether you need a compact dome for discreet surveillance or a stronger metal variant for harsh environments, the ArcisAI Dome Series offers the perfect fit for every setup.",
+      d_image: "",
+      m_image: "",
+      heading: "",
+      description: [""],
       styles: {
         contentMarginTop: {
-          mobile: "85%",
-          tablet: "35%",
-          laptop: "40%",
-          bigscreen: "40%",
+          mobile: "5%",
+          tablet: "5%",
+          laptop: "0%",
+          bigscreen: "0%",
         },
         featuresMarginTop: {
           mobile: "5%",
@@ -2162,306 +1715,555 @@ export const Product = {
           laptop: "5%",
           bigscreen: "5%",
         },
+        justify: "center",
         alignment: "center",
         descriptionColor: "white",
         featureColor: "white",
+        descriptionTextAlign: "center", // or "center", "right", "justify"
+        descriptionWidth: {
+          mobile: "90%",
+          tablet: "70%",
+          laptop: "99%",
+          bigscreen: "99%",
+        },
       },
       featuresList: [
         { name: "Fixed Lens Options", icon: <FeatureIcon1 /> },
         { name: "Stable Network Connectivity", icon: <FeatureIcon2 /> },
-        { name: "Easy Mounting Design", icon: <FeatureIcon3 /> },
+        { name: "Temper Proof", icon: <FeatureIcon3 /> },
         { name: "Two-Way Talk", icon: <FeatureIcon4 /> },
-        { name: "Temper Proof", icon: <FeatureIcon5 /> },
-        { name: "Color Night Vision", icon: <FeatureIcon6 /> },
-        { name: "Superior Image Quality", icon: <FeatureIcon7 /> },
-        { name: "Infrared Night Vision", icon: <FeatureIcon8 /> },
-        { name: "Remote Access via Mobile App", icon: <FeatureIcon9 /> },
-        { name: "ONVIF-Compatible", icon: <FeatureIcon16 /> },
-        { name: "IP66/IP67 Weatherproof Design", icon: <FeatureIcon11 /> },
-        { name: "Plug-and-Play Setup", icon: <FeatureIcon12 /> },
-        { name: "Strong Build Quality", icon: <FeatureIcon14 /> },
-      ],
-    },
-    comparisonData: {
-      d_image: "/images/product_cameracomparision.png",
-      m_image: "/images/product_cameracomparision_mobile.png",
-      heading: "Find the Right Dome CCTV Camera for Your Security Needs",
-      headers: [
-        "Category",
-        "AD-90AI4GBDPD",
-        "AD-90NRE5DP",
-        "AD-90NRE5DM",
-        "AD-90NRP5DP",
-        "AD-90NRP5DM",
-        "AD-90ARE3DP",
-        "AD-90ARE3DM",
-        "AD-90ARE3DP2",
-        "AD-90ARP3DP",
-        "AD-90ARP3DM",
-        "AD-90ARP3DP2",
-      ],
+        { name: "ONVIF-Compatible", icon: <FeatureIcon5 /> },
+        { name: "Infrared Night Vision", icon: <FeatureIcon6 /> },
+        { name: "Color Night Vision", icon: <FeatureIcon7 /> },
+        { name: "High-Resolution Imaging", icon: <FeatureIcon8 /> },
 
-      rows: [
+        { name: "Remote Access via Mobile App", icon: <FeatureIcon9 /> },
+        { name: "IP66/IP67 Weatherproof Design", icon: <FeatureIcon10 /> },
+        { name: "Plug-and-Play Setup", icon: <FeatureIcon11 /> },
+        { name: "Strong Build Quality", icon: <FeatureIcon12 /> },
+      ],
+    },
+    productList: {
+      bg_image: "/images/product_bullet_bg.png",
+      heading: "AI CCTV Camera Range for Every Need",
+      description: "",
+      products: [
         {
-          label: "Enclosure (Type)",
-          values: [
-            "Dome (Plastic)",
-            "Dome (Plastic)",
-            "Dome (Metal)",
-            "Dome (Plastic)",
-            "Dome (Metal)",
-            "Dome (Plastic)",
-            "Dome (Metal)",
-            "Dome (Plastic)",
-            "Dome (Plastic)",
-            "Dome (Metal)",
-            "Dome (Plastic)",
+          product_type: "Eco-series",
+          productarray: [
+            {
+              image: "/images/Ecoseries_bullet_AD-90NRE5BM.png",
+              product_name: "AD-90NRE5BM",
+              subtitle: "IP Bullet - 5MP",
+              link: "/eco-series/bullet-cctv-camera",
+              attributes: {
+                type: ["Bullet"],
+                lens: ["5 MP"],
+                connectivity: ["IP"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_bullet_AD-90NRE5BP.png",
+              product_name: "AD-90NRE5BP",
+              subtitle: "IP Bullet - 5MP",
+              link: "/eco-series/bullet-cctv-camera",
+              attributes: {
+                type: ["Bullet"],
+                lens: ["5 MP"],
+                connectivity: ["IP"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_bullet_AD-90ARP3BP2.png",
+              product_name: "AD-90ARP3BP2",
+              subtitle: "POE Bullet - 3MP",
+              link: "/eco-series/bullet-cctv-camera",
+              attributes: {
+                type: ["Bullet"],
+                lens: ["3 MP"],
+                connectivity: ["PoE"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_bullet_AD-90NRP5BP.png",
+              product_name: "AD-90NRP5BP",
+              subtitle: "POE Bullet - 5MP",
+              link: "/eco-series/bullet-cctv-camera",
+              attributes: {
+                type: ["Bullet"],
+                lens: ["5 MP"],
+                connectivity: ["PoE"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_bullet_AD-90ARE3BP2.png",
+              product_name: "AD-90ARE3BP2",
+              subtitle: "IP Bullet - 3MP",
+              link: "/eco-series/bullet-cctv-camera",
+              attributes: {
+                type: ["Bullet"],
+                lens: ["3 MP"],
+                connectivity: ["IP"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_bullet_AD-90AIEBDP.png",
+              product_name: "AD-90AIEBDP",
+              subtitle: "IP Bullet",
+              link: "/eco-series/bullet-cctv-camera",
+              attributes: {
+                type: ["Bullet"],
+                lens: ["3 MP"],
+                connectivity: ["IP"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_bullet_AD-90NRP5BM.png",
+              product_name: "AD-90NRP5BM",
+              subtitle: "POE Bullet - 5MP",
+              link: "/eco-series/bullet-cctv-camera",
+              attributes: {
+                type: ["Bullet"],
+                lens: ["5 MP"],
+                connectivity: ["PoE"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_bullet_AD-90ARE3BP.png",
+              product_name: "AD-90ARE3BP",
+              subtitle: "IP Bullet - 3MP",
+              link: "/eco-series/bullet-cctv-camera",
+              attributes: {
+                type: ["Bullet"],
+                lens: ["3 MP"],
+                connectivity: ["IP"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_bullet_AD-90ARP3BP.png",
+              product_name: "AD-90ARP3BP",
+              subtitle: "POE Bullet - 3MP",
+              link: "/eco-series/bullet-cctv-camera",
+              attributes: {
+                type: ["Bullet"],
+                lens: ["3 MP"],
+                connectivity: ["PoE"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_bullet_AD-90AI4GBDPB.png",
+              product_name: "AD-90AI4GBDPB",
+              subtitle: "4G AI Bullet - 3MP",
+              link: "/eco-series/bullet-cctv-camera",
+              attributes: {
+                type: ["Bullet"],
+                lens: ["3 MP"],
+                connectivity: ["4G"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_bullet_AD-90ARE3BM.png",
+              product_name: "AD-90ARE3BM",
+              subtitle: "IP Bullet - 3MP",
+              link: "/eco-series/bullet-cctv-camera",
+              attributes: {
+                type: ["Bullet"],
+                lens: ["3 MP"],
+                connectivity: ["IP"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_bullet_AD-90ARP3BM.png",
+              product_name: "AD-90ARP3BM",
+              subtitle: "POE Bullet - 3MP",
+              link: "/eco-series/bullet-cctv-camera",
+              attributes: {
+                type: ["Bullet"],
+                lens: ["3 MP"],
+                connectivity: ["PoE"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_bullet_AD-90ARE3BPB.png",
+              product_name: "AD-90ARE3BPB",
+              subtitle: "IP Bullet Battery-3MP",
+              link: "/eco-series/bullet-cctv-camera",
+              attributes: {
+                type: ["Bullet"],
+                lens: ["3 MP"],
+                connectivity: ["IP"],
+              },
+            },
           ],
-        },
-        {
-          label: "Resolution",
-          values: [
-            "3MP",
-            "5MP",
-            "5MP",
-            "5MP",
-            "5MP",
-            "3MP",
-            "3MP",
-            "3MP",
-            "3MP",
-            "3MP",
-            "3MP",
-          ],
-        },
-        {
-          label: "Lens",
-          values: [
-            "4 mm",
-            "2.8 mm",
-            "2.8 mm",
-            "2.8 mm",
-            "2.8 mm",
-            "4 mm",
-            "4 mm",
-            "2.8 mm",
-            "4 mm",
-            "4 mm",
-            "2.8 mm",
-          ],
-        },
-        {
-          label: "Dynamic Range",
-          values: [
-            "DWDR, 3D-DNR",
-            "HDR",
-            "HDR",
-            "HDR",
-            "HDR",
-            "HDR",
-            "HDR",
-            "HDR",
-            "HDR",
-            "HDR",
-            "HDR",
-          ],
-        },
-        {
-          label: "IR Distance",
-          values: [
-            "20 m",
-            "30 m",
-            "30 m",
-            "30 m",
-            "30 m",
-            "20 m",
-            "20 m",
-            "20 m",
-            "20 m",
-            "20 m",
-            "20 m",
-          ],
-        },
-        {
-          label: "Connectivity",
-          values: [
-            "SIM, PoE (optional)",
-            "10/100 (IP)",
-            "10/100 (IP)",
-            "PoE",
-            "PoE",
-            "10/100 (IP)",
-            "10/100 (IP)",
-            "10/100 (IP)",
-            "PoE",
-            "PoE",
-            "PoE",
-          ],
-        },
-        {
-          label: "SD Card",
-          values: [
-            "Up to 128GB",
-            "Supported",
-            "Supported",
-            "Supported",
-            "Supported",
-            "Supported",
-            "Supported",
-            "Supported",
-            "Supported",
-            "Supported",
-            "Supported",
-          ],
-        },
-        {
-          label: "IP Rating",
-          values: [
-            "IP66",
-            "IP67",
-            "IP67",
-            "IP67",
-            "IP67",
-            "IP66",
-            "IP66",
-            "IP66",
-            "IP66",
-            "IP66",
-            "IP66",
-          ],
-        },
-        {
-          label: "Full Details",
-          values: [
-            "Download PDF",
-            "Download PDF",
-            "Download PDF",
-            "Download PDF",
-            "Download PDF",
-            "Download PDF",
-            "Download PDF",
-            "Download PDF",
-            "Download PDF",
-            "Download PDF",
-            "Download PDF",
-          ],
-          links: [
-            "/pdfs/AD-90AI4GBDPD.pdf",
-            "/pdfs/AD-90NRE5DP.pdf",
-            "/pdfs/AD-90NRE5DM.pdf",
-            "/pdfs/AD-90NRP5DP.pdf",
-            "/pdfs/AD-90NRP5DM.pdf",
-            "/pdfs/AD-90ARE3DP.pdf",
-            "/pdfs/AD-90ARE3DM.pdf",
-            "/pdfs/AD-90ARE3DP2.pdf",
-            "/pdfs/AD-90ARP3DP.pdf",
-            "/pdfs/AD-90ARP3DM.pdf",
-            "/pdfs/AD-90ARP3DP2.pdf",
-          ],
-          isButton: true,
         },
       ],
     },
-    AISolutionIndustry: {
-      heading:
-        "A CCTV Camera Brand in India Delivering AI Solutions for Every Industry",
-      description:
-        "From retail stores to housing societies, factories to warehouses and public infrastructure - We deliver smart surveillance solutions tailored to each industry’s unique challenges. Our security cameras help you detect threats, monitor activity and respond faster.",
-      industries: [
+    innovation: {
+      heading: "Trusted Bullet CCTV Cameras for Every Business",
+      subHeading: "",
+      array: [
         {
-          name: "Manufacturing & Factory Plants",
-          image: "/images/home_aisolutionindustry_1.png",
-        }, // Placeholder
-        {
-          name: "Warehouses & Logistics",
-          image: "/images/home_aisolutionindustry_2.png",
-        },
-        {
-          name: "Smart Cities",
-          image: "/images/home_aisolutionindustry_3.png",
-        },
-        {
-          name: "Construction Sites",
-          image: "/images/home_aisolutionindustry_4.png",
-        },
-        { name: "Hospitality", image: "/images/home_aisolutionindustry_5.png" },
-        {
-          name: "Banks & ATMs",
-          image: "/images/home_aisolutionindustry_6.png",
-        },
-        { name: "Hospitals", image: "/images/home_aisolutionindustry_7.png" },
-        {
-          name: "Airports, Bus & Railway Stations",
-          image: "/images/home_aisolutionindustry_8.png",
-        },
-        {
-          name: "Retail Stores",
-          image: "/images/home_aisolutionindustry_9.png",
-        },
-        {
-          name: "Corporate Offices",
-          image: "/images/home_aisolutionindustry_10.png",
-        },
-        {
-          name: "Housing Societies",
-          image: "/images/home_aisolutionindustry_11.png",
-        },
-        {
-          name: "Educational Premises",
-          image: "/images/home_aisolutionindustry_12.png",
-        },
-      ],
-    },
-    whychoosearcis: {
-      heading: "Trusted Dome CCTV Cameras for Every Business",
-      items: [
-        {
-          name: "Made for Indian",
+          title: "Made In India",
           description:
-            "ArcisAI Dome Cameras are built to handle heat, dust, humidity, and low light—making them reliable for Indian homes, shops, offices, and industries all year round.",
-          icon: <WhyChooseIcon1 />,
+            "Designed to withstand harsh Indian weather, dust, and extreme temperatures, ensuring long-lasting performance.",
+          icon: InnovationIcon1,
         },
         {
-          name: "Clear Footage Day & Night",
+          title: "High-Quality Construction",
           description:
-            "Every camera is designed to capture sharp details, whether it’s bright daytime or low-light indoor conditions, ensuring your space stays protected 24/7.",
-          icon: <WhyChooseIcon2 />,
+            "Choose from metal and plastic bullet CCTV cameras, with IP66/IP67 protection for indoor and outdoor surveillance.",
+          icon: InnovationIcon2,
         },
         {
-          name: "Perfect for Any Location",
+          title: "Flexible Installation",
           description:
-            "Whether you need a dome camera for a small shop, a corporate building, an apartment, or a warehouse, ArcisAI offers the right model for every need.",
-          icon: <WhyChooseIcon3 />,
+            "Supports POE, IP, and 4G connectivity, suitable for commercial, industrial, and residential setups.",
+          icon: InnovationIcon3,
         },
         {
-          name: "Easy to Install",
+          title: "Reliable Performance",
           description:
-            "The compact dome design fits cleanly on ceilings and walls, making installation quick, neat, and suitable for both indoor and outdoor areas.",
-          icon: <WhyChooseIcon4 />,
+            "Continuous, stable video monitoring with 3MP and 5MP bullet CCTV cameras, delivering clear footage for every environment.",
+          icon: InnovationIcon4,
         },
         {
-          name: "Compatible Security Setup",
+          title: "Cost-Effective",
           description:
-            "Our dome cameras work smoothly with ArcisAI NVRs, VMS, and other ONVIF-supported systems, so you can upgrade or expand without replacing everything.",
-          icon: <WhyChooseIcon5 />,
+            "Get premium bullet CCTV cameras, ideal for budget-conscious businesses and institutions.",
+          icon: InnovationIcon5,
         },
         {
-          name: "Trusted Quality",
+          title: "Multiple Variants",
           description:
-            "Businesses, system integrators, and residential societies choose ArcisAI because our dome cameras stay stable, consistent, and effective for years.",
-          icon: <WhyChooseIcon6 />,
+            "Various lens sizes, enclosure types, and connectivity options to meet diverse surveillance requirements.",
+          icon: InnovationIcon6,
         },
       ],
     },
     CTAButton: {
-      data: "Ready to Secure Your Space With Reliable Dome CCTV Cameras?",
-      buttonText: "Request CCTV Quote",
+      data: "Protect Your Facility with ArcisAI Eco-Series Bullet Security CCTV Cameras",
+      buttonText: "Get a Quote",
+      d_image: "/images/product_cta_bullet.png",
+      m_image: "/images/product_cta_bullet_mobile.png",
+      link: "/contact-us",
+      textPosition: {
+        desktop: { top: "50%", left: "-5%" },
+        mobile: { top: "60%", left: "-5%" },
+      },
+      buttonProps: {
+        desktop: {
+          textColor: "black",
+          borderColor: "#7F56D9",
+          bgColor: "rgba(23, 23, 23, 0.05)",
+          width: "220px",
+          height: "56px",
+          fontWeight: "400",
+        },
+        mobile: {
+          textColor: "black",
+          borderColor: "#7F56D9",
+          bgColor: "rgba(23, 23, 23, 0.05)",
+          width: "200px",
+          height: "48px",
+        },
+      },
+      textProps: {
+        desktop: {
+          textColor: "linear(150deg, #171717, #7F56D9)",
+          alignItems: "flex-end",
+          textAlign: "right",
+          width: "55%",
+          marginBottom: "40px",
+        },
+        mobile: {
+          textColor: "linear(150deg, #171717, #7F56D9)",
+          alignItems: "flex-end",
+          textAlign: "right",
+          width: "90%",
+          marginBottom: "20px",
+        },
+      },
+      textColor: "linear(45deg, #171717, #7F56D9)",
+    },
+    FAQsData: {
+      heading: "Eco-Series Bullet Camera FAQs",
+      data: [
+        {
+          question: "Are Eco-Series Bullet Cameras suitable for outdoor use?",
+          answer:
+            "Eco-Series Bullet Cameras come in IP66/IP67 rated enclosures (metal and plastic), making them weatherproof and ideal for both indoor and outdoor installations.",
+        },
+        {
+          question:
+            "What types of connectivity do Eco-Series Bullet Cameras support?",
+          answer:
+            "They support IP network connectivity, PoE, 12V battery, and some 4G models. This allows flexible installation across commercial, industrial, and residential sites.",
+        },
+      ],
+    },
+  },
+  domecctvcamera: {
+    hero: [
+      {
+        title: "",
+        image: "/images/product_ecoseries_dome_main.png",
+        d_image: "/images/product_ecoseries_dome_main.png",
+        m_image: "/images/product_ecoseries_dome_main_mobile.png",
+
+        sectionProps: {
+          desktop: { marginTop: "-5.5%" },
+          mobile: { marginTop: "" },
+        },
+        textProps: {
+          desktop: {
+            textColor: "#000",
+            alignItems: "",
+            textAlign: "",
+            top: "",
+            left: "",
+            width: "",
+          },
+          mobile: {
+            textColor: "#000",
+            alignItems: "",
+            textAlign: "",
+            top: "",
+            left: "",
+            width: "",
+          },
+        },
+      },
+    ],
+    features: {
+      d_image: "",
+      m_image: "",
+      heading: "",
+      description: [""],
+      styles: {
+        contentMarginTop: {
+          mobile: "5%",
+          tablet: "5%",
+          laptop: "0%",
+          bigscreen: "0%",
+        },
+        featuresMarginTop: {
+          mobile: "5%",
+          tablet: "5%",
+          laptop: "5%",
+          bigscreen: "5%",
+        },
+        justify: "center",
+        alignment: "center",
+        descriptionColor: "white",
+        featureColor: "white",
+        descriptionTextAlign: "center", // or "center", "right", "justify"
+        descriptionWidth: {
+          mobile: "90%",
+          tablet: "70%",
+          laptop: "99%",
+          bigscreen: "99%",
+        },
+      },
+      featuresList: [
+        { name: "Fixed Lens Options", icon: <FeatureIcon1 /> },
+        { name: "Stable Network Connectivity", icon: <FeatureIcon2 /> },
+        { name: "Temper Proof", icon: <FeatureIcon3 /> },
+        { name: "Two-Way Talk", icon: <FeatureIcon4 /> },
+        { name: "ONVIF-Compatible", icon: <FeatureIcon5 /> },
+        { name: "Infrared Night Vision", icon: <FeatureIcon6 /> },
+        { name: "Color Night Vision", icon: <FeatureIcon7 /> },
+        { name: "High-Resolution Imaging", icon: <FeatureIcon8 /> },
+
+        { name: "Remote Access via Mobile App", icon: <FeatureIcon9 /> },
+        { name: "IP66/IP67 Weatherproof Design", icon: <FeatureIcon10 /> },
+        { name: "Plug-and-Play Setup", icon: <FeatureIcon11 /> },
+        { name: "Strong Build Quality", icon: <FeatureIcon12 /> },
+      ],
+    },
+    productList: {
+      bg_image: "/images/product_bullet_bg.png",
+      heading: "Find the Right Dome CCTV Camera for Your Security Needs",
+      description: "",
+      products: [
+        {
+          product_type: "Eco-series",
+          productarray: [
+            {
+              image: "/images/Ecoseries_dome_AD-90ARP3DP.png",
+              product_name: "AD-90ARP3DP",
+              subtitle: "POE Dome - 3MP",
+              link: "/eco-series/dome-cctv-camera",
+              attributes: {
+                type: ["Dome"],
+                lens: ["3 MP"],
+                connectivity: ["PoE"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_dome_AD-90NRP5DP.png",
+              product_name: "AD-90NRP5DP",
+              subtitle: "POE Dome - 5MP",
+              link: "/eco-series/dome-cctv-camera",
+              attributes: {
+                type: ["Dome"],
+                lens: ["5 MP"],
+                connectivity: ["PoE"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_dome_AD-90ARP3DM.png",
+              product_name: "AD-90ARP3DM",
+              subtitle: "POE Dome - 3MP",
+              link: "/eco-series/dome-cctv-camera",
+              attributes: {
+                type: ["Dome"],
+                lens: ["3 MP"],
+                connectivity: ["PoE"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_dome_AD-90NRP5DM.png",
+              product_name: "AD-90NRP5DM",
+              subtitle: "POE Dome - 5MP",
+              link: "/eco-series/dome-cctv-camera",
+              attributes: {
+                type: ["Dome"],
+                lens: ["5 MP"],
+                connectivity: ["PoE"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_dome_AD-90ARE3DP2.png",
+              product_name: "AD-90ARE3DP2",
+              subtitle: "IP Dome - 3MP",
+              link: "/eco-series/dome-cctv-camera",
+              attributes: {
+                type: ["Dome"],
+                lens: ["3 MP"],
+                connectivity: ["IP"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_dome_AD-90ARE3DP.png",
+              product_name: "AD-90ARE3DP",
+              subtitle: "IP Dome - 3MP",
+              link: "/eco-series/dome-cctv-camera",
+              attributes: {
+                type: ["Dome"],
+                lens: ["3 MP"],
+                connectivity: ["IP"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_dome_AD-90ARP3DP2.png",
+              product_name: "AD-90ARP3DP2",
+              subtitle: "POE Dome - 3MP",
+              link: "/eco-series/dome-cctv-camera",
+              attributes: {
+                type: ["Dome"],
+                lens: ["3 MP"],
+                connectivity: ["PoE"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_dome_AD-90ARE3DM.png",
+              product_name: "AD-90ARE3DM",
+              subtitle: "IP Dome - 3MP",
+              link: "/eco-series/dome-cctv-camera",
+              attributes: {
+                type: ["Dome"],
+                lens: ["3 MP"],
+                connectivity: ["IP"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_dome_AD-90NRE5DP.png",
+              product_name: "AD-90NRE5DP",
+              subtitle: "IP Dome - 5MP",
+              link: "/eco-series/dome-cctv-camera",
+              attributes: {
+                type: ["Dome"],
+                lens: ["5 MP"],
+                connectivity: ["IP"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_dome_AD-90NRE5DM.png",
+              product_name: "AD-90NRE5DM",
+              subtitle: "IP Dome - 5MP",
+              link: "/eco-series/dome-cctv-camera",
+              attributes: {
+                type: ["Dome"],
+                lens: ["5 MP"],
+                connectivity: ["IP"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_dome_AD-90AI4GBDPD.png",
+              product_name: "AD-90AI4GBDPD",
+              subtitle: "4G AI Dome - 3MP",
+              link: "/eco-series/dome-cctv-camera",
+              attributes: {
+                type: ["Dome"],
+                lens: ["3 MP"],
+                connectivity: ["4G"],
+              },
+            },
+          ],
+        },
+      ],
+    },
+    innovation: {
+      heading: "Trusted Dome CCTV Cameras for Every Business",
+      subHeading: "",
+      array: [
+        {
+          title: "Made for India",
+          description:
+            "ArcisAI Dome Cameras are built to handle heat, dust, humidity, and low light—making them reliable for Indian homes, shops, offices, and industries all year round.",
+          icon: InnovationIcon1,
+        },
+        {
+          title: "Clear Footage Day & Night",
+          description:
+            "Choose from metal and plastic bullet CCTV cameras, with IP66/IP67 protection for indoor and outdoor surveillance.",
+          icon: InnovationIcon7,
+        },
+        {
+          title: "Flexible Installation",
+          description:
+            "Supports POE, IP, and 4G connectivity, suitable for commercial, industrial, and residential setups.",
+          icon: InnovationIcon8,
+        },
+        {
+          title: "Reliable Performance",
+          description:
+            "Continuous, stable video monitoring with 3MP and 5MP bullet CCTV cameras, delivering clear footage for every environment.",
+          icon: InnovationIcon3,
+        },
+        {
+          title: "Cost-Effective",
+          description:
+            "Get premium bullet CCTV cameras, ideal for budget-conscious businesses and institutions.",
+          icon: InnovationIcon6,
+        },
+        {
+          title: "Multiple Variants",
+          description:
+            "Various lens sizes, enclosure types, and connectivity options to meet diverse surveillance requirements.",
+          icon: InnovationIcon2,
+        },
+      ],
+    },
+    CTAButton: {
+      data: "Protect Your Facility with ArcisAI Eco-Series Bullet    Security CCTV Cameras",
+      buttonText: "Schedule A Demo",
       d_image: "/images/product_cta_dome.png",
       m_image: "/images/product_cta_dome_mobile.png",
       link: "/contact-us",
       textPosition: {
-        desktop: { top: "50%", left: "5%" },
-        mobile: { top: "65%", left: "5%" },
+        desktop: { top: "50%", left: "4%" },
+        mobile: { top: "65%", left: "-4%" },
       },
       buttonProps: {
         desktop: {
@@ -2474,10 +2276,9 @@ export const Product = {
         mobile: {
           textColor: "linear(45deg, #171717, #7F56D9)",
           borderColor: "#7F56D9",
-
           bgColor: "",
-          width: "250px",
-          height: "43px",
+          width: "200px",
+          height: "",
         },
       },
       textProps: {
@@ -2485,12 +2286,12 @@ export const Product = {
           textColor: "linear(45deg, #171717, #7F56D9)",
           alignItems: "flex-start",
           textAlign: "left",
-          width: "",
+          width: "50%",
         },
         mobile: {
           textColor: "linear(45deg, #171717, #7F56D9)",
-          alignItems: "flex-start",
-          textAlign: "left",
+          alignItems: "flex-end",
+          textAlign: "right",
           width: "90%",
         },
       },
@@ -2499,17 +2300,18 @@ export const Product = {
       textAlign: "left",
     },
     FAQsData: {
-      heading: "Dome Security Camera FAQs",
+      heading: "Eco-Series Dome Camera FAQs",
       data: [
         {
-          question: "Are Dome Cameras suitable for indoor and outdoor use?",
+          question: "Are Eco-Series Bullet Cameras suitable for outdoor use?",
           answer:
-            "Yes. Our Dome CCTV Cameras are designed to work reliably in both indoor and outdoor environments, with protection against dust, heat, humidity, and low light.",
+            "Yes. Eco-Series Bullet Cameras come in IP66/IP67 rated enclosures (metal and plastic), making them weatherproof and ideal for both indoor and outdoor installations.",
         },
         {
-          question: "Can I use ArcisAI Dome Cameras in low-light areas?",
+          question:
+            "What types of connectivity do Eco-Series Bullet Cameras support?",
           answer:
-            "Absolutely. Every Dome camera comes with IR night vision, ensuring clear monitoring in dark or poorly lit environments.",
+            "They support IP network connectivity, PoE, 12V battery, and some 4G models. This allows flexible installation across commercial, industrial, and residential sites.",
         },
       ],
     },

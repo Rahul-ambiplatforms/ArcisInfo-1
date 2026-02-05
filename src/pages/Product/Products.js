@@ -16,6 +16,7 @@ import CCTVFeatures from "../WhyArcisAI/Components/CCTVFeaatures";
 import AISolutionIndustry from "../HomePage/Components/AISolutionIndustry";
 import NotFound from "../NotFound";
 import PageContentWrapper from "../../Components/PageContentWrapper";
+import ProductList from "../Series/Components/ProductList";
 
 const Products = () => {
   const { productId } = useParams();
@@ -27,7 +28,7 @@ const Products = () => {
 
   // Find the matching key in the Product object (e.g., "AIBulletCCTVCamera" -> "aibulletcctvcamera")
   const productKey = Object.keys(Product).find(
-    (key) => key.toLowerCase() === normalizedId
+    (key) => key.toLowerCase() === normalizedId,
   );
 
   const productData = Product[productKey];
@@ -67,8 +68,6 @@ const Products = () => {
         <meta name="twitter:title" content={productSEO.metatitle} />
         <meta name="twitter:description" content={productSEO.metadescription} />
         <meta name="twitter:image" content={productSEO.ogimage} />
-
-
       </Helmet>
       {/* Schema Markup */}
       {productSEO.schema &&

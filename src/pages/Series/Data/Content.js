@@ -16,7 +16,7 @@ import InnovationIcon3 from "../../../Components/Icons/solution_genai_whychoose_
 import InnovationIcon4 from "../../../Components/Icons/product_all_whychoose_6.svg";
 import InnovationIcon5 from "../../../Components/Icons/aboutus_innovation_5.svg";
 import InnovationIcon6 from "../../../Components/Icons/solution_genai_whychoose_2.svg";
-import InnovationIcon7 from "../../../Components/Icons/aboutus_innovation_6.svg";
+
 import InnovationIcon8 from "../../../Components/Icons/solution_cloudai_whychoose_3.svg";
 import InnovationIcon9 from "../../../Components/Icons/Innovation_arcis_1.svg";
 import InnovationIcon10 from "../../../Components/Icons/Innovation_arcis_2.svg";
@@ -43,8 +43,6 @@ import { ReactComponent as NvrIcon3 } from "../../../Components/Icons/nvr_featur
 import { ReactComponent as NvrIcon4 } from "../../../Components/Icons/nvr_features_4.svg";
 import { ReactComponent as NvrIcon5 } from "../../../Components/Icons/nvr_features_5.svg";
 import { ReactComponent as NvrIcon6 } from "../../../Components/Icons/nvr_features_6.svg";
-
-import { position } from "@chakra-ui/react";
 
 export const Series = {
   sSeries: {
@@ -154,136 +152,508 @@ export const Series = {
     },
   },
   ecoSeries: {
-    hero: {
-      // d_image: "/images/ecoseries_hero_main.png",
-      // m_image: "/images/ecoseries_hero_main_mobile.png",
-      d_image: "/images/sseries_hero_main.png",
-      m_image: "/images/sseries_hero_main_mobile.png",
-      heading: "Reliable CCTV Cameras for Everyday Security",
-      description:
-        "Built to handle Indian conditions with precision, the Eco-Series combines clear footage, stable operation and flexible installation options making it a trusted CCTV solution for long-lasting, essential security coverage.",
-      sectionProps: {
-        desktop: {
-          marginTop: "",
+    hero: [
+      {
+        id: 1,
+        heading:
+          "Eco Series - A Reliable CCTV Cameras Built for Everyday Surveillance",
+        description:
+          "Built to handle Indian conditions with precision, the Eco-Series combines clear footage, stable operation and flexible installation options making it a trusted CCTV solution for long-lasting, essential security coverage.",
+
+        d_image: "/images/ecoseries_hero_main.png",
+        m_image: "/images/ecoseries_hero_main_mobile.png",
+        buttonText: "Talk To Our Expert",
+        buttonLink: "/contact-us",
+        sectionProps: {
+          desktop: {
+            marginTop: "-5%",
+          },
+          mobile: {
+            marginTop: "0%",
+          },
         },
-        mobile: {
-          marginTop: "",
+        textProps: {
+          desktop: {
+            textColor: "black",
+            alignItems: "center",
+            textAlign: "center",
+            top: "-25%",
+            left: "0",
+            width: "100%",
+            descriptionWidth: "100%",
+          },
+          mobile: {
+            textColor: "black",
+            alignItems: "center",
+            textAlign: "center",
+            top: "-100%",
+            left: "0",
+            width: "100%",
+          },
+        },
+        buttonProps: {
+          desktop: {
+            textColor: "black",
+            textHover: "black",
+            borderColor: "black",
+            borderHover: "",
+            bgColor: "#CECECE",
+            width: "",
+            height: "",
+          },
+          mobile: {
+            textColor: "black",
+            borderColor: "black",
+            bgColor: "",
+            width: "",
+            height: "",
+            borderHover: "",
+            textHover: "",
+          },
         },
       },
-      textProps: {
-        desktop: {
-          textColor: "",
-          alignItems: "flex-start",
-          textAlign: "",
-          top: "",
-          left: "",
-          width: "",
-        },
-        mobile: {
-          textColor: "",
-          alignItems: "",
-          textAlign: "",
-          top: "",
-          left: "",
-          width: "",
-        },
-      },
-      buttonProps: {
-        desktop: {
-          textColor: "",
-          borderColor: "",
-          bgColor: "",
-          width: "",
-          height: "",
-          borderHover: "",
-          textHover: "",
-        },
-        mobile: {
-          textColor: "",
-          borderColor: "",
-          bgColor: "",
-          width: "",
-          height: "",
-          borderHover: "",
-          textHover: "",
-        },
-      },
-    },
+    ],
     productList: {
       bg_image: "/images/home_wave_gif_1.gif",
-      heading: "Eco-Series: India’s Most Trusted CCTV Camera Range",
+      heading:
+        "Explore Our Eco Series Camera Lineup for Every Surveillance Need",
       description: "",
       products: [
         {
           product_type: "Eco-series",
           productarray: [
             {
-              image: "/images/home_productlist_sseries_2.png",
-              product_name: "Bullet CCTV camera",
-              link: "/eco-series/bullet-cctv-camera",
-            },
-            {
-              image: "/images/home_productlist_sseries_3.png",
-              product_name: "Dome CCTV camera",
+              image: "/images/Ecoseries_dome_AD-90ARP3DP.png",
+              product_name: "AD-90ARP3DP",
+              subtitle: "POE Dome - 3MP",
               link: "/eco-series/dome-cctv-camera",
+              attributes: {
+                type: ["Dome"],
+                lens: ["3 MP"],
+                connectivity: ["PoE"],
+              },
             },
             {
-              image: "/images/home_productlist_sseries_1.png",
-              product_name: "PTZ CCTV camera",
-              link: "/eco-series/ptz-cctv-camera",
+              image: "/images/Ecoseries_dome_AD-90NRP5DP.png",
+              product_name: "AD-90NRP5DP",
+              subtitle: "POE Dome - 5MP",
+              link: "/eco-series/dome-cctv-camera",
+              attributes: {
+                type: ["Dome"],
+                lens: ["5 MP"],
+                connectivity: ["PoE"],
+              },
             },
-            // {
-            //   image: "/images/home_productlist_sseries_1.png",
-            //   product_name: "AI Baby PTZ camera",
-            //   link: "eco-series/baby-ptz-cctv-camera",
-            // },
+            {
+              image: "/images/Ecoseries_dome_AD-90ARP3DM.png",
+              product_name: "AD-90ARP3DM",
+              subtitle: "POE Dome - 3MP",
+              link: "/eco-series/dome-cctv-camera",
+              attributes: {
+                type: ["Dome"],
+                lens: ["3 MP"],
+                connectivity: ["PoE"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_dome_AD-90NRP5DM.png",
+              product_name: "AD-90NRP5DM",
+              subtitle: "POE Dome - 5MP",
+              link: "/eco-series/dome-cctv-camera",
+              attributes: {
+                type: ["Dome"],
+                lens: ["5 MP"],
+                connectivity: ["PoE"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_dome_AD-90ARE3DP2.png",
+              product_name: "AD-90ARE3DP2",
+              subtitle: "IP Dome - 3MP",
+              link: "/eco-series/dome-cctv-camera",
+              attributes: {
+                type: ["Dome"],
+                lens: ["3 MP"],
+                connectivity: ["IP"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_dome_AD-90ARE3DP.png",
+              product_name: "AD-90ARE3DP",
+              subtitle: "IP Dome - 3MP",
+              link: "/eco-series/dome-cctv-camera",
+              attributes: {
+                type: ["Dome"],
+                lens: ["3 MP"],
+                connectivity: ["IP"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_dome_AD-90ARP3DP2.png",
+              product_name: "AD-90ARP3DP2",
+              subtitle: "POE Dome - 3MP",
+              link: "/eco-series/dome-cctv-camera",
+              attributes: {
+                type: ["Dome"],
+                lens: ["3 MP"],
+                connectivity: ["PoE"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_dome_AD-90ARE3DM.png",
+              product_name: "AD-90ARE3DM",
+              subtitle: "IP Dome - 3MP",
+              link: "/eco-series/dome-cctv-camera",
+              attributes: {
+                type: ["Dome"],
+                lens: ["3 MP"],
+                connectivity: ["IP"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_dome_AD-90NRE5DP.png",
+              product_name: "AD-90NRE5DP",
+              subtitle: "IP Dome - 5MP",
+              link: "/eco-series/dome-cctv-camera",
+              attributes: {
+                type: ["Dome"],
+                lens: ["5 MP"],
+                connectivity: ["IP"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_dome_AD-90NRE5DM.png",
+              product_name: "AD-90NRE5DM",
+              subtitle: "IP Dome - 5MP",
+              link: "/eco-series/dome-cctv-camera",
+              attributes: {
+                type: ["Dome"],
+                lens: ["5 MP"],
+                connectivity: ["IP"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_dome_AD-90AI4GBDPD.png",
+              product_name: "AD-90AI4GBDPD",
+              subtitle: "4G AI Dome - 3MP",
+              link: "/eco-series/dome-cctv-camera",
+              attributes: {
+                type: ["Dome"],
+                lens: ["3 MP"],
+                connectivity: ["4G"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_PTZ_AD-90ARWFBDP.png",
+              product_name: "AD-90ARWFBDP",
+              subtitle: "WiFi PT - 3MP",
+              link: "/eco-series/ptz-cctv-camera",
+              attributes: {
+                type: ["PTZ"],
+                lens: ["3 MP"],
+                connectivity: ["WIFI"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_PTZ_mini_AD-90ARE3MPT.png",
+              product_name: "AD-90ARE3MPT",
+              subtitle: "IP Mini PT - 3MP",
+              link: "/eco-series/ptz-cctv-camera",
+              attributes: {
+                type: ["PTZ"],
+                lens: ["3 MP"],
+                connectivity: ["IP"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_PTZ_mini_AD-90ARP3MPT2.png",
+              product_name: "AD-90ARP3MPT2",
+              subtitle: "POE Mini PT - 3MP",
+              link: "/eco-series/ptz-cctv-camera",
+              attributes: {
+                type: ["PTZ"],
+                lens: ["3 MP"],
+                connectivity: ["PoE"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_PTZ_AD-90ARE3PT.png",
+              product_name: "AD-90ARE3PT",
+              subtitle: "IP PT Camera - 3MP",
+              link: "/eco-series/ptz-cctv-camera",
+              attributes: {
+                type: ["PTZ"],
+                lens: ["3 MP"],
+                connectivity: ["IP"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_PTZ_AD-90AIWFBDP_outdoor.png",
+              product_name: "AD-90AIWFBDP",
+              subtitle: "Outdoor WiFi PT",
+              link: "/eco-series/ptz-cctv-camera",
+              attributes: {
+                type: ["PTZ"],
+                lens: ["3 MP"],
+                connectivity: ["WIFI"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_PTZ_AD-90ARP3PT2.png",
+              product_name: "AD-90ARP3PT2",
+              subtitle: "POE PT - 3MP",
+              link: "/eco-series/ptz-cctv-camera",
+              attributes: {
+                type: ["PTZ"],
+                lens: ["3 MP"],
+                connectivity: ["PoE"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_PTZ_mini_AD-90ARP3MPT.png",
+              product_name: "AD-90ARP3MPT",
+              subtitle: "POE Mini PT - 3MP",
+              link: "/eco-series/ptz-cctv-camera",
+              attributes: {
+                type: ["PTZ"],
+                lens: ["3 MP"],
+                connectivity: ["PoE"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_PTZ_AD-90AI4GBDP.png",
+              product_name: "AD-90AI4GBDP",
+              subtitle: "4G AI PTZ - 3MP",
+              link: "/eco-series/ptz-cctv-camera",
+              attributes: {
+                type: ["PTZ"],
+                lens: ["3 MP"],
+                connectivity: ["4G"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_PTZ_AD-90ARE3PTB.png",
+              product_name: "AD-90ARE3PTB",
+              subtitle: "IP PT Battery - 3MP",
+              link: "/eco-series/ptz-cctv-camera",
+              attributes: {
+                type: ["PTZ"],
+                lens: ["3 MP"],
+                connectivity: ["IP"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_PTZ_AD-90ARP3PT.png",
+              product_name: "AD-90ARP3PT",
+              subtitle: "POE PT - 3MP",
+              link: "/eco-series/ptz-cctv-camera",
+              attributes: {
+                type: ["PTZ"],
+                lens: ["3 MP"],
+                connectivity: ["PoE"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_bullet_AD-90NRE5BM.png",
+              product_name: "AD-90NRE5BM",
+              subtitle: "IP Bullet - 5MP",
+              link: "/eco-series/bullet-cctv-camera",
+              attributes: {
+                type: ["Bullet"],
+                lens: ["5 MP"],
+                connectivity: ["IP"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_bullet_AD-90NRE5BP.png",
+              product_name: "AD-90NRE5BP",
+              subtitle: "IP Bullet - 5MP",
+              link: "/eco-series/bullet-cctv-camera",
+              attributes: {
+                type: ["Bullet"],
+                lens: ["5 MP"],
+                connectivity: ["IP"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_bullet_AD-90ARP3BP2.png",
+              product_name: "AD-90ARP3BP2",
+              subtitle: "POE Bullet - 3MP",
+              link: "/eco-series/bullet-cctv-camera",
+              attributes: {
+                type: ["Bullet"],
+                lens: ["3 MP"],
+                connectivity: ["PoE"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_bullet_AD-90NRP5BP.png",
+              product_name: "AD-90NRP5BP",
+              subtitle: "POE Bullet - 5MP",
+              link: "/eco-series/bullet-cctv-camera",
+              attributes: {
+                type: ["Bullet"],
+                lens: ["5 MP"],
+                connectivity: ["PoE"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_bullet_AD-90ARE3BP2.png",
+              product_name: "AD-90ARE3BP2",
+              subtitle: "IP Bullet - 3MP",
+              link: "/eco-series/bullet-cctv-camera",
+              attributes: {
+                type: ["Bullet"],
+                lens: ["3 MP"],
+                connectivity: ["IP"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_bullet_AD-90AIEBDP.png",
+              product_name: "AD-90AIEBDP",
+              subtitle: "IP Bullet",
+              link: "/eco-series/bullet-cctv-camera",
+              attributes: {
+                type: ["Bullet"],
+                lens: ["3 MP"],
+                connectivity: ["IP"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_bullet_AD-90NRP5BM.png",
+              product_name: "AD-90NRP5BM",
+              subtitle: "POE Bullet - 5MP",
+              link: "/eco-series/bullet-cctv-camera",
+              attributes: {
+                type: ["Bullet"],
+                lens: ["5 MP"],
+                connectivity: ["PoE"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_bullet_AD-90ARE3BP.png",
+              product_name: "AD-90ARE3BP",
+              subtitle: "IP Bullet - 3MP",
+              link: "/eco-series/bullet-cctv-camera",
+              attributes: {
+                type: ["Bullet"],
+                lens: ["3 MP"],
+                connectivity: ["IP"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_bullet_AD-90ARP3BP.png",
+              product_name: "AD-90ARP3BP",
+              subtitle: "POE Bullet - 3MP",
+              link: "/eco-series/bullet-cctv-camera",
+              attributes: {
+                type: ["Bullet"],
+                lens: ["3 MP"],
+                connectivity: ["PoE"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_bullet_AD-90AI4GBDPB.png",
+              product_name: "AD-90AI4GBDPB",
+              subtitle: "4G AI Bullet - 3MP",
+              link: "/eco-series/bullet-cctv-camera",
+              attributes: {
+                type: ["Bullet"],
+                lens: ["3 MP"],
+                connectivity: ["4G"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_bullet_AD-90ARE3BM.png",
+              product_name: "AD-90ARE3BM",
+              subtitle: "IP Bullet - 3MP",
+              link: "/eco-series/bullet-cctv-camera",
+              attributes: {
+                type: ["Bullet"],
+                lens: ["3 MP"],
+                connectivity: ["IP"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_bullet_AD-90ARP3BM.png",
+              product_name: "AD-90ARP3BM",
+              subtitle: "POE Bullet - 3MP",
+              link: "/eco-series/bullet-cctv-camera",
+              attributes: {
+                type: ["Bullet"],
+                lens: ["3 MP"],
+                connectivity: ["PoE"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_bullet_AD-90ARE3BPB.png",
+              product_name: "AD-90ARE3BPB",
+              subtitle: "IP Bullet Battery-3MP",
+              link: "/eco-series/bullet-cctv-camera",
+              attributes: {
+                type: ["Bullet"],
+                lens: ["3 MP"],
+                connectivity: ["IP"],
+              },
+            },
+            {
+              image: "/images/Ecoseries_PTZ_mini_AD-90ARXBDP.png",
+              product_name: "AD-90ARXBDP",
+              subtitle: "Baby PTZ-3MP",
+              link: "/eco-series/baby-ptz-cctv-camera",
+              attributes: {
+                type: ["Baby PTZ"],
+                lens: ["3 MP"],
+                connectivity: ["WIFI"],
+              },
+            },
           ],
         },
       ],
     },
     CTAButton: {
-      data: "Get a Quote for Your CCTV Security Cameras",
-      buttonText: "Enquire Now",
-      d_image: "/images/sseries_cta.png",
-      m_Image: "/images/sseries_cta_mobile.png",
+      data: "Ready to See ArcisAI in Action? Book a Quick Demo",
+      buttonText: "Talk To Our Expert",
+      d_image: "/images/ecoseries_cta.png",
+      m_Image: "/images/ecoseries_cta_mobile.png",
       link: "/contact-us",
       textPosition: {
-        desktop: { top: "50%", left: "0%" },
-        mobile: { top: "25%", left: "0%" },
+        desktop: { top: "50%", left: "5%" },
+        mobile: { top: "70%", left: "-5%" },
       },
       buttonProps: {
         desktop: {
           textColor: "black",
           borderColor: "#7F56D9",
-          bgColor: "",
-          width: "",
-          height: "",
+          bgColor: "rgba(23, 23, 23, 0.05)",
+          width: "220px",
+          height: "56px",
+          fontWeight: "400",
         },
         mobile: {
           textColor: "black",
-          borderColor: "#000",
-          bgColor: "",
+          borderColor: "#7F56D9",
+          bgColor: "rgba(23, 23, 23, 0.05)",
           width: "200px",
-          height: "",
+          height: "48px",
         },
       },
       textProps: {
         desktop: {
           textColor: "linear(150deg, #171717, #7F56D9)",
-          alignItems: "center",
-          textAlign: "center",
-          width: "70%",
+          alignItems: "flex-start",
+          textAlign: "left",
+          width: "55%",
+          marginBottom: "40px",
         },
         mobile: {
           textColor: "linear(150deg, #171717, #7F56D9)",
-          alignItems: "center",
-          textAlign: "center",
-          width: "95%",
+          alignItems: "flex-end",
+          textAlign: "right",
+          width: "90%",
+          marginBottom: "20px",
         },
       },
-      textColor: "linear(30deg, #171717, #7F56D9)",
-      alignItems: "center",
-      textAlign: "center",
     },
   },
   nvrDvrSeries: {

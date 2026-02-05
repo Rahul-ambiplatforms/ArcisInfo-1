@@ -129,7 +129,10 @@ const CTAButton = ({
             fontSize={{ base: "30px", md: "48px", lg: "60px" }}
             fontWeight="400"
             lineHeight={{ base: "38px", md: "56px", lg: "76px" }}
-            mb={{ base: 4, md: 6 }}
+            mb={{
+              base: txtMobile?.marginBottom || 4,
+              md: txtDesktop?.marginBottom || 6,
+            }}
             w={{
               base: txtMobile?.width || "55%",
               md: txtDesktop?.width || "55%",
@@ -205,7 +208,10 @@ const CTAButton = ({
               }}
               textBgClip={responsiveBtnBgClip}
               fontSize="20px"
-              fontWeight="700"
+              fontWeight={{
+                base: btnMobile?.fontWeight || "700",
+                md: btnDesktop?.fontWeight || "700",
+              }}
               showGlow={false}
             >
               {buttonText}

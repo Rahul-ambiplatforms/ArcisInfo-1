@@ -506,7 +506,7 @@ export const IFSECData = {
         textColor: "black",
         borderColor: "#7F56D9",
         bgColor: "",
-        width: "160px",
+        width: "200px",
         height: "40px",
       },
     },

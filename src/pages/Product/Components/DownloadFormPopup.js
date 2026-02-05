@@ -93,7 +93,16 @@ const DownloadFormPopup = ({ isOpen, onClose, pdfUrl }) => {
 
         // Trigger PDF download
         if (pdfUrl) {
-          window.open(pdfUrl, "_blank");
+          // Create a temporary anchor element
+          const link = document.createElement("a");
+          link.href = pdfUrl;
+          // Extract filename from URL or use a default
+          const fileName = pdfUrl.split("/").pop() || "download.pdf";
+          link.setAttribute("download", fileName);
+          link.setAttribute("target", "_blank"); // Fallback for some browsers
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
         }
 
         console.log("ALL RELATED:", pdfUrl, BACKEND_URL);

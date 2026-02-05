@@ -30,7 +30,7 @@ const CountrySelector = ({ value, onChange }) => {
     (country) =>
       country.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       country.dial_code.includes(searchTerm) ||
-      country.code.toLowerCase().includes(searchTerm.toLowerCase())
+      country.code.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
   return (
@@ -42,6 +42,7 @@ const CountrySelector = ({ value, onChange }) => {
         border="none"
         h={{ base: "44px", md: "48px", lg: "52px" }}
         color="white"
+        borderRadius="0"
         fontSize={{ base: "14px", md: "15px", lg: "16px" }}
         fontWeight="400"
         _hover={{ bg: "rgba(255,255,255,0.3)" }}
