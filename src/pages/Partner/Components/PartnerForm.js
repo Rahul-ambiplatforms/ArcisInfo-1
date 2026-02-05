@@ -23,9 +23,9 @@ const PartnerForm = () => {
     countryCode: "+91",
     phone: "",
     company: "",
-    location: "", // State
-    location2: "", // City
-    customerType: "", // Interested As
+    state: "", // State
+    city: "", // City
+    InterestedAs: "", // Interested As
     message: "",
     updates: false,
     leadType: "Arcis Website",
@@ -35,6 +35,7 @@ const PartnerForm = () => {
   const toast = useToast();
 
   const BACKEND_URL = "https://vmukti.com/backend/api/send-email-arcis";
+  // const BACKEND_URL = "http://localhost:5000/api/send-email-arcis";
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -63,9 +64,9 @@ const PartnerForm = () => {
       !formData.email ||
       !formData.phone ||
       !formData.company ||
-      !formData.location || // State
-      !formData.location2 || // City
-      !formData.customerType // Interested As
+      !formData.state || // State
+      !formData.city || // City
+      !formData.InterestedAs // Interested As
     ) {
       toast({
         title: "Missing required fields",
@@ -109,9 +110,9 @@ const PartnerForm = () => {
         },
         body: JSON.stringify({
           ...formData,
-          // Combine City (location2) and State (location) into 'location' for API
-          location: formData.location2 + " " + formData.location,
-          formType: "Partner",
+          // Combine City (city) and State (state) into 'state' for API
+          state: formData.city + " " + formData.state,
+          formType: "Partner Inquiry",
         }),
       });
 
@@ -132,9 +133,9 @@ const PartnerForm = () => {
           countryCode: "+91",
           phone: "",
           company: "",
-          location: "",
-          location2: "",
-          customerType: "",
+          state: "",
+          city: "",
+          InterestedAs: "",
           message: "",
           updates: false,
           leadType: "Arcis Website",
@@ -361,8 +362,8 @@ const PartnerForm = () => {
             </FormLabel>
             <Input
               placeholder="Enter your city"
-              name="location2"
-              value={formData.location2}
+              name="city"
+              value={formData.city}
               onChange={handleChange}
               bg="rgba(255,255,255,0.2)"
               border="none"
@@ -390,8 +391,8 @@ const PartnerForm = () => {
             </FormLabel>
             <Input
               placeholder="Enter your state"
-              name="location"
-              value={formData.location}
+              name="state"
+              value={formData.state}
               onChange={handleChange}
               bg="rgba(255,255,255,0.2)"
               border="none"
@@ -427,8 +428,8 @@ const PartnerForm = () => {
             </FormLabel>
             <Select
               placeholder="Select option"
-              name="customerType"
-              value={formData.customerType}
+              name="InterestedAs"
+              value={formData.InterestedAs}
               onChange={handleChange}
               bg="rgba(255,255,255,0.2)"
               border="none"
