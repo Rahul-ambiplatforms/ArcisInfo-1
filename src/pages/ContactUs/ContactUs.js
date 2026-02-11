@@ -7,7 +7,7 @@ import {
   Input,
   Select,
   Text,
-  useToast,
+  useToast
   Textarea,
   Checkbox,
   Flex,
@@ -121,7 +121,7 @@ const ContactSection = () => {
     // Send lead to ArcisAI Sales Agent (non-blocking)
     fetch(SALES_AGENT_URL, {
       method: "POST",
-      headers: { "Content-Type": "application/json", "X-API-Key": "default-api-key" },
+      headers: { "Content-Type": "application/json", "api-key": "default-api-key" },
       body: JSON.stringify({
         name: formData.name,
         email: formData.email,
