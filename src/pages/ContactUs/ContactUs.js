@@ -49,6 +49,7 @@ const ContactSection = () => {
   const toast = useToast();
 
   const BACKEND_URL = "https://vmukti.com/backend/api/send-email-arcis";
+  const SALES_AGENT_URL = "http://139.59.28.88:8000/api/v1/leads";
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -116,6 +117,28 @@ const ContactSection = () => {
     }
 
     setIsLoading(true);
+
+    // Send lead to ArcisAI Sales Agent (non-blocking)
+    fetch(SALES_AGENT_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "X-API-Key": "default-api-key" },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.countryCode + formData.phone,
+        company: formData.company,
+        source: "website_contact",
+        notes: "Customer Type: " + formData.customerType + " | Cameras For: " + formData.camerasFor + " | Quantity: " + formData.customerQuantity + " | Message: " + formData.message,
+        metadata: {
+          location: location2 + " " + formData.location,
+          customer_type: formData.customerType,
+          cameras_for: formData.camerasFor,
+          quantity: formData.customerQuantity,
+          page_url: window.location.href,
+        }
+      }),
+    }).catch(() => {});
+
 
     try {
       const response = await fetch(BACKEND_URL, {
