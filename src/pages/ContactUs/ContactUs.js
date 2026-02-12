@@ -49,7 +49,7 @@ const ContactSection = () => {
   const toast = useToast();
 
   const BACKEND_URL = "https://vmukti.com/backend/api/send-email-arcis";
-  const SALES_AGENT_URL = "http://139.59.28.88:8000/api/leads/webhook";
+  const SALES_AGENT_URL = "https://api.arcisai.io/api/leads/webhook";
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
