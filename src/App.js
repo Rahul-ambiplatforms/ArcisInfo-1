@@ -16,6 +16,7 @@ import ScrollToTop from "./Components/ScrollToTop";
 import { AnimatePresence } from "framer-motion";
 import SEORouter from "./components/SEO/SEORouter";
 import SEOIntegration from "./components/SEO/SEOIntegration";
+import SEOContent from "./components/Content/SEOContent";
 
 // import PageTransition from "./Components/PageTransition";
 import CustomCursor from "./Components/CustomCursor/CustomCursor";
@@ -250,6 +251,7 @@ function InnerApp() {
             />
           </Routes>
         </AnimatePresence>
+                        <SEOContent />
       </Box>
       {!hideHeader && <Footer />}
     </>
