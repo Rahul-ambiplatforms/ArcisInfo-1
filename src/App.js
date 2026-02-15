@@ -15,6 +15,7 @@ import Footer from "./Components/Footer/Footer";
 import ScrollToTop from "./Components/ScrollToTop";
 import { AnimatePresence } from "framer-motion";
 import SEORouter from "./components/SEO/SEORouter";
+import SEOIntegration from "./components/SEO/SEOIntegration";
 
 // import PageTransition from "./Components/PageTransition";
 import CustomCursor from "./Components/CustomCursor/CustomCursor";
@@ -64,6 +65,7 @@ function InnerApp() {
       {!hideHeader && <Header showEvent={SHOW_EVENT_BANNER} />}
       <ScrollToTop />
             <SEORouter />
+                  <SEOIntegration />
       <Box
         pt={
           hideHeader
