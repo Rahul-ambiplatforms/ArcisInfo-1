@@ -1,3 +1,4 @@
+// SEOContent - 5-pillar AI surveillance content for search engine visibility
 import React from 'react';
 import { useLocation, Link as RouterLink } from 'react-router-dom';
 import { Box, Container, Heading, Text, SimpleGrid, VStack, Link, HStack, Badge } from '@chakra-ui/react';
