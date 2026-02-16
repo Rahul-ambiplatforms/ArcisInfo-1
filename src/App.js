@@ -3,7 +3,6 @@ import React, { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { Box } from "@chakra-ui/react";
 import "./App.css";
-
 import Header from "./Components/Header/Header";
 import HomeDashboard from "./pages/HomePage/HomeDashboard";
 import Products from "./pages/Product/Products";
@@ -17,7 +16,6 @@ import { AnimatePresence } from "framer-motion";
 import SEORouter from "./components/SEO/SEORouter";
 import SEOIntegration from "./components/SEO/SEOIntegration";
 import SEOContent from "./components/Content/SEOContent";
-
 // import PageTransition from "./Components/PageTransition";
 import CustomCursor from "./Components/CustomCursor/CustomCursor";
 
@@ -30,7 +28,6 @@ import ContactUs from "./pages/ContactUs/ContactUs";
 import BlogsDashboard from "./pages/Blogs/BlogsDashboard";
 import BlogsContent from "./pages/Blogs/BlogsContents";
 // import Event from "./pages/Events/Event";
-
 import LoginDash from "./ArcisAdmin/pages/LoginDash";
 import Reset from "./ArcisAdmin/pages/ForgotPassword/Reset";
 import Dashboard from "./ArcisAdmin/pages/Dashboard/Dashboard";
@@ -45,7 +42,6 @@ import Event from "./pages/EventPage/Event";
 import IFSEC from "./pages/EventPage/IFSEC";
 
 // To disable animations, comment the import above and uncomment the line below:
-
 const SEOLandingPage = lazy(() => import("./pages/SEOLandingPages/SEOLandingPage"));
 const PageTransition = ({ children }) => <>{children}</>;
 
@@ -67,15 +63,15 @@ function InnerApp() {
       {/* <CustomCursor /> */}
       {!hideHeader && <Header showEvent={SHOW_EVENT_BANNER} />}
       <ScrollToTop />
-            <SEORouter />
-                  <SEOIntegration />
+      <SEORouter />
+      <SEOIntegration />
       <Box
         pt={
           hideHeader
             ? "0"
             : SHOW_EVENT_BANNER
-              ? { base: "150px", md: "150px" }
-              : { base: "100px", md: "100px" }
+            ? { base: "150px", md: "150px" }
+            : { base: "100px", md: "100px" }
         }
       >
         <AnimatePresence mode="wait">
@@ -88,7 +84,6 @@ function InnerApp() {
                 </PageTransition>
               }
             />
-
             <Route
               path="/:seriesId"
               element={
@@ -137,7 +132,6 @@ function InnerApp() {
                 </PageTransition>
               }
             />
-
             <Route
               path="/about-us"
               element={
@@ -183,7 +177,7 @@ function InnerApp() {
               element={
                 // <PageTransition>
                 <Thankyou />
-                //  </PageTransition>
+                // </PageTransition>
               }
             />
             <Route
@@ -210,6 +204,7 @@ function InnerApp() {
                 </PageTransition>
               }
             />
+
             {/* -----Admin Routes------ */}
             <Route
               path="/admin"
@@ -243,16 +238,17 @@ function InnerApp() {
                 </PageTransition>
               }
             />
-            <Route
 
-              {/* SEO Landing Pages - 150+ pages with flexible routing */}
-              <Route path="/cctv-cameras-:city" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
-              <Route path="/ai-cctv-:slug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
-              <Route path="/compare/:pageSlug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
-              <Route path="/resources/:pageSlug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
-              <Route path="/industry/:pageSlug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
-              <Route path="/state/:pageSlug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
-              <Route path="/:category/:pageSlug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+            {/* SEO Landing Pages - 150+ pages with flexible routing */}
+            <Route path="/cctv-cameras-:city" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+            <Route path="/ai-cctv-:slug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+            <Route path="/compare/:pageSlug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+            <Route path="/resources/:pageSlug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+            <Route path="/industry/:pageSlug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+            <Route path="/state/:pageSlug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+            <Route path="/:category/:pageSlug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+
+            <Route
               path="*"
               element={
                 // <PageTransition>
@@ -262,7 +258,7 @@ function InnerApp() {
             />
           </Routes>
         </AnimatePresence>
-                        <SEOContent />
+        <SEOContent />
       </Box>
       {!hideHeader && <Footer />}
     </>
