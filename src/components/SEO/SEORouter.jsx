@@ -43,10 +43,31 @@ const SEORouter = () => {
       }
     }
 
+    // SEO landing pages have their own Helmet - return null to avoid overriding
+    // Routes: /cctv-cameras-:city, /ai-cctv-:slug, /compare/:pageSlug,
+    //         /resources/:pageSlug, /industry/:pageSlug, /state/:pageSlug,
+    //         /:category/:pageSlug
+    if (clean.startsWith('cctv-cameras-')) return null;
+    if (clean.startsWith('ai-cctv-')) return null;
+    if (clean.startsWith('compare/')) return null;
+    if (clean.startsWith('resources/')) return null;
+    if (clean.startsWith('industry/') && clean.includes('-')) return null;
+    if (clean.startsWith('state/')) return null;
+
+    // Generic /:category/:pageSlug pattern
+    const parts = clean.split('/');
+    if (parts.length === 2 && parts[0].length > 0 && parts[1].length > 0) {
+      return null;
+    }
+
     return 'home';
   };
 
   const pageKey = getPageKey(path);
+
+  // If pageKey is null, this is a SEO landing page - don't render default meta
+  if (!pageKey) return null;
+
   const seoConfig = getSEOConfig(pageKey);
 
   // Build JSON-LD based on page
