@@ -3,16 +3,6 @@
  *
  * This script generates a list of all routes that need to be prerendered
  * for SEO crawlability. Used by react-snap during build.
- *
- * Usage: Add to package.json scripts:
- *   "postbuild": "react-snap"
- *
- * And add reactSnap config to package.json:
- *   "reactSnap": {
- *     "include": [routes from this file],
- *     "headless": true,
- *     "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"]
- *   }
  */
 
 const routes = [
@@ -46,7 +36,7 @@ const routes = [
   // Events
   '/event',
 
-  // SEO City Pages (50 cities)
+  // SEO City Pages (50 cities - from seoPageData)
   '/cctv-cameras-mumbai',
   '/cctv-cameras-delhi',
   '/cctv-cameras-bangalore',
@@ -98,7 +88,7 @@ const routes = [
   '/cctv-cameras-tiruchirappalli',
   '/cctv-cameras-bareilly',
 
-  // SEO Industry Pages (12)
+  // SEO Industry Pages (12 - from seoPageData)
   '/industry/banking-finance-cctv',
   '/industry/retail-surveillance',
   '/industry/healthcare-security',
@@ -136,7 +126,7 @@ const routes = [
   '/resources/cloud-vs-onpremise-surveillance',
   '/resources/smart-city-surveillance-guide',
 
-  // SEO State Pages (15)
+  // SEO State Pages (15 - from seoPageData)
   '/state/maharashtra',
   '/state/gujarat',
   '/state/karnataka',
@@ -152,6 +142,47 @@ const routes = [
   '/state/andhra-pradesh',
   '/state/bihar',
   '/state/odisha',
+
+  // === EXPANSION PAGES (from seoPageDataExpansion) ===
+
+  // Expansion Industry Pages (10)
+  '/cctv-cameras-for-education-industry',
+  '/cctv-cameras-for-healthcare-industry',
+  '/cctv-cameras-for-retail-industry',
+  '/cctv-cameras-for-banking-finance',
+  '/cctv-cameras-for-logistics-warehousing',
+  '/cctv-cameras-for-hospitality-industry',
+  '/cctv-cameras-for-temples-religious-places',
+  '/cctv-cameras-for-smart-city-projects',
+  '/cctv-cameras-for-parking-management',
+  '/cctv-cameras-for-traffic-management',
+
+  // Expansion State Pages (13)
+  '/cctv-cameras-assam',
+  '/cctv-cameras-meghalaya',
+  '/cctv-cameras-manipur',
+  '/cctv-cameras-tripura',
+  '/cctv-cameras-mizoram',
+  '/cctv-cameras-nagaland',
+  '/cctv-cameras-arunachal-pradesh',
+  '/cctv-cameras-sikkim',
+  '/cctv-cameras-goa',
+  '/cctv-cameras-himachal-pradesh',
+  '/cctv-cameras-uttarakhand',
+  '/cctv-cameras-jharkhand',
+  '/cctv-cameras-chhattisgarh',
+
+  // Expansion City Pages (new cities not in original list)
+  '/cctv-cameras-mangalore',
+  '/cctv-cameras-belgaum',
+  '/cctv-cameras-bhubaneswar',
+  '/cctv-cameras-dehradun',
+  '/cctv-cameras-shimla',
+  '/cctv-cameras-jammu',
+  '/cctv-cameras-jalandhar',
+  '/cctv-cameras-gorakhpur',
+  '/cctv-cameras-moradabad',
+  '/cctv-cameras-aligarh',
 ];
 
 module.exports = routes;
