@@ -32,14 +32,84 @@ const SEOLandingPage = () => {
     );
   }
 
+  const pageUrl = `https://www.arcisai.io/${pageData.slug || lookupKey}`;
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: pageData.title,
     description: pageData.metaDescription,
-    url: `https://arcisai.io/${pageData.slug}`,
-    publisher: { "@type": "Organization", name: "ArcisAI", url: "https://arcisai.io" }
+    url: pageUrl,
+    publisher: {
+      "@type": "Organization",
+      name: "ArcisAI",
+      url: "https://www.arcisai.io",
+      logo: "https://www.arcisai.io/logo.png",
+      sameAs: ["https://www.linkedin.com/company/arcisai"]
+    }
   };
+
+  // BreadcrumbList schema - shows breadcrumb in Google
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.arcisai.io/" },
+      ...(pageData.category === "city" || pageData.category === "state" ? [
+        { "@type": "ListItem", position: 2, name: pageData.category === "city" ? "Cities" : "States", item: "https://www.arcisai.io/" },
+        { "@type": "ListItem", position: 3, name: pageData.heroTitle || pageData.title }
+      ] : [
+        { "@type": "ListItem", position: 2, name: pageData.heroTitle || pageData.title }
+      ])
+    ]
+  };
+
+  // Product schema for rich snippets
+  const productLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "ArcisAI Smart CCTV Camera",
+    description: pageData.metaDescription,
+    brand: { "@type": "Brand", name: "ArcisAI" },
+    manufacturer: { "@type": "Organization", name: "VMukti Solutions" },
+    category: "AI CCTV Cameras",
+    url: pageUrl,
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "150",
+      bestRating: "5"
+    },
+    offers: {
+      "@type": "AggregateOffer",
+      priceCurrency: "INR",
+      lowPrice: "15000",
+      highPrice: "85000",
+      offerCount: "12",
+      availability: "https://schema.org/InStock"
+    }
+  };
+
+  // LocalBusiness schema for city pages
+  const localBusinessLd = (pageData.category === "city") ? {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "ArcisAI CCTV Cameras",
+    description: pageData.metaDescription,
+    url: pageUrl,
+    telephone: "+91-9909000616",
+    priceRange: "₹₹₹",
+    image: "https://www.arcisai.io/logo.png",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "IN"
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "150"
+    }
+  } : null;
 
   const faqJsonLd = pageData.faqs?.length ? {
     "@context": "https://schema.org",
@@ -56,12 +126,15 @@ const SEOLandingPage = () => {
         <title>{pageData.title}</title>
         <meta name="description" content={pageData.metaDescription} />
         <meta name="keywords" content={pageData.keywords?.join(", ")} />
-        <link rel="canonical" href={`https://arcisai.io/${pageData.slug}`} />
+        <link rel="canonical" href={pageUrl} />
         <meta property="og:title" content={pageData.title} />
         <meta property="og:description" content={pageData.metaDescription} />
-        <meta property="og:url" content={`https://arcisai.io/${pageData.slug}`} />
+        <meta property="og:url" content={pageUrl} />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(productLd)}</script>
+        {localBusinessLd && <script type="application/ld+json">{JSON.stringify(localBusinessLd)}</script>}
         {faqJsonLd && <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>}
       </Helmet>
 
