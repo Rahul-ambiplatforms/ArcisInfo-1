@@ -7,7 +7,7 @@ import seoPageDataExpansion from "../../data/seoPageDataExpansion";
 
 const SEOLandingPage = () => {
   const params = useParams();
-  const { category, pageSlug, city } = params;
+  const { category, pageSlug, city, slug } = params;
 
   // Multi-strategy key lookup
   const allSeoData = { ...seoPageData, ...seoPageDataExpansion };
@@ -15,7 +15,7 @@ const SEOLandingPage = () => {
     : (category && pageSlug && allSeoData[`${category}-${pageSlug}`]) ? `${category}-${pageSlug}`
     : (pageSlug && allSeoData[pageSlug]) ? pageSlug
     : (category && allSeoData[category]) ? category
-    : null;
+    : (slug && allSeoData[slug]) ? slug : null;
 
   const pageData = lookupKey ? allSeoData[lookupKey] : null;
 
