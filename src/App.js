@@ -47,7 +47,7 @@ const PageTransition = ({ children }) => <>{children}</>;
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <InnerApp />
     </BrowserRouter>
   );
