@@ -1,0 +1,14 @@
+# ArcisAI - India's First Premium AI CCTV | STQC Certified
+# https://www.arcisai.io
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.arcisai.io/sitemap.xml
+
+# Block admin and internal paths
+Disallow: /admin/
+Disallow: /admin
+Disallow: /static/js/
+Disallow: /static/css/
