@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Box,
   FormControl,
@@ -33,6 +34,7 @@ const PartnerForm = () => {
 
   const [isLoading, setIsLoading] = useState(false);
   const toast = useToast();
+  const navigate = useNavigate();
 
   const BACKEND_URL = "https://vmukti.com/backend/api/send-email-arcis";
   // const BACKEND_URL = "http://localhost:5000/api/send-email-arcis";
@@ -126,7 +128,10 @@ const PartnerForm = () => {
           isClosable: true,
         });
 
-        // Reset form
+        // Navigate to thank you page
+        navigate("/partner-thank-you");
+
+        // Reset form (optional if navigating away)
         setFormData({
           name: "",
           email: "",
@@ -523,7 +528,7 @@ const PartnerForm = () => {
             isDisabled={isLoading}
             showArrow
           >
-            Send message
+            Submit
           </CustomButton>
         </Box>
       </Box>

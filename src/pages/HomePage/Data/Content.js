@@ -469,21 +469,31 @@ export const homeContent = {
           },
         ],
       },
-      // {
-      //   product_type: "NVR/DVR",
-      //   productarray: [
-      //     {
-      //       image: "/images/screen.png",
-      //       product_name: "8 Channel NVR",
-      //       link: "#",
-      //     },
-      //     {
-      //       image: "/images/screen.png",
-      //       product_name: "16 Channel DVR",
-      //       link: "#",
-      //     },
-      //   ],
-      // },
+      {
+        product_type: "NVR/DVR",
+        productarray: [
+          {
+            image: "/images/nvr-4-channel.png",
+            product_name: "4 Channel NVR",
+            link: "/arcis-nvr",
+          },
+          {
+            image: "/images/nvr-4-channel.png",
+            product_name: "8 Channel NVR",
+            link: "/arcis-nvr",
+          },
+          {
+            image: "/images/nvr-4-channel.png",
+            product_name: "16 Channel NVR",
+            link: "/arcis-nvr",
+          },
+          {
+            image: "/images/nvr-4-channel.png",
+            product_name: "32 Channel NVR",
+            link: "/arcis-nvr",
+          },
+        ],
+      },
     ],
   },
   Certifications: {
@@ -528,7 +538,7 @@ export const homeContent = {
         description:
           "Get complete control from anywhere with a secure, all-in-one cloud video management system and Mobile App.",
         image: "/images/home_surveillance_1.png",
-        link: "/",
+        link: "/arcis-vms",
       },
     ],
   },

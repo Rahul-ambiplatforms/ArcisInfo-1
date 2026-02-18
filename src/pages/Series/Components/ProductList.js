@@ -137,7 +137,7 @@ const ProductList = ({ data, hideTypeFilter }) => {
   // Pagination Logic
   const [currentPage, setCurrentPage] = useState(0);
   const [direction, setDirection] = useState(0);
-  const itemsPerPage = 6;
+  const itemsPerPage = useBreakpointValue({ base: 6, lg: 4, xl: 6 }) || 6;
 
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
 
@@ -278,7 +278,7 @@ const ProductList = ({ data, hideTypeFilter }) => {
 
           {/* Top Tabs */}
           {!hideTypeFilter && (
-            <HStack spacing={4} mt={6} wrap="wrap" justify="center">
+            <HStack spacing={8} mt={6} wrap="wrap" justify="center">
               {tabs.map((tab) => (
                 <CustomButton
                   key={tab}
@@ -299,7 +299,12 @@ const ProductList = ({ data, hideTypeFilter }) => {
 
         <Box
           display={{ base: "flex", md: "grid" }}
-          gridTemplateColumns={{ md: "446px 1fr" }}
+          gridTemplateColumns={{
+            md: "20% 1fr",
+            lg: "20% 1fr",
+            xl: "30% 1fr",
+          }}
+          gap={{ md: 8 }}
           flexDirection={{ base: "column" }}
           alignItems="start"
           zIndex={1}
@@ -384,7 +389,7 @@ const ProductList = ({ data, hideTypeFilter }) => {
 
             <FilterSection
               title="Type of connectivity"
-              options={["4G", "WIFI", "PoE"]}
+              options={["4G", "WIFI", "PoE", "IP"]}
               selected={filters.connectivity}
               onChange={(val) => handleFilterChange("connectivity", val)}
             />
@@ -415,7 +420,7 @@ const ProductList = ({ data, hideTypeFilter }) => {
                 />
                 <FilterSection
                   title="Type of connectivity"
-                  options={["4G", "WIFI", "PoE"]}
+                  options={["4G", "WIFI", "PoE", "IP"]}
                   selected={filters.connectivity}
                   onChange={(val) => handleFilterChange("connectivity", val)}
                 />
@@ -469,8 +474,13 @@ const ProductList = ({ data, hideTypeFilter }) => {
                   <Box
                     ref={scrollContainerRef}
                     display={{ base: "flex", md: "grid" }} // Flex on mobile, Grid on desktop
-                    gridTemplateColumns={{ md: "repeat(3, 1fr)" }}
-                    gap={{ base: 4, md: 6 }}
+                    gridTemplateColumns={{
+                      base: "repeat(1, 1fr)",
+                      md: "repeat(1, 1fr)",
+                      lg: "repeat(2, 1fr)",
+                      xl: "repeat(3, 1fr)",
+                    }}
+                    gap={{ base: 4, md: 8 }}
                     justifyItems="center"
                     overflowX={{ base: "auto", md: "visible" }}
                     px={{ base: 4, md: 0 }}
@@ -505,7 +515,7 @@ const ProductList = ({ data, hideTypeFilter }) => {
                           transform: "translateY(-5px)",
                         }}
                         h="290.77px"
-                        w={{ base: "100%", md: "290.77px" }}
+                        w="100%"
                         minW={{ base: "85vw", md: "auto" }} // Mobile snap item width
                         scrollSnapAlign="center"
                         display="flex"

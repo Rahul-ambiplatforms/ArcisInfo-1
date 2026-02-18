@@ -75,9 +75,12 @@ const ProductDetailHero = ({ product }) => {
         fontWeight="400"
         textAlign="center"
         mb={16}
+        mt={{ base: 10, lg: 0 }}
         lineHeight="1.2"
+        as="h1"
       >
-        Eco Series - A Reliable CCTV Cameras Built for Everyday Surveillance
+        {product.heading ||
+          "Eco Series - A Reliable CCTV Cameras Built for Everyday Surveillance"}
       </Heading>
 
       <Flex
@@ -150,8 +153,8 @@ const ProductDetailHero = ({ product }) => {
                 <Box
                   key={idx}
                   bg="#454545"
-                  w={{ base: "auto", lg: "172px" }}
-                  h={{ base: "80px", lg: "172px" }}
+                  w="full"
+                  h="full"
                   flex="1" // Ensure equal width allocation
                   display="flex"
                   alignItems="center"
@@ -249,7 +252,7 @@ const ProductDetailHero = ({ product }) => {
 
           {/* Certifications Row */}
           <HStack
-            mt={24}
+            mt={{ base: 6, sm: 8, md: "5%", lg: "5%", xl: "20%" }}
             spacing={4}
             wrap="wrap"
             justify={{ base: "center", lg: "start" }}
@@ -274,7 +277,7 @@ const ProductDetailHero = ({ product }) => {
 
           {/* Download Button */}
           <Box
-            my={{ base: 14, lg: 12 }}
+            my={{ base: 8, lg: 8 }}
             display="flex"
             justifyContent={{ base: "center", lg: "start" }}
           >

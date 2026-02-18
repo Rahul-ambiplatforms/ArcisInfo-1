@@ -70,8 +70,8 @@ function InnerApp() {
           hideHeader
             ? "0"
             : SHOW_EVENT_BANNER
-            ? { base: "150px", md: "150px" }
-            : { base: "100px", md: "100px" }
+              ? { base: "150px", md: "150px" }
+              : { base: "100px", md: "100px" }
         }
       >
         <AnimatePresence mode="wait">
@@ -198,6 +198,14 @@ function InnerApp() {
             />
             <Route
               path="/blog-thank-you"
+              element={
+                <PageTransition>
+                  <Thankyou />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/partner-thank-you"
               element={
                 <PageTransition>
                   <Thankyou />

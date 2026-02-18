@@ -81,7 +81,9 @@ const MainProduct = ({ seriesType = "nvrDvrSeries" }) => {
         <Information data={seriesData.informationData} />
       )}
 
-      {selectedSeries !== "nvr" && <OurClient testimonials={false} />}
+      {selectedSeries !== "nvr" && (
+        <OurClient bg={false} testimonials={false} />
+      )}
 
       <CameraFeature data={seriesData.features} headingInBackground={true} />
       {selectedSeries === "nvr" && (

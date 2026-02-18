@@ -1,15 +1,15 @@
 import React from "react";
 import { Image } from "@chakra-ui/react";
-import { ReactComponent as FeatureIcon1 } from "../../../Components/Icons/parnter_1.svg";
-import { ReactComponent as FeatureIcon2 } from "../../../Components/Icons/parnter_2.svg";
-import { ReactComponent as FeatureIcon3 } from "../../../Components/Icons/parnter_3.svg";
-import { ReactComponent as FeatureIcon4 } from "../../../Components/Icons/parnter_4.svg";
-import { ReactComponent as FeatureIcon5 } from "../../../Components/Icons/parnter_5.svg";
-import { ReactComponent as FeatureIcon6 } from "../../../Components/Icons/parnter_6.svg";
-import { ReactComponent as FeatureIcon7 } from "../../../Components/Icons/parnter_7.svg";
-import { ReactComponent as FeatureIcon8 } from "../../../Components/Icons/parnter_8.svg";
-import { ReactComponent as FeatureIcon9 } from "../../../Components/Icons/parnter_9.svg";
-import { ReactComponent as FeatureIcon10 } from "../../../Components/Icons/parnter_10.svg";
+import { ReactComponent as FeatureIcon1 } from "../../../Components/Icons/partner_1.svg";
+import { ReactComponent as FeatureIcon2 } from "../../../Components/Icons/partner_2.svg";
+import { ReactComponent as FeatureIcon3 } from "../../../Components/Icons/partner_3.svg";
+import { ReactComponent as FeatureIcon4 } from "../../../Components/Icons/partner_4.svg";
+import { ReactComponent as FeatureIcon5 } from "../../../Components/Icons/partner_5.svg";
+import { ReactComponent as FeatureIcon6 } from "../../../Components/Icons/partner_6.svg";
+import { ReactComponent as FeatureIcon7 } from "../../../Components/Icons/partner_7.svg";
+import { ReactComponent as FeatureIcon8 } from "../../../Components/Icons/partner_8.svg";
+import { ReactComponent as FeatureIcon9 } from "../../../Components/Icons/partner_9.svg";
+import { ReactComponent as FeatureIcon10 } from "../../../Components/Icons/partner_10.svg";
 
 export const partnerData = {
   hero: [

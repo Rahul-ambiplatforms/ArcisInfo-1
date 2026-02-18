@@ -17,7 +17,7 @@ function fetchJson(url) {
       (res) => {
         if (res.statusCode < 200 || res.statusCode >= 300) {
           reject(
-            new Error(`Request failed: ${res.statusCode} ${res.statusMessage}`)
+            new Error(`Request failed: ${res.statusCode} ${res.statusMessage}`),
           );
           res.resume();
           return;
@@ -31,7 +31,7 @@ function fetchJson(url) {
             reject(e);
           }
         });
-      }
+      },
     );
     req.on("error", reject);
   });
@@ -45,7 +45,7 @@ async function fetchAllPublishedBlogs() {
 
   while (page <= totalPages) {
     const url = `${API_BASE_URL}/blogs?page=${page}&limit=${limit}&status=published&sort=latest&tenant=${encodeURIComponent(
-      TENANT
+      TENANT,
     )}`;
     const resp = await fetchJson(url);
     const list = Array.isArray(resp.data) ? resp.data : [];
@@ -152,7 +152,55 @@ async function generate() {
     },
     { loc: buildUrlLoc("/contact-us"), changefreq: "weekly", priority: "0.8" },
     { loc: buildUrlLoc("/blog"), changefreq: "monthly", priority: "0.6" },
+    {
+      loc: buildUrlLoc("partner-with-us"),
+      changefreq: "monthly",
+      priority: "0.8",
+    },
   ];
+
+  // Product routes
+  const productRoutes = [
+    "/ad-90ai4gbdp",
+    "/ad-90ai4gbdpb",
+    "/ad-90ai4gbdpd",
+    "/ad-90aiebpd",
+    "/ad-90aiwfbdp",
+    "/ad-90are3bm",
+    "/ad-90are3bp",
+    "/ad-90are3bp2",
+    "/ad-90are3bpb",
+    "/ad-90are3dm",
+    "/ad-90are3dp",
+    "/ad-90are3dp2",
+    "/ad-90are3mpt",
+    "/ad-90are3pt",
+    "/ad-90are3ptb",
+    "/ad-90arp3bm",
+    "/ad-90arp3bp",
+    "/ad-90arp3bp2",
+    "/ad-90arp3dm",
+    "/ad-90arp3dp",
+    "/ad-90arp3dp2",
+    "/ad-90arp3mpt",
+    "/ad-90arp3mpt2",
+    "/ad-90arp3pt",
+    "/ad-90arp3pt2",
+    "/ad-90arwfbdp",
+    "/ad-90arxbdp",
+    "/ad-90nre5bm",
+    "/ad-90nre5bp",
+    "/ad-90nre5dm",
+    "/ad-90nre5dp",
+    "/ad-90nrp5bm",
+    "/ad-90nrp5bp",
+    "/ad-90nrp5dm",
+    "/ad-90nrp5dp",
+  ].map((p) => ({
+    loc: buildUrlLoc(p),
+    changefreq: "weekly",
+    priority: "0.8",
+  }));
 
   // Dynamic blog routes
   let dynamicRoutes = [];
@@ -170,7 +218,7 @@ async function generate() {
     console.error("Failed to fetch blogs for sitemap:", e.message || e);
   }
 
-  const urls = [...staticRoutes, ...dynamicRoutes];
+  const urls = [...staticRoutes, ...productRoutes, ...dynamicRoutes];
 
   const xmlParts = [];
   xmlParts.push('<?xml version="1.0" encoding="UTF-8"?>');

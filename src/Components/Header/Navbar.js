@@ -60,7 +60,7 @@ const NavDropdown = ({ title, data }) => {
 
   // State for tracking which product is being hovered (for PRODUCTS menu)
   const [hoveredProduct, setHoveredProduct] = useState(
-    isMegaMenu ? "Eco Series" : null
+    isMegaMenu ? "Eco Series" : null,
   );
 
   return (
@@ -79,7 +79,7 @@ const NavDropdown = ({ title, data }) => {
         _hover={{ color: "white", bg: "whiteAlpha.100" }}
         _active={{ bg: "transparent" }}
         fontWeight="400"
-        fontSize="16px"
+        fontSize={{ base: "12px", xl: "16px" }}
         textTransform="uppercase"
         letterSpacing="0.5px"
         onMouseEnter={handleMouseEnter}
@@ -126,7 +126,7 @@ const NavDropdown = ({ title, data }) => {
                       py={2}
                       px={3}
                       color="white"
-                      fontSize="14px"
+                      fontSize={{ base: "10px", xl: "14px" }}
                       fontWeight="500"
                       bg={
                         hoveredProduct === item.group
@@ -158,7 +158,7 @@ const NavDropdown = ({ title, data }) => {
                       py={2}
                       px={3}
                       color="white"
-                      fontSize="14px"
+                      fontSize={{ base: "10px", xl: "14px" }}
                       fontWeight="500"
                       _hover={{ bg: "gray.800", textDecoration: "none" }}
                       borderRadius="md"
@@ -185,7 +185,7 @@ const NavDropdown = ({ title, data }) => {
                         bg="transparent"
                         _hover={{ bg: "gray.800", color: "white" }}
                         color="gray.300"
-                        fontSize="14px"
+                        fontSize={{ base: "10px", xl: "14px" }}
                         px={3}
                         py={2}
                         borderRadius="md"
@@ -220,7 +220,7 @@ const NavDropdown = ({ title, data }) => {
                     )
                   }
                   color="gray.500"
-                  fontSize="12px"
+                  fontSize={{ base: "10px", xl: "12px" }}
                   letterSpacing="1px"
                   ml={3}
                 >
@@ -232,7 +232,7 @@ const NavDropdown = ({ title, data }) => {
                       bg="transparent"
                       _hover={{ bg: "gray.800" }}
                       color="white"
-                      fontSize="14px"
+                      fontSize={{ base: "10px", xl: "12px" }}
                     >
                       {subItem.label}
                     </MenuItem>
@@ -248,7 +248,7 @@ const NavDropdown = ({ title, data }) => {
                   bg="transparent"
                   _hover={{ bg: "gray.800" }}
                   color="white"
-                  fontSize="14px"
+                  fontSize={{ base: "10px", xl: "12px" }}
                 >
                   {item.label}
                 </MenuItem>
@@ -326,10 +326,10 @@ const Navbar = () => {
           display={{ base: "none", lg: "flex" }}
           alignItems="center"
         >
-          {/* <Link
+          <Link
             as={RouterLink}
             to={actionLinks[0].link}
-            fontSize="16px"
+            fontSize={{ base: "12px", xl: "16px" }}
             fontWeight="400"
             color="white"
             _hover={{ color: "white", textDecoration: "none", opacity: 0.8 }}
@@ -337,11 +337,11 @@ const Navbar = () => {
             letterSpacing="0.5px"
           >
             {actionLinks[0].label}
-          </Link> */}
+          </Link>
           <Link
             as={RouterLink}
             to={actionLinks[1].link}
-            fontSize="16px"
+            fontSize={{ base: "12px", xl: "16px" }}
             fontWeight="400"
             color="white"
             _hover={{ color: "white", textDecoration: "none", opacity: 0.8 }}
@@ -415,7 +415,7 @@ const Navbar = () => {
                           textAlign="left"
                           color="white"
                           fontWeight="400"
-                          fontSize="16px"
+                          fontSize={{ base: "12px", xl: "16px" }}
                         >
                           {dropdown.title}
                         </Box>
@@ -432,7 +432,7 @@ const Navbar = () => {
                                   as={RouterLink}
                                   to={item.groupLink}
                                   color="gray.500"
-                                  fontSize="16px"
+                                  fontSize={{ base: "12px", xl: "16px" }}
                                   mb={2}
                                   textTransform="uppercase"
                                   letterSpacing="1px"
@@ -463,7 +463,7 @@ const Navbar = () => {
                                     as={RouterLink}
                                     to={subItem.link}
                                     color="white"
-                                    fontSize="14px"
+                                    fontSize={{ base: "10px", xl: "14px" }}
                                     onClick={onClose}
                                     _hover={{ color: "gray.300" }}
                                   >
@@ -480,7 +480,7 @@ const Navbar = () => {
                               as={RouterLink}
                               to={item.link}
                               color="white"
-                              fontSize="14px"
+                              fontSize={{ base: "10px", xl: "14px" }}
                               display="block"
                               py={2}
                               onClick={onClose}
@@ -496,28 +496,24 @@ const Navbar = () => {
                 </Accordion>
               ))}
 
-              {/* Action Links */}
-              {/* {actionLinks.map((link, index) => (
-                <Button
-                  key={index}
-                  as={RouterLink}
-                  to={link.link}
-                  variant="ghost"
-                  color="white"
-                  w="full"
-                  h="60px"
-                  justifyContent="flex-start"
-                  px={6}
-                  borderRadius={0}
-                  fontSize="16px"
-                  fontWeight="400"
-                  textTransform="uppercase"
-                  onClick={onClose}
-                  _hover={{ bg: "gray.900", color: "white" }}
-                >
-                  {link.label}
-                </Button>
-              ))} */}
+              <Button
+                as={RouterLink}
+                to={actionLinks[0].link}
+                variant="ghost"
+                color="white"
+                w="full"
+                h="60px"
+                justifyContent="flex-start"
+                // px={6}
+                borderRadius={0}
+                fontSize={{ base: "12px", xl: "16px" }}
+                fontWeight="400"
+                textTransform="uppercase"
+                _hover={{ bg: "gray.900", color: "white" }}
+                onClick={onClose}
+              >
+                {actionLinks[0].label}
+              </Button>
               <Button
                 as={RouterLink}
                 to={actionLinks[1].link}
@@ -528,7 +524,7 @@ const Navbar = () => {
                 justifyContent="flex-start"
                 // px={6}
                 borderRadius={0}
-                fontSize="16px"
+                fontSize={{ base: "12px", xl: "16px" }}
                 fontWeight="400"
                 textTransform="uppercase"
                 _hover={{ bg: "gray.900", color: "white" }}

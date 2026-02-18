@@ -71,7 +71,7 @@ const EcoSeries = () => {
           </Helmet>
         )}
         <HeroSectionCarousel data={seriesData.hero} />
-        <OurClient testimonials={false} />
+        <OurClient bg={false} testimonials={false} />
         <ProductList data={seriesData.productList} />
         {seriesData.CTAButton && <CTAButton {...seriesData.CTAButton} />}
       </PageContentWrapper>

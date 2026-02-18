@@ -2,6 +2,7 @@ export const ProductDetails = {
   "AD-90ARP3DP": {
     pdflink: "/pdfs/AD-90ARP3DP.pdf",
     product_name: "AD-90ARP3DP",
+    heading: "POE Dome Camera (Plastic) – Smart Coverage with POE Power",
     subtitle: "POE DOME CAMERA (PLASTIC) (Main)",
     link: "/ad-90arp3dp",
     gallery: [
@@ -50,10 +51,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No",
-        value: "AD-90ARP3DP",
-      },
       {
         label: "Product Name",
         value: "POE DOME CAMERA (PLASTIC) (Main)",
@@ -159,6 +156,7 @@ export const ProductDetails = {
   "AD-90NRP5DP": {
     pdflink: "/pdfs/AD-90NRP5DP.pdf",
     product_name: "AD-90NRP5DP",
+    heading: "Next-Gen PoE Dome Camera for Smart Surveillance",
     subtitle: "POE Dome Plastic (Series)",
     link: "/ad-90nrp5dp",
     gallery: [
@@ -210,10 +208,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No",
-        value: "AD-90NRP5DP",
-      },
       {
         label: "Product Name",
         value: "POE Dome Plastic (Series)",
@@ -335,6 +329,7 @@ export const ProductDetails = {
   "AD-90ARP3DM": {
     pdflink: "/pdfs/AD-90ARP3DM.pdf",
     product_name: "AD-90ARP3DM",
+    heading: "POE Dome Camera (Metal) – Reliable Coverage with Smart POE Power",
     subtitle: "POE DOME CAMERA (METAL) (Series)",
     link: "/ad-90arp3dm",
     gallery: [
@@ -383,10 +378,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No",
-        value: "AD-90ARP3DM",
-      },
       {
         label: "Product Name",
         value: "POE DOME CAMERA (METAL) (Series)",
@@ -492,6 +483,8 @@ export const ProductDetails = {
   "AD-90NRP5DM": {
     pdflink: "/pdfs/AD-90NRP5DM.pdf",
     product_name: "AD-90NRP5DM",
+    heading:
+      "POE Dome Camera (Metal) – 5MP HD Surveillance with Durable Design",
     subtitle: "POE Dome Metal (Series)",
     link: "/ad-90nrp5dm",
     gallery: [
@@ -540,10 +533,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No",
-        value: "AD-90NRP5DM",
-      },
       {
         label: "Product Name",
         value: "POE Dome Metal (Series)",
@@ -653,6 +642,7 @@ export const ProductDetails = {
   "AD-90ARE3DP2": {
     pdflink: "/pdfs/AD-90ARE3DP2.pdf",
     product_name: "AD-90ARE3DP2",
+    heading: "IP Dome Camera (Plastic) – Wide-Angle Smart Surveillance",
     subtitle: "IP DOME CAMERA (PLASTIC) (Series) (2.8 Mm Lens)",
     link: "/ad-90are3dp2",
     gallery: [
@@ -701,10 +691,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No",
-        value: "AD-90ARE3DP2",
-      },
       {
         label: "Product Name",
         value: "IP DOME CAMERA (PLASTIC) (Series) (2.8 Mm Lens)",
@@ -806,6 +792,8 @@ export const ProductDetails = {
   "AD-90ARE3DP": {
     pdflink: "/pdfs/AD-90ARE3DP.pdf",
     product_name: "AD-90ARE3DP",
+    heading:
+      "IP Dome Camera (Plastic) – Reliable Indoor and Outdoor Surveillance",
     subtitle: "IP Dome Camera (Plastic) (Main)",
     link: "/ad-90are3dp",
     gallery: [
@@ -854,10 +842,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No",
-        value: "AD-90ARE3DP",
-      },
       {
         label: "Product Name",
         value: "IP Dome Camera (Plastic) (Main)",
@@ -959,6 +943,7 @@ export const ProductDetails = {
   "AD-90ARP3DP2": {
     pdflink: "/pdfs/AD-90ARP3DP2.pdf",
     product_name: "AD-90ARP3DP2",
+    heading: "POE Dome Camera (Plastic) – Wide View Security with POE Power",
     subtitle: "POE DOME CAMERA (PLASTIC) (Series) (2.8 Mm Lens)",
     link: "/ad-90arp3dp2",
     gallery: [
@@ -1007,10 +992,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No",
-        value: "AD-90ARP3DP2",
-      },
       {
         label: "Product Name",
         value: "POE DOME CAMERA (PLASTIC) (Series) (2.8 Mm Lens)",
@@ -1116,6 +1097,7 @@ export const ProductDetails = {
   "AD-90ARE3DM": {
     pdflink: "/pdfs/AD-90ARE3DM.pdf",
     product_name: "AD-90ARE3DM",
+    heading: "IP Dome Camera (Metal) – Compact and Durable Surveillance",
     subtitle: "IP Dome Camera (Metal) (Series)",
     link: "/ad-90are3dm",
     gallery: [
@@ -1164,10 +1146,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No",
-        value: "AD-90ARE3DM",
-      },
       {
         label: "Product Name",
         value: "IP Dome Camera (Metal) (Series)",
@@ -1270,6 +1248,8 @@ export const ProductDetails = {
   "AD-90NRE5DP": {
     pdflink: "AD-90NRE5DP.pdf",
     product_name: "AD-90NRE5DP",
+    heading:
+      "IP Dome Camera (Plastic) – 5MP High-Definition Security with Reliable Design",
     subtitle: "IP Dome Plastic (Series)",
     link: "/ad-90nre5dp",
     gallery: [
@@ -1318,10 +1298,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No",
-        value: "AD-90NRE5DP",
-      },
       {
         label: "Product Name",
         value: "IP Dome Plastic (Series)",
@@ -1429,6 +1405,8 @@ export const ProductDetails = {
   "AD-90NRE5DM": {
     pdflink: "/pdfs/AD-90NRE5DM.pdf",
     product_name: "AD-90NRE5DM",
+    heading:
+      "IP Dome Camera (Metal) – 5MP High-Definition Coverage with Robust Design",
     subtitle: "IP Dome Metal (Series)",
     link: "/ad-90nre5dm",
     gallery: [
@@ -1453,10 +1431,6 @@ export const ProductDetails = {
       { label: "SD Card", value: "Support" },
     ],
     technicalSpecs: [
-      {
-        label: "Model No",
-        value: "AD-90NRE5DM",
-      },
       {
         label: "Product Name",
         value: "IP Dome Metal (Series)",
@@ -1567,6 +1541,7 @@ export const ProductDetails = {
   "AD-90AI4GBDPD": {
     pdflink: "/pdfs/AD-90AI4GBDPD.pdf",
     product_name: "AD-90AI4GBDPD",
+    heading: "4G AI Dome Camera – Discreet Design with Intelligent Monitoring",
     subtitle: "4G Al Dome (Series)",
     link: "/ad-90ai4gbdpd",
     gallery: [
@@ -1615,10 +1590,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No",
-        value: "AD-90AI4GBDPD",
-      },
       {
         label: "Product Name",
         value: "4G Al Dome (Series)",
@@ -1749,6 +1720,8 @@ export const ProductDetails = {
   "AD-90ARWFBDP": {
     pdflink: "/pdfs/AD-90ARWFBDP.pdf",
     product_name: "AD-90ARWFBDP",
+    heading:
+      "Outdoor WiFi PT Camera – Flexible Smart Coverage with Wireless Freedom",
     subtitle: "Outdoor WiFi PT",
     link: "/ad-90arwfbdp",
     gallery: [
@@ -1797,10 +1770,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No",
-        value: "AD-90ARWFBDP",
-      },
       {
         label: "Product Name",
         value: "Outdoor WiFi PT",
@@ -1931,6 +1900,7 @@ export const ProductDetails = {
   "AD-90ARE3MPT": {
     pdflink: "/pdfs/AD-90ARE3MPT.pdf",
     product_name: "AD-90ARE3MPT",
+    heading: "IP Mini PT Camera – Compact Smart Surveillance with PT Control",
     subtitle: "IP Mini PT Camera (Series)",
     link: "/ad-90are3mpt",
     gallery: [
@@ -1979,10 +1949,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No",
-        value: "AD-90ARE3MPT",
-      },
       {
         label: "Product Name",
         value: "IP Mini PT Camera (Series)",
@@ -2085,6 +2051,7 @@ export const ProductDetails = {
   "AD-90ARP3MPT2": {
     pdflink: "/pdfs/AD-90ARP3MPT2.pdf",
     product_name: "AD-90ARP3MPT2",
+    heading: "POE Mini PT Camera (Plastic) – Wide View Coverage with POE Power",
     subtitle: "POE MINI PT CAMERA (PLASTIC) (Series) (2.8 Mm Lens)",
     link: "/ad-90arp3mpt2",
     gallery: [
@@ -2133,10 +2100,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No",
-        value: "AD-90ARP3MPT2",
-      },
       {
         label: "Product Name",
         value: "POE MINI PT CAMERA (PLASTIC) (Series) (2.8 Mm Lens)",
@@ -2243,6 +2206,7 @@ export const ProductDetails = {
   "AD-90ARE3PT": {
     pdflink: "/pdfs/AD-90ARE3PT.pdf",
     product_name: "AD-90ARE3PT",
+    heading: "IP PT Camera (Plastic) – Flexible Coverage with Smart Monitoring",
     subtitle: "IP PT Camera (Series)",
     link: "/ad-90are3pt",
     gallery: [
@@ -2291,10 +2255,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No",
-        value: "AD-90ARE3PT",
-      },
       {
         label: "Product Name",
         value: "IP PT Camera (Series)",
@@ -2397,6 +2357,8 @@ export const ProductDetails = {
   "AD-90AIWFBDP": {
     pdflink: "/pdfs/AD-90AIWFBDP.pdf",
     product_name: "AD-90AIWFBDP",
+    heading:
+      "Outdoor WiFi AI PT Camera – Intelligent Wide-Area Surveillance in Big Housing",
     subtitle: "Outdoor WiFi PT",
     link: "/ad-90aiwfbdp",
     gallery: [
@@ -2445,10 +2407,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No",
-        value: "AD-90AIWFBDP",
-      },
       {
         label: "Name",
         value: "Al Camera",
@@ -2559,6 +2517,8 @@ export const ProductDetails = {
   "AD-90ARP3PT2": {
     pdflink: "/pdfs/AD-90ARP3PT2.pdf",
     product_name: "AD-90ARP3PT2",
+    heading:
+      "POE PT Camera (Plastic) – Wide-Angle Coverage with Smart POE Power",
     subtitle: "POE PT CAMERA (PLASTIC) (Series) (2.8 Mm Lens)",
     link: "/ad-90arp3pt2",
     gallery: [
@@ -2607,10 +2567,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No",
-        value: "AD-90ARP3PT2",
-      },
       {
         label: "Product Name",
         value: "POE PT CAMERA (PLASTIC) (Series) (2.8 Mm Lens)",
@@ -2717,6 +2673,8 @@ export const ProductDetails = {
   "AD-90ARP3MPT": {
     pdflink: "/pdfs/AD-90ARP3MPT.pdf",
     product_name: "AD-90ARP3MPT",
+    heading:
+      "POE Mini PT Camera (Plastic) – Compact Coverage with Smart POE Power",
     subtitle: "POE MINI PT CAMERA (PLASTIC) (Series)",
     link: "/ad-90arp3mpt",
     gallery: [
@@ -2765,10 +2723,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No",
-        value: "AD-90ARP3MPT",
-      },
       {
         label: "Product Name",
         value: "POE MINI PT CAMERA (PLASTIC) (Series)",
@@ -2875,6 +2829,7 @@ export const ProductDetails = {
   "AD-90AI4GBDP": {
     pdflink: "/pdfs/AD-90AI4GBDP.pdf",
     product_name: "AD-90AI4GBDP",
+    heading: "4G AI PTZ Camera – Wide-Area Intelligent Surveillance",
     subtitle: "4G AI PTZ (Big Housing) (Main)",
     link: "/ad-90ai4gbdp",
     gallery: [
@@ -2923,10 +2878,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No",
-        value: "AD-90AI4GBDP",
-      },
       {
         label: "Product Name",
         value: "4G AI PTZ (Big Housing) (Main)",
@@ -3057,6 +3008,8 @@ export const ProductDetails = {
   "AD-90ARE3PTB": {
     pdflink: "/pdfs/AD-90ARE3PTB.pdf",
     product_name: "AD-90ARE3PTB",
+    heading:
+      "IP Battery PT Camera (Plastic) – Smart Coverage with Backup Power",
     subtitle: "IP PT BATTERY CAMERA (PLASTIC) (Series) (12v Battery)",
     link: "/ad-90are3ptb",
     gallery: [
@@ -3105,10 +3058,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No:",
-        value: "AD-90ARE3PTB",
-      },
       {
         label: "Product Name",
         value: "IP PT BATTERY CAMERA (PLASTIC) (Series) (12v Battery)",
@@ -3215,6 +3164,7 @@ export const ProductDetails = {
   "AD-90ARP3PT": {
     pdflink: "/pdfs/AD-90ARP3PT.pdf",
     product_name: "AD-90ARP3PT",
+    heading: "POE PT Camera (Plastic) – Flexible Coverage with Smart POE Power",
     subtitle: "POE PT CAMERA (PLASTIC) (Series)",
     link: "/ad-90arp3pt",
     gallery: [
@@ -3263,10 +3213,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No",
-        value: "AD-90ARP3PT",
-      },
       {
         label: "Product Name",
         value: "POE PT CAMERA (PLASTIC) (Series)",
@@ -3373,6 +3319,8 @@ export const ProductDetails = {
   "AD-90NRE5BM": {
     pdflink: "/pdfs/AD-90NRE5BM.pdf",
     product_name: "AD-90NRE5BM",
+    heading:
+      "IP Bullet Camera (Metal) – High-Definition 5MP Security with Smart Coverage",
     subtitle: "IP Bullet Metal (Main)",
     link: "/ad-90nre5bm",
     gallery: [
@@ -3424,10 +3372,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No",
-        value: "AD-90NRE5BM",
-      },
       {
         label: "Product Name",
         value: "IP Bullet Metal (Main)",
@@ -3546,6 +3490,8 @@ export const ProductDetails = {
   "AD-90NRE5BP": {
     pdflink: "/pdfs/AD-90NRE5BP.pdf",
     product_name: "AD-90NRE5BP",
+    heading:
+      "IP Bullet Camera (Plastic) – High-Definition 5MP Security with Durable Design",
     subtitle: "IP Bullet Plastic (Series)",
     link: "/ad-90nre5bp",
     gallery: [
@@ -3597,10 +3543,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No:",
-        value: "AD-90NRE5BP",
-      },
       {
         label: "Product Name",
         value: "IP Bullet Plastic (Series)",
@@ -3718,6 +3660,8 @@ export const ProductDetails = {
   "AD-90ARP3BP2": {
     pdflink: "/pdfs/AD-90ARP3BP2.pdf",
     product_name: "AD-90ARP3BP2",
+    heading:
+      "POE Bullet Camera (Plastic) – Wide View Security with Simple POE Setup",
     subtitle: "POE BULLET CAMERA (PLASTIC) (Series) (2.8 Mm Lens)",
     link: "/ad-90arp3bp2",
     gallery: [
@@ -3766,10 +3710,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No",
-        value: "AD-90ARP3BP2",
-      },
       {
         label: "Product Name",
         value: "POE BULLET CAMERA (PLASTIC) (Series) (2.8 Mm Lens)",
@@ -3876,6 +3816,7 @@ export const ProductDetails = {
   "AD-90NRP5BP": {
     pdflink: "/pdfs/AD-90NRP5BP.pdf",
     product_name: "AD-90NRP5BP",
+    heading: "POE Bullet Camera (Plastic) – 5MP HD Security with Robust Design",
     subtitle: "POE Bullet Plastic (Series)",
     link: "/ad-90nrp5bp",
     gallery: [
@@ -3924,10 +3865,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No:",
-        value: "AD-90NRP5BP",
-      },
       {
         label: "Product Name",
         value: "POE Bullet Plastic (Series)",
@@ -4042,6 +3979,7 @@ export const ProductDetails = {
   "AD-90ARE3BP2": {
     pdflink: "/pdfs/AD-90ARE3BP2.pdf",
     product_name: "AD-90ARE3BP2",
+    heading: "IP Bullet Camera (Plastic) – Wide-Angle Outdoor Surveillance",
     subtitle: "IP BULLET CAMERA (PLASTIC) (Series) (2.8 Mm Lens)",
     link: "/ad-90are3bp2",
     gallery: [
@@ -4090,10 +4028,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No:",
-        value: "AD-90ARE3BP2",
-      },
       {
         label: "Product Name",
         value: "IP BULLET CAMERA (PLASTIC) (Series) (2.8 Mm Lens)",
@@ -4195,6 +4129,7 @@ export const ProductDetails = {
   "AD-90AIEBDP": {
     pdflink: "/pdfs/AD-90AIEBDP.pdf",
     product_name: "AD-90AIEBDP",
+    heading: "AI IP Bullet Camera – Intelligent Day & Night Surveillance",
     subtitle: "IP Bullet",
     link: "/ad-90aiebpd",
     gallery: [
@@ -4235,10 +4170,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No:",
-        value: "AD-90AIEBDP",
-      },
       {
         label: "Product Name",
         value: "IP Bullet",
@@ -4338,6 +4269,8 @@ export const ProductDetails = {
   "AD-90NRP5BM": {
     pdflink: "/pdfs/AD-90NRP5BM.pdf",
     product_name: "AD-90NRP5BM",
+    heading:
+      "POE Bullet Camera (Metal) – 5MP High-Definition Security with Durable Build",
     subtitle: "POE Bullet Metal (Series)",
     link: "/ad-90nrp5bm",
     gallery: [
@@ -4386,10 +4319,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No:",
-        value: "AD-90NRP5BM",
-      },
       {
         label: "Product Name",
         value: "POE Bullet Metal (Series)",
@@ -4512,6 +4441,8 @@ export const ProductDetails = {
   "AD-90ARE3BP": {
     pdflink: "/pdfs/AD-90ARE3BP.pdf",
     product_name: "AD-90ARE3BP",
+    heading:
+      "IP Bullet Camera (Plastic) – Reliable Outdoor Surveillance Solution",
     subtitle: "IP Bullet Camera (Plastic) (Series)",
     link: "/ad-90are3bp",
     gallery: [
@@ -4560,10 +4491,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No:",
-        value: "AD-90ARE3BP",
-      },
       {
         label: "Product Name",
         value: "IP Bullet Camera (Plastic) (Series)",
@@ -4665,6 +4592,8 @@ export const ProductDetails = {
   "AD-90ARP3BP": {
     pdflink: "/pdfs/AD-90ARP3BP.pdf",
     product_name: "AD-90ARP3BP",
+    heading:
+      "POE Bullet Camera (Plastic) – Smart Surveillance with Easy POE Power",
     subtitle: "POE BULLET CAMERA (PLASTIC) (Series)",
     link: "/ad-90arp3bp",
     gallery: [
@@ -4713,10 +4642,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No:",
-        value: "AD-90ARP3BP",
-      },
       {
         label: "Product Name",
         value: "POE BULLET CAMERA (PLASTIC) (Series)",
@@ -4823,6 +4748,8 @@ export const ProductDetails = {
   "AD-90AI4GBDPB": {
     pdflink: "/pdfs/AD-90AI4GBDPB.pdf",
     product_name: "AD-90AI4GBDPB",
+    heading:
+      "4G AI Bullet Camera – Smart Outdoor Surveillance with AI Detection",
     subtitle: "4G Al Bullet (Series)",
     link: "/ad-90ai4gbdpb",
     gallery: [
@@ -4871,10 +4798,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No:",
-        value: "AD-90AI4GBDPB",
-      },
       {
         label: "Product Name",
         value: "4G Al Bullet (Series)",
@@ -5005,6 +4928,8 @@ export const ProductDetails = {
   "AD-90ARE3BM": {
     pdflink: "/pdfs/AD-90ARE3BM.pdf",
     product_name: "AD-90ARE3BM",
+    heading:
+      "IP Bullet Camera (Metal) – Durable Outdoor Surveillance with Clear Vision",
     subtitle: "IP Bullet Camera (Metal) (Series)",
     link: "/ad-90are3bm",
     gallery: [
@@ -5056,10 +4981,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No:",
-        value: "AD-90ARE3BM",
-      },
       {
         label: "Product Name",
         value: "IP Bullet Camera (Metal) (Series)",
@@ -5162,6 +5083,7 @@ export const ProductDetails = {
   "AD-90ARP3BM": {
     pdflink: "/pdfs/AD-90ARP3BM.pdf",
     product_name: "AD-90ARP3BM",
+    heading: "POE Bullet Camera (Metal) – Reliable Security with Smart Power",
     subtitle: "POE BULLET CAMERA (METAL) (Series)",
     link: "/ad-90arp3bm",
     gallery: [
@@ -5213,10 +5135,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No:",
-        value: "AD-90ARP3BM",
-      },
       {
         label: "Product Name",
         value: "POE BULLET CAMERA (METAL) (Series)",
@@ -5323,6 +5241,8 @@ export const ProductDetails = {
   "AD-90ARE3BPB": {
     pdflink: "/pdfs/AD-90ARE3BPB.pdf",
     product_name: "AD-90ARE3BPB",
+    heading:
+      "IP Battery Bullet Camera (Plastic) – Reliable Security with Backup Power",
     subtitle: "IP BULLET BATTERY CAMERA (PLASTIC) (Series) (12v Battery)",
     link: "/ad-90are3bpb",
     gallery: [
@@ -5371,10 +5291,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No:",
-        value: "AD-90ARE3BPB",
-      },
       {
         label: "Product Name",
         value: "IP BULLET BATTERY CAMERA (PLASTIC) (Series) (12v Battery)",
@@ -5481,6 +5397,8 @@ export const ProductDetails = {
   "AD-90ARXBDP": {
     pdflink: "/pdfs/AD-90ARXBDP.pdf",
     product_name: "AD-90ARXBDP",
+    heading:
+      "Wireless Indoor Panning Camera – Smart Coverage with Compact Design",
     subtitle: "Wireless Indoor Panning Camera",
     link: "/ad-90arxbdp",
     gallery: [
@@ -5521,10 +5439,6 @@ export const ProductDetails = {
       },
     ],
     technicalSpecs: [
-      {
-        label: "Model No:",
-        value: "AD-90ARXBDP",
-      },
       {
         label: "Product Name",
         value: "Wireless Indoor Panning Camera",

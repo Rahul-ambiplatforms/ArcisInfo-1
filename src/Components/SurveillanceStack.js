@@ -29,7 +29,7 @@ const SurveillanceStack = ({ data }) => {
       display="flex"
       alignItems="center"
       pt={{ base: "0%", md: "5%" }}
-      pb={{ base: "0%", md: "3%" }}
+      pb={{ base: "0%", sm: "10%", md: "5%", lg: "5%", xl: "5%" }}
     >
       {/* Background GIF */}
       <Image

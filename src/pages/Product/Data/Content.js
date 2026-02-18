@@ -215,7 +215,7 @@ export const Product = {
           description:
             "Manage multiple locations, cameras, alerts & users through a unified government-certified platform.",
           image: "/images/solution_surveillance_1.png",
-          link: "/",
+          link: "/arcis-vms",
         },
         {
           heading: "ArcisGPT",
@@ -688,7 +688,7 @@ export const Product = {
           description:
             "Securely manage and monitor live feeds, playback, and alerts from a unified ArcisAI dashboard.",
           image: "/images/product_ptz_surveillance_1.png",
-          link: "/",
+          link: "/arcis-vms",
         },
         {
           heading: "ArcisGPT",
@@ -1081,7 +1081,7 @@ export const Product = {
           description:
             "A secure, unified platform to view, manage, and control all cameras, events, and users from a single dashboard.",
           image: "/images/product_dome_surveillance_1.png",
-          link: "/",
+          link: "/arcis-vms",
         },
         {
           heading: "ArcisGPT",

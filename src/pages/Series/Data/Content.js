@@ -166,7 +166,7 @@ export const Series = {
         buttonLink: "/contact-us",
         sectionProps: {
           desktop: {
-            marginTop: "-5%",
+            marginTop: "0%",
           },
           mobile: {
             marginTop: "0%",
@@ -186,7 +186,7 @@ export const Series = {
             textColor: "black",
             alignItems: "center",
             textAlign: "center",
-            top: "-100%",
+            top: "-80%",
             left: "0",
             width: "100%",
           },
@@ -1611,57 +1611,57 @@ export const Series = {
         },
       },
     ],
-    // informationData: {
-    //   title: "What is Arcis Bridge Device (ABD)?",
-    //   paragraphs: [
-    //     "The ArcisAI Bridge Device (ABD) is a compact, intelligent device that transforms your existing CCTV setup into a cloud-ready, smart surveillance system.",
-    //     "Most organizations want AI-enabled, cloud-based monitoring, but replacing an entire camera setup is expensive and impractical. ABD allows you to keep every existing ONVIF camera and instantly connect it to the ArcisAI VMS platform, enabling centralized control, cloud storage, alerts, and reporting—all from a single interface.",
-    //   ],
-    //   sectionProps: {
-    //     desktop: {
-    //       bgColor: "#191919",
-    //       paddingY: "50px",
-    //       paddingX: "20px",
-    //       maxWidth: "100%",
-    //       display: "flex",
-    //       justifyContent: "center",
-    //     },
-    //     mobile: {
-    //       paddingY: "40px",
-    //       paddingX: "20px",
-    //       display: "flex",
-    //       justifyContent: "center",
-    //     },
-    //   },
-    //   contentProps: {
-    //     desktop: {
-    //       flex: "1",
-    //       width: "100%", // NEW: Set to 80%, 85%, or 90% as needed
-    //       contentMaxWidth: "1500px", // OPTIONAL: Maximum width constraint
-    //       textAlign: "center",
-    //       titleSize: "60px",
-    //       titleWeight: "400",
-    //       titleColor: "#fff",
-    //       titleMarginBottom: "20px",
-    //       titleLineHeight: "50px",
-    //       descSize: "18px",
-    //       descWeight: "400",
-    //       descColor: "#b8b8b8",
-    //       descLineHeight: "22px",
-    //       descMaxWidth: "1650px",
-    //       paragraphSpacing: "16px",
-    //     },
-    //     mobile: {
-    //       textAlign: "center",
-    //       titleSize: "24px",
-    //       titleMarginBottom: "16px",
-    //       titleLineHeight: "32px",
-    //       descSize: "13px",
-    //       descLineHeight: "20px",
-    //       paragraphSpacing: "14px",
-    //     },
-    //   },
-    // },
+    informationData: {
+      title: "What is Arcis Bridge Device (ABD)?",
+      paragraphs: [
+        "The ArcisAI Bridge Device (ABD) is a compact, intelligent device that transforms your existing CCTV setup into a cloud-ready, smart surveillance system.",
+        "Most organizations want AI-enabled, cloud-based monitoring, but replacing an entire camera setup is expensive and impractical. ABD allows you to keep every existing ONVIF camera and instantly connect it to the ArcisAI VMS platform, enabling centralized control, cloud storage, alerts, and reporting—all from a single interface.",
+      ],
+      sectionProps: {
+        desktop: {
+          bgColor: "#191919",
+          paddingY: "50px",
+          paddingX: "20px",
+          maxWidth: "100%",
+          display: "flex",
+          justifyContent: "center",
+        },
+        mobile: {
+          paddingY: "40px",
+          paddingX: "20px",
+          display: "flex",
+          justifyContent: "center",
+        },
+      },
+      contentProps: {
+        desktop: {
+          flex: "1",
+          width: "100%", // NEW: Set to 80%, 85%, or 90% as needed
+          contentMaxWidth: "1500px", // OPTIONAL: Maximum width constraint
+          textAlign: "center",
+          titleSize: "60px",
+          titleWeight: "400",
+          titleColor: "#fff",
+          titleMarginBottom: "20px",
+          titleLineHeight: "50px",
+          descSize: "18px",
+          descWeight: "400",
+          descColor: "#b8b8b8",
+          descLineHeight: "22px",
+          descMaxWidth: "1650px",
+          paragraphSpacing: "16px",
+        },
+        mobile: {
+          textAlign: "center",
+          titleSize: "24px",
+          titleMarginBottom: "16px",
+          titleLineHeight: "32px",
+          descSize: "13px",
+          descLineHeight: "20px",
+          paragraphSpacing: "14px",
+        },
+      },
+    },
     features: {
       d_image: "/images/abd_features.png",
       m_image: "/images/abd_features_mobile.png",

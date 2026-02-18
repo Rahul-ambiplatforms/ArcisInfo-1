@@ -4,6 +4,7 @@ import { Box } from "@chakra-ui/react";
 import { Helmet } from "react-helmet-async";
 import PageContentWrapper from "../../Components/PageContentWrapper";
 import { Series } from "../Series/Data/Content"; // Importing Series data
+import { ProductSpecificSEO } from "./Data/SEOContent";
 import NotFound from "../NotFound";
 
 import ProductDetailHero from "./Components/ProductDetailHero"; // Import new hero component
@@ -61,14 +62,43 @@ const ProductDetail = ({ productIdOverride }) => {
     );
   }
 
+  // Determine SEO data based on product ID
+  const seoData = ProductSpecificSEO[product.product_name] || {};
+
   return (
     <PageContentWrapper>
       <Helmet>
-        <title>{`${product.product_name} - ArcisAI`}</title>
+        <title>
+          {seoData.metaTitle || `${product.product_name} - ArcisAI`}
+        </title>
         <meta
           name="description"
-          content={`Buy ${product.product_name} - ${product.subtitle}. High quality CCTV Camera.`}
+          content={
+            seoData.metaDescription ||
+            `Buy ${product.product_name} - ${product.subtitle}. High quality CCTV Camera.`
+          }
         />
+        {seoData.canonical && <link rel="canonical" href={seoData.canonical} />}
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="product" />
+        <meta
+          property="og:title"
+          content={seoData.metaTitle || `${product.product_name} - ArcisAI`}
+        />
+        <meta
+          property="og:description"
+          content={
+            seoData.metaDescription ||
+            `Buy ${product.product_name} - ${product.subtitle}`
+          }
+        />
+        {seoData.ogImage && (
+          <meta property="og:image" content={seoData.ogImage} />
+        )}
+        {seoData.canonical && (
+          <meta property="og:url" content={seoData.canonical} />
+        )}
       </Helmet>
 
       {/* Hero Section */}

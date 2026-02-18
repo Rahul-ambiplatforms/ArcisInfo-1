@@ -40,7 +40,7 @@ const EcoSeriesProducts = () => {
   return (
     <>
       <Helmet>
-        <title>{productSEO.metatitle || "ArcisAI Eco Series"}</title>
+        <title>{productSEO.metatitle || ""}</title>
         <meta name="description" content={productSEO.metadescription || ""} />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={productSEO.canonical || ""} />

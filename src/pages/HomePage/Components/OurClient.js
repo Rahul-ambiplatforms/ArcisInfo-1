@@ -91,7 +91,7 @@ const CLIENT_LOGOS_DATA = [
   { image: "/images/home_client_33.png", alt: "BSNL" },
 ];
 
-const OurClient = ({ testimonials = true }) => {
+const OurClient = ({ testimonials = true, bg = true }) => {
   const isMobile = useBreakpointValue({ base: true, lg: false });
   const scrollRef = useRef(null);
 
@@ -104,24 +104,26 @@ const OurClient = ({ testimonials = true }) => {
       color="white"
     >
       {/* Background GIF Overlay */}
-      <Box
-        position="absolute"
-        top={{ base: "7%", md: "0" }}
-        left="0"
-        right="0"
-        bottom="0"
-        zIndex="0"
-        opacity="0.4"
-        pointerEvents="none"
-      >
-        <Image
-          src="/images/home_wave_gif.gif"
-          alt="Background Wave"
-          w={{ base: "100%", md: "100%" }}
-          h={{ base: "50%", md: "100%" }}
-          objectFit="cover"
-        />
-      </Box>
+      {bg && (
+        <Box
+          position="absolute"
+          top={{ base: "7%", md: "0" }}
+          left="0"
+          right="0"
+          bottom="0"
+          zIndex="0"
+          opacity="0.4"
+          pointerEvents="none"
+        >
+          <Image
+            src="/images/home_wave_gif.gif"
+            alt="Background Wave"
+            w={{ base: "100%", md: "100%" }}
+            h={{ base: "50%", md: "100%" }}
+            objectFit="cover"
+          />
+        </Box>
+      )}
 
       <Box w="100%" position="relative" zIndex="1">
         <Text textAlign="center" fontSize={{ base: "20px", md: "24px" }} mb={2}>

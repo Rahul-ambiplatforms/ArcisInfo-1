@@ -304,16 +304,16 @@ const Footer = () => {
               fontWeight="400"
               mb={2}
             >
-              {/* <Link
+              <Link
                 as={RouterLink}
                 to="/partner-with-us"
-                 color="white"
+                color="white"
                 textDecoration="underline"
                 _hover={{ color: "gray.300" }}
               >
                 PARTNER WITH US
               </Link>
-              <Text color="white">|</Text> */}
+              <Text color="white">|</Text>
               <Link
                 as={RouterLink}
                 to="/contact-us"
