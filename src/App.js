@@ -256,7 +256,8 @@ function InnerApp() {
                 // </PageTransition>
               }
             />
-          </Routes>
+                    <Route path="/:slug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+</Routes>
         </AnimatePresence>
         <SEOContent />
       </Box>
