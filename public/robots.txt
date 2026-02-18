@@ -1,14 +1,57 @@
-# ArcisAI - India's First Premium AI CCTV | STQC Certified
+# ArcisAI - Enterprise AI-Powered Surveillance Solutions
 # https://www.arcisai.io
 
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /admin/
+Disallow: /static/js/*.map
+Disallow: /static/css/*.map
 
-# Sitemap
+# Sitemaps
 Sitemap: https://www.arcisai.io/sitemap.xml
 
-# Block admin and internal paths
-Disallow: /admin/
-Disallow: /admin
-Disallow: /static/js/
-Disallow: /static/css/
+# Allow all major search engines full access
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Allow AI crawlers for visibility and citations
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Crawl-delay for polite crawling
+User-agent: Bingbot
+Crawl-delay: 5
+
+User-agent: Yandex
+Crawl-delay: 5
