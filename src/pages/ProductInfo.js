@@ -15,7 +15,7 @@ function ProductInfo() {
         zIndex={0}
       >
         {/* Dome Camera */}
-        <Image
+        <Image loading="lazy"
           src="./images/bgLines.png"
           alt="Dome Camera"
           // w={{ base: "500px", md: "700px", lg: "829.413px" }}
@@ -112,7 +112,7 @@ function ProductInfo() {
           gap={{ base: "4", md: 0 }}
         >
           {/* Dome Camera */}
-          <Image
+          <Image loading="lazy"
             src="./images/productType.png"
             alt="Dome Camera"
             w={{ base: "500px", md: "700px", lg: "950px" }}
@@ -144,7 +144,7 @@ function ProductInfo() {
           />
 
           {/* Image stays unaffected above the background */}
-          <Image
+          <Image loading="lazy"
             w={{ base: "100%", md: "860px" }}
             h={{ base: "auto", md: "488px" }}
             src="./images/multiview.png"

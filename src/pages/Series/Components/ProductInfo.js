@@ -197,7 +197,7 @@ const NVRModelSelector = ({ data }) => {
                           w={{ base: "100%", md: "291.91px" }}
                           h={{ base: "auto", md: "292.13px" }}
                         >
-                          <Image
+                          <Image loading="lazy"
                             src={model.image}
                             alt={model.name}
                             maxW="100%"

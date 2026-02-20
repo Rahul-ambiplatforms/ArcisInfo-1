@@ -690,7 +690,7 @@ const BlogsOverviewDash = () => {
 
           {mainImageUrl && (
             <Box mb={6}>
-              <Image
+              <Image loading="lazy"
                 src={mainImageUrl}
                 alt={content.imageText || "Blog image"}
                 borderRadius="24px"
@@ -820,7 +820,7 @@ const BlogsOverviewDash = () => {
                               {component.content.file ||
                               component.content.url ||
                               component.content.imagePath ? (
-                                <Image
+                                <Image loading="lazy"
                                   src={
                                     component.content.file ||
                                     component.content.url ||

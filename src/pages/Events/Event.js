@@ -271,7 +271,7 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
                   h={{ base: "auto", lg: "616px" }}
                   flexShrink={0}
                 >
-                  <Image
+                  <Image loading="lazy"
                     src={eventImageSrc}
                     alt="Business Expo Event"
                     w="100%"

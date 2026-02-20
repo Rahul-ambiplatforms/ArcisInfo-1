@@ -32,7 +32,7 @@ const SurveillanceStack = ({ data }) => {
       pb={{ base: "0%", md: "3%" }}
     >
       {/* Background GIF */}
-      <Image
+      <Image loading="lazy"
         alt=""
         src="/images/home_wave_gif_1.gif"
         position="absolute"
@@ -102,7 +102,7 @@ const SurveillanceStack = ({ data }) => {
             order={{ base: "2", lg: "1" }}
           >
             <Box overflow="hidden">
-              <Image
+              <Image loading="lazy"
                 src={activeItem.image}
                 alt={activeItem.heading}
                 w="100%"

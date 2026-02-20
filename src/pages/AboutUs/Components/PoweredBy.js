@@ -74,7 +74,7 @@ const PoweredBy = ({ data }) => {
                     but assuming the image provided by user (or placeholder) 
                     will be used here. 
                 */}
-              <Image
+              <Image loading="lazy"
                 src={data.image}
                 alt="Adiance Technologies"
                 w={{ base: "100%", md: "762px" }}

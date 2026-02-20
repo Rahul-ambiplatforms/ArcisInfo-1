@@ -144,7 +144,7 @@ const AISolutionIndustry = ({ data }) => {
                     _groupHover={{ opacity: { base: isActive ? 1 : 0, lg: 1 } }}
                   />
 
-                  <Image
+                  <Image loading="lazy"
                     src={item.image}
                     alt={item.name}
                     w="100%"

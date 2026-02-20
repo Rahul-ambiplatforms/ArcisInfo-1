@@ -191,7 +191,7 @@ const Navbar = ({ adminSection, setAdminSection }) => {
                   style={{ cursor: "pointer" }}
                   onClick={() => navigateTo("/", "Home")}
                 >
-                  <Image
+                  <Image loading="lazy"
                     src="../images/ArcisAi.png"
                     alt="Company Logo"
                     boxSize="40px"
@@ -680,7 +680,7 @@ const Navbar = ({ adminSection, setAdminSection }) => {
                   minHeight="408px"
                   overflow="hidden"
                 >
-                  <Image
+                  <Image loading="lazy"
                     src={`${process.env.PUBLIC_URL}/assets/robot.png`}
                     alt="AI Robot"
                     width="100%"

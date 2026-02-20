@@ -69,7 +69,7 @@ const ProductIndustries = ({ data }) => {
           _groupHover={{ opacity: 1 }}
         />
 
-        <Image
+        <Image loading="lazy"
           src={item.image}
           alt={item.name}
           w="100%"
@@ -144,7 +144,7 @@ const ProductIndustries = ({ data }) => {
           _groupHover={{ opacity: 1 }}
         />
 
-        <Image
+        <Image loading="lazy"
           src={item.image}
           alt={item.name}
           w="100%"

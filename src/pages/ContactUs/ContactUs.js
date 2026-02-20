@@ -299,7 +299,7 @@ const ContactSection = () => {
                 opacity={0.4}
                 pointerEvents="none"
               >
-                <Image
+                <Image loading="lazy"
                   src="/images/home_wave_gif_1.gif"
                   alt="Background Wave"
                   w="100%"
@@ -384,7 +384,7 @@ const ContactSection = () => {
                           // borderRadius="8px"
                           // bg="transparent"
                         >
-                          <Image
+                          <Image loading="lazy"
                             src={feature.image}
                             alt={feature.name}
                             w={{ base: "50px", md: "60px", lg: "70px" }}

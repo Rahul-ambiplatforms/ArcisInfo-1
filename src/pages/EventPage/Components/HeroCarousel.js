@@ -114,7 +114,7 @@ const HeroCarousel = ({ data }) => {
               }}
               flexShrink={0}
             >
-              <Image
+              <Image loading="lazy"
                 src={logo}
                 alt="Event Logo"
                 h={{
@@ -188,7 +188,7 @@ const HeroCarousel = ({ data }) => {
                         flexShrink={0}
                         overflow="hidden"
                       >
-                        <Image
+                        <Image loading="lazy"
                           src={imageData.src}
                           alt={imageData.alt}
                           w="341px"
@@ -251,7 +251,7 @@ const HeroCarousel = ({ data }) => {
                     },
                   }}
                 >
-                  <Image
+                  <Image loading="lazy"
                     src={LeftButtonIcon}
                     alt="Previous"
                     w="16px"
@@ -279,7 +279,7 @@ const HeroCarousel = ({ data }) => {
                     },
                   }}
                 >
-                  <Image
+                  <Image loading="lazy"
                     src={RightButtonIcon}
                     alt="Next"
                     w="16px"

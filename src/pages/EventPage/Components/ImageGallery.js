@@ -47,7 +47,7 @@ const ImageGallery = ({ data }) => {
               transition="transform 0.3s ease"
               _hover={{ transform: "scale(1.05)" }}
             >
-              <Image
+              <Image loading="lazy"
                 src={image.src}
                 alt={image.alt}
                 w="100%"

@@ -29,7 +29,7 @@ const InnovationCard = ({ title, description, icon }) => {
         bg="rgba(255, 255, 255, 0.20)"
         mb={2}
       >
-        <Image src={icon} alt={title} boxSize={{ base: "48px", md: "72px" }} />
+        <Image loading="lazy" src={icon} alt={title} boxSize={{ base: "48px", md: "72px" }} />
       </Flex>
       <Heading
         as="h3"

@@ -279,7 +279,7 @@ export default function BlogsContent() {
                   flexDirection="column"
                   cursor="pointer"
                 >
-                  <Image
+                  <Image loading="lazy"
                     src={`${IMAGE_BASE_URL}/${post.content.mainImage}`}
                     alt={post.content?.imageText || "Blog image"}
                     w="full"

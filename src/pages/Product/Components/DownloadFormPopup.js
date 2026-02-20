@@ -145,7 +145,7 @@ const DownloadFormPopup = ({ isOpen, onClose, pdfUrl }) => {
           opacity={0.4}
           pointerEvents="none"
         >
-          <Image
+          <Image loading="lazy"
             src="/images/home_wave_gif_1.gif"
             alt="Background Wave"
             w="100%"

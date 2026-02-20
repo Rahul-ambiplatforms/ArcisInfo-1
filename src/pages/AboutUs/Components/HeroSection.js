@@ -20,7 +20,7 @@ const HeroSection = ({ data }) => {
       <picture>
         <source media="(max-width: 768px)" srcSet={data.m_image} />
         <source media="(min-width: 769px)" srcSet={data.d_image} />
-        <Image
+        <Image loading="lazy"
           src={data.d_image}
           alt={data.heading}
           w="100%"
@@ -78,7 +78,7 @@ const HeroSection = ({ data }) => {
           w="100%"
           textAlign="center"
         >
-          <Image
+          <Image loading="lazy"
             src={data.image}
             alt="ArcisAI Logo"
             w={{ base: "220px", md: "320px", lg: "480px" }}

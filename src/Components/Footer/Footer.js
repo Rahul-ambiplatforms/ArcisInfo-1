@@ -92,7 +92,7 @@ const Footer = () => {
       >
         <Box display={{ base: "block", md: "none" }} mb="10%">
           <RouterLink to="/">
-            <Image
+            <Image loading="lazy"
               display={{ base: "block", md: "none" }}
               src="/images/ArcisAi_logo.png"
               alt="ArcisAI"
@@ -244,7 +244,7 @@ const Footer = () => {
         >
           {/* Left Side: Make In India, App Stores, Logo */}
           <HStack align="center" spacing={{ base: 2, md: 3 }} flexWrap="nowrap">
-            <Image
+            <Image loading="lazy"
               src="/images/footer_makeinindia.png"
               alt="Make in India"
               h={{ base: "35px", md: "40px" }}
@@ -257,7 +257,7 @@ const Footer = () => {
               _hover={{ transform: "scale(1.05)" }}
               transition="all 0.3s ease"
             >
-              <Image
+              <Image loading="lazy"
                 src="/images/footer-app-store.png"
                 alt="App Store"
                 h={{ base: "35px", md: "40px" }}
@@ -273,7 +273,7 @@ const Footer = () => {
               _hover={{ transform: "scale(1.05)" }}
               transition="all 0.3s ease"
             >
-              <Image
+              <Image loading="lazy"
                 src="/images/footer-play-store.png"
                 alt="Google Play"
                 h={{ base: "35px", md: "40px" }}
@@ -284,7 +284,7 @@ const Footer = () => {
             </Link>
           </HStack>
           {/* <RouterLink to="/">
-              <Image
+              <Image loading="lazy"
                 src="/images/ArcisAi_logo.png"
                 alt="ArcisAI"
                 h={{ base: "30px", md: "35px" }}
@@ -397,7 +397,7 @@ const Footer = () => {
         >
           {/* Left: Arcis Logo */}
           <RouterLink to="/">
-            <Image
+            <Image loading="lazy"
               display={{ base: "none", md: "block" }}
               src="/images/ArcisAi_logo.png"
               alt="ArcisAI"

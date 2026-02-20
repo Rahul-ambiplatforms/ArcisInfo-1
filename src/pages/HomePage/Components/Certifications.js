@@ -37,7 +37,7 @@ const Certifications = () => {
               flexShrink={0}
               gridColumn={{ base: index === 7 ? "span 2" : "auto", md: "auto" }}
             >
-              <Image
+              <Image loading="lazy"
                 src={src}
                 alt={`Certification ${index + 1}`}
                 _hover={{ filter: "none" }} // Show original color on hover

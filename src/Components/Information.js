@@ -155,7 +155,7 @@ const Information = ({ data }) => {
               }}
             >
               {image && (
-                <Image
+                <Image loading="lazy"
                   src={image}
                   alt={title || "Information"}
                   w="100%"
@@ -178,7 +178,7 @@ const Information = ({ data }) => {
                     imageProps?.logo?.boxShadow || "0 2px 8px rgba(0,0,0,0.1)"
                   }
                 >
-                  <Image
+                  <Image loading="lazy"
                     src={logo}
                     alt="Logo"
                     w={{

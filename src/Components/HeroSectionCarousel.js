@@ -334,7 +334,7 @@ const HeroSectionCarousel = ({ data }) => {
                 },
               }}
             >
-              <Image
+              <Image loading="lazy"
                 src={LeftButtonIcon}
                 alt="Previous"
                 w={{ base: "16px", md: "20px" }}
@@ -358,7 +358,7 @@ const HeroSectionCarousel = ({ data }) => {
                 },
               }}
             >
-              <Image
+              <Image loading="lazy"
                 src={RightButtonIcon}
                 alt="Next"
                 w={{ base: "16px", md: "20px" }}

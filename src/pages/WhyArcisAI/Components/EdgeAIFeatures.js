@@ -163,7 +163,7 @@ const FeatureCard = ({ feature }) => {
   if (!feature) return null;
   return (
     <Box textAlign="left" w="100%">
-      <Image
+      <Image loading="lazy"
         src={feature.image}
         alt={feature.name}
         w="100%"
@@ -186,7 +186,7 @@ const FeatureImageCard = ({ feature }) => {
   if (!feature) return null;
   return (
     <Box textAlign="left" w="100%">
-      <Image
+      <Image loading="lazy"
         src={feature.image}
         alt={feature.name}
         w="100%"

@@ -260,7 +260,7 @@ const ProductList = ({ data }) => {
                   justify="space-between"
                 >
                   <Box w="full" display="flex" justifyContent="center" mt="-7%">
-                    <Image
+                    <Image loading="lazy"
                       src={product.image}
                       alt={product.product_name}
                       // w="214px"
@@ -290,7 +290,7 @@ const ProductList = ({ data }) => {
                       sx={{ padding: 0 }}
                       showTicks={false}
                     >
-                      <Image
+                      <Image loading="lazy"
                         src={
                           require("../../../Components/Icons/RightButton.svg")
                             .default

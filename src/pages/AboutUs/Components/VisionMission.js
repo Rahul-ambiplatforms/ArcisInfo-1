@@ -99,7 +99,7 @@ const VisionMission = ({ visionData, missionData }) => {
       bg="black"
     >
       {/* Background GIF */}
-      <Image
+      <Image loading="lazy"
         alt=""
         src="/images/home_wave_gif_1.gif"
         position="absolute"

@@ -289,7 +289,7 @@ const Navbar = () => {
         <Flex gap="4" align="center" justify="center">
           {/* LOGO */}
           <RouterLink to="/">
-            <Image
+            <Image loading="lazy"
               src="/images/ArcisAi_logo.png"
               alt="ArcisAI Logo"
               w="150px"
@@ -389,7 +389,7 @@ const Navbar = () => {
             borderColor="gray.800"
           >
             <RouterLink to="/" onClick={onClose}>
-              <Image
+              <Image loading="lazy"
                 src="/images/ArcisAi_logo.png"
                 alt="ArcisAI Logo"
                 w="150px"

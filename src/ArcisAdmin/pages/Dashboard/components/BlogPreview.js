@@ -294,7 +294,7 @@ const BlogPreview = ({ formData, components, faqTitle }) => {
         {mainImageUrl && (
           <Box mb={6}>
             <AspectRatio ratio={16 / 9} w="100%">
-              <Image
+              <Image loading="lazy"
                 src={`${mainImageUrl}`}
                 alt={formData.imageText || "Blog image"}
                 borderRadius="24px"
@@ -396,7 +396,7 @@ const BlogPreview = ({ formData, components, faqTitle }) => {
                               {component.content.file ||
                               component.content.url ||
                               component.content.imagePath ? (
-                                <Image
+                                <Image loading="lazy"
                                   src={
                                     component.content.file ||
                                     component.content.url ||

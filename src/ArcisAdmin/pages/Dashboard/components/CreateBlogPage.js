@@ -1468,7 +1468,7 @@ const FileUploadBox = ({ onFileUpload, file, isLoading }) => {
         </Flex>
       ) : file ? (
         <>
-          <Image
+          <Image loading="lazy"
             src={getImageSource(file)}
             alt="Uploaded file"
             maxH="130px"

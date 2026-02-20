@@ -79,7 +79,7 @@ const CTAButton = ({
       overflow="hidden"
     >
       {d_image && (
-        <Image
+        <Image loading="lazy"
           src={d_image}
           alt="Background"
           w="100%"
@@ -89,7 +89,7 @@ const CTAButton = ({
         />
       )}
       {mobileImage && (
-        <Image
+        <Image loading="lazy"
           src={mobileImage}
           alt="Background Mobile"
           w="100%"

@@ -19,7 +19,7 @@ const HeroSection = ({ data }) => {
     >
       {/* Background Images */}
       {data.d_image && (
-        <Image
+        <Image loading="lazy"
           src={data.d_image}
           alt={data.heading}
           w="100%"
@@ -33,7 +33,7 @@ const HeroSection = ({ data }) => {
         />
       )}
       {data.m_image && (
-        <Image
+        <Image loading="lazy"
           src={data.m_image}
           alt="Hero Background Mobile"
           w="100%"

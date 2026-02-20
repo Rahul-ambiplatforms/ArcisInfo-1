@@ -114,7 +114,7 @@ const OurClient = ({ testimonials = true }) => {
         opacity="0.4"
         pointerEvents="none"
       >
-        <Image
+        <Image loading="lazy"
           src="/images/home_wave_gif.gif"
           alt="Background Wave"
           w={{ base: "100%", md: "100%" }}
@@ -222,7 +222,7 @@ const OurClient = ({ testimonials = true }) => {
               transition="transform 0.2s"
               _hover={{ transform: "scale(1.05)" }}
             >
-              <Image
+              <Image loading="lazy"
                 src={client.image}
                 alt={client.alt}
                 maxH="100%"

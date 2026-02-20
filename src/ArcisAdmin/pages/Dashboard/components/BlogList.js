@@ -79,7 +79,7 @@ const BlogList = ({ blogs, isLoading, onEdit, onBlogDeleted, highlight }) => {
               </Text>
               {/* Image column */}
               <Box w="120px" justifyContent="center" alignItems="center" align="center">
-                <Image
+                <Image loading="lazy"
                   src={getImageUrl(blog.content.mainImage)}
                   alt={blog.content.imageText || "Blog thumbnail"}
                   borderRadius="10px"

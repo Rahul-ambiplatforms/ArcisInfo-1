@@ -41,7 +41,7 @@ function Header() {
       {/* CHILD 1: Logo (Extreme Left) */}
       <Flex alignItems="center">
         <Link as={RouterLink} to="/">
-          <Image
+          <Image loading="lazy"
             src="./images/ArcisAi.png"
             alt="Company Logo"
             w="107px"
@@ -162,7 +162,7 @@ function Header() {
             justifyContent="space-between"
             alignItems="center"
           >
-            <Image
+            <Image loading="lazy"
               src="./images/ArcisAi.png"
               alt="Company Logo"
               w="107px"

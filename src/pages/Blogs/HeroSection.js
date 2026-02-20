@@ -23,7 +23,7 @@ const BlogsDashboard = () => {
         aspectRatio={{ base: "57 / 50", md: "16 / 9" }}
         overflow="hidden" // It's good practice to hide overflowing content from the container
       >
-        <Image
+        <Image loading="lazy"
           src={`${process.env.PUBLIC_URL}/images/thankyou.png`}
           alt="Blogs Dashboard" 
           objectFit={{ base: "cover", md: "cover" }}

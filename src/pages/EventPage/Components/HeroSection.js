@@ -262,7 +262,7 @@ const EventHeroSection = ({ data }) => {
                       alignItems="center"
                       justifyContent="center"
                     >
-                      <Image
+                      <Image loading="lazy"
                         src={logo.image}
                         alt={logo.name}
                         maxW="100%"
@@ -325,7 +325,7 @@ const EventHeroSection = ({ data }) => {
                 },
               }}
             >
-              <Image
+              <Image loading="lazy"
                 src={LeftButtonIcon}
                 alt="Previous"
                 w={{ base: "16px", md: "20px" }}
@@ -349,7 +349,7 @@ const EventHeroSection = ({ data }) => {
                 },
               }}
             >
-              <Image
+              <Image loading="lazy"
                 src={RightButtonIcon}
                 alt="Next"
                 w={{ base: "16px", md: "20px" }}

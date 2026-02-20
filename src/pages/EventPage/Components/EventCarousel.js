@@ -133,7 +133,7 @@ const EventCarousel = ({ data }) => {
           >
             {/* Event Image */}
             <Box w="full" position="relative" overflow="hidden">
-              <Image
+              <Image loading="lazy"
                 src={activeEvent.image}
                 alt={activeEvent.title}
                 w="full"
@@ -163,7 +163,7 @@ const EventCarousel = ({ data }) => {
                 bg={activeEvent?.logoProps?.mobile?.boxBg || "white"}
                 p={activeEvent?.logoProps?.mobile?.boxPadding || "8px"}
               >
-                <Image
+                <Image loading="lazy"
                   src={activeEvent.logo}
                   alt={activeEvent.eventName}
                   h={activeEvent?.logoProps?.mobile?.logoHeight || "40px"}
@@ -217,7 +217,7 @@ const EventCarousel = ({ data }) => {
                         },
                       }}
                     >
-                      <Image
+                      <Image loading="lazy"
                         src={LeftButtonIcon}
                         alt="Previous"
                         w="16px"
@@ -245,7 +245,7 @@ const EventCarousel = ({ data }) => {
                         },
                       }}
                     >
-                      <Image
+                      <Image loading="lazy"
                         src={RightButtonIcon}
                         alt="Next"
                         w="16px"
@@ -333,7 +333,7 @@ const EventCarousel = ({ data }) => {
               p={activeEvent?.logoProps?.desktop?.boxPadding || "12px"}
               flexShrink={0}
             >
-              <Image
+              <Image loading="lazy"
                 src={activeEvent.logo}
                 alt={activeEvent.eventName}
                 h={activeEvent?.logoProps?.desktop?.logoHeight || "80px"}
@@ -462,7 +462,7 @@ const EventCarousel = ({ data }) => {
                         },
                       }}
                     >
-                      <Image
+                      <Image loading="lazy"
                         src={LeftButtonIcon}
                         alt="Previous"
                         w="16px"
@@ -490,7 +490,7 @@ const EventCarousel = ({ data }) => {
                         },
                       }}
                     >
-                      <Image
+                      <Image loading="lazy"
                         src={RightButtonIcon}
                         alt="Next"
                         w="16px"
