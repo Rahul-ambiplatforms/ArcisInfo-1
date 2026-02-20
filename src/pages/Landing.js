@@ -15,6 +15,13 @@ function Landing() {
   const [imageLoaded, setImageLoaded] = useState(false);
   return (
     <>
+      {/* Convergence India 2026 Event Banner */}
+      <Box bg="linear-gradient(90deg,#2d1b69,#0a0a1a)" color="white" py={3} px={4} textAlign="center">
+        <Flex align="center" justify="center" gap={4} flexWrap="wrap">
+          <Text fontWeight="bold" fontSize={{base:"sm",md:"md"}}>Visit ArcisAI at Convergence India 2026 | March 23-25 | Bharat Mandapam</Text>
+          <Button as={Link} to="/events/convergence-india-2026" colorScheme="purple" size="sm">Learn More</Button>
+        </Flex>
+      </Box>
       <Helmet>
         {/* Primary Meta Tags */}
         <title>
