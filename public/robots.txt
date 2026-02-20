@@ -55,3 +55,16 @@ Crawl-delay: 5
 
 User-agent: Yandex
 Crawl-delay: 5
+
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
