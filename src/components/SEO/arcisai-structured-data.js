@@ -99,7 +99,9 @@ export const getIndoorCameraProductSchema = () => ({
     "@type": "Offer",
     "url": "https://arcisai.io/products/indoor-ai-camera",
     "priceCurrency": "INR",
-    "price": "Contact for pricing",
+    "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": "IN", "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted", "merchantReturnDays": 0},
+    "shippingDetails": {"@type": "OfferShippingDetails", "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "IN"}, "shippingRate": {"@type": "MonetaryAmount", "value": "0", "currency": "INR"}},
+    "price": "0",
     "availability": "https://schema.org/InStock",
     "seller": {
       "@type": "Organization",
@@ -135,7 +137,7 @@ export const getIndoorCameraProductSchema = () => ({
     {
       "@type": "PropertyValue",
       "name": "Operating Temperature",
-      "value": "-10Â°C to +50Â°C"
+      "value": "-10ÃÂ°C to +50ÃÂ°C"
     }
   ],
   "hasFeature": [
@@ -228,7 +230,9 @@ export const getOutdoorCameraProductSchema = () => ({
     "@type": "Offer",
     "url": "https://arcisai.io/products/outdoor-ai-camera",
     "priceCurrency": "INR",
-    "price": "Contact for pricing",
+    "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": "IN", "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted", "merchantReturnDays": 0},
+    "shippingDetails": {"@type": "OfferShippingDetails", "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "IN"}, "shippingRate": {"@type": "MonetaryAmount", "value": "0", "currency": "INR"}},
+    "price": "0",
     "availability": "https://schema.org/InStock",
     "seller": {
       "@type": "Organization",
@@ -264,7 +268,7 @@ export const getOutdoorCameraProductSchema = () => ({
     {
       "@type": "PropertyValue",
       "name": "Operating Temperature",
-      "value": "-20Â°C to +60Â°C"
+      "value": "-20ÃÂ°C to +60ÃÂ°C"
     }
   ],
   "hasFeature": [
@@ -350,7 +354,9 @@ export const getPTZCameraProductSchema = () => ({
     "@type": "Offer",
     "url": "https://arcisai.io/products/ai-ptz-camera",
     "priceCurrency": "INR",
-    "price": "Contact for pricing",
+    "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": "IN", "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted", "merchantReturnDays": 0},
+    "shippingDetails": {"@type": "OfferShippingDetails", "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "IN"}, "shippingRate": {"@type": "MonetaryAmount", "value": "0", "currency": "INR"}},
+    "price": "0",
     "availability": "https://schema.org/InStock"
   },
   "hasSpecification": [
@@ -438,7 +444,9 @@ export const getBulletCameraProductSchema = () => ({
     "@type": "Offer",
     "url": "https://arcisai.io/products/ai-bullet-camera",
     "priceCurrency": "INR",
-    "price": "Contact for pricing",
+    "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": "IN", "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted", "merchantReturnDays": 0},
+    "shippingDetails": {"@type": "OfferShippingDetails", "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "IN"}, "shippingRate": {"@type": "MonetaryAmount", "value": "0", "currency": "INR"}},
+    "price": "0",
     "availability": "https://schema.org/InStock"
   },
   "hasFeature": [
@@ -499,7 +507,9 @@ export const getDomeCameraProductSchema = () => ({
     "@type": "Offer",
     "url": "https://arcisai.io/products/ai-dome-camera",
     "priceCurrency": "INR",
-    "price": "Contact for pricing",
+    "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": "IN", "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted", "merchantReturnDays": 0},
+    "shippingDetails": {"@type": "OfferShippingDetails", "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "IN"}, "shippingRate": {"@type": "MonetaryAmount", "value": "0", "currency": "INR"}},
+    "price": "0",
     "availability": "https://schema.org/InStock"
   },
   "hasFeature": [
@@ -537,6 +547,7 @@ export const getDomeCameraProductSchema = () => ({
 export const getSoftwareApplicationSchema = () => ({
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
+  "image": "https://www.arcisai.io/og-image.jpg",
   "@id": "https://arcisai.io/#software",
   "name": "ArcisAI Intelligence Platform",
   "alternateName": "ArcisAI Analytics Engine",
@@ -546,8 +557,10 @@ export const getSoftwareApplicationSchema = () => ({
   "operatingSystem": ["Web-based", "On-device Edge"],
   "offers": {
     "@type": "Offer",
-    "price": "Contact for pricing",
+    "price": "0",
     "priceCurrency": "INR",
+    "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": "IN", "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted", "merchantReturnDays": 0},
+    "shippingDetails": {"@type": "OfferShippingDetails", "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "IN"}, "shippingRate": {"@type": "MonetaryAmount", "value": "0", "currency": "INR"}},
     "availability": "https://schema.org/InStock"
   },
   "featureList": [
@@ -805,6 +818,7 @@ export const getOrganizationWithCertifications = () => {
 export const getAggregateRatingSchema = () => ({
   "@context": "https://schema.org",
   "@type": "Product",
+  "image": "https://www.arcisai.io/og-image.jpg",
   "@id": "https://arcisai.io/#product",
   "name": "ArcisAI Camera Systems",
   "aggregateRating": {
