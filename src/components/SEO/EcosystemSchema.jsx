@@ -13,7 +13,7 @@ import { Helmet } from 'react-helmet-async';
  *   - All certifications (STQC, ISO 27001, BIS, CE, FCC, RoHS, ONVIF)
  */
 
-// ── ArcisAI Mobile App Schema ──
+// ââ ArcisAI Mobile App Schema ââ
 const APP_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'MobileApplication',
@@ -25,6 +25,8 @@ const APP_SCHEMA = {
     '@type': 'Offer',
     price: '0',
     priceCurrency: 'INR',
+    hasMerchantReturnPolicy: {'@type': 'MerchantReturnPolicy', applicableCountry: 'IN', returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted', merchantReturnDays: 0},
+    shippingDetails: {'@type': 'OfferShippingDetails', shippingDestination: {'@type': 'DefinedRegion', addressCountry: 'IN'}, shippingRate: {'@type': 'MonetaryAmount', value: '0', currency: 'INR'}},
     availability: 'https://schema.org/InStock'
   },
   author: {
@@ -43,10 +45,11 @@ const APP_SCHEMA = {
   }
 };
 
-// ── ArcisAI VMS Schema ──
+// ââ ArcisAI VMS Schema ââ
 const VMS_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
+    image: 'https://www.arcisai.io/og-image.jpg',
   name: 'ArcisAI VMS',
   description: 'STQC-certified Video Management System by ArcisAI. Enterprise-grade AI-powered VMS with support for 15+ analytics including face recognition, ANPR, people counting, intrusion detection, fire and smoke detection. Manages up to 10,000+ cameras per deployment.',
   applicationCategory: 'SecurityApplication',
@@ -55,6 +58,8 @@ const VMS_SCHEMA = {
     '@type': 'Offer',
     price: '0',
     priceCurrency: 'INR',
+    hasMerchantReturnPolicy: {'@type': 'MerchantReturnPolicy', applicableCountry: 'IN', returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted', merchantReturnDays: 0},
+    shippingDetails: {'@type': 'OfferShippingDetails', shippingDestination: {'@type': 'DefinedRegion', addressCountry: 'IN'}, shippingRate: {'@type': 'MonetaryAmount', value: '0', currency: 'INR'}},
     description: 'Contact for enterprise pricing',
     availability: 'https://schema.org/InStock'
   },
@@ -75,7 +80,7 @@ const VMS_SCHEMA = {
   }
 };
 
-// ── ArcisAI Cloud Dashboard Schema ──
+// ââ ArcisAI Cloud Dashboard Schema ââ
 const DASHBOARD_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
@@ -87,6 +92,8 @@ const DASHBOARD_SCHEMA = {
     '@type': 'Offer',
     price: '0',
     priceCurrency: 'INR',
+    hasMerchantReturnPolicy: {'@type': 'MerchantReturnPolicy', applicableCountry: 'IN', returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted', merchantReturnDays: 0},
+    shippingDetails: {'@type': 'OfferShippingDetails', shippingDestination: {'@type': 'DefinedRegion', addressCountry: 'IN'}, shippingRate: {'@type': 'MonetaryAmount', value: '0', currency: 'INR'}},
     description: 'Cloud subscription plans available',
     availability: 'https://schema.org/InStock'
   },
@@ -98,10 +105,12 @@ const DASHBOARD_SCHEMA = {
   featureList: 'Multi-Site Dashboard, AI Analytics Reports, Live Monitoring, Health Monitoring, Event Timeline, Cloud Storage, Role-Based Access, Custom Alerts, Automated Reports'
 };
 
-// ── NVR Product Schemas ──
+// ââ NVR Product Schemas ââ
 const NVR_SCHEMAS = {
   '@context': 'https://schema.org',
   '@type': 'ProductGroup',
+    productGroupID: 'arcisai-nvr-range',
+    image: 'https://www.arcisai.io/og-image.jpg',
   name: 'ArcisAI NVR Range',
   description: 'ArcisAI Network Video Recorders with built-in AI analytics. Available in 4CH, 8CH, 16CH, and 32CH configurations with PoE support.',
   brand: { '@type': 'Brand', name: 'ArcisAI' },
@@ -113,7 +122,7 @@ const NVR_SCHEMAS = {
       description: '4-Channel PoE NVR with AI analytics, up to 8MP recording, HDMI/VGA output',
       sku: 'AD-N0481-PoE',
       brand: { '@type': 'Brand', name: 'ArcisAI' },
-      offers: { '@type': 'Offer', priceCurrency: 'INR', availability: 'https://schema.org/InStock', url: 'https://www.arcisai.io/nvr' }
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR', availability: 'https://schema.org/InStock', url: 'https://www.arcisai.io/nvr' }
     },
     {
       '@type': 'Product',
@@ -121,7 +130,7 @@ const NVR_SCHEMAS = {
       description: '8-Channel PoE NVR with AI analytics, up to 8MP recording, dual HDMI output',
       sku: 'AD-N0881-PoE',
       brand: { '@type': 'Brand', name: 'ArcisAI' },
-      offers: { '@type': 'Offer', priceCurrency: 'INR', availability: 'https://schema.org/InStock', url: 'https://www.arcisai.io/nvr' }
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR', availability: 'https://schema.org/InStock', url: 'https://www.arcisai.io/nvr' }
     },
     {
       '@type': 'Product',
@@ -129,7 +138,7 @@ const NVR_SCHEMAS = {
       description: '16-Channel NVR with AI analytics, up to 8MP recording, RAID support',
       sku: 'AD-N1681',
       brand: { '@type': 'Brand', name: 'ArcisAI' },
-      offers: { '@type': 'Offer', priceCurrency: 'INR', availability: 'https://schema.org/InStock', url: 'https://www.arcisai.io/nvr' }
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR', availability: 'https://schema.org/InStock', url: 'https://www.arcisai.io/nvr' }
     },
     {
       '@type': 'Product',
@@ -137,12 +146,12 @@ const NVR_SCHEMAS = {
       description: '32-Channel NVR with AI analytics, enterprise-grade, up to 8MP, hot-swap HDD bays',
       sku: 'AD-N3251',
       brand: { '@type': 'Brand', name: 'ArcisAI' },
-      offers: { '@type': 'Offer', priceCurrency: 'INR', availability: 'https://schema.org/InStock', url: 'https://www.arcisai.io/nvr' }
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR', availability: 'https://schema.org/InStock', url: 'https://www.arcisai.io/nvr' }
     }
   ]
 };
 
-// ── Dashcam Schema ──
+// ââ Dashcam Schema ââ
 const DASHCAM_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Product',
@@ -154,6 +163,9 @@ const DASHCAM_SCHEMA = {
   offers: {
     '@type': 'Offer',
     priceCurrency: 'INR',
+    price: '0',
+    hasMerchantReturnPolicy: {'@type': 'MerchantReturnPolicy', applicableCountry: 'IN', returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted', merchantReturnDays: 0},
+    shippingDetails: {'@type': 'OfferShippingDetails', shippingDestination: {'@type': 'DefinedRegion', addressCountry: 'IN'}, shippingRate: {'@type': 'MonetaryAmount', value: '0', currency: 'INR'}},
     availability: 'https://schema.org/InStock',
     url: 'https://www.arcisai.io/dashcam'
   },
@@ -164,7 +176,7 @@ const DASHCAM_SCHEMA = {
   ]
 };
 
-// ── AI Analytics Capabilities Schema ──
+// ââ AI Analytics Capabilities Schema ââ
 const ANALYTICS_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -198,7 +210,7 @@ const ANALYTICS_SCHEMA = {
   }
 };
 
-// ── Events / Exhibition Schema ──
+// ââ Events / Exhibition Schema ââ
 const EVENTS_SCHEMA = [
   {
     '@context': 'https://schema.org',
