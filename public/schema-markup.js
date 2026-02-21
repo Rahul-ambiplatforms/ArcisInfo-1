@@ -1,5 +1,5 @@
 /**
- * ArcisAI — Comprehensive JSON-LD Schema Markup
+ * ArcisAI â Comprehensive JSON-LD Schema Markup
  * Adds structured data for Google, AI engines, and rich results
  *
  * Include in public/index.html before </head>:
@@ -25,7 +25,7 @@
     "alternateName": ["Arcis AI", "ArcisAI by Adiance Technologies"],
     "url": "https://arcisai.io",
     "logo": "https://arcisai.io/logo.png",
-    "description": "ArcisAI is India's first premium AI-powered CCTV camera and intelligent surveillance ecosystem. Featuring Edge AI cameras, Cloud AI analytics, ArcisGPT generative AI, and a unified Video Management System — all Made in India with STQC certification.",
+    "description": "ArcisAI is India's first premium AI-powered CCTV camera and intelligent surveillance ecosystem. Featuring Edge AI cameras, Cloud AI analytics, ArcisGPT generative AI, and a unified Video Management System â all Made in India with STQC certification.",
     "foundingDate": "2003",
     "parentOrganization": {
       "@type": "Organization",
@@ -100,7 +100,7 @@
     }
   });
 
-  // 3. Product Schemas — S-Series
+  // 3. Product Schemas â S-Series
   addSchema({
     "@context": "https://schema.org",
     "@type": "Product",
@@ -124,7 +124,7 @@
     ]
   });
 
-  // 4. Product Schemas — ECO-Series
+  // 4. Product Schemas â ECO-Series
   addSchema({
     "@context": "https://schema.org",
     "@type": "Product",
@@ -146,10 +146,11 @@
     ]
   });
 
-  // 5. Product Schema — ArcisAI VMS
+  // 5. Product Schema â ArcisAI VMS
   addSchema({
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
+    "image": "https://www.arcisai.io/og-image.jpg",
     "name": "ArcisAI VMS (Video Management System)",
     "description": "Premium next-generation video management platform that blends Edge AI analytics with Cloud AI intelligence and ArcisGPT generative AI. Features global remote access, multi-site camera management, real-time alerts, PTZ control, and advanced event reporting.",
     "applicationCategory": "SecurityApplication",
@@ -160,22 +161,25 @@
       "@type": "Offer",
       "description": "6 months free VMS + Cloud Storage (limited time offer)",
       "priceCurrency": "INR"
+      "price": "0",
+      "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": "IN", "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted", "merchantReturnDays": 0},
+      "shippingDetails": {"@type": "OfferShippingDetails", "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "IN"}, "shippingRate": {"@type": "MonetaryAmount", "value": "0", "currency": "INR"}},
     },
     "featureList": [
       "Global Remote Access",
       "Multi-Site Camera Management",
-      "Cloud AI — crowd count, vehicle detection, PPE kit detection, fire detection",
-      "ArcisGPT — talk to your video, smart retrieval, action recognition",
-      "Real-Time Alerts — push notifications and email triggers",
+      "Cloud AI â crowd count, vehicle detection, PPE kit detection, fire detection",
+      "ArcisGPT â talk to your video, smart retrieval, action recognition",
+      "Real-Time Alerts â push notifications and email triggers",
       "PTZ Remote Control",
       "Event Reports",
-      "Patented Bandwidth Optimization — up to 70% savings",
-      "Third-Party Integration — works with existing ONVIF cameras",
+      "Patented Bandwidth Optimization â up to 70% savings",
+      "Third-Party Integration â works with existing ONVIF cameras",
       "Cloud, On-Premise, or Hybrid Deployment"
     ]
   });
 
-  // 6. Product Schema — ArcisAI Bridge Device (ABD)
+  // 6. Product Schema â ArcisAI Bridge Device (ABD)
   addSchema({
     "@context": "https://schema.org",
     "@type": "Product",
@@ -195,7 +199,7 @@
     ]
   });
 
-  // 7. FAQ Schema — Top questions for rich snippets and GEO
+  // 7. FAQ Schema â Top questions for rich snippets and GEO
   addSchema({
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -205,7 +209,7 @@
         "name": "What is ArcisAI?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "ArcisAI is India's first premium AI-powered surveillance ecosystem by Adiance Technologies. It combines Edge AI cameras (S-Series and ECO-Series), a cloud-based Video Management System (VMS), Cloud AI analytics, and ArcisGPT — India's first generative AI for video surveillance. All products are Made in India with STQC certification."
+          "text": "ArcisAI is India's first premium AI-powered surveillance ecosystem by Adiance Technologies. It combines Edge AI cameras (S-Series and ECO-Series), a cloud-based Video Management System (VMS), Cloud AI analytics, and ArcisGPT â India's first generative AI for video surveillance. All products are Made in India with STQC certification."
         }
       },
       {
@@ -213,7 +217,7 @@
         "name": "What is ArcisGPT?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "ArcisGPT is India's first generative AI engine for video surveillance. It lets you interact with your security footage using natural language — ask questions, search for specific events, track objects or people, and get instant visual intelligence."
+          "text": "ArcisGPT is India's first generative AI engine for video surveillance. It lets you interact with your security footage using natural language â ask questions, search for specific events, track objects or people, and get instant visual intelligence."
         }
       },
       {
@@ -281,7 +285,7 @@
       "addressCountry": "IN",
       "addressRegion": "Gujarat"
     },
-    "priceRange": "₹₹",
+    "priceRange": "â¹â¹",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
