@@ -107,10 +107,10 @@ const seoPageDataExpansion2 = {
         },
         {
           title: "Rugged Hardware for Demanding Environments",
-          content: "Built for harsh operational environments, the NDAA-compliant bullet camera features industrial-grade construction rated for extreme temperatures (-40Â°C to +60Â°C), high humidity, and saltwater exposure. The optical system delivers 4K+ resolution with advanced low-light sensitivity, capturing critical details in challenging lighting conditions common to border surveillance and nighttime operations. Weatherproof IP67 housing protects sensitive electronics while maintaining optical clarity through specialized anti-fog optics. The robust 1.5mm aluminum casing withstands impacts, vibration, and attempted tampering. Redundant power systems support both AC and 24V DC inputs with integrated backup battery capability for temporary power loss scenarios. The thermal management system uses advanced heat dissipation technologies ensuring sustained performance in high-temperature environments where edge AI processing demands peak computational power. Field-replaceable modules enable rapid maintenance in remote locations without specialized technicians.",
+          content: "Built for harsh operational environments, the NDAA-compliant bullet camera features industrial-grade construction rated for extreme temperatures (-40ÃÂ°C to +60ÃÂ°C), high humidity, and saltwater exposure. The optical system delivers 4K+ resolution with advanced low-light sensitivity, capturing critical details in challenging lighting conditions common to border surveillance and nighttime operations. Weatherproof IP67 housing protects sensitive electronics while maintaining optical clarity through specialized anti-fog optics. The robust 1.5mm aluminum casing withstands impacts, vibration, and attempted tampering. Redundant power systems support both AC and 24V DC inputs with integrated backup battery capability for temporary power loss scenarios. The thermal management system uses advanced heat dissipation technologies ensuring sustained performance in high-temperature environments where edge AI processing demands peak computational power. Field-replaceable modules enable rapid maintenance in remote locations without specialized technicians.",
           features: [
             "Industrial-grade construction for extreme environments",
-            "Temperature range: -40Â°C to +60Â°C",
+            "Temperature range: -40ÃÂ°C to +60ÃÂ°C",
             "IP67 weatherproof rating with anti-fog optics",
             "4K+ resolution with advanced low-light sensors",
             "Dual power input (AC and 24V DC)",
@@ -427,10 +427,10 @@ const seoPageDataExpansion2 = {
         },
         {
           title: "Rugged Outdoor Construction for Extreme Environments",
-          content: "Outdoor PTZ cameras face extreme environmental challenges including temperature fluctuations, precipitation, dust, UV radiation, and salt spray in coastal environments. ArcisAI outdoor PTZ cameras feature industrial-grade construction specifically engineered for harsh conditions. The housing uses high-strength aluminum alloy with IP67 weatherproofing, protecting all internal components from water, dust, and environmental contaminants. The motor mechanisms employ sealed bearing systems and corrosion-resistant materials ensuring smooth operation despite environmental exposure. The optical system includes protective glass with anti-reflection and anti-fog coatings, maintaining image clarity through rain, fog, and temperature differentials. Extreme temperature electronics operate reliably from -40Â°C to +60Â°C, accommodating desert heat, arctic cold, and rapid thermal cycling. The power system supports both AC and 24V DC inputs with integrated backup battery capability for brief power interruptions. Redundant position sensors ensure accurate pan-tilt positioning even after power loss. The sealed connector design prevents water and dust ingress during field maintenance in remote locations.",
+          content: "Outdoor PTZ cameras face extreme environmental challenges including temperature fluctuations, precipitation, dust, UV radiation, and salt spray in coastal environments. ArcisAI outdoor PTZ cameras feature industrial-grade construction specifically engineered for harsh conditions. The housing uses high-strength aluminum alloy with IP67 weatherproofing, protecting all internal components from water, dust, and environmental contaminants. The motor mechanisms employ sealed bearing systems and corrosion-resistant materials ensuring smooth operation despite environmental exposure. The optical system includes protective glass with anti-reflection and anti-fog coatings, maintaining image clarity through rain, fog, and temperature differentials. Extreme temperature electronics operate reliably from -40ÃÂ°C to +60ÃÂ°C, accommodating desert heat, arctic cold, and rapid thermal cycling. The power system supports both AC and 24V DC inputs with integrated backup battery capability for brief power interruptions. Redundant position sensors ensure accurate pan-tilt positioning even after power loss. The sealed connector design prevents water and dust ingress during field maintenance in remote locations.",
           features: [
             "IP67 weatherproof housing for extreme conditions",
-            "Temperature range: -40Â°C to +60Â°C",
+            "Temperature range: -40ÃÂ°C to +60ÃÂ°C",
             "Corrosion-resistant materials for coastal environments",
             "Anti-fog and anti-reflection optics",
             "Sealed bearing systems for longevity",
@@ -802,7 +802,7 @@ const seoPageDataExpansion2 = {
       ],
       cta: { headline: "Protect Your Facility with Advanced Fire Detection", description: "Deploy AI fire detection for early warning and rapid emergency response. Request a technical assessment for your facility.", buttonText: "Schedule Assessment", buttonLink: "https://arcisai.io/assessment" }
     }
-  },  },
+  },
 
   "/people-counting-camera": {
     title: "AI People Counting Camera | Occupancy Analytics",
