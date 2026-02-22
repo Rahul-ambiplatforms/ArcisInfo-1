@@ -20,7 +20,7 @@ const SEOLandingPage = () => {
     : (category && pageSlug && allSeoData[`${category}-${pageSlug}`]) ? `${category}-${pageSlug}`
     : (pageSlug && allSeoData[pageSlug]) ? pageSlug
     : (category && allSeoData[category]) ? category
-    : (slug && allSeoData[slug]) ? slug
+    : (slug && allSeoData[`ai-cctv-${slug}`]) ? `ai-cctv-${slug}` : (slug && allSeoData[slug]) ? slug
     : (seriesId && allSeoData[seriesId]) ? seriesId : null;
 
   const pageData = lookupKey ? allSeoData[lookupKey] : null;
@@ -103,7 +103,7 @@ const SEOLandingPage = () => {
     description: pageData.metaDescription,
     url: pageUrl,
     telephone: "+91-9909000616",
-    priceRange: "Ã¢ÂÂ¹Ã¢ÂÂ¹Ã¢ÂÂ¹",
+    priceRange: "ÃÂ¢ÃÂÃÂ¹ÃÂ¢ÃÂÃÂ¹ÃÂ¢ÃÂÃÂ¹",
     image: "https://www.arcisai.io/logo.png",
     address: {
       "@type": "PostalAddress",
