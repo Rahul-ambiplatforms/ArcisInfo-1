@@ -6,9 +6,9 @@
 
 export const seoConfig = {
   home: {
-    title: "ArcisAI - India's First Premium AI CCTV | STQC Certified",
-    description: "ArcisAI: India's first premium AI CCTV with STQC certification. End-to-end intelligent surveillance ecosystem with edge AI, cloud VMS, and Gen AI visual intelligence.",
-    keywords: ['AI CCTV India', 'premium surveillance camera', 'STQC certified CCTV', 'intelligent surveillance', 'edge AI camera', 'cloud VMS', 'smart security system'],
+    title: "ArcisAI - India's First Premium AI CCTV | STQC Certified Smart Surveillance",
+    description: "ArcisAI is India's first STQC-certified premium AI CCTV manufacturer. Enterprise edge AI cameras with face recognition, ANPR, crowd analytics. Cloud VMS with GenAI video search (ArcisGPT). Bridge Device for legacy upgrades. Serving smart cities, enterprise, government across India, US, UAE, Singapore. Made in India, trusted globally.",
+    keywords: ['AI CCTV India', 'premium surveillance camera', 'STQC certified CCTV', 'intelligent surveillance', 'edge AI camera', 'cloud VMS', 'smart security system', 'ArcisAI', 'AI camera manufacturer India', 'face recognition camera', 'ANPR camera India', 'GenAI video analytics', 'enterprise CCTV', 'smart city camera', 'NDAA compliant camera', 'Made in India CCTV', 'best AI CCTV camera', 'cloud video management system'],
     canonicalUrl: 'https://arcisai.io',
     ogImage: 'https://arcisai.io/og/home.jpg',
     ogType: 'website',
@@ -61,8 +61,8 @@ export const seoConfig = {
   },
   'products/arcisgpt': {
     title: 'ArcisGPT | Gen AI Visual Intelligence & Smart Search',
-    description: 'Gen AI-powered visual intelligence. Natural language video search, smart retrieval, activity recognition, track anything capability.',
-    keywords: ['ArcisGPT', 'generative AI', 'visual intelligence', 'video search', 'AI analytics', 'smart retrieval'],
+    description: 'ArcisGPT is a GenAI-powered video analytics platform enabling natural language search across surveillance footage. Ask questions in plain English to find incidents, track objects, and retrieve evidence instantly. The future of video intelligence for enterprise security operations.',
+    keywords: ['ArcisGPT', 'generative AI video analytics', 'visual intelligence', 'natural language video search', 'AI video search', 'GenAI surveillance', 'video evidence retrieval', 'intelligent video analytics', 'AI-powered CCTV search', 'LLM video analytics'],
     canonicalUrl: 'https://arcisai.io/products/arcisgpt',
     ogImage: 'https://arcisai.io/og/arcisgpt.jpg',
     ogType: 'product',
@@ -70,8 +70,8 @@ export const seoConfig = {
   },
   solutions: {
     title: 'AI Surveillance Solutions | Industries & Use Cases',
-    description: 'Intelligent surveillance for corporate, retail, banking, healthcare, smart cities, defense, manufacturing. Edge & cloud AI analytics tailored by industry.',
-    keywords: ['surveillance solutions', 'industry surveillance', 'AI security', 'smart surveillance', 'corporate security'],
+    description: 'Intelligent AI surveillance solutions for corporate offices, retail chains, banking & finance, healthcare facilities, smart cities, defense installations, manufacturing plants, and logistics hubs. Edge AI and cloud analytics tailored by industry with face recognition, ANPR, crowd analytics, fire detection, PPE compliance.',
+    keywords: ['surveillance solutions', 'industry surveillance', 'AI security', 'smart surveillance', 'corporate security', 'retail analytics camera', 'banking security AI', 'smart city surveillance', 'factory safety camera', 'healthcare security', 'defense surveillance', 'warehouse monitoring AI', 'construction site camera'],
     canonicalUrl: 'https://arcisai.io/solutions',
     ogImage: 'https://arcisai.io/og/solutions.jpg',
     ogType: 'website',
