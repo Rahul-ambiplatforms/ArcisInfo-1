@@ -8,13 +8,14 @@ import seoPageDataGeo from "../../data/seoPageDataGeo";
 import seoPageDataCompare from "../../data/seoPageDataCompare";
 import seoPageDataCompliance from "../../data/seoPageDataCompliance";
 import seoPageDataExpansion2 from "../../data/seoPageDataExpansion2";
+import seoPageDataGeoIntl from "../../data/seoPageDataGeoIntl";
 
 const SEOLandingPage = () => {
   const params = useParams();
   const { category, pageSlug, city, slug, seriesId } = params;
 
   // Multi-strategy key lookup
-  const allSeoData = { ...seoPageData, ...seoPageDataExpansion, ...seoPageDataGeo, ...seoPageDataCompare, ...seoPageDataCompliance, ...seoPageDataExpansion2 };
+  const allSeoData = { ...seoPageData, ...seoPageDataExpansion, ...seoPageDataGeo, ...seoPageDataCompare, ...seoPageDataCompliance, ...seoPageDataExpansion2, ...seoPageDataGeoIntl };
   const lookupKey = (city && allSeoData[`cctv-cameras-${city}`]) ? `cctv-cameras-${city}`
     : (category && pageSlug && allSeoData[`${category}-${pageSlug}`]) ? `${category}-${pageSlug}`
     : (pageSlug && allSeoData[pageSlug]) ? pageSlug
@@ -102,7 +103,7 @@ const SEOLandingPage = () => {
     description: pageData.metaDescription,
     url: pageUrl,
     telephone: "+91-9909000616",
-    priceRange: "â¹â¹â¹",
+    priceRange: "Ã¢ÂÂ¹Ã¢ÂÂ¹Ã¢ÂÂ¹",
     image: "https://www.arcisai.io/logo.png",
     address: {
       "@type": "PostalAddress",
