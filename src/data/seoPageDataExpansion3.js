@@ -28,9 +28,9 @@ const seoPageDataExpansion3 = {
       }
     ],
     "faqs": [
-      {"question": "Which CCTV camera is best for diamond units in Surat?", "answer": "ArcisAI S-Series cameras with 4K resolution and AI analytics are ideal for diamond units in Surat, providing non-Chinese SoC architecture for data security and STQC certification for compliance."},
-      {"question": "Does ArcisAI have dealers in Surat?", "answer": "Yes, ArcisAI has an authorized dealer network across Surat covering Varachha, Katargam, Ring Road, and surrounding areas for installation and AMC support."},
-      {"question": "Are ArcisAI cameras suitable for textile factories?", "answer": "Absolutely. ArcisAI cameras are designed for industrial environments with dust-resistant housing, wide-angle coverage, and AI-based anomaly detection for textile factory floor monitoring."}
+      {"q": "Which CCTV camera is best for diamond units in Surat?", "a": "ArcisAI S-Series cameras with 4K resolution and AI analytics are ideal for diamond units in Surat, providing non-Chinese SoC architecture for data security and STQC certification for compliance."},
+      {"q": "Does ArcisAI have dealers in Surat?", "a": "Yes, ArcisAI has an authorized dealer network across Surat covering Varachha, Katargam, Ring Road, and surrounding areas for installation and AMC support."},
+      {"q": "Are ArcisAI cameras suitable for textile factories?", "a": "Absolutely. ArcisAI cameras are designed for industrial environments with dust-resistant housing, wide-angle coverage, and AI-based anomaly detection for textile factory floor monitoring."}
     ],
     "cta": {"title": "Secure Your Surat Business with ArcisAI", "subtitle": "Get a free site survey and AI surveillance consultation for your diamond unit, factory, or retail shop."}
   },
@@ -59,9 +59,9 @@ const seoPageDataExpansion3 = {
       }
     ],
     "faqs": [
-      {"question": "Which CCTV camera is best for Noida societies?", "answer": "ArcisAI ECO-Series is ideal for residential societies in Noida, offering AI-powered monitoring, mobile app access, and non-Chinese SoC for data sovereignty at affordable pricing."},
-      {"question": "Does ArcisAI provide installation in Noida?", "answer": "Yes, ArcisAI has certified installation partners across Noida, Greater Noida, and Noida Extension for both residential and commercial projects."},
-      {"question": "Can ArcisAI cameras integrate with society management apps?", "answer": "Yes, ArcisAI cloud VMS integrates with popular society management platforms and provides dedicated mobile apps for RWA committees and residents."}
+      {"q": "Which CCTV camera is best for Noida societies?", "a": "ArcisAI ECO-Series is ideal for residential societies in Noida, offering AI-powered monitoring, mobile app access, and non-Chinese SoC for data sovereignty at affordable pricing."},
+      {"q": "Does ArcisAI provide installation in Noida?", "a": "Yes, ArcisAI has certified installation partners across Noida, Greater Noida, and Noida Extension for both residential and commercial projects."},
+      {"q": "Can ArcisAI cameras integrate with society management apps?", "a": "Yes, ArcisAI cloud VMS integrates with popular society management platforms and provides dedicated mobile apps for RWA committees and residents."}
     ],
     "cta": {"title": "Upgrade Noida Security with ArcisAI", "subtitle": "Get a free consultation for your IT park, society, or commercial complex in Noida."}
   },
@@ -90,9 +90,9 @@ const seoPageDataExpansion3 = {
       }
     ],
     "faqs": [
-      {"question": "Which CCTV is best for Gurgaon corporate offices?", "answer": "ArcisAI S-Series with AI analytics and non-Chinese SoC is the top choice for Gurgaon corporates, offering enterprise-grade surveillance with complete data sovereignty."},
-      {"question": "Does ArcisAI serve Cyber City and DLF areas?", "answer": "Yes, ArcisAI has dedicated enterprise teams serving Cyber City, DLF Phase 1-5, Golf Course Road, and all major Gurgaon commercial hubs."},
-      {"question": "Are ArcisAI cameras compliant with corporate data policies?", "answer": "Yes, ArcisAI non-Chinese SoC ensures all video data is processed on indigenous chipsets with no foreign data routing, meeting strict corporate data compliance requirements."}
+      {"q": "Which CCTV is best for Gurgaon corporate offices?", "a": "ArcisAI S-Series with AI analytics and non-Chinese SoC is the top choice for Gurgaon corporates, offering enterprise-grade surveillance with complete data sovereignty."},
+      {"q": "Does ArcisAI serve Cyber City and DLF areas?", "a": "Yes, ArcisAI has dedicated enterprise teams serving Cyber City, DLF Phase 1-5, Golf Course Road, and all major Gurgaon commercial hubs."},
+      {"q": "Are ArcisAI cameras compliant with corporate data policies?", "a": "Yes, ArcisAI non-Chinese SoC ensures all video data is processed on indigenous chipsets with no foreign data routing, meeting strict corporate data compliance requirements."}
     ],
     "cta": {"title": "Premium Security for Gurgaon Properties", "subtitle": "Schedule a demo for your corporate office, tower, or premium residence in Gurgaon."}
   },
@@ -127,10 +127,10 @@ const seoPageDataExpansion3 = {
       }
     ],
     "faqs": [
-      {"question": "What does non-Chinese SoC mean in CCTV cameras?", "answer": "Non-Chinese SoC means the System-on-Chip (the brain of the camera) is not manufactured by Chinese companies. ArcisAI uses indigenous non-Chinese SoC, ensuring the core processing hardware has no foreign dependencies or potential backdoors."},
-      {"question": "Why is data sovereignty important in CCTV cameras?", "answer": "CCTV cameras constantly process sensitive video data. With foreign chipsets, there is a risk of data being routed through foreign servers or firmware containing backdoor access. Non-Chinese SoC cameras like ArcisAI ensure all data stays within sovereign control."},
-      {"question": "Are non-Chinese SoC cameras as good as foreign brands?", "answer": "ArcisAI non-Chinese SoC cameras match and often exceed foreign brands in AI capabilities, offering 4K resolution, edge AI analytics, ArcisGPT natural language search, and cloud VMS — all while guaranteeing complete data sovereignty."},
-      {"question": "Is ArcisAI STQC certified?", "answer": "Yes, ArcisAI is STQC (Standardisation Testing and Quality Certification) certified by the Government of India, making it eligible for government projects and trusted enterprise deployments."}
+      {"q": "What does non-Chinese SoC mean in CCTV cameras?", "a": "Non-Chinese SoC means the System-on-Chip (the brain of the camera) is not manufactured by Chinese companies. ArcisAI uses indigenous non-Chinese SoC, ensuring the core processing hardware has no foreign dependencies or potential backdoors."},
+      {"q": "Why is data sovereignty important in CCTV cameras?", "a": "CCTV cameras constantly process sensitive video data. With foreign chipsets, there is a risk of data being routed through foreign servers or firmware containing backdoor access. Non-Chinese SoC cameras like ArcisAI ensure all data stays within sovereign control."},
+      {"q": "Are non-Chinese SoC cameras as good as foreign brands?", "a": "ArcisAI non-Chinese SoC cameras match and often exceed foreign brands in AI capabilities, offering 4K resolution, edge AI analytics, ArcisGPT natural language search, and cloud VMS — all while guaranteeing complete data sovereignty."},
+      {"q": "Is ArcisAI STQC certified?", "a": "Yes, ArcisAI is STQC (Standardisation Testing and Quality Certification) certified by the Government of India, making it eligible for government projects and trusted enterprise deployments."}
     ],
     "cta": {"title": "Switch to Non-Chinese SoC CCTV Cameras", "subtitle": "Join thousands of Indian businesses and homes choosing data-sovereign surveillance. Get a free ArcisAI demo today."}
   },
@@ -159,9 +159,9 @@ const seoPageDataExpansion3 = {
       }
     ],
     "faqs": [
-      {"question": "Is AI CCTV mandatory for schools in India?", "answer": "Several Indian states now recommend or mandate CCTV in schools. ArcisAI STQC-certified cameras with non-Chinese SoC meet all government compliance requirements for educational institution surveillance."},
-      {"question": "Can parents view school CCTV footage?", "answer": "ArcisAI cloud VMS supports role-based access. Schools can configure parent access to specific areas like classrooms and buses while maintaining privacy for staff areas."},
-      {"question": "What makes ArcisAI suitable for schools?", "answer": "ArcisAI cameras are designed with student privacy in mind — non-Chinese SoC ensures data sovereignty, AI detects safety threats in real-time, and cloud VMS gives administrators centralized control over the entire campus."}
+      {"q": "Is AI CCTV mandatory for schools in India?", "a": "Several Indian states now recommend or mandate CCTV in schools. ArcisAI STQC-certified cameras with non-Chinese SoC meet all government compliance requirements for educational institution surveillance."},
+      {"q": "Can parents view school CCTV footage?", "a": "ArcisAI cloud VMS supports role-based access. Schools can configure parent access to specific areas like classrooms and buses while maintaining privacy for staff areas."},
+      {"q": "What makes ArcisAI suitable for schools?", "a": "ArcisAI cameras are designed with student privacy in mind — non-Chinese SoC ensures data sovereignty, AI detects safety threats in real-time, and cloud VMS gives administrators centralized control over the entire campus."}
     ],
     "cta": {"title": "Secure Your School with ArcisAI", "subtitle": "Request a free campus security assessment. AI-powered, Made in India, designed for student safety."}
   }
