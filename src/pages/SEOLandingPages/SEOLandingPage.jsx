@@ -11,13 +11,14 @@ import seoPageDataExpansion2 from "../../data/seoPageDataExpansion2";
 import seoPageDataGeoIntl from "../../data/seoPageDataGeoIntl";
 import seoPageDataExpansion3 from "../../data/seoPageDataExpansion3";
 import seoPageDataExpansion4 from "../../data/seoPageDataExpansion4";
+import seoPageDataExpansion5 from "../../data/seoPageDataExpansion5";
 
 const SEOLandingPage = () => {
   const params = useParams();
   const { category, pageSlug, city, slug, seriesId } = params;
 
   // Multi-strategy key lookup
-  const allSeoData = { ...seoPageData, ...seoPageDataExpansion, ...seoPageDataGeo, ...seoPageDataCompare, ...seoPageDataCompliance, ...seoPageDataExpansion2, ...seoPageDataGeoIntl, ...seoPageDataExpansion3, ...seoPageDataExpansion4 };
+  const allSeoData = { ...seoPageData, ...seoPageDataExpansion, ...seoPageDataGeo, ...seoPageDataCompare, ...seoPageDataCompliance, ...seoPageDataExpansion2, ...seoPageDataGeoIntl, ...seoPageDataExpansion3, ...seoPageDataExpansion4, ...seoPageDataExpansion5 };
   const lookupKey = (city && allSeoData[`cctv-cameras-${city}`]) ? `cctv-cameras-${city}`
     : (category && pageSlug && allSeoData[`${category}-${pageSlug}`]) ? `${category}-${pageSlug}`
     : (pageSlug && allSeoData[pageSlug]) ? pageSlug
