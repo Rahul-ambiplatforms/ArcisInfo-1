@@ -139,15 +139,36 @@ const seoPageDataExpansion5 = {
       {"title": "Export-Ready Quality", "description": "With FCC (US), CE (Europe), and international certifications, ArcisAI products meet global quality standards â built for both Indian and international markets."},
       {"title": "Multi-Stage Quality Control", "description": "Stability testing, imaging validation, endurance testing, and performance benchmarking ensure every camera meets ArcisAI's premium quality standards before shipping."}
     ],
-    "benefits": ["100% in-house manufacturing â not Chinese OEM rebranding", "Non-Chinese SoCs for true data sovereignty", "STQC, ISO 27001, BIS, FCC, CE, RoHS certified", "OEM/ODM capability for channel partners", "Export-ready for global markets", "Direct manufacturer pricing â no import dutiesty Surveillance", "description": "Human detection, face recognition, suspicious object detection, and area intrusion alerts help law enforcement maintain public safety across parks, transit stations, and public spaces."},
-      {"title": "Multi-Site City-Wide Deployment", "description": "ArcisAI VMS manages cameras across hundreds of locations from a single dashboard â perfect for city-wide deployments spanning wards, zones, and municipal boundaries."},
-      {"title": "STQC Compliant for Government", "description": "Meets all procurement requirements for Smart Cities Mission tenders. STQC certified VMS, BIS certified hardware, ISO 27001 information security â zero compliance gaps."}
-    ],
-    "benefits": ["Complete Smart City surveillance ecosystem â cameras + VMS + cloud AI", "ICCC integration ready with unified dashboard", "STQC certified for government procurement compliance", "Handles city-wide deployments with thousands of cameras", "Traffic, crowd, and public safety AI in one platform", "Make in India â meets indigenous procurement mandates"],
+    "benefits": ["100% in-house manufacturing â not Chinese OEM rebranding", "Non-Chinese SoCs for true data sovereignty", "STQC, ISO 27001, BIS, FCC, CE, RoHS certified", "OEM/ODM capability for channel partners", "Export-ready for global markets", "Direct manufacturer pricing — no import duties"],
     "faq": [
-      {"q": "What is ICCC in smart city surveillance?", "a": "ICCC (Integrated Command & Control Center) is the central hub for smart city operations in India. It integrates data from various city systems â CCTV cameras, traffic sensors, emergency services â into a unified dashboard for real-time monitoring and decision-making."},
-      {"q": "Is ArcisAI approved for Smart Cities Mission projects?", "a": "Yes. ArcisAI meets all requirements for Smart Cities Mission surveillance deployments including STQC certification, BIS compliance, and Make in India manufacturing. The platform's ICCC-ready VMS and multi-site management capabilities are designed for city-scale operations."},
-      {"q": "How many cameras can ArcisAI VMS manage for a smart city?", "a": "ArcisAI VMS is built for scale. It can manage thousands of cameras across multiple sites and zones from a single unified dashboard, making it suitable for city-wide smart city deployments."},
+      {"q": "Is ArcisAI truly Made in India?", "a": "Yes. ArcisAI by Adiance Technologies manufactures cameras in-house on its own SMT lines in India using non-Chinese SoCs. The entire ecosystem — cameras, VMS, cloud platform, and AI models — is designed and built in India."},
+      {"q": "Does ArcisAI use Chinese components?", "a": "ArcisAI uses non-Chinese System-on-Chip (SoC) processors and designs its own PCBs. This is critical for government installations where Chinese-origin components face restrictions and data sovereignty concerns."},
+      {"q": "Can ArcisAI be used in government projects?", "a": "Absolutely. ArcisAI holds STQC certification, BIS certification, and ISO 27001 — meeting all procurement requirements for government tenders, Smart Cities Mission projects, defense installations, and public infrastructure."},
+      {"q": "Does ArcisAI offer OEM/ODM for channel partners?", "a": "Yes. ArcisAI offers white-label manufacturing for system integrators and channel partners who want Indian-manufactured, STQC-certified cameras under their own brand."}
+    ],
+    "cta": {"title": "Partner with India's AI CCTV Manufacturer", "subtitle": "Explore OEM/ODM opportunities or request a product demo."}
+  },
+
+  "ai-cctv-smart-city-iccc-india": {
+    "slug": "ai-cctv-smart-city-iccc-india",
+    "title": "AI CCTV for Smart Cities & ICCC | ArcisAI Urban Surveillance",
+    "metaDescription": "ArcisAI smart city surveillance — ICCC integration, city-wide camera management, traffic analytics, crowd monitoring, and public safety AI. STQC certified for government Smart Cities Mission projects.",
+    "keywords": ["smart city CCTV India", "ICCC surveillance system", "smart city camera system", "AI urban surveillance", "city-wide CCTV management", "smart city AI analytics", "municipal CCTV India"],
+    "heroTitle": "AI-Powered Surveillance for India's Smart Cities",
+    "heroDescription": "Smart Cities need intelligent surveillance that goes beyond recording. ArcisAI delivers a complete smart city surveillance ecosystem — from ICCC integration and city-wide camera management to AI-powered crowd analytics, traffic monitoring, and public safety alerts. STQC certified and designed for the scale, complexity, and compliance requirements of India's Smart Cities Mission.",
+    "features": [
+      {"title": "ICCC Integration Ready", "description": "ArcisAI VMS integrates with Integrated Command and Control Centers (ICCC) — providing unified video feeds, AI alerts, and analytics dashboards that city administrators need for real-time urban management."},
+      {"title": "City-Wide Camera Management", "description": "Manage thousands of cameras across wards, zones, and municipal boundaries from a single ArcisAI VMS dashboard. Hierarchical access control ensures each department sees only what they need."},
+      {"title": "Crowd & Traffic Analytics", "description": "AI-powered crowd density monitoring, traffic flow analysis, vehicle counting, and congestion detection. Real-time alerts when crowd sizes or traffic conditions exceed safety thresholds."},
+      {"title": "Public Safety Surveillance", "description": "Human detection, face recognition, suspicious object detection, and area intrusion alerts help law enforcement maintain public safety across parks, transit stations, and public spaces."},
+      {"title": "Multi-Site City-Wide Deployment", "description": "ArcisAI VMS manages cameras across hundreds of locations from a single dashboard — perfect for city-wide deployments spanning wards, zones, and municipal boundaries."},
+      {"title": "STQC Compliant for Government", "description": "Meets all procurement requirements for Smart Cities Mission tenders. STQC certified VMS, BIS certified hardware, ISO 27001 information security — zero compliance gaps."}
+    ],
+    "benefits": ["Complete Smart City surveillance ecosystem — cameras + VMS + cloud AI", "ICCC integration ready with unified dashboard", "STQC certified for government procurement compliance", "Handles city-wide deployments with thousands of cameras", "AI analytics for crowd, traffic, and public safety", "Made in India — meets all domestic procurement preferences"],
+    "faq": [
+      {"q": "Can ArcisAI integrate with existing ICCC infrastructure?", "a": "Yes. ArcisAI VMS is designed for ICCC integration, providing video feeds, AI analytics, and alert management through standard protocols. The system can complement existing city infrastructure without requiring complete replacement."},
+      {"q": "How many cameras can ArcisAI VMS manage for a smart city?", "a": "ArcisAI VMS is architected for city-scale deployments and can manage thousands of cameras across distributed locations. The hierarchical architecture supports ward-level, zone-level, and city-level management views."},
+      {"q": "Is ArcisAI approved for Smart Cities Mission projects?", "a": "ArcisAI holds STQC certification for both VMS and camera products, meeting the mandatory compliance requirements for Smart Cities Mission procurement. Combined with BIS and ISO 27001 certifications, ArcisAI meets all government tender qualifications."},
       {"q": "Does ArcisAI support ANPR for traffic management?", "a": "Yes. ArcisAI's AI analytics include vehicle detection, counting, and recognition capabilities. The platform supports traffic monitoring, speed detection, and wrong-way alerts as part of its smart city traffic management features."}
     ],
     "cta": {"title": "Deploy Smart City Surveillance", "subtitle": "Contact us for a Smart City deployment assessment and ICCC integration demo."}
@@ -380,25 +401,3 @@ const seoPageDataExpansion5 = {
 };
 
 export default seoPageDataExpansion5;
- or middlemen"],
-    "faq": [
-      {"q": "Is ArcisAI truly Made in India?", "a": "Yes. ArcisAI products are designed and manufactured by Adiance Technologies in their own factory in India. The manufacturing includes PCB assembly on in-house SMT lines, camera assembly, integration, testing, and quality control â all under one roof. This is verifiable and distinct from brands that import Chinese products and relabel them."},
-      {"q": "What is the difference between 'Made in India' and 'Assembled in India'?", "a": "Many CCTV brands import Chinese components (or complete products) and perform final assembly in India. ArcisAI's manufacturing starts at the PCB level with SMT assembly using non-Chinese SoCs, followed by complete camera assembly, testing, and validation in-house. This is genuine manufacturing, not assembly."},
-      {"q": "Does Adiance offer OEM manufacturing?", "a": "Yes. Adiance Technologies offers OEM and ODM manufacturing services. System integrators and technology companies can partner with Adiance to produce white-label AI cameras and surveillance solutions under their own brand."},
-      {"q": "Where is the ArcisAI factory located?", "a": "Adiance Technologies operates its manufacturing facility in India with state-of-the-art SMT lines and a vertically integrated production system for CCTV cameras, NVRs, and bridge devices."}
-    ],
-    "cta": {"title": "Partner with India's AI CCTV Manufacturer", "subtitle": "Explore OEM/ODM partnerships or request a factory visit."}
-  },
-
-  "ai-cctv-smart-city-iccc-india": {
-    "slug": "ai-cctv-smart-city-iccc-india",
-    "title": "AI CCTV for Smart Cities & ICCC | ArcisAI Municipal Surveillance",
-    "metaDescription": "ArcisAI provides STQC certified AI cameras and VMS for Smart Cities Mission and ICCC command centers. Traffic management, public safety, crowd analytics â government-ready AI surveillance.",
-    "keywords": ["smart city CCTV India", "ICCC camera system", "smart city surveillance AI", "municipal CCTV India", "traffic AI camera", "public safety surveillance", "smart city command center", "government CCTV tender India"],
-    "heroTitle": "Powering India's Smart Cities with AI Surveillance",
-    "heroDescription": "India's Smart Cities Mission demands intelligent, connected, STQC-certified surveillance infrastructure. ArcisAI delivers a complete ecosystem for Integrated Command & Control Centers (ICCC) â from edge AI cameras monitoring traffic and public safety to cloud analytics processing city-wide data, all managed through a unified VMS dashboard.",
-    "features": [
-      {"title": "ICCC Integration Ready", "description": "ArcisAI VMS integrates seamlessly with Integrated Command & Control Centers, providing unified camera management, real-time alerts, and city-wide surveillance dashboards for municipal operators."},
-      {"title": "Traffic AI Analytics", "description": "Vehicle counting, speed detection, wrong-way alerts, traffic density mapping, and ANPR (Automatic Number Plate Recognition) â ArcisAI turns traffic cameras into intelligent traffic management tools."},
-      {"title": "Crowd Management", "description": "Cloud AI-powered crowd counting and density detection helps municipalities manage public gatherings, festivals, markets, and high-footfall areas with real-time alerts for overcrowding."},
-      {"title": "Public Safe
