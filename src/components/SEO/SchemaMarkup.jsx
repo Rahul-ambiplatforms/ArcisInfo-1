@@ -24,14 +24,14 @@ export const organizationSchema = {
   "contactPoint": [
     {
       "@type": "ContactPoint",
-      "telephone": "+91-79-4897-4897",
+      "telephone": "+91-968-777-9999",
       "contactType": "sales",
       "areaServed": ["IN", "US", "GB", "AE", "SG", "AU"],
       "availableLanguage": ["English", "Hindi"]
     },
     {
       "@type": "ContactPoint",
-      "telephone": "+91-79-4897-4897",
+      "telephone": "+91-968-777-9999",
       "contactType": "technical support",
       "areaServed": "Worldwide",
       "availableLanguage": ["English", "Hindi"]
@@ -88,7 +88,7 @@ export const localBusinessSchema = {
   "name": "ArcisAI",
   "image": "https://www.arcisai.io/assets/logo.png",
   "url": "https://www.arcisai.io",
-  "telephone": "+91-79-4897-4897",
+  "telephone": "+91-968-777-9999",
   "email": "info@arcisai.io",
   "priceRange": "$$$$",
   "address": {
