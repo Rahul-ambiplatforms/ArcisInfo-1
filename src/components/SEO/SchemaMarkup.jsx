@@ -7,19 +7,68 @@ export const organizationSchema = {
   "@type": "Organization",
   "name": "ArcisAI",
   "alternateName": "Arcis AI",
+  "legalName": "Adiance Technologies Private Limited",
+  "telephone": "+91-968-777-9999",
+  "founder": {
+    "@type": "Person",
+    "name": "Hardik Sanghvi",
+    "jobTitle": "Founder & CEO"
+  },
   "url": "https://www.arcisai.io",
   "logo": "https://www.arcisai.io/assets/logo.png",
   "description": "ArcisAI is India's first STQC-certified premium AI CCTV manufacturer providing enterprise AI-powered video surveillance cameras with edge computing, cloud VMS, and GenAI video analytics for smart city, industrial, and commercial deployments.",
-  "foundingDate": "2007",
+  "foundingDate": "2003",
   "numberOfEmployees": {
     "@type": "QuantitativeValue",
     "minValue": 200,
     "maxValue": 500
   },
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "VMukti Solutions",
+    "url": "https://www.vmukti.com"
+  },
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Government Certification",
+      "name": "STQC Certification",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Standardisation Testing and Quality Certification (STQC)",
+        "parentOrganization": { "@type": "Organization", "name": "Ministry of Electronics and Information Technology, Government of India" }
+      }
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "ISO Certification",
+      "name": "ISO 27001:2022 - Information Security Management"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "ISO Certification",
+      "name": "ISO 9001:2015 - Quality Management System"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Government Certification",
+      "name": "BIS (Bureau of Indian Standards) Certification"
+    }
+  ],
+  "award": ["STQC Certified AI CCTV Manufacturer", "BIS Certified"],
+  "memberOf": {
+    "@type": "Organization",
+    "name": "GESIA IT Association",
+    "description": "Gujarat Electronics & Software Industries Association"
+  },
   "sameAs": [
     "https://www.linkedin.com/company/arcisai",
     "https://twitter.com/ArcisAI",
     "https://www.youtube.com/@arcisai"
+  ,
+    "https://www.facebook.com/ArcisAI",
+    "https://twitter.com/ArcisAI",
+    "https://www.crunchbase.com/organization/adiance-technologies"
   ],
   "contactPoint": [
     {
