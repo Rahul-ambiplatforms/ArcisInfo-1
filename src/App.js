@@ -1,6 +1,6 @@
 // App.js
 import React, { Suspense, lazy } from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { Box } from "@chakra-ui/react";
 import "./App.css";
 import Header from "./Components/Header/Header";
@@ -250,6 +250,16 @@ function InnerApp() {
             <Route path="/industry/:pageSlug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
             <Route path="/state/:pageSlug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
             <Route path="/:category/:pageSlug" element={<Suspense fallback={<div>Loading...</div>}><SEOLandingPage /></Suspense>} />
+
+            {/* Redirect legacy/mistyped URLs */}
+            <Route path="/solutions" element={<Navigate to="/solution/edge-ai" replace />} />
+            <Route path="/about" element={<Navigate to="/about-us" replace />} />
+            <Route path="/contact" element={<Navigate to="/contact-us" replace />} />
+            <Route path="/products" element={<Navigate to="/s-series" replace />} />
+            <Route path="/products/s-series" element={<Navigate to="/s-series" replace />} />
+            <Route path="/products/eco-series" element={<Navigate to="/eco-series" replace />} />
+            <Route path="/products/bridge-device" element={<Navigate to="/arcis-bridge-device" replace />} />
+            <Route path="/products/vms" element={<Navigate to="/cloud-vms" replace />} />
 
             <Route
               path="*"
