@@ -86,7 +86,11 @@ export default function BlogsContent() {
         const publishedOnly = Array.isArray(response.data)
           ? response.data.filter((b) => b.status === "published")
           : [];
-        setBlogs(publishedOnly);
+        // Filter out VMukti-specific blogs from ArcisAI site
+        const siteFiltered = publishedOnly.filter(
+          (b) => !b.content?.title?.toLowerCase().includes("vmukti")
+        );
+        setBlogs(siteFiltered);
         // console.log("All the blogs",blogs)
         setTotalPages(response.pagination.total);
       }
