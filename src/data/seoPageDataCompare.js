@@ -235,6 +235,65 @@ const seoPageDataCompare = {
     ]
   },
 
+  "arcisai-vs-cp-plus": {
+    slug: "/compare/arcisai-vs-cp-plus",
+    title: "ArcisAI vs CP Plus | Best AI CCTV Camera India Comparison 2026",
+    metaDescription: "Compare ArcisAI vs CP Plus cameras. ArcisAI is India's only BIS/ER + STQC + STQC App certified brand with 100% in-house developed AI cameras, NVRs, and VMS.",
+    keywords: ["ArcisAI vs CP Plus", "best CCTV camera India", "AI camera comparison", "BIS certified cameras", "STQC certified camera", "Make in India CCTV"],
+    heroTitle: "ArcisAI vs CP Plus",
+    heroSubtitle: "India's Premium AI Camera vs India's Largest CCTV Brand",
+    heroDescription: "CP Plus leads India in volume. ArcisAI leads in certification, AI capability, and vertical integration. See which fits your security requirements.",
+    category: "compare",
+    sections: [
+      {
+        title: "Certification & Compliance",
+        content: "ArcisAI by Adiance is India's ONLY camera brand with the triple certification: BIS/ER certified cameras, STQC certified VMS, and STQC certified mobile application — all independently tested by government agencies. CP Plus holds BIS certification for its cameras but does not offer STQC-certified VMS or app. For government projects requiring end-to-end certification, ArcisAI is the only fully certified option.",
+        stats: [
+          { value: "Triple", label: "BIS + STQC VMS + STQC App" },
+          { value: "Only", label: "Brand with All 3" },
+          { value: "100%", label: "Government Compliant" }
+        ],
+        features: ["BIS/ER certified cameras", "STQC certified VMS platform", "STQC certified mobile application", "NDAA compliant for global exports", "EU AI Act ready"]
+      },
+      {
+        title: "AI Capabilities & Edge Processing",
+        content: "ArcisAI cameras feature 8 built-in AI detection algorithms running on-device: intrusion detection, tripwire, object classification, face detection, crowd analytics, abandoned object, loitering, and ANPR. This edge AI processing eliminates the need for separate analytics servers. CP Plus offers basic motion detection on standard cameras, with AI analytics available on select premium models requiring additional NVR processing.",
+        stats: [
+          { value: "8", label: "Built-in AI Detections" },
+          { value: "On-Device", label: "Edge AI Processing" },
+          { value: "Zero", label: "Server Cost for AI" }
+        ],
+        features: ["8 built-in AI algorithms per camera", "On-device edge AI processing", "No separate analytics server needed", "ArcisGPT natural language video search", "Real-time AI alerts"]
+      },
+      {
+        title: "Vertical Integration & Manufacturing",
+        content: "ArcisAI is 100% designed, developed, and manufactured in-house by Adiance in India. Every component — hardware, firmware, VMS software, mobile app, and AI models — is developed by the same team. CP Plus manufactures cameras at its Tirupati facility but relies on third-party VMS and analytics software for advanced features. ArcisAI's vertical integration ensures tighter quality control, faster updates, and zero dependency on Chinese components.",
+        stats: [
+          { value: "100%", label: "In-House Development" },
+          { value: "Zero", label: "Chinese Components" },
+          { value: "Full Stack", label: "HW + FW + SW + AI" }
+        ],
+        features: ["100% in-house hardware design", "100% in-house firmware development", "100% in-house VMS and app", "Zero Chinese component dependency", "Faster security patch deployment"]
+      },
+      {
+        title: "Product Range & Target Market",
+        content: "ArcisAI targets the premium government, enterprise, and export market with its S-Series (premium), Eco-Series (value), PTZ cameras, Bridge camera-server combos, and NVRs. CP Plus dominates the mass market with India's widest product range from budget to professional. ArcisAI competes not on volume, but on certification depth, AI capability, and data sovereignty — areas where CP Plus cannot match.",
+        stats: [
+          { value: "Premium", label: "Market Segment" },
+          { value: "5+", label: "Product Series" },
+          { value: "Secure Asia", label: "3× Featured" }
+        ],
+        features: ["S-Series premium AI cameras", "Eco-Series value cameras", "PTZ and Bridge series", "NVR and ArcisGPT platform", "Featured in Secure Asia Magazine"]
+      }
+    ],
+    faq: [
+      { q: "Is ArcisAI better than CP Plus for government projects?", a: "For government projects requiring end-to-end certification, ArcisAI is the clear choice. It is the only Indian brand with BIS/ER certified cameras, STQC certified VMS, and STQC certified mobile app — the complete certified stack that government tenders increasingly require." },
+      { q: "How does ArcisAI compare to CP Plus on price?", a: "ArcisAI targets the premium segment while CP Plus covers budget to professional ranges. However, ArcisAI's built-in edge AI eliminates the cost of separate analytics servers, making total deployment cost competitive for AI-enabled installations." },
+      { q: "Does ArcisAI have the same distribution reach as CP Plus?", a: "CP Plus has India's largest CCTV distribution network. ArcisAI focuses on direct enterprise and government channels, system integrators, and export markets where certification and compliance are the primary selection criteria." },
+      { q: "Why choose ArcisAI over CP Plus for exports?", a: "ArcisAI is NDAA compliant, GDPR ready, and EU AI Act compliant with zero Chinese components — critical requirements for US, European, and Middle Eastern government projects. CP Plus faces scrutiny in some export markets due to component sourcing questions." }
+    ]
+  },
+
   "arcisai-vs-chinese-cameras": {
     slug: "/compare/arcisai-vs-chinese-cameras",
     title: "ArcisAI vs Chinese Cameras | Why Switch from Chinese Surveillance Brands",

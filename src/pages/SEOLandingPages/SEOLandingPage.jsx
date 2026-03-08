@@ -119,12 +119,13 @@ const SEOLandingPage = () => {
     }
   } : null;
 
-  const faqJsonLd = pageData.faqs?.length ? {
+  const faqItems = pageData.faqs || pageData.faq || [];
+  const faqJsonLd = faqItems.length ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: pageData.faqs.map(faq => ({
-      "@type": "Question", name: faq.q,
-      acceptedAnswer: { "@type": "Answer", text: faq.a }
+    mainEntity: faqItems.map(faq => ({
+      "@type": "Question", name: faq.q || faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.a || faq.answer }
     }))
   } : null;
 
@@ -204,21 +205,21 @@ const SEOLandingPage = () => {
         </Box>
       ))}
 
-      {/* FAQ Section */}
-      {pageData.faqs?.length > 0 && (
+      {/* FAQ Section — supports both 'faqs' and 'faq' keys, both {q,a} and {question,answer} formats */}
+      {faqItems.length > 0 && (
         <Box py={{base: 12, md: 16}} bg="#f8f9fa">
           <Container maxW="800px">
             <Heading as="h2" size={{base: "lg", md: "xl"}} mb={8} textAlign="center" color="#0a0a0a">
               Frequently Asked Questions
             </Heading>
             <Accordion allowMultiple>
-              {pageData.faqs.map((faq, i) => (
+              {faqItems.map((faq, i) => (
                 <AccordionItem key={i} border="1px solid" borderColor="gray.200" borderRadius="lg" mb={3} overflow="hidden">
                   <AccordionButton py={4} px={6} _hover={{bg: "gray.50"}}>
-                    <Box flex="1" textAlign="left" fontWeight="600" color="#0a0a0a">{faq.q}</Box>
+                    <Box flex="1" textAlign="left" fontWeight="600" color="#0a0a0a">{faq.q || faq.question}</Box>
                     <AccordionIcon />
                   </AccordionButton>
-                  <AccordionPanel py={4} px={6} color="gray.600">{faq.a}</AccordionPanel>
+                  <AccordionPanel py={4} px={6} color="gray.600">{faq.a || faq.answer}</AccordionPanel>
                 </AccordionItem>
               ))}
             </Accordion>
