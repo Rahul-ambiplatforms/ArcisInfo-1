@@ -79,7 +79,7 @@ const SEOLandingPage = () => {
     name: "ArcisAI Smart CCTV Camera",
     description: pageData.metaDescription,
     brand: { "@type": "Brand", name: "ArcisAI" },
-    manufacturer: { "@type": "Organization", name: "VMukti Solutions" },
+    manufacturer: { "@type": "Organization", name: "ArcisAI", url: "https://www.arcisai.io" },
     category: "AI CCTV Cameras",
     url: pageUrl,
     aggregateRating: {

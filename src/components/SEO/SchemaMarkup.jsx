@@ -23,11 +23,6 @@ export const organizationSchema = {
     "minValue": 200,
     "maxValue": 500
   },
-  "parentOrganization": {
-    "@type": "Organization",
-    "name": "VMukti Solutions",
-    "url": "https://www.vmukti.com"
-  },
   "hasCredential": [
     {
       "@type": "EducationalOccupationalCredential",

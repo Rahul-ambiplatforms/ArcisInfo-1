@@ -71,7 +71,7 @@ export const homeSEO = {
         postalCode: "380054",
         addressCountry: "IN",
       },
-      foundingDate: "2024",
+      foundingDate: "2003",
       description:
         "Discover ArcisAI – India’s first AI CCTV camera brand with 8 inbuilt EdgeAI detections, delivering smarter & faster surveillance via cloud VMS & Free mobile app.",
     },

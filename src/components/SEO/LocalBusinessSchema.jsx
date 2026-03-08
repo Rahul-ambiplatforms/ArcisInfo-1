@@ -18,12 +18,7 @@ const ORGANIZATION_SCHEMA = {
   logo: 'https://www.arcisai.io/logo.png',
   description:
     "ArcisAI is India's first premium AI CCTV camera brand with STQC certification. Offering intelligent surveillance cameras with built-in AI analytics for face recognition, intrusion detection, and smart monitoring.",
-  foundingDate: '2024',
-  parentOrganization: {
-    '@type': 'Organization',
-    name: 'VMukti Solutions',
-    url: 'https://www.vmukti.com',
-  },
+  foundingDate: '2003',
   sameAs: [
     'https://www.linkedin.com/company/arcisai',
     'https://www.instagram.com/arcisai',

@@ -16,11 +16,11 @@ export const getOrganizationSchema = () => ({
   "url": "https://arcisai.io",
   "logo": "https://arcisai.io/logo.png",
   "description": "ArcisAI by Adiance manufactures and distributes advanced AI CCTV cameras with built-in intelligence for smart surveillance. Offering indoor, outdoor, PTZ, bullet, and dome cameras with BIS certification for the Indian market and global deployment.",
-  "founded": "2018",
-  "foundingDate": "2018",
+  "founded": "2003",
+  "foundingDate": "2003",
   "foundingLocation": {
     "@type": "Place",
-    "name": "Bangalore, Karnataka, India"
+    "name": "Ahmedabad, Gujarat, India"
   },
   "address": {
     "@type": "PostalAddress",

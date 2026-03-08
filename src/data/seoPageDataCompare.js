@@ -32,7 +32,7 @@ const seoPageDataCompare = {
     ],
     faq: [
       { q: "Is Hikvision really banned?", a: "Yes, Hikvision is banned under NDAA Section 889 for US federal agencies, contractors, and subcontractors. Many private organizations and allied nations are also restricting Hikvision due to cybersecurity concerns." },
-      { q: "Can ArcisAI cameras replace Hikvision without changing my VMS?", a: "Yes, ArcisAI cameras support ONVIF and RTSP standards, making them compatible with most existing VMS platforms including Milestone, Genetec, and VMukti." },
+      { q: "Can ArcisAI cameras replace Hikvision without changing my VMS?", a: "Yes, ArcisAI cameras support ONVIF and RTSP standards, making them compatible with most existing VMS platforms including Milestone, Genetec, and ArcisAI Cloud VMS." },
       { q: "Are ArcisAI cameras more expensive than Hikvision?", a: "ArcisAI cameras are competitively priced when you factor in total cost of ownership. Built-in edge AI eliminates the need for separate analytics servers, reducing infrastructure costs by up to 40%." }
     ]
   },
@@ -123,8 +123,8 @@ const seoPageDataCompare = {
       },
       {
         title: "Cloud Integration & Platform Ecosystem",
-        content: "ArcisAI integrates natively with VMukti's cloud VMS and GenAI platform, creating a seamless edge-to-cloud intelligence pipeline. Hanwha's cloud ecosystem (Wave VMS) is more limited in GenAI capabilities. ArcisAI cameras can also integrate with third-party platforms through ONVIF, providing deployment flexibility that Hanwha's more proprietary approach doesn't match.",
-        features: ["Native VMukti cloud VMS integration", "Edge-to-cloud GenAI pipeline", "ONVIF multi-platform compatibility", "Open API for custom integrations", "Hybrid cloud/on-premise deployment"]
+        content: "ArcisAI integrates natively with ArcisAI's cloud VMS and GenAI platform, creating a seamless edge-to-cloud intelligence pipeline. Hanwha's cloud ecosystem (Wave VMS) is more limited in GenAI capabilities. ArcisAI cameras can also integrate with third-party platforms through ONVIF, providing deployment flexibility that Hanwha's more proprietary approach doesn't match.",
+        features: ["Native ArcisAI Cloud VMS integration", "Edge-to-cloud GenAI pipeline", "ONVIF multi-platform compatibility", "Open API for custom integrations", "Hybrid cloud/on-premise deployment"]
       }
     ],
     faq: [
@@ -155,12 +155,12 @@ const seoPageDataCompare = {
       },
       {
         title: "Total Cost of Ownership Comparison",
-        content: "Bosch cameras command premium pricing with additional costs for analytics licenses, Bosch Video Management System, and specialized installation requirements. ArcisAI offers all-inclusive pricing with built-in analytics, free cloud VMS integration through VMukti, and standard installation requirements. For comparable 50-camera deployments, ArcisAI typically delivers 35-50% cost savings.",
-        features: ["All-inclusive analytics — no extra licenses", "Free VMukti cloud VMS integration", "Standard installation — no proprietary requirements", "35-50% lower TCO for mid-size deployments", "Scalable pricing model"]
+        content: "Bosch cameras command premium pricing with additional costs for analytics licenses, Bosch Video Management System, and specialized installation requirements. ArcisAI offers all-inclusive pricing with built-in analytics, free ArcisAI Cloud VMS integration, and standard installation requirements. For comparable 50-camera deployments, ArcisAI typically delivers 35-50% cost savings.",
+        features: ["All-inclusive analytics — no extra licenses", "Free ArcisAI Cloud VMS integration", "Standard installation — no proprietary requirements", "35-50% lower TCO for mid-size deployments", "Scalable pricing model"]
       }
     ],
     faq: [
-      { q: "Is Bosch better for critical infrastructure?", a: "Bosch has strong critical infrastructure credentials. ArcisAI is rapidly gaining adoption in smart cities, government projects, and critical infrastructure with 700+ districts served through the VMukti platform." },
+      { q: "Is Bosch better for critical infrastructure?", a: "Bosch has strong critical infrastructure credentials. ArcisAI is rapidly gaining adoption in smart cities, government projects, and critical infrastructure with 700+ districts served through the ArcisAI platform." },
       { q: "Does ArcisAI match Bosch image quality?", a: "ArcisAI cameras deliver excellent image quality suitable for all surveillance applications. While Bosch's top-tier models may have marginal quality advantages in extreme conditions, ArcisAI's AI processing compensates through computational image enhancement." }
     ]
   },
@@ -187,8 +187,8 @@ const seoPageDataCompare = {
       },
       {
         title: "Ecosystem & Cloud Integration",
-        content: "ArcisAI's integration with VMukti's cloud platform provides a complete surveillance ecosystem — from camera to cloud to command center. VIVOTEK's ecosystem relies on third-party VMS partnerships and lacks a native cloud AI platform. This integrated approach means ArcisAI customers get a single-vendor solution for cameras, VMS, AI analytics, and GenAI capabilities.",
-        features: ["Single-vendor camera-to-cloud solution", "Native VMukti cloud VMS integration", "GenAI platform access included", "Unified support and management", "Seamless edge-to-cloud analytics"]
+        content: "ArcisAI's integration with ArcisAI's cloud platform provides a complete surveillance ecosystem — from camera to cloud to command center. VIVOTEK's ecosystem relies on third-party VMS partnerships and lacks a native cloud AI platform. This integrated approach means ArcisAI customers get a single-vendor solution for cameras, VMS, AI analytics, and GenAI capabilities.",
+        features: ["Single-vendor camera-to-cloud solution", "Native ArcisAI Cloud VMS integration", "GenAI platform access included", "Unified support and management", "Seamless edge-to-cloud analytics"]
       }
     ],
     faq: [
