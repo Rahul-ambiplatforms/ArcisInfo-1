@@ -50,7 +50,7 @@ export const organizationSchema = {
       "name": "BIS (Bureau of Indian Standards) Certification"
     }
   ],
-  "award": ["STQC Certified AI CCTV Manufacturer", "BIS Certified"],
+  "award": ["STQC Certified AI CCTV Manufacturer", "BIS/ER Certified", "Make in India Certified", "Featured in Secure Asia Magazine (Dec 2025, Jan 2026, Feb 2026)"],
   "memberOf": {
     "@type": "Organization",
     "name": "GESIA IT Association",
@@ -59,11 +59,32 @@ export const organizationSchema = {
   "sameAs": [
     "https://www.linkedin.com/company/arcisai",
     "https://twitter.com/ArcisAI",
-    "https://www.youtube.com/@arcisai"
-  ,
+    "https://www.youtube.com/@arcisai",
     "https://www.facebook.com/ArcisAI",
-    "https://twitter.com/ArcisAI",
     "https://www.crunchbase.com/organization/adiance-technologies"
+  ],
+  "subjectOf": [
+    {
+      "@type": "Article",
+      "name": "ArcisAI Featured in Secure Asia Magazine - December 2025",
+      "url": "https://online.fliphtml5.com/euczi/Secure-Asia-December-2025/#p=16",
+      "publisher": { "@type": "Organization", "name": "Secure Asia Magazine" },
+      "datePublished": "2025-12-01"
+    },
+    {
+      "@type": "Article",
+      "name": "ArcisAI Featured in Secure Asia Magazine - January 2026",
+      "url": "https://online.fliphtml5.com/euczi/Secure-Asia-January-2026/#p=12",
+      "publisher": { "@type": "Organization", "name": "Secure Asia Magazine" },
+      "datePublished": "2026-01-01"
+    },
+    {
+      "@type": "Article",
+      "name": "ArcisAI Featured in Secure Asia Magazine - February 2026",
+      "url": "https://online.fliphtml5.com/euczi/Secure-Asia-February-2026/#p=21",
+      "publisher": { "@type": "Organization", "name": "Secure Asia Magazine" },
+      "datePublished": "2026-02-01"
+    }
   ],
   "contactPoint": [
     {
@@ -89,7 +110,6 @@ export const organizationSchema = {
     "postalCode": "380054",
     "addressCountry": "IN"
   },
-  "award": ["STQC Certified AI CCTV Manufacturer", "Make in India Certified"],
   "knowsAbout": ["AI Video Surveillance", "Edge Computing", "Computer Vision", "Smart City Solutions", "GenAI Video Analytics", "Cloud VMS", "ANPR", "Face Recognition"],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
