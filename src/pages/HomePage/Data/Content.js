@@ -7,7 +7,7 @@ export const homeContent = {
         "8 AI detections on camera. Smarter insights on cloud. Instant answers from GPT.",
       d_image: "/images/home_hero_1.png",
       m_image: "/images/mobile_home_hero_1.png",
-      buttonText: "Let's Talk",
+      buttonText: "Get Custom Quote",
       buttonLink: "/contact-us",
       sectionProps: {
         desktop: {
