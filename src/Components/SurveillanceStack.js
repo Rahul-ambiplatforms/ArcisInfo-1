@@ -33,7 +33,7 @@ const SurveillanceStack = ({ data }) => {
     >
       {/* Background GIF */}
       <Image loading="lazy"
-        alt=""
+        alt="ArcisAI surveillance technology wave animation background"
         src="/images/home_wave_gif_1.gif"
         position="absolute"
         top={{ base: "0", md: "5%" }}

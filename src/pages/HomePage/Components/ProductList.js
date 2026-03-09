@@ -295,7 +295,7 @@ const ProductList = ({ data }) => {
                           require("../../../Components/Icons/RightButton.svg")
                             .default
                         }
-                        alt=""
+                        alt="Next product"
                         w="15px"
                       />
                     </CustomButton>
