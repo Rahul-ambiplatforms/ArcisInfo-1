@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NDAA-Compliant AI Cameras | Replace Hikvision & Dahua | ArcisAI</title>
+    <meta name="description" content="NDAA-compliant AI CCTV cameras and NVRs. Non-Chinese alternative to Hikvision & Dahua. Edge AI built-in, enterprise warranty, global deployment support.">
+
+    <meta property="og:title" content="NDAA-Compliant AI Cameras — The Trusted Alternative to Chinese Surveillance">
+    <meta property="og:description" content="US government agencies and Fortune 500 companies are replacing Hikvision/Dahua with ArcisAI. See why.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Ads Conversion Tag — ArcisAI account to be created -->
+    <!-- TODO: Replace AW-XXXXXXXXXX with ArcisAI Google Ads conversion ID once account is created -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGKLN98WFR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GGKLN98WFR');
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --dark: #0C1117;
+            --dark-2: #161D27;
+            --dark-3: #1E2733;
+            --accent: #00D4AA;
+            --accent-dark: #00B894;
+            --blue: #3B82F6;
+            --blue-dark: #2563EB;
+            --orange: #F59E0B;
+            --red: #EF4444;
+            --red-bg: #FEF2F2;
+            --red-border: #FECACA;
+            --white: #FFFFFF;
+            --gray-50: #F8FAFC;
+            --gray-100: #F1F5F9;
+            --gray-200: #E2E8F0;
+            --gray-300: #CBD5E1;
+            --gray-500: #64748B;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-800: #1E293B;
+            --gray-900: #0F172A;
+            --green: #10B981;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--gray-800);
+            line-height: 1.6;
+            background: var(--white);
+        }
+
+        /* ===== ALERT BAR ===== */
+        .alert-bar {
+            background: linear-gradient(90deg, #7C3AED, #3B82F6);
+            color: var(--white);
+            padding: 10px 0;
+            font-size: 14px;
+            text-align: center;
+            font-weight: 500;
+        }
+        .alert-bar strong { color: #FDE68A; }
+
+        /* ===== HEADER ===== */
+        .header {
+            background: var(--white);
+            border-bottom: 1px solid var(--gray-200);
+            padding: 14px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--dark);
+            text-decoration: none;
+        }
+        .logo span { color: var(--accent); }
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .header-email {
+            color: var(--gray-600);
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .btn-header {
+            background: var(--accent);
+            color: var(--dark);
+            padding: 10px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+        .btn-header:hover { background: var(--accent-dark); }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-2) 60%, var(--dark-3) 100%);
+            color: var(--white);
+            padding: 80px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0,212,170,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        .ndaa-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0,212,170,0.15);
+            border: 1px solid rgba(0,212,170,0.3);
+            color: var(--accent);
+            padding: 8px 18px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+        .hero h1 .highlight {
+            color: var(--accent);
+        }
+        .hero h1 .strike {
+            text-decoration: line-through;
+            color: rgba(255,255,255,0.4);
+            font-weight: 400;
+        }
+        .hero-subtitle {
+            font-size: 18px;
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+        .hero-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 32px;
+        }
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.85);
+        }
+        .hero-feature-icon {
+            width: 28px;
+            height: 28px;
+            background: rgba(0,212,170,0.15);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        /* ===== HERO FORM ===== */
+        .hero-form-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 36px 32px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+        }
+        .form-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 4px;
+        }
+        .form-subtitle {
+            font-size: 14px;
+            color: var(--gray-500);
+            margin-bottom: 24px;
+        }
+        .form-group { margin-bottom: 14px; }
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gray-700);
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid var(--gray-300);
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: inherit;
+            color: var(--gray-800);
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(0,212,170,0.1);
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .btn-submit {
+            width: 100%;
+            background: var(--accent);
+            color: var(--dark);
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 6px;
+        }
+        .btn-submit:hover { background: var(--accent-dark); }
+        .form-trust {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 12px;
+            font-size: 12px;
+            color: var(--gray-500);
+        }
+
+        /* ===== SHARED SECTION STYLES ===== */
+        .section { padding: 80px 0; }
+        .section-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+        .section-label {
+            font-size: 13px;
+            color: var(--accent-dark);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .section-title {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        .section-desc {
+            font-size: 17px;
+            color: var(--gray-600);
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        /* ===== NDAA COMPLIANCE SECTION ===== */
+        .ndaa-section {
+            background: var(--dark);
+            color: var(--white);
+        }
+        .ndaa-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .ndaa-content h2 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .ndaa-content h2 .highlight { color: var(--accent); }
+        .ndaa-content p {
+            font-size: 16px;
+            color: rgba(255,255,255,0.75);
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+        .banned-list {
+            list-style: none;
+        }
+        .banned-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-size: 15px;
+        }
+        .banned-icon {
+            width: 32px;
+            height: 32px;
+            background: rgba(239,68,68,0.15);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--red);
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+        .ndaa-right {
+            background: var(--dark-2);
+            border-radius: 16px;
+            padding: 40px;
+            border: 1px solid rgba(0,212,170,0.2);
+        }
+        .ndaa-right h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--accent);
+        }
+        .compliance-list {
+            list-style: none;
+        }
+        .compliance-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            font-size: 15px;
+            color: rgba(255,255,255,0.85);
+        }
+        .compliance-check {
+            color: var(--accent);
+            font-size: 18px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* ===== PRODUCT GRID ===== */
+        .products-section { background: var(--gray-50); }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .product-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 32px;
+            border: 1px solid var(--gray-200);
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+        .product-card:hover {
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+        .product-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--dark), var(--dark-2));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 26px;
+        }
+        .product-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 10px;
+        }
+        .product-card p {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .product-specs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .spec-tag {
+            background: var(--gray-100);
+            color: var(--gray-700);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* ===== COMPARISON ===== */
+        .compare-section { background: var(--white); }
+        .compare-table-wrap {
+            overflow-x: auto;
+            border-radius: 12px;
+            border: 1px solid var(--gray-200);
+        }
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 700px;
+        }
+        .compare-table thead th {
+            background: var(--dark);
+            color: var(--white);
+            padding: 16px 20px;
+            text-align: left;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .compare-table thead th:first-child { border-radius: 11px 0 0 0; }
+        .compare-table thead th:last-child { border-radius: 0 11px 0 0; }
+        .compare-table thead th.highlight-col { background: #059669; }
+        .compare-table tbody td {
+            padding: 14px 20px;
+            border-bottom: 1px solid var(--gray-100);
+            font-size: 14px;
+            color: var(--gray-700);
+        }
+        .compare-table tbody td.highlight-col {
+            background: #ECFDF5;
+            font-weight: 600;
+            color: #065F46;
+        }
+        .check { color: var(--green); font-weight: 700; }
+        .cross { color: var(--red); font-weight: 700; }
+        .warn { color: var(--orange); font-weight: 700; }
+
+        /* ===== USE CASES ===== */
+        .usecase-section { background: var(--gray-50); }
+        .usecase-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .usecase-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 28px 24px;
+            text-align: center;
+            border: 1px solid var(--gray-200);
+        }
+        .usecase-icon { font-size: 36px; margin-bottom: 14px; }
+        .usecase-card h3 {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 8px;
+        }
+        .usecase-card p {
+            font-size: 13px;
+            color: var(--gray-500);
+            line-height: 1.6;
+        }
+
+        /* ===== MIGRATION CTA ===== */
+        .migration-section {
+            background: linear-gradient(135deg, #7C3AED, #3B82F6);
+            color: var(--white);
+            padding: 80px 0;
+        }
+        .migration-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .migration-inner h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .migration-inner p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+        .migration-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        .migration-step {
+            background: rgba(255,255,255,0.12);
+            border-radius: 12px;
+            padding: 24px 16px;
+            text-align: center;
+        }
+        .migration-step-num {
+            width: 40px;
+            height: 40px;
+            background: var(--white);
+            color: #7C3AED;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 18px;
+            margin: 0 auto 12px;
+        }
+        .migration-step h4 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .migration-step p {
+            font-size: 13px;
+            opacity: 0.85;
+            margin-bottom: 0;
+        }
+        .btn-migration {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--white);
+            color: #7C3AED;
+            padding: 16px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: transform 0.2s;
+        }
+        .btn-migration:hover { transform: translateY(-2px); }
+
+        /* ===== FAQ ===== */
+        .faq-section { background: var(--gray-50); }
+        .faq-list { max-width: 800px; margin: 0 auto; }
+        .faq-item {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 10px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 20px 24px;
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--gray-900);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-answer {
+            padding: 0 24px 20px;
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.7;
+            display: none;
+        }
+        .faq-item.open .faq-answer { display: block; }
+        .faq-toggle { font-size: 24px; color: var(--gray-400); transition: transform 0.2s; flex-shrink: 0; }
+        .faq-item.open .faq-toggle { transform: rotate(45deg); }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            background: var(--dark);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+        .cta-section h2 { font-size: 36px; font-weight: 800; margin-bottom: 16px; }
+        .cta-section p { font-size: 18px; color: rgba(255,255,255,0.8); margin-bottom: 36px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+        .btn-cta-primary {
+            background: var(--accent);
+            color: var(--dark);
+            padding: 16px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        .btn-cta-secondary {
+            background: transparent;
+            color: var(--white);
+            padding: 16px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--dark);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+            padding: 32px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+        .footer a { color: var(--accent); text-decoration: none; }
+        .footer-links { margin-top: 12px; display: flex; justify-content: center; gap: 24px; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero-inner, .ndaa-content { grid-template-columns: 1fr; gap: 40px; }
+            .hero h1 { font-size: 34px; }
+            .product-grid { grid-template-columns: repeat(2, 1fr); }
+            .usecase-grid { grid-template-columns: repeat(2, 1fr); }
+            .migration-steps { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 28px; }
+            .hero-features { grid-template-columns: 1fr; }
+            .product-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .section { padding: 56px 0; }
+            .section-title { font-size: 28px; }
+            .header-email { display: none; }
+        }
+        @media (max-width: 480px) {
+            .usecase-grid { grid-template-columns: 1fr; }
+            .migration-steps { grid-template-columns: 1fr; }
+        }
+
+        .floating-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            padding: 12px 16px;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+            z-index: 200;
+        }
+        .floating-cta a {
+            display: block;
+            background: var(--accent);
+            color: var(--dark);
+            text-align: center;
+            padding: 14px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .floating-cta { display: block; }
+            body { padding-bottom: 70px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== ALERT BAR ===== -->
+<div class="alert-bar">
+    <strong>&#x26A0; NDAA Section 889:</strong> &nbsp;US federal agencies must remove Hikvision &amp; Dahua by law. ArcisAI is the <strong>NDAA-compliant alternative</strong>.
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+    <div class="header-inner">
+        <a href="https://arcisai.io" class="logo">Arcis<span>AI</span></a>
+        <div class="header-right">
+            <a href="mailto:sales@arcisai.io" class="header-email">sales@arcisai.io</a>
+            <a href="#inquiry-form" class="btn-header">Request Quote &rarr;</a>
+        </div>
+    </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+    <div class="hero-inner">
+        <div>
+            <div class="ndaa-badge">&#x1F6E1; NDAA Compliant &bull; Non-Chinese Origin</div>
+            <h1>Replace <span class="strike">Hikvision</span> <span class="strike">Dahua</span> with <span class="highlight">NDAA-Compliant</span> AI Cameras</h1>
+            <p class="hero-subtitle">
+                Enterprise-grade AI CCTV cameras and NVRs with edge AI processing built in.
+                Designed for US federal agencies, banking, and global enterprise security.
+                No Chinese components. No compliance risk.
+            </p>
+            <div class="hero-features">
+                <div class="hero-feature">
+                    <div class="hero-feature-icon">&#x2713;</div>
+                    <span>Edge AI — No Server Required</span>
+                </div>
+                <div class="hero-feature">
+                    <div class="hero-feature-icon">&#x2713;</div>
+                    <span>NDAA Section 889 Compliant</span>
+                </div>
+                <div class="hero-feature">
+                    <div class="hero-feature-icon">&#x2713;</div>
+                    <span>ONVIF Profile S/T/G</span>
+                </div>
+                <div class="hero-feature">
+                    <div class="hero-feature-icon">&#x2713;</div>
+                    <span>3-Year Enterprise Warranty</span>
+                </div>
+                <div class="hero-feature">
+                    <div class="hero-feature-icon">&#x2713;</div>
+                    <span>OEM/ODM White-Label</span>
+                </div>
+                <div class="hero-feature">
+                    <div class="hero-feature-icon">&#x2713;</div>
+                    <span>Global Distribution Network</span>
+                </div>
+            </div>
+        </div>
+        <div id="inquiry-form">
+            <div class="hero-form-card">
+                <div class="form-title">Request Enterprise Quote</div>
+                <div class="form-subtitle">Custom pricing for 50+ camera deployments</div>
+                <form id="leadForm" action="/thank-you" method="GET">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Full Name *</label>
+                            <input type="text" name="fullName" placeholder="John Smith" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Job Title</label>
+                            <input type="text" name="title" placeholder="Security Director">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Work Email *</label>
+                        <input type="email" name="email" placeholder="john@company.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Company Name *</label>
+                        <input type="text" name="company" placeholder="Acme Corp" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Country *</label>
+                            <select name="country" required>
+                                <option value="">Select Country</option>
+                                <option value="US">United States</option>
+                                <option value="UK">United Kingdom</option>
+                                <option value="AE">United Arab Emirates</option>
+                                <option value="SA">Saudi Arabia</option>
+                                <option value="DE">Germany</option>
+                                <option value="AU">Australia</option>
+                                <option value="SG">Singapore</option>
+                                <option value="CA">Canada</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Quantity Needed</label>
+                            <select name="quantity">
+                                <option value="">Select Range</option>
+                                <option value="50-200">50 - 200 units</option>
+                                <option value="200-500">200 - 500 units</option>
+                                <option value="500-2000">500 - 2,000 units</option>
+                                <option value="2000-10000">2,000 - 10,000 units</option>
+                                <option value="10000+">10,000+ units</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>What are you replacing?</label>
+                        <select name="replacing">
+                            <option value="">Select Current Brand</option>
+                            <option value="hikvision">Hikvision</option>
+                            <option value="dahua">Dahua / Lorex</option>
+                            <option value="cp-plus">CP Plus</option>
+                            <option value="axis">Axis Communications</option>
+                            <option value="hanwha">Hanwha Vision</option>
+                            <option value="bosch">Bosch Security</option>
+                            <option value="other">Other</option>
+                            <option value="new">New Installation (no replacement)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-submit">Get Custom Enterprise Quote &rarr;</button>
+                    <div class="form-trust">
+                        <svg width="14" height="14" fill="var(--green)" viewBox="0 0 20 20"><path d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zm-2 14.5l-3.5-3.5 1.41-1.41L8 11.67l6.09-6.09L15.5 7l-7.5 7.5z"/></svg>
+                        <span>No obligation &nbsp;|&nbsp; Response within 1 business day &nbsp;|&nbsp; NDA available</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== NDAA COMPLIANCE SECTION ===== -->
+<section class="section ndaa-section">
+    <div class="section-inner">
+        <div class="ndaa-content">
+            <div>
+                <h2>Why <span class="highlight">NDAA Compliance</span> Matters for Your Organization</h2>
+                <p>The US National Defense Authorization Act (Section 889) permanently bans the use of video surveillance equipment from five Chinese companies in federal agencies, their contractors, and organizations receiving federal funding.</p>
+                <p>This affects government buildings, military installations, banking institutions, healthcare facilities, educational institutions receiving federal grants, and any company doing business with the US government.</p>
+                <ul class="banned-list">
+                    <li>
+                        <span class="banned-icon">&#x1F6AB;</span>
+                        <span><strong>Hikvision</strong> — World's largest CCTV maker, banned entity</span>
+                    </li>
+                    <li>
+                        <span class="banned-icon">&#x1F6AB;</span>
+                        <span><strong>Dahua</strong> (including Lorex, Amcrest) — Banned entity</span>
+                    </li>
+                    <li>
+                        <span class="banned-icon">&#x1F6AB;</span>
+                        <span><strong>Huawei / ZTE</strong> — Telecommunications banned entities</span>
+                    </li>
+                    <li>
+                        <span class="banned-icon">&#x1F6AB;</span>
+                        <span><strong>Hytera</strong> — Communications equipment banned entity</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="ndaa-right">
+                <h3>ArcisAI Compliance Guarantee</h3>
+                <ul class="compliance-list">
+                    <li>
+                        <span class="compliance-check">&#x2713;</span>
+                        <span><strong>Zero Chinese Components</strong> — No SoC, sensor, or firmware from any banned entity</span>
+                    </li>
+                    <li>
+                        <span class="compliance-check">&#x2713;</span>
+                        <span><strong>NDAA Section 889 Compliant</strong> — Full supply chain documentation available</span>
+                    </li>
+                    <li>
+                        <span class="compliance-check">&#x2713;</span>
+                        <span><strong>STQC Certified</strong> — Government-approved testing and certification</span>
+                    </li>
+                    <li>
+                        <span class="compliance-check">&#x2713;</span>
+                        <span><strong>TAA Compliant</strong> — Trade Agreements Act compliant for US procurement</span>
+                    </li>
+                    <li>
+                        <span class="compliance-check">&#x2713;</span>
+                        <span><strong>Compliance Letter Available</strong> — Official NDAA compliance certificate for your procurement team</span>
+                    </li>
+                    <li>
+                        <span class="compliance-check">&#x2713;</span>
+                        <span><strong>Made-in-India Origin</strong> — Full Bill of Materials (BOM) transparency</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PRODUCTS ===== -->
+<section class="section products-section">
+    <div class="section-inner">
+        <div class="section-header">
+            <div class="section-label">Product Range</div>
+            <h2 class="section-title">Enterprise AI Camera Portfolio</h2>
+            <p class="section-desc">Every ArcisAI camera comes with edge AI processing built in. No external servers, no add-on licenses, no ongoing analytics fees.</p>
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-icon">&#x1F4F7;</div>
+                <h3>AI Bullet Cameras</h3>
+                <p>Outdoor-rated IP67 bullet cameras with built-in AI for perimeter protection, license plate recognition, and intrusion detection. 2MP to 8MP options.</p>
+                <div class="product-specs">
+                    <span class="spec-tag">2MP - 8MP</span>
+                    <span class="spec-tag">IP67</span>
+                    <span class="spec-tag">IR 80m</span>
+                    <span class="spec-tag">Edge AI</span>
+                    <span class="spec-tag">PoE</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-icon">&#x1F3A5;</div>
+                <h3>AI Dome Cameras</h3>
+                <p>Indoor/outdoor dome cameras with vandal-proof IK10 housing. Ideal for retail, banking, and healthcare with people counting and face detection.</p>
+                <div class="product-specs">
+                    <span class="spec-tag">2MP - 5MP</span>
+                    <span class="spec-tag">IK10</span>
+                    <span class="spec-tag">WDR 120dB</span>
+                    <span class="spec-tag">Edge AI</span>
+                    <span class="spec-tag">ONVIF</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-icon">&#x1F504;</div>
+                <h3>AI PTZ Cameras</h3>
+                <p>Pan-tilt-zoom cameras with AI auto-tracking. 25x/36x optical zoom for large perimeters, stadiums, and critical infrastructure monitoring.</p>
+                <div class="product-specs">
+                    <span class="spec-tag">2MP - 4MP</span>
+                    <span class="spec-tag">25x-36x Zoom</span>
+                    <span class="spec-tag">AI Track</span>
+                    <span class="spec-tag">IP66</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-icon">&#x1F5A5;</div>
+                <h3>AI NVRs</h3>
+                <p>Network video recorders with built-in AI processing for up to 128 channels. RAID storage, redundant power, hot-swappable drives.</p>
+                <div class="product-specs">
+                    <span class="spec-tag">8-128 CH</span>
+                    <span class="spec-tag">RAID 5/6</span>
+                    <span class="spec-tag">AI Built-in</span>
+                    <span class="spec-tag">H.265+</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-icon">&#x1F9E0;</div>
+                <h3>Edge AI Box</h3>
+                <p>Add AI capabilities to any existing camera. NVIDIA Jetson-powered edge computing for retrofitting legacy surveillance systems without camera replacement.</p>
+                <div class="product-specs">
+                    <span class="spec-tag">NVIDIA Jetson</span>
+                    <span class="spec-tag">8-16 CH</span>
+                    <span class="spec-tag">50+ AI Models</span>
+                    <span class="spec-tag">Retrofit</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-icon">&#x1F4E1;</div>
+                <h3>OEM / White-Label</h3>
+                <p>Full OEM/ODM program for distributors, integrators, and VARs. Custom branding, firmware, and packaging. MOQ as low as 100 units.</p>
+                <div class="product-specs">
+                    <span class="spec-tag">Custom Branding</span>
+                    <span class="spec-tag">MOQ 100</span>
+                    <span class="spec-tag">Custom FW</span>
+                    <span class="spec-tag">Global Ship</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== COMPARISON ===== -->
+<section class="section compare-section">
+    <div class="section-inner">
+        <div class="section-header">
+            <div class="section-label">Comparison</div>
+            <h2 class="section-title">ArcisAI vs. Banned Chinese Brands</h2>
+        </div>
+        <div class="compare-table-wrap">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th class="highlight-col">ArcisAI</th>
+                        <th>Hikvision</th>
+                        <th>Dahua</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>NDAA Compliant</td>
+                        <td class="highlight-col"><span class="check">&#10003;</span> Yes — Certified</td>
+                        <td><span class="cross">&#10007;</span> <strong>BANNED</strong></td>
+                        <td><span class="cross">&#10007;</span> <strong>BANNED</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Edge AI Built-In</td>
+                        <td class="highlight-col"><span class="check">&#10003;</span> Standard on all models</td>
+                        <td>Select models only</td>
+                        <td>Select models only</td>
+                    </tr>
+                    <tr>
+                        <td>US Federal Procurement</td>
+                        <td class="highlight-col"><span class="check">&#10003;</span> Eligible</td>
+                        <td><span class="cross">&#10007;</span> Permanently banned</td>
+                        <td><span class="cross">&#10007;</span> Permanently banned</td>
+                    </tr>
+                    <tr>
+                        <td>Data Security</td>
+                        <td class="highlight-col">Zero data exfiltration risk</td>
+                        <td><span class="warn">&#x26A0;</span> Known backdoor concerns</td>
+                        <td><span class="warn">&#x26A0;</span> Known vulnerabilities</td>
+                    </tr>
+                    <tr>
+                        <td>Supply Chain Transparency</td>
+                        <td class="highlight-col"><span class="check">&#10003;</span> Full BOM available</td>
+                        <td><span class="cross">&#10007;</span> Opaque</td>
+                        <td><span class="cross">&#10007;</span> Opaque</td>
+                    </tr>
+                    <tr>
+                        <td>OEM/White-Label Program</td>
+                        <td class="highlight-col"><span class="check">&#10003;</span> Custom branding from 100 units</td>
+                        <td>High MOQ only</td>
+                        <td>High MOQ only</td>
+                    </tr>
+                    <tr>
+                        <td>Enterprise Warranty</td>
+                        <td class="highlight-col">3-Year Standard</td>
+                        <td>1-2 Year</td>
+                        <td>1-2 Year</td>
+                    </tr>
+                    <tr>
+                        <td>ONVIF Compliance</td>
+                        <td class="highlight-col"><span class="check">&#10003;</span> Profile S/T/G</td>
+                        <td><span class="check">&#10003;</span> Yes</td>
+                        <td><span class="check">&#10003;</span> Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Price Point</td>
+                        <td class="highlight-col">Competitive — contact sales</td>
+                        <td>Low (but banned)</td>
+                        <td>Low (but banned)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- ===== USE CASES ===== -->
+<section class="section usecase-section">
+    <div class="section-inner">
+        <div class="section-header">
+            <div class="section-label">Deployments</div>
+            <h2 class="section-title">Where ArcisAI Is Deployed</h2>
+        </div>
+        <div class="usecase-grid">
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F3DB;</div>
+                <h3>Government Buildings</h3>
+                <p>Federal, state, and municipal facilities requiring NDAA-compliant surveillance.</p>
+            </div>
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F3E6;</div>
+                <h3>Banking & Finance</h3>
+                <p>ATM monitoring, branch security, vault surveillance for FFIEC compliance.</p>
+            </div>
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F3EB;</div>
+                <h3>Education (K-12, University)</h3>
+                <p>Campus security for institutions receiving federal E-Rate or Title IV funding.</p>
+            </div>
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F3E5;</div>
+                <h3>Healthcare</h3>
+                <p>Patient safety, restricted area monitoring for HIPAA-regulated facilities.</p>
+            </div>
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F6E2;</div>
+                <h3>Critical Infrastructure</h3>
+                <p>Oil & gas, utilities, and transportation complying with CISA directives.</p>
+            </div>
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F3ED;</div>
+                <h3>Manufacturing</h3>
+                <p>PPE compliance, quality inspection, and safety zone monitoring.</p>
+            </div>
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F6D2;</div>
+                <h3>Retail Chains</h3>
+                <p>Loss prevention, customer analytics, and queue management at scale.</p>
+            </div>
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F3D7;</div>
+                <h3>Smart Cities</h3>
+                <p>Traffic management, crowd monitoring, and public safety command centers.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== MIGRATION ===== -->
+<section class="migration-section">
+    <div class="section-inner">
+        <div class="migration-inner">
+            <h2>Hikvision/Dahua Replacement Program</h2>
+            <p>We make it easy to transition from banned equipment to NDAA-compliant ArcisAI cameras.</p>
+            <div class="migration-steps">
+                <div class="migration-step">
+                    <div class="migration-step-num">1</div>
+                    <h4>Site Survey</h4>
+                    <p>We audit your existing camera infrastructure and identify all non-compliant equipment.</p>
+                </div>
+                <div class="migration-step">
+                    <div class="migration-step-num">2</div>
+                    <h4>Product Match</h4>
+                    <p>1:1 replacement mapping — same mounting points, same cable runs, better AI.</p>
+                </div>
+                <div class="migration-step">
+                    <div class="migration-step-num">3</div>
+                    <h4>Phased Rollout</h4>
+                    <p>Replace by priority zones. Zero downtime. Parallel operation during transition.</p>
+                </div>
+                <div class="migration-step">
+                    <div class="migration-step-num">4</div>
+                    <h4>Compliance Cert</h4>
+                    <p>Official NDAA compliance documentation for your procurement and audit team.</p>
+                </div>
+            </div>
+            <a href="#inquiry-form" class="btn-migration">Start Your Replacement Program &rarr;</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section faq-section">
+    <div class="section-inner">
+        <div class="section-header">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item open">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Is ArcisAI truly NDAA compliant?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">Yes. ArcisAI cameras contain zero components from any NDAA-banned entity (Hikvision, Dahua, Huawei, ZTE, Hytera). We provide full Bill of Materials (BOM) documentation and an official NDAA compliance letter for your procurement team upon request.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Where are ArcisAI cameras manufactured?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">ArcisAI cameras are designed and manufactured in India by Adiance Technologies. India is a TAA (Trade Agreements Act) designated country, making ArcisAI products eligible for US government procurement through GSA Schedule and other federal acquisition vehicles.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Will ArcisAI cameras work with my existing VMS?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">ArcisAI cameras support ONVIF Profile S, T, and G, making them compatible with virtually any modern VMS platform including Milestone XProtect, Genetec Security Center, Avigilon ACC, VMukti Cloud VMS, and many others. RTSP streaming is also supported.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    What AI capabilities are built into the cameras?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">Every ArcisAI camera includes edge AI processing for: people detection, vehicle detection, intrusion detection, line crossing, loitering detection, face detection, and object classification. Advanced models include ANPR/LPR, PPE detection, crowd counting, and behavior analytics — all processed on-camera with no external server required.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    Do you offer OEM/white-label options?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">Yes. ArcisAI offers a comprehensive OEM/ODM program for system integrators, distributors, and VARs. Custom branding (housing, packaging, GUI), custom firmware, and product certification support are available. Minimum order quantity starts at 100 units for white-label programs.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                    What warranty and support do you provide?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">All ArcisAI products come with a standard 3-year enterprise warranty. Extended warranties up to 5 years are available. Support includes firmware updates, technical documentation, integration assistance, and dedicated account management for enterprise customers.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-section">
+    <div class="section-inner">
+        <h2>Ready to Go NDAA-Compliant?</h2>
+        <p>Get a custom quote for your Hikvision/Dahua replacement project. Our team will match every camera 1:1 with an NDAA-compliant ArcisAI alternative.</p>
+        <div class="cta-buttons">
+            <a href="#inquiry-form" class="btn-cta-primary">Request Enterprise Quote &rarr;</a>
+            <a href="mailto:sales@arcisai.io?subject=NDAA%20Compliance%20Inquiry" class="btn-cta-secondary">Email Sales Team</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="section-inner">
+        <p>&copy; 2026 ArcisAI (Adiance Technologies Pvt. Ltd.). All rights reserved.</p>
+        <div class="footer-links">
+            <a href="https://arcisai.io/privacy-policy">Privacy Policy</a>
+            <a href="https://arcisai.io/terms-and-conditions">Terms of Service</a>
+            <a href="mailto:sales@arcisai.io">sales@arcisai.io</a>
+        </div>
+    </div>
+</footer>
+
+<!-- ===== FLOATING MOBILE CTA ===== -->
+<div class="floating-cta">
+    <a href="#inquiry-form">Request Enterprise Quote &rarr;</a>
+</div>
+
+<!-- ===== CONVERSION TRACKING ===== -->
+<script>
+    document.getElementById('leadForm').addEventListener('submit', function(e) {
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'conversion', {
+                'send_to': 'AW-XXXXXXXXXX/demo_request', // TODO: Replace with ArcisAI Google Ads conversion ID
+                'value': 150.0,
+                'currency': 'USD'
+            });
+        }
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'Lead', {
+                content_name: 'ArcisAI Enterprise Quote',
+                content_category: 'NDAA Cameras',
+                value: 150.00,
+                currency: 'USD'
+            });
+        }
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+</script>
+
+</body>
+</html>
