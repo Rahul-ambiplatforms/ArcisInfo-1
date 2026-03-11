@@ -90,10 +90,10 @@ const SEOLandingPage = () => {
     },
     offers: {
       "@type": "AggregateOffer",
-      priceCurrency: "INR",
-      lowPrice: "15000",
-      highPrice: "85000",
-      offerCount: "12",
+      priceCurrency: "USD",
+      lowPrice: "299",
+      highPrice: "1999",
+      offerCount: "24",
       availability: "https://schema.org/InStock"
     }
   };

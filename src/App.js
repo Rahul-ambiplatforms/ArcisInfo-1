@@ -45,6 +45,7 @@ import IFSEC from "./pages/EventPage/IFSEC";
 const SEOLandingPage = lazy(() => import("./pages/SEOLandingPages/SEOLandingPage"));
 const ConvergenceIndia2026 = lazy(() => import("./pages/Events/ConvergenceIndia2026"));
 const FAQHub = lazy(() => import("./pages/FAQHub/FAQHub"));
+const Glossary = lazy(() => import("./pages/Glossary/Glossary"));
 
 const PageTransition = ({ children }) => <>{children}</>;
 
@@ -165,6 +166,14 @@ function InnerApp() {
               element={
                 <Suspense fallback={<div>Loading...</div>}>
                   <FAQHub />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/glossary"
+              element={
+                <Suspense fallback={<div>Loading...</div>}>
+                  <Glossary />
                 </Suspense>
               }
             />
