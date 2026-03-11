@@ -324,6 +324,84 @@ const seoPageDataCompare = {
       { q: "Which Chinese camera brands are restricted?", a: "Hikvision, Dahua, Huawei, ZTE, and Hytera are specifically named in NDAA Section 889. Their subsidiaries and OEM products are also covered. Many generic Chinese camera brands use Hikvision/Dahua components, making them non-compliant as well." },
       { q: "Is there a cost penalty for switching?", a: "ArcisAI is competitively priced with Chinese brands when you consider total cost of ownership. Built-in AI analytics eliminate server costs, and Adiance offers migration programs to minimize switching costs." }
     ]
+  },
+
+  "arcisai-vs-verkada": {
+    slug: "/compare/arcisai-vs-verkada",
+    title: "ArcisAI vs Verkada | Enterprise AI Camera Comparison 2026",
+    metaDescription: "Compare ArcisAI by Adiance with Verkada. See how ArcisAI delivers comparable cloud-managed AI cameras at significantly lower TCO with more flexible deployment options and no vendor lock-in.",
+    keywords: ["ArcisAI vs Verkada", "Verkada alternative", "Verkada competitor", "cloud managed cameras", "enterprise AI cameras", "Verkada pricing alternative", "AI camera comparison 2026"],
+    heroTitle: "ArcisAI vs Verkada",
+    heroSubtitle: "Enterprise Cloud Cameras Without the Premium Price Tag",
+    heroDescription: "Verkada popularized cloud-managed cameras but at premium pricing with vendor lock-in. ArcisAI by Adiance delivers the same cloud-first experience with edge AI processing, flexible deployment, and dramatically lower total cost of ownership.",
+    category: "compare",
+    sections: [
+      {
+        title: "Why Enterprise Buyers Are Evaluating Alternatives to Verkada",
+        content: "Verkada delivers a polished cloud camera experience, but enterprises face challenges with premium pricing ($199-$999+ per camera per year in licensing), complete vendor lock-in with proprietary hardware, and concerns following their 2021 security breach. ArcisAI offers a compelling alternative with edge AI processing, open standards (ONVIF/RTSP), and hybrid cloud architecture that gives enterprises more control.",
+        stats: [
+          { value: "40-60%", label: "Lower TCO vs Verkada" },
+          { value: "ONVIF", label: "Open Standards" },
+          { value: "Hybrid", label: "Cloud + On-Premise" }
+        ],
+        features: ["No annual per-camera licensing fees", "Open ONVIF/RTSP standards — no vendor lock-in", "Edge AI processing reduces cloud bandwidth costs", "Hybrid deployment: cloud, on-premise, or both", "NDAA compliant with transparent supply chain"]
+      },
+      {
+        title: "Feature Comparison: ArcisAI vs Verkada",
+        content: "Both platforms offer cloud-managed cameras with AI analytics. ArcisAI differentiates with true edge AI processing (analytics happen on-camera, not in the cloud), GenAI-powered natural language video search via ArcisGPT, broader camera hardware options (PTZ, Dome, Bullet with 4G SIM, WiFi, PoE), and the ability to integrate existing third-party cameras via the Bridge Device. Verkada requires replacing all existing cameras with their proprietary hardware.",
+        features: ["Edge AI on-device vs cloud-dependent processing", "ArcisGPT GenAI video search vs basic search", "Bridge Device supports existing cameras vs full rip-and-replace", "4G SIM and WiFi options vs PoE only", "Open API ecosystem vs closed proprietary system"]
+      },
+      {
+        title: "Total Cost of Ownership: ArcisAI Advantage",
+        content: "Verkada's subscription model means ongoing annual costs per camera that compound over time. A 100-camera deployment with Verkada can cost $50,000-$100,000+ annually in licensing alone. ArcisAI's model includes edge AI capabilities built into the camera hardware with optional cloud VMS licensing at a fraction of the cost. Over a 5-year period, ArcisAI typically delivers 40-60% savings compared to Verkada.",
+        features: ["No per-camera annual license required", "Edge processing reduces cloud storage costs", "Camera hardware includes AI — no add-on fees", "Flexible cloud VMS tiers based on actual usage", "Migration support from existing Verkada deployments"]
+      }
+    ],
+    faq: [
+      { q: "How does ArcisAI compare to Verkada on ease of use?", a: "ArcisAI Cloud VMS provides a modern, intuitive interface similar to Verkada's Command platform. Setup is plug-and-play with automatic camera discovery, and the ArcisGPT feature adds natural language video search that Verkada doesn't offer." },
+      { q: "Can I migrate from Verkada to ArcisAI?", a: "Yes. ArcisAI cameras can be deployed alongside existing Verkada cameras during transition. Our Cloud VMS supports multi-vendor environments, and the Bridge Device can integrate non-ArcisAI ONVIF cameras into the unified platform." },
+      { q: "Does ArcisAI offer cloud storage like Verkada?", a: "Yes. ArcisAI Cloud VMS offers flexible cloud storage options. Additionally, edge AI processing and on-camera storage mean you can retain footage locally and only upload important events to the cloud, significantly reducing storage costs." },
+      { q: "Is ArcisAI NDAA compliant like Verkada?", a: "Yes. Both ArcisAI and Verkada are NDAA compliant. ArcisAI cameras are manufactured by Adiance Technologies with a fully transparent, non-Chinese supply chain, meeting NDAA Section 889 requirements." }
+    ]
+  },
+
+  "arcisai-vs-rhombus": {
+    slug: "/compare/arcisai-vs-rhombus",
+    title: "ArcisAI vs Rhombus | AI Cloud Camera Comparison 2026",
+    metaDescription: "Compare ArcisAI by Adiance with Rhombus Systems. Discover how ArcisAI offers deeper edge AI analytics, GenAI video search, and more flexible deployment than Rhombus at competitive pricing.",
+    keywords: ["ArcisAI vs Rhombus", "Rhombus alternative", "Rhombus competitor", "AI cloud cameras", "enterprise security cameras", "Rhombus comparison", "cloud camera systems 2026"],
+    heroTitle: "ArcisAI vs Rhombus",
+    heroSubtitle: "Next-Generation AI Cameras vs Cloud-First Platform",
+    heroDescription: "Rhombus offers solid cloud-managed cameras for mid-market. ArcisAI by Adiance takes it further with true edge AI processing, GenAI-powered video search, broader hardware options, and enterprise-grade scalability for large deployments.",
+    category: "compare",
+    sections: [
+      {
+        title: "ArcisAI vs Rhombus: Enterprise AI Camera Showdown",
+        content: "Rhombus Systems has built a strong reputation in the cloud camera space, particularly for K-12 education and mid-market commercial. ArcisAI by Adiance targets the same cloud-first simplicity but adds enterprise-grade capabilities: true edge AI processing on every camera, GenAI video search via ArcisGPT, 4G SIM connectivity for remote sites, and the Bridge Device for integrating legacy infrastructure. For organizations scaling beyond 100 cameras, ArcisAI's architecture offers significant advantages.",
+        stats: [
+          { value: "Edge AI", label: "On-Device Processing" },
+          { value: "GenAI", label: "ArcisGPT Search" },
+          { value: "4G/WiFi", label: "Connectivity Options" }
+        ],
+        features: ["True edge AI vs cloud-processed analytics", "ArcisGPT natural language video search", "4G SIM + WiFi + PoE connectivity options", "Bridge Device for legacy camera integration", "Enterprise scalability for 10,000+ cameras"]
+      },
+      {
+        title: "AI Analytics Depth: Edge AI vs Cloud Analytics",
+        content: "Rhombus processes most analytics in the cloud, which means bandwidth consumption and latency. ArcisAI runs deep learning inference directly on the camera hardware — face recognition, ANPR, behavioral analytics, crowd counting, fire detection, and PPE compliance all happen at the edge in sub-100ms. This means faster alerts, lower bandwidth costs, and analytics that work even when internet connectivity is interrupted.",
+        features: ["Sub-100ms edge AI detection vs cloud latency", "Analytics work offline during connectivity loss", "80% bandwidth reduction vs cloud-processed video", "20+ AI analytics types built-in", "Custom AI model deployment on-camera"]
+      },
+      {
+        title: "Deployment Flexibility and Scale",
+        content: "Rhombus is cloud-only, which works for many deployments but limits options for organizations with data sovereignty requirements or poor internet connectivity. ArcisAI offers true hybrid deployment — cloud, on-premise, or a mix. The Bridge Device means you don't need to replace existing cameras. For government, defense, and regulated industries where data must stay on-premise, ArcisAI is the clear choice.",
+        features: ["Hybrid: cloud + on-premise + air-gapped options", "Bridge Device for existing camera integration", "Data sovereignty compliance for government", "4G SIM cameras for remote/construction sites", "Multi-site management with centralized dashboard"]
+      }
+    ],
+    faq: [
+      { q: "Is ArcisAI suitable for K-12 education like Rhombus?", a: "Absolutely. ArcisAI cameras support all the same education use cases as Rhombus — vaping detection, occupancy monitoring, visitor management — plus advanced capabilities like behavioral analytics and AI-powered search that make campus security more proactive." },
+      { q: "How does ArcisAI pricing compare to Rhombus?", a: "ArcisAI is competitively priced with Rhombus. The key difference is that ArcisAI includes edge AI capabilities in the camera hardware itself, so you get more analytics capability without additional per-camera license fees for AI features." },
+      { q: "Can ArcisAI integrate with access control like Rhombus?", a: "Yes. ArcisAI Cloud VMS supports integration with major access control platforms via open APIs and ONVIF standards. The platform provides unified security management across video surveillance and access control." },
+      { q: "Does ArcisAI offer the same ease of setup as Rhombus?", a: "Yes. ArcisAI cameras feature plug-and-play setup with automatic cloud registration. The Cloud VMS dashboard is modern and intuitive, and our onboarding team provides white-glove setup support for enterprise deployments." }
+    ]
   }
 };
 

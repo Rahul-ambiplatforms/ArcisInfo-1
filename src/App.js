@@ -44,6 +44,7 @@ import IFSEC from "./pages/EventPage/IFSEC";
 // To disable animations, comment the import above and uncomment the line below:
 const SEOLandingPage = lazy(() => import("./pages/SEOLandingPages/SEOLandingPage"));
 const ConvergenceIndia2026 = lazy(() => import("./pages/Events/ConvergenceIndia2026"));
+const FAQHub = lazy(() => import("./pages/FAQHub/FAQHub"));
 
 const PageTransition = ({ children }) => <>{children}</>;
 
@@ -157,6 +158,14 @@ function InnerApp() {
                 <PageTransition>
                   <ContactUs />
                 </PageTransition>
+              }
+            />
+            <Route
+              path="/faq"
+              element={
+                <Suspense fallback={<div>Loading...</div>}>
+                  <FAQHub />
+                </Suspense>
               }
             />
             <Route

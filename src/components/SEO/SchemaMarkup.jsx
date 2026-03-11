@@ -16,7 +16,7 @@ export const organizationSchema = {
   },
   "url": "https://www.arcisai.io",
   "logo": "https://www.arcisai.io/assets/logo.png",
-  "description": "ArcisAI is India's first STQC-certified premium AI CCTV manufacturer providing enterprise AI-powered video surveillance cameras with edge computing, cloud VMS, and GenAI video analytics for smart city, industrial, and commercial deployments.",
+  "description": "ArcisAI is a leading enterprise AI CCTV manufacturer by Adiance Technologies, offering NDAA-compliant, STQC-certified AI-powered video surveillance cameras with edge computing, cloud VMS, and GenAI video analytics for enterprise, government, and smart city deployments across US, UAE, UK, and global markets.",
   "foundingDate": "2003",
   "numberOfEmployees": {
     "@type": "QuantitativeValue",
@@ -128,7 +128,7 @@ export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "ArcisAI",
-  "alternateName": "Arcis AI - Premium AI CCTV",
+  "alternateName": "Arcis AI - Enterprise AI-Powered CCTV Cameras",
   "url": "https://www.arcisai.io",
   "potentialAction": {
     "@type": "SearchAction",

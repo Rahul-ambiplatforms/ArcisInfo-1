@@ -6,9 +6,9 @@
 
 export const seoConfig = {
   home: {
-    title: "ArcisAI - India's First Premium AI CCTV | STQC Certified Smart Surveillance",
-    description: "ArcisAI is India's first STQC-certified premium AI CCTV manufacturer. Enterprise edge AI cameras with face recognition, ANPR, crowd analytics. Cloud VMS with GenAI video search (ArcisGPT). Bridge Device for legacy upgrades. Serving smart cities, enterprise, government across India, US, UAE, Singapore. Made in India, trusted globally.",
-    keywords: ['AI CCTV India', 'premium surveillance camera', 'STQC certified CCTV', 'intelligent surveillance', 'edge AI camera', 'cloud VMS', 'smart security system', 'ArcisAI', 'AI camera manufacturer India', 'face recognition camera', 'ANPR camera India', 'GenAI video analytics', 'enterprise CCTV', 'smart city camera', 'NDAA compliant camera', 'Made in India CCTV', 'best AI CCTV camera', 'cloud video management system'],
+    title: "ArcisAI - Enterprise AI CCTV Cameras | NDAA Compliant Smart Surveillance",
+    description: "ArcisAI by Adiance is a leading enterprise AI CCTV manufacturer. NDAA-compliant, STQC-certified edge AI cameras with face recognition, ANPR, crowd analytics. Cloud VMS with GenAI video search (ArcisGPT). Bridge Device for legacy upgrades. Serving enterprise, government, and smart cities across US, UAE, UK, Singapore, and India.",
+    keywords: ['AI CCTV cameras', 'NDAA compliant cameras', 'enterprise surveillance camera', 'STQC certified CCTV', 'edge AI camera', 'cloud VMS', 'smart security system', 'ArcisAI', 'AI camera manufacturer', 'face recognition camera', 'ANPR camera', 'GenAI video analytics', 'enterprise CCTV', 'smart city camera', 'non-Chinese CCTV', 'best AI CCTV camera', 'cloud video management system', 'Hikvision alternative'],
     canonicalUrl: 'https://arcisai.io',
     ogImage: 'https://arcisai.io/og/home.jpg',
     ogType: 'website',
@@ -78,9 +78,9 @@ export const seoConfig = {
     noindex: false,
   },
   about: {
-    title: "About ArcisAI | Adiance Technologies, Ahmedabad",
-    description: "ArcisAI flagship brand of Adiance Technologies. India's first premium AI CCTV with STQC certification. Made in India with in-house factory & SMT line.",
-    keywords: ['about ArcisAI', 'Adiance Technologies', 'made in India', 'STQC certified', 'Ahmedabad', 'AI company India'],
+    title: "About ArcisAI | Adiance Technologies - Enterprise AI Surveillance",
+    description: "ArcisAI is the flagship brand of Adiance Technologies. NDAA-compliant, STQC-certified AI CCTV with in-house manufacturing, edge AI R&D, and global enterprise deployments across US, UAE, UK, and India.",
+    keywords: ['about ArcisAI', 'Adiance Technologies', 'NDAA compliant manufacturer', 'STQC certified', 'AI camera company', 'enterprise surveillance manufacturer'],
     canonicalUrl: 'https://arcisai.io/about-us',
     ogImage: 'https://arcisai.io/og/about.jpg',
     ogType: 'website',
@@ -125,10 +125,10 @@ export const siteDefaults = {
   siteName: 'ArcisAI',
   siteUrl: 'https://arcisai.io',
   twitterHandle: '@ArcisAI',
-  defaultTitle: "ArcisAI - India's First Premium AI CCTV | STQC Certified",
-  defaultDescription: "ArcisAI by Adiance Technologies delivers India's first premium AI CCTV with STQC certification. End-to-end intelligent surveillance with edge AI, cloud VMS, and Gen AI visual intelligence.",
-  defaultKeywords: ['AI CCTV India', 'premium surveillance camera', 'STQC certified', 'intelligent security', 'edge AI analytics', 'cloud VMS', 'made in India'],
-  locale: 'en_IN',
+  defaultTitle: "ArcisAI - Enterprise AI CCTV Cameras | NDAA Compliant",
+  defaultDescription: "ArcisAI by Adiance Technologies delivers enterprise AI CCTV cameras with NDAA compliance and STQC certification. End-to-end intelligent surveillance with edge AI, cloud VMS, and Gen AI visual intelligence for global markets.",
+  defaultKeywords: ['AI CCTV cameras', 'NDAA compliant cameras', 'enterprise surveillance', 'STQC certified', 'edge AI analytics', 'cloud VMS', 'Hikvision alternative'],
+  locale: 'en_US',
   organization: {
     name: 'ArcisAI',
     brand: 'Adiance Technologies',
