@@ -13,9 +13,9 @@ import WhyArcisAI from "./pages/WhyArcisAI/WhyArcisAI";
 import Footer from "./Components/Footer/Footer";
 import ScrollToTop from "./Components/ScrollToTop";
 import { AnimatePresence } from "framer-motion";
-import SEORouter from "./Components/SEO/SEORouter";
-import SEOIntegration from "./Components/SEO/SEOIntegration";
-import SEOContent from "./Components/Content/SEOContent";
+import SEORouter from "./components/SEO/SEORouter";
+import SEOIntegration from "./components/SEO/SEOIntegration";
+import SEOContent from "./components/Content/SEOContent";
 // import PageTransition from "./Components/PageTransition";
 import CustomCursor from "./Components/CustomCursor/CustomCursor";
 
@@ -74,8 +74,8 @@ function InnerApp() {
           hideHeader
             ? "0"
             : SHOW_EVENT_BANNER
-            ? { base: "150px", md: "150px" }
-            : { base: "100px", md: "100px" }
+              ? { base: "150px", md: "150px" }
+              : { base: "100px", md: "100px" }
         }
       >
         <AnimatePresence mode="wait">
@@ -98,7 +98,7 @@ function InnerApp() {
             />
             <Route
               path="/events/convergence-india-2026" element={<Suspense fallback={<div>Loading...</div>}><ConvergenceIndia2026 /></Suspense>} />
-              <Route path="/event"
+            <Route path="/event"
               element={
                 <PageTransition>
                   <Event />
@@ -287,7 +287,7 @@ function InnerApp() {
                 // </PageTransition>
               }
             />
-</Routes>
+          </Routes>
         </AnimatePresence>
         <SEOContent />
       </Box>
