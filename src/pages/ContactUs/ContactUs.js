@@ -50,6 +50,7 @@ const ContactSection = () => {
 
   const BACKEND_URL = "https://vmukti.com/backend/api/send-email-arcis";
   const SALES_AGENT_URL = "https://arcisai-proxy.onrender.com/api/webhook";
+  const WEB_HOOK_AUTOMATION = "https://hook.eu1.make.com/ong8i47uogn9j5vaofu8gzk82mej69d3";
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -137,7 +138,29 @@ const ContactSection = () => {
           page_url: window.location.href,
         }
       }),
-    }).catch(() => {});
+    }).catch(() => { });
+
+    fetch(WEB_HOOK_AUTOMATION, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.countryCode + formData.phone,
+        company: formData.company,
+        source: "website_contact",
+        notes: "Customer Type: " + formData.customerType + " | Cameras For: " + formData.camerasFor + " | Quantity: " + formData.customerQuantity + " | Message: " + formData.message,
+        metadata: {
+          location: location2 + " " + formData.location,
+          customer_type: formData.customerType,
+          cameras_for: formData.camerasFor,
+          quantity: formData.customerQuantity,
+          page_url: window.location.href,
+        }
+      }),
+    }).catch(() => { });
 
 
     try {
@@ -379,10 +402,10 @@ const ContactSection = () => {
                           w={{ base: "80px", md: "100px", lg: "120px" }}
                           // h={{ base: "80px", md: "100px", lg: "120px" }}
                           position="relative"
-                          // border="2px dashed"
-                          // borderColor="#A4FF79"
-                          // borderRadius="8px"
-                          // bg="transparent"
+                        // border="2px dashed"
+                        // borderColor="#A4FF79"
+                        // borderRadius="8px"
+                        // bg="transparent"
                         >
                           <Image loading="lazy"
                             src={feature.image}
@@ -390,7 +413,7 @@ const ContactSection = () => {
                             w={{ base: "50px", md: "60px", lg: "70px" }}
                             h={{ base: "50px", md: "60px", lg: "70px" }}
                             objectFit="contain"
-                            // filter="brightness(0) invert(1)"
+                          // filter="brightness(0) invert(1)"
                           />
                         </Center>
                         {/* Feature Name */}
@@ -677,7 +700,7 @@ const ContactSection = () => {
                         boxShadow: "0 0 0 1px #9678E1",
                       }}
                       fontSize={{ base: "14px", md: "16px", lg: "16px" }}
-                      // px="16px"
+                    // px="16px"
                     >
                       <option
                         value="Office"
@@ -731,7 +754,7 @@ const ContactSection = () => {
                         boxShadow: "0 0 0 1px #9678E1",
                       }}
                       fontSize={{ base: "14px", md: "15px", lg: "16px" }}
-                      // px="16px"
+                    // px="16px"
                     >
                       <option
                         value="Government"
@@ -860,7 +883,7 @@ const ContactSection = () => {
                       fontSize={{ base: "14px", md: "15px", lg: "16px" }}
                       px="16px"
                       py="12px"
-                      // resize="vertical"
+                    // resize="vertical"
                     />
                   </FormControl>
 

@@ -13,9 +13,9 @@ import WhyArcisAI from "./pages/WhyArcisAI/WhyArcisAI";
 import Footer from "./Components/Footer/Footer";
 import ScrollToTop from "./Components/ScrollToTop";
 import { AnimatePresence } from "framer-motion";
-import SEORouter from "./components/SEO/SEORouter";
-import SEOIntegration from "./components/SEO/SEOIntegration";
-import SEOContent from "./components/Content/SEOContent";
+import SEORouter from "./Components/SEO/SEORouter";
+import SEOIntegration from "./Components/SEO/SEOIntegration";
+import SEOContent from "./Components/Content/SEOContent";
 // import PageTransition from "./Components/PageTransition";
 import CustomCursor from "./Components/CustomCursor/CustomCursor";
 
