@@ -185,7 +185,6 @@ const seoPageDataGeoIntl = {
     faqs: [
       { question: "Can ArcisAI cameras integrate with Transport for London systems?", answer: "Yes, our cameras support ONVIF and custom API integrations compatible with TfL and other London transport infrastructure." }
     ]
-  }
   },
 
   // US METRO AREA PAGES
