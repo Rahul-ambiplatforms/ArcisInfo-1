@@ -151,14 +151,16 @@ const ContactSection = () => {
         phone: formData.countryCode + formData.phone,
         company: formData.company,
         source: "website_contact",
-        notes: "Customer Type: " + formData.customerType + " | Cameras For: " + formData.camerasFor + " | Quantity: " + formData.customerQuantity + " | Message: " + formData.message,
-        metadata: {
-          location: location2 + " " + formData.location,
-          customer_type: formData.customerType,
-          cameras_for: formData.camerasFor,
-          quantity: formData.customerQuantity,
-          page_url: window.location.href,
-        }
+
+        customerType: formData.customerType,
+        camerasFor: formData.camerasFor,
+        quantity: formData.customerQuantity,
+        message: formData.message,
+
+        location: location2 + " " + formData.location,
+        pageUrl: window.location.href,
+
+        date: new Date().toISOString(),
       }),
     }).catch(() => { });
 
