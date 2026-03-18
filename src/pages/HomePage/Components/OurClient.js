@@ -11,7 +11,7 @@ import {
   Icon,
 } from "@chakra-ui/react";
 import { motion, useScroll } from "framer-motion";
-import { ReactComponent as LocationIcon } from "../../../Components/Icons/Location.svg";
+import LocationIcon from "../../../Components/Icons/Location.svg";
 
 // Data Constants
 const TESTIMONIALS_DATA = [

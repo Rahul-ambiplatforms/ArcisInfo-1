@@ -1,32 +1,32 @@
 // Solution WhyChoose Icons - EdgeAI
-import { ReactComponent as EdgeAIWhyChoose1 } from "../../../Components/Icons/solution_edgeai_whychoose_1.svg";
-import { ReactComponent as EdgeAIWhyChoose2 } from "../../../Components/Icons/solution_edgeai_whychoose_2.svg";
-import { ReactComponent as EdgeAIWhyChoose3 } from "../../../Components/Icons/solution_edgeai_whychoose_3.svg";
-import { ReactComponent as EdgeAIWhyChoose4 } from "../../../Components/Icons/solution_edgeai_whychoose_4.svg";
-import { ReactComponent as EdgeAIWhyChoose5 } from "../../../Components/Icons/solution_edgeai_whychoose_5.svg";
-import { ReactComponent as EdgeAIWhyChoose6 } from "../../../Components/Icons/solution_edgeai_whychoose_6.svg";
-import { ReactComponent as EdgeAIWhyChoose7 } from "../../../Components/Icons/solution_edgeai_whychoose_7.svg";
-import { ReactComponent as EdgeAIWhyChoose8 } from "../../../Components/Icons/solution_edgeai_whychoose_8.svg";
+import EdgeAIWhyChoose1 from "../../../Components/Icons/solution_edgeai_whychoose_1.svg";
+import EdgeAIWhyChoose2 from "../../../Components/Icons/solution_edgeai_whychoose_2.svg";
+import EdgeAIWhyChoose3 from "../../../Components/Icons/solution_edgeai_whychoose_3.svg";
+import EdgeAIWhyChoose4 from "../../../Components/Icons/solution_edgeai_whychoose_4.svg";
+import EdgeAIWhyChoose5 from "../../../Components/Icons/solution_edgeai_whychoose_5.svg";
+import EdgeAIWhyChoose6 from "../../../Components/Icons/solution_edgeai_whychoose_6.svg";
+import EdgeAIWhyChoose7 from "../../../Components/Icons/solution_edgeai_whychoose_7.svg";
+import EdgeAIWhyChoose8 from "../../../Components/Icons/solution_edgeai_whychoose_8.svg";
 
 // Solution WhyChoose Icons - CloudAI
-import { ReactComponent as CloudAIWhyChoose1 } from "../../../Components/Icons/solution_cloudai_whychoose_1.svg";
-import { ReactComponent as CloudAIWhyChoose2 } from "../../../Components/Icons/solution_cloudai_whychoose_2.svg";
-import { ReactComponent as CloudAIWhyChoose3 } from "../../../Components/Icons/solution_cloudai_whychoose_3.svg";
-import { ReactComponent as CloudAIWhyChoose4 } from "../../../Components/Icons/solution_cloudai_whychoose_4.svg";
-import { ReactComponent as CloudAIWhyChoose5 } from "../../../Components/Icons/solution_cloudai_whychoose_5.svg";
-import { ReactComponent as CloudAIWhyChoose6 } from "../../../Components/Icons/solution_cloudai_whychoose_6.svg";
-import { ReactComponent as CloudAIWhyChoose7 } from "../../../Components/Icons/solution_cloudai_whychoose_7.svg";
-import { ReactComponent as CloudAIWhyChoose8 } from "../../../Components/Icons/solution_cloudai_whychoose_8.svg";
+import CloudAIWhyChoose1 from "../../../Components/Icons/solution_cloudai_whychoose_1.svg";
+import CloudAIWhyChoose2 from "../../../Components/Icons/solution_cloudai_whychoose_2.svg";
+import CloudAIWhyChoose3 from "../../../Components/Icons/solution_cloudai_whychoose_3.svg";
+import CloudAIWhyChoose4 from "../../../Components/Icons/solution_cloudai_whychoose_4.svg";
+import CloudAIWhyChoose5 from "../../../Components/Icons/solution_cloudai_whychoose_5.svg";
+import CloudAIWhyChoose6 from "../../../Components/Icons/solution_cloudai_whychoose_6.svg";
+import CloudAIWhyChoose7 from "../../../Components/Icons/solution_cloudai_whychoose_7.svg";
+import CloudAIWhyChoose8 from "../../../Components/Icons/solution_cloudai_whychoose_8.svg";
 
 // Solution WhyChoose Icons - GenAI
-import { ReactComponent as GenAIWhyChoose1 } from "../../../Components/Icons/solution_genai_whychoose_1.svg";
-import { ReactComponent as GenAIWhyChoose2 } from "../../../Components/Icons/solution_genai_whychoose_2.svg";
-import { ReactComponent as GenAIWhyChoose3 } from "../../../Components/Icons/solution_genai_whychoose_3.svg";
-import { ReactComponent as GenAIWhyChoose4 } from "../../../Components/Icons/solution_genai_whychoose_4.svg";
-import { ReactComponent as GenAIWhyChoose5 } from "../../../Components/Icons/solution_genai_whychoose_5.svg";
-import { ReactComponent as GenAIWhyChoose6 } from "../../../Components/Icons/solution_genai_whychoose_6.svg";
-import { ReactComponent as GenAIWhyChoose7 } from "../../../Components/Icons/solution_genai_whychoose_7.svg";
-import { ReactComponent as GenAIWhyChoose8 } from "../../../Components/Icons/solution_genai_whychoose_8.svg";
+import GenAIWhyChoose1 from "../../../Components/Icons/solution_genai_whychoose_1.svg";
+import GenAIWhyChoose2 from "../../../Components/Icons/solution_genai_whychoose_2.svg";
+import GenAIWhyChoose3 from "../../../Components/Icons/solution_genai_whychoose_3.svg";
+import GenAIWhyChoose4 from "../../../Components/Icons/solution_genai_whychoose_4.svg";
+import GenAIWhyChoose5 from "../../../Components/Icons/solution_genai_whychoose_5.svg";
+import GenAIWhyChoose6 from "../../../Components/Icons/solution_genai_whychoose_6.svg";
+import GenAIWhyChoose7 from "../../../Components/Icons/solution_genai_whychoose_7.svg";
+import GenAIWhyChoose8 from "../../../Components/Icons/solution_genai_whychoose_8.svg";
 
 export const Solution = {
   "edge-ai": {

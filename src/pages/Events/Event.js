@@ -26,7 +26,7 @@ import {
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import CustomButton from "../../Components/CustomButton";
-import { ReactComponent as EventIcon } from "../../Components/Icons/event_close.svg";
+import EventIcon from "../../Components/Icons/event_close.svg";
 
 // Track if popup has been shown in this session (resets on refresh)
 let hasShownPopup = false;

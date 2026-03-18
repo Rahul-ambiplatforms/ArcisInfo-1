@@ -32,7 +32,7 @@ import {
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { FaCamera, FaVideo, FaEye } from "react-icons/fa";
 import CustomButton from "../CustomButton";
-import { ReactComponent as NavbarDownIcon } from "../Icons/Navbar_down_icon.svg";
+import NavbarDownIcon from "../Icons/Navbar_down_icon.svg";
 import { Link as RouterLink } from "react-router-dom";
 import { dropdownData, actionLinks, loginButton } from "./navbarData";
 

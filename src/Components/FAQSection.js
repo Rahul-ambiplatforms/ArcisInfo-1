@@ -10,7 +10,7 @@ import {
   Icon,
 } from "@chakra-ui/react";
 import CustomButton from "./CustomButton";
-import { ReactComponent as UpButtonIcon } from "./Icons/UpButton.svg"; // Adjust path if needed
+import UpButtonIcon from "./Icons/UpButton.svg"; // Adjust path if needed
 
 const UpIcon = (props) => (
   <Icon viewBox="0 0 16 8" fill="none" {...props}>

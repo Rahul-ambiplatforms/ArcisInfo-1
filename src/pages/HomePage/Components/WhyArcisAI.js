@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { homeContent } from "../Data/Content";
-import { ReactComponent as UpButtonIcon } from "../../../Components/Icons/UpButton.svg";
+import UpButtonIcon from "../../../Components/Icons/UpButton.svg";
 import CustomButton from "../../../Components/CustomButton";
 
 const MotionImage = motion(Image);

@@ -12,14 +12,14 @@ import {
   VStack,
   HStack,
 } from "@chakra-ui/react";
-import { ReactComponent as HomeIcon } from "../Icons/Home.svg";
-import { ReactComponent as MailIcon } from "../Icons/Mail.svg";
-import { ReactComponent as PhoneIcon } from "../Icons/phone.svg";
-import { ReactComponent as LocationIcon } from "../Icons/address.svg";
-import { ReactComponent as FacebookIcon } from "../Icons/facebook_icon.svg";
-import { ReactComponent as InstagramIcon } from "../Icons/instagram_icon.svg";
-import { ReactComponent as LinkedInIcon } from "../Icons/linkedIn_icon.svg";
-import { ReactComponent as XIcon } from "../Icons/X_icon.svg";
+import HomeIcon from "../Icons/Home.svg";
+import MailIcon from "../Icons/Mail.svg";
+import PhoneIcon from "../Icons/phone.svg";
+import LocationIcon from "../Icons/address.svg";
+import FacebookIcon from "../Icons/facebook_icon.svg";
+import InstagramIcon from "../Icons/instagram_icon.svg";
+import LinkedInIcon from "../Icons/linkedIn_icon.svg";
+import XIcon from "../Icons/X_icon.svg";
 import { Link as RouterLink } from "react-router-dom";
 
 const ListHeader = ({ children }) => {

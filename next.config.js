@@ -30,9 +30,9 @@ const nextConfig = {
         {
           loader: '@svgr/webpack',
           options: {
-            // 'auto' supports both the default-import pattern AND the
-            // { ReactComponent as X } named-import pattern from CRA.
-            exportType: 'auto',
+            // All SVG imports use the default pattern: import X from './icon.svg'
+            // X is the React component returned by SVGR.
+            exportType: 'default',
             svgo: false,      // keep SVG as-is (no minification surprises)
             titleProp: true,  // allows <Icon title="..." />
             ref: true,

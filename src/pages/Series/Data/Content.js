@@ -1,14 +1,14 @@
-import { ReactComponent as FeatureIcon1 } from "../../../Components/Icons/whyarcis_service_1.svg";
-import { ReactComponent as FeatureIcon2 } from "../../../Components/Icons/product_all_camerafeatures_12.svg";
-import { ReactComponent as FeatureIcon3 } from "../../../Components/Icons/product_all_camerafeatures_6.svg";
-import { ReactComponent as FeatureIcon4 } from "../../../Components/Icons/product_all_camerafeatures_3.svg";
-import { ReactComponent as FeatureIcon5 } from "../../../Components/Icons/product_all_camerafeatures_8.svg";
-import { ReactComponent as FeatureIcon6 } from "../../../Components/Icons/Event Reports.svg";
-import { ReactComponent as FeatureIcon7 } from "../../../Components/Icons/product_all_camerafeatures_7.svg";
-import { ReactComponent as FeatureIcon8 } from "../../../Components/Icons/Smart Playback.svg";
-import { ReactComponent as FeatureIcon9 } from "../../../Components/Icons/Role based.svg";
-import { ReactComponent as FeatureIcon10 } from "../../../Components/Icons/product_all_camerafeatures_9.svg";
-import { ReactComponent as FeatureIcon11 } from "../../../Components/Icons/Onvif.svg";
+import FeatureIcon1 from "../../../Components/Icons/whyarcis_service_1.svg";
+import FeatureIcon2 from "../../../Components/Icons/product_all_camerafeatures_12.svg";
+import FeatureIcon3 from "../../../Components/Icons/product_all_camerafeatures_6.svg";
+import FeatureIcon4 from "../../../Components/Icons/product_all_camerafeatures_3.svg";
+import FeatureIcon5 from "../../../Components/Icons/product_all_camerafeatures_8.svg";
+import FeatureIcon6 from "../../../Components/Icons/Event Reports.svg";
+import FeatureIcon7 from "../../../Components/Icons/product_all_camerafeatures_7.svg";
+import FeatureIcon8 from "../../../Components/Icons/Smart Playback.svg";
+import FeatureIcon9 from "../../../Components/Icons/Role based.svg";
+import FeatureIcon10 from "../../../Components/Icons/product_all_camerafeatures_9.svg";
+import FeatureIcon11 from "../../../Components/Icons/Onvif.svg";
 
 import InnovationIcon1 from "../../../Components/Icons/solution_edgeai_whychoose_8.svg";
 import InnovationIcon2 from "../../../Components/Icons/solution_genai_whychoose_6.svg";
@@ -28,21 +28,21 @@ import NvrInnovationIcon4 from "../../../Components/Icons/nvr_innovation_4.svg";
 import NvrInnovationIcon5 from "../../../Components/Icons/nvr_innovation_5.svg";
 import NvrInnovationIcon6 from "../../../Components/Icons/nvr_innovation_6.svg";
 
-import { ReactComponent as ArcisIcon1 } from "../../../Components/Icons/product_all_whychoose_6.svg";
-import { ReactComponent as ArcisIcon2 } from "../../../Components/Icons/Universal Camera Support.svg";
-import { ReactComponent as ArcisIcon3 } from "../../../Components/Icons/Centralized Management.svg";
-import { ReactComponent as ArcisIcon4 } from "../../../Components/Icons/solution_cloudai_whychoose_4.svg";
-import { ReactComponent as ArcisIcon5 } from "../../../Components/Icons/aboutus_innovation_6.svg";
-import { ReactComponent as ArcisIcon6 } from "../../../Components/Icons/Multi-site Deployment.svg";
-import { ReactComponent as ArcisIcon7 } from "../../../Components/Icons/solution_cloudai_whychoose_7.svg";
-import { ReactComponent as ArcisIcon8 } from "../../../Components/Icons/Cost-Effective Upgrade.svg";
+import ArcisIcon1 from "../../../Components/Icons/product_all_whychoose_6.svg";
+import ArcisIcon2 from "../../../Components/Icons/Universal Camera Support.svg";
+import ArcisIcon3 from "../../../Components/Icons/Centralized Management.svg";
+import ArcisIcon4 from "../../../Components/Icons/solution_cloudai_whychoose_4.svg";
+import ArcisIcon5 from "../../../Components/Icons/aboutus_innovation_6.svg";
+import ArcisIcon6 from "../../../Components/Icons/Multi-site Deployment.svg";
+import ArcisIcon7 from "../../../Components/Icons/solution_cloudai_whychoose_7.svg";
+import ArcisIcon8 from "../../../Components/Icons/Cost-Effective Upgrade.svg";
 
-import { ReactComponent as NvrIcon1 } from "../../../Components/Icons/nvr_features_1.svg";
-import { ReactComponent as NvrIcon2 } from "../../../Components/Icons/solution_cloudai_whychoose_8.svg";
-import { ReactComponent as NvrIcon3 } from "../../../Components/Icons/nvr_features_3.svg";
-import { ReactComponent as NvrIcon4 } from "../../../Components/Icons/nvr_features_4.svg";
-import { ReactComponent as NvrIcon5 } from "../../../Components/Icons/nvr_features_5.svg";
-import { ReactComponent as NvrIcon6 } from "../../../Components/Icons/nvr_features_6.svg";
+import NvrIcon1 from "../../../Components/Icons/nvr_features_1.svg";
+import NvrIcon2 from "../../../Components/Icons/solution_cloudai_whychoose_8.svg";
+import NvrIcon3 from "../../../Components/Icons/nvr_features_3.svg";
+import NvrIcon4 from "../../../Components/Icons/nvr_features_4.svg";
+import NvrIcon5 from "../../../Components/Icons/nvr_features_5.svg";
+import NvrIcon6 from "../../../Components/Icons/nvr_features_6.svg";
 
 import { position } from "@chakra-ui/react";
 

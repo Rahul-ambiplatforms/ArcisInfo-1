@@ -1,18 +1,18 @@
-import { ReactComponent as FeatureIcon1 } from "../../../Components/Icons/whyarcis_camerafeatures_1.svg";
-import { ReactComponent as FeatureIcon2 } from "../../../Components/Icons/whyarcis_camerafeatures_2.svg";
-import { ReactComponent as FeatureIcon3 } from "../../../Components/Icons/whyarcis_camerafeatures_3.svg";
-import { ReactComponent as FeatureIcon4 } from "../../../Components/Icons/whyarcis_camerafeatures_4.svg";
-import { ReactComponent as FeatureIcon5 } from "../../../Components/Icons/whyarcis_camerafeatures_5.svg";
-import { ReactComponent as ServiceIcon1 } from "../../../Components/Icons/whyarcis_service_1.svg";
-import { ReactComponent as ServiceIcon2 } from "../../../Components/Icons/whyarcis_service_2.svg";
-import { ReactComponent as ServiceIcon3 } from "../../../Components/Icons/whyarcis_service_3.svg";
-import { ReactComponent as ServiceIcon4 } from "../../../Components/Icons/whyarcis_service_4.svg";
-import { ReactComponent as ServiceIcon5 } from "../../../Components/Icons/whyarcis_service_5.svg";
-import { ReactComponent as ServiceIcon6 } from "../../../Components/Icons/whyarcis_service_6.svg";
-import { ReactComponent as ServiceIcon7 } from "../../../Components/Icons/whyarcis_service_7.svg";
-import { ReactComponent as ServiceIcon8 } from "../../../Components/Icons/whyarcis_service_8.svg";
-import { ReactComponent as ServiceIcon9 } from "../../../Components/Icons/whyarcis_service_9.svg";
-import { ReactComponent as ServiceIcon10 } from "../../../Components/Icons/whyarcis_service_10.svg";
+import FeatureIcon1 from "../../../Components/Icons/whyarcis_camerafeatures_1.svg";
+import FeatureIcon2 from "../../../Components/Icons/whyarcis_camerafeatures_2.svg";
+import FeatureIcon3 from "../../../Components/Icons/whyarcis_camerafeatures_3.svg";
+import FeatureIcon4 from "../../../Components/Icons/whyarcis_camerafeatures_4.svg";
+import FeatureIcon5 from "../../../Components/Icons/whyarcis_camerafeatures_5.svg";
+import ServiceIcon1 from "../../../Components/Icons/whyarcis_service_1.svg";
+import ServiceIcon2 from "../../../Components/Icons/whyarcis_service_2.svg";
+import ServiceIcon3 from "../../../Components/Icons/whyarcis_service_3.svg";
+import ServiceIcon4 from "../../../Components/Icons/whyarcis_service_4.svg";
+import ServiceIcon5 from "../../../Components/Icons/whyarcis_service_5.svg";
+import ServiceIcon6 from "../../../Components/Icons/whyarcis_service_6.svg";
+import ServiceIcon7 from "../../../Components/Icons/whyarcis_service_7.svg";
+import ServiceIcon8 from "../../../Components/Icons/whyarcis_service_8.svg";
+import ServiceIcon9 from "../../../Components/Icons/whyarcis_service_9.svg";
+import ServiceIcon10 from "../../../Components/Icons/whyarcis_service_10.svg";
 
 export const WhyArcisAIContent = {
   hero: [
