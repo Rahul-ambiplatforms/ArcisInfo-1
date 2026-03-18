@@ -192,7 +192,7 @@ const Navbar = ({ adminSection, setAdminSection }) => {
                   onClick={() => navigateTo("/", "Home")}
                 >
                   <Image loading="lazy"
-                    src="../images/ArcisAi.png"
+                    src="/images/ArcisAi.png"
                     alt="Company Logo"
                     boxSize="40px"
                     w="107px"

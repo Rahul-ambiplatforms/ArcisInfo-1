@@ -2,9 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
 
-  // Allow importing from src/ using @/ alias
-  // e.g. import Foo from '@/src/pages/Foo/Foo'
-
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'vmukti.com' },
@@ -13,27 +10,51 @@ const nextConfig = {
     ],
   },
 
-  // Compiler: suppress known console.error noise from 3rd-party libs during SSR
-  compiler: {
-    styledComponents: false,
+  // ─── SVG Support ────────────────────────────────────────────────────────────
+  // Enables both import patterns that CRA components use:
+  //   import { ReactComponent as Foo } from './foo.svg'   (inline React component)
+  //   import Foo from './foo.svg'                          (also returns React component)
+  webpack(config) {
+    // Remove Next.js' default SVG rule so @svgr/webpack can take over
+    const fileLoaderRule = config.module.rules.find(
+      (rule) => rule.test && rule.test.test?.('.svg')
+    );
+    if (fileLoaderRule) {
+      fileLoaderRule.exclude = /\.svg$/i;
+    }
+
+    config.module.rules.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      use: [
+        {
+          loader: '@svgr/webpack',
+          options: {
+            // 'auto' supports both the default-import pattern AND the
+            // { ReactComponent as X } named-import pattern from CRA.
+            exportType: 'auto',
+            svgo: false,      // keep SVG as-is (no minification surprises)
+            titleProp: true,  // allows <Icon title="..." />
+            ref: true,
+          },
+        },
+      ],
+    });
+
+    return config;
   },
 
-  // Suppress Next.js strict-mode double-invoke warning for legacy CRA code
-  experimental: {
-    // esmExternals: true,
-  },
-
-  // Redirect legacy CRA-era URLs to the canonical Next.js equivalents
+  // ─── Legacy URL Redirects (301) ─────────────────────────────────────────────
   async redirects() {
     return [
-      { source: '/solutions',              destination: '/solution/edge-ai',      permanent: true },
-      { source: '/about',                  destination: '/about-us',              permanent: true },
-      { source: '/contact',               destination: '/contact-us',            permanent: true },
-      { source: '/products',              destination: '/s-series',              permanent: true },
-      { source: '/products/s-series',     destination: '/s-series',              permanent: true },
-      { source: '/products/eco-series',   destination: '/eco-series',            permanent: true },
-      { source: '/products/bridge-device',destination: '/arcis-bridge-device',   permanent: true },
-      { source: '/products/vms',          destination: '/cloud-vms',             permanent: true },
+      { source: '/solutions',               destination: '/solution/edge-ai',    permanent: true },
+      { source: '/about',                   destination: '/about-us',            permanent: true },
+      { source: '/contact',                 destination: '/contact-us',          permanent: true },
+      { source: '/products',                destination: '/s-series',            permanent: true },
+      { source: '/products/s-series',       destination: '/s-series',            permanent: true },
+      { source: '/products/eco-series',     destination: '/eco-series',          permanent: true },
+      { source: '/products/bridge-device',  destination: '/arcis-bridge-device', permanent: true },
+      { source: '/products/vms',            destination: '/cloud-vms',           permanent: true },
     ];
   },
 };
