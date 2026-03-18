@@ -42,7 +42,7 @@ function Header() {
       <Flex alignItems="center">
         <Link as={RouterLink} to="/">
           <Image loading="lazy"
-            src="./images/ArcisAi.png"
+            src="/images/ArcisAi.png"
             alt="Company Logo"
             w="107px"
             h="24px"
@@ -163,7 +163,7 @@ function Header() {
             alignItems="center"
           >
             <Image loading="lazy"
-              src="./images/ArcisAi.png"
+              src="/images/ArcisAi.png"
               alt="Company Logo"
               w="107px"
               h="24px"

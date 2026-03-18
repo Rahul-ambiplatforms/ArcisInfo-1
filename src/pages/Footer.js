@@ -297,7 +297,7 @@ function Footer() {
             {/* Column 1: Logo, Address, Contact */}
             <Flex direction="column" gap={4}>
               <Flex direction="column" gap={2}>
-                <Image loading="lazy" src="./images/ArcisAi_1.png" alt="Logo" w="120px" />
+                <Image loading="lazy" src="/images/ArcisAi_1.png" alt="Logo" w="120px" />
                 <Box w={{ base: "100%", md: "60%" }}>
                   <Text fontSize="14px" color="white">
                     7, Arista@Eight corporate House, Near Satyam House, Behind

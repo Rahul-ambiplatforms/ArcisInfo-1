@@ -56,7 +56,7 @@ const WhyArcisAI = () => {
         pointerEvents="none"
       >
         <Image loading="lazy"
-          src="./images/home_wave_gif.gif"
+          src="/images/home_wave_gif.gif"
           alt="Background Wave"
           w="100%"
           h="100%"

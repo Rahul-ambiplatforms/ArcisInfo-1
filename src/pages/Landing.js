@@ -269,7 +269,7 @@ function Landing() {
           position="relative"
           zIndex={10}
         >
-          <Image loading="lazy" src="./images/DeviceImage.png" alt="Laptop" />
+          <Image loading="lazy" src="/images/DeviceImage.png" alt="Laptop" />
         </Flex>
       </Flex>
     </>
