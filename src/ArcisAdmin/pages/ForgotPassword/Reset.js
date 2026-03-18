@@ -1,3 +1,4 @@
+'use client';
 import { Box, Button, Flex, Input, Text, useToast } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";

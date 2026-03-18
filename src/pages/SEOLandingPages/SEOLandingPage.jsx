@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { Box, Container, Heading, Text, SimpleGrid, VStack, HStack, Button, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Icon, Flex, Badge, Divider } from "@chakra-ui/react";
@@ -13,8 +14,9 @@ import seoPageDataExpansion3 from "../../data/seoPageDataExpansion3";
 import seoPageDataExpansion4 from "../../data/seoPageDataExpansion4";
 import seoPageDataExpansion5 from "../../data/seoPageDataExpansion5";
 
-const SEOLandingPage = () => {
-  const params = useParams();
+const SEOLandingPage = ({ paramsOverride }) => {
+  const routerParams = useParams();
+  const params = paramsOverride ? { ...routerParams, ...paramsOverride } : routerParams;
   const { category, pageSlug, city, slug, seriesId } = params;
 
   // Multi-strategy key lookup

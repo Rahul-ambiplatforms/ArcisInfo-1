@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import { useParams } from "react-router-dom";
 import HeroSection from "./Components/HeroSection";
@@ -10,8 +11,9 @@ import { Box } from "@chakra-ui/react";
 import NotFound from "../NotFound";
 import PageContentWrapper from "../../Components/PageContentWrapper";
 
-const Series = () => {
-  const { seriesId } = useParams();
+const Series = ({ seriesId: seriesIdProp }) => {
+  const routerParams = useParams();
+  const seriesId = seriesIdProp ?? routerParams.seriesId;
 
   const getDataKey = (param) => {
     switch (param) {

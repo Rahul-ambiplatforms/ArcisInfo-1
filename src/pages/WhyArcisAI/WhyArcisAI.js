@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import HeroSectionCarousel from "../../Components/HeroSectionCarousel";

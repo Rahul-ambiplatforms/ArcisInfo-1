@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import { Box } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
@@ -9,8 +10,9 @@ import { IFSECSEO } from "./Data/SEOContent";
 import { Helmet } from "react-helmet-async";
 import CTAButton from "../../Components/CTAButton";
 
-const IFSEC = () => {
-  const { eventId } = useParams();
+const IFSEC = ({ eventId: eventIdProp }) => {
+  const routerParams = useParams();
+  const eventId = eventIdProp ?? routerParams.eventId;
 
   // For now, we only have IFSEC data
   // Later you can add more events like: const eventData = eventId === 'ifsec' ? IFSECData : OtherEventData;

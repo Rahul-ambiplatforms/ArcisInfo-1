@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from 'react';
 import { Box, Container, Heading, Text, VStack, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Input, InputGroup, InputLeftElement, Tag, HStack, Wrap, WrapItem } from '@chakra-ui/react';
 import { Helmet } from 'react-helmet-async';

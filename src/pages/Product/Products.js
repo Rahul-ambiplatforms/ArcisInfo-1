@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -17,8 +18,9 @@ import AISolutionIndustry from "../HomePage/Components/AISolutionIndustry";
 import NotFound from "../NotFound";
 import PageContentWrapper from "../../Components/PageContentWrapper";
 
-const Products = () => {
-  const { productId } = useParams();
+const Products = ({ productId: productIdProp }) => {
+  const routerParams = useParams();
+  const productId = productIdProp ?? routerParams.productId;
 
   // Normalize the productId from URL (e.g., "ai-bullet-cctv-camera" -> "aibulletcctvcamera")
   const normalizedId = productId

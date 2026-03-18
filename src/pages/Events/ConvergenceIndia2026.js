@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import {Box,Container,Heading,Text,Button,Flex,VStack,HStack,Badge,SimpleGrid,Icon,List,ListItem,ListIcon} from '@chakra-ui/react';
 import {Helmet} from 'react-helmet-async';

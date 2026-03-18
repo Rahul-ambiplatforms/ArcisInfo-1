@@ -1,3 +1,4 @@
+'use client';
 import {
   Box,
   Container,
@@ -209,8 +210,9 @@ const TableOfContents = ({ components }) => {
   );
 };
 
-const BlogsOverviewDash = () => {
-  const { urlWords } = useParams();
+const BlogsOverviewDash = ({ urlWords: urlWordsProp }) => {
+  const routerParams = useParams();
+  const urlWords = urlWordsProp ?? routerParams.urlWords;
   const [blog, setBlog] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

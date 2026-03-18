@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import { useParams } from "react-router-dom";
 import { Series as SeriesData } from "./Data/Content";
@@ -12,8 +13,9 @@ import CTAButton from "../../Components/CTAButton";
 import FAQSection from "../../Components/FAQSection";
 import ProductInfo from "./Components/ProductInfo";
 
-const MainProduct = ({ seriesType = "nvrDvrSeries" }) => {
-  const { seriesId } = useParams();
+const MainProduct = ({ seriesType = "nvrDvrSeries", seriesId: seriesIdProp }) => {
+  const routerParams = useParams();
+  const seriesId = seriesIdProp ?? routerParams.seriesId;
 
   // Map URL param to data key
   let selectedSeries = seriesType;

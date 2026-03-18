@@ -8,21 +8,22 @@ const SEOLandingPage = lazy(() => import("../SEOLandingPages/SEOLandingPage"));
 const SERIES_SLUGS = ["s-series", "eco-series"];
 const PRODUCT_SLUGS = ["arcis-bridge-device", "cloud-vms", "arcis-nvr"];
 
-const SlugResolver = () => {
-  const { seriesId } = useParams();
+const SlugResolver = ({ slug: slugProp }) => {
+  const routerParams = useParams();
+  const seriesId = slugProp ?? routerParams.seriesId;
 
   if (SERIES_SLUGS.includes(seriesId)) {
-    return <Series />;
+    return <Series seriesId={seriesId} />;
   }
 
   if (PRODUCT_SLUGS.includes(seriesId)) {
-    return <MainProduct />;
+    return <MainProduct seriesId={seriesId} />;
   }
 
   // Fallback to SEO landing page for city/state/other SEO slugs
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <SEOLandingPage />
+      <SEOLandingPage paramsOverride={{ seriesId }} />
     </Suspense>
   );
 };

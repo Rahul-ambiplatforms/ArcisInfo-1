@@ -1,3 +1,4 @@
+'use client';
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -14,8 +15,9 @@ import { Solution } from "./Data/Content";
 import { getSolutionSEO } from "./Data/SEOContent";
 import PageContentWrapper from "../../Components/PageContentWrapper";
 
-const Solutions = () => {
-  const { solutionId } = useParams();
+const Solutions = ({ solutionId: solutionIdProp }) => {
+  const routerParams = useParams();
+  const solutionId = solutionIdProp ?? routerParams.solutionId;
   const solutionData = Solution[solutionId];
   const solutionSEO = getSolutionSEO(solutionId);
 
