@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "main": "app/page.js",
   "engines": {
-    "node": "18.x"
+    "node": "24.x"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.2.4",
