@@ -1,4 +1,4 @@
-import MainProduct from '@/src/pages/Series/MainProduct';
+import MainProduct from '@/src/views/Series/MainProduct';
 
 export const metadata = {
   title: 'ArcisAI Cloud VMS | STQC Certified Video Management System',

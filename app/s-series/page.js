@@ -1,4 +1,4 @@
-import Series from '@/src/pages/Series/Series';
+import Series from '@/src/views/Series/Series';
 
 export const metadata = {
   title: 'S-Series Premium AI CCTV Cameras | ArcisAI',

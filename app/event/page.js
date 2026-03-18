@@ -1,4 +1,4 @@
-import Event from '@/src/pages/EventPage/Event';
+import Event from '@/src/views/EventPage/Event';
 
 export const metadata = {
   title: 'Events | ArcisAI Surveillance Trade Shows & Conferences',

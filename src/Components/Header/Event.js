@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Text, Flex, useDisclosure } from "@chakra-ui/react";
 import { keyframes } from "@emotion/react";
 
-import EventPopup from "../../pages/Events/Event";
+import EventPopup from "../../views/Events/Event";
 
 const marquee = keyframes`
   from { transform: translateX(100%); }

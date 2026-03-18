@@ -269,11 +269,11 @@ export default function BlogsContent() {
           {blogs.map((post, index) => {
             return (
               <Link
+                key={post._id || index}
                 to={`/blog/${post.metadata.urlWords}`}
                 style={{ textDecoration: "none" }}
               >
                 <GridItem
-                  key={post._id || index}
                   bg="white"
                   borderRadius="24px"
                   overflow="hidden"

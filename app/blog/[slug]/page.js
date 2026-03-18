@@ -1,4 +1,4 @@
-import BlogsContent from '@/src/pages/Blogs/BlogsContents';
+import BlogsContent from '@/src/views/Blogs/BlogsContents';
 
 export async function generateMetadata({ params }) {
   const { slug } = params;

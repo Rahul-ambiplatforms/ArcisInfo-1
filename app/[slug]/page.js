@@ -1,4 +1,4 @@
-import SEOLandingPage from '@/src/pages/SEOLandingPages/SEOLandingPage';
+import SEOLandingPage from '@/src/views/SEOLandingPages/SEOLandingPage';
 
 /**
  * Catch-all for top-level dynamic slugs that are not matched by more

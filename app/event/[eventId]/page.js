@@ -1,4 +1,4 @@
-import IFSEC from '@/src/pages/EventPage/IFSEC';
+import IFSEC from '@/src/views/EventPage/IFSEC';
 
 export async function generateMetadata({ params }) {
   const { eventId } = params;

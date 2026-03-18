@@ -1411,7 +1411,7 @@ const CTAComponent = ({ component, onContentChange }) => {
             </Checkbox> */}
           </Flex>
           <InputGroup>
-            <InputLeftAddon children="URL" />
+            <InputLeftAddon>URL</InputLeftAddon>
             <Input
               placeholder="https://example.com"
               value={content.buttonLink || ""}

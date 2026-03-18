@@ -1,4 +1,4 @@
-import AboutUs from '@/src/pages/AboutUs/AboutUs';
+import AboutUs from '@/src/views/AboutUs/AboutUs';
 
 export const metadata = {
   title: 'About ArcisAI | Adiance Technologies - Enterprise AI Surveillance',

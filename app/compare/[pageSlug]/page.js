@@ -1,4 +1,4 @@
-import SEOLandingPage from '@/src/pages/SEOLandingPages/SEOLandingPage';
+import SEOLandingPage from '@/src/views/SEOLandingPages/SEOLandingPage';
 
 export async function generateMetadata({ params }) {
   const { pageSlug } = params;

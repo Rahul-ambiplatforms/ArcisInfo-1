@@ -1,4 +1,4 @@
-import NotFound from '@/src/pages/NotFound';
+import NotFound from '@/src/views/NotFound';
 
 export const metadata = {
   title: '404 - Page Not Found | ArcisAI',

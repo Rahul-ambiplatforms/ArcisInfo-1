@@ -1,4 +1,4 @@
-import FAQHub from '@/src/pages/FAQHub/FAQHub';
+import FAQHub from '@/src/views/FAQHub/FAQHub';
 
 export const metadata = {
   title: 'ArcisAI FAQ | AI CCTV Questions Answered',

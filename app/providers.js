@@ -2,7 +2,6 @@
 
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import { HelmetProvider } from 'react-helmet-async';
-import { BrowserRouter } from 'react-router-dom';
 
 /**
  * Chakra UI theme — matches the original CRA app (src/index.js)
@@ -23,23 +22,29 @@ const theme = extendTheme({
 /**
  * Providers wraps the entire app client-side.
  *
- * BrowserRouter is kept for backward-compatibility with existing components
- * that use react-router-dom hooks (Link, useNavigate, useParams).
- * Next.js intercepts <a> tag clicks, so Link components navigate correctly
- * through Next.js routing.  useParams() will return {} here; pages that
- * need dynamic params pass them explicitly as props.
+ * We use StaticRouter (server) vs BrowserRouter (client) to avoid the
+ * "document is not defined" error during Next.js SSR prerendering.
+ * BrowserRouter accesses window/document on mount; StaticRouter does not.
  *
- * HelmetProvider is kept for any legacy <Helmet> usage still present in
- * components during the migration phase.  Prefer Next.js Metadata API for
- * new / updated pages.
+ * HelmetProvider is kept for legacy <Helmet> usage during migration.
  */
 export function Providers({ children }) {
+  const isServer = typeof window === 'undefined';
+
+  let content;
+  if (isServer) {
+    // During SSR, use StaticRouter which doesn't access browser globals
+    const { StaticRouter } = require('react-router-dom/server');
+    content = <StaticRouter location="/">{children}</StaticRouter>;
+  } else {
+    const { BrowserRouter } = require('react-router-dom');
+    content = <BrowserRouter>{children}</BrowserRouter>;
+  }
+
   return (
     <ChakraProvider theme={theme}>
       <HelmetProvider>
-        <BrowserRouter>
-          {children}
-        </BrowserRouter>
+        {content}
       </HelmetProvider>
     </ChakraProvider>
   );

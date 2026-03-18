@@ -1,4 +1,4 @@
-import ConvergenceIndia2026 from '@/src/pages/Events/ConvergenceIndia2026';
+import ConvergenceIndia2026 from '@/src/views/Events/ConvergenceIndia2026';
 
 export const metadata = {
   title: 'ArcisAI at Convergence India 2026 | AI Surveillance Exhibition',

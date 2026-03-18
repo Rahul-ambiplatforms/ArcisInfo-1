@@ -1,4 +1,4 @@
-import MainProduct from '@/src/pages/Series/MainProduct';
+import MainProduct from '@/src/views/Series/MainProduct';
 
 export const metadata = {
   title: 'ArcisAI Bridge Device (ABD) | Legacy Camera Converter to AI',

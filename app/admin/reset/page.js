@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import Reset from '@/src/ArcisAdmin/pages/ForgotPassword/Reset';
 
 export const metadata = {

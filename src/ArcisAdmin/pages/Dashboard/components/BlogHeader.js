@@ -46,7 +46,7 @@ const BlogHeader = ({ onSearch, searchQuery, statusFilter, onChangeStatus }) => 
               size="sm"
               borderRadius="md"
             />
-            <InputRightElement pointerEvents="none" children={<SearchIcon color="gray.400" />} />
+            <InputRightElement pointerEvents="none"><SearchIcon color="gray.400" /></InputRightElement>
           </InputGroup>
         </Flex>
       </Flex>

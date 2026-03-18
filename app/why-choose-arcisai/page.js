@@ -1,4 +1,4 @@
-import WhyArcisAI from '@/src/pages/WhyArcisAI/WhyArcisAI';
+import WhyArcisAI from '@/src/views/WhyArcisAI/WhyArcisAI';
 
 export const metadata = {
   title: 'Why Choose ArcisAI | Benefits of AI CCTV Surveillance',

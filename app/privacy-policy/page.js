@@ -1,4 +1,4 @@
-import PrivacyPolicy from '@/src/pages/PrivacyPolicy';
+import PrivacyPolicy from '@/src/views/PrivacyPolicy';
 
 export const metadata = {
   title: 'Privacy Policy | ArcisAI',

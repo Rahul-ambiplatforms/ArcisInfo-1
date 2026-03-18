@@ -1,4 +1,4 @@
-import Solutions from '@/src/pages/Solution/Solutions';
+import Solutions from '@/src/views/Solution/Solutions';
 
 const SOLUTION_META = {
   'edge-ai': {

@@ -1,4 +1,4 @@
-import Thankyou from '@/src/pages/Thankyou';
+import Thankyou from '@/src/views/Thankyou';
 
 export const metadata = {
   title: 'Thank You | ArcisAI',

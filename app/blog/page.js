@@ -1,4 +1,4 @@
-import BlogsDashboard from '@/src/pages/Blogs/BlogsDashboard';
+import BlogsDashboard from '@/src/views/Blogs/BlogsDashboard';
 
 export const metadata = {
   title: 'ArcisAI Blog | AI Surveillance & Security Insights',

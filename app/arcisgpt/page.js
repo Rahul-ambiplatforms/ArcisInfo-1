@@ -1,4 +1,4 @@
-import MainProduct from '@/src/pages/Series/MainProduct';
+import MainProduct from '@/src/views/Series/MainProduct';
 
 export const metadata = {
   title: 'ArcisGPT | Gen AI Visual Intelligence & Smart Video Search',

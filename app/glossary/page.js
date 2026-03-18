@@ -1,4 +1,4 @@
-import Glossary from '@/src/pages/Glossary/Glossary';
+import Glossary from '@/src/views/Glossary/Glossary';
 
 export const metadata = {
   title: 'AI Surveillance Glossary | CCTV & Security Terms | ArcisAI',

@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import OtpVerification from '@/src/ArcisAdmin/pages/OTP/OtpVerification';
 
 export const metadata = {

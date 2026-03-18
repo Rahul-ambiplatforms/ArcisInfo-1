@@ -1,4 +1,4 @@
-import ContactUs from '@/src/pages/ContactUs/ContactUs';
+import ContactUs from '@/src/views/ContactUs/ContactUs';
 
 export const metadata = {
   title: 'Contact ArcisAI | Get Surveillance Solutions',

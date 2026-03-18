@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import Dashboard from '@/src/ArcisAdmin/pages/Dashboard/Dashboard';
 
 export const metadata = {

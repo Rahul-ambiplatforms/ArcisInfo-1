@@ -1,4 +1,4 @@
-import HomeDashboard from '@/src/pages/HomePage/HomeDashboard';
+import HomeDashboard from '@/src/views/HomePage/HomeDashboard';
 
 export const metadata = {
   title: 'ArcisAI - Enterprise AI CCTV Cameras | NDAA Compliant Smart Surveillance',

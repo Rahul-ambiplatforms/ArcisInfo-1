@@ -1,4 +1,4 @@
-import Products from '@/src/pages/Product/Products';
+import Products from '@/src/views/Product/Products';
 
 export async function generateMetadata({ params }) {
   const { productId } = params;

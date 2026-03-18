@@ -1,4 +1,4 @@
-import TermsOfService from '@/src/pages/TermsOfService';
+import TermsOfService from '@/src/views/TermsOfService';
 
 export const metadata = {
   title: 'Terms of Service | ArcisAI',

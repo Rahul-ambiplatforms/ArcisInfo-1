@@ -105,7 +105,7 @@ const Glossary = () => {
   return (
     <>
       <Helmet>
-        <title>AI Video Surveillance Glossary | {glossaryTerms.length}+ Terms Explained | ArcisAI</title>
+        <title>{`AI Video Surveillance Glossary | ${glossaryTerms.length}+ Terms Explained | ArcisAI`}</title>
         <meta name="description" content={`Comprehensive glossary of ${glossaryTerms.length}+ AI video surveillance terms. Covering edge AI, NDAA compliance, facial recognition, ANPR, camera specifications, VMS architecture, and more.`} />
         <meta name="keywords" content="AI CCTV glossary, video surveillance terminology, NDAA definition, edge AI meaning, ANPR explained, security camera terms, VMS definition, ONVIF explained" />
         <link rel="canonical" href="https://www.arcisai.io/glossary" />
