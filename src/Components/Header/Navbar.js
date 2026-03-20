@@ -33,7 +33,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import { FaCamera, FaVideo, FaEye } from "react-icons/fa";
 import CustomButton from "../CustomButton";
 import NavbarDownIcon from "../Icons/Navbar_down_icon.svg";
-import { Link as RouterLink } from "react-router-dom";
+import NextLink from "next/link";
 import { dropdownData, actionLinks, loginButton } from "./navbarData";
 
 /* --- Dropdown Component with Hover and Click Support --- */
@@ -119,8 +119,8 @@ const NavDropdown = ({ title, data }) => {
                     onMouseEnter={() => setHoveredProduct(item.group)}
                   >
                     <Link
-                      as={RouterLink}
-                      to={item.groupLink}
+                      as={NextLink}
+                      href={item.groupLink}
                       display="flex"
                       justifyContent="space-between"
                       alignItems="center"
@@ -153,8 +153,8 @@ const NavDropdown = ({ title, data }) => {
                 {standaloneItems.map((item, index) => (
                   <Box key={index} borderRadius="md">
                     <Link
-                      as={RouterLink}
-                      to={item.link}
+                      as={NextLink}
+                      href={item.link}
                       display="block"
                       py={2}
                       px={3}
@@ -181,8 +181,8 @@ const NavDropdown = ({ title, data }) => {
                     ?.items?.map((subItem, subIndex) => (
                       <MenuItem
                         key={subIndex}
-                        as={RouterLink}
-                        to={subItem.link}
+                        as={NextLink}
+                        href={subItem.link}
                         bg="transparent"
                         _hover={{ bg: "gray.800", color: "white" }}
                         color="gray.300"
@@ -209,8 +209,8 @@ const NavDropdown = ({ title, data }) => {
                   title={
                     item.groupLink ? (
                       <Link
-                        as={RouterLink}
-                        to={item.groupLink}
+                        as={NextLink}
+                        href={item.groupLink}
                         _hover={{ color: "white", textDecoration: "none" }}
                         onClick={() => setIsOpen(false)}
                       >
@@ -228,8 +228,8 @@ const NavDropdown = ({ title, data }) => {
                   {item.items?.map((subItem, subIndex) => (
                     <MenuItem
                       key={subIndex}
-                      as={RouterLink}
-                      to={subItem.link}
+                      as={NextLink}
+                      href={subItem.link}
                       bg="transparent"
                       _hover={{ bg: "gray.800" }}
                       color="white"
@@ -244,8 +244,8 @@ const NavDropdown = ({ title, data }) => {
               return (
                 <MenuItem
                   key={index}
-                  as={RouterLink}
-                  to={item.link}
+                  as={NextLink}
+                  href={item.link}
                   bg="transparent"
                   _hover={{ bg: "gray.800" }}
                   color="white"
@@ -289,7 +289,7 @@ const Navbar = () => {
       >
         <Flex gap="4" align="center" justify="center">
           {/* LOGO */}
-          <RouterLink to="/">
+          <NextLink href="/">
             <Image loading="lazy"
               src="/images/ArcisAi_logo.png"
               alt="ArcisAI Logo"
@@ -298,7 +298,7 @@ const Navbar = () => {
               cursor="pointer"
               _hover={{ opacity: 0.8 }}
             />
-          </RouterLink>
+          </NextLink>
 
           {/* DESKTOP NAV - Center */}
           <HStack spacing={2} display={{ base: "none", lg: "flex" }}>
@@ -340,8 +340,8 @@ const Navbar = () => {
             {actionLinks[0].label}
           </Link> */}
           <Link
-            as={RouterLink}
-            to={actionLinks[1].link}
+            as={NextLink}
+            href={actionLinks[1].link}
             fontSize="16px"
             fontWeight="400"
             color="white"
@@ -361,22 +361,15 @@ const Navbar = () => {
         </HStack>
 
         {/* MOBILE BURGER */}
-        <CustomButton
-          showTicks={false}
-          w="50px"
-          h="50px"
+        <IconButton
           display={{ base: "flex", lg: "none" }}
-        >
-          <IconButton
-            display={{ base: "flex", lg: "none" }}
-            icon={<HamburgerIcon boxSize={6} />}
-            variant="ghost"
-            color="white"
-            onClick={onOpen}
-            aria-label="Open Menu"
-            _hover={{ bg: "whiteAlpha.200" }}
-          />
-        </CustomButton>
+          icon={<HamburgerIcon boxSize={6} />}
+          variant="ghost"
+          color="white"
+          onClick={onOpen}
+          aria-label="Open Menu"
+          _hover={{ bg: "whiteAlpha.200" }}
+        />
       </Flex>
 
       {/* ----------------- MOBILE MENU DRAWER ----------------- */}
@@ -389,7 +382,7 @@ const Navbar = () => {
             borderBottom="1px solid"
             borderColor="gray.800"
           >
-            <RouterLink to="/" onClick={onClose}>
+            <NextLink href="/" onClick={onClose}>
               <Image loading="lazy"
                 src="/images/ArcisAi_logo.png"
                 alt="ArcisAI Logo"
@@ -398,7 +391,7 @@ const Navbar = () => {
                 cursor="pointer"
                 _hover={{ opacity: 0.8 }}
               />
-            </RouterLink>
+            </NextLink>
           </DrawerHeader>
           <DrawerBody px={0}>
             <Stack
@@ -430,8 +423,8 @@ const Navbar = () => {
                             <Box key={itemIndex} mb={4}>
                               {item.groupLink ? (
                                 <Link
-                                  as={RouterLink}
-                                  to={item.groupLink}
+                                  as={NextLink}
+                                  href={item.groupLink}
                                   color="gray.500"
                                   fontSize="16px"
                                   mb={2}
@@ -461,8 +454,8 @@ const Navbar = () => {
                                 {item.items?.map((subItem, subIndex) => (
                                   <Link
                                     key={subIndex}
-                                    as={RouterLink}
-                                    to={subItem.link}
+                                    as={NextLink}
+                                    href={subItem.link}
                                     color="white"
                                     fontSize="14px"
                                     onClick={onClose}
@@ -478,8 +471,8 @@ const Navbar = () => {
                           return (
                             <Link
                               key={itemIndex}
-                              as={RouterLink}
-                              to={item.link}
+                              as={NextLink}
+                              href={item.link}
                               color="white"
                               fontSize="14px"
                               display="block"
@@ -520,8 +513,8 @@ const Navbar = () => {
                 </Button>
               ))} */}
               <Button
-                as={RouterLink}
-                to={actionLinks[1].link}
+                as={NextLink}
+                href={actionLinks[1].link}
                 variant="ghost"
                 color="white"
                 w="full"

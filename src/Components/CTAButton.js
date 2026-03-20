@@ -6,7 +6,6 @@ import {
   Image,
   Container,
   Text,
-  Link,
 } from "@chakra-ui/react";
 import CustomButton from "./CustomButton";
 
@@ -146,9 +145,9 @@ const CTAButton = ({
             </Text>
           </Heading>
 
-          <Link href={link} style={{ textDecoration: "none" }}>
-            <CustomButton
-              as="p"
+          <CustomButton
+              as="a"
+              href={link}
               width={{
                 base: btnMobile?.width || "160px",
                 md: btnDesktop?.width || "220px",
@@ -209,8 +208,7 @@ const CTAButton = ({
               showGlow={false}
             >
               {buttonText}
-            </CustomButton>
-          </Link>
+          </CustomButton>
         </Flex>
       </Box>
     </Box>
