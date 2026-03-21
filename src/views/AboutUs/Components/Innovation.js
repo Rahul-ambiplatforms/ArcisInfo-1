@@ -9,7 +9,8 @@ import {
   Image,
 } from "@chakra-ui/react";
 
-const InnovationCard = ({ title, description, icon }) => {
+const InnovationCard = ({ title, description, icon: IconComponent }) => {
+  const isComponent = typeof IconComponent === 'function' || (typeof IconComponent === 'object' && IconComponent !== null && IconComponent.$$typeof);
   return (
     <VStack
       spacing={4}
@@ -29,7 +30,13 @@ const InnovationCard = ({ title, description, icon }) => {
         bg="rgba(255, 255, 255, 0.20)"
         mb={2}
       >
-        <Image loading="lazy" src={icon} alt={title} boxSize={{ base: "48px", md: "72px" }} />
+        {isComponent ? (
+          <Box boxSize={{ base: "48px", md: "72px" }}>
+            <IconComponent width="100%" height="100%" />
+          </Box>
+        ) : (
+          <Image loading="lazy" src={IconComponent} alt={title} boxSize={{ base: "48px", md: "72px" }} />
+        )}
       </Flex>
       <Heading
         as="h3"

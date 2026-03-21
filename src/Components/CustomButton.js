@@ -196,6 +196,7 @@ const CustomButton = ({
 
       {/* BUTTON TEXT */}
       <Text
+        as="span"
         className="btn-text"
         color={textColor}
         bgGradient={props.textGradient}
@@ -204,6 +205,9 @@ const CustomButton = ({
         fontWeight={fontWeight}
         transition="color 0.1s"
         zIndex={1}
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
       >
         {children}
       </Text>

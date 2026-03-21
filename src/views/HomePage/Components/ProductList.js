@@ -13,6 +13,7 @@ import {
 import { FaChevronRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { homeContent } from "../Data/Content";
+import RightButtonSvg from "../../../Components/Icons/RightButton.svg";
 import CustomButton from "../../../Components/CustomButton";
 
 const ProductList = ({ data }) => {
@@ -290,13 +291,9 @@ const ProductList = ({ data }) => {
                       sx={{ padding: 0 }}
                       showTicks={false}
                     >
-                      <Image loading="lazy"
-                        src={
-                          require("../../../Components/Icons/RightButton.svg")
-                            .default
-                        }
-                        alt="Next product"
-                        w="15px"
+                      <RightButtonSvg
+                        width="15px"
+                        aria-label="Next product"
                       />
                     </CustomButton>
                   </HStack>

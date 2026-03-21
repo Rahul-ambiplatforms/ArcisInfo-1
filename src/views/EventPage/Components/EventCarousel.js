@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Box, Flex, Heading, Text, Image, HStack } from "@chakra-ui/react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import CustomButton from "../../../Components/CustomButton";
 import LeftButtonIcon from "../../../Components/Icons/LeftButton.svg";
 import RightButtonIcon from "../../../Components/Icons/RightButton.svg";
 
 const EventCarousel = ({ data }) => {
-  const navigate = useNavigate();
+  const router = useRouter();
   const events = data?.events || [];
   const [currentEvent, setCurrentEvent] = useState(0);
   const [direction, setDirection] = useState(0);
@@ -208,22 +208,18 @@ const EventCarousel = ({ data }) => {
                       sx={{
                         padding: 0,
                         cursor: "pointer",
-                        "& img": { transition: "filter 0.2s" },
+                        "& svg": { transition: "filter 0.2s" },
                         _hover: {
-                          "& img": {
+                          "& svg": {
                             filter:
                               "brightness(0) saturate(100%) invert(86%) sepia(23%) saturate(995%) hue-rotate(68deg) brightness(103%) contrast(103%)",
                           },
                         },
                       }}
                     >
-                      <Image loading="lazy"
-                        src={LeftButtonIcon}
-                        alt="Previous"
-                        w="16px"
-                        h="16px"
-                        pointerEvents="none"
-                      />
+                      <Box w="16px" h="16px" pointerEvents="none">
+                        <LeftButtonIcon width="100%" height="100%" />
+                      </Box>
                     </CustomButton>
                     <CustomButton
                       onClick={nextEvent}
@@ -236,22 +232,18 @@ const EventCarousel = ({ data }) => {
                       sx={{
                         padding: 0,
                         cursor: "pointer",
-                        "& img": { transition: "filter 0.2s" },
+                        "& svg": { transition: "filter 0.2s" },
                         _hover: {
-                          "& img": {
+                          "& svg": {
                             filter:
                               "brightness(0) saturate(100%) invert(86%) sepia(23%) saturate(995%) hue-rotate(68deg) brightness(103%) contrast(103%)",
                           },
                         },
                       }}
                     >
-                      <Image loading="lazy"
-                        src={RightButtonIcon}
-                        alt="Next"
-                        w="16px"
-                        h="16px"
-                        pointerEvents="none"
-                      />
+                      <Box w="16px" h="16px" pointerEvents="none">
+                        <RightButtonIcon width="100%" height="100%" />
+                      </Box>
                     </CustomButton>
                   </Flex>
                 </HStack>
@@ -260,7 +252,14 @@ const EventCarousel = ({ data }) => {
               {/* Button (below navigation) */}
               {activeEvent.detailsLink && (
                 <CustomButton
-                  onClick={() => window.open(activeEvent.detailsLink, "_blank")}
+                  onClick={() => {
+                    const link = activeEvent.detailsLink;
+                    if (link.startsWith("/")) {
+                      router.push(link);
+                    } else {
+                      window.open(link, "_blank");
+                    }
+                  }}
                   width={activeEvent?.buttonProps?.mobile?.width || "160px"}
                   height={activeEvent?.buttonProps?.mobile?.height || "40px"}
                   bgColor={
@@ -390,7 +389,7 @@ const EventCarousel = ({ data }) => {
                     onClick={() => {
                       const link = activeEvent.detailsLink;
                       if (link.startsWith("/")) {
-                        navigate(link);
+                        router.push(link);
                       } else {
                         window.open(link, "_blank");
                       }
@@ -453,22 +452,18 @@ const EventCarousel = ({ data }) => {
                       sx={{
                         padding: 0,
                         cursor: "pointer",
-                        "& img": { transition: "filter 0.2s" },
+                        "& svg": { transition: "filter 0.2s" },
                         _hover: {
-                          "& img": {
+                          "& svg": {
                             filter:
                               "brightness(0) saturate(100%) invert(86%) sepia(23%) saturate(995%) hue-rotate(68deg) brightness(103%) contrast(103%)",
                           },
                         },
                       }}
                     >
-                      <Image loading="lazy"
-                        src={LeftButtonIcon}
-                        alt="Previous"
-                        w="16px"
-                        h="16px"
-                        pointerEvents="none"
-                      />
+                      <Box w="16px" h="16px" pointerEvents="none">
+                        <LeftButtonIcon width="100%" height="100%" />
+                      </Box>
                     </CustomButton>
                     <CustomButton
                       onClick={nextEvent}
@@ -481,22 +476,18 @@ const EventCarousel = ({ data }) => {
                       sx={{
                         padding: 0,
                         cursor: "pointer",
-                        "& img": { transition: "filter 0.2s" },
+                        "& svg": { transition: "filter 0.2s" },
                         _hover: {
-                          "& img": {
+                          "& svg": {
                             filter:
                               "brightness(0) saturate(100%) invert(86%) sepia(23%) saturate(995%) hue-rotate(68deg) brightness(103%) contrast(103%)",
                           },
                         },
                       }}
                     >
-                      <Image loading="lazy"
-                        src={RightButtonIcon}
-                        alt="Next"
-                        w="16px"
-                        h="16px"
-                        pointerEvents="none"
-                      />
+                      <Box w="16px" h="16px" pointerEvents="none">
+                        <RightButtonIcon width="100%" height="100%" />
+                      </Box>
                     </CustomButton>
                   </Flex>
                 </HStack>

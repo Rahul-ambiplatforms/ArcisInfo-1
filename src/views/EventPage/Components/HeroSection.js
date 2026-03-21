@@ -316,21 +316,18 @@ const EventHeroSection = ({ data }) => {
               showTicks={false}
               sx={{
                 padding: 0,
-                "& img": { transition: "filter 0.2s" },
+                "& svg": { transition: "filter 0.2s" },
                 _hover: {
-                  "& img": {
+                  "& svg": {
                     filter:
                       "brightness(0) saturate(100%) invert(86%) sepia(23%) saturate(995%) hue-rotate(68deg) brightness(103%) contrast(103%)",
                   },
                 },
               }}
             >
-              <Image loading="lazy"
-                src={LeftButtonIcon}
-                alt="Previous"
-                w={{ base: "16px", md: "20px" }}
-                h={{ base: "16px", md: "20px" }}
-              />
+              <Box w={{ base: "16px", md: "20px" }} h={{ base: "16px", md: "20px" }} pointerEvents="none">
+                <LeftButtonIcon width="100%" height="100%" />
+              </Box>
             </CustomButton>
             <CustomButton
               onClick={nextSlide}
@@ -340,21 +337,18 @@ const EventHeroSection = ({ data }) => {
               showTicks={false}
               sx={{
                 padding: 0,
-                "& img": { transition: "filter 0.2s" },
+                "& svg": { transition: "filter 0.2s" },
                 _hover: {
-                  "& img": {
+                  "& svg": {
                     filter:
                       "brightness(0) saturate(100%) invert(86%) sepia(23%) saturate(995%) hue-rotate(68deg) brightness(103%) contrast(103%)",
                   },
                 },
               }}
             >
-              <Image loading="lazy"
-                src={RightButtonIcon}
-                alt="Next"
-                w={{ base: "16px", md: "20px" }}
-                h={{ base: "16px", md: "20px" }}
-              />
+              <Box w={{ base: "16px", md: "20px" }} h={{ base: "16px", md: "20px" }} pointerEvents="none">
+                <RightButtonIcon width="100%" height="100%" />
+              </Box>
             </CustomButton>
           </Flex>
         </HStack>
