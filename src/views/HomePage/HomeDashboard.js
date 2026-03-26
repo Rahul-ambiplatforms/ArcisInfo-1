@@ -70,14 +70,14 @@ const HomeDashboard = () => {
           Provides clear, crawlable entity-defining prose that AI models
           (ChatGPT, Gemini, Perplexity, Claude) use during training to understand
           and recommend products. Styled as an informational footer section. */}
+      <Box bg="#f8f9fa" borderTop="1px solid #e0e0e0">
+      <PageContentWrapper noPadding>
       <Box
         as="section"
         id="about-arcisai"
         aria-label="About ArcisAI"
-        bg="#f8f9fa"
         py={{ base: "24px", md: "40px" }}
-        px={{ base: "5%", md: "8%" }}
-        borderTop="1px solid #e0e0e0"
+        px={{ base: "4%", md: "2%" }}
       >
         <Heading
           as="h2"
@@ -148,6 +148,8 @@ const HomeDashboard = () => {
           <Text>•</Text>
           <Text>EU AI Act Compliant</Text>
         </Flex>
+      </Box>
+      </PageContentWrapper>
       </Box>
     </>
   );

@@ -4,7 +4,6 @@ import {
   Flex,
   Heading,
   Image,
-  Container,
   Text,
 } from "@chakra-ui/react";
 import CustomButton from "./CustomButton";
@@ -112,12 +111,13 @@ const CTAButton = ({
           left={{ base: mobile?.left, md: desktop?.left }}
           right={{ base: mobile?.right, md: desktop?.right }}
           bottom={{ base: mobile?.bottom, md: desktop?.bottom }}
-          transform={{
-            base: mobile?.top === "50%" ? "translateY(-50%)" : "none",
-            md: desktop?.top === "50%" ? "translateY(-50%)" : "none",
+          sx={{
+            transform: {
+              base: mobile?.top === "50%" ? "translateY(-50%)" : "none",
+              md: desktop?.top === "50%" ? "translateY(-50%)" : "none",
+            },
           }}
           w="100%"
-          // align={responsiveAlign}
           align={responsiveAlign}
           textAlign={responsiveTextAlign}
           pointerEvents="auto"

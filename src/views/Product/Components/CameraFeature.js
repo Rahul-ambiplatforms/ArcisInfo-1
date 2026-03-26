@@ -3,11 +3,8 @@ import {
   Box,
   Heading,
   Text,
-  SimpleGrid,
   VStack,
-  Image,
   Flex,
-  Icon,
 } from "@chakra-ui/react";
 
 const CameraFeature = ({ data, headingInBackground = false }) => {
@@ -60,7 +57,7 @@ const CameraFeature = ({ data, headingInBackground = false }) => {
 
         {/* Image Section with Overlapping Description and Features */}
         <Box
-          w="100vw"
+          w="100%"
           h={d_image || m_image ? { base: "1086px", md: "1651px" } : "auto"}
           position="relative"
           backgroundImage={
