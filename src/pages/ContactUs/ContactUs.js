@@ -39,7 +39,7 @@ const ContactSection = () => {
     camerasFor: "",
     message: "",
     customerQuantity: "",
-    leadType: "Arcis Website",
+    leadType: "Arcis Website - Contact",
     updates: false,
   });
 
