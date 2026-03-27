@@ -125,9 +125,9 @@ const CTAButton = ({
         >
           <Heading
             as="h4"
-            fontSize={{ base: "30px", md: "48px", lg: "60px" }}
+            fontSize={{ base: "30px", md: "35px", lg: "50px" }}
             fontWeight="400"
-            lineHeight={{ base: "38px", md: "56px", lg: "76px" }}
+            lineHeight={{ base: "38px", md: "40px", lg: "55px" }}
             mb={{ base: 4, md: 6 }}
             w={{
               base: txtMobile?.width || "55%",

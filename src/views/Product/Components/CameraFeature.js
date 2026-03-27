@@ -15,7 +15,7 @@ const CameraFeature = ({ data, headingInBackground = false }) => {
   // Map custom breakpoints to Chakra UI breakpoints
   const contentMarginTop = {
     base: styles?.contentMarginTop?.mobile || "5%",
-    md: styles?.contentMarginTop?.tablet || "5%",
+    md:  "65%" || styles?.contentMarginTop?.tablet,
     lg: styles?.contentMarginTop?.laptop || "5%",
     xl: styles?.contentMarginTop?.bigscreen || "5%",
   };
@@ -58,7 +58,7 @@ const CameraFeature = ({ data, headingInBackground = false }) => {
         {/* Image Section with Overlapping Description and Features */}
         <Box
           w="100%"
-          h={d_image || m_image ? { base: "1086px", md: "1651px" } : "auto"}
+          h={d_image || m_image ? { base: "1170px", md: "1651px" } : "auto"}
           position="relative"
           backgroundImage={
             d_image || m_image
