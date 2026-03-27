@@ -77,6 +77,7 @@ const DownloadFormPopup = ({ isOpen, onClose, pdfUrl }) => {
           formType: "Datasheet Form",
           subject: "PDF Download Request",
           downloadUrl: pdfUrl,
+          leadtype: "Arcis Website - Datasheet",
         }),
       });
 

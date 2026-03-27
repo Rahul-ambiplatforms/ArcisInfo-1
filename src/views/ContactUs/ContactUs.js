@@ -129,7 +129,7 @@ const ContactSection = () => {
         email: formData.email,
         phone: formData.countryCode + formData.phone,
         company: formData.company,
-        source: "website_contact",
+        source: "Arcis Website Contact",
         notes: "Customer Type: " + formData.customerType + " | Cameras For: " + formData.camerasFor + " | Quantity: " + formData.customerQuantity + " | Message: " + formData.message,
         metadata: {
           location: location2 + " " + formData.location,
@@ -151,7 +151,7 @@ const ContactSection = () => {
         email: formData.email,
         phone: formData.countryCode + formData.phone,
         company: formData.company,
-        source: "website_contact",
+        source: "Arcis Website Contact",
 
         customerType: formData.customerType,
         camerasFor: formData.camerasFor,
