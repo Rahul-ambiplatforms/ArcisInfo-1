@@ -20,7 +20,7 @@ import {
   Icon,
 } from "@chakra-ui/react";
 import { CloseIcon, SearchIcon, InfoIcon } from "@chakra-ui/icons";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { getBlogs } from "./blog";
 
 // Helper component for the "No Results" UI
@@ -270,7 +270,7 @@ export default function BlogsContent() {
             return (
               <Link
                 key={post._id || index}
-                to={`/blog/${post.metadata.urlWords}`}
+                href={`/blog/${post.metadata.urlWords}`}
                 style={{ textDecoration: "none" }}
               >
                 <GridItem
@@ -408,7 +408,7 @@ export default function BlogsContent() {
                       </Flex>
                     </Box>
 
-                    <Link to={`/blog/${post.metadata.urlWords}`}>
+                    <Link href={`/blog/${post.metadata.urlWords}`}>
                       <Flex align="center" gap="2">
                         <Text fontSize="14px" fontWeight={500} color="#000000">
                           Learn More

@@ -25,10 +25,9 @@ import {
   Icon,
 } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useRouter } from "next/navigation";
 import { getBlogs, getBlogById, getBlogByUrlWords } from "./blog";
 import { Helmet } from "react-helmet-async";
-import { useNavigate } from "react-router-dom";
 // import ContactUs from "../ContactUs/ContactUs";
 // import ImagePop from "../../components/Animation/Image/ImagePop";
 
@@ -212,7 +211,7 @@ const TableOfContents = ({ components }) => {
 
 const BlogsOverviewDash = ({ urlWords: urlWordsProp }) => {
   const routerParams = useParams();
-  const urlWords = urlWordsProp ?? routerParams.urlWords;
+  const urlWords = urlWordsProp ?? routerParams?.slug;
   const [blog, setBlog] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -228,7 +227,8 @@ const BlogsOverviewDash = ({ urlWords: urlWordsProp }) => {
   const [isLoading, setIsLoading] = useState(false);
   const toast = useToast();
 
-  const navigate = useNavigate();
+  const router = useRouter();
+  const navigate = (path) => router.push(path);
 
   const sectionRef = useRef(null); // Reference for the section containing the image
   const ellipseSize = useBreakpointValue({
