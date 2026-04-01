@@ -211,7 +211,8 @@ const CITY_SCHEMAS = {
 };
 
 const LocalBusinessSchema = ({ includeProducts = true, cities = [] }) => {
-  const schemas = [ORGANIZATION_SCHEMA];
+  // Organization schema is already SSR-injected in app/layout.js — omit here to avoid duplicates
+  const schemas = [];
 
   if (includeProducts) {
     schemas.push(PRODUCT_SCHEMAS.sSeries, PRODUCT_SCHEMAS.ecoSeries);

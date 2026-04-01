@@ -14,6 +14,15 @@ const theme = extendTheme({
     heading: "'WixMadeforDisplay', sans-serif",
     body:    "'WixMadeforDisplay', sans-serif",
   },
+  components: {
+    // Apply lazy loading and decoding=async globally to every Chakra <Image>
+    Image: {
+      defaultProps: {
+        loading: 'lazy',
+        decoding: 'async',
+      },
+    },
+  },
 });
 
 export function Providers({ children }) {

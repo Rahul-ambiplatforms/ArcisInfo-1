@@ -160,7 +160,7 @@
     "offers": {
       "@type": "Offer",
       "description": "6 months free VMS + Cloud Storage (limited time offer)",
-      "priceCurrency": "INR"
+      "priceCurrency": "INR",
       "price": "0",
       "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": "IN", "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted", "merchantReturnDays": 0},
       "shippingDetails": {"@type": "OfferShippingDetails", "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "IN"}, "shippingRate": {"@type": "MonetaryAmount", "value": "0", "currency": "INR"}},

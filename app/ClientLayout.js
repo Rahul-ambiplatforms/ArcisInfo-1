@@ -1,9 +1,12 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
+import dynamic from 'next/dynamic';
 import { Box } from '@chakra-ui/react';
 import Header from '@/src/Components/Header/Header';
-import Footer from '@/src/Components/Footer/Footer';
+
+// Footer is below-fold — defer its JS chunk so it doesn't contribute to TBT
+const Footer = dynamic(() => import('@/src/Components/Footer/Footer'), { ssr: false });
 
 // Keep in sync with App.js — set to true to show the event banner
 const SHOW_EVENT_BANNER = false;
