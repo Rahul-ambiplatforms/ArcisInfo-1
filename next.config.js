@@ -3,11 +3,37 @@ const nextConfig = {
   reactStrictMode: true,
 
   images: {
+    formats: ['image/avif', 'image/webp'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     remotePatterns: [
       { protocol: 'https', hostname: 'vmukti.com' },
       { protocol: 'https', hostname: 'arcisai.io' },
       { protocol: 'https', hostname: 'www.arcisai.io' },
     ],
+  },
+
+  // ─── Security Headers ────────────────────────────────────────────────────────
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          // Prevent clickjacking
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          // Prevent MIME-type sniffing
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          // Referrer policy
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          // XSS protection (legacy browsers)
+          { key: 'X-XSS-Protection', value: '1; mode=block' },
+          // HSTS – tell browsers to always use HTTPS (2 years)
+          { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
+          // Restrict browser features not needed by this site
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), payment=()' },
+        ],
+      },
+    ];
   },
 
   // ─── SVG Support ────────────────────────────────────────────────────────────

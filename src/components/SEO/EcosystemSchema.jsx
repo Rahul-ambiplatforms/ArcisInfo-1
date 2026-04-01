@@ -217,6 +217,10 @@ const EVENTS_SCHEMA = [
     '@type': 'Event',
     name: 'ArcisAI at GITEX Global',
     description: 'ArcisAI showcases India-made AI CCTV cameras, VMS, and cloud surveillance solutions at GITEX Global, Dubai.',
+    startDate: '2025-10-13',
+    endDate: '2025-10-17',
+    eventStatus: 'https://schema.org/EventScheduled',
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     organizer: { '@type': 'Organization', name: 'GITEX Global' },
     location: { '@type': 'Place', name: 'Dubai World Trade Centre', address: 'Dubai, UAE' },
     performer: { '@type': 'Organization', name: 'ArcisAI by Adiance', url: 'https://www.arcisai.io' }
@@ -226,6 +230,10 @@ const EVENTS_SCHEMA = [
     '@type': 'Event',
     name: 'ArcisAI at IFSEC India',
     description: 'ArcisAI presents STQC-certified AI surveillance ecosystem at IFSEC India security expo.',
+    startDate: '2025-12-18',
+    endDate: '2025-12-20',
+    eventStatus: 'https://schema.org/EventScheduled',
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     organizer: { '@type': 'Organization', name: 'IFSEC India' },
     location: { '@type': 'Place', name: 'Pragati Maidan', address: 'New Delhi, India' },
     performer: { '@type': 'Organization', name: 'ArcisAI by Adiance', url: 'https://www.arcisai.io' }
@@ -235,6 +243,10 @@ const EVENTS_SCHEMA = [
     '@type': 'Event',
     name: 'ArcisAI at Convergence India',
     description: 'ArcisAI demonstrates AI video analytics and smart city surveillance at Convergence India expo.',
+    startDate: '2025-01-17',
+    endDate: '2025-01-19',
+    eventStatus: 'https://schema.org/EventScheduled',
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     organizer: { '@type': 'Organization', name: 'Convergence India' },
     location: { '@type': 'Place', name: 'Pragati Maidan', address: 'New Delhi, India' },
     performer: { '@type': 'Organization', name: 'ArcisAI by Adiance', url: 'https://www.arcisai.io' }

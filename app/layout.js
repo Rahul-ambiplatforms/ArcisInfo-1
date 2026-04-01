@@ -1,6 +1,51 @@
+import Script from 'next/script';
 import { Providers } from './providers';
 import ClientLayout from './ClientLayout';
 import './globals.css';
+
+const GTM_ID = 'GTM-T5CXTDPH';
+
+// Server-side JSON-LD schemas — rendered in HTML so Google crawlers see them
+// without executing JavaScript.
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'ArcisAI',
+  legalName: 'Adiance Technologies Private Limited',
+  url: 'https://www.arcisai.io',
+  logo: 'https://www.arcisai.io/assets/logo.png',
+  telephone: '+91-968-777-9999',
+  email: 'info@arcisai.io',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '811-812, Gala Empire, Drive In Road',
+    addressLocality: 'Ahmedabad',
+    addressRegion: 'Gujarat',
+    postalCode: '380054',
+    addressCountry: 'IN',
+  },
+  sameAs: [
+    'https://www.linkedin.com/company/arcisai',
+    'https://twitter.com/ArcisAI',
+    'https://www.youtube.com/@arcisai',
+    'https://www.facebook.com/ArcisAI',
+  ],
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'ArcisAI',
+  url: 'https://www.arcisai.io',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://www.arcisai.io/search?q={search_term_string}',
+    },
+    'query-input': 'required name=search_term_string',
+  },
+};
 
 export const metadata = {
   metadataBase: new URL('https://arcisai.io'),
@@ -52,8 +97,34 @@ export default function RootLayout({ children }) {
           type="font/ttf"
           crossOrigin="anonymous"
         />
+        {/* Server-rendered JSON-LD — visible to crawlers before JS executes */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
       </head>
       <body>
+        {/* Google Tag Manager — loads after page is interactive, non-blocking */}
+        <Script id="gtm-script" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','${GTM_ID}');`}
+        </Script>
+        {/* GTM noscript fallback */}
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
         <Providers>
           <ClientLayout>{children}</ClientLayout>
         </Providers>
