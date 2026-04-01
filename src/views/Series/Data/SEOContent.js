@@ -4,7 +4,7 @@ export const SEOContent = {
     metaDescription:
       "Secure your home, office and business with ArcisAI CCTV cameras. Get instant alerts, easy access, event-based footage, GPT-powered video summaries from anytime, anywhere.",
     canonical: "https://arcisai.io/s-series",
-    ogImage: "https://arcisai.io/images/product_bullet_main.png",
+    ogImage: "https://arcisai.io/images/product_bullet_main.webp",
     schema: [],
   },
   "eco-series": {
@@ -13,7 +13,7 @@ export const SEOContent = {
     metaDescription:
       "Discover India’s trusted CCTV camera range—Eco-Series by ArcisAI. Clear footage, stable performance and durable design in Bullet, Dome, PTZ & Baby PTZ cameras.",
     canonical: "https://arcisai.io/eco-series",
-    ogImage: "https://arcisai.io/images/product_bullet_main.png",
+    ogImage: "https://arcisai.io/images/product_bullet_main.webp",
     schema: [],
   },
   "arcis-nvr": {
@@ -21,7 +21,7 @@ export const SEOContent = {
     metaDescription:
       "ArcisAI Network Video Recorders offer professional-grade CCTV surveillance with scalable 4–32 channel models, secure storage, and remote monitoring.",
     canonical: "https://arcisai.io/arcis-nvr",
-    ogImage: "https://arcisai.io/images/nvr_hero_main.png",
+    ogImage: "https://arcisai.io/images/nvr_hero_main.webp",
     schema: [],
   },
   "cloud-vms": {
@@ -29,7 +29,7 @@ export const SEOContent = {
     metaDescription:
       "Get STQC-certified, AI-powered Cloud VMS with ArcisAI. Centralize monitoring, access smart alerts, and maintain secure, compliant, and multi-location surveillance in India.",
     canonical: "https://arcisai.io/cloud-vms",
-    ogImage: "https://arcisai.io/images/STQC_hero_main.png",
+    ogImage: "https://arcisai.io/images/STQC_hero_main.webp",
     schema: [],
   },
   "arcis-bridge-device": {
@@ -38,7 +38,7 @@ export const SEOContent = {
     metaDescription:
       "Keep your current CCTV cameras and unlock modern VMS features with our Arcis bridge device. Enjoy cloud monitoring, AI alerts and multi-location centralized control.",
     canonical: "https://arcisai.io/arcis-bridge-device",
-    ogImage: "https://arcisai.io/images/abd_hero_main.png",
+    ogImage: "https://arcisai.io/images/abd_hero_main.webp",
     schema: [],
   },
 };

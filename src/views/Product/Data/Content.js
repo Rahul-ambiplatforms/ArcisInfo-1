@@ -30,9 +30,9 @@ export const Product = {
     hero: [
       {
         title: "AI Bullet CCTV Camera",
-        image: "/images/bullet_hero.png",
-        d_image: "/images/product_bullet_main.png",
-        m_image: "/images/product_bullet_main_mobile.png",
+        image: "/images/bullet_hero.webp",
+        d_image: "/images/product_bullet_main.webp",
+        m_image: "/images/product_bullet_main_mobile.webp",
         buttonText: "Get Your AI CCTV",
         buttonLink: "/contact-us",
         sectionProps: {
@@ -84,8 +84,8 @@ export const Product = {
       },
     ],
     features: {
-      d_image: "/images/product_feature_bullet_bg.png",
-      m_image: "/images/product_feature_bullet_bg_mobile.png",
+      d_image: "/images/product_feature_bullet_bg.webp",
+      m_image: "/images/product_feature_bullet_bg_mobile.webp",
       heading: "AI Bullet CCTV Cameras – Built for Reliable Outdoor Security",
       description:
         "The ArcisAI’s Bullet Security Camera is an advanced outdoor security camera built for homes, shops, offices and businesses. With powerful EdgeAI analytics, 2K HD clarity, and event-based intelligent alerts, it ensures proactive monitoring and secure visibility. Designed for fast plug-n-play setup, 24×7 reliability, and high-quality surveillance, this is your ultimate choice for smart protection.",
@@ -127,8 +127,8 @@ export const Product = {
       ],
     },
     comparisonData: {
-      d_image: "/images/product_cameracomparision.png",
-      m_image: "/images/product_cameracomparision_mobile.png",
+      d_image: "/images/product_cameracomparision.webp",
+      m_image: "/images/product_cameracomparision_mobile.webp",
       heading: "Discover Our Smart CCTV Bullet Camera Range",
       headers: ["Category", "Bullet 4G", "Bullet Wi-Fi", "Bullet PoE"],
       rows: [
@@ -191,35 +191,35 @@ export const Product = {
           heading: "EdgeAI Analytics",
           description:
             "8 Powerful real-time detection on camera — humans, intrusions, line crossing & more.",
-          image: "/images/solution_surveillance_1.png",
+          image: "/images/solution_surveillance_1.webp",
           link: "/solution/edge-ai",
         },
         {
           heading: "CloudAI Analytics",
           description:
             "CloudAI features are available as modular paid add-ons. Users can enable specific analytics packs as required.",
-          image: "/images/solution_surveillance_1.png",
+          image: "/images/solution_surveillance_1.webp",
           link: "/solution/cloud-ai",
         },
         {
           heading: "STQC-Certified VMS",
           description:
             "Manage multiple locations, cameras, alerts & users through a unified government-certified platform.",
-          image: "/images/solution_surveillance_1.png",
+          image: "/images/solution_surveillance_1.webp",
           link: "/",
         },
         {
           heading: "ArcisGPT",
           description:
             "Search video by asking questions — e.g., “Show events where a person entered after 10 PM”.",
-          image: "/images/solution_surveillance_1.png",
+          image: "/images/solution_surveillance_1.webp",
           link: "/solution/generative-ai",
         },
         {
           heading: "Cloud Storage",
           description:
             "Secure video retention online to protect footage even if the device or SD card is damaged.",
-          image: "/images/solution_surveillance_1.png",
+          image: "/images/solution_surveillance_1.webp",
           link: "/",
         },
       ],
@@ -231,73 +231,73 @@ export const Product = {
           name: "Manufacturing",
           description:
             "Monitor lines and yards with on-camera AI for safety, PPE, and assets. Resilient 4G keeps alerts and evidence flowing even during LAN outages.",
-          image: "/images/product_productindustries_1.png", // Placeholder
+          image: "/images/product_productindustries_1.webp", // Placeholder
         },
         {
           name: "Smart Cities",
           description:
             "Real-time visibility for traffic, crowds, and incidents, even where wired links can't exist. Deploy fast across intersections and plazas with dependable 4G uptime.",
-          image: "/images/product_productindustries_2.png", // Placeholder
+          image: "/images/product_productindustries_2.webp", // Placeholder
         },
         {
           name: "Retail & Malls",
           description:
             "Track movement and footfall while securing entrances, aisles, and parking. Always-on 4G keeps monitoring active during outages or store renovations.",
-          image: "/images/product_productindustries_3.png", // Placeholder
+          image: "/images/product_productindustries_3.webp", // Placeholder
         },
         {
           name: "Construction Sites",
           description:
             "Plug-and-play mobility for large or temporary sites to watch workers, materials, and perimeters. Relocate easily as the site evolves – no fixed internet required.",
-          image: "/images/product_productindustries_4.png", // Placeholder
+          image: "/images/product_productindustries_4.webp", // Placeholder
         },
         {
           name: "Transportation & Highways",
           description:
             "Ideal for highways, toll plazas, and transit hubs to flag speed, vehicles and incidents. Flexible 4G placement enables rapid coverage where power and poles allow.",
-          image: "/images/product_productindustries_5.png", // Placeholder
+          image: "/images/product_productindustries_5.webp", // Placeholder
         },
         {
           name: "Industrial Plants & Warehouses",
           description:
             "Detects unauthorized motion, missing objects, and PPE issues in real time. Strengthen safety audits and reduce downtime with dependable, independent connectivity.",
-          image: "/images/product_productindustries_6.png", // Placeholder
+          image: "/images/product_productindustries_6.webp", // Placeholder
         },
         {
           name: "Banks & ATMs",
           description:
             "Identify suspicious behavior and loitering patterns with instant alerts. Even if local networks fail, 4G keeps evidence capture and notifications running.",
-          image: "/images/product_productindustries_7.png", // Placeholder
+          image: "/images/product_productindustries_7.webp", // Placeholder
         },
         {
           name: "Educational Campuses",
           description:
             "Protect gates, pathways, and parking with human/vehicle detection and smart alerts. Central teams can review events remotely without campus Wi-Fi dependencies.",
-          image: "/images/product_productindustries_8.png", // Placeholder
+          image: "/images/product_productindustries_8.webp", // Placeholder
         },
         {
           name: "Healthcare Facilities",
           description:
             "Guard restricted zones, pharmacies, and entrances with intelligent detection. Maintain secure evidence retention and audit trails with resilient 4G lines.",
-          image: "/images/product_productindustries_9.png", // Placeholder
+          image: "/images/product_productindustries_9.webp", // Placeholder
         },
         {
           name: "Residential Societies",
           description:
             "Cover gates, lobbies, and parking without complex cabling. Residents and admins get instant mobile alerts and reliable remote viewing.",
-          image: "/images/product_productindustries_10.png", // Placeholder
+          image: "/images/product_productindustries_10.webp", // Placeholder
         },
         {
           name: "Oil Gas & Utilities",
           description:
             "Rugged oversight for substations, wellheads, and service yards. Get real-time anomaly alerts with connectivity independent of local networks.",
-          image: "/images/product_productindustries_11.png", // Placeholder
+          image: "/images/product_productindustries_11.webp", // Placeholder
         },
         {
           name: "Offices & Corporate",
           description:
             "Protect entrances, lobbies, parking, and premises with real-time people/vehicle alerts. 4G keeps 4G and branches monitored—even during IT outages.",
-          image: "/images/product_productindustries_12.png", // Placeholder
+          image: "/images/product_productindustries_12.webp", // Placeholder
         },
       ],
     },
@@ -357,8 +357,8 @@ export const Product = {
     CTAButton: {
       data: "Ready to See ArcisAI in Action? Book a Quick Demo",
       buttonText: "Schedule a Demo",
-      d_image: "/images/product_cta_bullet.png",
-      m_image: "/images/product_cta_bullet_mobile.png",
+      d_image: "/images/product_cta_bullet.webp",
+      m_image: "/images/product_cta_bullet_mobile.webp",
       link: "/contact-us",
       textPosition: {
         desktop: { top: "50%", left: "-4%" },
@@ -422,9 +422,9 @@ export const Product = {
     hero: [
       {
         title: "AI PTZ CCTV Camera",
-        image: "/images/product_ptz_main.png",
-        d_image: "/images/product_ptz_main.png",
-        m_image: "/images/product_ptz_main_mobile.png",
+        image: "/images/product_ptz_main.webp",
+        d_image: "/images/product_ptz_main.webp",
+        m_image: "/images/product_ptz_main_mobile.webp",
         buttonText: "Get Your AI CCTV",
         buttonLink: "/contact-us",
         sectionProps: {
@@ -476,8 +476,8 @@ export const Product = {
       },
     ],
     features: {
-      d_image: "/images/product_feature_ptz_bg.png",
-      m_image: "/images/product_feature_ptz_bg_mobile.png",
+      d_image: "/images/product_feature_ptz_bg.webp",
+      m_image: "/images/product_feature_ptz_bg_mobile.webp",
       heading: "AI PTZ CCTV Camera Built for Smarter Outdoor Surveillance",
       description:
         "The ArcisAI S-Series AI PTZ Camera combines intelligent motion tracking, long-range  zoom and 350° coverage, making it ideal for open areas, perimeters, parking zones, factory yards, and large campuses. Powered by built-in EdgeAI analytics, Its 10× digital zoom and auto-tracking ensure every movement is captured with precision, while color night vision maintains clear visibility even in low light. With STQC-certified Cloud VMS, instant mobile alerts, and two-way communication, it provides complete control, clarity and command for modern outdoor security environments.",
@@ -521,8 +521,8 @@ export const Product = {
     },
     comparisonData: {
       heading: "Explore Our AI-Powered PTZ Camera Range",
-      d_image: "/images/product_cameracomparision.png",
-      m_image: "/images/product_cameracomparision_mobile.png",
+      d_image: "/images/product_cameracomparision.webp",
+      m_image: "/images/product_cameracomparision_mobile.webp",
       headers: ["Category", "PTZ 4G", "PTZ Wi-Fi", "PTZ PoE"],
       rows: [
         {
@@ -583,73 +583,73 @@ export const Product = {
           name: "Manufacturing",
           description:
             "Monitor lines and yards with on-camera AI for safety, PPE, and assets. Resilient 4G keeps alerts and evidence flowing even during LAN outages.",
-          image: "/images/product_productindustries_1.png", // Placeholder
+          image: "/images/product_productindustries_1.webp", // Placeholder
         },
         {
           name: "Smart Cities",
           description:
             "Real-time visibility for traffic, crowds, and incidents, even where wired links can't exist. Deploy fast across intersections and plazas with dependable 4G uptime.",
-          image: "/images/product_productindustries_2.png", // Placeholder
+          image: "/images/product_productindustries_2.webp", // Placeholder
         },
         {
           name: "Retail & Malls",
           description:
             "Track movement and footfall while securing entrances, aisles, and parking. Always-on 4G keeps monitoring active during outages or store renovations.",
-          image: "/images/product_productindustries_3.png", // Placeholder
+          image: "/images/product_productindustries_3.webp", // Placeholder
         },
         {
           name: "Construction Sites",
           description:
             "Plug-and-play mobility for large or temporary sites to watch workers, materials, and perimeters. Relocate easily as the site evolves – no fixed internet required.",
-          image: "/images/product_productindustries_4.png", // Placeholder
+          image: "/images/product_productindustries_4.webp", // Placeholder
         },
         {
           name: "Transportation & Highways",
           description:
             "Ideal for highways, toll plazas, and transit hubs to flag speed, vehicles and incidents. Flexible 4G placement enables rapid coverage where power and poles allow.",
-          image: "/images/product_productindustries_5.png", // Placeholder
+          image: "/images/product_productindustries_5.webp", // Placeholder
         },
         {
           name: "Industrial Plants & Warehouses",
           description:
             "Detects unauthorized motion, missing objects, and PPE issues in real time. Strengthen safety audits and reduce downtime with dependable, independent connectivity.",
-          image: "/images/product_productindustries_6.png", // Placeholder
+          image: "/images/product_productindustries_6.webp", // Placeholder
         },
         {
           name: "Banks & ATMs",
           description:
             "Identify suspicious behavior and loitering patterns with instant alerts. Even if local networks fail, 4G keeps evidence capture and notifications running.",
-          image: "/images/product_productindustries_7.png", // Placeholder
+          image: "/images/product_productindustries_7.webp", // Placeholder
         },
         {
           name: "Educational Campuses",
           description:
             "Protect gates, pathways, and parking with human/vehicle detection and smart alerts. Central teams can review events remotely without campus Wi-Fi dependencies.",
-          image: "/images/product_productindustries_8.png", // Placeholder
+          image: "/images/product_productindustries_8.webp", // Placeholder
         },
         {
           name: "Healthcare Facilities",
           description:
             "Guard restricted zones, pharmacies, and entrances with intelligent detection. Maintain secure evidence retention and audit trails with resilient 4G lines.",
-          image: "/images/product_productindustries_9.png", // Placeholder
+          image: "/images/product_productindustries_9.webp", // Placeholder
         },
         {
           name: "Residential Societies",
           description:
             "Cover gates, lobbies, and parking without complex cabling. Residents and admins get instant mobile alerts and reliable remote viewing.",
-          image: "/images/product_productindustries_10.png", // Placeholder
+          image: "/images/product_productindustries_10.webp", // Placeholder
         },
         {
           name: "Oil Gas & Utilities",
           description:
             "Rugged oversight for substations, wellheads, and service yards. Get real-time anomaly alerts with connectivity independent of local networks.",
-          image: "/images/product_productindustries_11.png", // Placeholder
+          image: "/images/product_productindustries_11.webp", // Placeholder
         },
         {
           name: "Offices & Corporate",
           description:
             "Protect entrances, lobbies, parking, and premises with real-time people/vehicle alerts. 4G keeps 4G and branches monitored—even during IT outages.",
-          image: "/images/product_productindustries_12.png", // Placeholder
+          image: "/images/product_productindustries_12.webp", // Placeholder
         },
       ],
     },
@@ -663,35 +663,35 @@ export const Product = {
           heading: "EdgeAI Analytics",
           description:
             "AI runs directly on the camera for faster, bandwidth-free event detection, tracking, and classification.",
-          image: "/images/product_ptz_surveillance_1.png",
+          image: "/images/product_ptz_surveillance_1.webp",
           link: "/solution/edge-ai",
         },
         {
           heading: "CloudAI Analytics",
           description:
             "CloudAI is an optional upgrade — choose and pay for deeper analytics beyond basic alerts, including reports and trend insights.",
-          image: "/images/product_ptz_surveillance_1.png",
+          image: "/images/product_ptz_surveillance_1.webp",
           link: "/solution/cloud-ai",
         },
         {
           heading: "STQC-Certified VMS",
           description:
             "Securely manage and monitor live feeds, playback, and alerts from a unified ArcisAI dashboard.",
-          image: "/images/product_ptz_surveillance_1.png",
+          image: "/images/product_ptz_surveillance_1.webp",
           link: "/",
         },
         {
           heading: "ArcisGPT",
           description:
             "Your AI-powered assistant for smart video search — ask natural questions like “Show vehicle movement at Gate 2 last night” and get instant clips.",
-          image: "/images/product_ptz_surveillance_1.png",
+          image: "/images/product_ptz_surveillance_1.webp",
           link: "/solution/generative-ai",
         },
         {
           heading: "Cloud Storage",
           description:
             "Encrypted cloud storage with flexible retention and retrieval options for compliance and evidence management.",
-          image: "/images/product_ptz_surveillance_1.png",
+          image: "/images/product_ptz_surveillance_1.webp",
           link: "/",
         },
       ],
@@ -752,8 +752,8 @@ export const Product = {
     CTAButton: {
       data: "AI-Powered PTZ Camera - Top Security CCTV Camera for Large-Area Monitoring",
       buttonText: "Book a Live Demo",
-      d_image: "/images/product_cta_ptz.png",
-      m_image: "/images/product_cta_ptz_mobile.png",
+      d_image: "/images/product_cta_ptz.webp",
+      m_image: "/images/product_cta_ptz_mobile.webp",
       link: "/contact-us",
       textPosition: {
         desktop: { top: "50%", left: "-6%" },
@@ -818,9 +818,9 @@ export const Product = {
     hero: [
       {
         title: "AI Dome CCTV Camera",
-        image: "/images/product_dome_main.png",
-        d_image: "/images/product_dome_main.png",
-        m_image: "/images/product_dome_main_mobile.png",
+        image: "/images/product_dome_main.webp",
+        d_image: "/images/product_dome_main.webp",
+        m_image: "/images/product_dome_main_mobile.webp",
         buttonText: "Get Your AI CCTV",
         buttonLink: "contact-us",
         sectionProps: {
@@ -872,8 +872,8 @@ export const Product = {
       },
     ],
     features: {
-      d_image: "/images/product_feature_dome_bg.png",
-      m_image: "/images/product_feature_dome_bg_mobile.png",
+      d_image: "/images/product_feature_dome_bg.webp",
+      m_image: "/images/product_feature_dome_bg_mobile.webp",
       heading: "AI Dome CCTV Camera — Built for Smarter Indoor Security",
       description:
         "The ArcisAI S-Series dome blends into ceilings for discreet, wide coverage in lobbies, corridors, cash counters, classrooms, meeting rooms and more places. Crisp 2K video with balanced exposure keeps faces and badges clear, while the low-profile design hides the viewing angle and deters tampering. With built-in on-device AI (8 detections, including people/face and line-cross/zone intrusion), plus silent IR and instant alerts with STQC-certified Cloud VMS, it delivers reliable, unobtrusive indoor security.",
@@ -916,8 +916,8 @@ export const Product = {
     },
     comparisonData: {
       heading: "Explore Our S-Series AI-based Dome Camera Range",
-      d_image: "/images/product_cameracomparision.png",
-      m_image: "/images/product_cameracomparision_mobile.png",
+      d_image: "/images/product_cameracomparision.webp",
+      m_image: "/images/product_cameracomparision_mobile.webp",
       headers: ["Category", "Dome 4G", "Dome Wi-Fi", "Dome PoE"],
       rows: [
         {
@@ -977,73 +977,73 @@ export const Product = {
           name: "Manufacturing",
           description:
             "Monitor lines and yards with on-camera AI for safety, PPE, and assets. Resilient 4G keeps alerts and evidence flowing even during LAN outages.",
-          image: "/images/product_productindustries_1.png", // Placeholder
+          image: "/images/product_productindustries_1.webp", // Placeholder
         },
         {
           name: "Smart Cities",
           description:
             "Real-time visibility for traffic, crowds, and incidents, even where wired links can't exist. Deploy fast across intersections and plazas with dependable 4G uptime.",
-          image: "/images/product_productindustries_2.png", // Placeholder
+          image: "/images/product_productindustries_2.webp", // Placeholder
         },
         {
           name: "Retail & Malls",
           description:
             "Track movement and footfall while securing entrances, aisles, and parking. Always-on 4G keeps monitoring active during outages or store renovations.",
-          image: "/images/product_productindustries_3.png", // Placeholder
+          image: "/images/product_productindustries_3.webp", // Placeholder
         },
         {
           name: "Construction Sites",
           description:
             "Plug-and-play mobility for large or temporary sites to watch workers, materials, and perimeters. Relocate easily as the site evolves – no fixed internet required.",
-          image: "/images/product_productindustries_4.png", // Placeholder
+          image: "/images/product_productindustries_4.webp", // Placeholder
         },
         {
           name: "Transportation & Highways",
           description:
             "Ideal for highways, toll plazas, and transit hubs to flag speed, vehicles and incidents. Flexible 4G placement enables rapid coverage where power and poles allow.",
-          image: "/images/product_productindustries_5.png", // Placeholder
+          image: "/images/product_productindustries_5.webp", // Placeholder
         },
         {
           name: "Industrial Plants & Warehouses",
           description:
             "Detects unauthorized motion, missing objects, and PPE issues in real time. Strengthen safety audits and reduce downtime with dependable, independent connectivity.",
-          image: "/images/product_productindustries_6.png", // Placeholder
+          image: "/images/product_productindustries_6.webp", // Placeholder
         },
         {
           name: "Banks & ATMs",
           description:
             "Identify suspicious behavior and loitering patterns with instant alerts. Even if local networks fail, 4G keeps evidence capture and notifications running.",
-          image: "/images/product_productindustries_7.png", // Placeholder
+          image: "/images/product_productindustries_7.webp", // Placeholder
         },
         {
           name: "Educational Campuses",
           description:
             "Protect gates, pathways, and parking with human/vehicle detection and smart alerts. Central teams can review events remotely without campus Wi-Fi dependencies.",
-          image: "/images/product_productindustries_8.png", // Placeholder
+          image: "/images/product_productindustries_8.webp", // Placeholder
         },
         {
           name: "Healthcare Facilities",
           description:
             "Guard restricted zones, pharmacies, and entrances with intelligent detection. Maintain secure evidence retention and audit trails with resilient 4G lines.",
-          image: "/images/product_productindustries_9.png", // Placeholder
+          image: "/images/product_productindustries_9.webp", // Placeholder
         },
         {
           name: "Residential Societies",
           description:
             "Cover gates, lobbies, and parking without complex cabling. Residents and admins get instant mobile alerts and reliable remote viewing.",
-          image: "/images/product_productindustries_10.png", // Placeholder
+          image: "/images/product_productindustries_10.webp", // Placeholder
         },
         {
           name: "Oil Gas & Utilities",
           description:
             "Rugged oversight for substations, wellheads, and service yards. Get real-time anomaly alerts with connectivity independent of local networks.",
-          image: "/images/product_productindustries_11.png", // Placeholder
+          image: "/images/product_productindustries_11.webp", // Placeholder
         },
         {
           name: "Offices & Corporate",
           description:
             "Protect entrances, lobbies, parking, and premises with real-time people/vehicle alerts. 4G keeps 4G and branches monitored—even during IT outages.",
-          image: "/images/product_productindustries_12.png", // Placeholder
+          image: "/images/product_productindustries_12.webp", // Placeholder
         },
       ],
     },
@@ -1056,35 +1056,35 @@ export const Product = {
           heading: "EdgeAI Analytics",
           description:
             "AI intelligence operates directly on the camera, detecting and responding to events instantly on-site.",
-          image: "/images/product_dome_surveillance_1.png",
+          image: "/images/product_dome_surveillance_1.webp",
           link: "/solution/edge-ai",
         },
         {
           heading: "CloudAI Analytics",
           description:
             "CloudAI add-on — pay only for advanced analytics like reports and multi-site insights.",
-          image: "/images/product_dome_surveillance_1.png",
+          image: "/images/product_dome_surveillance_1.webp",
           link: "/solution/cloud-ai",
         },
         {
           heading: "STQC-Certified VMS",
           description:
             "A secure, unified platform to view, manage, and control all cameras, events, and users from a single dashboard.",
-          image: "/images/product_dome_surveillance_1.png",
+          image: "/images/product_dome_surveillance_1.webp",
           link: "/",
         },
         {
           heading: "ArcisGPT",
           description:
             "An AI assistant that allows you to search and analyze video footage using natural language queries.",
-          image: "/images/product_dome_surveillance_1.png",
+          image: "/images/product_dome_surveillance_1.webp",
           link: "/solution/generative-ai",
         },
         {
           heading: "Cloud Storage",
           description:
             "Encrypted and scalable video storage with flexible retention options for seamless evidence management.",
-          image: "/images/product_dome_surveillance_1.png",
+          image: "/images/product_dome_surveillance_1.webp",
           link: "/",
         },
       ],
@@ -1145,8 +1145,8 @@ export const Product = {
     CTAButton: {
       data: "Secure Every Corner That Matters with ArcisAI’s Dome Camera",
       buttonText: "Request a Demo",
-      d_image: "/images/product_cta_dome.png",
-      m_image: "/images/product_cta_dome_mobile.png",
+      d_image: "/images/product_cta_dome.webp",
+      m_image: "/images/product_cta_dome_mobile.webp",
       link: "/contact-us",
       textPosition: {
         desktop: { top: "50%", left: "5%" },
@@ -1213,8 +1213,8 @@ export const Product = {
     hero: [
       {
         title: "Eco-Series Bullet Camera",
-        d_image: "/images/product_ecoseries_bullet_main.png",
-        m_image: "/images/product_ecoseries_bullet_main_mobile.png",
+        d_image: "/images/product_ecoseries_bullet_main.webp",
+        m_image: "/images/product_ecoseries_bullet_main_mobile.webp",
         buttonText: "Get Your AI CCTV",
         buttonLink: "/contact-us",
         sectionProps: {
@@ -1266,8 +1266,8 @@ export const Product = {
       },
     ],
     features: {
-      d_image: "/images/product_ecoseries_feature_bullet_bg.png",
-      m_image: "/images/product_ecoseries_feature_bullet_bg_mobile.png",
+      d_image: "/images/product_ecoseries_feature_bullet_bg.webp",
+      m_image: "/images/product_ecoseries_feature_bullet_bg_mobile.webp",
       heading: "India’s Best Bullet CCTV Cameras for Reliable Surveillance",
       description:
         "Durable, high-quality bullet CCTV cameras engineered specifically for clear video output, stable 24/7 performance, and long-lasting protection for commercial, industrial, and residential security needs - making them one of the most trusted CCTV camera solutions in India.",
@@ -1307,8 +1307,8 @@ export const Product = {
     },
     comparisonData: {
       heading: "Choose the Perfect Bullet Security Camera for Your Site",
-      d_image: "/images/product_cameracomparision.png",
-      m_image: "/images/product_cameracomparision_mobile.png",
+      d_image: "/images/product_cameracomparision.webp",
+      m_image: "/images/product_cameracomparision_mobile.webp",
       headers: [
         "Category",
         "AD-90AIEBDP",
@@ -1514,45 +1514,45 @@ export const Product = {
       industries: [
         {
           name: "Manufacturing & Factory Plants",
-          image: "/images/home_aisolutionindustry_1.png",
+          image: "/images/home_aisolutionindustry_1.webp",
         }, // Placeholder
         {
           name: "Warehouses & Logistics",
-          image: "/images/home_aisolutionindustry_2.png",
+          image: "/images/home_aisolutionindustry_2.webp",
         },
         {
           name: "Smart Cities",
-          image: "/images/home_aisolutionindustry_3.png",
+          image: "/images/home_aisolutionindustry_3.webp",
         },
         {
           name: "Construction Sites",
-          image: "/images/home_aisolutionindustry_4.png",
+          image: "/images/home_aisolutionindustry_4.webp",
         },
-        { name: "Hospitality", image: "/images/home_aisolutionindustry_5.png" },
+        { name: "Hospitality", image: "/images/home_aisolutionindustry_5.webp" },
         {
           name: "Banks & ATMs",
-          image: "/images/home_aisolutionindustry_6.png",
+          image: "/images/home_aisolutionindustry_6.webp",
         },
-        { name: "Hospitals", image: "/images/home_aisolutionindustry_7.png" },
+        { name: "Hospitals", image: "/images/home_aisolutionindustry_7.webp" },
         {
           name: "Airports, Bus & Railway Stations",
-          image: "/images/home_aisolutionindustry_8.png",
+          image: "/images/home_aisolutionindustry_8.webp",
         },
         {
           name: "Retail Stores",
-          image: "/images/home_aisolutionindustry_9.png",
+          image: "/images/home_aisolutionindustry_9.webp",
         },
         {
           name: "Corporate Offices",
-          image: "/images/home_aisolutionindustry_10.png",
+          image: "/images/home_aisolutionindustry_10.webp",
         },
         {
           name: "Housing Societies",
-          image: "/images/home_aisolutionindustry_11.png",
+          image: "/images/home_aisolutionindustry_11.webp",
         },
         {
           name: "Educational Premises",
-          image: "/images/home_aisolutionindustry_12.png",
+          image: "/images/home_aisolutionindustry_12.webp",
         },
       ],
     },
@@ -1600,8 +1600,8 @@ export const Product = {
     CTAButton: {
       data: "Protect Your Facility with ArcisAI Eco-Series Bullet Security CCTV Cameras",
       buttonText: "Schedule a Demo",
-      d_image: "/images/product_cta_bullet.png",
-      m_image: "/images/product_cta_bullet_mobile.png",
+      d_image: "/images/product_cta_bullet.webp",
+      m_image: "/images/product_cta_bullet_mobile.webp",
       link: "/contact-us",
       textPosition: {
         desktop: { top: "50%", left: "-4%" },
@@ -1662,9 +1662,9 @@ export const Product = {
     hero: [
       {
         title: "Eco-Series PTZ CCTV Cameras",
-        image: "/images/product_ptz_main.png",
-        d_image: "/images/product_ptz_main.png",
-        m_image: "/images/product_ptz_main_mobile.png",
+        image: "/images/product_ptz_main.webp",
+        d_image: "/images/product_ptz_main.webp",
+        m_image: "/images/product_ptz_main_mobile.webp",
         buttonText: "Get PTZ Cameras",
         buttonLink: "/contact-us",
         sectionProps: {
@@ -1716,8 +1716,8 @@ export const Product = {
       },
     ],
     features: {
-      d_image: "/images/product_feature_ptz_bg.png",
-      m_image: "/images/product_feature_ptz_bg_mobile.png",
+      d_image: "/images/product_feature_ptz_bg.webp",
+      m_image: "/images/product_feature_ptz_bg_mobile.webp",
       heading: "Next-Level PTZ CCTV Cameras Built for 24/7 Monitoring",
       description:
         "ArcisAI Eco-Series PTZ CCTV Cameras deliver 360° rotatable surveillance with long-range coverage, making them ideal for Indian businesses, offices, factories, apartments, and outdoor areas. Built for durable performance in Indian conditions, these cameras feature infrared night vision, IP66 weatherproof housing, and flexible PoE/IP/WiFi/4G connectivity for reliable monitoring anywhere. Whether you require a full PTZ for wide-area coverage, a Mini PTZ for compact spaces, or a Baby PTZ for discreet surveillance, ArcisAI offers the perfect solution for every security setup.",
@@ -1757,8 +1757,8 @@ export const Product = {
     },
     comparisonData: {
       heading: "Find Your Ideal PTZ CCTV Camera for Your Security Needs",
-      d_image: "/images/product_cameracomparision.png",
-      m_image: "/images/product_cameracomparision_mobile.png",
+      d_image: "/images/product_cameracomparision.webp",
+      m_image: "/images/product_cameracomparision_mobile.webp",
       headers: [
         "Category",
         "AD-90ARWFBDP",
@@ -1942,45 +1942,45 @@ export const Product = {
       industries: [
         {
           name: "Manufacturing & Factory Plants",
-          image: "/images/home_aisolutionindustry_1.png",
+          image: "/images/home_aisolutionindustry_1.webp",
         }, // Placeholder
         {
           name: "Warehouses & Logistics",
-          image: "/images/home_aisolutionindustry_2.png",
+          image: "/images/home_aisolutionindustry_2.webp",
         },
         {
           name: "Smart Cities",
-          image: "/images/home_aisolutionindustry_3.png",
+          image: "/images/home_aisolutionindustry_3.webp",
         },
         {
           name: "Construction Sites",
-          image: "/images/home_aisolutionindustry_4.png",
+          image: "/images/home_aisolutionindustry_4.webp",
         },
-        { name: "Hospitality", image: "/images/home_aisolutionindustry_5.png" },
+        { name: "Hospitality", image: "/images/home_aisolutionindustry_5.webp" },
         {
           name: "Banks & ATMs",
-          image: "/images/home_aisolutionindustry_6.png",
+          image: "/images/home_aisolutionindustry_6.webp",
         },
-        { name: "Hospitals", image: "/images/home_aisolutionindustry_7.png" },
+        { name: "Hospitals", image: "/images/home_aisolutionindustry_7.webp" },
         {
           name: "Airports, Bus & Railway Stations",
-          image: "/images/home_aisolutionindustry_8.png",
+          image: "/images/home_aisolutionindustry_8.webp",
         },
         {
           name: "Retail Stores",
-          image: "/images/home_aisolutionindustry_9.png",
+          image: "/images/home_aisolutionindustry_9.webp",
         },
         {
           name: "Corporate Offices",
-          image: "/images/home_aisolutionindustry_10.png",
+          image: "/images/home_aisolutionindustry_10.webp",
         },
         {
           name: "Housing Societies",
-          image: "/images/home_aisolutionindustry_11.png",
+          image: "/images/home_aisolutionindustry_11.webp",
         },
         {
           name: "Educational Premises",
-          image: "/images/home_aisolutionindustry_12.png",
+          image: "/images/home_aisolutionindustry_12.webp",
         },
       ],
     },
@@ -2028,8 +2028,8 @@ export const Product = {
     CTAButton: {
       data: "Let’s Secure Your Space With ArcisAI PTZ Cameras",
       buttonText: "Get Your PTZ CCTV Quote",
-      d_image: "/images/product_cta_ptz.png",
-      m_image: "/images/product_cta_ptz_mobile.png",
+      d_image: "/images/product_cta_ptz.webp",
+      m_image: "/images/product_cta_ptz_mobile.webp",
       link: "/contact-us",
       textPosition: {
         desktop: { top: "50%", left: "-6%" },
@@ -2089,9 +2089,9 @@ export const Product = {
     hero: [
       {
         title: "Eco-Series Dome Camera",
-        image: "/images/product_dome_main.png",
-        d_image: "/images/product_dome_main.png",
-        m_image: "/images/product_dome_main_mobile.png",
+        image: "/images/product_dome_main.webp",
+        d_image: "/images/product_dome_main.webp",
+        m_image: "/images/product_dome_main_mobile.webp",
         buttonText: "Get Dome Cameras",
         buttonLink: "contact-us",
         sectionProps: {
@@ -2143,8 +2143,8 @@ export const Product = {
       },
     ],
     features: {
-      d_image: "/images/product_feature_dome_bg.png",
-      m_image: "/images/product_feature_dome_bg_mobile.png",
+      d_image: "/images/product_feature_dome_bg.webp",
+      m_image: "/images/product_feature_dome_bg_mobile.webp",
       heading:
         "Professional-Grade Dome CCTV Cameras for Businesses, Offices & Homes",
       description:
@@ -2183,8 +2183,8 @@ export const Product = {
       ],
     },
     comparisonData: {
-      d_image: "/images/product_cameracomparision.png",
-      m_image: "/images/product_cameracomparision_mobile.png",
+      d_image: "/images/product_cameracomparision.webp",
+      m_image: "/images/product_cameracomparision_mobile.webp",
       heading: "Find the Right Dome CCTV Camera for Your Security Needs",
       headers: [
         "Category",
@@ -2370,45 +2370,45 @@ export const Product = {
       industries: [
         {
           name: "Manufacturing & Factory Plants",
-          image: "/images/home_aisolutionindustry_1.png",
+          image: "/images/home_aisolutionindustry_1.webp",
         }, // Placeholder
         {
           name: "Warehouses & Logistics",
-          image: "/images/home_aisolutionindustry_2.png",
+          image: "/images/home_aisolutionindustry_2.webp",
         },
         {
           name: "Smart Cities",
-          image: "/images/home_aisolutionindustry_3.png",
+          image: "/images/home_aisolutionindustry_3.webp",
         },
         {
           name: "Construction Sites",
-          image: "/images/home_aisolutionindustry_4.png",
+          image: "/images/home_aisolutionindustry_4.webp",
         },
-        { name: "Hospitality", image: "/images/home_aisolutionindustry_5.png" },
+        { name: "Hospitality", image: "/images/home_aisolutionindustry_5.webp" },
         {
           name: "Banks & ATMs",
-          image: "/images/home_aisolutionindustry_6.png",
+          image: "/images/home_aisolutionindustry_6.webp",
         },
-        { name: "Hospitals", image: "/images/home_aisolutionindustry_7.png" },
+        { name: "Hospitals", image: "/images/home_aisolutionindustry_7.webp" },
         {
           name: "Airports, Bus & Railway Stations",
-          image: "/images/home_aisolutionindustry_8.png",
+          image: "/images/home_aisolutionindustry_8.webp",
         },
         {
           name: "Retail Stores",
-          image: "/images/home_aisolutionindustry_9.png",
+          image: "/images/home_aisolutionindustry_9.webp",
         },
         {
           name: "Corporate Offices",
-          image: "/images/home_aisolutionindustry_10.png",
+          image: "/images/home_aisolutionindustry_10.webp",
         },
         {
           name: "Housing Societies",
-          image: "/images/home_aisolutionindustry_11.png",
+          image: "/images/home_aisolutionindustry_11.webp",
         },
         {
           name: "Educational Premises",
-          image: "/images/home_aisolutionindustry_12.png",
+          image: "/images/home_aisolutionindustry_12.webp",
         },
       ],
     },
@@ -2456,8 +2456,8 @@ export const Product = {
     CTAButton: {
       data: "Ready to Secure Your Space With Reliable Dome CCTV Cameras?",
       buttonText: "Request CCTV Quote",
-      d_image: "/images/product_cta_dome.png",
-      m_image: "/images/product_cta_dome_mobile.png",
+      d_image: "/images/product_cta_dome.webp",
+      m_image: "/images/product_cta_dome_mobile.webp",
       link: "/contact-us",
       textPosition: {
         desktop: { top: "50%", left: "5%" },

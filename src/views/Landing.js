@@ -39,7 +39,7 @@ function Landing() {
         />
         <meta
           property="og:image"
-          content="https://arcisai.io//images/DeviceImage.png"
+          content="https://arcisai.io//images/DeviceImage.webp"
         />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_US" />
@@ -59,7 +59,7 @@ function Landing() {
         />
         <meta
           name="twitter:image"
-          content="https://arcisai.io//images/DeviceImage.png"
+          content="https://arcisai.io//images/DeviceImage.webp"
         />
         {/* --- Schema Markup: Organization, LocalBusiness, and WebPage --- */}
         <script type="application/ld+json">
@@ -69,7 +69,7 @@ function Landing() {
               "@type": "Organization",
               url: "https://arcisai.io/",
               name: "ArcisAI - AI CCTV Camera Brand",
-              logo: "https://arcisai.io/images/ArcisAi.png",
+              logo: "https://arcisai.io/images/ArcisAi.webp",
               email: "marketing@arcisai.io",
               telePhone: "+91 9687779999",
               address: [
@@ -128,7 +128,7 @@ function Landing() {
                 latitude: "43.115852",
                 longitude: "5.846040",
               },
-              image: "https://arcisai.io/images/ArcisAi.png",
+              image: "https://arcisai.io/images/ArcisAi.webp",
             },
             null,
             2
@@ -152,7 +152,7 @@ function Landing() {
                 url: "https://arcisai.io/",
                 logo: {
                   "@type": "ImageObject",
-                  url: "https://arcisai.io/images/ArcisAi.png",
+                  url: "https://arcisai.io/images/ArcisAi.webp",
                   width: 107,
                   height: 24,
                 },
@@ -165,7 +165,7 @@ function Landing() {
               },
               primaryImageOfPage: {
                 "@type": "ImageObject",
-                url: "https://arcisai.io/images/DeviceImage.png",
+                url: "https://arcisai.io/images/DeviceImage.webp",
                 width: 538,
                 height: 475,
                 caption: "AI-Powered Security Camera Brand",
@@ -269,7 +269,7 @@ function Landing() {
           position="relative"
           zIndex={10}
         >
-          <Image loading="lazy" src="/images/DeviceImage.png" alt="Laptop" />
+          <Image loading="lazy" src="/images/DeviceImage.webp" alt="Laptop" />
         </Flex>
       </Flex>
     </>

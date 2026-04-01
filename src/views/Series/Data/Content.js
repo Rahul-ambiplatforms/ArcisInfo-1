@@ -49,8 +49,8 @@ import { position } from "@chakra-ui/react";
 export const Series = {
   sSeries: {
     hero: {
-      d_image: "/images/sseries_hero_main.png",
-      m_image: "/images/sseries_hero_main_mobile.png",
+      d_image: "/images/sseries_hero_main.webp",
+      m_image: "/images/sseries_hero_main_mobile.webp",
       heading: "AI-Powered S-Series CCTV Security Cameras",
       description:
         "With ArcisAI, you don't need to sit through endless footage or worry about missing key events. Our EdgeAI security cameras detect what matters and alert you instantly - even during off-hours.",
@@ -90,17 +90,17 @@ export const Series = {
           product_type: "S-series",
           productarray: [
             {
-              image: "/images/home_productlist_sseries_1.png",
+              image: "/images/home_productlist_sseries_1.webp",
               product_name: "AI PTZ camera",
               link: "/s-series/ai-ptz-cctv-camera",
             },
             {
-              image: "/images/home_productlist_sseries_2.png",
+              image: "/images/home_productlist_sseries_2.webp",
               product_name: "AI Bullet camera",
               link: "/s-series/ai-bullet-cctv-camera",
             },
             {
-              image: "/images/home_productlist_sseries_3.png",
+              image: "/images/home_productlist_sseries_3.webp",
               product_name: "AI Dome camera",
               link: "/s-series/ai-dome-cctv-camera",
             },
@@ -111,8 +111,8 @@ export const Series = {
     CTAButton: {
       data: "Let Your Cameras Think, Not Just Watch. Upgrade to AI-powered CCTV with ArcisAI.",
       buttonText: "Schedule a Demo",
-      d_image: "/images/sseries_cta.png",
-      m_Image: "/images/sseries_cta_mobile.png",
+      d_image: "/images/sseries_cta.webp",
+      m_Image: "/images/sseries_cta_mobile.webp",
       link: "/contact-us",
       textPosition: {
         desktop: { top: "50%", left: "0%" },
@@ -155,10 +155,10 @@ export const Series = {
   },
   ecoSeries: {
     hero: {
-      // d_image: "/images/ecoseries_hero_main.png",
-      // m_image: "/images/ecoseries_hero_main_mobile.png",
-      d_image: "/images/sseries_hero_main.png",
-      m_image: "/images/sseries_hero_main_mobile.png",
+      // d_image: "/images/ecoseries_hero_main.webp",
+      // m_image: "/images/ecoseries_hero_main_mobile.webp",
+      d_image: "/images/sseries_hero_main.webp",
+      m_image: "/images/sseries_hero_main_mobile.webp",
       heading: "Reliable CCTV Cameras for Everyday Security",
       description:
         "Built to handle Indian conditions with precision, the Eco-Series combines clear footage, stable operation and flexible installation options making it a trusted CCTV solution for long-lasting, essential security coverage.",
@@ -218,22 +218,22 @@ export const Series = {
           product_type: "Eco-series",
           productarray: [
             {
-              image: "/images/home_productlist_sseries_2.png",
+              image: "/images/home_productlist_sseries_2.webp",
               product_name: "Bullet CCTV camera",
               link: "/eco-series/bullet-cctv-camera",
             },
             {
-              image: "/images/home_productlist_sseries_3.png",
+              image: "/images/home_productlist_sseries_3.webp",
               product_name: "Dome CCTV camera",
               link: "/eco-series/dome-cctv-camera",
             },
             {
-              image: "/images/home_productlist_sseries_1.png",
+              image: "/images/home_productlist_sseries_1.webp",
               product_name: "PTZ CCTV camera",
               link: "/eco-series/ptz-cctv-camera",
             },
             // {
-            //   image: "/images/home_productlist_sseries_1.png",
+            //   image: "/images/home_productlist_sseries_1.webp",
             //   product_name: "AI Baby PTZ camera",
             //   link: "eco-series/baby-ptz-cctv-camera",
             // },
@@ -244,8 +244,8 @@ export const Series = {
     CTAButton: {
       data: "Get a Quote for Your CCTV Security Cameras",
       buttonText: "Enquire Now",
-      d_image: "/images/sseries_cta.png",
-      m_Image: "/images/sseries_cta_mobile.png",
+      d_image: "/images/sseries_cta.webp",
+      m_Image: "/images/sseries_cta_mobile.webp",
       link: "/contact-us",
       textPosition: {
         desktop: { top: "50%", left: "0%" },
@@ -293,8 +293,8 @@ export const Series = {
         heading: "India’s Most Advanced AI-Powered Cloud VMS",
         description:
           "AI-powered, STQC-certified Cloud Video management system designed for India’s modern, large-scale surveillance needs with secure monitoring and smart analytics.",
-        d_image: "/images/STQC_hero_main.png",
-        m_image: "/images/STQC_hero_main.png",
+        d_image: "/images/STQC_hero_main.webp",
+        m_image: "/images/STQC_hero_main.webp",
         buttonText: "Talk to our Expert",
         buttonLink: "/contact-us",
         sectionProps: {
@@ -350,9 +350,9 @@ export const Series = {
       //     "India’s First AI CCTV Brand with GPT-Powered Surveillance Intelligence",
       //   description:
       //     "Ask your camera system anything — ArcisGPT responds instantly.",
-      //   image: "/images/home_hero_1.png",
-      //   d_image: "/images/home_hero_1.png",
-      //   m_image: "/images/mobile_home_hero_1.png",
+      //   image: "/images/home_hero_1.webp",
+      //   d_image: "/images/home_hero_1.webp",
+      //   m_image: "/images/mobile_home_hero_1.webp",
       //   buttonText: "Let's Talk",
       //   buttonLink: "/contact-us",
       //   sectionProps: {
@@ -406,9 +406,9 @@ export const Series = {
       //   id: 3,
       //   heading: "Best AI CCTV Camera Company for Industrial Safety & Compliance",
       //   description: "Stay audit-ready with intelligent industrial monitoring.",
-      //   image: "/images/home_hero_1.png",
-      //   d_image: "/images/home_hero_1.png",
-      //   m_image: "/images/mobile_home_hero_1.png",
+      //   image: "/images/home_hero_1.webp",
+      //   d_image: "/images/home_hero_1.webp",
+      //   m_image: "/images/mobile_home_hero_1.webp",
       //   buttonText: "Let's Talk",
       //   buttonLink: "/contact-us",
       //   sectionProps: {
@@ -463,9 +463,9 @@ export const Series = {
       //   heading:
       //     "AI Security Cameras That Secure Your Warehouses & Logistics Zones",
       //   description: "Track vehicles, detect risk & prevent loss in real time.",
-      //   image: "/images/home_hero_1.png",
-      //   d_image: "/images/home_hero_1.png",
-      //   m_image: "/images/mobile_home_hero_1.png",
+      //   image: "/images/home_hero_1.webp",
+      //   d_image: "/images/home_hero_1.webp",
+      //   m_image: "/images/mobile_home_hero_1.webp",
       //   buttonText: "Let's Talk",
       //   buttonLink: "/contact-us",
       //   sectionProps: {
@@ -519,9 +519,9 @@ export const Series = {
       //   id: 5,
       //   heading: "AI CCTV Cameras Built for Retail & Malls Surveillance in India",
       //   description: "Boost safety and shopper insights with AI-powered CCTV.",
-      //   image: "/images/home_hero_1.png",
-      //   d_image: "/images/home_hero_1.png",
-      //   m_image: "/images/mobile_home_hero_1.png",
+      //   image: "/images/home_hero_1.webp",
+      //   d_image: "/images/home_hero_1.webp",
+      //   m_image: "/images/mobile_home_hero_1.webp",
       //   buttonText: "Let's Talk",
       //   buttonLink: "/contact-us",
       //   sectionProps: {
@@ -576,9 +576,9 @@ export const Series = {
       //   heading: "India’s Top AI Security Camera Brand for Smart Cities",
       //   description:
       //     "Secure public spaces with AI-based face, crowd and object detection.",
-      //   image: "/images/home_hero_1.png",
-      //   d_image: "/images/home_hero_1.png",
-      //   m_image: "/images/mobile_home_hero_1.png",
+      //   image: "/images/home_hero_1.webp",
+      //   d_image: "/images/home_hero_1.webp",
+      //   m_image: "/images/mobile_home_hero_1.webp",
       //   buttonText: "Let's Talk",
       //   buttonLink: "/contact-us",
       //   sectionProps: {
@@ -633,9 +633,9 @@ export const Series = {
       //   heading: "Indian AI CCTV Camera System for Smart Housing Security",
       //   description:
       //     "24/7 AI-enabled residential safety, built for Indian societies.",
-      //   image: "/images/home_hero_1.png",
-      //   d_image: "/images/home_hero_1.png",
-      //   m_image: "/images/mobile_home_hero_1.png",
+      //   image: "/images/home_hero_1.webp",
+      //   d_image: "/images/home_hero_1.webp",
+      //   m_image: "/images/mobile_home_hero_1.webp",
       //   buttonText: "Let's Talk",
       //   buttonLink: "/contact-us",
       //   sectionProps: {
@@ -692,7 +692,7 @@ export const Series = {
         "STQC-approved Cloud video management system that allows organizations to centralize and manage all their surveillance cameras, video recordings, and AI analytics from a single platform.",
         "Designed for India's modern surveillance needs, it ensures reliable performance, easy operations, real-time monitoring, and fully compliant data management—ideal for government agencies, enterprises, and multi-location deployments.",
       ],
-      image: "/images/Standardisation_Testing_And_Quality_Certification.png",
+      image: "/images/Standardisation_Testing_And_Quality_Certification.webp",
 
       sectionProps: {
         desktop: {
@@ -761,8 +761,8 @@ export const Series = {
       },
     },
     features: {
-      d_image: "/images/combo.png",
-      m_image: "/images/product_feature_dome_bg_mobile.png",
+      d_image: "/images/combo.webp",
+      m_image: "/images/product_feature_dome_bg_mobile.webp",
       heading: "Cloud VMS Features That Make Surveillance Smarter and Safer",
       description: "",
       styles: {
@@ -852,8 +852,8 @@ export const Series = {
     CTAButton1: {
       data: "Discover ArcisAI's STQC-Certified Cloud VMS for Smarter Surveillance",
       buttonText: "Try ArcisGPT",
-      d_image: "/images/home_cta_1.png",
-      m_Image: "/images/home_cta_mobile_1.png",
+      d_image: "/images/home_cta_1.webp",
+      m_Image: "/images/home_cta_mobile_1.webp",
       link: "/contact-us",
       textPosition: {
         desktop: { top: "50%", left: "5%" },
@@ -913,8 +913,8 @@ export const Series = {
         heading: "India’s Most Advanced AI-Powered Cloud VMS",
         description:
           "AI-powered, STQC-certified Cloud Video management system designed for India’s modern, large-scale surveillance needs with secure monitoring and smart analytics.",
-        d_image: "/images/STQC_hero_main.png",
-        m_image: "/images/STQC_hero_main_mobile.png",
+        d_image: "/images/STQC_hero_main.webp",
+        m_image: "/images/STQC_hero_main_mobile.webp",
         buttonText: "Request Demo",
         buttonLink: "/contact-us",
         sectionProps: {
@@ -972,7 +972,7 @@ export const Series = {
         "STQC-approved Cloud video management system that allows organizations to centralize and manage all their surveillance cameras, video recordings, and AI analytics from a single platform.",
         "Designed for India's modern surveillance needs, it ensures reliable performance, easy operations, real-time monitoring, and fully compliant data management—ideal for government agencies, enterprises, and multi-location deployments.",
       ],
-      image: "/images/Standardisation_Testing_and_Quality_Certification.png",
+      image: "/images/Standardisation_Testing_and_Quality_Certification.webp",
 
       sectionProps: {
         desktop: {
@@ -1041,8 +1041,8 @@ export const Series = {
       },
     },
     features: {
-      d_image: "/images/cloud_vms_features.png",
-      m_image: "/images/cloud_vms_features_mobile.png",
+      d_image: "/images/cloud_vms_features.webp",
+      m_image: "/images/cloud_vms_features_mobile.webp",
       heading: "Cloud VMS Features That Make Surveillance Smarter and Safer",
       description: "",
       styles: {
@@ -1127,8 +1127,8 @@ export const Series = {
     CTAButton1: {
       data: "Discover ArcisAI's STQC-Certified Cloud VMS for Smarter Surveillance",
       buttonText: "Request Demo",
-      d_image: "/images/STQC_cta.png",
-      m_Image: "/images/STQC_cta_mobile.png",
+      d_image: "/images/STQC_cta.webp",
+      m_Image: "/images/STQC_cta_mobile.webp",
       link: "/contact-us",
       textPosition: {
         desktop: { top: "50%", left: "5%" },
@@ -1189,8 +1189,8 @@ export const Series = {
           "Arcis Bridge Device: Connect Any CCTV Camera to ArcisAI Ecosystem",
         description:
           "Connect all existing ONVIF cameras to ArcisAI VMS for cloud monitoring, centralized management, and smart features—cost-effectively and hassle-free.",
-        d_image: "/images/abd_hero_main.png",
-        m_image: "/images/abd_hero_main_mobile.png",
+        d_image: "/images/abd_hero_main.webp",
+        m_image: "/images/abd_hero_main_mobile.webp",
         buttonText: "Let’s connect",
         buttonLink: "/contact-us",
         sectionProps: {
@@ -1293,8 +1293,8 @@ export const Series = {
       },
     },
     features: {
-      d_image: "/images/abd_features.png",
-      m_image: "/images/abd_features_mobile.png",
+      d_image: "/images/abd_features.webp",
+      m_image: "/images/abd_features_mobile.webp",
       heading: "Unlock Cloud Monitoring and AI Features on Existing Cameras",
       description: "",
       styles: {
@@ -1371,8 +1371,8 @@ export const Series = {
     CTAButton1: {
       data: "Modernize Your Existing CCTV Surveillance With Arcis Bridge Device",
       buttonText: "Get a Quote for ABD",
-      d_image: "/images/abd_cta.png",
-      m_Image: "/images/whyarcis_cta_mobile.png",
+      d_image: "/images/abd_cta.webp",
+      m_Image: "/images/whyarcis_cta_mobile.webp",
       link: "/contact-us",
       textPosition: {
         desktop: { top: "50%", left: "1%" }, // Changed to 50%
@@ -1433,8 +1433,8 @@ export const Series = {
         id: 1,
         heading: "High-Quality NVR Recorders for Smooth CCTV Monitoring",
 
-        d_image: "/images/nvr_hero_main.png",
-        m_image: "/images/nvr_hero_main_mobile.png",
+        d_image: "/images/nvr_hero_main.webp",
+        m_image: "/images/nvr_hero_main_mobile.webp",
         buttonText: "Contact Us",
         buttonLink: "/contact-us",
         sectionProps: {
@@ -1571,7 +1571,7 @@ export const Series = {
       models: [
         {
           name: "AD-N0481-PoE | 4 Channel",
-          image: "/images/nvr-4-channel.png",
+          image: "/images/nvr-4-channel.webp",
           headerBgColor: "#333333", // Optional: specific color for header
           contentBgColor: "#000", // Background for expanded content
           headerHoverBgColor: "#222", // Optional: hover state for header
@@ -1596,7 +1596,7 @@ export const Series = {
         },
         {
           name: "AD-N0881-PoE | 8 Channel",
-          image: "/images/nvr-4-channel.png",
+          image: "/images/nvr-4-channel.webp",
           headerBgColor: "#333333", // Optional: specific color for header
           contentBgColor: "#000", // Background for expanded content
           headerHoverBgColor: "#222", // Optional: hover state for header
@@ -1621,7 +1621,7 @@ export const Series = {
         },
         {
           name: "AD-N1681 | 16 Channel",
-          image: "/images/nvr-4-channel.png",
+          image: "/images/nvr-4-channel.webp",
           headerBgColor: "#333333", // Optional: specific color for header
           contentBgColor: "#000", // Background for expanded content
           headerHoverBgColor: "#222", // Optional: hover state for header
@@ -1646,7 +1646,7 @@ export const Series = {
         },
         {
           name: "AD-N3251 | 32 Channel",
-          image: "/images/nvr-4-channel.png",
+          image: "/images/nvr-4-channel.webp",
           headerBgColor: "#333333", // Optional: specific color for header
           contentBgColor: "#000", // Background for expanded content
           headerHoverBgColor: "#222", // Optional: hover state for header
@@ -1761,8 +1761,8 @@ export const Series = {
     CTAButton1: {
       data: "Choose the Right NVR Device to Power Your CCTV Surveillance System",
       buttonText: "Enquire Now",
-      d_image: "/images/abd_cta.png",
-      m_Image: "/images/whyarcis_cta_mobile.png",
+      d_image: "/images/abd_cta.webp",
+      m_Image: "/images/whyarcis_cta_mobile.webp",
       link: "/contact-us",
       textPosition: {
         desktop: { top: "50%", left: "0%" }, // Changed to 50%

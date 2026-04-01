@@ -2,7 +2,7 @@ export const homeSEO = {
   metatitle: "Best AI CCTV Camera Brand in India | AI CCTV Company - ArcisAI",
   metadescription:
     "Looking for a reliable AI CCTV camera provider? ArcisAI is a top CCTV brand in India offering AI-driven surveillance to protect your space, anytime, anywhere.",
-  ogimage: "https://arcisai.io/images/home_hero_1.png",
+  ogimage: "https://arcisai.io/images/home_hero_1.webp",
   canonical: "https://arcisai.io/",
   schema: [
     // WebPage Schema
@@ -21,7 +21,7 @@ export const homeSEO = {
         url: "https://arcisai.io/",
         logo: {
           "@type": "ImageObject",
-          url: "https://arcisai.io/images/ArcisAi.png",
+          url: "https://arcisai.io/images/ArcisAi.webp",
           width: 107,
           height: 24,
         },
@@ -48,7 +48,7 @@ export const homeSEO = {
       "@type": "Organization",
       name: "ArcisAI - AI CCTV Camera Brand",
       url: "https://arcisai.io/",
-      logo: "https://arcisai.io/images/ArcisAi.png",
+      logo: "https://arcisai.io/images/ArcisAi.webp",
       contactPoint: {
         "@type": "ContactPoint",
         telephone: "+91 9687779999",
@@ -114,7 +114,7 @@ export const homeSEO = {
         latitude: "23.037684",
         longitude: "72.503439",
       },
-      image: "https://arcisai.io/images/ArcisAi.png",
+      image: "https://arcisai.io/images/ArcisAi.webp",
     },
 
     // FAQ Schema

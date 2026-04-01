@@ -5,20 +5,20 @@ export const EventData = {
       heading: "Connecting Smarter, Safer and Across Industries",
       description:
         "We actively participate in leading security and technology expos to engage with partners, integrators and industry innovators. These platforms help us collaborate stronger, showcase our AI surveillance breakthroughs and build meaningful connections.",
-      d_image: "/images/event_home_main.png",
-      m_image: "/images/event_home_main_mobile.png",
+      d_image: "/images/event_home_main.webp",
+      m_image: "/images/event_home_main_mobile.webp",
       logos: [
         {
           name: "IFSEC",
-          image: "/images/event_home_logo1.png",
+          image: "/images/event_home_logo1.webp",
         },
         {
           name: "SEMICON INDIA",
-          image: "/images/event_home_logo2.png", // Placeholder - replace with actual logo
+          image: "/images/event_home_logo2.webp", // Placeholder - replace with actual logo
         },
         {
           name: "Smart Tech",
-          image: "/images/event_home_logo3.png", // Placeholder - replace with actual logo
+          image: "/images/event_home_logo3.webp", // Placeholder - replace with actual logo
         },
       ],
       sectionProps: {
@@ -98,7 +98,7 @@ export const EventData = {
   carousel: {
     sectionTitle: "A Glimpse into Past Events", // Shared heading for carousel
     eventHeading: "IFSEC India 2025", // Dynamic heading above description
-    logo: "/images/event_home_logo1.png", // Shared logo for all carousel slides
+    logo: "/images/event_home_logo1.webp", // Shared logo for all carousel slides
     description:
       "Explore how ArcisAI showcased its next-gen AI CCTV cameras, EdgeAI, CloudAI, GenAI technologies and enterprise surveillance solutions at IFSEC India Expo 2025. From product unveilings to live demos and industry interactions, get the full highlight of ArcisAI’s presence at this premier security exhibition.",
     detailsLink: "/event/ifsec-india-2025", // Shared button link for all carousel slides
@@ -107,23 +107,23 @@ export const EventData = {
         id: 1,
         title: "IFSEC India 2025",
         eventName: "IFSEC",
-        image: "/images/event_carousel_1.png",
-        mobileImage: "/images/event_carousel_mobile_1.png",
+        image: "/images/event_carousel_1.webp",
+        mobileImage: "/images/event_carousel_mobile_1.webp",
       },
 
       {
         id: 2,
         title: "IFSEC India 2024",
         eventName: "IFSEC",
-        image: "/images/event_carousel_2.png",
-        mobileImage: "/images/event_carousel_mobile_2.png",
+        image: "/images/event_carousel_2.webp",
+        mobileImage: "/images/event_carousel_mobile_2.webp",
       },
       {
         id: 3,
         title: "IFSEC India 2023",
         eventName: "IFSEC",
-        image: "/images/event_carousel_3.png",
-        mobileImage: "/images/event_carousel_mobile_3.png",
+        image: "/images/event_carousel_3.webp",
+        mobileImage: "/images/event_carousel_mobile_3.webp",
       },
     ],
     bgColor: "#000",
@@ -206,8 +206,8 @@ export const EventData = {
   cta: {
     data: "Discover the Future of AI Surveillance with ArcisAI",
     buttonText: "Schedule a Demo",
-    d_image: "/images/abd_cta.png",
-    m_Image: "/images/whyarcis_cta_mobile.png",
+    d_image: "/images/abd_cta.webp",
+    m_Image: "/images/whyarcis_cta_mobile.webp",
     link: "/contact-us",
     textPosition: {
       desktop: { top: "50%", left: "0%" }, // Changed to 50%
@@ -253,26 +253,26 @@ export const IFSECData = {
       "ArcisAI's AI-Powered Surveillance Innovations Captured Attention at IFSEC India 2025 Exhibition",
     description:
       "ArcisAI showcased its next-generation AI CCTV Camera ecosystem at IFSEC India 2025, held at Bharat Mandapam, New Delhi, from 11-13 December 2025. As one of India's fastest-growing AI CCTV camera brands, ArcisAI demonstrated a full lineup of Edge AI CCTV cameras, CloudAI surveillance, smart VMS, Arcis Bridging Device, enterprise-grade AI, NVRs, and ArcisGPT — the first Surveillance AI assistant. Visitors from across India explored how ArcisAI's intelligent surveillance solutions help businesses enhance security, improve response times, enable proactive threat detection and unlock powerful analytics.",
-    logo: "/images/IFSEC_logo.png",
+    logo: "/images/IFSEC_logo.webp",
     images: [
       {
         id: 1,
-        src: "/images/IFSEC_carousel_1.png",
+        src: "/images/IFSEC_carousel_1.webp",
         alt: "IFSEC India 2025 - ArcisAI Booth",
       },
       {
         id: 2,
-        src: "/images/IFSEC_carousel_2.png",
+        src: "/images/IFSEC_carousel_2.webp",
         alt: "IFSEC India 2025 - Product Demo",
       },
       {
         id: 3,
-        src: "/images/IFSEC_carousel_3.png",
+        src: "/images/IFSEC_carousel_3.webp",
         alt: "IFSEC India 2025 - Visitor Engagement",
       },
       {
         id: 4,
-        src: "/images/IFSEC_carousel_4.png",
+        src: "/images/IFSEC_carousel_4.webp",
         alt: "IFSEC India 2025 - Team",
       },
     ],
@@ -465,15 +465,15 @@ export const IFSECData = {
     title: "Image Gallery",
     images: [
       {
-        src: "/images/IFSEC_gallery_1.png",
+        src: "/images/IFSEC_gallery_1.webp",
         alt: "IFSEC India 2025 - Booth View",
       },
       {
-        src: "/images/IFSEC_gallery_2.png",
+        src: "/images/IFSEC_gallery_2.webp",
         alt: "IFSEC India 2025 - Team Photo",
       },
       {
-        src: "/images/IFSEC_gallery_3.png",
+        src: "/images/IFSEC_gallery_3.webp",
         alt: "IFSEC India 2025 - Visitor Interaction",
       },
     ],
@@ -495,8 +495,8 @@ export const IFSECData = {
   cta: {
     data: "Book a Demo Today and See How AI-Powered CCTV Cameras Can Transform Your Security",
     buttonText: "Book a Live Demo",
-    d_image: "/images/abd_cta.png",
-    m_Image: "/images/whyarcis_cta_mobile.png",
+    d_image: "/images/abd_cta.webp",
+    m_Image: "/images/whyarcis_cta_mobile.webp",
     link: "/contact",
     textPosition: {
       desktop: { top: "50%", left: "0%" },

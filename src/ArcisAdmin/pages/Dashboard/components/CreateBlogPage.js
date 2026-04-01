@@ -303,7 +303,7 @@ const CreateBlogForm = ({ blog, preserveUpdatedAt }) => {
         if (item.type === "imageVideo") {
           let imagePath = null;
           if (typeof item.content?.imageIndex === "number") {
-            imagePath = `/uploads/image-${item.content.imageIndex}.png`;
+            imagePath = `/uploads/image-${item.content.imageIndex}.webp`;
           } else if (item.content?.imagePath) {
             imagePath = item.content.imagePath;
           }

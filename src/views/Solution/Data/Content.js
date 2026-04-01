@@ -38,8 +38,8 @@ export const Solution = {
         ],
         buttonText: "Request a Demo",
         buttonLink: "/contact-us",
-        d_image: "/images/solution_edgeai_hero.png",
-        m_image: "/images/solution_edgeai_hero_mobile.png",
+        d_image: "/images/solution_edgeai_hero.webp",
+        m_image: "/images/solution_edgeai_hero_mobile.webp",
         sectionProps: {
           desktop: {
             marginTop: "-7%",
@@ -94,7 +94,7 @@ export const Solution = {
         "EdgeAI brings artificial intelligence directly into the security cameras. Unlike traditional systems that send footage to external servers for analysis, ArcisAI’s EdgeAI cameras process everything on the device itself. ",
         "This allows for real-time detection and instant alerts, without relying on additional hardware. It also reduces bandwidth usage and keeps sensitive data more secure by minimizing external transfers. With EdgeAI, you get a smarter, faster and more private surveillance solution - built right into every CCTV camera.",
       ],
-      image: "/images/solution_all_whatisai.png", // Placeholder
+      image: "/images/solution_all_whatisai.webp", // Placeholder
     },
     AIFeatures: {
       heading:
@@ -114,49 +114,49 @@ export const Solution = {
           name: "Line Crossing Detection",
           description:
             "Detects when a person or vehicle crosses a predefined virtual line within the camera’s field of view.",
-          image: "/images/solution_edgeai_aifeatures_1.png",
+          image: "/images/solution_edgeai_aifeatures_1.webp",
         },
         {
           name: "Customer Traffic Statistics",
           description:
             "Counts and tracks the number of individuals entering or exiting a monitored area in real time.",
-          image: "/images/solution_edgeai_aifeatures_2.png",
+          image: "/images/solution_edgeai_aifeatures_2.webp",
         },
         {
           name: "Area Detection",
           description:
             "Monitors defined zones and alerts when motion or presence is detected within those boundaries.",
-          image: "/images/solution_edgeai_aifeatures_3.png",
+          image: "/images/solution_edgeai_aifeatures_3.webp",
         },
         {
           name: "Unattended Object Detection",
           description:
             "Identifies objects left behind within the scene, such as bags, packages, or other items.",
-          image: "/images/solution_edgeai_aifeatures_4.png",
+          image: "/images/solution_edgeai_aifeatures_4.webp",
         },
         {
           name: "Missing Object Detection",
           description:
             "Detects the removal or disappearance of predefined objects from the monitored area.",
-          image: "/images/solution_edgeai_aifeatures_5.png",
+          image: "/images/solution_edgeai_aifeatures_5.webp",
         },
         {
           name: "Human Detection",
           description:
             "Identifies the presence of a person within the frame, distinguishing them from other objects or motion.",
-          image: "/images/solution_edgeai_aifeatures_6.png",
+          image: "/images/solution_edgeai_aifeatures_6.webp",
         },
         {
           name: "Face Detection",
           description:
             "Detects when a human face enters the camera’s view and triggers a detection event.",
-          image: "/images/solution_edgeai_aifeatures_7.png",
+          image: "/images/solution_edgeai_aifeatures_7.webp",
         },
         {
           name: "Motion Detection",
           description:
             "Senses movement within the camera’s field of view and initiates immediate alerting or action.",
-          image: "/images/solution_edgeai_aifeatures_8.png",
+          image: "/images/solution_edgeai_aifeatures_8.webp",
         },
       ],
     },
@@ -168,45 +168,45 @@ export const Solution = {
       industries: [
         {
           name: "Manufacturing & Factory Plants",
-          image: "/images/home_aisolutionindustry_1.png",
+          image: "/images/home_aisolutionindustry_1.webp",
         }, // Placeholder
         {
           name: "Warehouses & Logistics",
-          image: "/images/home_aisolutionindustry_2.png",
+          image: "/images/home_aisolutionindustry_2.webp",
         },
         {
           name: "Smart Cities",
-          image: "/images/home_aisolutionindustry_3.png",
+          image: "/images/home_aisolutionindustry_3.webp",
         },
         {
           name: "Construction Sites",
-          image: "/images/home_aisolutionindustry_4.png",
+          image: "/images/home_aisolutionindustry_4.webp",
         },
-        { name: "Hospitality", image: "/images/home_aisolutionindustry_5.png" },
+        { name: "Hospitality", image: "/images/home_aisolutionindustry_5.webp" },
         {
           name: "Banks & ATMs",
-          image: "/images/home_aisolutionindustry_6.png",
+          image: "/images/home_aisolutionindustry_6.webp",
         },
-        { name: "Hospitals", image: "/images/home_aisolutionindustry_7.png" },
+        { name: "Hospitals", image: "/images/home_aisolutionindustry_7.webp" },
         {
           name: "Airports, Bus & Railway Stations",
-          image: "/images/home_aisolutionindustry_8.png",
+          image: "/images/home_aisolutionindustry_8.webp",
         },
         {
           name: "Retail Stores",
-          image: "/images/home_aisolutionindustry_9.png",
+          image: "/images/home_aisolutionindustry_9.webp",
         },
         {
           name: "Corporate Offices",
-          image: "/images/home_aisolutionindustry_10.png",
+          image: "/images/home_aisolutionindustry_10.webp",
         },
         {
           name: "Housing Societies",
-          image: "/images/home_aisolutionindustry_11.png",
+          image: "/images/home_aisolutionindustry_11.webp",
         },
         {
           name: "Educational Premises",
-          image: "/images/home_aisolutionindustry_12.png",
+          image: "/images/home_aisolutionindustry_12.webp",
         },
       ],
     },
@@ -214,8 +214,8 @@ export const Solution = {
     CTAButton: {
       data: "Move from Ordinary Cameras into Decision Makers With AI-based CCTV by ArcisAI",
       buttonText: "Talk To Our Expert",
-      d_image: "/images/solution_edgeai_cta.png",
-      m_Image: "/images/solution_edgeai_cta_mobile.png",
+      d_image: "/images/solution_edgeai_cta.webp",
+      m_Image: "/images/solution_edgeai_cta_mobile.webp",
       link: "/contact-us",
       textPosition: {
         desktop: { top: "50%", left: "5%" },
@@ -347,9 +347,9 @@ export const Solution = {
         ],
         buttonText: "Request a Demo",
         buttonLink: "/contact-us",
-        image: "/images/camera3.png",
-        d_image: "/images/solution_cloudai_hero.png",
-        m_image: "/images/solution_cloudai_hero_mobile.png",
+        image: "/images/camera3.webp",
+        d_image: "/images/solution_cloudai_hero.webp",
+        m_image: "/images/solution_cloudai_hero_mobile.webp",
         sectionProps: {
           desktop: {
             marginTop: "-7%",
@@ -404,9 +404,9 @@ export const Solution = {
       //   ],
       //   buttonText: "Request a Demo",
       //   buttonLink: "/contact-us",
-      //   image: "/images/camera3.png",
-      //   d_image: "/images/solution_cloudai_hero.png",
-      //   m_image: "/images/solution_cloudai_hero_mobile.png",
+      //   image: "/images/camera3.webp",
+      //   d_image: "/images/solution_cloudai_hero.webp",
+      //   m_image: "/images/solution_cloudai_hero_mobile.webp",
       //   sectionProps: {
       //     desktop: {
       //       marginTop: "",
@@ -461,7 +461,7 @@ export const Solution = {
         "CloudAI is the next evolution of ArcisAI's intelligent surveillance ecosystem. While EdgeAI handles real-time analytics directly inside the camera, CloudAI extends those capabilities with additional AI detections and smarter analytics that run securely on the cloud.",
         "Each CloudAI feature works as a subscription-based add-on, allowing users to customize their surveillance system with the detections and insights they need — and pay only for what they use. With CloudAI, you get continuous upgrades, powerful cross-camera intelligence, and the flexibility to scale AI capabilities instantly without changing hardware.",
       ],
-      image: "/images/solution_all_whatisai.png", // Placeholder
+      image: "/images/solution_all_whatisai.webp", // Placeholder
     },
     AIFeatures: {
       heading: "Advanced CloudAI Add-On Detections and Insights",
@@ -477,49 +477,49 @@ export const Solution = {
           name: "Face Recognition",
           description:
             "Recognizes and matches faces for attendance, identity verification, VIP recognition, and real-time security alerts.",
-          image: "/images/solution_cloudai_aifeatures_1.png",
+          image: "/images/solution_cloudai_aifeatures_1.webp",
         },
         {
           name: "PPE Kit Detection",
           description:
             "Detects people, helmets, and safety vests — alerting you when required safety gear is missing in critical workplaces.",
-          image: "/images/solution_cloudai_aifeatures_2.png",
+          image: "/images/solution_cloudai_aifeatures_2.webp",
         },
         {
           name: "Crowd Count Detection",
           description:
             "Counts people in real time and alerts when occupancy or crowd density exceeds defined limits — improving space safety and planning.",
-          image: "/images/solution_cloudai_aifeatures_3.png",
+          image: "/images/solution_cloudai_aifeatures_3.webp",
         },
         {
           name: "Fire Detection",
           description:
             "Identifies smoke and flames instantly using cloud analytics, reducing response times and minimizing risk.",
-          image: "/images/solution_cloudai_aifeatures_4.png",
+          image: "/images/solution_cloudai_aifeatures_4.webp",
         },
         {
           name: "Vehicle Counting & Detection",
           description:
             "Counts and classifies vehicles such as cars, bikes, buses, and trucks — enabling traffic analytics and movement insights.",
-          image: "/images/solution_cloudai_aifeatures_5.png",
+          image: "/images/solution_cloudai_aifeatures_5.webp",
         },
         {
           name: "Helmet Detection",
           description:
             "Detects whether workers or riders are wearing helmets to ensure compliance with safety standards.",
-          image: "/images/solution_cloudai_aifeatures_6.png",
+          image: "/images/solution_cloudai_aifeatures_6.webp",
         },
         {
           name: "Gender Detection",
           description:
             "Uses AI-powered analytics to estimate visitor gender patterns — valuable for retail intelligence and facility planning.",
-          image: "/images/solution_cloudai_aifeatures_7.png",
+          image: "/images/solution_cloudai_aifeatures_7.webp",
         },
         {
           name: "General Object Detection",
           description:
             "Identifies and tracks predefined objects in real time for enhanced activity monitoring and situational awareness.",
-          image: "/images/solution_cloudai_aifeatures_8.png",
+          image: "/images/solution_cloudai_aifeatures_8.webp",
         },
       ],
     },
@@ -531,45 +531,45 @@ export const Solution = {
       industries: [
         {
           name: "Manufacturing & Factory Plants",
-          image: "/images/home_aisolutionindustry_1.png",
+          image: "/images/home_aisolutionindustry_1.webp",
         }, // Placeholder
         {
           name: "Warehouses & Logistics",
-          image: "/images/home_aisolutionindustry_2.png",
+          image: "/images/home_aisolutionindustry_2.webp",
         },
         {
           name: "Smart Cities",
-          image: "/images/home_aisolutionindustry_3.png",
+          image: "/images/home_aisolutionindustry_3.webp",
         },
         {
           name: "Construction Sites",
-          image: "/images/home_aisolutionindustry_4.png",
+          image: "/images/home_aisolutionindustry_4.webp",
         },
-        { name: "Hospitality", image: "/images/home_aisolutionindustry_5.png" },
+        { name: "Hospitality", image: "/images/home_aisolutionindustry_5.webp" },
         {
           name: "Banks & ATMs",
-          image: "/images/home_aisolutionindustry_6.png",
+          image: "/images/home_aisolutionindustry_6.webp",
         },
-        { name: "Hospitals", image: "/images/home_aisolutionindustry_7.png" },
+        { name: "Hospitals", image: "/images/home_aisolutionindustry_7.webp" },
         {
           name: "Airports, Bus & Railway Stations",
-          image: "/images/home_aisolutionindustry_8.png",
+          image: "/images/home_aisolutionindustry_8.webp",
         },
         {
           name: "Retail Stores",
-          image: "/images/home_aisolutionindustry_9.png",
+          image: "/images/home_aisolutionindustry_9.webp",
         },
         {
           name: "Corporate Offices",
-          image: "/images/home_aisolutionindustry_10.png",
+          image: "/images/home_aisolutionindustry_10.webp",
         },
         {
           name: "Housing Societies",
-          image: "/images/home_aisolutionindustry_11.png",
+          image: "/images/home_aisolutionindustry_11.webp",
         },
         {
           name: "Educational Premises",
-          image: "/images/home_aisolutionindustry_12.png",
+          image: "/images/home_aisolutionindustry_12.webp",
         },
       ],
     },
@@ -577,9 +577,9 @@ export const Solution = {
     CTAButton: {
       data: "Upgrade Your EdgeAI CCTV Cameras With Cloud-Powered Intelligence",
       buttonText: "Talk To Our Expert",
-      d_image: "/images/solution_cloudai_cta.png",
-      m_Image: "/images/solution_cloudai_cta_mobile.png",
-      // m_Image: "/images/solution_edgeai_cta_mobile.png",
+      d_image: "/images/solution_cloudai_cta.webp",
+      m_Image: "/images/solution_cloudai_cta_mobile.webp",
+      // m_Image: "/images/solution_edgeai_cta_mobile.webp",
       link: "/contact-us",
       textPosition: {
         desktop: { top: "50%", left: "5%" },
@@ -705,8 +705,8 @@ export const Solution = {
         ],
         buttonText: "Request a Demo",
         buttonLink: "/contact-us",
-        d_image: "/images/solution_genai_hero.png",
-        m_image: "/images/solution_genai_hero_mobile.png",
+        d_image: "/images/solution_genai_hero.webp",
+        m_image: "/images/solution_genai_hero_mobile.webp",
         sectionProps: {
           desktop: {
             marginTop: "-5%",
@@ -761,7 +761,7 @@ export const Solution = {
         "GenAI is a search-based AI model that interprets and summarizes video footage in real time.By combining computer vision and natural language understanding, it lets users search CCTV footage like text — for example, “Show me where a red car entered the parking lot” or “Summarize movement near the main gate between 9–10 AM.”",
         "Available as a paid add-on, ArcisAI GenAI extends your existing EdgeAI or CloudAI system with powerful capabilities such as visual summarization, activity recognition, and AI-based search. With GenAI, users spend seconds, not hours, finding incidents, identifying trends, and creating video summaries.",
       ],
-      image: "/images/solution_all_whatisai.png",
+      image: "/images/solution_all_whatisai.webp",
     },
     AIFeatures: {
       heading: "Smarter Surveillance with ArcisAI GenAI Visual Intelligence",
@@ -779,49 +779,49 @@ export const Solution = {
           name: "Smart Data Retrieval",
           description:
             "Retrieve specific moments from vast video archives using natural language queries — eliminating hours of manual review.",
-          image: "/images/solution_genai_aifeatures_1.png",
+          image: "/images/solution_genai_aifeatures_1.webp",
         },
         {
           name: "Track Anything - Object / Person",
           description:
             "Track any person, vehicle, or object across multiple cameras and timestamps with intelligent contextual linking.",
-          image: "/images/solution_genai_aifeatures_2.png",
+          image: "/images/solution_genai_aifeatures_2.webp",
         },
         {
           name: "Visual Intelligence with GPT",
           description:
             "Convert lengthy CCTV footage into concise highlight reels or text summaries that focus only on meaningful events.",
-          image: "/images/solution_genai_aifeatures_3.png",
+          image: "/images/solution_genai_aifeatures_3.webp",
         },
         {
           name: "Action / Activity Recognition",
           description:
             "Automatically detect and classify actions like running, falling, fighting, or loitering for faster incident response.",
-          image: "/images/solution_genai_aifeatures_4.png",
+          image: "/images/solution_genai_aifeatures_4.webp",
         },
         {
           name: "Reports from Any Custom Video Data",
           description:
             "Generate AI-written summaries and reports from selected video clips — ideal for audits, investigations, and documentation.",
-          image: "/images/solution_genai_aifeatures_5.png",
+          image: "/images/solution_genai_aifeatures_5.webp",
         },
         {
           name: "Crowd Count Detection",
           description:
             "Counts people in real time and alerts when occupancy or crowd density exceeds defined limits — improving space safety and planning.",
-          image: "/images/solution_cloudai_aifeatures_3.png",
+          image: "/images/solution_cloudai_aifeatures_3.webp",
         },
         {
           name: "Fire Detection",
           description:
             "Identifies smoke and flames instantly using cloud analytics, reducing response times and minimizing risk.",
-          image: "/images/solution_cloudai_aifeatures_4.png",
+          image: "/images/solution_cloudai_aifeatures_4.webp",
         },
         {
           name: "Vehicle Counting & Detection",
           description:
             "Counts and classifies vehicles such as cars, bikes, buses, and trucks — enabling traffic analytics and movement insights.",
-          image: "/images/solution_cloudai_aifeatures_5.png",
+          image: "/images/solution_cloudai_aifeatures_5.webp",
         },
       ],
     },
@@ -833,45 +833,45 @@ export const Solution = {
       industries: [
         {
           name: "Manufacturing & Factory Plants",
-          image: "/images/home_aisolutionindustry_1.png",
+          image: "/images/home_aisolutionindustry_1.webp",
         }, // Placeholder
         {
           name: "Warehouses & Logistics",
-          image: "/images/home_aisolutionindustry_2.png",
+          image: "/images/home_aisolutionindustry_2.webp",
         },
         {
           name: "Smart Cities",
-          image: "/images/home_aisolutionindustry_3.png",
+          image: "/images/home_aisolutionindustry_3.webp",
         },
         {
           name: "Construction Sites",
-          image: "/images/home_aisolutionindustry_4.png",
+          image: "/images/home_aisolutionindustry_4.webp",
         },
-        { name: "Hospitality", image: "/images/home_aisolutionindustry_5.png" },
+        { name: "Hospitality", image: "/images/home_aisolutionindustry_5.webp" },
         {
           name: "Banks & ATMs",
-          image: "/images/home_aisolutionindustry_6.png",
+          image: "/images/home_aisolutionindustry_6.webp",
         },
-        { name: "Hospitals", image: "/images/home_aisolutionindustry_7.png" },
+        { name: "Hospitals", image: "/images/home_aisolutionindustry_7.webp" },
         {
           name: "Airports, Bus & Railway Stations",
-          image: "/images/home_aisolutionindustry_8.png",
+          image: "/images/home_aisolutionindustry_8.webp",
         },
         {
           name: "Retail Stores",
-          image: "/images/home_aisolutionindustry_9.png",
+          image: "/images/home_aisolutionindustry_9.webp",
         },
         {
           name: "Corporate Offices",
-          image: "/images/home_aisolutionindustry_10.png",
+          image: "/images/home_aisolutionindustry_10.webp",
         },
         {
           name: "Housing Societies",
-          image: "/images/home_aisolutionindustry_11.png",
+          image: "/images/home_aisolutionindustry_11.webp",
         },
         {
           name: "Educational Premises",
-          image: "/images/home_aisolutionindustry_12.png",
+          image: "/images/home_aisolutionindustry_12.webp",
         },
       ],
     },
@@ -879,9 +879,9 @@ export const Solution = {
     CTAButton: {
       data: "Upgrade to Intelligent Video Search & Summaries with ArcisAI GenAI",
       buttonText: "Talk To Our Expert",
-      d_image: "/images/solution_genai_cta.png",
-      m_Image: "/images/solution_genai_cta_mobile.png",
-      // m_Image: "/images/solution_edgeai_cta_mobile.png",
+      d_image: "/images/solution_genai_cta.webp",
+      m_Image: "/images/solution_genai_cta_mobile.webp",
+      // m_Image: "/images/solution_edgeai_cta_mobile.webp",
       link: "/contact-us",
       textPosition: {
         desktop: { top: "50%", left: "5%" },

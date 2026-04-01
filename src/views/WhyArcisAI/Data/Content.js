@@ -23,9 +23,9 @@ export const WhyArcisAIContent = {
         "At ArcisAI, we give you real-time detection right from the camera, powerful cloud insights and ArcisGPT to help you find footage just by asking. We make CCTV simpler, faster and built entirely around your needs.",
       buttonText: "Request a Demo",
       buttonLink: "/contact-us",
-      image: "/images/camera3.png",
-      d_image: "/images/whyarcis_hero.png",
-      m_image: "/images/whyarcis_hero.png",
+      image: "/images/camera3.webp",
+      d_image: "/images/whyarcis_hero.webp",
+      m_image: "/images/whyarcis_hero.webp",
       sectionProps: {
         desktop: {
           marginTop: "-7%",
@@ -72,11 +72,11 @@ export const WhyArcisAIContent = {
           textHover: "",
         },
       },
-      // m_image: "/images/whyarcis_hero_mobile.png",
+      // m_image: "/images/whyarcis_hero_mobile.webp",
     },
   ],
   EdgeAIFeatures: {
-    image: "/images/whyarcisai_edgeai_main.png",
+    image: "/images/whyarcisai_edgeai_main.webp",
     heading: "AI CCTV That Works at the Edge",
     description:
       "With EdgeAI, the intelligence lives inside the camera - not in a server. That means faster alerts, smarter detection and less dependency on NVRs or heavy setups. Unlike traditional CCTV that just records, our security cameras detect and notify in real time, keeping you informed the moment something happens.",
@@ -87,49 +87,49 @@ export const WhyArcisAIContent = {
         name: "Line Crossing Detection",
         description:
           "Notifies when someone crosses a virtual boundary or restricted path.",
-        image: "/images/whyarcisai_edgeai_feature_1.png",
+        image: "/images/whyarcisai_edgeai_feature_1.webp",
       },
       {
         name: "Area Detection",
         description:
           "Alerts when a person enters a defined no-go zone or sensitive space.",
-        image: "/images/whyarcisai_edgeai_feature_2.png",
+        image: "/images/whyarcisai_edgeai_feature_2.webp",
       },
       {
         name: "Customer Traffic Statistics",
         description:
           "Counts visitors, observes movement patterns and detects crowd build-ups — enabling smarter space management.",
-        image: "/images/whyarcisai_edgeai_feature_3.png",
+        image: "/images/whyarcisai_edgeai_feature_3.webp",
       },
       {
         name: "Unattended Object Detection",
         description:
           "Detects suspicious, left-behind items like bags or boxes in public areas.",
-        image: "/images/whyarcisai_edgeai_feature_4.png",
+        image: "/images/whyarcisai_edgeai_feature_4.webp",
       },
       {
         name: "Missing Object Detection",
         description:
           "Alerts when an object is removed from its place — keeping assets accounted for.",
-        image: "/images/whyarcisai_edgeai_feature_5.png",
+        image: "/images/whyarcisai_edgeai_feature_5.webp",
       },
       {
         name: "Human Detection",
         description:
           "Detects when a person appears in view — enabling real-time activity awareness.",
-        image: "/images/whyarcisai_edgeai_feature_6.png",
+        image: "/images/whyarcisai_edgeai_feature_6.webp",
       },
       {
         name: "Face Detection",
         description:
           "Identifies when a human face appears in view — enabling real-time presence awareness and identity monitoring.",
-        image: "/images/whyarcisai_edgeai_feature_7.png",
+        image: "/images/whyarcisai_edgeai_feature_7.webp",
       },
       {
         name: "Motion Detection",
         description:
           "Detects movement within the frame and triggers instant notifications.",
-        image: "/images/whyarcisai_edgeai_feature_8.png",
+        image: "/images/whyarcisai_edgeai_feature_8.webp",
       },
     ],
   },
@@ -173,8 +173,8 @@ export const WhyArcisAIContent = {
   CTAButton: {
     data: "Discover GPT-Powered AI in Your CCTV System with ArcisGPT",
     buttonText: "Try ArcisGPT",
-    d_image: "/images/whyarcis_cta.png",
-    m_Image: "/images/whyarcis_cta_mobile.png",
+    d_image: "/images/whyarcis_cta.webp",
+    m_Image: "/images/whyarcis_cta_mobile.webp",
     link: "/contact-us",
     textPosition: {
       desktop: { top: "50%", left: "4%" },
@@ -221,15 +221,15 @@ export const WhyArcisAIContent = {
       "Move beyond the limitations of traditional NVR systems. With our secure Indian cloud-based storage, you get easy, on-demand access to your CCTV footage - minimizing the need for bulky on-site hardware and making surveillance more flexible and efficient.",
     description2:
       "Choose from a range of simple storage options designed to fit your needs: 1-day, 3-day, 7-day, 15-day or 30-day plans. Our pricing is based on a per camera, per year model with multiple plan options available. Whether for short-term monitoring or extended retention, our cloud plans keep your footage safe, accessible and hassle-free.",
-    d_image: "/images/whyarcis_goodbyenvr.png",
-    m_image: "/images/whyarcis_goodbyenvr.png",
+    d_image: "/images/whyarcis_goodbyenvr.webp",
+    m_image: "/images/whyarcis_goodbyenvr.webp",
   },
   ArcisVMS: {
     heading: "AI CCTV Intelligence in One Platform - ArcisVMS",
     description:
       "ArcisVMS is the all-in-one AI CCTV platform that unifies EdgeAI alerts, CloudAI analytics, ArcisGPT video summaries, and cloud storage into one powerful system. Access it seamlessly via the VMS and mobile app for real-time visibility, smart alerts, and complete control — whether you're overseeing retail, industrial, smart city, or gated environments. Stay secure, informed, and in command from one scalable, unified dashboard.",
-    d_image: "/images/whyarcis_arcisvms.png",
-    m_image: "/images/whyarcis_arcisvms.png",
+    d_image: "/images/whyarcis_arcisvms.webp",
+    m_image: "/images/whyarcis_arcisvms.webp",
   },
   Services: [
     {
@@ -291,9 +291,9 @@ export const WhyArcisAIContent = {
   CTAButton2: {
     data: "Manny Have Upgraded to Smarter Security - Will You?",
     buttonText: "Schedule a Demo",
-    d_image: "/images/whyarcis_cta_2.png",
-    m_Image: "/images/whyarcis_cta_mobile_2.png",
-    // m_Image: "/images/whyarcis_cta_mobile_2.png",
+    d_image: "/images/whyarcis_cta_2.webp",
+    m_Image: "/images/whyarcis_cta_mobile_2.webp",
+    // m_Image: "/images/whyarcis_cta_mobile_2.webp",
     link: "/contact-us",
     textPosition: {
       desktop: { top: "50%", left: "0%" },

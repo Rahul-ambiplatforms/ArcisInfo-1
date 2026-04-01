@@ -3,7 +3,7 @@ export const EventSEO = {
     "Insights from ArcisAI at Events, Meetups, Tradeshows & Conferences",
   metadescription:
     "Connect with the ArcisAI team at major security and tech events. Stay updated on upcoming expos and explore our latest AI surveillance showcases.",
-  ogimage: "https://arcisai.io/images/event_home_main.png",
+  ogimage: "https://arcisai.io/images/event_home_main.webp",
   canonical: "https://arcisai.io/event",
   schema: [
     {
@@ -21,7 +21,7 @@ export const EventSEO = {
         url: "https://arcisai.io",
         logo: {
           "@type": "ImageObject",
-          url: "https://arcisai.io/images/ArcisAi_logo.png",
+          url: "https://arcisai.io/images/ArcisAi_logo.webp",
           width: 150,
           height: 30,
         },
@@ -34,7 +34,7 @@ export const EventSEO = {
       },
       primaryImageOfPage: {
         "@type": "ImageObject",
-        url: "https://arcisai.io/images/event_home_main.png",
+        url: "https://arcisai.io/images/event_home_main.webp",
         width: 1200,
         height: 628,
         caption: "ArcisAI Events",
@@ -48,7 +48,7 @@ export const IFSECSEO = {
     "ArcisAI Showcases Advanced Surveillance Ecosystem at IFSEC India 2025",
   metadescription:
     "At IFSEC India 2025, ArcisAI showcased its next-gen AI CCTV ecosystem, new Eco Series cameras, NVR lineup, ABD device, and cloud-ready VMS innovations.",
-  ogimage: "https://arcisai.io/images/IFSEC_carousel_1.png",
+  ogimage: "https://arcisai.io/images/IFSEC_carousel_1.webp",
   canonical: "https://arcisai.io/event/ifsec-india-2025",
   schema: [
     //Webpage Schema
@@ -67,7 +67,7 @@ export const IFSECSEO = {
         url: "https://arcisai.io",
         logo: {
           "@type": "ImageObject",
-          url: "https://arcisai.io/images/ArcisAi_logo.png",
+          url: "https://arcisai.io/images/ArcisAi_logo.webp",
           width: 150,
           height: 30,
         },
@@ -80,7 +80,7 @@ export const IFSECSEO = {
       },
       primaryImageOfPage: {
         "@type": "ImageObject",
-        url: "https://arcisai.io/images/IFSEC_carousel_1.png",
+        url: "https://arcisai.io/images/IFSEC_carousel_1.webp",
         width: 1200,
         height: 628,
         caption: "ArcisAI at IFSEC India 2025",

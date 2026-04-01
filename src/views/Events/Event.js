@@ -47,8 +47,8 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
 
   // Determine which image to show based on screen size
   const eventImageSrc = useBreakpointValue({
-    base: "/images/event_popup_mobile.png",
-    lg: "/images/event_popup.png",
+    base: "/images/event_popup_mobile.webp",
+    lg: "/images/event_popup.webp",
   });
 
   useEffect(() => {

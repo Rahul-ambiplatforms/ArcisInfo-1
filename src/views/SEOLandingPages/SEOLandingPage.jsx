@@ -55,7 +55,7 @@ const SEOLandingPage = ({ paramsOverride }) => {
       "@type": "Organization",
       name: "ArcisAI",
       url: "https://www.arcisai.io",
-      logo: "https://www.arcisai.io/logo.png",
+      logo: "https://www.arcisai.io/logo.webp",
       sameAs: ["https://www.linkedin.com/company/arcisai"]
     }
   };
@@ -110,7 +110,7 @@ const SEOLandingPage = ({ paramsOverride }) => {
     url: pageUrl,
     telephone: "+91-9909000616",
     priceRange: "ÃÂ¢ÃÂÃÂ¹ÃÂ¢ÃÂÃÂ¹ÃÂ¢ÃÂÃÂ¹",
-    image: "https://www.arcisai.io/logo.png",
+    image: "https://www.arcisai.io/logo.webp",
     address: {
       "@type": "PostalAddress",
       addressCountry: "IN"

@@ -13,7 +13,7 @@ const organizationSchema = {
   name: 'ArcisAI',
   legalName: 'Adiance Technologies Private Limited',
   url: 'https://www.arcisai.io',
-  logo: 'https://www.arcisai.io/assets/logo.png',
+  logo: 'https://www.arcisai.io/assets/logo.webp',
   telephone: '+91-968-777-9999',
   email: 'info@arcisai.io',
   address: {

@@ -7,9 +7,9 @@ import InnovationIcon6 from "../../../Components/Icons/aboutus_innovation_6.svg"
 
 export const AboutUsContent = {
   hero: {
-    image: "/images/ArcisAi_logo.png",
-    d_image: "/images/aboutus_home.png",
-    m_image: "/images/aboutus_home.png",
+    image: "/images/ArcisAi_logo.webp",
+    d_image: "/images/aboutus_home.webp",
+    m_image: "/images/aboutus_home.webp",
     sectionProps: {
       desktop: {
         marginTop: "",
@@ -67,7 +67,7 @@ export const AboutUsContent = {
   poweredBy: {
     heading: "Powered by Adiance Technologies",
     subheading: "ODM & OEM CCTV Manufacturer From Gujarat",
-    image: "/images/aboutus_adiance.png", // Placeholder
+    image: "/images/aboutus_adiance.webp", // Placeholder
     description: [
       "ArcisAI is proudly powered by Adiance Technologies, a leading OEM and ODM CCTV manufacturer with world-class R&D, SMT manufacturing lines, and AI engineering capabilities at Sanad, Ahmedabad, Gujarat.",
       "Adiance specializes in developing AI-enabled surveillance hardware, firmware, and software tailored to global standards. With end-to-end manufacturing — from PCB assembly and firmware design to AI model integration and cloud architecture — Adiance ensures that every ArcisAI product meets the highest standards of quality, scalability and security.",
@@ -155,8 +155,8 @@ export const AboutUsContent = {
   CTAButton: {
     data: "The Future of Intelligent Surveillance is Already Here — Don’t Get Left Behind.",
     buttonText: "Connect Now",
-    d_image: "/images/aboutus_cta.png",
-    m_Image: "/images/aboutus_cta_mobile.png",
+    d_image: "/images/aboutus_cta.webp",
+    m_Image: "/images/aboutus_cta_mobile.webp",
     link: "/contact-us",
     textPosition: {
       desktop: { top: "50%", left: "-5%" },

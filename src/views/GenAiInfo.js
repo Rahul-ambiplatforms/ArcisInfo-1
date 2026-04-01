@@ -362,7 +362,7 @@ function GenAiInfo() {
           {/* Image Container */}
           <Box position="relative" zIndex={2}>
             <Image loading="lazy"
-              src="/images/arcisGPT.png" // Replace with actual image path
+              src="/images/arcisGPT.webp" // Replace with actual image path
               alt="Generative AI Feature"
               w="100%"
               h="100%"
@@ -430,7 +430,7 @@ function GenAiInfo() {
           {/* Second Image */}
           <Box mt={6} zIndex={4} position="relative">
             <Image loading="lazy"
-              src="/images/camera2.png" // Replace with actual image path
+              src="/images/camera2.webp" // Replace with actual image path
               alt="Camera Feature"
               maxW={{ base: "100%", md: "80%" }}
             />
@@ -440,7 +440,7 @@ function GenAiInfo() {
       {/* Full-Width Image (Background) */}
       <Box position="relative" zIndex={0} mt="-15%" left={0} w="100%" h="100%">
         <Image loading="lazy"
-          src="/images/GPTStartedView.png"
+          src="/images/GPTStartedView.webp"
           alt="Generative AI Full View"
           w="100%"
           h="100%"

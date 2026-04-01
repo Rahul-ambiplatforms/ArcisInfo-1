@@ -24,7 +24,7 @@
     "name": "ArcisAI",
     "alternateName": ["Arcis AI", "ArcisAI by Adiance Technologies"],
     "url": "https://arcisai.io",
-    "logo": "https://arcisai.io/logo.png",
+    "logo": "https://arcisai.io/logo.webp",
     "description": "ArcisAI is India's first premium AI-powered CCTV camera and intelligent surveillance ecosystem. Featuring Edge AI cameras, Cloud AI analytics, ArcisGPT generative AI, and a unified Video Management System â all Made in India with STQC certification.",
     "foundingDate": "2003",
     "parentOrganization": {
@@ -109,7 +109,7 @@
     "brand": { "@type": "Brand", "name": "ArcisAI" },
     "manufacturer": { "@type": "Organization", "name": "Adiance Technologies" },
     "category": "AI CCTV Cameras",
-    "image": "https://arcisai.io/images/s-series.png",
+    "image": "https://arcisai.io/images/s-series.webp",
     "url": "https://arcisai.io/products/s-series",
     "countryOfOrigin": { "@type": "Country", "name": "India" },
     "additionalProperty": [
@@ -133,7 +133,7 @@
     "brand": { "@type": "Brand", "name": "ArcisAI" },
     "manufacturer": { "@type": "Organization", "name": "Adiance Technologies" },
     "category": "AI CCTV Cameras",
-    "image": "https://arcisai.io/images/eco-series.png",
+    "image": "https://arcisai.io/images/eco-series.webp",
     "url": "https://arcisai.io/products/eco-series",
     "countryOfOrigin": { "@type": "Country", "name": "India" },
     "additionalProperty": [
@@ -188,7 +188,7 @@
     "brand": { "@type": "Brand", "name": "ArcisAI" },
     "manufacturer": { "@type": "Organization", "name": "Adiance Technologies" },
     "category": "Surveillance Accessories",
-    "image": "https://arcisai.io/images/abd.png",
+    "image": "https://arcisai.io/images/abd.webp",
     "url": "https://arcisai.io/products/abd",
     "countryOfOrigin": { "@type": "Country", "name": "India" },
     "additionalProperty": [
@@ -276,7 +276,7 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "ArcisAI (Adiance Technologies)",
-    "image": "https://arcisai.io/logo.png",
+    "image": "https://arcisai.io/logo.webp",
     "url": "https://arcisai.io",
     "telephone": "+91-968-777-9999",
     "email": "marketing@arcisai.io",

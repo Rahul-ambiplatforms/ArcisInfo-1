@@ -15,7 +15,7 @@ export const organizationSchema = {
     "jobTitle": "Founder & CEO"
   },
   "url": "https://www.arcisai.io",
-  "logo": "https://www.arcisai.io/assets/logo.png",
+  "logo": "https://www.arcisai.io/assets/logo.webp",
   "description": "ArcisAI is a leading enterprise AI CCTV manufacturer by Adiance Technologies, offering NDAA-compliant, STQC-certified AI-powered video surveillance cameras with edge computing, cloud VMS, and GenAI video analytics for enterprise, government, and smart city deployments across US, UAE, UK, and global markets.",
   "foundingDate": "2003",
   "numberOfEmployees": {
@@ -141,7 +141,7 @@ export const websiteSchema = {
   "publisher": {
     "@type": "Organization",
     "name": "ArcisAI",
-    "logo": "https://www.arcisai.io/assets/logo.png"
+    "logo": "https://www.arcisai.io/assets/logo.webp"
   }
 };
 
@@ -150,7 +150,7 @@ export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "ArcisAI",
-  "image": "https://www.arcisai.io/assets/logo.png",
+  "image": "https://www.arcisai.io/assets/logo.webp",
   "url": "https://www.arcisai.io",
   "telephone": "+91-968-777-9999",
   "email": "info@arcisai.io",
@@ -215,7 +215,7 @@ export const arcisaiProducts = {
     "description": "Enterprise AI-powered surveillance cameras with edge computing, real-time video analytics, ANPR, face recognition, and intelligent threat detection. STQC certified, Made in India.",
     "brand": { "@type": "Brand", "name": "ArcisAI" },
     "manufacturer": { "@type": "Organization", "name": "ArcisAI", "url": "https://www.arcisai.io" },
-    "image": "https://www.arcisai.io/assets/s-series.png",
+    "image": "https://www.arcisai.io/assets/s-series.webp",
     "sku": "ARCIS-S-SERIES",
     "category": "AI Surveillance Cameras",
     "aggregateRating": {
@@ -248,7 +248,7 @@ export const arcisaiProducts = {
     "description": "Cost-effective AI surveillance cameras for SMBs with smart analytics, cloud connectivity, and remote monitoring. Perfect for retail, warehouse, and office security.",
     "brand": { "@type": "Brand", "name": "ArcisAI" },
     "manufacturer": { "@type": "Organization", "name": "ArcisAI", "url": "https://www.arcisai.io" },
-    "image": "https://www.arcisai.io/assets/eco-series.png",
+    "image": "https://www.arcisai.io/assets/eco-series.webp",
     "sku": "ARCIS-ECO-SERIES",
     "category": "AI Surveillance Cameras",
     "aggregateRating": {
@@ -272,7 +272,7 @@ export const arcisaiProducts = {
     "name": "ArcisAI Bridge Device",
     "description": "Edge computing bridge device that adds AI video analytics capabilities to existing CCTV infrastructure without camera replacement. Supports ANPR, crowd analytics, and intrusion detection.",
     "brand": { "@type": "Brand", "name": "ArcisAI" },
-    "image": "https://www.arcisai.io/assets/bridge-device.png",
+    "image": "https://www.arcisai.io/assets/bridge-device.webp",
     "sku": "ARCIS-BRIDGE",
     "category": "Edge Computing Devices",
     "aggregateRating": {
@@ -375,7 +375,7 @@ export const getArticleSchema = (a) => ({
   "publisher": {
     "@type": "Organization",
     "name": "ArcisAI",
-    "logo": { "@type": "ImageObject", "url": "https://www.arcisai.io/assets/logo.png" }
+    "logo": { "@type": "ImageObject", "url": "https://www.arcisai.io/assets/logo.webp" }
   },
   "mainEntityOfPage": { "@type": "WebPage", "@id": a.url }
 });

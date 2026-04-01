@@ -259,7 +259,7 @@ function Footer() {
             transition="all 0.3s ease"
           >
             <Image loading="lazy"
-              src="/images/playstore-button.png"
+              src="/images/playstore-button.webp"
               alt="Download on Play Store"
               h={{ base: "40px", md: "50px" }}
               borderRadius="md"
@@ -275,7 +275,7 @@ function Footer() {
             transition="all 0.3s ease"
           >
             <Image loading="lazy"
-              src="/images/appstore-button.png"
+              src="/images/appstore-button.webp"
               alt="Download on App Store"
               h={{ base: "40px", md: "50px" }}
               borderRadius="md"
@@ -297,7 +297,7 @@ function Footer() {
             {/* Column 1: Logo, Address, Contact */}
             <Flex direction="column" gap={4}>
               <Flex direction="column" gap={2}>
-                <Image loading="lazy" src="/images/ArcisAi_1.png" alt="Logo" w="120px" />
+                <Image loading="lazy" src="/images/ArcisAi_1.webp" alt="Logo" w="120px" />
                 <Box w={{ base: "100%", md: "60%" }}>
                   <Text fontSize="14px" color="white">
                     7, Arista@Eight corporate House, Near Satyam House, Behind

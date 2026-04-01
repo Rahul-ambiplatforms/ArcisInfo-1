@@ -15,7 +15,7 @@ const ORGANIZATION_SCHEMA = {
   name: 'ArcisAI',
   alternateName: 'Arcis AI CCTV',
   url: 'https://www.arcisai.io',
-  logo: 'https://www.arcisai.io/logo.png',
+  logo: 'https://www.arcisai.io/logo.webp',
   description:
     "ArcisAI is India's first premium AI CCTV camera brand with STQC certification. Offering intelligent surveillance cameras with built-in AI analytics for face recognition, intrusion detection, and smart monitoring.",
   foundingDate: '2003',

@@ -24,7 +24,7 @@ const BlogsDashboard = () => {
         overflow="hidden" // It's good practice to hide overflowing content from the container
       >
         <Image loading="lazy"
-          src={`${process.env.PUBLIC_URL}/images/thankyou.png`}
+          src={`${process.env.PUBLIC_URL}/images/thankyou.webp`}
           alt="Blogs Dashboard" 
           objectFit={{ base: "cover", md: "cover" }}
           objectPosition={{ base: "right", md: "center" }}

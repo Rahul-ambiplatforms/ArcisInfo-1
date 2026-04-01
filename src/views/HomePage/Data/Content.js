@@ -5,8 +5,8 @@ export const homeContent = {
       heading: "India’s Most Advanced AI CCTV Brand",
       description:
         "8 AI detections on camera. Smarter insights on cloud. Instant answers from GPT.",
-      d_image: "/images/home_hero_1.png",
-      m_image: "/images/mobile_home_hero_1.png",
+      d_image: "/images/home_hero_1.webp",
+      m_image: "/images/mobile_home_hero_1.webp",
       buttonText: "Get Custom Quote",
       buttonLink: "/contact-us",
       sectionProps: {
@@ -62,9 +62,9 @@ export const homeContent = {
     //     "India’s First AI CCTV Brand with GPT-Powered Surveillance Intelligence",
     //   description:
     //     "Ask your camera system anything — ArcisGPT responds instantly.",
-    //   image: "/images/home_hero_1.png",
-    //   d_image: "/images/home_hero_1.png",
-    //   m_image: "/images/mobile_home_hero_1.png",
+    //   image: "/images/home_hero_1.webp",
+    //   d_image: "/images/home_hero_1.webp",
+    //   m_image: "/images/mobile_home_hero_1.webp",
     //   buttonText: "Let's Talk",
     //   buttonLink: "/contact-us",
     //   sectionProps: {
@@ -118,9 +118,9 @@ export const homeContent = {
     //   id: 3,
     //   heading: "Best AI CCTV Camera Company for Industrial Safety & Compliance",
     //   description: "Stay audit-ready with intelligent industrial monitoring.",
-    //   image: "/images/home_hero_1.png",
-    //   d_image: "/images/home_hero_1.png",
-    //   m_image: "/images/mobile_home_hero_1.png",
+    //   image: "/images/home_hero_1.webp",
+    //   d_image: "/images/home_hero_1.webp",
+    //   m_image: "/images/mobile_home_hero_1.webp",
     //   buttonText: "Let's Talk",
     //   buttonLink: "/contact-us",
     //   sectionProps: {
@@ -175,9 +175,9 @@ export const homeContent = {
     //   heading:
     //     "AI Security Cameras That Secure Your Warehouses & Logistics Zones",
     //   description: "Track vehicles, detect risk & prevent loss in real time.",
-    //   image: "/images/home_hero_1.png",
-    //   d_image: "/images/home_hero_1.png",
-    //   m_image: "/images/mobile_home_hero_1.png",
+    //   image: "/images/home_hero_1.webp",
+    //   d_image: "/images/home_hero_1.webp",
+    //   m_image: "/images/mobile_home_hero_1.webp",
     //   buttonText: "Let's Talk",
     //   buttonLink: "/contact-us",
     //   sectionProps: {
@@ -231,9 +231,9 @@ export const homeContent = {
     //   id: 5,
     //   heading: "AI CCTV Cameras Built for Retail & Malls Surveillance in India",
     //   description: "Boost safety and shopper insights with AI-powered CCTV.",
-    //   image: "/images/home_hero_1.png",
-    //   d_image: "/images/home_hero_1.png",
-    //   m_image: "/images/mobile_home_hero_1.png",
+    //   image: "/images/home_hero_1.webp",
+    //   d_image: "/images/home_hero_1.webp",
+    //   m_image: "/images/mobile_home_hero_1.webp",
     //   buttonText: "Let's Talk",
     //   buttonLink: "/contact-us",
     //   sectionProps: {
@@ -288,9 +288,9 @@ export const homeContent = {
     //   heading: "India’s Top AI Security Camera Brand for Smart Cities",
     //   description:
     //     "Secure public spaces with AI-based face, crowd and object detection.",
-    //   image: "/images/home_hero_1.png",
-    //   d_image: "/images/home_hero_1.png",
-    //   m_image: "/images/mobile_home_hero_1.png",
+    //   image: "/images/home_hero_1.webp",
+    //   d_image: "/images/home_hero_1.webp",
+    //   m_image: "/images/mobile_home_hero_1.webp",
     //   buttonText: "Let's Talk",
     //   buttonLink: "/contact-us",
     //   sectionProps: {
@@ -345,9 +345,9 @@ export const homeContent = {
     //   heading: "Indian AI CCTV Camera System for Smart Housing Security",
     //   description:
     //     "24/7 AI-enabled residential safety, built for Indian societies.",
-    //   image: "/images/home_hero_1.png",
-    //   d_image: "/images/home_hero_1.png",
-    //   m_image: "/images/mobile_home_hero_1.png",
+    //   image: "/images/home_hero_1.webp",
+    //   d_image: "/images/home_hero_1.webp",
+    //   m_image: "/images/mobile_home_hero_1.webp",
     //   buttonText: "Let's Talk",
     //   buttonLink: "/contact-us",
     //   sectionProps: {
@@ -408,42 +408,42 @@ export const homeContent = {
         product_type: "S-Series",
         productarray: [
           {
-            image: "/images/home_productlist_sseries_1.png",
+            image: "/images/home_productlist_sseries_1.webp",
             product_name: "Wifi PTZ camera",
             link: "/s-series/ai-ptz-cctv-camera",
           },
           {
-            image: "/images/home_productlist_sseries_2.png",
+            image: "/images/home_productlist_sseries_2.webp",
             product_name: "Wifi Bullet camera",
             link: "/s-series/ai-bullet-cctv-camera",
           },
           {
-            image: "/images/home_productlist_sseries_3.png",
+            image: "/images/home_productlist_sseries_3.webp",
             product_name: "Wifi Dome camera",
             link: "/s-series/ai-dome-cctv-camera",
           },
           {
-            image: "/images/home_productlist_sseries_4.png",
+            image: "/images/home_productlist_sseries_4.webp",
             product_name: "IP PTZ Camera",
             link: "/s-series/ai-ptz-cctv-camera",
           },
           {
-            image: "/images/home_productlist_sseries_5.png",
+            image: "/images/home_productlist_sseries_5.webp",
             product_name: "IP Dome Camera",
             link: "/s-series/ai-dome-cctv-camera",
           },
           {
-            image: "/images/home_productlist_sseries_6.png",
+            image: "/images/home_productlist_sseries_6.webp",
             product_name: "4G bullet camera",
             link: "/s-series/ai-bullet-cctv-camera",
           },
           {
-            image: "/images/home_productlist_sseries_7.png",
+            image: "/images/home_productlist_sseries_7.webp",
             product_name: "5G PTZ camera",
             link: "/s-series/ai-ptz-cctv-camera",
           },
           {
-            image: "/images/home_productlist_sseries_8.png",
+            image: "/images/home_productlist_sseries_8.webp",
             product_name: "Wifi Bullet camera",
             link: "/s-series/ai-bullet-cctv-camera",
           },
@@ -453,17 +453,17 @@ export const homeContent = {
         product_type: "ECO-Series",
         productarray: [
           {
-            image: "/images/home_productlist_sseries_2.png",
+            image: "/images/home_productlist_sseries_2.webp",
             product_name: "Bullet CCTV camera",
             link: "/eco-series/bullet-cctv-camera",
           },
           {
-            image: "/images/home_productlist_sseries_3.png",
+            image: "/images/home_productlist_sseries_3.webp",
             product_name: "Dome CCTV camera",
             link: "/eco-series/dome-cctv-camera",
           },
           {
-            image: "/images/home_productlist_sseries_1.png",
+            image: "/images/home_productlist_sseries_1.webp",
             product_name: "PTZ CCTV camera",
             link: "/eco-series/ptz-cctv-camera",
           },
@@ -473,22 +473,22 @@ export const homeContent = {
         product_type: "NVR",
         productarray: [
           {
-            image: "/images/home_productlist_nvr.png",
+            image: "/images/home_productlist_nvr.webp",
             product_name: "NVR - 4CH",
             link: "/arcis-nvr",
           },
           {
-            image: "/images/home_productlist_nvr.png",
+            image: "/images/home_productlist_nvr.webp",
             product_name: "NVR - 8CH",
             link: "/arcis-nvr",
           },
           {
-            image: "/images/home_productlist_nvr.png",
+            image: "/images/home_productlist_nvr.webp",
             product_name: "NVR - 16CH",
             link: "/arcis-nvr",
           },
           {
-            image: "/images/home_productlist_nvr.png",
+            image: "/images/home_productlist_nvr.webp",
             product_name: "NVR - 32CH",
             link: "/arcis-nvr",
           },
@@ -498,12 +498,12 @@ export const homeContent = {
       //   product_type: "NVR/DVR",
       //   productarray: [
       //     {
-      //       image: "/images/screen.png",
+      //       image: "/images/screen.webp",
       //       product_name: "8 Channel NVR",
       //       link: "#",
       //     },
       //     {
-      //       image: "/images/screen.png",
+      //       image: "/images/screen.webp",
       //       product_name: "16 Channel DVR",
       //       link: "#",
       //     },
@@ -514,14 +514,14 @@ export const homeContent = {
   Certifications: {
     heading: "Certified",
     images: [
-      "/images/home_certify_1.png",
-      "/images/home_certify_2.png",
-      "/images/home_certify_3.png",
-      "/images/home_certify_4.png",
-      "/images/home_certify_5.png",
-      "/images/home_certify_6.png",
-      "/images/home_certify_7.png",
-      "/images/home_certify_8.png",
+      "/images/home_certify_1.webp",
+      "/images/home_certify_2.webp",
+      "/images/home_certify_3.webp",
+      "/images/home_certify_4.webp",
+      "/images/home_certify_5.webp",
+      "/images/home_certify_6.webp",
+      "/images/home_certify_7.webp",
+      "/images/home_certify_8.webp",
     ],
   },
   SurveillanceStack: {
@@ -531,28 +531,28 @@ export const homeContent = {
         heading: "Edge-AI",
         description:
           "Get instant on-camera intelligence with real-time detections and alerts right at the device.",
-        image: "/images/home_surveillance_1.png",
+        image: "/images/home_surveillance_1.webp",
         link: "/solution/edge-ai",
       },
       {
         heading: "Cloud-AI",
         description:
           "Get deeper insights with powerful cloud analytics that scale as your video data grows.",
-        image: "/images/home_surveillance_1.png",
+        image: "/images/home_surveillance_1.webp",
         link: "/solution/cloud-ai",
       },
       {
         heading: "Gen-AI",
         description:
           "Get answers instantly—just ask your cameras anything and let AI explain what’s happening.",
-        image: "/images/home_surveillance_1.png",
+        image: "/images/home_surveillance_1.webp",
         link: "/solution/generative-ai",
       },
       {
         heading: "STQC-VMS",
         description:
           "Get complete control from anywhere with a secure, all-in-one cloud video management system and Mobile App.",
-        image: "/images/home_surveillance_1.png",
+        image: "/images/home_surveillance_1.webp",
         link: "/cloud-vms",
       },
     ],
@@ -565,44 +565,44 @@ export const homeContent = {
     industries: [
       {
         name: "Manufacturing & Factory Plants",
-        image: "/images/home_aisolutionindustry_1.png",
+        image: "/images/home_aisolutionindustry_1.webp",
       }, // Placeholder
       {
         name: "Warehouses & Logistics",
-        image: "/images/home_aisolutionindustry_2.png",
+        image: "/images/home_aisolutionindustry_2.webp",
       },
-      { name: "Smart Cities", image: "/images/home_aisolutionindustry_3.png" },
+      { name: "Smart Cities", image: "/images/home_aisolutionindustry_3.webp" },
       {
         name: "Construction Sites",
-        image: "/images/home_aisolutionindustry_4.png",
+        image: "/images/home_aisolutionindustry_4.webp",
       },
-      { name: "Hospitality", image: "/images/home_aisolutionindustry_5.png" },
-      { name: "Banks & ATMs", image: "/images/home_aisolutionindustry_6.png" },
-      { name: "Hospitals", image: "/images/home_aisolutionindustry_7.png" },
+      { name: "Hospitality", image: "/images/home_aisolutionindustry_5.webp" },
+      { name: "Banks & ATMs", image: "/images/home_aisolutionindustry_6.webp" },
+      { name: "Hospitals", image: "/images/home_aisolutionindustry_7.webp" },
       {
         name: "Airports, Bus & Railway Stations",
-        image: "/images/home_aisolutionindustry_8.png",
+        image: "/images/home_aisolutionindustry_8.webp",
       },
-      { name: "Retail Stores", image: "/images/home_aisolutionindustry_9.png" },
+      { name: "Retail Stores", image: "/images/home_aisolutionindustry_9.webp" },
       {
         name: "Corporate Offices",
-        image: "/images/home_aisolutionindustry_10.png",
+        image: "/images/home_aisolutionindustry_10.webp",
       },
       {
         name: "Housing Societies",
-        image: "/images/home_aisolutionindustry_11.png",
+        image: "/images/home_aisolutionindustry_11.webp",
       },
       {
         name: "Educational Premises",
-        image: "/images/home_aisolutionindustry_12.png",
+        image: "/images/home_aisolutionindustry_12.webp",
       },
     ],
   },
   CTAButton1: {
     data: "Not sure which AI CCTV solution fits your environment?",
     buttonText: "Talk To Our Expert",
-    d_image: "/images/home_cta_1.png",
-    m_Image: "/images/home_cta_mobile_1.png",
+    d_image: "/images/home_cta_1.webp",
+    m_Image: "/images/home_cta_mobile_1.webp",
     link: "/contact-us",
     textPosition: {
       desktop: { top: "50%", left: "5%" },
@@ -642,8 +642,8 @@ export const homeContent = {
   CTAButton2: {
     data: "Experience the Power of AI-Driven CCTV Cameras With ArcisAI",
     buttonText: "Connect Now",
-    d_image: "/images/home_cta_2.png",
-    m_Image: "/images/home_cta_mobile_2.png",
+    d_image: "/images/home_cta_2.webp",
+    m_Image: "/images/home_cta_mobile_2.webp",
     link: "/contact-us",
     textPosition: {
       desktop: { top: "50%", left: "-2%" },
@@ -687,43 +687,43 @@ export const homeContent = {
     heading: "Why ArcisAI Is India’s Most Advanced AI CCTV Camera Brand",
     description:
       "ArcisAI is an AI-powered CCTV camera company offering smart, responsive surveillance built for real-world Indian conditions. Our AI-based security camera solutions combine edge detection, cloud intelligence and GPT insights to deliver fast alerts, intelligent playback and total control - anytime, anywhere.",
-    mainImage: "/images/home_whyarcis_main.png",
+    mainImage: "/images/home_whyarcis_main.webp",
     features: [
       {
         title: "Built-in AI Detection",
         description:
           "Smart features like face detection, motion alerts, line crossing & more - processed right inside the camera.",
-        image: "/images/home_whyarcis_main.png", // Placeholder
+        image: "/images/home_whyarcis_main.webp", // Placeholder
       },
       {
         title: "Cloud AI Insights",
         description:
           "Track crowd flow, fire risks, vehicles, PPE compliance and more — powered by cloud-based AI analytics.",
-        image: "/images/home_whyarcis_main.png", // Placeholder
+        image: "/images/home_whyarcis_main.webp", // Placeholder
       },
       {
         title: "ArcisGPT Control",
         description:
           "Ask questions like “What happened in Zone A today?” and get instant reports from all linked cameras.",
-        image: "/images/home_whyarcis_main.png", // Placeholder
+        image: "/images/home_whyarcis_main.webp", // Placeholder
       },
       {
         title: "Instant & Scheduled Alerts",
         description:
           "Get instant or scheduled notifications for critical events - customize when and how you want to be alerted.",
-        image: "/images/home_whyarcis_main.png", // Placeholder
+        image: "/images/home_whyarcis_main.webp", // Placeholder
       },
       {
         title: "Intelligent Playback & Search",
         description:
           "Forget scrubbing hours of footage. Search by event type, detection or time - and get to what matters in seconds.",
-        image: "/images/home_whyarcis_main.png", // Placeholder
+        image: "/images/home_whyarcis_main.webp", // Placeholder
       },
       {
         title: "Made in India, Built for India",
         description:
           "Designed for Indian climates, use cases and networks. Support and service you can count on.",
-        image: "/images/home_whyarcis_main.png", // Placeholder
+        image: "/images/home_whyarcis_main.webp", // Placeholder
       },
     ],
   },

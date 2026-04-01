@@ -14,7 +14,7 @@ export const getOrganizationSchema = () => ({
   "name": "ArcisAI",
   "alternateName": ["ArcisAI by Adiance", "Arcis AI"],
   "url": "https://arcisai.io",
-  "logo": "https://arcisai.io/logo.png",
+  "logo": "https://arcisai.io/logo.webp",
   "description": "ArcisAI by Adiance manufactures and distributes advanced AI CCTV cameras with built-in intelligence for smart surveillance. Offering indoor, outdoor, PTZ, bullet, and dome cameras with BIS certification for the Indian market and global deployment.",
   "founded": "2003",
   "foundingDate": "2003",

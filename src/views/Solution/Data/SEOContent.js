@@ -2,7 +2,7 @@ export const edgeAISEO = {
   metatitle: "EdgeAI CCTV Cameras for Smarter Real-Time Security - ArcisAI",
   metadescription:
     "Discover ArcisAI EdgeAI - AI-powered CCTV cameras that detect, analyze, and alert in real time. Smarter surveillance starts right inside the camera.",
-  ogimage: "https://arcisai.io/images/solution_edgeai_hero.png",
+  ogimage: "https://arcisai.io/images/solution_edgeai_hero.webp",
   canonical: "https://arcisai.io/solution/edge-ai",
   schema: [
     // WebPage Schema
@@ -21,7 +21,7 @@ export const edgeAISEO = {
         url: "https://arcisai.io/",
         logo: {
           "@type": "ImageObject",
-          url: "https://arcisai.io/images/ArcisAi_logo.png",
+          url: "https://arcisai.io/images/ArcisAi_logo.webp",
           width: 150,
           height: 30,
         },
@@ -34,7 +34,7 @@ export const edgeAISEO = {
       },
       primaryImageOfPage: {
         "@type": "ImageObject",
-        url: "https://arcisai.io/images/solution_edgeai_hero.png",
+        url: "https://arcisai.io/images/solution_edgeai_hero.webp",
         width: 1886,
         height: 982,
         caption: "Edge AI - Intelligence Within the Camera",
@@ -89,7 +89,7 @@ export const cloudAISEO = {
     "Cloud AI CCTV Camera for Scalable, Smarter Surveillance – ArcisAI",
   metadescription:
     "Enhance your ArcisAI's AI CCTV cameras with CloudAI - a subscription-based alerts that unlocks advanced detections, analytics, and insights powered by the cloud.",
-  ogimage: "https://arcisai.io/images/solution_cloudai_hero.png",
+  ogimage: "https://arcisai.io/images/solution_cloudai_hero.webp",
   canonical: "https://arcisai.io/solution/cloud-ai",
   schema: [
     // WebPage Schema
@@ -108,7 +108,7 @@ export const cloudAISEO = {
         url: "https://arcisai.io/",
         logo: {
           "@type": "ImageObject",
-          url: "https://arcisai.io/images/ArcisAi_logo.png",
+          url: "https://arcisai.io/images/ArcisAi_logo.webp",
           width: 150,
           height: 30,
         },
@@ -121,7 +121,7 @@ export const cloudAISEO = {
       },
       primaryImageOfPage: {
         "@type": "ImageObject",
-        url: "https://arcisai.io/images/solution_cloudai_hero.png",
+        url: "https://arcisai.io/images/solution_cloudai_hero.webp",
         width: 1886,
         height: 982,
         caption: "Add on Cloud Video Intelligence",
@@ -167,7 +167,7 @@ export const genAISEO = {
   metatitle: "ArcisAI GenAI – Smarter CCTV Search and Video Summarization",
   metadescription:
     "ArcisAI GenAI turns hours of CCTV footage into instant summaries. Search, analyze, and retrieve key moments with natural language commands for faster decisions.",
-  ogimage: "https://arcisai.io/images/solution_genai_hero.png",
+  ogimage: "https://arcisai.io/images/solution_genai_hero.webp",
   canonical: "https://arcisai.io/solution/generative-ai",
   schema: [
     // WebPage Schema
@@ -186,7 +186,7 @@ export const genAISEO = {
         url: "https://arcisai.io/",
         logo: {
           "@type": "ImageObject",
-          url: "https://arcisai.io/images/ArcisAi_logo.png",
+          url: "https://arcisai.io/images/ArcisAi_logo.webp",
           width: 150,
           height: 30,
         },
@@ -199,7 +199,7 @@ export const genAISEO = {
       },
       primaryImageOfPage: {
         "@type": "ImageObject",
-        url: "https://arcisai.io/images/solution_genai_hero.png",
+        url: "https://arcisai.io/images/solution_genai_hero.webp",
         width: 1886,
         height: 982,
         caption: "Generative AI Powered Video Intelligence",

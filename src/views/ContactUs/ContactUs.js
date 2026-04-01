@@ -225,17 +225,17 @@ const ContactSection = () => {
 
   // Edge AI Features Data
   const edgeAIFeatures = [
-    { name: "Line-Cross Detection", image: "/images/contact_edgeai_1.png" },
+    { name: "Line-Cross Detection", image: "/images/contact_edgeai_1.webp" },
     {
       name: "Customer Traffic Statistics",
-      image: "/images/contact_edgeai_2.png",
+      image: "/images/contact_edgeai_2.webp",
     },
-    { name: "Area Detection", image: "/images/contact_edgeai_3.png" },
-    { name: "Missing Object Detection", image: "/images/contact_edgeai_4.png" },
-    { name: "Unattended Baggage", image: "/images/contact_edgeai_5.png" },
-    { name: "Face Detection", image: "/images/contact_edgeai_6.png" },
-    { name: "Motion Detection", image: "/images/contact_edgeai_7.png" },
-    { name: "Human Detection", image: "/images/contact_edgeai_8.png" },
+    { name: "Area Detection", image: "/images/contact_edgeai_3.webp" },
+    { name: "Missing Object Detection", image: "/images/contact_edgeai_4.webp" },
+    { name: "Unattended Baggage", image: "/images/contact_edgeai_5.webp" },
+    { name: "Face Detection", image: "/images/contact_edgeai_6.webp" },
+    { name: "Motion Detection", image: "/images/contact_edgeai_7.webp" },
+    { name: "Human Detection", image: "/images/contact_edgeai_8.webp" },
   ];
 
   return (

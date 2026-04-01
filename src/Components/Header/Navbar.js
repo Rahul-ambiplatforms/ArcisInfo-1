@@ -291,7 +291,7 @@ const Navbar = () => {
           {/* LOGO */}
           <NextLink href="/">
             <Image loading="lazy"
-              src="/images/ArcisAi_logo.png"
+              src="/images/ArcisAi_logo.webp"
               alt="ArcisAI Logo"
               w="150px"
               h="30px"
@@ -384,7 +384,7 @@ const Navbar = () => {
           >
             <NextLink href="/" onClick={onClose}>
               <Image loading="lazy"
-                src="/images/ArcisAi_logo.png"
+                src="/images/ArcisAi_logo.webp"
                 alt="ArcisAI Logo"
                 w="150px"
                 h="30px"

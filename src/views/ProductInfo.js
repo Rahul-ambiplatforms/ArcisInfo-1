@@ -16,7 +16,7 @@ function ProductInfo() {
       >
         {/* Dome Camera */}
         <Image loading="lazy"
-          src="/images/bgLines.png"
+          src="/images/bgLines.webp"
           alt="Dome Camera"
           // w={{ base: "500px", md: "700px", lg: "829.413px" }}
           w="1300px"
@@ -113,7 +113,7 @@ function ProductInfo() {
         >
           {/* Dome Camera */}
           <Image loading="lazy"
-            src="/images/productType.png"
+            src="/images/productType.webp"
             alt="Dome Camera"
             w={{ base: "500px", md: "700px", lg: "950px" }}
             h="auto"
@@ -147,7 +147,7 @@ function ProductInfo() {
           <Image loading="lazy"
             w={{ base: "100%", md: "860px" }}
             h={{ base: "auto", md: "488px" }}
-            src="/images/multiview.png"
+            src="/images/multiview.webp"
             alt="Surveillance"
             borderRadius="md"
             transition="transform 0.3s ease"

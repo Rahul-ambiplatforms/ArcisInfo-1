@@ -35,7 +35,7 @@ const APP_SCHEMA = {
     url: 'https://www.arcisai.io'
   },
   featureList: 'Live View, Playback, PTZ Control, Push Notifications, Cloud Access, Multi-Site Monitoring, AI Event Alerts, Face Recognition Alerts, ANPR Alerts',
-  screenshot: 'https://www.arcisai.io/assets/app-screenshot.png',
+  screenshot: 'https://www.arcisai.io/assets/app-screenshot.webp',
   softwareVersion: '2.0',
   aggregateRating: {
     '@type': 'AggregateRating',
