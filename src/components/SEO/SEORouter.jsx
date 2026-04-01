@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { usePathname } from 'next/navigation';
 import { SEO } from '../SEO';
 import { getSEOConfig } from '../../config/seo-config';
 import {
@@ -15,8 +15,7 @@ import {
  * Drop this component inside your Router and it handles everything.
  */
 const SEORouter = () => {
-  const location = useLocation();
-  const path = location.pathname;
+  const path = usePathname() || '/';
 
   // Map routes to SEO config keys
   const getPageKey = (pathname) => {

@@ -1,17 +1,19 @@
 'use client';
 import React from "react";
-import { useParams } from "react-router-dom";
+import dynamic from "next/dynamic";
+import { useParams } from "next/navigation";
 import { Series as SeriesData } from "./Data/Content";
 import { SEOContent } from "./Data/SEOContent";
 import { Helmet } from "react-helmet-async";
 import HeroSectionCarousel from "../../Components/HeroSectionCarousel";
-import Information from "../../Components/Information";
-import OurClient from "../HomePage/Components/OurClient";
-import CameraFeature from "../Product/Components/CameraFeature";
-import Innovation from "../AboutUs/Components/Innovation";
-import CTAButton from "../../Components/CTAButton";
-import FAQSection from "../../Components/FAQSection";
-import ProductInfo from "./Components/ProductInfo";
+
+const Information    = dynamic(() => import("../../Components/Information"));
+const OurClient      = dynamic(() => import("../HomePage/Components/OurClient"));
+const CameraFeature  = dynamic(() => import("../Product/Components/CameraFeature"));
+const Innovation     = dynamic(() => import("../AboutUs/Components/Innovation"));
+const ProductInfo    = dynamic(() => import("./Components/ProductInfo"));
+const CTAButton      = dynamic(() => import("../../Components/CTAButton"));
+const FAQSection     = dynamic(() => import("../../Components/FAQSection"));
 
 const MainProduct = ({ seriesType = "nvrDvrSeries", seriesId: seriesIdProp }) => {
   const routerParams = useParams();

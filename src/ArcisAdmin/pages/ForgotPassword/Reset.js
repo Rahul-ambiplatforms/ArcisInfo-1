@@ -2,7 +2,7 @@
 import { Box, Button, Flex, Input, Text, useToast } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import { forgotPassword, resetPassword } from "../../api/auth";
 import { Helmet } from "react-helmet-async";
 
@@ -10,9 +10,11 @@ const Reset = () => {
   const toast = useToast();
   const [isSending, setIsSending] = useState(false);
   const { register, handleSubmit } = useForm();
-  const navigate = useNavigate();
-  const location = useLocation();
-  const state = location.state || {};
+  const router = useRouter();
+  const state = typeof window !== "undefined" ? {
+    email: sessionStorage.getItem("admin_auth_email") || undefined,
+    otp: sessionStorage.getItem("admin_auth_otp") || undefined,
+  } : {};
 
   const onEmailSubmit = async (data) => {
     setIsSending(true);
@@ -26,10 +28,9 @@ const Reset = () => {
           duration: 3000,
           isClosable: true,
         });
-        navigate("/admin/verify", {
-          replace: true,
-          state: { email: response.data.email, purpose: "forgotPassword" },
-        });
+        sessionStorage.setItem("admin_auth_email", response.data.email);
+        sessionStorage.setItem("admin_auth_purpose", "forgotPassword");
+        router.replace("/admin/verify");
       }
     } catch (error) {
       toast({
@@ -64,7 +65,10 @@ const Reset = () => {
           duration: 3000,
           isClosable: true,
         });
-        navigate("/admin", { replace: true });
+        sessionStorage.removeItem("admin_auth_email");
+        sessionStorage.removeItem("admin_auth_purpose");
+        sessionStorage.removeItem("admin_auth_otp");
+        router.replace("/admin");
       }
     } catch (error) {
       toast({

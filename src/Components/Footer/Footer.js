@@ -20,7 +20,7 @@ import FacebookIcon from "../Icons/facebook_icon.svg";
 import InstagramIcon from "../Icons/instagram_icon.svg";
 import LinkedInIcon from "../Icons/linkedIn_icon.svg";
 import XIcon from "../Icons/X_icon.svg";
-import { Link as RouterLink } from "react-router-dom";
+import NextLink from "next/link";
 
 const ListHeader = ({ children }) => {
   return (
@@ -32,8 +32,8 @@ const ListHeader = ({ children }) => {
 
 const FooterLink = ({ href, children, color = "#A8A8A8" }) => (
   <Link
-    as={RouterLink}
-    to={href}
+    as={NextLink}
+    href={href}
     color={color}
     fontSize="sm"
     _hover={{ color: "white", textDecoration: "none" }}
@@ -92,7 +92,7 @@ const Footer = () => {
         px={{ base: 4, md: 6 }}
       >
         <Box display={{ base: "block", md: "none" }} mb="10%">
-          <RouterLink to="/">
+          <NextLink href="/">
             <Image loading="lazy"
               display={{ base: "block", md: "none" }}
               src="/images/ArcisAi_logo.png"
@@ -102,7 +102,7 @@ const Footer = () => {
               cursor="pointer"
               _hover={{ opacity: 0.8 }}
             />
-          </RouterLink>
+          </NextLink>
         </Box>
         {/* Top Section: 4 Columns + Social Media */}
         <Flex
@@ -284,7 +284,7 @@ const Footer = () => {
               />
             </Link>
           </HStack>
-          {/* <RouterLink to="/">
+          {/* <NextLink href="/">
               <Image loading="lazy"
                 src="/images/ArcisAi_logo.png"
                 alt="ArcisAI"
@@ -294,7 +294,7 @@ const Footer = () => {
                 _hover={{ opacity: 0.8 }}
                 mt={2}
               />
-            </RouterLink> */}
+            </NextLink> */}
 
           {/* Right Side: Partner/Contact Links + Contact Info */}
           <VStack align={{ base: "flex-start", md: "flex-end" }} spacing={6}>
@@ -306,7 +306,7 @@ const Footer = () => {
               mb={2}
             >
               {/* <Link
-                as={RouterLink}
+                as={NextLink}
                 to="/partner-with-us"
                  color="white"
                 textDecoration="underline"
@@ -316,8 +316,8 @@ const Footer = () => {
               </Link>
               <Text color="white">|</Text> */}
               <Link
-                as={RouterLink}
-                to="/contact-us"
+                as={NextLink}
+                href="/contact-us"
                 color="white"
                 textDecoration="underline"
                 _hover={{ color: "gray.300" }}
@@ -397,7 +397,7 @@ const Footer = () => {
           gap={4}
         >
           {/* Left: Arcis Logo */}
-          <RouterLink to="/">
+          <NextLink href="/">
             <Image loading="lazy"
               display={{ base: "none", md: "block" }}
               src="/images/ArcisAi_logo.png"
@@ -407,7 +407,7 @@ const Footer = () => {
               cursor="pointer"
               _hover={{ opacity: 0.8 }}
             />
-          </RouterLink>
+          </NextLink>
 
           {/* Middle: Copyright */}
           <Text

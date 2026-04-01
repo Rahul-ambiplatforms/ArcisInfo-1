@@ -16,14 +16,14 @@ import {
   Select,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
+import NextLink from "next/link";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { Link as RouterLink } from "react-router-dom";
 import ContactUs from "./ContactUs/ContactUs";
 
 function Footer() {
-  const navigate = useNavigate();
+  const router = useRouter();
   const year = new Date().getFullYear();
   const [formData, setFormData] = useState({
     name: "",
@@ -127,7 +127,7 @@ function Footer() {
           isClosable: true,
         });
 
-        navigate("/thank-you");
+        router.push("/thank-you");
         // window.location.href = "/thank-you";
 
         setFormData({
@@ -221,8 +221,8 @@ function Footer() {
             </Text>
           </Flex>
           <Link
-            as={RouterLink} // Use React Router's Link for client-side routing
-            to="/contact-us" // The path to your contact page
+            as={NextLink}
+            href="/contact-us"
             isExternal={false} // Set to false for internal routing
             _hover={{ textDecoration: "none" }} // Prevents the default link underline on hover
             w={{ base: "full", md: "auto" }}

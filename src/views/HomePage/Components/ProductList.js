@@ -11,7 +11,7 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import { FaChevronRight } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import { homeContent } from "../Data/Content";
 import RightButtonSvg from "../../../Components/Icons/RightButton.svg";
 import CustomButton from "../../../Components/CustomButton";
@@ -38,7 +38,7 @@ const ProductList = ({ data }) => {
   const [activeTab, setActiveTab] = useState(
     validProducts.length > 0 ? validProducts[0]?.product_type || "" : ""
   );
-  const navigate = useNavigate();
+  const router = useRouter();
 
   // Return null if no data or no products
   if (
@@ -211,7 +211,7 @@ const ProductList = ({ data }) => {
                 role="group"
                 transition="all 0.3s"
                 cursor="pointer"
-                onClick={() => navigate(product.link)}
+                onClick={() => router.push(product.link)}
                 _hover={{
                   bg: "whiteAlpha.300", //blackAlpha.300
                   transform: "translateY(-2px)",
@@ -286,7 +286,7 @@ const ProductList = ({ data }) => {
                       height="40px"
                       onClick={(e) => {
                         e.stopPropagation();
-                        navigate(product.link);
+                        router.push(product.link);
                       }}
                       sx={{ padding: 0 }}
                       showTicks={false}
@@ -307,7 +307,7 @@ const ProductList = ({ data }) => {
         {/* <Flex justify="center" mt={10}>
           <CustomButton
             width="180px"
-            onClick={() => navigate("/products")} // Assuming a products page exists
+            onClick={() => router.push("/products")} // Assuming a products page exists
           >
             More Products
           </CustomButton>

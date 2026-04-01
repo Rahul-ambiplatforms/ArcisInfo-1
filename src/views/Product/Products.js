@@ -1,22 +1,23 @@
 'use client';
 import React from "react";
-import { useParams } from "react-router-dom";
+import dynamic from "next/dynamic";
+import { useParams } from "next/navigation";
 import { Helmet } from "react-helmet-async";
 import HeroSectionCarousel from "../../Components/HeroSectionCarousel";
 import { Product } from "./Data/Content";
 import { getProductSEO } from "./Data/SEOContent";
-import CameraFeature from "./Components/CameraFeature";
-import CameraComparision from "./Components/CameraComparision";
-import ProductIndustries from "./Components/ProductIndustries";
-import WhyChooseArcis from "./Components/WhyChooseArcis";
-import SurveillanceStack from "../../Components/SurveillanceStack";
-import CTAButton from "../../Components/CTAButton";
-import FAQSection from "../../Components/FAQSection";
 import { Box } from "@chakra-ui/react";
-import CCTVFeatures from "../WhyArcisAI/Components/CCTVFeaatures";
-import AISolutionIndustry from "../HomePage/Components/AISolutionIndustry";
 import NotFound from "../NotFound";
 import PageContentWrapper from "../../Components/PageContentWrapper";
+
+const CameraFeature      = dynamic(() => import("./Components/CameraFeature"));
+const CameraComparision  = dynamic(() => import("./Components/CameraComparision"));
+const AISolutionIndustry = dynamic(() => import("../HomePage/Components/AISolutionIndustry"));
+const SurveillanceStack  = dynamic(() => import("../../Components/SurveillanceStack"));
+const ProductIndustries  = dynamic(() => import("./Components/ProductIndustries"));
+const WhyChooseArcis     = dynamic(() => import("./Components/WhyChooseArcis"));
+const CTAButton          = dynamic(() => import("../../Components/CTAButton"));
+const FAQSection         = dynamic(() => import("../../Components/FAQSection"));
 
 const Products = ({ productId: productIdProp }) => {
   const routerParams = useParams();

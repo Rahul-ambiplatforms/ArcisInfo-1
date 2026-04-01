@@ -1,14 +1,16 @@
 'use client';
 import React from "react";
+import dynamic from "next/dynamic";
 import { Helmet } from "react-helmet-async";
 import HeroSection from "./Components/HeroSection";
 import { AboutUsContent } from "./Data/Content";
 import { aboutUsSEO } from "./Data/SEOContent";
-import PoweredBy from "./Components/PoweredBy";
-import VisionMission from "./Components/VisionMission";
-import Innovation from "./Components/Innovation";
-import CTAButton from "../../Components/CTAButton";
 import PageContentWrapper from "../../Components/PageContentWrapper";
+
+const PoweredBy    = dynamic(() => import("./Components/PoweredBy"));
+const VisionMission = dynamic(() => import("./Components/VisionMission"));
+const Innovation   = dynamic(() => import("./Components/Innovation"));
+const CTAButton    = dynamic(() => import("../../Components/CTAButton"));
 
 const AboutUs = () => {
   return (

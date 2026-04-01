@@ -1,12 +1,14 @@
 'use client';
 import React from "react";
+import dynamic from "next/dynamic";
 import { Box } from "@chakra-ui/react";
 import EventHeroSection from "./Components/HeroSection";
-import EventCarousel from "./Components/EventCarousel";
 import { EventData } from "./Data/Content";
 import { EventSEO } from "./Data/SEOContent";
 import { Helmet } from "react-helmet-async";
-import CTAButton from "../../Components/CTAButton";
+
+const EventCarousel = dynamic(() => import("./Components/EventCarousel"));
+const CTAButton     = dynamic(() => import("../../Components/CTAButton"));
 
 const Event = () => {
   return (

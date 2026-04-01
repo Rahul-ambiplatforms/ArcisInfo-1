@@ -1,19 +1,21 @@
 'use client';
 import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import dynamic from "next/dynamic";
+import { useParams } from "next/navigation";
 import { Helmet } from "react-helmet-async";
 import { Box, Text, Center } from "@chakra-ui/react";
 import HeroSectionCarousel from "../../Components/HeroSectionCarousel";
-import WhatIsAI from "./Components/WhatIsAI";
-import OurClient from "../../views/HomePage/Components/OurClient";
-import AIFeatures from "./Components/AIFeatures";
-import AISolutionIndustry from "../../views/HomePage/Components/AISolutionIndustry";
-import CTAButton from "../../Components/CTAButton";
-import WhyChoose from "./Components/WhyChoose";
-import FAQSection from "../../Components/FAQSection";
 import { Solution } from "./Data/Content";
 import { getSolutionSEO } from "./Data/SEOContent";
 import PageContentWrapper from "../../Components/PageContentWrapper";
+
+const WhatIsAI           = dynamic(() => import("./Components/WhatIsAI"));
+const OurClient          = dynamic(() => import("../../views/HomePage/Components/OurClient"));
+const AIFeatures         = dynamic(() => import("./Components/AIFeatures"));
+const AISolutionIndustry = dynamic(() => import("../../views/HomePage/Components/AISolutionIndustry"));
+const WhyChoose          = dynamic(() => import("./Components/WhyChoose"));
+const CTAButton          = dynamic(() => import("../../Components/CTAButton"));
+const FAQSection         = dynamic(() => import("../../Components/FAQSection"));
 
 const Solutions = ({ solutionId: solutionIdProp }) => {
   const routerParams = useParams();

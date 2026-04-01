@@ -1,15 +1,17 @@
 'use client';
 import React from "react";
-import { useParams } from "react-router-dom";
+import dynamic from "next/dynamic";
+import { useParams } from "next/navigation";
 import HeroSection from "./Components/HeroSection";
 import { Series as SeriesData } from "./Data/Content";
 import { SEOContent } from "./Data/SEOContent";
 import { Helmet } from "react-helmet-async";
-import ProductList from "../HomePage/Components/ProductList";
-import CTAButton from "../../Components/CTAButton";
 import { Box } from "@chakra-ui/react";
 import NotFound from "../NotFound";
 import PageContentWrapper from "../../Components/PageContentWrapper";
+
+const ProductList = dynamic(() => import("../HomePage/Components/ProductList"));
+const CTAButton   = dynamic(() => import("../../Components/CTAButton"));
 
 const Series = ({ seriesId: seriesIdProp }) => {
   const routerParams = useParams();

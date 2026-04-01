@@ -1,14 +1,16 @@
 'use client';
 import React from "react";
+import dynamic from "next/dynamic";
 import { Box } from "@chakra-ui/react";
-import { useParams } from "react-router-dom";
+import { useParams } from "next/navigation";
 import HeroCarousel from "./Components/HeroCarousel";
-import Information from "./Components/Information";
-import ImageGallery from "./Components/ImageGallery";
 import { IFSECData } from "./Data/Content";
 import { IFSECSEO } from "./Data/SEOContent";
 import { Helmet } from "react-helmet-async";
-import CTAButton from "../../Components/CTAButton";
+
+const Information  = dynamic(() => import("./Components/Information"));
+const ImageGallery = dynamic(() => import("./Components/ImageGallery"));
+const CTAButton    = dynamic(() => import("../../Components/CTAButton"));
 
 const IFSEC = ({ eventId: eventIdProp }) => {
   const routerParams = useParams();

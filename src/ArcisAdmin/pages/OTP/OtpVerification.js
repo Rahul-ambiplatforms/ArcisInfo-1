@@ -11,22 +11,24 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import { verifyOtp } from "../../api/auth";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import { Helmet } from "react-helmet-async";
 
 const OtpVerification = () => {
   const toast = useToast();
-  const location = useLocation();
-  const navigate = useNavigate();
-  const { state } = location;
+  const router = useRouter();
+  const state = typeof window !== "undefined" ? {
+    email: sessionStorage.getItem("admin_auth_email"),
+    purpose: sessionStorage.getItem("admin_auth_purpose") || undefined,
+  } : null;
   const [isVerified, setIsVerified] = useState(false);
 
-  // Redirect to /admin if state is null
+  // Redirect to /admin if no email in session
   useEffect(() => {
-    if (!state) {
-      navigate("/admin", { replace: true });
+    if (!state?.email) {
+      router.replace("/admin");
     }
-  }, [state, navigate]);
+  }, []);
 
   const handleOtpComplete = async (value) => {
     // console.log("value")
@@ -53,7 +55,7 @@ const OtpVerification = () => {
               isClosable: true,
             });
             setIsVerified(true);
-            navigate("/admin/dashboard", { replace: true });
+            router.replace("/admin/dashboard");
           } else {
             // console.log("error occur")
             toast({
@@ -78,10 +80,8 @@ const OtpVerification = () => {
             });
             setIsVerified(true);
             // console.log("email before sending to reset page : ", response.data.email, "otp is : ", value)
-            navigate("/admin/reset", {
-              replace: true,
-              state: { email: state.email, otp: value },
-            });
+            sessionStorage.setItem("admin_auth_otp", value);
+            router.replace("/admin/reset");
           } else {
             toast({
               title: "Verification Failed",
@@ -135,8 +135,8 @@ const OtpVerification = () => {
     }
   };
 
-  // Prevent render if state is not available (during redirect)
-  if (!state) return null;
+  // Prevent render if no email in session (during redirect)
+  if (!state?.email) return null;
 
   return (
     <>

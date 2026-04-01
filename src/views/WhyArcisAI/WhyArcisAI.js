@@ -1,17 +1,19 @@
 'use client';
 import React from "react";
+import dynamic from "next/dynamic";
 import { Helmet } from "react-helmet-async";
 import HeroSectionCarousel from "../../Components/HeroSectionCarousel";
-import EdgeAIFeatures from "./Components/EdgeAIFeatures";
-import CCTVFeatures from "./Components/CCTVFeaatures";
-import GoodbyeNVR from "./Components/GoodbyeNVR";
-import ArcisVMS from "./Components/ArcisVMS";
-import Services from "./Components/Services";
-import FAQSection from "../../Components/FAQSection";
 import { WhyArcisAIContent } from "./Data/Content";
 import { whyArcisAISEO } from "./Data/SEOContent";
-import CTAButton from "../../Components/CTAButton";
 import PageContentWrapper from "../../Components/PageContentWrapper";
+
+const EdgeAIFeatures = dynamic(() => import("./Components/EdgeAIFeatures"));
+const CCTVFeatures   = dynamic(() => import("./Components/CCTVFeaatures"));
+const GoodbyeNVR     = dynamic(() => import("./Components/GoodbyeNVR"));
+const ArcisVMS       = dynamic(() => import("./Components/ArcisVMS"));
+const Services       = dynamic(() => import("./Components/Services"));
+const FAQSection     = dynamic(() => import("../../Components/FAQSection"));
+const CTAButton      = dynamic(() => import("../../Components/CTAButton"));
 
 const WhyArcisAI = () => {
   return (

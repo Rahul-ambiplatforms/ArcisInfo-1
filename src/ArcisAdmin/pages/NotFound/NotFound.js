@@ -1,9 +1,9 @@
 import React from 'react';
 import { Box, Heading, Text, Button, Center, VStack } from '@chakra-ui/react';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 
 const NotFound = () => {
-    const navigate = useNavigate();
+    const router = useRouter();
 
     return (
         <Center h="100vh" flexDirection="column" p={4}>
@@ -31,7 +31,7 @@ const NotFound = () => {
                         bg="#9678E1"
                         color="white"
                         variant="solid"
-                        onClick={() => navigate('/')}>
+                        onClick={() => router.push('/')}>
                         Go to Homepage
                     </Button>
                 </Box>

@@ -1,20 +1,22 @@
 'use client';
 import React from "react";
+import dynamic from "next/dynamic";
 import { Helmet } from "react-helmet-async";
 import { Box, Heading, Text, Flex } from "@chakra-ui/react";
 import HeroSectionCarousel from "../../Components/HeroSectionCarousel";
 import ProductList from "./Components/ProductList";
-import Certifications from "./Components/Certifications";
-import SurveillanceStack from "../../Components/SurveillanceStack";
-import AISolutionIndustry from "./Components/AISolutionIndustry";
-import CTAButton from "../../Components/CTAButton";
+import PageContentWrapper from "../../Components/PageContentWrapper";
 import { homeContent } from "./Data/Content";
 import { homeSEO } from "./Data/SEOContent";
-import OurClient from "./Components/OurClient";
-import WhyArcisAI from "./Components/WhyArcisAI";
-import FAQSection from "../../Components/FAQSection";
-import Event from "../Events/Event";
-import PageContentWrapper from "../../Components/PageContentWrapper";
+
+// Below-fold: split into separate JS chunks, load only when needed
+const Certifications    = dynamic(() => import("./Components/Certifications"));
+const SurveillanceStack = dynamic(() => import("../../Components/SurveillanceStack"));
+const AISolutionIndustry = dynamic(() => import("./Components/AISolutionIndustry"));
+const CTAButton         = dynamic(() => import("../../Components/CTAButton"));
+const WhyArcisAI        = dynamic(() => import("./Components/WhyArcisAI"));
+const OurClient         = dynamic(() => import("./Components/OurClient"));
+const FAQSection        = dynamic(() => import("../../Components/FAQSection"));
 
 const HomeDashboard = () => {
   return (

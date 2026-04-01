@@ -19,7 +19,7 @@ import {
   Image,
   Center,
 } from "@chakra-ui/react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import OurClient from "../HomePage/Components/OurClient";
 import CustomButton from "../../Components/CustomButton";
 import { contactUsSEO } from "./Data/SEOContent";
@@ -27,7 +27,7 @@ import PageContentWrapper from "../../Components/PageContentWrapper";
 import CountrySelector from "./Components/CountrySelector";
 
 const ContactSection = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -190,7 +190,7 @@ const ContactSection = () => {
           isClosable: true,
         });
 
-        navigate("/thank-you");
+        router.push("/thank-you");
 
         setFormData({
           name: "",

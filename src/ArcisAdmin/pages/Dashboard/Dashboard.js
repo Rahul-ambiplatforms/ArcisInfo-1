@@ -10,7 +10,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import Navbar from "../../components/ui/Navbar";
 import { blogData } from "./data/blogData";
 import CreateBlogPage from "./components/CreateBlogPage";
@@ -22,13 +22,13 @@ import { Helmet } from "react-helmet-async";
 const Dashboard = () => {
   const jwt = localStorage.getItem("jwtToken");
   const role = localStorage.getItem("userRole");
-  const navigate = useNavigate();
+  const router = useRouter();
 
   useEffect(() => {
     if (!jwt) {
-      navigate("/admin", { replace: true });
+      router.replace("/admin");
     }
-  }, [jwt, navigate]);
+  }, [jwt]);
 
   // If not logged in, don't render anything until redirect completes
   const [currentPage, setCurrentPage] = useState(1);

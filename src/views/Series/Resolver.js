@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from "react";
-import { useParams } from "react-router-dom";
+import { useParams } from "next/navigation";
 import Series from "./Series";
 import MainProduct from "./MainProduct";
 

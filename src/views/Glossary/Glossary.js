@@ -7,7 +7,7 @@ import {
   Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon,
   Link as ChakraLink
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import NextLink from "next/link";
 
 const glossaryTerms = [
   // AI & Analytics
@@ -273,8 +273,8 @@ const Glossary = () => {
           </VStack>
           <Divider my={8} />
           <HStack spacing={4} justify="center">
-            <Button as={Link} to="/faq" variant="outline" colorScheme="gray">Browse FAQs</Button>
-            <Button as={Link} to="/contact-us" bg="#0a0a0a" color="white" _hover={{ bg: "#1a1a1a" }}>Contact Sales</Button>
+            <Button as={NextLink} href="/faq" variant="outline" colorScheme="gray">Browse FAQs</Button>
+            <Button as={NextLink} href="/contact-us" bg="#0a0a0a" color="white" _hover={{ bg: "#1a1a1a" }}>Contact Sales</Button>
           </HStack>
         </Container>
       </Box>

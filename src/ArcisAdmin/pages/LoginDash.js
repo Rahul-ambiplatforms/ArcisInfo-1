@@ -11,7 +11,8 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import NextLink from "next/link";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { login } from "../api/auth";
@@ -22,7 +23,7 @@ const LoginDash = () => {
   const [show, setShow] = useState(false);
   const [isSending, setIsSending] = useState(false);
   const { register, handleSubmit } = useForm();
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const onSubmit = async (data) => {
     setIsSending(true);
@@ -35,10 +36,9 @@ const LoginDash = () => {
           duration: 3000,
           isClosable: true,
         });
-        navigate("/admin/verify", {
-          replace: true,
-          state: { email: response.data.email },
-        });
+        sessionStorage.setItem("admin_auth_email", response.data.email);
+        sessionStorage.removeItem("admin_auth_purpose");
+        router.replace("/admin/verify");
       }
     } catch (error) {
       toast({
@@ -145,7 +145,7 @@ const LoginDash = () => {
                 <Checkbox colorScheme="gray" {...register("remember")}>
                   <Text fontSize="14px">Remember for 30 days</Text>
                 </Checkbox>
-                <Link to="/admin/reset">
+                <NextLink href="/admin/reset">
                   <Text
                     _hover={{ textDecoration: "underline" }}
                     fontWeight="600"
@@ -155,7 +155,7 @@ const LoginDash = () => {
                   >
                     Forgot password
                   </Text>
-                </Link>
+                </NextLink>
               </Flex>
 
               <Button

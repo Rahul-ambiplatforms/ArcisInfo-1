@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Heading, Text, VStack } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import NextLink from "next/link";
 
 // Helper function to parse text and render links for format [text](url)
 const parseText = (text) => {
@@ -20,16 +20,16 @@ const parseText = (text) => {
 
     // Push the link component and color
     parts.push(
-      <Link
+      <NextLink
         key={match.index}
-        to={match[2]}
+        href={match[2]}
         style={{
           color: "#fff",
           textDecoration: "underline",
         }}
       >
         {match[1]}
-      </Link>
+      </NextLink>
     );
 
     lastIndex = regex.lastIndex;

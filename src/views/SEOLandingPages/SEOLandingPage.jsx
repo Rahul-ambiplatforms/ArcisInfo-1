@@ -1,6 +1,7 @@
 'use client';
 import React from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "next/navigation";
+import NextLink from "next/link";
 import { Box, Container, Heading, Text, SimpleGrid, VStack, HStack, Button, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Icon, Flex, Badge, Divider } from "@chakra-ui/react";
 import { Helmet } from "react-helmet-async";
 import seoPageData from "../../data/seoPageData";
@@ -36,7 +37,7 @@ const SEOLandingPage = ({ paramsOverride }) => {
         <VStack spacing={4}>
           <Heading color="white" size="xl">Page Not Found</Heading>
           <Text color="gray.400">The page you're looking for doesn't exist.</Text>
-          <Button as={Link} to="/" bg="white" color="black" _hover={{bg: "gray.200"}}>Go Home</Button>
+          <Button as={NextLink} href="/" bg="white" color="black" _hover={{bg: "gray.200"}}>Go Home</Button>
         </VStack>
       </Box>
     );
@@ -166,10 +167,10 @@ const SEOLandingPage = ({ paramsOverride }) => {
             {pageData.heroDescription}
           </Text>
           <HStack spacing={4}>
-            <Button as={Link} to={pageData.cta?.buttonLink || "/contact-us"} bg="white" color="black" size="lg" _hover={{bg: "gray.200", transform: "translateY(-2px)"}} transition="all 0.2s" fontWeight="600">
+            <Button as={NextLink} href={pageData.cta?.buttonLink || "/contact-us"} bg="white" color="black" size="lg" _hover={{bg: "gray.200", transform: "translateY(-2px)"}} transition="all 0.2s" fontWeight="600">
               {pageData.cta?.buttonText || "Get Free Quote"}
             </Button>
-            <Button as={Link} to="/products" variant="outline" color="white" borderColor="whiteAlpha.400" size="lg" _hover={{bg: "whiteAlpha.100"}}>
+            <Button as={NextLink} href="/products" variant="outline" color="white" borderColor="whiteAlpha.400" size="lg" _hover={{bg: "whiteAlpha.100"}}>
               View Products
             </Button>
           </HStack>
@@ -235,7 +236,7 @@ const SEOLandingPage = ({ paramsOverride }) => {
           <Container maxW="700px">
             <Heading as="h2" size={{base: "lg", md: "xl"}} mb={4}>{pageData.cta.title}</Heading>
             <Text color="whiteAlpha.700" mb={8} fontSize="lg">{pageData.cta.description}</Text>
-            <Button as={Link} to={pageData.cta.buttonLink} bg="white" color="black" size="lg" px={10} _hover={{bg: "gray.200", transform: "translateY(-2px)"}} transition="all 0.2s" fontWeight="600">
+            <Button as={NextLink} href={pageData.cta.buttonLink} bg="white" color="black" size="lg" px={10} _hover={{bg: "gray.200", transform: "translateY(-2px)"}} transition="all 0.2s" fontWeight="600">
               {pageData.cta.buttonText}
             </Button>
           </Container>

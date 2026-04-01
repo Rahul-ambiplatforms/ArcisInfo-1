@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { usePathname } from 'next/navigation';
 import FAQSchema from './FAQSchema';
 import LocalBusinessSchema from './LocalBusinessSchema';
 import EcosystemSchema from './EcosystemSchema';
@@ -12,8 +12,7 @@ import EcosystemSchema from './EcosystemSchema';
  * - App, VMS, Dashboard, NVR, Dashcam, Analytics, Events (EcosystemSchema)
  */
 const SEOIntegration = () => {
-  const location = useLocation();
-  const path = location.pathname;
+  const path = usePathname() || '/';
 
   // Determine page type for FAQ schema
   const getPageType = () => {

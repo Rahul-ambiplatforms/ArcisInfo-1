@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import NextLink from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Helmet } from 'react-helmet-async';
 
 /**
@@ -45,8 +46,8 @@ function formatSegment(segment) {
 }
 
 const Breadcrumbs = ({ customLabels = {}, className = '' }) => {
-  const location = useLocation();
-  const pathSegments = location.pathname.split('/').filter(Boolean);
+  const pathname = usePathname();
+  const pathSegments = (pathname || '/').split('/').filter(Boolean);
 
   if (pathSegments.length === 0) return null;
 
@@ -120,15 +121,15 @@ const Breadcrumbs = ({ customLabels = {}, className = '' }) => {
                     {item.name}
                   </span>
                 ) : (
-                  <Link
-                    to={item.path}
+                  <NextLink
+                    href={item.path}
                     style={{
                       color: '#2563eb',
                       textDecoration: 'none',
                     }}
                   >
                     {item.name}
-                  </Link>
+                  </NextLink>
                 )}
               </li>
             );

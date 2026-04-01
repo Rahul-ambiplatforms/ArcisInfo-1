@@ -1,6 +1,7 @@
 // SEOContent - 5-pillar AI surveillance content for search engine visibility
 import React from 'react';
-import { useLocation, Link as RouterLink } from 'react-router-dom';
+import { usePathname } from 'next/navigation';
+import NextLink from 'next/link';
 import { Box, Container, Heading, Text, SimpleGrid, VStack, Link, HStack, Badge } from '@chakra-ui/react';
 
 const HomeContent = () => (
@@ -21,7 +22,7 @@ const HomeContent = () => (
           <Box p={6} borderRadius="lg" border="1px solid" borderColor="gray.200" _hover={{ shadow: 'md' }}>
             <HStack mb={3}><Badge colorScheme="blue">Hardware</Badge><Badge colorScheme="green">STQC</Badge></HStack>
             <Heading as="h3" fontSize="xl" color="gray.800" mb={3}>
-              <Link as={RouterLink} to="/s-series" color="blue.600">AI Camera Series</Link>
+              <Link as={NextLink} href="/s-series" color="blue.600">AI Camera Series</Link>
             </Heading>
             <Text color="gray.600" fontSize="sm">
               S-Series premium and Eco-Series value AI cameras with on-device edge AI processing.
@@ -31,7 +32,7 @@ const HomeContent = () => (
           <Box p={6} borderRadius="lg" border="1px solid" borderColor="gray.200" _hover={{ shadow: 'md' }}>
             <Badge colorScheme="purple" mb={3}>Software</Badge>
             <Heading as="h3" fontSize="xl" color="gray.800" mb={3}>
-              <Link as={RouterLink} to="/solution" color="blue.600">VMS & Cloud Dashboard</Link>
+              <Link as={NextLink} href="/solution" color="blue.600">VMS & Cloud Dashboard</Link>
             </Heading>
             <Text color="gray.600" fontSize="sm">
               Cloud-native VMS with centralized dashboard for live monitoring, intelligent playback,
@@ -41,7 +42,7 @@ const HomeContent = () => (
           <Box p={6} borderRadius="lg" border="1px solid" borderColor="gray.200" _hover={{ shadow: 'md' }}>
             <Badge colorScheme="orange" mb={3}>Intelligence</Badge>
             <Heading as="h3" fontSize="xl" color="gray.800" mb={3}>
-              <Link as={RouterLink} to="/solution" color="blue.600">AI-Powered Video Analytics</Link>
+              <Link as={NextLink} href="/solution" color="blue.600">AI-Powered Video Analytics</Link>
             </Heading>
             <Text color="gray.600" fontSize="sm">
               15+ deep-learning AI analytics on edge and cloud — face recognition, ANPR, people counting,
@@ -51,7 +52,7 @@ const HomeContent = () => (
           <Box p={6} borderRadius="lg" border="1px solid" borderColor="gray.200" _hover={{ shadow: 'md' }}>
             <Badge colorScheme="red" mb={3}>Next-Gen</Badge>
             <Heading as="h3" fontSize="xl" color="gray.800" mb={3}>
-              <Link as={RouterLink} to="/solution" color="blue.600">Generative AI & NLP Intelligence</Link>
+              <Link as={NextLink} href="/solution" color="blue.600">Generative AI & NLP Intelligence</Link>
             </Heading>
             <Text color="gray.600" fontSize="sm">
               Next-generation Generative AI — natural language video search, automated incident reports,
@@ -61,7 +62,7 @@ const HomeContent = () => (
           <Box p={6} borderRadius="lg" border="1px solid" borderColor="gray.200" _hover={{ shadow: 'md' }}>
             <Badge colorScheme="teal" mb={3}>Ecosystem</Badge>
             <Heading as="h3" fontSize="xl" color="gray.800" mb={3}>
-              <Link as={RouterLink} to="/solution" color="blue.600">Mobile App, NVRs & Dashcam</Link>
+              <Link as={NextLink} href="/solution" color="blue.600">Mobile App, NVRs & Dashcam</Link>
             </Heading>
             <Text color="gray.600" fontSize="sm">
               ArcisAI mobile app, NVR solutions 4CH to 32CH, and AI dashcam with 4G, GPS, and ADAS.
@@ -123,13 +124,13 @@ const ProductContent = () => (
             <Badge colorScheme="blue" mb={2}>Premium</Badge>
             <Heading as="h3" fontSize="xl" color="gray.800" mb={3}>S-Series — Premium AI Cameras</Heading>
             <Text color="gray.600" fontSize="sm" mb={3}>4K resolution, advanced IR, on-device AI, IP67, STQC certified.</Text>
-            <Link as={RouterLink} to="/s-series" color="blue.500" fontSize="sm" fontWeight="bold">View S-Series</Link>
+            <Link as={NextLink} href="/s-series" color="blue.500" fontSize="sm" fontWeight="bold">View S-Series</Link>
           </Box>
           <Box p={6} bg="green.50" borderRadius="lg">
             <Badge colorScheme="green" mb={2}>Value</Badge>
             <Heading as="h3" fontSize="xl" color="gray.800" mb={3}>Eco-Series — Value AI Cameras</Heading>
             <Text color="gray.600" fontSize="sm" mb={3}>2MP-5MP, IR night vision, cloud connectivity, BIS approved.</Text>
-            <Link as={RouterLink} to="/eco-series" color="blue.500" fontSize="sm" fontWeight="bold">View Eco-Series</Link>
+            <Link as={NextLink} href="/eco-series" color="blue.500" fontSize="sm" fontWeight="bold">View Eco-Series</Link>
           </Box>
         </SimpleGrid>
         <Box p={6} bg="orange.50" borderRadius="lg">
@@ -220,10 +221,10 @@ const AboutContent = () => (
         </SimpleGrid>
         <Box textAlign="center" pt={4}>
           <HStack spacing={4} justify="center" flexWrap="wrap">
-            <Link as={RouterLink} to="/s-series" color="blue.500" fontSize="sm">S-Series</Link>
-            <Link as={RouterLink} to="/eco-series" color="blue.500" fontSize="sm">Eco-Series</Link>
-            <Link as={RouterLink} to="/solution" color="blue.500" fontSize="sm">Solutions</Link>
-            <Link as={RouterLink} to="/why-choose-arcisai" color="blue.500" fontSize="sm">Why ArcisAI</Link>
+            <Link as={NextLink} href="/s-series" color="blue.500" fontSize="sm">S-Series</Link>
+            <Link as={NextLink} href="/eco-series" color="blue.500" fontSize="sm">Eco-Series</Link>
+            <Link as={NextLink} href="/solution" color="blue.500" fontSize="sm">Solutions</Link>
+            <Link as={NextLink} href="/why-choose-arcisai" color="blue.500" fontSize="sm">Why ArcisAI</Link>
           </HStack>
         </Box>
       </VStack>
@@ -232,8 +233,7 @@ const AboutContent = () => (
 );
 
 const SEOContent = () => {
-  const location = useLocation();
-  const path = location.pathname;
+  const path = usePathname() || '/';
   if (path === '/') return <HomeContent />;
   if (path.startsWith('/s-series') || path.startsWith('/eco-series')) return <ProductContent />;
   if (path.startsWith('/solution')) return <SolutionContent />;

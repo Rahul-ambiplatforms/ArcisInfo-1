@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { useLocation } from 'react-router-dom';
+import { usePathname } from 'next/navigation';
 
 /**
  * CanonicalUrl Component for ArcisAI
@@ -14,10 +14,10 @@ import { useLocation } from 'react-router-dom';
 const BASE_URL = 'https://www.arcisai.io';
 
 const CanonicalUrl = ({ path: overridePath, noIndex = false }) => {
-  const location = useLocation();
+  const pathname = usePathname();
 
   // Use override path or current path, strip trailing slash and query params
-  const cleanPath = (overridePath || location.pathname)
+  const cleanPath = (overridePath || pathname)
     .replace(/\/+$/, '') || '/';
 
   const canonicalUrl = BASE_URL + cleanPath;

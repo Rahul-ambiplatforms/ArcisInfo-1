@@ -22,7 +22,7 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams } from "next/navigation";
 import { getBlogs, getBlogById } from "./blog";
 import { Helmet } from "react-helmet-async";
 import ContactUs from "../../../../views/ContactUs/ContactUs";

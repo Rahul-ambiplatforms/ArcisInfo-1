@@ -20,7 +20,7 @@ import {
   MenuButton,
   Icon,
 } from "@chakra-ui/react";
-import { Link as RouterLink } from "react-router-dom";
+import NextLink from "next/link";
 import React from "react";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
 
@@ -40,7 +40,7 @@ function Header() {
     >
       {/* CHILD 1: Logo (Extreme Left) */}
       <Flex alignItems="center">
-        <Link as={RouterLink} to="/">
+        <Link as={NextLink} href="/">
           <Image loading="lazy"
             src="/images/ArcisAi.png"
             alt="Company Logo"
@@ -70,8 +70,8 @@ function Header() {
         {/* <Link href="#">Blogs</Link> */}
         {/* <Link href="#">ContactUs</Link> */}
         <Button
-          as={RouterLink}
-          to="/blog"
+          as={NextLink}
+          href="/blog"
           bg="white"
           size="sm"
           variant={"solid"}
@@ -83,8 +83,8 @@ function Header() {
           Blogs
         </Button>
         <Button
-          as={RouterLink}
-          to="/contact-us"
+          as={NextLink}
+          href="/contact-us"
           bg="white"
           size="sm"
           variant={"solid"}

@@ -26,7 +26,7 @@ import {
   Divider,
 } from "@chakra-ui/react";
 
-import { useNavigate, useLocation } from "react-router-dom";
+import { useRouter, usePathname } from "next/navigation";
 import PageContentWrapper from "./PageContentWrapper";
 import ChangePassword from "../../pages/Dashboard/components/ChangePassword";
 
@@ -55,18 +55,17 @@ const Navbar = ({ adminSection, setAdminSection }) => {
     role: localStorage.getItem("userRole") || "",
     email: localStorage.getItem("userEmail") || "",
   });
-  const location = useLocation();
-  const navigate = useNavigate();
+  const pathname = usePathname();
+  const router = useRouter();
 
   const navigateTo = (path, linkName, sliderId = null) => {
     setActiveLink(linkName);
     const state = sliderId ? { scrollTo: sliderId } : undefined;
 
-    if (location.pathname === path) {
-      // Avoid unnecessary refresh by replacing the state
-      navigate(path, { state, replace: true });
+    if (pathname === path) {
+      router.replace(path);
     } else {
-      navigate(path, { state });
+      router.push(path);
     }
   };
 
@@ -106,7 +105,7 @@ const Navbar = ({ adminSection, setAdminSection }) => {
 
   function isPathActive(path) {
     return (
-      location.pathname === path || location.pathname.startsWith(path + "/")
+      pathname === path || pathname.startsWith(path + "/")
     );
   }
 
@@ -141,7 +140,7 @@ const Navbar = ({ adminSection, setAdminSection }) => {
     localStorage.removeItem("userRole");
     localStorage.removeItem("userEmail");
     setUserInfo({ role: "", email: "" });
-    navigate("/admin", { replace: true });
+    router.replace("/admin");
   };
   // const handleMouseEnter = (menuName) => {
   //     clearTimeout(hoverTimeouts[menuName]);

@@ -10,15 +10,15 @@ import {
   Link,
 } from "@chakra-ui/react";
 import { Helmet } from "react-helmet-async";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import { FaGlobe, FaEnvelope, FaPhone } from "react-icons/fa";
 import CustomButton from "../Components/CustomButton";
 
 const NotFound = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const handleReturn = () => {
-    navigate("/");
+    router.push("/");
   };
 
   return (

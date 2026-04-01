@@ -1,5 +1,5 @@
 import { Button, Flex, Link, Text } from "@chakra-ui/react";
-import { Link as RouterLink } from "react-router-dom";
+import NextLink from "next/link";
 
 const CTA = () => {
   return (
@@ -56,9 +56,8 @@ const CTA = () => {
           </Text>
         </Flex>
         <Link
-          as={RouterLink} // Use React Router's Link for client-side routing
-          to="/contact-us" // The path to your contact page
-          isExternal={false} // Set to false for internal routing
+          as={NextLink}
+          href="/contact-us"
           _hover={{ textDecoration: "none" }} // Prevents the default link underline on hover
           w={{ base: "full", md: "auto" }}
         >
