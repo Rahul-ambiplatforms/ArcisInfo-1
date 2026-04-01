@@ -40,7 +40,7 @@ const ContactSection = () => {
     camerasFor: "",
     message: "",
     customerQuantity: "",
-    leadType: "Arcis Website",
+    leadType: "ArcisAI Website-(Contact)",
     updates: false,
   });
 
@@ -203,7 +203,7 @@ const ContactSection = () => {
           camerasFor: "",
           message: "",
           customerQuantity: "",
-          leadType: "Arcis Website",
+          leadType: "ArcisAI Website-(Contact)",
           updates: false,
         });
       } else {
