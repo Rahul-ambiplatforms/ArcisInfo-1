@@ -17,6 +17,14 @@ const organizationSchema = {
   logo: 'https://www.arcisai.io/assets/logo.webp',
   telephone: '+91-968-777-9999',
   email: 'info@arcisai.io',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+91-968-777-9999',
+    email: 'marketing@arcisai.io',
+    contactType: 'sales',
+    areaServed: 'IN',
+    availableLanguage: ['English', 'Hindi'],
+  },
   address: {
     '@type': 'PostalAddress',
     streetAddress: '811-812, Gala Empire, Drive In Road',
@@ -97,6 +105,11 @@ export default function RootLayout({ children }) {
           as="font"
           type="font/ttf"
           crossOrigin="anonymous"
+        />
+        {/* CSP meta tag — supplements the HTTP header set in next.config.js */}
+        <meta
+          httpEquiv="Content-Security-Policy"
+          content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' data:; frame-src https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.facebook.com https://connect.facebook.net https://www.arcisai.io https://arcisai.io https://vmukti.com; media-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self' https://www.arcisai.io"
         />
         {/* Server-rendered JSON-LD — visible to crawlers before JS executes */}
         <script
