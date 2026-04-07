@@ -261,6 +261,36 @@ const BlogsOverviewDash = ({ urlWords: urlWordsProp }) => {
 
     setIsLoading(true);
 
+    // Send lead to CRM (non-blocking)
+    fetch("https://arcisai-proxy.onrender.com/api/webhook", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "api-key": "default-api-key" },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        source: "Arcis Website-(Blog)",
+        notes: "Message: " + formData.message,
+        metadata: {
+          page_url: currentUrl,
+        },
+      }),
+    }).catch(() => {});
+
+    fetch("https://hook.eu1.make.com/ong8i47uogn9j5vaofu8gzk82mej69d3", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        source: "Arcis Website-(Blog)",
+        message: formData.message,
+        pageUrl: currentUrl,
+        date: new Date().toISOString(),
+      }),
+    }).catch(() => {});
+
     try {
       const response = await fetch(
         // "http://localhost:5000/api/send-email-arcis",
