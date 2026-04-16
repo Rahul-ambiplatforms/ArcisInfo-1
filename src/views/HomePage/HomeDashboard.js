@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet-async";
 import { Box, Heading, Text, Flex, Image } from "@chakra-ui/react";
 import HeroSectionCarousel from "../../Components/HeroSectionCarousel";
 import ProductList from "./Components/ProductList";
+import CustomButton from "../../Components/CustomButton";
 import PageContentWrapper from "../../Components/PageContentWrapper";
 import { homeContent } from "./Data/Content";
 import { homeSEO } from "./Data/SEOContent";
@@ -112,7 +113,7 @@ const HomeDashboard = () => {
           >
             <Box
               bg="rgba(255,255,255,0.2)"
-              borderRadius="16px"
+              // borderRadius="16px"
               p={{ base: "20px", md: "32px" }}
               backdropFilter="blur(6px)"
             >
@@ -182,7 +183,7 @@ const HomeDashboard = () => {
             </Text>
 
             {/* Badge pills */}
-            <Flex wrap="wrap" gap="10px">
+            <Flex wrap="wrap" gap="16px">
               {[
                 "BIS/ER Certified",
                 "STQC Certified VMS & App",
@@ -193,22 +194,25 @@ const HomeDashboard = () => {
                 "Zero Chinese Components",
                 "EU AI Act Compliant",
               ].map((label) => (
-                <Text
+                <CustomButton
                   key={label}
                   as="span"
-                  fontSize={{ base: "11px", md: "12px" }}
+                  width="auto"
+                  height="auto"
+                  bgColor="rgba(255,255,255,0.05)"
+                  hoverBgColor="rgba(164,255,121,0.08)"
+                  borderColor="rgba(164,255,121,0.35)"
+                  hoverBorderColor="#A4FF79"
+                  textColor="rgba(255,255,255,0.75)"
+                  hoverTextColor="#A4FF79"
+                  fontSize="12px"
                   fontWeight="500"
-                  color="rgba(255,255,255,0.7)"
-                  border="1px solid rgba(164, 255, 121, 0.25)"
-                  borderRadius="full"
-                  px="14px"
-                  py="5px"
-                  letterSpacing="0.02em"
-                  _hover={{ borderColor: "purple", color: "purple" }}
-                  transition="all 0.2s"
+                  showTicks={false}
+                  showGlow={true}
+                  sx={{ px: "14px", py: "6px", letterSpacing: "0.02em" }}
                 >
                   {label}
-                </Text>
+                </CustomButton>
               ))}
             </Flex>
             </Box>
