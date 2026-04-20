@@ -52,7 +52,7 @@ const HeroSectionCarousel = ({ data }) => {
 
   const variants = {
     enter: (direction) => ({
-      x: direction > 0 ? 1000 : -1000,
+      x: direction > 0 ? 300 : -300,
       opacity: 0,
     }),
     center: {
@@ -62,7 +62,7 @@ const HeroSectionCarousel = ({ data }) => {
     },
     exit: (direction) => ({
       zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
+      x: direction < 0 ? 300 : -300,
       opacity: 0,
     }),
   };
@@ -75,12 +75,14 @@ const HeroSectionCarousel = ({ data }) => {
       overflow="hidden"
       bgImage={{ base: `url(${bgImageMobile})`, md: `url(${bgImageDesktop})` }}
       bgSize="cover"
-      bgPosition="center"
+      bgPosition={activeSlide?.bgPosition || "center"}
       bgRepeat="no-repeat"
       mt={{
         base: activeSlide?.sectionProps?.mobile?.marginTop || "-35%",
         md: activeSlide?.sectionProps?.desktop?.marginTop || "-11%",
       }}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
     >
       <AnimatePresence initial={false} custom={direction} mode="popLayout">
         <motion.div
@@ -91,8 +93,8 @@ const HeroSectionCarousel = ({ data }) => {
           animate="center"
           exit="exit"
           transition={{
-            x: { type: "spring", stiffness: 300, damping: 30 },
-            opacity: { duration: 0.2 },
+            x: { type: "tween", ease: "easeInOut", duration: 0.6 },
+            opacity: { duration: 0.4 },
           }}
           style={{
             width: "100%",
@@ -102,7 +104,11 @@ const HeroSectionCarousel = ({ data }) => {
             left: 0,
           }}
         >
-          {title ? (
+          {activeSlide.customComponent ? (
+            <Box w="100%" h="100%" position="relative" zIndex={1}>
+              {activeSlide.customComponent}
+            </Box>
+          ) : title ? (
             <>
               <Box
                 position="absolute"
@@ -292,7 +298,7 @@ const HeroSectionCarousel = ({ data }) => {
           bottom={{ base: 4, md: 8 }}
           px={{ base: 4, md: 8 }}
           spacing={4}
-          zIndex={2}
+          zIndex={10}
           justify={{ base: "space-between", md: "flex-end" }}
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}

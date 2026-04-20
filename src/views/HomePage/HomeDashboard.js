@@ -9,6 +9,21 @@ import CustomButton from "../../Components/CustomButton";
 import PageContentWrapper from "../../Components/PageContentWrapper";
 import { homeContent } from "./Data/Content";
 import { homeSEO } from "./Data/SEOContent";
+import BISHeroSlide from "./Components/BISHeroSlide";
+
+const bisSlide = {
+  id: "bis",
+  d_image: "/images/BIS_bg.png",
+  m_image: "/images/BIS_bg.png",
+  customComponent: <BISHeroSlide />,
+  bgPosition: "center bottom",
+  sectionProps: {
+    desktop: { marginTop: "-7%" },
+    mobile: { marginTop: "" },
+  },
+};
+
+const heroSlides = [...homeContent.hero, bisSlide];
 
 // Below-fold: split into separate JS chunks, load only when needed
 const Certifications    = dynamic(() => import("./Components/Certifications"));
@@ -57,7 +72,7 @@ const HomeDashboard = () => {
       ))}
       <PageContentWrapper noPadding>
         {/* <Event /> */}
-        <HeroSectionCarousel data={homeContent.hero} />
+        <HeroSectionCarousel data={heroSlides} />
         <ProductList />
         <Certifications />
         <SurveillanceStack data={homeContent.SurveillanceStack} />
