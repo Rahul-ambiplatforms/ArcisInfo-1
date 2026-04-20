@@ -14,9 +14,9 @@ const BISHeroSlide = ({ showExploreButton = true }) => {
     <Flex
       h="100%"
       w="100%"
-      px={{ base: 5, md: 8 }}
+      px={{ base: 0, md: 8 }}
       align={{ base: "flex-start", md: "center" }}
-      pt={{ base: "50px", md: "140px" }}
+      pt={{ base: "18vh", sm: "16vh", md: "140px" }}
       pb={{ base: 0, md: 0 }}
       direction={{ base: "column", md: "row" }}
     >
@@ -29,13 +29,13 @@ const BISHeroSlide = ({ showExploreButton = true }) => {
       >
         <Heading
           as="h2"
-          fontSize={{ base: "32px", md: "48px", lg: "60px" }}
+          fontSize={{ base: "6.5vw", sm: "28px", md: "48px", lg: "60px" }}
           fontWeight="400"
-          lineHeight={{ base: "40px", md: "60px", lg: "76px" }}
+          lineHeight={{ base: "8vw", sm: "36px", md: "60px", lg: "76px" }}
           bgGradient="linear(90.64deg, #171717 19.68%, #7F56D9 78.79%)"
           bgClip="text"
           mb={{ base: 2, md: 4 }}
-          mt={{base:10,md:4}}
+          mt={{ base: 2, md: 4 }}
         >
           ArcisAI Cameras Are{" "}
           <br />
@@ -46,12 +46,12 @@ const BISHeroSlide = ({ showExploreButton = true }) => {
         </Heading>
 
         <Text
-          fontSize={{ base: "13px", md: "16px", lg: "18px" }}
+          fontSize={{ base: "3vw", sm: "13px", md: "16px", lg: "18px" }}
           fontWeight="400"
-          lineHeight={{ base: "20px", md: "28px" }}
+          lineHeight={{ base: "4.5vw", sm: "20px", md: "28px" }}
           color="#333"
-          mb={{ base: 3, md: 6 }}
-          maxW={{ base: "100%", md: "500px" }}
+          mb={{ base: 2, md: 6 }}
+          maxW={{ base: "90%", md: "500px" }}
           mx={{ base: "auto", md: 0 }}
         >
           A major step forward in building{" "}
@@ -71,7 +71,8 @@ const BISHeroSlide = ({ showExploreButton = true }) => {
           <Image
             src="/images/bis_icon_mobile.svg"
             alt="BIS Certification - R-72003735 ER01:2024"
-            w="203px"
+            w={{ base: "40vw", sm: "180px" }}
+            maxW="203px"
             h="auto"
             objectFit="contain"
             display={{ base: "block", md: "none" }}
@@ -114,7 +115,7 @@ const BISHeroSlide = ({ showExploreButton = true }) => {
         <Box
           display={{ base: "flex", md: "none" }}
           position="absolute"
-          bottom="120px"
+          bottom={{ base: "15vh", sm: "120px" }}
           right="24px"
           zIndex={2}
         >
