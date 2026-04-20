@@ -270,8 +270,7 @@ const Navbar = () => {
       as="nav"
       w="100%"
       h="96px"
-      bg="black"
-      opacity="0.95"
+      bg="rgba(0, 0, 0, 0.95)"
       flexShrink={0}
       position="fixed"
       top={0}
