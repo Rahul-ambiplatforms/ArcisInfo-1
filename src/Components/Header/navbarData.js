@@ -89,6 +89,10 @@ export const dropdownData = {
         link: "/why-choose-arcisai",
       },
       {
+        label: "BIS-ER Certification",
+        link: "/BIS-ER-certification",
+      },
+      {
         label: "Event",
         link: "/event",
       },

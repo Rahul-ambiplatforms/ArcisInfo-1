@@ -74,9 +74,10 @@ const HeroSectionCarousel = ({ data }) => {
       position="relative"
       overflow="hidden"
       bgImage={{ base: `url(${bgImageMobile})`, md: `url(${bgImageDesktop})` }}
-      bgSize="cover"
+      bgSize={activeSlide?.bgSize || "cover"}
       bgPosition={activeSlide?.bgPosition || "center"}
       bgRepeat="no-repeat"
+      bgColor={activeSlide?.bgColor || "transparent"}
       mt={{
         base: activeSlide?.sectionProps?.mobile?.marginTop || "-35%",
         md: activeSlide?.sectionProps?.desktop?.marginTop || "-11%",
@@ -308,61 +309,43 @@ const HeroSectionCarousel = ({ data }) => {
             {slides.map((_, i) => (
               <Box
                 key={i}
-                w="12px"
-                h="12px"
-                bg={i === currentSlide ? "white" : "transparent"}
-                border="1px solid white"
+                w="16px"
+                h="16px"
+                bg={i === currentSlide ? "#171717" : "transparent"}
+                border="1px solid #171717"
                 cursor="pointer"
                 onClick={() => setSlide(i)}
                 transition="all 0.3s"
-                _hover={{ bg: "whiteAlpha.500" }}
+                _hover={{ bg: "rgba(23, 23, 23, 0.5)" }}
               />
             ))}
           </HStack>
 
-          <Flex direction="row" gap={4}>
-            <CustomButton
+          <Flex direction="row" gap={2}>
+            <Box
+              as="button"
               onClick={prevSlide}
-              width={{ base: "40px", md: "50px" }}
-              height={{ base: "40px", md: "50px" }}
-              showGlow={false}
-              showTicks={false}
-              sx={{
-                padding: 0,
-                "& svg": { transition: "filter 0.2s" },
-                _hover: {
-                  "& svg": {
-                    filter:
-                      "brightness(0) saturate(100%) invert(86%) sepia(23%) saturate(995%) hue-rotate(68deg) brightness(103%) contrast(103%)",
-                  },
-                },
-              }}
+              w={{ base: "40px", md: "44px" }}
+              h={{ base: "43px", md: "47px" }}
+              cursor="pointer"
+              color="white"
+              transition="opacity 0.2s"
+              _hover={{ opacity: 0.7 }}
             >
-              <Box w={{ base: "16px", md: "20px" }} h={{ base: "16px", md: "20px" }} pointerEvents="none">
-                <LeftButtonIcon width="100%" height="100%" />
-              </Box>
-            </CustomButton>
-            <CustomButton
+              <LeftButtonIcon width="100%" height="100%" />
+            </Box>
+            <Box
+              as="button"
               onClick={nextSlide}
-              width={{ base: "40px", md: "50px" }}
-              height={{ base: "40px", md: "50px" }}
-              showGlow={false}
-              showTicks={false}
-              sx={{
-                padding: 0,
-                "& svg": { transition: "filter 0.2s" },
-                _hover: {
-                  "& svg": {
-                    filter:
-                      "brightness(0) saturate(100%) invert(86%) sepia(23%) saturate(995%) hue-rotate(68deg) brightness(103%) contrast(103%)",
-                  },
-                },
-              }}
+              w={{ base: "40px", md: "44px" }}
+              h={{ base: "43px", md: "47px" }}
+              cursor="pointer"
+              color="white"
+              transition="opacity 0.2s"
+              _hover={{ opacity: 0.7 }}
             >
-              <Box w={{ base: "16px", md: "20px" }} h={{ base: "16px", md: "20px" }} pointerEvents="none">
-                <RightButtonIcon width="100%" height="100%" />
-              </Box>
-            </CustomButton>
+              <RightButtonIcon width="100%" height="100%" />
+            </Box>
           </Flex>
         </HStack>
       )}

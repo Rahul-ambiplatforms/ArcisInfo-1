@@ -7,20 +7,21 @@ const BISHeroSection = () => {
   return (
     <Box
       w="full"
-      h="919px"
+      h={{ base: "100vh", md: "919px" }}
       position="relative"
       overflow="hidden"
-      bgImage="url(/images/BIS_bg.png)"
-      bgSize="cover"
-      bgPosition={{ base: "center 20%", md: "center bottom" }}
+      bgImage={{ base: "url(/images/bis-mobile-bg.png)", md: "url(/images/BIS_bg.png)" }}
+      bgSize={{ base: "100% auto", md: "cover" }}
+      bgPosition="center bottom"
       bgRepeat="no-repeat"
+      bgColor="#F9F9F9"
       mt={{
-        base: "-35%",
+        base: "-18%",
         md: "-11%",
       }}
     >
       <Box w="100%" h="100%" position="relative" zIndex={1}>
-        <BISHeroSlide />
+        <BISHeroSlide showExploreButton={false} />
       </Box>
     </Box>
   );

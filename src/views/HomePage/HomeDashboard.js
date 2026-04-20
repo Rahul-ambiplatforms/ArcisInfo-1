@@ -14,16 +14,18 @@ import BISHeroSlide from "./Components/BISHeroSlide";
 const bisSlide = {
   id: "bis",
   d_image: "/images/BIS_bg.png",
-  m_image: "/images/BIS_bg.png",
+  m_image: "/images/bis-mobile-bg.png",
   customComponent: <BISHeroSlide />,
-  bgPosition: "center bottom",
+  bgPosition: { base: "center bottom", md: "center bottom" },
+  bgSize: { base: "contain", md: "cover" },
+  bgColor: "#F9F9F9",
   sectionProps: {
     desktop: { marginTop: "-7%" },
     mobile: { marginTop: "" },
   },
 };
 
-const heroSlides = [...homeContent.hero, bisSlide];
+const heroSlides = [bisSlide, ...homeContent.hero];
 
 // Below-fold: split into separate JS chunks, load only when needed
 const Certifications    = dynamic(() => import("./Components/Certifications"));
