@@ -7,7 +7,7 @@ const BISHeroSection = () => {
   return (
     <Box
       w="full"
-      h="100vh"
+      h={{ base: "100vh", md: "919px" }}
       position="relative"
       overflow="hidden"
       bgImage={{ base: "url(/images/bis-mobile-bg.png)", md: "url(/images/BIS_bg.png)" }}
