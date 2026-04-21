@@ -18,7 +18,7 @@ const benefits = [
 ];
 
 const ecosystem = [
-  "BIS-ER Certified Camera Hardware",
+  "BIS-ER Certified Camera Hardware (STQC Certified)",
   "STQC Certified Video Management Software (VMS)",
   "Built for Government & Enterprise Deployments",
   "Designed for Compliance, Security & Scale",

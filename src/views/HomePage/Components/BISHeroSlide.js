@@ -37,11 +37,11 @@ const BISHeroSlide = ({ showExploreButton = true }) => {
           mb={{ base: 2, md: 4 }}
           mt={{ base: 2, md: 4 }}
         >
-          ArcisAI Cameras Are{" "}
+          ArcisAI Cameras: {" "}
           <br />
-          Now{" "}
+          {/* Now{" "} */}
           <Text as="span" fontWeight="700">
-            BIS-ER Certified
+          BIS-ER Certified by STQC Certification
           </Text>
         </Heading>
 
@@ -61,11 +61,13 @@ const BISHeroSlide = ({ showExploreButton = true }) => {
         </Text>
 
         <Flex
+          w="100%"
           justify={{ base: "center", md: "flex-start" }}
           direction="column"
           align={{ base: "center", md: "flex-start" }}
           gap={1}
           mb={{ base: 0, md: 6 }}
+          px={{ base: 4, md: 0 }}
         >
           {/* Mobile: logo with certificate number built in */}
           <Image

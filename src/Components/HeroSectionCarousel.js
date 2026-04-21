@@ -300,7 +300,7 @@ const HeroSectionCarousel = ({ data }) => {
           px={{ base: 4, md: 8 }}
           spacing={4}
           zIndex={10}
-          justify={{ base: "space-between", md: "flex-end" }}
+          justify="flex-end"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
           w="full"
