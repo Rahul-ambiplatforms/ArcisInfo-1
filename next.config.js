@@ -25,12 +25,12 @@ const nextConfig = {
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob: https:",
       "font-src 'self' data:",
-      "frame-src https://www.googletagmanager.com",
-      "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.facebook.com https://connect.facebook.net https://www.arcisai.io https://arcisai.io https://vmukti.com",
+      "frame-src https://www.googletagmanager.com https://www.facebook.com",
+      "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.facebook.com https://connect.facebook.net https://www.arcisai.io https://arcisai.io https://vmukti.com https://hook.eu1.make.com",
       "media-src 'self' https:",
       "object-src 'none'",
       "base-uri 'self'",
-      "form-action 'self' https://www.arcisai.io",
+      "form-action 'self' https://www.arcisai.io https://www.facebook.com",
     ].join('; ');
 
     return [
