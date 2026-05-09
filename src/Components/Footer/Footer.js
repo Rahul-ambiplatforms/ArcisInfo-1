@@ -207,6 +207,7 @@ const Footer = () => {
             <Stack align={"flex-start"} spacing={2}>
               <ListHeader>RESOURCES</ListHeader>
               <FooterLink href={"/blog"}>Blogs</FooterLink>
+              <FooterLink href={"/documents"}>Documents</FooterLink>
             </Stack>
           </SimpleGrid>
 

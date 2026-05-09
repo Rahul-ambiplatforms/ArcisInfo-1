@@ -117,22 +117,14 @@ export const dropdownData = {
   resources: {
     title: "RESOURCES",
     items: [
-      // {
-      //   label: "Documentation",
-      //   link: "/documentation",
-      // },
-      // {
-      //   label: "Support",
-      //   link: "/support",
-      // },
       {
         label: "Blog",
         link: "/blog",
       },
-      // {
-      //   label: "Downloads",
-      //   link: "/downloads",
-      // },
+      {
+        label: "Documents",
+        link: "/documents",
+      },
     ],
   },
 };

@@ -53,6 +53,17 @@ const nextConfig = {
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), payment=()' },
         ],
       },
+      // Force every PDF under /pdfs/ to be downloaded as a file rather than
+      // rendered inline by the browser's PDF viewer. This guarantees the
+      // Download button on /documents always saves the file.
+      {
+        source: '/pdfs/:path*',
+        headers: [
+          { key: 'Content-Disposition', value: 'attachment' },
+          { key: 'Content-Type', value: 'application/pdf' },
+          { key: 'Cache-Control', value: 'public, max-age=86400' },
+        ],
+      },
     ];
   },
 
