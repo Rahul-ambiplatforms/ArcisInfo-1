@@ -35,12 +35,24 @@ const HeroSectionCarousel = ({ data }) => {
 
   useEffect(() => {
     if (slidesCount <= 1 || isPaused) return;
+    // Skip the timer entirely when the tab is hidden so we don't burn CPU
+    // (and queue React updates) for an offscreen carousel — that work would
+    // otherwise pile up and inflate input delay the moment the user returns.
+    if (typeof document !== "undefined" && document.hidden) return;
     const timer = setInterval(() => {
       setDirection(1);
       setCurrentSlide((s) => (s === slidesCount - 1 ? 0 : s + 1));
     }, 5000);
     return () => clearInterval(timer);
   }, [slidesCount, isPaused]);
+
+  useEffect(() => {
+    if (slidesCount <= 1) return;
+    const handleVisibility = () => setIsPaused(document.hidden);
+    document.addEventListener("visibilitychange", handleVisibility);
+    return () =>
+      document.removeEventListener("visibilitychange", handleVisibility);
+  }, [slidesCount]);
 
   if (!slides || slides.length === 0) {
     return null;
@@ -68,6 +80,201 @@ const HeroSectionCarousel = ({ data }) => {
     }),
   };
 
+  // Single-slide pages (e.g. /solution/edge-ai) get a static render: no
+  // AnimatePresence/motion.div mount cost, no enter/exit animation work
+  // competing with hydration for the main thread.
+  const isStaticSlide = slidesCount <= 1;
+
+  const slideInner = (
+    <>
+      {activeSlide.customComponent ? (
+        <Box w="100%" h="100%" position="relative" zIndex={1}>
+          {activeSlide.customComponent}
+        </Box>
+      ) : title ? (
+        <>
+          <Box
+            position="absolute"
+            bottom={{ base: "88px", md: "50px" }}
+            left="50%"
+            transform="translateX(-50%)"
+            zIndex={2}
+            textAlign="center"
+            w="full"
+          >
+            <Text
+              as="h1"
+              color="#fff"
+              fontSize={{ base: "24px", md: "36px" }}
+              fontWeight="400"
+            >
+              {title}
+            </Text>
+          </Box>
+
+          <Box
+            position="absolute"
+            bottom={{ base: "30px", md: "50px" }}
+            left={{ base: "50%", md: "50px" }}
+            transform={{ base: "translateX(-50%)", md: "none" }}
+            zIndex={2}
+          >
+            <CustomButton
+              onClick={() =>
+                window.open(activeSlide.buttonLink || "#", "_self")
+              }
+              width="180px"
+              height="50px"
+            >
+              {activeSlide.buttonText}
+            </CustomButton>
+          </Box>
+        </>
+      ) : (
+        <Flex
+          h="100%"
+          w="100%"
+          mx="auto"
+          px={{ base: 4, lg: 8 }}
+          align={{
+            base: activeSlide?.textProps?.mobile?.alignItems || "flex-end",
+            md: activeSlide?.textProps?.desktop?.alignItems || "flex-start",
+          }}
+          justify={{
+            base:
+              activeSlide?.textProps?.mobile?.textAlign === "center"
+                ? "center"
+                : "flex-end",
+            md:
+              activeSlide?.textProps?.desktop?.textAlign === "center"
+                ? "center"
+                : "flex-start",
+          }}
+          pb={{ base: 16, md: 0 }}
+          position="relative"
+          zIndex={1}
+        >
+          <Box
+            mt={{
+              base: activeSlide?.textProps?.mobile?.top || "25%",
+              md: activeSlide?.textProps?.desktop?.top || "5%",
+            }}
+            ml={{
+              base:
+                activeSlide?.textProps?.mobile?.textAlign === "center"
+                  ? "0"
+                  : activeSlide?.textProps?.mobile?.left || "0",
+              md:
+                activeSlide?.textProps?.desktop?.textAlign === "center"
+                  ? "0"
+                  : activeSlide?.textProps?.desktop?.left || "0",
+            }}
+            w={{
+              base: activeSlide?.textProps?.mobile?.width || "100%",
+              md: activeSlide?.textProps?.desktop?.width || "65%",
+            }}
+            color={{
+              base: activeSlide?.textProps?.mobile?.textColor || "white",
+              md: activeSlide?.textProps?.desktop?.textColor || "white",
+            }}
+            textAlign={{
+              base: activeSlide?.textProps?.mobile?.textAlign || "left",
+              md: activeSlide?.textProps?.desktop?.textAlign || "left",
+            }}
+          >
+            <Heading
+              as="h1"
+              fontSize={["30px", "48px", "48px", "60px"]}
+              fontWeight="400"
+              lineHeight={["38px", "60px", "60px", "76px"]}
+              mb={2}
+              w="100%"
+            >
+              {activeSlide.heading}
+            </Heading>
+            {activeSlide.description && (
+              <Text
+                as="p"
+                fontSize={["14px", "18px", "18px", "18px"]}
+                fontWeight="400"
+                lineHeight={["18px", "20px", "20px", "25px"]}
+                mb={6}
+                maxW="600px"
+                mx={{
+                  base:
+                    activeSlide?.textProps?.mobile?.textAlign === "center"
+                      ? "auto"
+                      : "0",
+                  md:
+                    activeSlide?.textProps?.desktop?.textAlign === "center"
+                      ? "auto"
+                      : "0",
+                }}
+              >
+                {activeSlide.description}
+              </Text>
+            )}
+            <Box
+              display="inline-block"
+              mx={{
+                base:
+                  activeSlide?.textProps?.mobile?.textAlign === "center"
+                    ? "auto"
+                    : "0",
+                md:
+                  activeSlide?.textProps?.desktop?.textAlign === "center"
+                    ? "auto"
+                    : "0",
+              }}
+            >
+              <CustomButton
+                onClick={() =>
+                  window.open(activeSlide.buttonLink || "#", "_self")
+                }
+                width={{
+                  base: activeSlide?.buttonProps?.mobile?.width || "146px",
+                  md: activeSlide?.buttonProps?.desktop?.width || "171px",
+                }}
+                height={{
+                  base: activeSlide?.buttonProps?.mobile?.height || "36px",
+                  md: activeSlide?.buttonProps?.desktop?.height || "40px",
+                }}
+                bgColor={
+                  activeSlide?.buttonProps?.desktop?.bgColor ||
+                  "rgba(255,255,255,0.2)"
+                }
+                borderColor={{
+                  base:
+                    activeSlide?.buttonProps?.mobile?.borderColor ||
+                    "white",
+                  md:
+                    activeSlide?.buttonProps?.desktop?.borderColor ||
+                    "white",
+                }}
+                textColor={{
+                  base:
+                    activeSlide?.buttonProps?.mobile?.textColor || "white",
+                  md:
+                    activeSlide?.buttonProps?.desktop?.textColor || "white",
+                }}
+                hoverBorderColor={
+                  activeSlide?.buttonProps?.desktop?.borderHover ||
+                  activeSlide?.buttonProps?.desktop?.borderColor ||
+                  "#A4FF79"
+                }
+                hoverTextColor={
+                  activeSlide?.buttonProps?.desktop?.textHover || "#A4FF79"
+                }
+              >
+                {activeSlide.buttonText}
+              </CustomButton>
+            </Box>
+          </Box>
+        </Flex>
+      )}
+    </>
+  );
+
   return (
     <Box
       w="full"
@@ -86,6 +293,17 @@ const HeroSectionCarousel = ({ data }) => {
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
+      {isStaticSlide ? (
+        <Box
+          position="absolute"
+          top={0}
+          left={0}
+          w="100%"
+          h="100%"
+        >
+          {slideInner}
+        </Box>
+      ) : (
       <AnimatePresence initial={false} custom={direction} mode="popLayout">
         <motion.div
           key={currentSlide}
@@ -293,6 +511,7 @@ const HeroSectionCarousel = ({ data }) => {
           )}
         </motion.div>
       </AnimatePresence>
+      )}
 
       {slidesCount > 1 && (
         <HStack

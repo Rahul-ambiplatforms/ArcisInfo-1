@@ -1,7 +1,6 @@
 'use client';
 import React from "react";
 import dynamic from "next/dynamic";
-import { Helmet } from "react-helmet-async";
 import { Box, Heading, Text, Flex, Image } from "@chakra-ui/react";
 import HeroSectionCarousel from "../../Components/HeroSectionCarousel";
 import ProductList from "./Components/ProductList";
@@ -39,29 +38,6 @@ const FAQSection        = dynamic(() => import("../../Components/FAQSection"));
 const HomeDashboard = () => {
   return (
     <>
-      <Helmet>
-        {/* Primary Meta Tags */}
-        <title>{homeSEO.metatitle}</title>
-        <meta name="description" content={homeSEO.metadescription} />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={homeSEO.canonical} />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:title" content={homeSEO.metatitle} />
-        <meta property="og:description" content={homeSEO.metadescription} />
-        <meta property="og:image" content={homeSEO.ogimage} />
-        <meta property="og:type" content="ArcisAI" />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:url" content={homeSEO.canonical} />
-        <meta property="og:site_name" content="ArcisAI" />
-
-        {/* Twitter Card Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@arcisai" />
-        <meta name="twitter:title" content={homeSEO.metatitle} />
-        <meta name="twitter:description" content={homeSEO.metadescription} />
-        <meta name="twitter:image" content={homeSEO.ogimage} />
-      </Helmet>
       {/* Schema Markup */}
       {homeSEO.schema.map((schema, index) => (
         <script

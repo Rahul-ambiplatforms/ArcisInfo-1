@@ -1,4 +1,5 @@
 import Solutions from '@/src/views/Solution/Solutions';
+import { getSolutionSEO } from '@/src/views/Solution/Data/SEOContent';
 
 const SOLUTION_META = {
   'edge-ai': {
@@ -37,20 +38,39 @@ const SOLUTION_META = {
 
 export async function generateMetadata({ params }) {
   const { solutionId } = params;
-  const meta = SOLUTION_META[solutionId] || {
+
+  // Prefer the keyword-optimized copy from SEOContent.js (this is what
+  // react-helmet-async used to inject client-side). Fall back to the inline
+  // SOLUTION_META map for solutions that don't have a SEOContent entry yet,
+  // and finally to a generic computed title.
+  const solutionSEO = getSolutionSEO(solutionId);
+  const fallback = SOLUTION_META[solutionId] || {
     title: `${solutionId.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())} Surveillance Solutions | ArcisAI`,
     description: `AI surveillance solutions for ${solutionId.replace(/-/g, ' ')} — edge AI cameras, cloud VMS, and smart analytics from ArcisAI.`,
   };
 
+  const title = solutionSEO?.metatitle ?? fallback.title;
+  const description = solutionSEO?.metadescription ?? fallback.description;
+  const canonical =
+    solutionSEO?.canonical ?? `https://arcisai.io/solution/${solutionId}`;
+  const ogImage = solutionSEO?.ogimage ?? '/og/solutions.jpg';
+
   return {
-    title: meta.title,
-    description: meta.description,
-    alternates: { canonical: `https://arcisai.io/solution/${solutionId}` },
+    title,
+    description,
+    alternates: { canonical },
     openGraph: {
-      title: meta.title,
-      description: meta.description,
-      url: `https://arcisai.io/solution/${solutionId}`,
-      images: [{ url: '/og/solutions.jpg', width: 1200, height: 630 }],
+      title,
+      description,
+      url: canonical,
+      images: [{ url: ogImage }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: '@arcisai',
+      title,
+      description,
+      images: [ogImage],
     },
   };
 }
