@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Flex,
@@ -264,6 +264,16 @@ const NavDropdown = ({ title, data }) => {
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  // Heavy drawer body (4 Accordions + nav links) mounts one frame AFTER the
+  // first open, so the burger-tap input → next-paint isn't blocked by mounting
+  // the menu tree. Once mounted, we keep it for subsequent opens.
+  const [drawerBodyReady, setDrawerBodyReady] = useState(false);
+
+  useEffect(() => {
+    if (!isOpen || drawerBodyReady) return;
+    const id = requestAnimationFrame(() => setDrawerBodyReady(true));
+    return () => cancelAnimationFrame(id);
+  }, [isOpen, drawerBodyReady]);
 
   return (
     <Box
@@ -393,6 +403,7 @@ const Navbar = () => {
             </NextLink>
           </DrawerHeader>
           <DrawerBody px={0}>
+            {drawerBodyReady && (
             <Stack
               spacing={0}
               divider={<Box borderColor="gray.900" borderBottomWidth="1px" />}
@@ -539,6 +550,7 @@ const Navbar = () => {
                 </CustomButton>
               </Box>
             </Stack>
+            )}
           </DrawerBody>
         </DrawerContent>
       </Drawer>

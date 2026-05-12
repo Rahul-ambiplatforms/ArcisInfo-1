@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useTransition } from "react";
 import {
   Box,
   Container,
@@ -25,15 +25,16 @@ const UpIcon = (props) => (
 
 const FAQSection = ({ data }) => {
   const [activeIndex, setActiveIndex] = useState(0); // First question open by default
+  // The toggle re-renders every FAQ row (CustomButton border/glow/icon) plus
+  // mounts/unmounts a Collapse — heavy enough to push INP past 200ms on
+  // mid-range Android. Marking the state update as a transition lets the tap
+  // paint first; the expansion follows in a non-blocking render.
+  const [, startTransition] = useTransition();
 
   const handleToggle = (index) => {
-    // If clicking the currently open item, close it
-    // Otherwise, open the clicked item
-    if (activeIndex === index) {
-      setActiveIndex(null);
-    } else {
-      setActiveIndex(index);
-    }
+    startTransition(() => {
+      setActiveIndex((prev) => (prev === index ? null : index));
+    });
   };
 
   if (!data) return null;

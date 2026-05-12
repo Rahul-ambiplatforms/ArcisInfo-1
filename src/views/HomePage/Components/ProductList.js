@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useDeferredValue, useState } from "react";
 import {
   Box,
   Heading,
@@ -38,6 +38,10 @@ const ProductList = ({ data }) => {
   const [activeTab, setActiveTab] = useState(
     validProducts.length > 0 ? validProducts[0]?.product_type || "" : ""
   );
+  // Deferred copy: the tab button reflects activeTab immediately (instant tap
+  // feedback), while the heavier product grid recompute uses the deferred
+  // value so React can yield between paints and keep INP low on mobile.
+  const deferredActiveTab = useDeferredValue(activeTab);
   const router = useRouter();
 
   // Return null if no data or no products
@@ -54,9 +58,9 @@ const ProductList = ({ data }) => {
   // 2. If activeTab is empty or no match, use products without product_type
   // 3. Fallback to first valid product or first product without type
   let activeProducts;
-  if (activeTab) {
+  if (deferredActiveTab) {
     activeProducts = productList.products.find(
-      (p) => p.product_type === activeTab
+      (p) => p.product_type === deferredActiveTab
     )?.productarray;
   }
 

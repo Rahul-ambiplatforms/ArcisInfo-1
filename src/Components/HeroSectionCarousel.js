@@ -36,10 +36,11 @@ const HeroSectionCarousel = ({ data }) => {
   useEffect(() => {
     if (slidesCount <= 1 || isPaused) return;
     const timer = setInterval(() => {
-      nextSlide();
+      setDirection(1);
+      setCurrentSlide((s) => (s === slidesCount - 1 ? 0 : s + 1));
     }, 5000);
     return () => clearInterval(timer);
-  }, [currentSlide, slidesCount, isPaused]);
+  }, [slidesCount, isPaused]);
 
   if (!slides || slides.length === 0) {
     return null;
