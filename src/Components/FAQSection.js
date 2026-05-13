@@ -1,4 +1,4 @@
-import React, { useState, useTransition } from "react";
+import React, { useCallback, useState, useTransition } from "react";
 import {
   Box,
   Container,
@@ -31,11 +31,11 @@ const FAQSection = ({ data }) => {
   // paint first; the expansion follows in a non-blocking render.
   const [, startTransition] = useTransition();
 
-  const handleToggle = (index) => {
+  const handleToggle = useCallback((index) => {
     startTransition(() => {
       setActiveIndex((prev) => (prev === index ? null : index));
     });
-  };
+  }, [startTransition]);
 
   if (!data) return null;
 

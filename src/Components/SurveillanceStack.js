@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState, useTransition } from "react";
 import {
   Box,
   Flex,
@@ -14,6 +14,15 @@ import CustomButton from "./CustomButton";
 
 const SurveillanceStack = ({ data }) => {
   const [activeIndex, setActiveIndex] = useState(0);
+  // Tab click swaps the hero image, restyles every CustomButton (tick glow +
+  // corner color) and mounts/unmounts a Collapse for each row. That work
+  // dominates input → next-paint on mobile. Mark the update as a transition
+  // so the tap commits first and the re-style follows non-blocking.
+  const [, startTransition] = useTransition();
+
+  const handleSelect = useCallback((index) => {
+    startTransition(() => setActiveIndex(index));
+  }, []);
 
   if (!data) return null;
 
@@ -145,7 +154,7 @@ const SurveillanceStack = ({ data }) => {
               >
                 <CustomButton
                   as="h3"
-                  onClick={() => setActiveIndex(index)}
+                  onClick={() => handleSelect(index)}
                   width={{ base: "200px", md: "200px" }} // Fixed width for uniformity
                   height="50px"
                   // Active state styling to match hover effect

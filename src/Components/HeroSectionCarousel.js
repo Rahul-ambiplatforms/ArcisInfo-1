@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useCallback, useEffect, useState, useTransition } from "react";
 import {
   Box,
   Flex,
@@ -17,20 +17,31 @@ const HeroSectionCarousel = ({ data }) => {
   const [direction, setDirection] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const slidesCount = slides.length;
+  // AnimatePresence remount + motion.div enter/exit on slide change is the
+  // expensive part. Mark the slide-change as a transition so the dot/arrow
+  // tap paints immediately (e.g. arrow opacity hover) and the heavy animation
+  // happens off the input → next-paint critical path.
+  const [, startSlideTransition] = useTransition();
 
-  const prevSlide = () => {
-    setDirection(-1);
-    setCurrentSlide((s) => (s === 0 ? slidesCount - 1 : s - 1));
-  };
+  const prevSlide = useCallback(() => {
+    startSlideTransition(() => {
+      setDirection(-1);
+      setCurrentSlide((s) => (s === 0 ? slidesCount - 1 : s - 1));
+    });
+  }, [slidesCount]);
 
-  const nextSlide = () => {
-    setDirection(1);
-    setCurrentSlide((s) => (s === slidesCount - 1 ? 0 : s + 1));
-  };
+  const nextSlide = useCallback(() => {
+    startSlideTransition(() => {
+      setDirection(1);
+      setCurrentSlide((s) => (s === slidesCount - 1 ? 0 : s + 1));
+    });
+  }, [slidesCount]);
 
   const setSlide = (slide) => {
-    setDirection(slide > currentSlide ? 1 : -1);
-    setCurrentSlide(slide);
+    startSlideTransition(() => {
+      setDirection(slide > currentSlide ? 1 : -1);
+      setCurrentSlide(slide);
+    });
   };
 
   useEffect(() => {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState, useTransition } from "react";
 import {
   Box,
   Flex,
@@ -29,14 +29,22 @@ const NVRModelSelector = ({ data }) => {
   const [expandedModel, setExpandedModel] = useState(0); // First model expanded by default
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentPdfUrl, setCurrentPdfUrl] = useState("");
+  // Each row carries a CustomButton (border/glow restyle) plus a Collapse that
+  // mounts a spec grid + product image. Toggling re-renders every row's
+  // border/glow style — heavy enough to push INP past 200ms on the s-series
+  // / eco-series / NVR pages. Mark the toggle as a transition so the tap
+  // commits first; the collapse follows non-blocking.
+  const [, startToggleTransition] = useTransition();
+
+  const toggleModel = useCallback((index) => {
+    startToggleTransition(() => {
+      setExpandedModel((prev) => (prev === index ? null : index));
+    });
+  }, []);
 
   if (!data) return null;
 
   const { title, models, sectionProps, titleProps } = data;
-
-  const toggleModel = (index) => {
-    setExpandedModel(expandedModel === index ? null : index);
-  };
   //comment
   const handleDownloadClick = (pdfUrl) => {
     if (pdfUrl) {

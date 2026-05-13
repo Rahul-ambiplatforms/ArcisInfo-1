@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useTransition } from "react";
 import { Box, Flex, Heading, Text, Image, HStack } from "@chakra-ui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import CustomButton from "../../../Components/CustomButton";
@@ -19,24 +19,33 @@ const HeroCarousel = ({ data }) => {
   const [startIndex, setStartIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  // AnimatePresence remount on slide change is the heavy work; defer the state
+  // update so the click visually commits before the animation kicks in.
+  const [, startSlideTransition] = useTransition();
 
   const imagesCount = images?.length || 0;
   const imagesPerView = 4;
 
   const nextSlide = useCallback(() => {
-    setDirection(1);
-    setStartIndex((prev) => (prev + 1) % imagesCount);
+    startSlideTransition(() => {
+      setDirection(1);
+      setStartIndex((prev) => (prev + 1) % imagesCount);
+    });
   }, [imagesCount]);
 
   const prevSlide = useCallback(() => {
-    setDirection(-1);
-    setStartIndex((prev) => (prev - 1 + imagesCount) % imagesCount);
+    startSlideTransition(() => {
+      setDirection(-1);
+      setStartIndex((prev) => (prev - 1 + imagesCount) % imagesCount);
+    });
   }, [imagesCount]);
 
   const goToSlide = useCallback(
     (index) => {
-      setDirection(index > startIndex ? 1 : -1);
-      setStartIndex(index);
+      startSlideTransition(() => {
+        setDirection(index > startIndex ? 1 : -1);
+        setStartIndex(index);
+      });
     },
     [startIndex]
   );

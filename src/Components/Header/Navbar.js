@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState, useTransition } from "react";
 import {
   Box,
   Flex,
@@ -40,18 +40,10 @@ import { dropdownData, actionLinks, loginButton } from "./navbarData";
 const NavDropdown = ({ title, data }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleMouseEnter = () => setIsOpen(true);
-  const handleMouseLeave = () => setIsOpen(false);
-  const handleClick = () => setIsOpen(!isOpen);
-
-  const getIcon = (iconName) => {
-    const icons = {
-      camera: FaCamera,
-      video: FaVideo,
-      eye: FaEye,
-    };
-    return icons[iconName] || null;
-  };
+  const handleMouseEnter = useCallback(() => setIsOpen(true), []);
+  const handleMouseLeave = useCallback(() => setIsOpen(false), []);
+  const handleClick = useCallback(() => setIsOpen((v) => !v), []);
+  const closeMenu = useCallback(() => setIsOpen(false), []);
 
   const isMegaMenu = title === "PRODUCTS";
 
@@ -63,6 +55,13 @@ const NavDropdown = ({ title, data }) => {
   const [hoveredProduct, setHoveredProduct] = useState(
     isMegaMenu ? "Eco Series" : null
   );
+  // Re-rendering the mega-menu right column on every mousemove is overkill
+  // and can spike INP if the user moves the pointer while interacting. Defer
+  // the hover-state update so it commits off the input critical path.
+  const [, startHoverTransition] = useTransition();
+  const handleProductHover = useCallback((group) => {
+    startHoverTransition(() => setHoveredProduct(group));
+  }, []);
 
   return (
     <Menu
@@ -116,7 +115,7 @@ const NavDropdown = ({ title, data }) => {
                     key={index}
                     position="relative"
                     borderRadius="md"
-                    onMouseEnter={() => setHoveredProduct(item.group)}
+                    onMouseEnter={() => handleProductHover(item.group)}
                   >
                     <Link
                       as={NextLink}
@@ -136,7 +135,7 @@ const NavDropdown = ({ title, data }) => {
                       }
                       _hover={{ bg: "gray.800", textDecoration: "none" }}
                       borderRadius="md"
-                      onClick={() => setIsOpen(false)}
+                      onClick={closeMenu}
                     >
                       <Text>{item.group}</Text>
                       <Icon
@@ -163,7 +162,7 @@ const NavDropdown = ({ title, data }) => {
                       fontWeight="500"
                       _hover={{ bg: "gray.800", textDecoration: "none" }}
                       borderRadius="md"
-                      onClick={() => setIsOpen(false)}
+                      onClick={closeMenu}
                     >
                       {item.label}
                     </Link>
@@ -190,7 +189,7 @@ const NavDropdown = ({ title, data }) => {
                         px={3}
                         py={2}
                         borderRadius="md"
-                        onClick={() => setIsOpen(false)}
+                        onClick={closeMenu}
                       >
                         {subItem.label}
                       </MenuItem>
@@ -212,7 +211,7 @@ const NavDropdown = ({ title, data }) => {
                         as={NextLink}
                         href={item.groupLink}
                         _hover={{ color: "white", textDecoration: "none" }}
-                        onClick={() => setIsOpen(false)}
+                        onClick={closeMenu}
                       >
                         {item.group}
                       </Link>

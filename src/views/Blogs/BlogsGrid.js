@@ -64,7 +64,17 @@ export default function BlogsContent() {
     "https://res.cloudinary.com/dzs02ecai/image/upload/v1761637680/upload_arcis";
 
   const [searchTerm, setSearchTerm] = useState("");
+  const [debouncedSearch, setDebouncedSearch] = useState("");
   const [sortOrder, setSortOrder] = useState("latest");
+
+  // Debounce the search term — typing fires getBlogs() on every keystroke
+  // otherwise, which (a) hammers the API and (b) re-renders the grid on every
+  // keypress, balloon-ing INP on /blog. 300ms feels instant but skips the
+  // intermediate keystrokes.
+  useEffect(() => {
+    const id = setTimeout(() => setDebouncedSearch(searchTerm), 300);
+    return () => clearTimeout(id);
+  }, [searchTerm]);
 
   // -----------Changes------------ \\
 
@@ -75,7 +85,7 @@ export default function BlogsContent() {
       const response = await getBlogs(
         currentPage,
         blogsPerPage,
-        searchTerm,
+        debouncedSearch,
         sortOrder,
         "published"
       );
@@ -105,7 +115,7 @@ export default function BlogsContent() {
     } finally {
       setIsLoading(false);
     }
-  }, [currentPage, blogsPerPage, searchTerm, sortOrder, toast]);
+  }, [currentPage, blogsPerPage, debouncedSearch, sortOrder, toast]);
 
   useEffect(() => {
     fetchBlogs();
@@ -120,6 +130,7 @@ export default function BlogsContent() {
   // Handler for clearing search
   const clearSearch = () => {
     setSearchTerm("");
+    setDebouncedSearch("");
     setCurrentPage(1);
   };
 

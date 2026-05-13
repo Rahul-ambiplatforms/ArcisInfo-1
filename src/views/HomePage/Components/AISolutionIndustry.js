@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState, useTransition } from "react";
 import {
   Box,
   Heading,
@@ -13,17 +13,25 @@ import { homeContent } from "../Data/Content";
 const AISolutionIndustry = ({ data }) => {
   const [activeIndex, setActiveIndex] = useState(null);
   const isMobile = useBreakpointValue({ base: true, lg: false });
+  // On mobile, tapping an industry tile re-renders the whole grid (corner
+  // opacity per tile). Mark the active-index update as a transition so the
+  // tap commits first and INP stays low.
+  const [, startTransition] = useTransition();
+
+  const handleItemClick = useCallback(
+    (index) => {
+      if (!isMobile) return;
+      startTransition(() => {
+        setActiveIndex((prev) => (prev === index ? null : index));
+      });
+    },
+    [isMobile]
+  );
 
   if (!data) return;
 
   const content = data;
   const { heading, description, industries } = content;
-
-  const handleItemClick = (index) => {
-    if (isMobile) {
-      setActiveIndex(index === activeIndex ? null : index);
-    }
-  };
 
   // Corner Styles
   const cornerBase = {

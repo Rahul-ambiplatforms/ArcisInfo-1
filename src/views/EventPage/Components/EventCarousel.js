@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useTransition } from "react";
 import { Box, Flex, Heading, Text, Image, HStack } from "@chakra-ui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
@@ -13,20 +13,29 @@ const EventCarousel = ({ data }) => {
   const [direction, setDirection] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const eventsCount = events.length;
+  // Carousel re-mounts a motion.div on every change; defer the state change
+  // so the button press paints first and INP stays low.
+  const [, startEventTransition] = useTransition();
 
   const prevEvent = () => {
-    setDirection(-1);
-    setCurrentEvent((s) => (s === 0 ? eventsCount - 1 : s - 1));
+    startEventTransition(() => {
+      setDirection(-1);
+      setCurrentEvent((s) => (s === 0 ? eventsCount - 1 : s - 1));
+    });
   };
 
   const nextEvent = useCallback(() => {
-    setDirection(1);
-    setCurrentEvent((s) => (s === eventsCount - 1 ? 0 : s + 1));
+    startEventTransition(() => {
+      setDirection(1);
+      setCurrentEvent((s) => (s === eventsCount - 1 ? 0 : s + 1));
+    });
   }, [eventsCount]);
 
   const setEvent = (index) => {
-    setDirection(index > currentEvent ? 1 : -1);
-    setCurrentEvent(index);
+    startEventTransition(() => {
+      setDirection(index > currentEvent ? 1 : -1);
+      setCurrentEvent(index);
+    });
   };
 
   useEffect(() => {

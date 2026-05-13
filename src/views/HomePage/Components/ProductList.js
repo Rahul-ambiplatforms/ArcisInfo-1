@@ -1,4 +1,4 @@
-import React, { useDeferredValue, useState } from "react";
+import React, { useCallback, useDeferredValue, useState, useTransition } from "react";
 import {
   Box,
   Heading,
@@ -43,6 +43,20 @@ const ProductList = ({ data }) => {
   // value so React can yield between paints and keep INP low on mobile.
   const deferredActiveTab = useDeferredValue(activeTab);
   const router = useRouter();
+  // Tapping a tab re-renders 3-4 CustomButtons (border/glow/tick recolor) and
+  // the product grid below. Mark the state change as a transition so the
+  // pressed button paints in the same frame as the tap; the grid swap then
+  // happens off the critical INP path.
+  const [, startTabTransition] = useTransition();
+  const handleTabClick = useCallback((productType) => {
+    startTabTransition(() => setActiveTab(productType));
+  }, []);
+  const handleProductClick = useCallback(
+    (link) => {
+      router.push(link);
+    },
+    [router]
+  );
 
   // Return null if no data or no products
   if (
@@ -161,7 +175,7 @@ const ProductList = ({ data }) => {
               <CustomButton
                 as="h3"
                 key={category.product_type}
-                onClick={() => setActiveTab(category.product_type)}
+                onClick={() => handleTabClick(category.product_type)}
                 // bgColor={activeTab === category.product_type ? "rgba(127, 86, 217, 0.5)" : "rgba(255, 255, 255, 0.1)"}
                 bgColor="rgba(255, 255, 255, 0.2)"
                 borderColor={
@@ -218,7 +232,7 @@ const ProductList = ({ data }) => {
                 role="group"
                 transition="all 0.3s"
                 cursor="pointer"
-                onClick={() => router.push(product.link)}
+                onClick={() => handleProductClick(product.link)}
                 _hover={{
                   bg: "whiteAlpha.300", //blackAlpha.300
                   transform: "translateY(-2px)",
@@ -296,7 +310,7 @@ const ProductList = ({ data }) => {
                       height="40px"
                       onClick={(e) => {
                         e.stopPropagation();
-                        router.push(product.link);
+                        handleProductClick(product.link);
                       }}
                       sx={{ padding: 0 }}
                       showTicks={false}

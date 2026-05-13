@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState, useTransition } from "react";
 import {
   Box,
   Flex,
@@ -31,10 +31,16 @@ const UpIcon = (props) => (
 const WhyArcisAI = () => {
   const { WhyArcisAI: data } = homeContent;
   const [activeIndex, setActiveIndex] = useState(null);
+  // Toggling re-renders every feature row (CustomButton border + icon rotate)
+  // and swaps the AnimatePresence image — heavy enough to balloon INP on
+  // mid-tier Android. Mark the update as a transition so the tap paints first.
+  const [, startTransition] = useTransition();
 
-  const handleToggle = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
+  const handleToggle = useCallback((index) => {
+    startTransition(() => {
+      setActiveIndex((prev) => (prev === index ? null : index));
+    });
+  }, []);
 
   // Determine which image to show
   const currentImage =
