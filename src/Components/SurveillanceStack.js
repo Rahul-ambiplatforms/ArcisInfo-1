@@ -39,6 +39,11 @@ const SurveillanceStack = ({ data }) => {
       alignItems="center"
       pt={{ base: "0%", md: "5%" }}
       pb={{ base: "0%", md: "3%" }}
+      // Skip layout/paint when off-screen to free up main-thread for input.
+      sx={{
+        contentVisibility: "auto",
+        containIntrinsicSize: "0 900px",
+      }}
     >
       {/* Background GIF — desktop only.
           On mobile a 3.88 MB animated GIF is the single biggest INP/main-thread

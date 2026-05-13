@@ -40,7 +40,15 @@ const FAQSection = ({ data }) => {
   if (!data) return null;
 
   return (
-    <Box py={{ base: 4, md: 8 }} color="white">
+    <Box
+      py={{ base: 4, md: 8 }}
+      color="white"
+      // Skip layout/paint when off-screen to free up main-thread for input.
+      sx={{
+        contentVisibility: "auto",
+        containIntrinsicSize: "0 700px",
+      }}
+    >
       <Box justifyContent="center" alignItems="center" mx="auto">
         <Heading
           as="h2"
@@ -74,6 +82,10 @@ const FAQSection = ({ data }) => {
                 cursor="pointer"
                 onClick={() => handleToggle(index)}
                 // mx="auto"
+                // contain:layout (not "content") — the CustomButton sits at
+                // the row's right edge and renders its corner ticks 4px
+                // outside its own box; paint containment would clip them.
+                sx={{ contain: "layout style" }}
               >
                 <Flex justify="space-between" align="center">
                   <Heading

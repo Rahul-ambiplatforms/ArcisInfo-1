@@ -102,6 +102,13 @@ const OurClient = ({ testimonials = true }) => {
       py={{ base: 2, md: 8 }}
       overflow="hidden"
       color="white"
+      // Skip layout/paint when off-screen — 33 client logos + 3 testimonials
+      // are expensive to keep in render tree while user is at the top of the
+      // page.
+      sx={{
+        contentVisibility: "auto",
+        containIntrinsicSize: "0 800px",
+      }}
     >
       {/* Background GIF Overlay */}
       <Box
@@ -221,6 +228,9 @@ const OurClient = ({ testimonials = true }) => {
               justifyContent="center"
               transition="transform 0.2s"
               _hover={{ transform: "scale(1.05)" }}
+              // Scope each logo's hover paint so hovering one doesn't redraw
+              // siblings.
+              sx={{ contain: "content" }}
             >
               <Image loading="lazy"
                 src={client.image}

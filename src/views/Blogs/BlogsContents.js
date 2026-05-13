@@ -105,19 +105,19 @@ const TableOfContents = ({ components }) => {
     e.preventDefault();
     e.stopPropagation();
     const targetElement = document.getElementById(targetId);
-    if (targetElement) {
+    if (!targetElement) return;
+    // Defer the geometry reads + scrollTo to the next frame so the click's
+    // visual feedback (link :active state) lands first. getBoundingClientRect
+    // + offsetHeight + innerHeight in the click handler would otherwise force
+    // synchronous layout before paint, inflating INP.
+    requestAnimationFrame(() => {
       const elementTop =
         targetElement.getBoundingClientRect().top + window.pageYOffset;
       const elementHeight = targetElement.offsetHeight;
       const windowHeight = window.innerHeight;
-
       const scrollTo = elementTop - windowHeight / 4 + elementHeight / 4;
-
-      window.scrollTo({
-        top: scrollTo,
-        behavior: "smooth",
-      });
-    }
+      window.scrollTo({ top: scrollTo, behavior: "smooth" });
+    });
   };
 
   const enableScroll = mainHeadings.length > 3;

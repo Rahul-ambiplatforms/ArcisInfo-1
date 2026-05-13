@@ -48,6 +48,11 @@ const AISolutionIndustry = ({ data }) => {
       bg="black"
       mt={{ base: "-5%", md: "-3%" }}
       py={{ base: "5%", md: "2%" }}
+      // Skip layout/paint when off-screen to free up main-thread for input.
+      sx={{
+        contentVisibility: "auto",
+        containIntrinsicSize: "0 800px",
+      }}
     >
       <Box w="full" px={{ base: 4, lg: 8 }}>
         <Heading
@@ -100,6 +105,9 @@ const AISolutionIndustry = ({ data }) => {
                 display="flex"
                 flexDirection="column"
                 alignItems="center"
+                // Scope layout/paint to this tile so an active-state restyle
+                // (corner opacity) doesn't invalidate the whole grid.
+                sx={{ contain: "content" }}
               >
                 {/* Image Container with Bounding Box */}
                 <Box

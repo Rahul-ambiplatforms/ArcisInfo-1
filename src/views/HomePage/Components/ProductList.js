@@ -15,6 +15,7 @@ import { useRouter } from "next/navigation";
 import { homeContent } from "../Data/Content";
 import RightButtonSvg from "../../../Components/Icons/RightButton.svg";
 import CustomButton from "../../../Components/CustomButton";
+import { yieldToMain } from "../../../utils/yieldToMain";
 
 const ProductList = ({ data }) => {
   // Use provided data or fallback to homeContent
@@ -52,7 +53,11 @@ const ProductList = ({ data }) => {
     startTabTransition(() => setActiveTab(productType));
   }, []);
   const handleProductClick = useCallback(
-    (link) => {
+    async (link) => {
+      // Yield first so the tap's :active/hover state paints before Next.js
+      // kicks off the heavy route transition (component load + prefetch
+      // continuation). Keeps INP under the 200ms budget on mid-tier mobile.
+      await yieldToMain();
       router.push(link);
     },
     [router]
@@ -237,6 +242,10 @@ const ProductList = ({ data }) => {
                   bg: "whiteAlpha.300", //blackAlpha.300
                   transform: "translateY(-2px)",
                 }}
+                // contain:layout (not "content") — paint containment would
+                // clip the corner accents that intentionally render outside
+                // the card box at top/left/right/bottom: -5px.
+                sx={{ contain: "layout style" }}
               >
                 {/* Top Left Corner */}
                 <Box

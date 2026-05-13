@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useDeferredValue, useMemo } from "react";
 import {
   Menu,
   MenuButton,
@@ -17,6 +17,11 @@ import { countries } from "../Data/countries";
 const CountrySelector = ({ value, onChange }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCountry, setSelectedCountry] = useState(null);
+  // The input value reflects the latest keystroke immediately (no lag), while
+  // the deferred copy drives the 200+-country filter. React re-runs the
+  // filter at a lower priority so each keystroke can paint inside the INP
+  // budget on mobile.
+  const deferredSearchTerm = useDeferredValue(searchTerm);
 
   useEffect(() => {
     // Find country by dial code or default to India (+91)
@@ -26,12 +31,15 @@ const CountrySelector = ({ value, onChange }) => {
     setSelectedCountry(country);
   }, [value]);
 
-  const filteredCountries = countries.filter(
-    (country) =>
-      country.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      country.dial_code.includes(searchTerm) ||
-      country.code.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredCountries = useMemo(() => {
+    const q = deferredSearchTerm.toLowerCase();
+    return countries.filter(
+      (country) =>
+        country.name.toLowerCase().includes(q) ||
+        country.dial_code.includes(deferredSearchTerm) ||
+        country.code.toLowerCase().includes(q)
+    );
+  }, [deferredSearchTerm]);
 
   return (
     <Menu>

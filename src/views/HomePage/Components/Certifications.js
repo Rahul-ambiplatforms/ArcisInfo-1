@@ -6,7 +6,20 @@ const Certifications = () => {
   const { Certifications } = homeContent;
 
   return (
-    <Box my={{ base: "6%" }} mt={{ md: "2%" }} mb={{ md: "0%" }} py={10}>
+    <Box
+      my={{ base: "6%" }}
+      mt={{ md: "2%" }}
+      mb={{ md: "0%" }}
+      py={10}
+      // content-visibility:auto lets the browser skip layout/paint for this
+      // section while it's off-screen, freeing main-thread time for input
+      // handling (web.dev/articles/avoid-large-complex-layouts). The reserved
+      // intrinsic size keeps the scrollbar from jumping.
+      sx={{
+        contentVisibility: "auto",
+        containIntrinsicSize: "0 320px",
+      }}
+    >
       <Box w="100%" px={{ base: 5, lg: 8 }}>
         {/* Heading removed to match the reference image style */}
         <Heading

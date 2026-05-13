@@ -49,7 +49,18 @@ const WhyArcisAI = () => {
       : data.mainImage;
 
   return (
-    <Box bg="black" py={10} color="white" position="relative" overflow="hidden">
+    <Box
+      bg="black"
+      py={10}
+      color="white"
+      position="relative"
+      overflow="hidden"
+      // Skip layout/paint when off-screen to free up main-thread for input.
+      sx={{
+        contentVisibility: "auto",
+        containIntrinsicSize: "0 900px",
+      }}
+    >
       {/* Background GIF Overlay */}
       {/* <Box
         position="absolute"
