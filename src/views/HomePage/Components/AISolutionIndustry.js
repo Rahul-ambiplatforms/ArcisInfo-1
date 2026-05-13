@@ -147,6 +147,9 @@ const AISolutionIndustry = ({ data }) => {
                   <Image loading="lazy"
                     src={item.image}
                     alt={item.name}
+                    width="220"
+                    height="220"
+                    decoding="async"
                     w="100%"
                     h="100%"
                     objectFit="cover"

@@ -94,10 +94,13 @@ const ProductList = ({ data }) => {
       py={{ base: "5%", md: "4%" }}
       position="relative"
       {...(productList.bg_image && {
-        backgroundImage: `url(${productList.bg_image})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
+        // Mobile skips the 3.88 MB animated GIF entirely — `none` at the
+        // `base` breakpoint short-circuits the network request and the
+        // continuous main-thread decode that was driving long tasks / INP.
+        bgImage: { base: "none", md: `url(${productList.bg_image})` },
+        bgSize: "cover",
+        bgPosition: "center",
+        bgRepeat: "no-repeat",
       })}
     >
       {/* Overlay to make GIF appear at 40% opacity */}
@@ -268,6 +271,9 @@ const ProductList = ({ data }) => {
                     <Image loading="lazy"
                       src={product.image}
                       alt={product.product_name}
+                      width="214"
+                      height="214"
+                      decoding="async"
                       // w="214px"
                       h="214px"
                       // maxH="150px"

@@ -31,19 +31,34 @@ const SurveillanceStack = ({ data }) => {
       pt={{ base: "0%", md: "5%" }}
       pb={{ base: "0%", md: "3%" }}
     >
-      {/* Background GIF */}
-      <Image loading="lazy"
-        alt="ArcisAI surveillance technology wave animation background"
-        src="/images/home_wave_gif_1.gif"
+      {/* Background GIF — desktop only.
+          On mobile a 3.88 MB animated GIF is the single biggest INP/main-thread
+          drag (continuous decode blocks input). We render it via `display`/
+          `bgImage` only at md+, and use a cheap gradient on mobile. */}
+      <Box
+        display={{ base: "none", md: "block" }}
         position="absolute"
-        top={{ base: "0", md: "5%" }}
+        top="5%"
         left={0}
         w="100%"
-        h={{ base: "100%", md: "90%" }}
-        objectFit="cover"
+        h="90%"
+        bgImage="url(/images/home_wave_gif_1.gif)"
+        bgSize="cover"
+        bgRepeat="no-repeat"
         opacity={0.4}
         zIndex={0}
-        // bg="red"
+        aria-hidden="true"
+      />
+      <Box
+        display={{ base: "block", md: "none" }}
+        position="absolute"
+        top={0}
+        left={0}
+        w="100%"
+        h="100%"
+        bgGradient="linear(to-b, rgba(127,86,217,0.18), rgba(0,0,0,0))"
+        zIndex={0}
+        aria-hidden="true"
       />
 
       {/* Gradient Overlay */}
