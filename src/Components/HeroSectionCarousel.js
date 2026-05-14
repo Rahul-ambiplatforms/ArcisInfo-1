@@ -286,13 +286,23 @@ const HeroSectionCarousel = ({ data }) => {
     </>
   );
 
+  // Slides that ship `sources` get rendered as a real <picture> element so:
+  //   1) the preload scanner can discover the LCP image (CSS bgImage can't),
+  //   2) we serve AVIF/WebP responsive variants instead of giant PNGs.
+  // The outer Box keeps bgImage only as a fallback for legacy slides.
+  const hasPictureSources = Array.isArray(activeSlide?.sources) && activeSlide.sources.length > 0;
+
   return (
     <Box
       w="full"
       h="100vh"
       position="relative"
       overflow="hidden"
-      bgImage={{ base: `url(${bgImageMobile})`, md: `url(${bgImageDesktop})` }}
+      bgImage={
+        hasPictureSources
+          ? undefined
+          : { base: `url(${bgImageMobile})`, md: `url(${bgImageDesktop})` }
+      }
       bgSize={activeSlide?.bgSize || "cover"}
       bgPosition={activeSlide?.bgPosition || "center"}
       bgRepeat="no-repeat"
@@ -304,6 +314,39 @@ const HeroSectionCarousel = ({ data }) => {
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
+      {hasPictureSources && (
+        <Box position="absolute" inset="0" zIndex={0} pointerEvents="none">
+          <picture>
+            {activeSlide.sources.map((s, i) => (
+              <source
+                key={i}
+                type={s.type}
+                media={s.media}
+                srcSet={s.srcSet}
+                sizes={s.sizes}
+              />
+            ))}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={activeSlide.fallback || bgImageMobile || bgImageDesktop}
+              alt=""
+              aria-hidden="true"
+              // First slide is the LCP candidate — eager + high priority so the
+              // preload scanner fetches it before hydration.
+              fetchpriority={currentSlide === 0 ? "high" : "auto"}
+              loading={currentSlide === 0 ? "eager" : "lazy"}
+              decoding="async"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center bottom",
+                display: "block",
+              }}
+            />
+          </picture>
+        </Box>
+      )}
       {isStaticSlide ? (
         <Box
           position="absolute"

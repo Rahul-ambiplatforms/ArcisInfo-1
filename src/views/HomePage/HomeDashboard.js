@@ -12,8 +12,42 @@ import BISHeroSlide from "./Components/BISHeroSlide";
 
 const bisSlide = {
   id: "bis",
+  // Kept so legacy code paths still resolve, but the carousel now prefers
+  // `sources`/`fallback` below to render a real <picture> for LCP.
   d_image: "/images/BIS_bg.png",
   m_image: "/images/bis-mobile-bg.png",
+  // Responsive AVIF/WebP sources for <picture>. Mobile + desktop art-directed.
+  // ~15-20 KB AVIF replaces the original 596 KB / 2.2 MB PNGs and fixes the
+  // mobile LCP image-download bottleneck.
+  sources: [
+    {
+      type: "image/avif",
+      media: "(min-width: 769px)",
+      srcSet: "/images/BIS_bg-1080.avif 1080w, /images/BIS_bg-1440.avif 1440w, /images/BIS_bg-1920.avif 1920w",
+      sizes: "100vw",
+    },
+    {
+      type: "image/webp",
+      media: "(min-width: 769px)",
+      srcSet: "/images/BIS_bg-1080.webp 1080w, /images/BIS_bg-1440.webp 1440w, /images/BIS_bg-1920.webp 1920w",
+      sizes: "100vw",
+    },
+    {
+      type: "image/avif",
+      media: "(max-width: 768px)",
+      srcSet: "/images/bis-mobile-bg-480.avif 480w, /images/bis-mobile-bg-750.avif 750w",
+      sizes: "100vw",
+    },
+    {
+      type: "image/webp",
+      media: "(max-width: 768px)",
+      srcSet: "/images/bis-mobile-bg-480.webp 480w, /images/bis-mobile-bg-750.webp 750w",
+      sizes: "100vw",
+    },
+  ],
+  fallback: "/images/bis-mobile-bg-fallback.png",
+  bgObjectPosition: { base: "center bottom", md: "center bottom" },
+  bgObjectFit: { base: "contain", md: "cover" },
   customComponent: <BISHeroSlide />,
   bgPosition: { base: "center bottom", md: "center bottom" },
   bgSize: { base: "contain", md: "cover" },

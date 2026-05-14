@@ -30,5 +30,34 @@ export const metadata = {
 };
 
 export default function HomePage() {
-  return <HomeDashboard />;
+  return (
+    <>
+      {/*
+        Preload the BIS hero LCP image. The carousel's first slide is the
+        Largest Contentful Paint element on this page, so we hint the
+        browser to start fetching the AVIF variant before hydration.
+        `imagesrcset` mirrors the <picture> markup inside HeroSectionCarousel,
+        and `media` ensures only the mobile-or-desktop variant is fetched.
+      */}
+      <link
+        rel="preload"
+        as="image"
+        type="image/avif"
+        imageSrcSet="/images/bis-mobile-bg-480.avif 480w, /images/bis-mobile-bg-750.avif 750w"
+        imageSizes="100vw"
+        media="(max-width: 768px)"
+        fetchPriority="high"
+      />
+      <link
+        rel="preload"
+        as="image"
+        type="image/avif"
+        imageSrcSet="/images/BIS_bg-1080.avif 1080w, /images/BIS_bg-1440.avif 1440w, /images/BIS_bg-1920.avif 1920w"
+        imageSizes="100vw"
+        media="(min-width: 769px)"
+        fetchPriority="high"
+      />
+      <HomeDashboard />
+    </>
+  );
 }
