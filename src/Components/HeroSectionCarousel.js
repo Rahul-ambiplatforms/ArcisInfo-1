@@ -50,11 +50,34 @@ const HeroSectionCarousel = ({ data }) => {
     // (and queue React updates) for an offscreen carousel — that work would
     // otherwise pile up and inflate input delay the moment the user returns.
     if (typeof document !== "undefined" && document.hidden) return;
-    const timer = setInterval(() => {
-      setDirection(1);
-      setCurrentSlide((s) => (s === slidesCount - 1 ? 0 : s + 1));
-    }, 5000);
-    return () => clearInterval(timer);
+
+    // Don't start auto-rotation until after the page has finished loading +
+    // a buffer. The first slide is the LCP candidate; swapping to slide 2
+    // mid-load turns the second slide's larger bg image into the new LCP,
+    // which on Slow 4G inflates LCP by 5+ seconds.
+    let interval;
+    let buffer;
+    const begin = () => {
+      buffer = setTimeout(() => {
+        interval = setInterval(() => {
+          setDirection(1);
+          setCurrentSlide((s) => (s === slidesCount - 1 ? 0 : s + 1));
+        }, 5000);
+      }, 3000);
+    };
+
+    if (typeof window === "undefined") return;
+    if (document.readyState === "complete") {
+      begin();
+    } else {
+      window.addEventListener("load", begin, { once: true });
+    }
+
+    return () => {
+      window.removeEventListener("load", begin);
+      clearTimeout(buffer);
+      if (interval) clearInterval(interval);
+    };
   }, [slidesCount, isPaused]);
 
   useEffect(() => {
