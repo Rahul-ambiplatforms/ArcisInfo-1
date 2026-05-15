@@ -1,7 +1,7 @@
 export const homeSEO = {
-  metatitle: "Best AI CCTV Camera Brand in India | AI CCTV Company - ArcisAI",
+  metatitle: "ArcisAI | BIS-ER & STQC Certified CCTV Cameras in India",
   metadescription:
-    "Looking for a reliable AI CCTV camera provider? ArcisAI is a top CCTV brand in India offering AI-driven surveillance to protect your space, anytime, anywhere.",
+    "ArcisAI offers BIS-ER & STQC Certified CCTV cameras, STQC Certified VMS in India. Made-in-India surveillance for government, enterprise, office & home use.",
   ogimage: "https://arcisai.io/images/home_hero_1.webp",
   canonical: "https://arcisai.io/",
   schema: [

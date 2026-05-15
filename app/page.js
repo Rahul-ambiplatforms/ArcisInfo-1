@@ -8,10 +8,12 @@ export const metadata = {
   title: homeSEO.metatitle,
   description: homeSEO.metadescription,
   keywords: [
-    'AI CCTV cameras', 'NDAA compliant cameras', 'enterprise surveillance camera',
-    'STQC certified CCTV', 'edge AI camera', 'cloud VMS', 'smart security system',
-    'ArcisAI', 'face recognition camera', 'ANPR camera', 'GenAI video analytics',
-    'Hikvision alternative',
+    'STQC certified CCTV camera',
+    'BIS-ER certified CCTV camera',
+    'made in India CCTV camera',
+    'STQC certified surveillance system',
+    'best CCTV camera brand in India',
+    'NDAA compliant cameras',
   ],
   alternates: { canonical: homeSEO.canonical },
   openGraph: {

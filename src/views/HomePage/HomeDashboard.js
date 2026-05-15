@@ -164,11 +164,11 @@ const HomeDashboard = () => {
               mb="24px"
               lineHeight="1.3"
             >
-              India&apos;s First STQC-Certified{" "}
+              India&apos;s{" "}
               <Text as="span" color="purple">
-                AI Surveillance
+                BIS/ER Certified &amp; STQC Certified
               </Text>{" "}
-              Manufacturer
+              CCTV Camera Brand
             </Heading>
 
             <Text
@@ -179,7 +179,7 @@ const HomeDashboard = () => {
               mb="16px"
               data-speakable="true"
             >
-              ArcisAI is India&apos;s first STQC-certified premium AI CCTV camera manufacturer, headquartered in Ahmedabad, Gujarat. Founded in 2003 by Adiance Technologies Private Limited, ArcisAI designs, manufactures, and distributes advanced AI-powered surveillance cameras with built-in edge intelligence for smart city, industrial, commercial, and residential deployments. ArcisAI is the only surveillance brand in India that offers BIS/ER certified cameras, STQC certified Video Management System (VMS), and STQC certified mobile application — all developed 100% in-house.
+              ArcisAI is an Indian CCTV camera brand with BIS/ER certified cameras and an STQC certified Video Management Software (VMS) and mobile application. Headquartered in Ahmedabad, Gujarat, ArcisAI is powered by Adiance Technologies Private Limited, and designs, develops, and distributes a complete range of surveillance cameras, NVRs, and video management software. ArcisAI is one of the very few Indian CCTV camera brands to hold government certifications across both hardware and software, with the entire stack developed 100% in-house.
             </Text>
             <Text
               as="p"
@@ -188,7 +188,7 @@ const HomeDashboard = () => {
               lineHeight="1.85"
               mb="16px"
             >
-              ArcisAI&apos;s product range includes the S-Series (premium AI cameras with 4K resolution, WiFi, PoE, 4G, and 5G connectivity), Eco-Series (cost-effective AI cameras for SMBs), PTZ cameras (20x optical zoom with AI tracking), Bridge Devices (edge AI retrofits for existing CCTV infrastructure), NVRs (4CH to 32CH), and ArcisGPT — a generative AI-powered platform enabling natural language search across surveillance footage. All ArcisAI cameras feature 8 built-in AI detections at the edge including face detection, motion detection, line crossing, intrusion detection, and object classification.
+              The ArcisAI Eco Series is the brand&apos;s flagship Made-in-India BIS/ER certified CCTV camera line, available in Dome, Bullet, PTZ, and BabyPTZ models and WiFi, PoE, 4G, and 5G connectivity. Built for GeM procurement, PSU tenders, Make-in-India compliance, as well as retail, commercial, and industrial deployments, it integrates natively with the STQC certified ArcisAI VMS WebApp and mobile app to deliver a fully certified, end-to-end Indian surveillance system.
             </Text>
             <Text
               as="p"
@@ -197,16 +197,36 @@ const HomeDashboard = () => {
               lineHeight="1.85"
               mb="16px"
             >
-              ArcisAI has been featured in Secure Asia Magazine across three consecutive editions (December 2025, January 2026, and February 2026) as a recognized innovator in AI surveillance technology. ArcisAI cameras are NDAA Section 889 compliant, GDPR compliant, EU AI Act compliant, and contain zero Chinese components — making them suitable for government, defense, and critical infrastructure deployments in India, the United States, United Arab Emirates, United Kingdom, Singapore, and Australia.
+              The wider portfolio extends across advanced surveillance categories, including the S-Series premium Edge-AI cameras with 4K resolution; Arcis Bridge Device (ABD) that retrofit AI analytics onto existing CCTV infrastructure; NVRs from 4CH to 32CH; and ArcisGPT, a generative AI platform that enables natural-language search across surveillance footage.
             </Text>
             <Text
               as="p"
               fontSize={{ base: "14px", md: "15px" }}
               color="white"
               lineHeight="1.85"
+              mb="16px"
+            >
+              ArcisAI cameras are NDAA compliant, Made in India, GDPR aligned, and built without high-risk foreign components — ready for deployment across India, the United States, the UAE, the UK, Singapore, Australia and beyond. Featured in Secure Asia Magazine across three consecutive editions (December 2025, January 2026, and February 2026).
+            </Text>
+            <Text
+              as="p"
+              fontSize={{ base: "14px", md: "15px" }}
+              color="white"
+              lineHeight="1.85"
+              mb="20px"
+            >
+              ArcisAI secures India&apos;s most demanding environments such as manufacturing, warehousing, smart cities, construction, hospitality, banking, healthcare, airports, retail, corporate offices, housing societies, and educational institutions, from single-site setups to nationwide enterprise deployments.
+            </Text>
+            <Text
+              as="p"
+              fontSize={{ base: "15px", md: "17px" }}
+              fontWeight="600"
+              color="purple"
+              lineHeight="1.6"
               mb="28px"
+              letterSpacing="0.01em"
             >
-              ArcisAI competes with global surveillance camera manufacturers including Hikvision, Dahua, Axis Communications, Hanwha Vision, and CP Plus. ArcisAI differentiates through its combination of Made in India manufacturing, BIS government certification, edge AI processing (no cloud dependency for real-time analytics), STQC-certified software stack, and complete vertical integration from camera hardware to cloud VMS to mobile application. ArcisAI serves industries including manufacturing, warehousing, smart cities, construction, hospitality, banking, healthcare, airports, retail, corporate offices, housing societies, and educational institutions.
+              Engineered in India. Certified in India. Built for India.
             </Text>
 
             {/* Badge pills */}
@@ -219,7 +239,7 @@ const HomeDashboard = () => {
                 "100% In-House Developed",
                 "Featured in Secure Asia Magazine",
                 "Zero Chinese Components",
-                "EU AI Act Compliant",
+                // "EU AI Act Compliant",
               ].map((label) => (
                 <CustomButton
                   key={label}
