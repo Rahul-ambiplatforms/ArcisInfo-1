@@ -1,5 +1,11 @@
 'use client';
-import React, { useCallback, useEffect, useState, useTransition } from "react";
+import React, {
+  memo,
+  useCallback,
+  useState,
+  useTransition,
+} from 'react';
+import dynamic from 'next/dynamic';
 import {
   Box,
   Flex,
@@ -15,29 +21,21 @@ import {
   MenuGroup,
   IconButton,
   useDisclosure,
-  Drawer,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-  DrawerHeader,
-  DrawerBody,
   Stack,
   Image,
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-} from "@chakra-ui/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
-import { FaCamera, FaVideo, FaEye } from "react-icons/fa";
-import CustomButton from "../CustomButton";
-import NavbarDownIcon from "../Icons/Navbar_down_icon.svg";
-import NextLink from "next/link";
-import { dropdownData, actionLinks, loginButton } from "./navbarData";
+} from '@chakra-ui/react';
+import { HamburgerIcon } from '@chakra-ui/icons';
+import CustomButton from '../CustomButton';
+import NavbarDownIcon from '../Icons/Navbar_down_icon.svg';
+import NextLink from 'next/link';
+import { dropdownData, actionLinks, loginButton } from './navbarData';
+
+// Drawer + Accordion subtree only loaded on first burger tap. Keeps initial
+// Navbar JS small and the hamburger tap → next-paint under the INP budget.
+const MobileDrawer = dynamic(() => import('./MobileDrawer'), { ssr: false });
 
 /* --- Dropdown Component with Hover and Click Support --- */
-const NavDropdown = ({ title, data }) => {
+const NavDropdown = memo(function NavDropdown({ title, data }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleMouseEnter = useCallback(() => setIsOpen(true), []);
@@ -45,7 +43,7 @@ const NavDropdown = ({ title, data }) => {
   const handleClick = useCallback(() => setIsOpen((v) => !v), []);
   const closeMenu = useCallback(() => setIsOpen(false), []);
 
-  const isMegaMenu = title === "PRODUCTS";
+  const isMegaMenu = title === 'PRODUCTS';
 
   // Separate items into groups and standalone items for Mega Menu
   const groups = data.items?.filter((item) => item.group) || [];
@@ -53,7 +51,7 @@ const NavDropdown = ({ title, data }) => {
 
   // State for tracking which product is being hovered (for PRODUCTS menu)
   const [hoveredProduct, setHoveredProduct] = useState(
-    isMegaMenu ? "Eco Series" : null
+    isMegaMenu ? 'Eco Series' : null
   );
   // Re-rendering the mega-menu right column on every mousemove is overkill
   // and can spike INP if the user moves the pointer while interacting. Defer
@@ -76,8 +74,8 @@ const NavDropdown = ({ title, data }) => {
         variant="ghost"
         rightIcon={<Icon as={NavbarDownIcon} boxSize={3} />}
         color="white"
-        _hover={{ color: "white", bg: "whiteAlpha.100" }}
-        _active={{ bg: "transparent" }}
+        _hover={{ color: 'white', bg: 'whiteAlpha.100' }}
+        _active={{ bg: 'transparent' }}
         fontWeight="400"
         fontSize="16px"
         textTransform="uppercase"
@@ -94,7 +92,7 @@ const NavDropdown = ({ title, data }) => {
         boxShadow="dark-lg"
         py={4}
         px={isMegaMenu ? 0 : 2}
-        minW={isMegaMenu ? "500px" : data.items?.[0]?.group ? "250px" : "200px"}
+        minW={isMegaMenu ? '500px' : data.items?.[0]?.group ? '250px' : '200px'}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
@@ -130,10 +128,10 @@ const NavDropdown = ({ title, data }) => {
                       fontWeight="500"
                       bg={
                         hoveredProduct === item.group
-                          ? "gray.800"
-                          : "transparent"
+                          ? 'gray.800'
+                          : 'transparent'
                       }
-                      _hover={{ bg: "gray.800", textDecoration: "none" }}
+                      _hover={{ bg: 'gray.800', textDecoration: 'none' }}
                       borderRadius="md"
                       onClick={closeMenu}
                     >
@@ -160,7 +158,7 @@ const NavDropdown = ({ title, data }) => {
                       color="white"
                       fontSize="14px"
                       fontWeight="500"
-                      _hover={{ bg: "gray.800", textDecoration: "none" }}
+                      _hover={{ bg: 'gray.800', textDecoration: 'none' }}
                       borderRadius="md"
                       onClick={closeMenu}
                     >
@@ -183,7 +181,7 @@ const NavDropdown = ({ title, data }) => {
                         as={NextLink}
                         href={subItem.link}
                         bg="transparent"
-                        _hover={{ bg: "gray.800", color: "white" }}
+                        _hover={{ bg: 'gray.800', color: 'white' }}
                         color="gray.300"
                         fontSize="14px"
                         px={3}
@@ -210,7 +208,7 @@ const NavDropdown = ({ title, data }) => {
                       <Link
                         as={NextLink}
                         href={item.groupLink}
-                        _hover={{ color: "white", textDecoration: "none" }}
+                        _hover={{ color: 'white', textDecoration: 'none' }}
                         onClick={closeMenu}
                       >
                         {item.group}
@@ -230,7 +228,7 @@ const NavDropdown = ({ title, data }) => {
                       as={NextLink}
                       href={subItem.link}
                       bg="transparent"
-                      _hover={{ bg: "gray.800" }}
+                      _hover={{ bg: 'gray.800' }}
                       color="white"
                       fontSize="14px"
                     >
@@ -239,40 +237,43 @@ const NavDropdown = ({ title, data }) => {
                   ))}
                 </MenuGroup>
               );
-            } else {
-              return (
-                <MenuItem
-                  key={index}
-                  as={NextLink}
-                  href={item.link}
-                  bg="transparent"
-                  _hover={{ bg: "gray.800" }}
-                  color="white"
-                  fontSize="14px"
-                >
-                  {item.label}
-                </MenuItem>
-              );
             }
+            return (
+              <MenuItem
+                key={index}
+                as={NextLink}
+                href={item.link}
+                bg="transparent"
+                _hover={{ bg: 'gray.800' }}
+                color="white"
+                fontSize="14px"
+              >
+                {item.label}
+              </MenuItem>
+            );
           })
         )}
       </MenuList>
     </Menu>
   );
-};
+});
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  // Heavy drawer body (4 Accordions + nav links) mounts one frame AFTER the
-  // first open, so the burger-tap input → next-paint isn't blocked by mounting
-  // the menu tree. Once mounted, we keep it for subsequent opens.
-  const [drawerBodyReady, setDrawerBodyReady] = useState(false);
+  // Once the burger has been tapped once we keep the Drawer module loaded so
+  // subsequent opens are instant. Until then the Drawer JSX never renders —
+  // no Chakra portal/focus-trap/scroll-lock work runs.
+  const [drawerEverOpened, setDrawerEverOpened] = useState(false);
+  const [, startBurgerTransition] = useTransition();
 
-  useEffect(() => {
-    if (!isOpen || drawerBodyReady) return;
-    const id = requestAnimationFrame(() => setDrawerBodyReady(true));
-    return () => cancelAnimationFrame(id);
-  }, [isOpen, drawerBodyReady]);
+  const handleBurgerTap = useCallback(() => {
+    // Let the tap's :active feedback paint first, then mount + open the drawer
+    // off the input → next-paint critical path.
+    if (!drawerEverOpened) setDrawerEverOpened(true);
+    startBurgerTransition(() => {
+      onOpen();
+    });
+  }, [drawerEverOpened, onOpen]);
 
   return (
     <Box
@@ -298,7 +299,8 @@ const Navbar = () => {
         <Flex gap="4" align="center" justify="center">
           {/* LOGO */}
           <NextLink href="/">
-            <Image loading="lazy"
+            <Image
+              loading="lazy"
               src="/images/ArcisAi_logo.webp"
               alt="ArcisAI Logo"
               w="150px"
@@ -309,7 +311,7 @@ const Navbar = () => {
           </NextLink>
 
           {/* DESKTOP NAV - Center */}
-          <HStack spacing={2} display={{ base: "none", lg: "flex" }}>
+          <HStack spacing={2} display={{ base: 'none', lg: 'flex' }}>
             <NavDropdown
               title={dropdownData.solutions.title}
               data={dropdownData.solutions}
@@ -332,28 +334,16 @@ const Navbar = () => {
         {/* RIGHT ACTIONS */}
         <HStack
           spacing={6}
-          display={{ base: "none", lg: "flex" }}
+          display={{ base: 'none', lg: 'flex' }}
           alignItems="center"
         >
-          {/* <Link
-            as={RouterLink}
-            to={actionLinks[0].link}
-            fontSize="16px"
-            fontWeight="400"
-            color="white"
-            _hover={{ color: "white", textDecoration: "none", opacity: 0.8 }}
-            textTransform="uppercase"
-            letterSpacing="0.5px"
-          >
-            {actionLinks[0].label}
-          </Link> */}
           <Link
             as={NextLink}
             href={actionLinks[1].link}
             fontSize="16px"
             fontWeight="400"
             color="white"
-            _hover={{ color: "white", textDecoration: "none", opacity: 0.8 }}
+            _hover={{ color: 'white', textDecoration: 'none', opacity: 0.8 }}
             textTransform="uppercase"
             letterSpacing="0.5px"
           >
@@ -370,189 +360,19 @@ const Navbar = () => {
 
         {/* MOBILE BURGER */}
         <IconButton
-          display={{ base: "flex", lg: "none" }}
+          display={{ base: 'flex', lg: 'none' }}
           icon={<HamburgerIcon boxSize={6} />}
           variant="ghost"
           color="white"
-          onClick={onOpen}
+          onClick={handleBurgerTap}
           aria-label="Open Menu"
-          _hover={{ bg: "whiteAlpha.200" }}
+          _hover={{ bg: 'whiteAlpha.200' }}
         />
       </Flex>
 
-      {/* ----------------- MOBILE MENU DRAWER ----------------- */}
-      <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
-        <DrawerOverlay backdropFilter="blur(5px)" />
-        <DrawerContent bg="black" borderLeft="1px solid" borderColor="gray.800">
-          <DrawerCloseButton color="white" mt={2} />
-          <DrawerHeader
-            color="white"
-            borderBottom="1px solid"
-            borderColor="gray.800"
-          >
-            <NextLink href="/" onClick={onClose}>
-              <Image loading="lazy"
-                src="/images/ArcisAi_logo.webp"
-                alt="ArcisAI Logo"
-                w="150px"
-                h="30px"
-                cursor="pointer"
-                _hover={{ opacity: 0.8 }}
-              />
-            </NextLink>
-          </DrawerHeader>
-          <DrawerBody px={0}>
-            {drawerBodyReady && (
-            <Stack
-              spacing={0}
-              divider={<Box borderColor="gray.900" borderBottomWidth="1px" />}
-            >
-              {/* Mobile Dropdowns from Data */}
-              {Object.values(dropdownData).map((dropdown, index) => (
-                <Accordion key={index} allowToggle border="none">
-                  <AccordionItem border="none">
-                    <h2>
-                      <AccordionButton py={4} _hover={{ bg: "gray.900" }}>
-                        <Box
-                          flex="1"
-                          textAlign="left"
-                          color="white"
-                          fontWeight="400"
-                          fontSize="16px"
-                        >
-                          {dropdown.title}
-                        </Box>
-                        <AccordionIcon color="white" />
-                      </AccordionButton>
-                    </h2>
-                    <AccordionPanel pb={4} bg="gray.900">
-                      {dropdown.items?.map((item, itemIndex) => {
-                        if (item.group) {
-                          return (
-                            <Box key={itemIndex} mb={4}>
-                              {item.groupLink ? (
-                                <Link
-                                  as={NextLink}
-                                  href={item.groupLink}
-                                  color="gray.500"
-                                  fontSize="16px"
-                                  mb={2}
-                                  textTransform="uppercase"
-                                  letterSpacing="1px"
-                                  display="block"
-                                  _hover={{
-                                    color: "white",
-                                    textDecoration: "none",
-                                  }}
-                                  onClick={onClose}
-                                >
-                                  {item.group}
-                                </Link>
-                              ) : (
-                                <Text
-                                  color="gray.500"
-                                  fontSize="xs"
-                                  mb={2}
-                                  textTransform="uppercase"
-                                  letterSpacing="1px"
-                                >
-                                  {item.group}
-                                </Text>
-                              )}
-                              <Stack spacing={3} pl={4}>
-                                {item.items?.map((subItem, subIndex) => (
-                                  <Link
-                                    key={subIndex}
-                                    as={NextLink}
-                                    href={subItem.link}
-                                    color="white"
-                                    fontSize="14px"
-                                    onClick={onClose}
-                                    _hover={{ color: "gray.300" }}
-                                  >
-                                    {subItem.label}
-                                  </Link>
-                                ))}
-                              </Stack>
-                            </Box>
-                          );
-                        } else {
-                          return (
-                            <Link
-                              key={itemIndex}
-                              as={NextLink}
-                              href={item.link}
-                              color="white"
-                              fontSize="14px"
-                              display="block"
-                              py={2}
-                              onClick={onClose}
-                              _hover={{ color: "gray.300" }}
-                            >
-                              {item.label}
-                            </Link>
-                          );
-                        }
-                      })}
-                    </AccordionPanel>
-                  </AccordionItem>
-                </Accordion>
-              ))}
-
-              {/* Action Links */}
-              {/* {actionLinks.map((link, index) => (
-                <Button
-                  key={index}
-                  as={RouterLink}
-                  to={link.link}
-                  variant="ghost"
-                  color="white"
-                  w="full"
-                  h="60px"
-                  justifyContent="flex-start"
-                  px={6}
-                  borderRadius={0}
-                  fontSize="16px"
-                  fontWeight="400"
-                  textTransform="uppercase"
-                  onClick={onClose}
-                  _hover={{ bg: "gray.900", color: "white" }}
-                >
-                  {link.label}
-                </Button>
-              ))} */}
-              <Button
-                as={NextLink}
-                href={actionLinks[1].link}
-                variant="ghost"
-                color="white"
-                w="full"
-                h="60px"
-                justifyContent="flex-start"
-                // px={6}
-                borderRadius={0}
-                fontSize="16px"
-                fontWeight="400"
-                textTransform="uppercase"
-                _hover={{ bg: "gray.900", color: "white" }}
-                onClick={onClose}
-              >
-                {actionLinks[1].label}
-              </Button>
-
-              {/* Login Button */}
-              <Box p={6} display="flex" justifyContent="center">
-                <CustomButton
-                  onClick={() => (window.location.href = loginButton.link)}
-                >
-                  {loginButton.label}
-                </CustomButton>
-              </Box>
-            </Stack>
-            )}
-          </DrawerBody>
-        </DrawerContent>
-      </Drawer>
+      {/* Mobile drawer is dynamically imported and only mounted after the
+          burger is tapped at least once. */}
+      {drawerEverOpened && <MobileDrawer isOpen={isOpen} onClose={onClose} />}
     </Box>
   );
 };

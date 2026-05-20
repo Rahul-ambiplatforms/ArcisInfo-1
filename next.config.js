@@ -2,6 +2,28 @@
 const nextConfig = {
   reactStrictMode: true,
 
+  // ─── Bundle Tree-Shaking ─────────────────────────────────────────────────
+  // Auto-rewrites barrel imports (e.g. `import { FaX } from 'react-icons/fa'`)
+  // into direct-path imports so Webpack can drop the unused icons/components.
+  // Reduces parse/compile work during hydration → lower INP. No code, UI, or
+  // SEO change.
+  experimental: {
+    optimizePackageImports: [
+      'react-icons',
+      'react-icons/fa',
+      'react-icons/fa6',
+      'react-icons/md',
+      'react-icons/ai',
+      'react-icons/bs',
+      'react-icons/go',
+      'react-icons/ri',
+      'react-icons/io',
+      '@chakra-ui/react',
+      '@chakra-ui/icons',
+      'framer-motion',
+    ],
+  },
+
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
