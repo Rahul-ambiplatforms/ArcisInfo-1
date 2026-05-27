@@ -326,7 +326,7 @@ const BlogsOverviewDash = ({ urlWords: urlWordsProp }) => {
   // const IMAGE_BASE_URL =
   //   process.env.REACT_APP_IMAGE_BASE_URL || "http://localhost:5000/uploads";
   const IMAGE_BASE_URL =
-    "https://res.cloudinary.com/dzs02ecai/image/upload/v1761637680/upload_arcis";
+    "https://res.cloudinary.com/dzs02ecai/image/upload/v1761637680/uploads";
   // const IMAGE_BASE_URL = "https://vmukti.com/backend/uploads";
 
   useEffect(() => {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import {
   Box,
   Heading,
@@ -22,6 +22,18 @@ import {
 import { CloseIcon, SearchIcon, InfoIcon } from "@chakra-ui/icons";
 import Link from "next/link";
 import { getBlogs } from "./blog";
+
+// Slugs of blogs that belong to VMukti and must not appear on the ArcisAI
+// site. The shared backend has no per-site flag, so we filter by urlWords
+// on the client. Add new VMukti slugs here as they are published.
+const VMUKTI_BLOG_SLUGS = new Set([
+  "ai-video-analytics-buyers-guide",
+  "edge-ai-vs-cloud-video-surveillance",
+  "banks-ai-video-analytics-fraud",
+  "cloud-vms-vs-on-premise-comparison",
+  "healthcare-video-analytics",
+  "logistics-video-analytics",
+]);
 
 // Helper component for the "No Results" UI
 const EmptyState = ({ searchTerm }) => {
@@ -52,74 +64,87 @@ const EmptyState = ({ searchTerm }) => {
 };
 
 export default function BlogsContent() {
-  const [blogs, setBlogs] = useState([]);
+  // We fetch the full published list once and paginate on the client so the
+  // VMukti denylist below can drop entries without leaving page 1 empty
+  // (all 6 VMukti blogs sit at the top of sort=latest on the shared backend).
+  const [allBlogs, setAllBlogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const blogsPerPage = 6;
-  const [totalPages, setTotalPages] = useState(1);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const borderColor = useColorModeValue("gray.200", "gray.700");
   const toast = useToast();
 
   const IMAGE_BASE_URL =
-    "https://res.cloudinary.com/dzs02ecai/image/upload/v1761637680/upload_arcis";
+    "https://res.cloudinary.com/dzs02ecai/image/upload/v1761637680/uploads";
 
   const [searchTerm, setSearchTerm] = useState("");
   const [debouncedSearch, setDebouncedSearch] = useState("");
   const [sortOrder, setSortOrder] = useState("latest");
 
-  // Debounce the search term — typing fires getBlogs() on every keystroke
-  // otherwise, which (a) hammers the API and (b) re-renders the grid on every
-  // keypress, balloon-ing INP on /blog. 300ms feels instant but skips the
-  // intermediate keystrokes.
+  // Debounce the search term so each keystroke doesn't re-run the client
+  // filter+sort. 300ms feels instant while skipping intermediate keystrokes.
   useEffect(() => {
     const id = setTimeout(() => setDebouncedSearch(searchTerm), 300);
     return () => clearTimeout(id);
   }, [searchTerm]);
 
-  // -----------Changes------------ \\
-
-  // Centralized function to fetch blogs from the API
-  const fetchBlogs = useCallback(async () => {
-    setIsLoading(true);
-    try {
-      const response = await getBlogs(
-        currentPage,
-        blogsPerPage,
-        debouncedSearch,
-        sortOrder,
-        "published"
-      );
-
-      // console.log("Fetched blogs:", response.data);
-      if (response.status === "success") {
-        // Safety: ensure only published blogs are shown even if API changes
-        const publishedOnly = Array.isArray(response.data)
-          ? response.data.filter((b) => b.status === "published")
-          : [];
-        // Filter out VMukti-specific blogs from ArcisAI site
-        const siteFiltered = publishedOnly.filter(
-          (b) => !b.content?.title?.toLowerCase().includes("vmukti")
-        );
-        setBlogs(siteFiltered);
-        // console.log("All the blogs",blogs)
-        setTotalPages(response.pagination.total);
-      }
-    } catch (error) {
-      // toast({
-      //   title: "Error fetching blogs",
-      //   description: error.message || "Unknown error",
-      //   status: "error",
-      //   duration: 5000,
-      //   isClosable: true,
-      // });
-    } finally {
-      setIsLoading(false);
-    }
-  }, [currentPage, blogsPerPage, debouncedSearch, sortOrder, toast]);
-
+  // One-time fetch of every published blog. After filtering the VMukti
+  // denylist client-side, search / sort / pagination all run against the
+  // in-memory list — no per-page round-trips.
   useEffect(() => {
-    fetchBlogs();
-  }, [fetchBlogs]);
+    let cancelled = false;
+    setIsLoading(true);
+    getBlogs(1, 200, "", "latest", "published")
+      .then((response) => {
+        if (cancelled) return;
+        if (response.status === "success" && Array.isArray(response.data)) {
+          const filtered = response.data.filter(
+            (b) =>
+              b.status === "published" &&
+              !VMUKTI_BLOG_SLUGS.has(b.metadata?.urlWords) &&
+              !b.content?.title?.toLowerCase().includes("vmukti")
+          );
+          setAllBlogs(filtered);
+        }
+      })
+      .catch(() => {})
+      .finally(() => {
+        if (!cancelled) setIsLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const filteredAndSorted = useMemo(() => {
+    let list = allBlogs;
+    if (debouncedSearch) {
+      const q = debouncedSearch.toLowerCase();
+      list = list.filter((b) =>
+        b.content?.title?.toLowerCase().includes(q)
+      );
+    }
+    return [...list].sort((a, b) => {
+      const da = new Date(a.updatedAt || a.createdAt).getTime();
+      const db = new Date(b.updatedAt || b.createdAt).getTime();
+      return sortOrder === "latest" ? db - da : da - db;
+    });
+  }, [allBlogs, debouncedSearch, sortOrder]);
+
+  const totalPages = Math.max(
+    1,
+    Math.ceil(filteredAndSorted.length / blogsPerPage)
+  );
+  const blogs = filteredAndSorted.slice(
+    (currentPage - 1) * blogsPerPage,
+    currentPage * blogsPerPage
+  );
+
+  // If filtering/searching shrinks the list below the current page, snap back
+  // to page 1 so the user isn't stranded on an empty page.
+  useEffect(() => {
+    if (currentPage > totalPages) setCurrentPage(1);
+  }, [currentPage, totalPages]);
 
   // Handler for changing search term
   const handleSearchChange = (e) => {
