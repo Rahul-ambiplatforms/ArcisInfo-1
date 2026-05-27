@@ -74,8 +74,12 @@ export default function BlogsContent() {
   const borderColor = useColorModeValue("gray.200", "gray.700");
   const toast = useToast();
 
+  // f_auto,q_auto = best modern format + auto-quality; w_1200 caps thumbnail
+  // width. Without these, Cloudinary serves the 5-10 MB originals, which
+  // makes the grid feel like images aren't loading. The transform stays in
+  // the base URL so each card just appends its filename.
   const IMAGE_BASE_URL =
-    "https://res.cloudinary.com/dzs02ecai/image/upload/v1761637680/uploads";
+    "https://res.cloudinary.com/dzs02ecai/image/upload/f_auto,q_auto,w_1200/v1761637680/uploads";
 
   const [searchTerm, setSearchTerm] = useState("");
   const [debouncedSearch, setDebouncedSearch] = useState("");
