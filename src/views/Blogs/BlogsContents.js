@@ -325,11 +325,13 @@ const BlogsOverviewDash = ({ urlWords: urlWordsProp }) => {
   }, []);
   // const IMAGE_BASE_URL =
   //   process.env.REACT_APP_IMAGE_BASE_URL || "http://localhost:5000/uploads";
-  // f_auto,q_auto = best modern format + auto-quality; w_1920 caps width for
-  // the hero and inline article images. Without these, Cloudinary serves the
-  // multi-megabyte originals (5-10 MB each) and the browser appears to hang.
+  // ArcisAI blog images live in the `upload_arcis` Cloudinary folder.
+  // (`uploads` holds VMukti's images, which the backend already filters out
+  // for arcisai.io callers via Origin header.)
+  // f_auto,q_auto = best modern format + auto-quality; w_1920 caps width so
+  // we don't ship the 5-10 MB originals.
   const IMAGE_BASE_URL =
-    "https://res.cloudinary.com/dzs02ecai/image/upload/f_auto,q_auto,w_1920/v1761637680/uploads";
+    "https://res.cloudinary.com/dzs02ecai/image/upload/f_auto,q_auto,w_1920/v1761637680/upload_arcis";
   // const IMAGE_BASE_URL = "https://vmukti.com/backend/uploads";
 
   useEffect(() => {

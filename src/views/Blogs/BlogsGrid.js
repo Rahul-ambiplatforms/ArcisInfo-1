@@ -74,12 +74,13 @@ export default function BlogsContent() {
   const borderColor = useColorModeValue("gray.200", "gray.700");
   const toast = useToast();
 
+  // ArcisAI blog images live in the `upload_arcis` Cloudinary folder.
+  // (`uploads` holds VMukti's images, which the backend already filters out
+  // for arcisai.io callers via Origin header.)
   // f_auto,q_auto = best modern format + auto-quality; w_1200 caps thumbnail
-  // width. Without these, Cloudinary serves the 5-10 MB originals, which
-  // makes the grid feel like images aren't loading. The transform stays in
-  // the base URL so each card just appends its filename.
+  // width so we don't ship the 5-10 MB originals.
   const IMAGE_BASE_URL =
-    "https://res.cloudinary.com/dzs02ecai/image/upload/f_auto,q_auto,w_1200/v1761637680/uploads";
+    "https://res.cloudinary.com/dzs02ecai/image/upload/f_auto,q_auto,w_1200/v1761637680/upload_arcis";
 
   const [searchTerm, setSearchTerm] = useState("");
   const [debouncedSearch, setDebouncedSearch] = useState("");
