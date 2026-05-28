@@ -27,7 +27,7 @@ import {
 import { SearchIcon } from '@chakra-ui/icons';
 import { FaFileAlt, FaDownload } from 'react-icons/fa';
 
-const API_BASE_URL = 'https://etaems.arcisai.io:5000/api/version';
+const API_BASE_URL = 'https://vmukti.com/backend/api/version';
 const PAGE_SIZE = 10;
 
 const cornerStyle = {
