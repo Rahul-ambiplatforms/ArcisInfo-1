@@ -125,6 +125,14 @@ export const dropdownData = {
         label: "Documents",
         link: "/documents",
       },
+      {
+        label: "Tools",
+        link: "/tools",
+      },
+      {
+        label: "Firmware",
+        link: "/firmware",
+      },
     ],
   },
 };
