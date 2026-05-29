@@ -34,7 +34,7 @@ const PAGE_SIZE = 10;
 const instance = axios.create({ baseURL: API_BASE_URL, timeout: 15000 });
 
 const getAllAppVersion = async () => {
-  const res = await instance.get('/app/getAllApps');
+  const res = await instance.get('/app/latest');
   return res.data;
 };
 
