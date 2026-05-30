@@ -28,7 +28,7 @@ import { HamburgerIcon } from '@chakra-ui/icons';
 import CustomButton from '../CustomButton';
 import NavbarDownIcon from '../Icons/Navbar_down_icon.svg';
 import NextLink from 'next/link';
-import { dropdownData, actionLinks, loginButton } from './navbarData';
+import { dropdownData, directNavLinks, actionLinks, loginButton } from './navbarData';
 
 // Drawer + Accordion subtree only loaded on first burger tap. Keeps initial
 // Navbar JS small and the hamburger tap → next-paint under the INP budget.
@@ -328,6 +328,28 @@ const Navbar = () => {
               title={dropdownData.resources.title}
               data={dropdownData.resources}
             />
+            {directNavLinks.map((item) => (
+              <Link
+                key={item.link}
+                as={NextLink}
+                href={item.link}
+                px={4}
+                py={2}
+                fontSize="16px"
+                fontWeight="400"
+                color="white"
+                textTransform="uppercase"
+                letterSpacing="0.5px"
+                _hover={{
+                  color: 'white',
+                  textDecoration: 'none',
+                  bg: 'whiteAlpha.100',
+                }}
+                borderRadius="md"
+              >
+                {item.label}
+              </Link>
+            ))}
           </HStack>
         </Flex>
 

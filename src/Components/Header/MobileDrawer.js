@@ -21,7 +21,7 @@ import {
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import CustomButton from '../CustomButton';
-import { dropdownData, actionLinks, loginButton } from './navbarData';
+import { dropdownData, directNavLinks, actionLinks, loginButton } from './navbarData';
 
 /**
  * Mobile menu drawer extracted into its own chunk so the entire Chakra Drawer
@@ -145,6 +145,27 @@ export default function MobileDrawer({ isOpen, onClose }) {
                   </AccordionPanel>
                 </AccordionItem>
               </Accordion>
+            ))}
+
+            {directNavLinks.map((item) => (
+              <Button
+                key={item.link}
+                as={NextLink}
+                href={item.link}
+                variant="ghost"
+                color="white"
+                w="full"
+                h="60px"
+                justifyContent="flex-start"
+                borderRadius={0}
+                fontSize="16px"
+                fontWeight="400"
+                textTransform="uppercase"
+                _hover={{ bg: 'gray.900', color: 'white' }}
+                onClick={onClose}
+              >
+                {item.label}
+              </Button>
             ))}
 
             <Button

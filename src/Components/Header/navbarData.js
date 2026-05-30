@@ -137,6 +137,14 @@ export const dropdownData = {
   },
 };
 
+// Top-level direct links (no dropdown) — rendered next to the dropdowns.
+export const directNavLinks = [
+  {
+    label: "SUPPORT",
+    link: "/support",
+  },
+];
+
 export const actionLinks = [
   {
     label: "PARTNER WITH US",
