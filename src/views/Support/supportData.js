@@ -361,6 +361,166 @@ export const supportCategories = [
     ],
   },
   {
+    slug: 'nvr-connectivity',
+    title: 'NVR Connectivity & Configuration',
+    description: 'NVR setup, camera linking, and recordings',
+    iconName: 'FiHardDrive',
+    accent: '#5EEAD4',
+    accentSoft: 'rgba(94, 234, 212, 0.12)',
+    subtopics: [
+      {
+        title: 'Camera-to-NVR Connection',
+        faqs: [
+          {
+            q: 'How do I connect my IP camera to the NVR without an internet connection?',
+            a: [
+              "Connect the camera directly to the NVR's PoE port using a Cat5e/Cat6 cable.",
+              'If the NVR has no PoE ports, connect both devices to the same network switch.',
+              'Ensure the camera and NVR are powered on and connected properly.',
+            ],
+          },
+          {
+            q: 'Why is my camera not showing up on the NVR monitor?',
+            a: [
+              'Check whether the camera is receiving power.',
+              'Ensure the camera and NVR are on the same IP subnet.',
+              'Verify the network cable connection and camera status.',
+            ],
+          },
+          {
+            q: 'Why am I getting an "IP Conflict" or "Duplicate IP" error?',
+            a: [
+              'Two devices are using the same IP address.',
+              'Assign a unique IP address to one of the devices.',
+              'Reboot the affected device after changing the IP.',
+            ],
+          },
+          {
+            q: 'Can I use a different brand camera with my NVR?',
+            a: [
+              'Ensure both devices support the ONVIF protocol.',
+              'Enable ONVIF on the camera.',
+              'Add the camera using its ONVIF username and password.',
+            ],
+          },
+          {
+            q: 'Why does the NVR show "Invalid Password" for the camera?',
+            a: [
+              "Verify the camera's login credentials.",
+              'Update the correct username and password in the NVR.',
+              'Ensure the camera password has not been changed recently.',
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Camera Detection & Status',
+        faqs: [
+          {
+            q: 'Why is my camera not detected during NVR device search?',
+            a: [
+              'Ensure the camera and NVR are connected to the same network.',
+              'Verify the camera has a valid IP address.',
+              'Use ADCAMSCANNER to confirm the camera is online.',
+              'Add the camera manually using its IP address if auto-search fails.',
+            ],
+          },
+          {
+            q: 'Why is my camera showing offline after being added to the NVR?',
+            a: [
+              'Verify the camera credentials entered in the NVR.',
+              'Check network connectivity between the camera and NVR.',
+              'Ensure the camera IP address has not changed.',
+              'Confirm the camera and NVR are on the same subnet.',
+            ],
+          },
+          {
+            q: 'Why is my camera added through the mobile app but remains offline in the NVR?',
+            a: [
+              'Verify the camera port number is configured correctly.',
+              'Ensure the camera IP address is reachable from the NVR.',
+              'Check that the camera credentials match those configured in the NVR.',
+              'Re-add the camera manually if automatic configuration fails.',
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Remote Access & Mobile App',
+        faqs: [
+          {
+            q: 'How do I view my NVR cameras on my mobile phone remotely?',
+            a: [
+              'Connect the NVR to the internet using a router.',
+              'Enable P2P/Cloud service in the NVR settings.',
+              'Scan the QR code using the mobile app to add the device.',
+            ],
+          },
+          {
+            q: 'Why is live view lagging or buffering on the mobile app?',
+            a: [
+              'Check the internet upload speed at the installation site.',
+              'Switch from Main Stream to Sub Stream in the app.',
+              'Reduce video quality to improve performance.',
+            ],
+          },
+          {
+            q: 'Do I need to configure Port Forwarding?',
+            a: [
+              'Port forwarding is usually not required when using P2P/Cloud services.',
+              'Use port forwarding only for direct remote access via IP address.',
+              'Verify router settings if direct access is needed.',
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Network & Notifications',
+        faqs: [
+          {
+            q: 'Why is my NVR network status showing Offline?',
+            a: [
+              'Check that the Ethernet cable is properly connected.',
+              'Enable DHCP in the network settings.',
+              'Restart the NVR and router if necessary.',
+            ],
+          },
+          {
+            q: 'How do I enable motion detection notifications or email alerts?',
+            a: [
+              'Enable Motion Detection in the NVR settings.',
+              'Turn on Push Notifications in the mobile app.',
+              'Configure SMTP settings correctly for email alerts.',
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Recording & Playback',
+        faqs: [
+          {
+            q: 'Why is my NVR not recording video?',
+            a: [
+              'Check whether the HDD is installed properly.',
+              'Format the HDD if it is new.',
+              'Verify recording mode is enabled (Continuous, Motion, or Scheduled).',
+              'Ensure sufficient storage space is available.',
+            ],
+          },
+          {
+            q: "Why can't I view playback recordings?",
+            a: [
+              'Confirm that recording is enabled.',
+              'Verify the HDD is functioning properly.',
+              'Check the selected date and time range.',
+              'Ensure recordings exist for the requested period.',
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
     slug: 'app-dashboard',
     title: 'App & Dashboard',
     description: 'App crashes, UI bugs, login issues',

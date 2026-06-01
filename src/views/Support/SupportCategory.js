@@ -38,6 +38,7 @@ import {
   FiDownloadCloud,
   FiShield,
   FiHelpCircle,
+  FiHardDrive,
   FiArrowLeft,
   FiMail,
   FiMessageCircle,
@@ -58,6 +59,7 @@ const iconMap = {
   FiDownloadCloud,
   FiShield,
   FiHelpCircle,
+  FiHardDrive,
 };
 
 // Renders the FAQ answer: string → paragraph, array → bullet list.

@@ -31,6 +31,7 @@ import {
   FiDownloadCloud,
   FiShield,
   FiHelpCircle,
+  FiHardDrive,
   FiArrowRight,
   FiMail,
   FiMessageCircle,
@@ -50,6 +51,7 @@ const iconMap = {
   FiDownloadCloud,
   FiShield,
   FiHelpCircle,
+  FiHardDrive,
 };
 
 /* ---------- Search helpers ---------- */
