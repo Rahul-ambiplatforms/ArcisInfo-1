@@ -16,6 +16,7 @@ import seoPageDataExpansion4 from "../../data/seoPageDataExpansion4";
 import seoPageDataExpansion5 from "../../data/seoPageDataExpansion5";
 import seoPageDataGujaratCities from "../../data/seoPageDataGujaratCities";
 import seoPageDataMaharashtraCities from "../../data/seoPageDataMaharashtraCities";
+import seoPageDataTier2Cities from "../../data/seoPageDataTier2Cities";
 
 const SEOLandingPage = ({ paramsOverride }) => {
   const routerParams = useParams();
@@ -23,7 +24,7 @@ const SEOLandingPage = ({ paramsOverride }) => {
   const { category, pageSlug, city, slug, seriesId } = params;
 
   // Multi-strategy key lookup
-  const allSeoData = { ...seoPageData, ...seoPageDataExpansion, ...seoPageDataGeo, ...seoPageDataCompare, ...seoPageDataCompliance, ...seoPageDataExpansion2, ...seoPageDataGeoIntl, ...seoPageDataExpansion3, ...seoPageDataExpansion4, ...seoPageDataExpansion5, ...seoPageDataGujaratCities, ...seoPageDataMaharashtraCities };
+  const allSeoData = { ...seoPageData, ...seoPageDataExpansion, ...seoPageDataGeo, ...seoPageDataCompare, ...seoPageDataCompliance, ...seoPageDataExpansion2, ...seoPageDataGeoIntl, ...seoPageDataExpansion3, ...seoPageDataExpansion4, ...seoPageDataExpansion5, ...seoPageDataGujaratCities, ...seoPageDataMaharashtraCities, ...seoPageDataTier2Cities };
   const lookupKey = (city && allSeoData[`cctv-cameras-${city}`]) ? `cctv-cameras-${city}`
     : (category && pageSlug && allSeoData[`${category}-${pageSlug}`]) ? `${category}-${pageSlug}`
     : (pageSlug && allSeoData[pageSlug]) ? pageSlug
@@ -249,4 +250,5 @@ const SEOLandingPage = ({ paramsOverride }) => {
 };
 
 export default SEOLandingPage;
+
 
