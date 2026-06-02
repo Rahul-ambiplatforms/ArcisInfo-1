@@ -93,6 +93,14 @@ export const dropdownData = {
         link: "/BIS-ER-certification",
       },
       {
+        label: "Certifications",
+        link: "/certifications",
+      },
+      {
+        label: "Partners",
+        link: "/partners",
+      },
+      {
         label: "Event",
         link: "/event",
       },
