@@ -8,35 +8,71 @@ const FB_PIXEL_ID = ''; // ← paste your Facebook Pixel ID here
 
 // Server-side JSON-LD schemas — rendered in HTML so Google crawlers see them
 // without executing JavaScript.
+// Canonical host standardised to the apex https://arcisai.io (matches metadataBase
+// + page canonicals). Single Organization entity with shared @id; correct address
+// (Arista Eight, Bodakdev); parent Adiance founded 2003; real certifications
+// including BIS-ER R-72003735 ER01:2024 and STQC-certified VMS.
+const SITE = 'https://arcisai.io';
+
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
+  '@id': `${SITE}/#organization`,
   name: 'ArcisAI',
+  alternateName: ['Arcis AI', 'ArcisAI by Adiance Technologies'],
   legalName: 'Adiance Technologies Private Limited',
-  url: 'https://www.arcisai.io',
-  logo: 'https://www.arcisai.io/assets/logo.webp',
+  url: SITE,
+  logo: `${SITE}/assets/logo.webp`,
+  foundingDate: '2021', // ArcisAI brand launch; parent Adiance founded 2003 (below)
+  slogan: 'Engineered in India. Certified in India. Built for India.',
+  description:
+    "ArcisAI is India's premium AI-powered CCTV and intelligent surveillance ecosystem — BIS-ER certified hardware and STQC-certified VMS, with Edge AI cameras, Cloud AI analytics, and ArcisGPT generative AI. Made in India by Adiance Technologies; NDAA compliant.",
+  email: 'marketing@arcisai.io',
   telephone: '+91-968-777-9999',
-  email: 'info@arcisai.io',
-  contactPoint: {
-    '@type': 'ContactPoint',
-    telephone: '+91-968-777-9999',
-    email: 'marketing@arcisai.io',
-    contactType: 'sales',
-    areaServed: 'IN',
-    availableLanguage: ['English', 'Hindi'],
+  parentOrganization: {
+    '@type': 'Organization',
+    name: 'Adiance Technologies Private Limited',
+    url: 'https://www.adiance.com',
+    foundingDate: '2003',
   },
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '811-812, Gala Empire, Drive In Road',
+    streetAddress: 'Arista Eight, Corporate House, Rajpath Rangoli Road, Bodakdev',
     addressLocality: 'Ahmedabad',
     addressRegion: 'Gujarat',
     postalCode: '380054',
     addressCountry: 'IN',
   },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+91-968-777-9999',
+    email: 'marketing@arcisai.io',
+    contactType: 'sales',
+    areaServed: ['IN', 'US', 'AE', 'GB', 'SG', 'AU'],
+    availableLanguage: ['English', 'Hindi'],
+  },
+  areaServed: ['IN', 'US', 'AE', 'GB', 'SG', 'AU'],
+  knowsAbout: [
+    'AI CCTV Cameras', 'Edge AI Surveillance', 'Video Management System',
+    'Generative AI for Video Surveillance', 'Cloud Video Analytics',
+    'Smart City Surveillance', 'Made in India CCTV', 'NDAA Compliant CCTV',
+    'BIS-ER Certified CCTV', 'STQC Certified VMS',
+  ],
+  hasCredential: [
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'certification', name: 'BIS-ER Certified (R-72003735 ER01:2024)' },
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'certification', name: 'STQC Certified Video Management Software (VMS)' },
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'certification', name: 'ISO/IEC 27001:2022' },
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'certification', name: 'CE' },
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'certification', name: 'FCC' },
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'certification', name: 'RoHS' },
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'certification', name: 'ONVIF Compliant' },
+  ],
+  brand: { '@type': 'Brand', name: 'ArcisAI', slogan: "India's Premium AI CCTV" },
   sameAs: [
     'https://www.linkedin.com/company/arcisai',
-    'https://twitter.com/ArcisAI',
+    'https://www.instagram.com/_arcisai_/',
     'https://www.youtube.com/@arcisai',
+    'https://twitter.com/ArcisAI',
     'https://www.facebook.com/ArcisAI',
   ],
 };
@@ -44,13 +80,15 @@ const organizationSchema = {
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
+  '@id': `${SITE}/#website`,
   name: 'ArcisAI',
-  url: 'https://www.arcisai.io',
+  url: SITE,
+  publisher: { '@id': `${SITE}/#organization` },
   potentialAction: {
     '@type': 'SearchAction',
     target: {
       '@type': 'EntryPoint',
-      urlTemplate: 'https://www.arcisai.io/search?q={search_term_string}',
+      urlTemplate: `${SITE}/search?q={search_term_string}`,
     },
     'query-input': 'required name=search_term_string',
   },

@@ -1,1042 +1,1042 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.arcisai.io/</loc>
+    <loc>https://arcisai.io/</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/documents</loc>
+    <loc>https://arcisai.io/documents</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/solution/edge-ai</loc>
+    <loc>https://arcisai.io/solution/edge-ai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/solution/corporate</loc>
+    <loc>https://arcisai.io/solution/corporate</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/solution/retail</loc>
+    <loc>https://arcisai.io/solution/retail</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/solution/banking</loc>
+    <loc>https://arcisai.io/solution/banking</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/solution/smart-city</loc>
+    <loc>https://arcisai.io/solution/smart-city</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/solution/healthcare</loc>
+    <loc>https://arcisai.io/solution/healthcare</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/solution/manufacturing</loc>
+    <loc>https://arcisai.io/solution/manufacturing</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/solution/logistics</loc>
+    <loc>https://arcisai.io/solution/logistics</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/s-series</loc>
+    <loc>https://arcisai.io/s-series</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/s-series/ai-bullet-cctv-camera</loc>
+    <loc>https://arcisai.io/s-series/ai-bullet-cctv-camera</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/s-series/ai-ptz-cctv-camera</loc>
+    <loc>https://arcisai.io/s-series/ai-ptz-cctv-camera</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/s-series/ai-dome-cctv-camera</loc>
+    <loc>https://arcisai.io/s-series/ai-dome-cctv-camera</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/eco-series</loc>
+    <loc>https://arcisai.io/eco-series</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/eco-series/bullet-cctv-camera</loc>
+    <loc>https://arcisai.io/eco-series/bullet-cctv-camera</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/eco-series/ptz-cctv-camera</loc>
+    <loc>https://arcisai.io/eco-series/ptz-cctv-camera</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/eco-series/ptz-cctv-camera</loc>
+    <loc>https://arcisai.io/eco-series/ptz-cctv-camera</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/arcis-bridge-device</loc>
+    <loc>https://arcisai.io/arcis-bridge-device</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cloud-vms</loc>
+    <loc>https://arcisai.io/cloud-vms</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/arcis-nvr</loc>
+    <loc>https://arcisai.io/arcis-nvr</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/about-us</loc>
+    <loc>https://arcisai.io/about-us</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/why-choose-arcisai</loc>
+    <loc>https://arcisai.io/why-choose-arcisai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/event</loc>
+    <loc>https://arcisai.io/event</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/event/ifsec-india-2025</loc>
+    <loc>https://arcisai.io/event/ifsec-india-2025</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/privacy-policy</loc>
+    <loc>https://arcisai.io/privacy-policy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/terms-of-service</loc>
+    <loc>https://arcisai.io/terms-of-service</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/contact-us</loc>
+    <loc>https://arcisai.io/contact-us</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog</loc>
+    <loc>https://arcisai.io/blog</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/arcisgpt</loc>
+    <loc>https://arcisai.io/arcisgpt</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/faq</loc>
+    <loc>https://arcisai.io/faq</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/glossary</loc>
+    <loc>https://arcisai.io/glossary</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/events/convergence-india-2026</loc>
+    <loc>https://arcisai.io/events/convergence-india-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-mumbai</loc>
+    <loc>https://arcisai.io/cctv-cameras-mumbai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-delhi</loc>
+    <loc>https://arcisai.io/cctv-cameras-delhi</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-bangalore</loc>
+    <loc>https://arcisai.io/cctv-cameras-bangalore</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-hyderabad</loc>
+    <loc>https://arcisai.io/cctv-cameras-hyderabad</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-chennai</loc>
+    <loc>https://arcisai.io/cctv-cameras-chennai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-kolkata</loc>
+    <loc>https://arcisai.io/cctv-cameras-kolkata</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-pune</loc>
+    <loc>https://arcisai.io/cctv-cameras-pune</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-ahmedabad</loc>
+    <loc>https://arcisai.io/cctv-cameras-ahmedabad</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-jaipur</loc>
+    <loc>https://arcisai.io/cctv-cameras-jaipur</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-lucknow</loc>
+    <loc>https://arcisai.io/cctv-cameras-lucknow</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-surat</loc>
+    <loc>https://arcisai.io/cctv-cameras-surat</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-kanpur</loc>
+    <loc>https://arcisai.io/cctv-cameras-kanpur</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-nagpur</loc>
+    <loc>https://arcisai.io/cctv-cameras-nagpur</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-indore</loc>
+    <loc>https://arcisai.io/cctv-cameras-indore</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-thane</loc>
+    <loc>https://arcisai.io/cctv-cameras-thane</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-bhopal</loc>
+    <loc>https://arcisai.io/cctv-cameras-bhopal</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-visakhapatnam</loc>
+    <loc>https://arcisai.io/cctv-cameras-visakhapatnam</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-patna</loc>
+    <loc>https://arcisai.io/cctv-cameras-patna</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-vadodara</loc>
+    <loc>https://arcisai.io/cctv-cameras-vadodara</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-ghaziabad</loc>
+    <loc>https://arcisai.io/cctv-cameras-ghaziabad</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-ludhiana</loc>
+    <loc>https://arcisai.io/cctv-cameras-ludhiana</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-agra</loc>
+    <loc>https://arcisai.io/cctv-cameras-agra</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-nashik</loc>
+    <loc>https://arcisai.io/cctv-cameras-nashik</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-faridabad</loc>
+    <loc>https://arcisai.io/cctv-cameras-faridabad</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-meerut</loc>
+    <loc>https://arcisai.io/cctv-cameras-meerut</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-rajkot</loc>
+    <loc>https://arcisai.io/cctv-cameras-rajkot</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-varanasi</loc>
+    <loc>https://arcisai.io/cctv-cameras-varanasi</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-srinagar</loc>
+    <loc>https://arcisai.io/cctv-cameras-srinagar</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-aurangabad</loc>
+    <loc>https://arcisai.io/cctv-cameras-aurangabad</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-dhanbad</loc>
+    <loc>https://arcisai.io/cctv-cameras-dhanbad</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-amritsar</loc>
+    <loc>https://arcisai.io/cctv-cameras-amritsar</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-navi-mumbai</loc>
+    <loc>https://arcisai.io/cctv-cameras-navi-mumbai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-allahabad</loc>
+    <loc>https://arcisai.io/cctv-cameras-allahabad</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-ranchi</loc>
+    <loc>https://arcisai.io/cctv-cameras-ranchi</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-howrah</loc>
+    <loc>https://arcisai.io/cctv-cameras-howrah</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-coimbatore</loc>
+    <loc>https://arcisai.io/cctv-cameras-coimbatore</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-jabalpur</loc>
+    <loc>https://arcisai.io/cctv-cameras-jabalpur</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-gwalior</loc>
+    <loc>https://arcisai.io/cctv-cameras-gwalior</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-vijayawada</loc>
+    <loc>https://arcisai.io/cctv-cameras-vijayawada</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-jodhpur</loc>
+    <loc>https://arcisai.io/cctv-cameras-jodhpur</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-madurai</loc>
+    <loc>https://arcisai.io/cctv-cameras-madurai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-raipur</loc>
+    <loc>https://arcisai.io/cctv-cameras-raipur</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-kota</loc>
+    <loc>https://arcisai.io/cctv-cameras-kota</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-chandigarh</loc>
+    <loc>https://arcisai.io/cctv-cameras-chandigarh</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-guwahati</loc>
+    <loc>https://arcisai.io/cctv-cameras-guwahati</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-solapur</loc>
+    <loc>https://arcisai.io/cctv-cameras-solapur</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-hubli</loc>
+    <loc>https://arcisai.io/cctv-cameras-hubli</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-mysore</loc>
+    <loc>https://arcisai.io/cctv-cameras-mysore</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-tiruchirappalli</loc>
+    <loc>https://arcisai.io/cctv-cameras-tiruchirappalli</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-bareilly</loc>
+    <loc>https://arcisai.io/cctv-cameras-bareilly</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/industry/banking-finance-cctv</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.arcisai.io/industry/retail-surveillance</loc>
+    <loc>https://arcisai.io/industry/banking-finance-cctv</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/industry/healthcare-security</loc>
+    <loc>https://arcisai.io/industry/retail-surveillance</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/industry/education-campus-cctv</loc>
+    <loc>https://arcisai.io/industry/healthcare-security</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/industry/manufacturing-surveillance</loc>
+    <loc>https://arcisai.io/industry/education-campus-cctv</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/industry/warehouse-logistics-cctv</loc>
+    <loc>https://arcisai.io/industry/manufacturing-surveillance</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/industry/government-defense-cctv</loc>
+    <loc>https://arcisai.io/industry/warehouse-logistics-cctv</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/industry/smart-city-surveillance</loc>
+    <loc>https://arcisai.io/industry/government-defense-cctv</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/industry/hospitality-cctv</loc>
+    <loc>https://arcisai.io/industry/smart-city-surveillance</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/industry/real-estate-construction</loc>
+    <loc>https://arcisai.io/industry/hospitality-cctv</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/industry/transportation-highways</loc>
+    <loc>https://arcisai.io/industry/real-estate-construction</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/industry/oil-gas-surveillance</loc>
+    <loc>https://arcisai.io/industry/transportation-highways</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/compare/arcisai-vs-cp-plus</loc>
+    <loc>https://arcisai.io/industry/oil-gas-surveillance</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/compare/arcisai-vs-hikvision</loc>
+    <loc>https://arcisai.io/compare/arcisai-vs-cp-plus</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/compare/arcisai-vs-dahua</loc>
+    <loc>https://arcisai.io/compare/arcisai-vs-hikvision</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/compare/arcisai-vs-godrej</loc>
+    <loc>https://arcisai.io/compare/arcisai-vs-dahua</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/compare/arcisai-vs-honeywell</loc>
+    <loc>https://arcisai.io/compare/arcisai-vs-godrej</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/compare/arcisai-vs-verkada</loc>
+    <loc>https://arcisai.io/compare/arcisai-vs-honeywell</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://arcisai.io/compare/arcisai-vs-verkada</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/compare/arcisai-vs-rhombus</loc>
+    <loc>https://arcisai.io/compare/arcisai-vs-rhombus</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/compare/ai-cctv-vs-traditional-cctv</loc>
+    <loc>https://arcisai.io/compare/ai-cctv-vs-traditional-cctv</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/compare/cloud-vms-vs-dvr-nvr</loc>
+    <loc>https://arcisai.io/compare/cloud-vms-vs-dvr-nvr</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/compare/4g-cameras-vs-wifi-cameras</loc>
+    <loc>https://arcisai.io/compare/4g-cameras-vs-wifi-cameras</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/compare/indian-vs-chinese-cctv</loc>
+    <loc>https://arcisai.io/compare/indian-vs-chinese-cctv</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/compare/stqc-certified-vs-non-certified</loc>
+    <loc>https://arcisai.io/compare/stqc-certified-vs-non-certified</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/resources/cctv-buyers-guide-india</loc>
+    <loc>https://arcisai.io/resources/cctv-buyers-guide-india</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/resources/how-to-choose-cctv-camera</loc>
+    <loc>https://arcisai.io/resources/how-to-choose-cctv-camera</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/resources/stqc-certification-guide</loc>
+    <loc>https://arcisai.io/resources/stqc-certification-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/resources/cctv-installation-cost-india</loc>
+    <loc>https://arcisai.io/resources/cctv-installation-cost-india</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/resources/ai-surveillance-roi-calculator</loc>
+    <loc>https://arcisai.io/resources/ai-surveillance-roi-calculator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/resources/cctv-camera-comparison-chart</loc>
+    <loc>https://arcisai.io/resources/cctv-camera-comparison-chart</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/resources/video-surveillance-laws-india</loc>
+    <loc>https://arcisai.io/resources/video-surveillance-laws-india</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/resources/cctv-maintenance-guide</loc>
+    <loc>https://arcisai.io/resources/cctv-maintenance-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/resources/cloud-vs-onpremise-surveillance</loc>
+    <loc>https://arcisai.io/resources/cloud-vs-onpremise-surveillance</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/resources/smart-city-surveillance-guide</loc>
+    <loc>https://arcisai.io/resources/smart-city-surveillance-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/state/maharashtra</loc>
+    <loc>https://arcisai.io/state/maharashtra</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/state/gujarat</loc>
+    <loc>https://arcisai.io/state/gujarat</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/state/karnataka</loc>
+    <loc>https://arcisai.io/state/karnataka</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/state/tamil-nadu</loc>
+    <loc>https://arcisai.io/state/tamil-nadu</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/state/telangana</loc>
+    <loc>https://arcisai.io/state/telangana</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/state/delhi-ncr</loc>
+    <loc>https://arcisai.io/state/delhi-ncr</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/state/uttar-pradesh</loc>
+    <loc>https://arcisai.io/state/uttar-pradesh</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/state/rajasthan</loc>
+    <loc>https://arcisai.io/state/rajasthan</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/state/madhya-pradesh</loc>
+    <loc>https://arcisai.io/state/madhya-pradesh</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/state/west-bengal</loc>
+    <loc>https://arcisai.io/state/west-bengal</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/state/punjab</loc>
+    <loc>https://arcisai.io/state/punjab</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/state/kerala</loc>
+    <loc>https://arcisai.io/state/kerala</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/state/andhra-pradesh</loc>
+    <loc>https://arcisai.io/state/andhra-pradesh</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/state/bihar</loc>
+    <loc>https://arcisai.io/state/bihar</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/state/odisha</loc>
+    <loc>https://arcisai.io/state/odisha</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-for-education-industry</loc>
+    <loc>https://arcisai.io/cctv-cameras-for-education-industry</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-for-healthcare-industry</loc>
+    <loc>https://arcisai.io/cctv-cameras-for-healthcare-industry</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-for-retail-industry</loc>
+    <loc>https://arcisai.io/cctv-cameras-for-retail-industry</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-for-banking-finance</loc>
+    <loc>https://arcisai.io/cctv-cameras-for-banking-finance</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-for-logistics-warehousing</loc>
+    <loc>https://arcisai.io/cctv-cameras-for-logistics-warehousing</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-for-hospitality-industry</loc>
+    <loc>https://arcisai.io/cctv-cameras-for-hospitality-industry</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-for-temples-religious-places</loc>
+    <loc>https://arcisai.io/cctv-cameras-for-temples-religious-places</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-for-smart-city-projects</loc>
+    <loc>https://arcisai.io/cctv-cameras-for-smart-city-projects</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-for-parking-management</loc>
+    <loc>https://arcisai.io/cctv-cameras-for-parking-management</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-for-traffic-management</loc>
+    <loc>https://arcisai.io/cctv-cameras-for-traffic-management</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-assam</loc>
+    <loc>https://arcisai.io/cctv-cameras-assam</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-meghalaya</loc>
+    <loc>https://arcisai.io/cctv-cameras-meghalaya</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-manipur</loc>
+    <loc>https://arcisai.io/cctv-cameras-manipur</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-tripura</loc>
+    <loc>https://arcisai.io/cctv-cameras-tripura</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-mizoram</loc>
+    <loc>https://arcisai.io/cctv-cameras-mizoram</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-nagaland</loc>
+    <loc>https://arcisai.io/cctv-cameras-nagaland</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-arunachal-pradesh</loc>
+    <loc>https://arcisai.io/cctv-cameras-arunachal-pradesh</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-sikkim</loc>
+    <loc>https://arcisai.io/cctv-cameras-sikkim</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-goa</loc>
+    <loc>https://arcisai.io/cctv-cameras-goa</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-himachal-pradesh</loc>
+    <loc>https://arcisai.io/cctv-cameras-himachal-pradesh</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-uttarakhand</loc>
+    <loc>https://arcisai.io/cctv-cameras-uttarakhand</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-jharkhand</loc>
+    <loc>https://arcisai.io/cctv-cameras-jharkhand</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-chhattisgarh</loc>
+    <loc>https://arcisai.io/cctv-cameras-chhattisgarh</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-mangalore</loc>
+    <loc>https://arcisai.io/cctv-cameras-mangalore</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-belgaum</loc>
+    <loc>https://arcisai.io/cctv-cameras-belgaum</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-bhubaneswar</loc>
+    <loc>https://arcisai.io/cctv-cameras-bhubaneswar</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-dehradun</loc>
+    <loc>https://arcisai.io/cctv-cameras-dehradun</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-shimla</loc>
+    <loc>https://arcisai.io/cctv-cameras-shimla</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-jammu</loc>
+    <loc>https://arcisai.io/cctv-cameras-jammu</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-jalandhar</loc>
+    <loc>https://arcisai.io/cctv-cameras-jalandhar</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-gorakhpur</loc>
+    <loc>https://arcisai.io/cctv-cameras-gorakhpur</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-moradabad</loc>
+    <loc>https://arcisai.io/cctv-cameras-moradabad</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/cctv-cameras-aligarh</loc>
+    <loc>https://arcisai.io/cctv-cameras-aligarh</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/ai-cctv-cameras-new-york</loc>
+    <loc>https://arcisai.io/ai-cctv-cameras-new-york</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/ai-cctv-cameras-washington-dc</loc>
+    <loc>https://arcisai.io/ai-cctv-cameras-washington-dc</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/ai-cctv-cameras-houston</loc>
+    <loc>https://arcisai.io/ai-cctv-cameras-houston</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/ai-cctv-cameras-los-angeles</loc>
+    <loc>https://arcisai.io/ai-cctv-cameras-los-angeles</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/ai-cctv-cameras-chicago</loc>
+    <loc>https://arcisai.io/ai-cctv-cameras-chicago</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/ai-cctv-cameras-abu-dhabi</loc>
+    <loc>https://arcisai.io/ai-cctv-cameras-abu-dhabi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/best-ai-cctv-cameras-enterprise-security-2026</loc>
+    <loc>https://arcisai.io/blog/best-ai-cctv-cameras-enterprise-security-2026</loc>
     <lastmod>2026-03-06T11:45:40.102Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/arcisgpt-ai-assistant-video-surveillance-natural-language-search</loc>
+    <loc>https://arcisai.io/blog/arcisgpt-ai-assistant-video-surveillance-natural-language-search</loc>
     <lastmod>2026-03-06T11:45:38.534Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/arcisai-vs-hikvision-vs-dahua-ai-camera-comparison-2026</loc>
+    <loc>https://arcisai.io/blog/arcisai-vs-hikvision-vs-dahua-ai-camera-comparison-2026</loc>
     <lastmod>2026-03-06T11:44:53.963Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/edge-ai-cctv-cameras-on-camera-processing-future-surveillance</loc>
+    <loc>https://arcisai.io/blog/edge-ai-cctv-cameras-on-camera-processing-future-surveillance</loc>
     <lastmod>2026-03-06T11:44:51.751Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/stqc-certification-ai-surveillance-cameras-enterprise-compliance</loc>
+    <loc>https://arcisai.io/blog/stqc-certification-ai-surveillance-cameras-enterprise-compliance</loc>
     <lastmod>2026-03-06T11:44:35.616Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/how-to-choose-ai-cctv-camera-smart-city-projects-india-2026</loc>
+    <loc>https://arcisai.io/blog/how-to-choose-ai-cctv-camera-smart-city-projects-india-2026</loc>
     <lastmod>2026-03-06T11:44:33.897Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/edge-ai-vs-cloud-ai-video-surveillance-enterprise-buyers-guide-2026</loc>
+    <loc>https://arcisai.io/blog/edge-ai-vs-cloud-ai-video-surveillance-enterprise-buyers-guide-2026</loc>
     <lastmod>2026-03-06T11:44:18.048Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/arcisai-vs-dahua-ai-cctv-comparison-india-2026</loc>
+    <loc>https://arcisai.io/blog/arcisai-vs-dahua-ai-cctv-comparison-india-2026</loc>
     <lastmod>2026-03-06T11:44:16.363Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/best-ai-cctv-camera-office-business-security-india-2026</loc>
+    <loc>https://arcisai.io/blog/best-ai-cctv-camera-office-business-security-india-2026</loc>
     <lastmod>2026-03-05T05:19:03.230Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/best-ai-cctv-camera-home-security-india-2026</loc>
+    <loc>https://arcisai.io/blog/best-ai-cctv-camera-home-security-india-2026</loc>
     <lastmod>2026-03-05T05:14:37.846Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/arcisai-vs-hikvision-ai-cctv-comparison-india-2026</loc>
+    <loc>https://arcisai.io/blog/arcisai-vs-hikvision-ai-cctv-comparison-india-2026</loc>
     <lastmod>2026-03-04T11:59:05.400Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/arcisai-vs-cp-plus-ai-cctv-comparison-2026</loc>
+    <loc>https://arcisai.io/blog/arcisai-vs-cp-plus-ai-cctv-comparison-2026</loc>
     <lastmod>2026-03-03T09:21:35.685Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/best-ai-cctv-camera-for-business</loc>
+    <loc>https://arcisai.io/blog/best-ai-cctv-camera-for-business</loc>
     <lastmod>2026-02-25T12:53:19.034Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/edge-ai-and-cloud-ai-surveillance</loc>
+    <loc>https://arcisai.io/blog/edge-ai-and-cloud-ai-surveillance</loc>
     <lastmod>2026-02-18T12:30:20.036Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/benefits-of-ai-cctv-cameras</loc>
+    <loc>https://arcisai.io/blog/benefits-of-ai-cctv-cameras</loc>
     <lastmod>2026-02-12T12:30:26.381Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/ai-cctv-vs-traditional-cctv</loc>
+    <loc>https://arcisai.io/blog/ai-cctv-vs-traditional-cctv</loc>
     <lastmod>2026-02-06T11:12:40.188Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/ai-cctv-camera-for-manufacturing</loc>
+    <loc>https://arcisai.io/blog/ai-cctv-camera-for-manufacturing</loc>
     <lastmod>2026-01-31T12:41:30.905Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/ai-cctv-camera-for-transportation</loc>
+    <loc>https://arcisai.io/blog/ai-cctv-camera-for-transportation</loc>
     <lastmod>2026-01-27T09:39:38.192Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/ai-cctv-camera-for-hospitals</loc>
+    <loc>https://arcisai.io/blog/ai-cctv-camera-for-hospitals</loc>
     <lastmod>2026-01-21T09:46:56.477Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/top-security-camera-features</loc>
+    <loc>https://arcisai.io/blog/top-security-camera-features</loc>
     <lastmod>2026-01-09T09:31:39.138Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/ai-cctv-camera-for-retail-and-shopping-malls</loc>
+    <loc>https://arcisai.io/blog/ai-cctv-camera-for-retail-and-shopping-malls</loc>
     <lastmod>2025-12-30T07:04:31.800Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/ai-cctv-camera-for-school-bus</loc>
+    <loc>https://arcisai.io/blog/ai-cctv-camera-for-school-bus</loc>
     <lastmod>2025-12-23T11:36:29.388Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/ai-cctv-cameras-for-smart-city</loc>
+    <loc>https://arcisai.io/blog/ai-cctv-cameras-for-smart-city</loc>
     <lastmod>2025-12-13T11:11:01.818Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/arcisai-ifsec-india-2025</loc>
+    <loc>https://arcisai.io/blog/arcisai-ifsec-india-2025</loc>
     <lastmod>2025-11-29T12:10:15.855Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/ai-cctv-camera-for-bank-security</loc>
+    <loc>https://arcisai.io/blog/ai-cctv-camera-for-bank-security</loc>
     <lastmod>2025-11-21T11:40:45.700Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/ai-cctv-cameras-for-hotels-resorts-restaurants</loc>
+    <loc>https://arcisai.io/blog/ai-cctv-cameras-for-hotels-resorts-restaurants</loc>
     <lastmod>2025-11-19T12:48:07.348Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/ai-cctv-camera-for-warehouse-security</loc>
+    <loc>https://arcisai.io/blog/ai-cctv-camera-for-warehouse-security</loc>
     <lastmod>2025-11-15T09:45:24.996Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/ai-cctv-for-construction-industry</loc>
+    <loc>https://arcisai.io/blog/ai-cctv-for-construction-industry</loc>
     <lastmod>2025-10-30T10:28:30.183Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/ai-cctv-for-schools</loc>
+    <loc>https://arcisai.io/blog/ai-cctv-for-schools</loc>
     <lastmod>2025-10-30T01:22:50.423Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/stqc-certification-for-cctv-in-india-guide</loc>
+    <loc>https://arcisai.io/blog/stqc-certification-for-cctv-in-india-guide</loc>
     <lastmod>2025-10-29T14:12:21.067Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.arcisai.io/blog/reasons-to-visit-arcisai-at-ifsec-india-expo</loc>
+    <loc>https://arcisai.io/blog/reasons-to-visit-arcisai-at-ifsec-india-expo</loc>
     <lastmod>2025-10-28T11:24:11.210Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
