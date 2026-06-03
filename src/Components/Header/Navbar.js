@@ -338,6 +338,7 @@ const Navbar = () => {
                 fontSize="16px"
                 fontWeight="400"
                 color="white"
+                whiteSpace="nowrap"
                 textTransform="uppercase"
                 letterSpacing="0.5px"
                 _hover={{
@@ -358,6 +359,7 @@ const Navbar = () => {
           spacing={6}
           display={{ base: 'none', lg: 'flex' }}
           alignItems="center"
+          flexShrink={0}
         >
           <Link
             as={NextLink}
@@ -365,6 +367,7 @@ const Navbar = () => {
             fontSize="16px"
             fontWeight="400"
             color="white"
+            whiteSpace="nowrap"
             _hover={{ color: 'white', textDecoration: 'none', opacity: 0.8 }}
             textTransform="uppercase"
             letterSpacing="0.5px"
