@@ -10,8 +10,15 @@ import {
   ListItem,
   Divider,
   Button,
+  Badge,
 } from '@chakra-ui/react';
 import PageContentWrapper from '../../Components/PageContentWrapper';
+
+// Brand palette (matches site dark theme: body #171717, accents #9678E1 / #8266C9)
+const ACCENT = '#9678E1';
+const ACCENT_DEEP = '#8266C9';
+const CARD_BG = 'rgba(255,255,255,0.04)';
+const CARD_BORDER = 'rgba(255,255,255,0.12)';
 
 const benefits = [
   {
@@ -107,113 +114,163 @@ const Partners = () => {
         />
       ))}
       <PageContentWrapper>
-        <Box maxW="6xl" mx="auto" px={{ base: 4, md: 8 }} py={{ base: 8, md: 14 }}>
+        <Box maxW="6xl" mx="auto" px={{ base: 4, md: 8 }} py={{ base: 10, md: 16 }} color="white">
 
           {/* H1 + Intro */}
-          <Heading as="h1" size="xl" mb={4}>
+          <Badge
+            bg="whiteAlpha.200"
+            color="white"
+            px={3}
+            py={1}
+            borderRadius="full"
+            mb={4}
+            fontSize="xs"
+            textTransform="uppercase"
+            letterSpacing="wider"
+          >
+            Channel Partner Program
+          </Badge>
+          <Heading
+            as="h1"
+            fontSize={{ base: '30px', md: '48px' }}
+            fontWeight="700"
+            lineHeight="1.15"
+            mb={4}
+            color="white"
+          >
             Become an ArcisAI Channel Partner
           </Heading>
-          <Text fontSize="lg" color="gray.600" mb={3}>
+          <Text fontSize={{ base: 'md', md: 'lg' }} color="whiteAlpha.800" mb={4} maxW="4xl">
             ArcisAI is India&apos;s AI-first, BIS-ER (R-72003735 ER01:2024) and STQC-certified,
             Made-in-India CCTV brand. We are building a network of trusted system integrators,
             installers, IT and security resellers, and distributors across India — with priority
             focus on Gujarat and Maharashtra.
           </Text>
-          <Text fontSize="lg" color="gray.600" mb={10}>
+          <Text fontSize={{ base: 'md', md: 'lg' }} color="whiteAlpha.700" mb={12} maxW="4xl">
             If you sell security solutions or manage infrastructure projects and want a
             compliance-ready, AI-powered product line that genuinely differentiates you from
             commodity camera brands, we would like to partner with you.
           </Text>
 
           {/* Why Partner */}
-          <Heading as="h2" size="lg" mb={6}>
+          <Heading as="h2" fontSize={{ base: '24px', md: '32px' }} fontWeight="600" mb={6} color="white">
             Why Partner with ArcisAI?
           </Heading>
-          <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={6} mb={10}>
+          <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={5} mb={12}>
             {benefits.map((b, i) => (
-              <Box key={i} p={5} borderWidth="1px" borderRadius="lg">
-                <Heading as="h3" size="sm" mb={2}>
+              <Box
+                key={i}
+                p={6}
+                bg={CARD_BG}
+                border="1px solid"
+                borderColor={CARD_BORDER}
+                borderRadius="xl"
+                transition="border-color 0.2s, transform 0.2s"
+                _hover={{ borderColor: ACCENT, transform: 'translateY(-3px)' }}
+              >
+                <Heading as="h3" fontSize="md" fontWeight="600" mb={2} color={ACCENT}>
                   {b.title}
                 </Heading>
-                <Text color="gray.600" fontSize="sm">
+                <Text color="whiteAlpha.800" fontSize="sm">
                   {b.desc}
                 </Text>
               </Box>
             ))}
           </SimpleGrid>
 
-          <Divider mb={10} />
+          <Divider borderColor={CARD_BORDER} mb={12} />
 
           {/* Who Should Apply */}
-          <Heading as="h2" size="lg" mb={4}>
+          <Heading as="h2" fontSize={{ base: '24px', md: '32px' }} fontWeight="600" mb={4} color="white">
             Who Should Apply?
           </Heading>
-          <Text color="gray.600" mb={4}>
+          <Text color="whiteAlpha.800" mb={6} maxW="4xl">
             We welcome enquiries from businesses across India. Gujarat and Maharashtra are our
             current priority territories, but pan-India partners are also encouraged to apply.
           </Text>
-          <List spacing={3} mb={10} styleType="disc" pl={6}>
+          <List spacing={3} mb={12}>
             {whoShouldApply.map((item, i) => (
-              <ListItem key={i} color="gray.700">
+              <ListItem key={i} display="flex" alignItems="flex-start" color="whiteAlpha.900">
+                <Box as="span" w="7px" h="7px" mt="9px" mr={3} borderRadius="full" bg={ACCENT} flexShrink={0} />
                 {item}
               </ListItem>
             ))}
           </List>
 
-          <Divider mb={10} />
+          <Divider borderColor={CARD_BORDER} mb={12} />
 
           {/* What We Offer */}
-          <Heading as="h2" size="lg" mb={6}>
+          <Heading as="h2" fontSize={{ base: '24px', md: '32px' }} fontWeight="600" mb={6} color="white">
             What We Offer Partners
           </Heading>
-          <Stack spacing={5} mb={10}>
+          <Stack spacing={4} mb={12}>
             {whatWeOffer.map((item, i) => (
-              <Box key={i}>
-                <Heading as="h3" size="sm" mb={1}>
+              <Box
+                key={i}
+                p={{ base: 5, md: 6 }}
+                bg={CARD_BG}
+                border="1px solid"
+                borderColor={CARD_BORDER}
+                borderRadius="xl"
+              >
+                <Heading as="h3" fontSize="md" fontWeight="600" mb={1} color="white">
                   {item.title}
                 </Heading>
-                <Text color="gray.600">{item.desc}</Text>
+                <Text color="whiteAlpha.800">{item.desc}</Text>
               </Box>
             ))}
           </Stack>
 
-          <Divider mb={10} />
+          <Divider borderColor={CARD_BORDER} mb={12} />
 
           {/* FAQ */}
-          <Heading as="h2" size="lg" mb={6}>
+          <Heading as="h2" fontSize={{ base: '24px', md: '32px' }} fontWeight="600" mb={6} color="white">
             Frequently Asked Questions
           </Heading>
-          <Stack spacing={6} mb={12}>
+          <Stack spacing={4} mb={14}>
             {faqs.map((f, i) => (
-              <Box key={i}>
-                <Heading as="h3" size="sm" mb={1}>
+              <Box
+                key={i}
+                p={{ base: 5, md: 6 }}
+                bg={CARD_BG}
+                border="1px solid"
+                borderColor={CARD_BORDER}
+                borderRadius="xl"
+                transition="border-color 0.2s"
+                _hover={{ borderColor: ACCENT }}
+              >
+                <Heading as="h3" fontSize="md" fontWeight="600" mb={2} color="white">
                   {f.q}
                 </Heading>
-                <Text color="gray.600">{f.a}</Text>
+                <Text color="whiteAlpha.800">{f.a}</Text>
               </Box>
             ))}
           </Stack>
 
           {/* CTA */}
           <Box
-            bg="blue.50"
-            borderRadius="xl"
-            p={{ base: 6, md: 10 }}
+            bgGradient={`linear(135deg, ${ACCENT_DEEP}, ${ACCENT})`}
+            borderRadius="2xl"
+            p={{ base: 8, md: 12 }}
             textAlign="center"
           >
-            <Heading as="h2" size="lg" mb={3}>
+            <Heading as="h2" fontSize={{ base: '24px', md: '32px' }} fontWeight="700" mb={3} color="white">
               Ready to Join the ArcisAI Partner Network?
             </Heading>
-            <Text color="gray.600" mb={6} maxW="2xl" mx="auto">
+            <Text color="whiteAlpha.900" mb={8} maxW="2xl" mx="auto">
               Tell us about your business, the geographies you cover, and the types of projects you
               handle. Our partner team will be in touch within two business days.
             </Text>
             <Button
               as="a"
               href="/contact-us?type=partner"
-              colorScheme="blue"
+              bg="white"
+              color={ACCENT_DEEP}
               size="lg"
               px={8}
+              fontWeight="700"
+              _hover={{ bg: 'gray.100', transform: 'translateY(-2px)' }}
+              transition="all 0.2s"
             >
               Apply to Become a Partner
             </Button>
