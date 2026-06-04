@@ -94,7 +94,40 @@ export const metadata = {
   },
 };
 
+// Mirrors the logic in next.config.js so the <meta> CSP stays in sync with
+// the HTTP-header CSP. The browser intersects multiple CSP sources, so if
+// they drift the stricter one wins and silently blocks requests.
+function buildCsp() {
+  const isDev = process.env.NODE_ENV !== 'production';
+  const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL || '';
+  let apiOrigin = '';
+  try {
+    if (apiBase) apiOrigin = new URL(apiBase).origin;
+  } catch {
+    apiOrigin = '';
+  }
+  const extras = [];
+  if (apiOrigin) extras.push(apiOrigin);
+  if (isDev) extras.push('ws://localhost:3000', 'wss://localhost:3000');
+  const extraConnect = extras.length ? ' ' + extras.join(' ') : '';
+
+  return [
+    "default-src 'self'",
+    "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net",
+    "style-src 'self' 'unsafe-inline'",
+    "img-src 'self' data: blob: https:",
+    "font-src 'self' data:",
+    "frame-src https://www.googletagmanager.com https://www.facebook.com",
+    `connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.facebook.com https://connect.facebook.net https://www.arcisai.io https://arcisai.io https://vmukti.com https://hook.eu1.make.com https://etaems.arcisai.io:5000${extraConnect}`,
+    "media-src 'self' https:",
+    "object-src 'none'",
+    "base-uri 'self'",
+    "form-action 'self' https://www.arcisai.io https://www.facebook.com",
+  ].join('; ');
+}
+
 export default function RootLayout({ children }) {
+  const csp = buildCsp();
   return (
     <html lang="en">
       <head>
@@ -106,11 +139,9 @@ export default function RootLayout({ children }) {
           type="font/ttf"
           crossOrigin="anonymous"
         />
-        {/* CSP meta tag — supplements the HTTP header set in next.config.js */}
-        <meta
-          httpEquiv="Content-Security-Policy"
-          content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' data:; frame-src https://www.googletagmanager.com https://www.facebook.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.facebook.com https://connect.facebook.net https://www.arcisai.io https://arcisai.io https://vmukti.com https://hook.eu1.make.com https://etaems.arcisai.io:5000; media-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self' https://www.arcisai.io https://www.facebook.com"
-        />
+        {/* CSP meta tag — supplements the HTTP header set in next.config.js.
+            Both are derived from buildCsp() above so they can't drift. */}
+        <meta httpEquiv="Content-Security-Policy" content={csp} />
         {/* Server-rendered JSON-LD — visible to crawlers before JS executes */}
         <script
           type="application/ld+json"

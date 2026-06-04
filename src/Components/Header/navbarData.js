@@ -97,6 +97,10 @@ export const dropdownData = {
         link: "/event",
       },
       {
+        label: "News",
+        link: "/news",
+      },
+      {
         label: "Privacy Policy",
         link: "/privacy-policy",
       },
@@ -107,10 +111,6 @@ export const dropdownData = {
       // {
       //   label: "Careers",
       //   link: "/careers",
-      // },
-      // {
-      //   label: "News",
-      //   link: "/news",
       // },
     ],
   },

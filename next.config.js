@@ -41,6 +41,23 @@ const nextConfig = {
     // - script-src includes 'unsafe-inline' required by GTM inline bootstrap + Emotion CSS-in-JS
     // - style-src 'unsafe-inline' required by Chakra UI / Emotion
     // - frame-src allows GTM noscript iframe
+    // Derive an extra connect-src entry from NEXT_PUBLIC_API_BASE_URL so the
+    // CSP automatically follows the API URL the app is actually configured
+    // to call (e.g. http://localhost:5000 in dev). In dev we also allow the
+    // Next.js HMR websocket. Prod with the env var unset stays strict.
+    const isDev = process.env.NODE_ENV !== 'production';
+    const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL || '';
+    let apiOrigin = '';
+    try {
+      if (apiBase) apiOrigin = new URL(apiBase).origin;
+    } catch {
+      apiOrigin = '';
+    }
+    const extras = [];
+    if (apiOrigin) extras.push(apiOrigin);
+    if (isDev) extras.push('ws://localhost:3000', 'wss://localhost:3000');
+    const extraConnect = extras.length ? ' ' + extras.join(' ') : '';
+
     const csp = [
       "default-src 'self'",
       "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net",
@@ -48,7 +65,7 @@ const nextConfig = {
       "img-src 'self' data: blob: https:",
       "font-src 'self' data:",
       "frame-src https://www.googletagmanager.com https://www.facebook.com",
-      "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.facebook.com https://connect.facebook.net https://www.arcisai.io https://arcisai.io https://vmukti.com https://hook.eu1.make.com https://etaems.arcisai.io:5000",
+      `connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.facebook.com https://connect.facebook.net https://www.arcisai.io https://arcisai.io https://vmukti.com https://hook.eu1.make.com https://etaems.arcisai.io:5000${extraConnect}`,
       "media-src 'self' https:",
       "object-src 'none'",
       "base-uri 'self'",
