@@ -65,6 +65,50 @@ export const sseriesbulletSEO = {
         },
       ],
     },
+    // Product Schema
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "AI Bullet CCTV Camera",
+      description:
+        "ArcisAI S-Series AI Bullet CCTV Camera with 3MP HD resolution, EdgeAI analytics, dual-band Wi-Fi, color night vision, two-way audio, IP66 weatherproof design, and plug-and-play setup.",
+      image: "https://arcisai.io/images/product_bullet_main.webp",
+      url: "https://arcisai.io/s-series/ai-bullet-cctv-camera",
+      brand: {
+        "@type": "Brand",
+        name: "ArcisAI",
+      },
+      manufacturer: {
+        "@id": "https://arcisai.io/#organization",
+      },
+      countryOfOrigin: "IN",
+      category: "Security Camera",
+    },
+    // BreadcrumbList Schema
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://arcisai.io",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "S-Series",
+          item: "https://arcisai.io/s-series",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "AI Bullet CCTV Camera",
+          item: "https://arcisai.io/s-series/ai-bullet-cctv-camera",
+        },
+      ],
+    },
   ],
 };
 
@@ -74,7 +118,52 @@ export const sseriesptzSEO = {
     "ArcisAI AI PTZ Camera offers smart tracking, 360° view, optical zoom, night vision, and Cloud VMS alerts. Built-in EdgeAI ensures secure outdoor surveillance.",
   ogimage: "https://arcisai.io/images/product_ptz_main.webp",
   canonical: "https://arcisai.io/s-series/ai-ptz-cctv-camera",
-  schema: [],
+  schema: [
+    // Product Schema
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "AI PTZ CCTV Camera",
+      description:
+        "ArcisAI S-Series AI PTZ Camera with smart auto-tracking, 360° pan-tilt-zoom, optical zoom, color night vision, EdgeAI analytics, and cloud VMS alerts for outdoor surveillance.",
+      image: "https://arcisai.io/images/product_ptz_main.webp",
+      url: "https://arcisai.io/s-series/ai-ptz-cctv-camera",
+      brand: {
+        "@type": "Brand",
+        name: "ArcisAI",
+      },
+      manufacturer: {
+        "@id": "https://arcisai.io/#organization",
+      },
+      countryOfOrigin: "IN",
+      category: "Security Camera",
+    },
+    // BreadcrumbList Schema
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://arcisai.io",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "S-Series",
+          item: "https://arcisai.io/s-series",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "AI PTZ CCTV Camera",
+          item: "https://arcisai.io/s-series/ai-ptz-cctv-camera",
+        },
+      ],
+    },
+  ],
 };
 
 export const sseriesdomeSEO = {
@@ -83,7 +172,52 @@ export const sseriesdomeSEO = {
     "ArcisAI S-Series AI PTZ Camera with smart tracking, digital zoom, night vision, and instant cloud alerts. Built-in EdgeAI for reliable outdoor monitoring.",
   ogimage: "https://arcisai.io/images/product_dome_main.webp",
   canonical: "https://arcisai.io/s-series/ai-dome-cctv-camera",
-  schema: [],
+  schema: [
+    // Product Schema
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "AI Dome CCTV Camera",
+      description:
+        "ArcisAI S-Series AI Dome CCTV Camera with EdgeAI analytics, digital zoom, color night vision, and instant cloud alerts. Designed for reliable indoor and outdoor monitoring.",
+      image: "https://arcisai.io/images/product_dome_main.webp",
+      url: "https://arcisai.io/s-series/ai-dome-cctv-camera",
+      brand: {
+        "@type": "Brand",
+        name: "ArcisAI",
+      },
+      manufacturer: {
+        "@id": "https://arcisai.io/#organization",
+      },
+      countryOfOrigin: "IN",
+      category: "Security Camera",
+    },
+    // BreadcrumbList Schema
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://arcisai.io",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "S-Series",
+          item: "https://arcisai.io/s-series",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "AI Dome CCTV Camera",
+          item: "https://arcisai.io/s-series/ai-dome-cctv-camera",
+        },
+      ],
+    },
+  ],
 };
 
 export const ecoseriesbulletSEO = {
@@ -92,7 +226,52 @@ export const ecoseriesbulletSEO = {
     "Get reliable outdoor surveillance with ArcisAI Eco-Series Bullet Cameras—weatherproof, high-resolution and made for long-lasting security performance.",
   ogimage: "https://arcisai.io/images/product_ecoseries_bullet_main.webp",
   canonical: "https://arcisai.io/eco-series/bullet-cctv-camera",
-  schema: [],
+  schema: [
+    // Product Schema
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "Eco-Series Bullet Camera",
+      description:
+        "ArcisAI Eco-Series Bullet CCTV Camera — weatherproof, high-resolution outdoor surveillance camera built for long-lasting security performance at value pricing.",
+      image: "https://arcisai.io/images/product_ecoseries_bullet_main.webp",
+      url: "https://arcisai.io/eco-series/bullet-cctv-camera",
+      brand: {
+        "@type": "Brand",
+        name: "ArcisAI",
+      },
+      manufacturer: {
+        "@id": "https://arcisai.io/#organization",
+      },
+      countryOfOrigin: "IN",
+      category: "Security Camera",
+    },
+    // BreadcrumbList Schema
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://arcisai.io",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "ECO-Series",
+          item: "https://arcisai.io/eco-series",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Bullet CCTV Camera",
+          item: "https://arcisai.io/eco-series/bullet-cctv-camera",
+        },
+      ],
+    },
+  ],
 };
 
 export const ecoseriesptzSEO = {
@@ -101,7 +280,52 @@ export const ecoseriesptzSEO = {
     "Protect your property with ArcisAI Eco-Series PTZ CCTV Cameras. 3MP, durable, with day/night IR vision, PoE/IP/WiFi/4G support, and easy installation for Indian conditions.",
   ogimage: "https://arcisai.io/images/product_ptz_main.webp",
   canonical: "https://arcisai.io/eco-series/ptz-cctv-camera",
-  schema: [],
+  schema: [
+    // Product Schema
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "Eco-Series PTZ CCTV Cameras",
+      description:
+        "ArcisAI Eco-Series PTZ CCTV Cameras with 3MP resolution, day/night IR vision, PoE/IP/WiFi/4G connectivity, and durable design for Indian conditions.",
+      image: "https://arcisai.io/images/product_ptz_main.webp",
+      url: "https://arcisai.io/eco-series/ptz-cctv-camera",
+      brand: {
+        "@type": "Brand",
+        name: "ArcisAI",
+      },
+      manufacturer: {
+        "@id": "https://arcisai.io/#organization",
+      },
+      countryOfOrigin: "IN",
+      category: "Security Camera",
+    },
+    // BreadcrumbList Schema
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://arcisai.io",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "ECO-Series",
+          item: "https://arcisai.io/eco-series",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "PTZ CCTV Camera",
+          item: "https://arcisai.io/eco-series/ptz-cctv-camera",
+        },
+      ],
+    },
+  ],
 };
 
 export const ecoseriesdomeSEO = {
@@ -110,7 +334,52 @@ export const ecoseriesdomeSEO = {
     "Secure your property with ArcisAI Dome CCTV Cameras. Compact, durable, night vision enabled, with PoE/IP/4G connectivity and simple installation.",
   ogimage: "https://arcisai.io/images/product_dome_main.webp",
   canonical: "https://arcisai.io/eco-series/dome-cctv-camera",
-  schema: [],
+  schema: [
+    // Product Schema
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "Eco-Series Dome Camera",
+      description:
+        "ArcisAI Eco-Series Dome CCTV Camera — compact, durable, night-vision enabled with PoE/IP/4G connectivity and simple installation for homes and businesses.",
+      image: "https://arcisai.io/images/product_dome_main.webp",
+      url: "https://arcisai.io/eco-series/dome-cctv-camera",
+      brand: {
+        "@type": "Brand",
+        name: "ArcisAI",
+      },
+      manufacturer: {
+        "@id": "https://arcisai.io/#organization",
+      },
+      countryOfOrigin: "IN",
+      category: "Security Camera",
+    },
+    // BreadcrumbList Schema
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://arcisai.io",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "ECO-Series",
+          item: "https://arcisai.io/eco-series",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Dome CCTV Camera",
+          item: "https://arcisai.io/eco-series/dome-cctv-camera",
+        },
+      ],
+    },
+  ],
 };
 
 // Function to get SEO content based on product key

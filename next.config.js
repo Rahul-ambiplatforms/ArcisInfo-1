@@ -143,6 +143,7 @@ const nextConfig = {
   // ─── Legacy URL Redirects (301) ─────────────────────────────────────────────
   async redirects() {
     return [
+      { source: '/:path*', has: [{ type: 'host', value: 'www.arcisai.io' }], destination: 'https://arcisai.io/:path*', permanent: true },
       { source: '/solutions',               destination: '/solution/edge-ai',    permanent: true },
       { source: '/about',                   destination: '/about-us',            permanent: true },
       { source: '/contact',                 destination: '/contact-us',          permanent: true },
