@@ -368,6 +368,7 @@ const Navbar = () => {
             _hover={{ color: 'white', textDecoration: 'none', opacity: 0.8 }}
             textTransform="uppercase"
             letterSpacing="0.5px"
+            whiteSpace="nowrap"
           >
             {actionLinks[1].label}
           </Link>
