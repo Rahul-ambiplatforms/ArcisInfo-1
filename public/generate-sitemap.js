@@ -3,7 +3,7 @@ const path = require("path");
 const https = require("https");
 const http = require("http");
 
-const SITE_BASE_URL = process.env.SITE_BASE_URL || "https://www.arcisai.io";
+const SITE_BASE_URL = process.env.SITE_BASE_URL || "https://arcisai.io";
 const API_BASE_URL =
   process.env.API_BASE_URL || "https://vmukti.com/backend/api";
 const TENANT = process.env.TENANT || "arcis";

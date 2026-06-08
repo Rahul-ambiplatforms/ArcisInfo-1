@@ -1,5 +1,5 @@
 # ArcisAI - Enterprise AI-Powered Surveillance Solutions
-# https://www.arcisai.io
+# https://arcisai.io
 
 User-agent: *
 Allow: /
@@ -9,7 +9,7 @@ Disallow: /static/js/*.map
 Disallow: /static/css/*.map
 
 # Sitemaps
-Sitemap: https://www.arcisai.io/sitemap.xml
+Sitemap: https://arcisai.io/sitemap.xml
 
 # Allow all major search engines full access
 User-agent: Googlebot
@@ -67,4 +67,10 @@ User-agent: cohere-ai
 Allow: /
 
 User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Applebot-Extended
 Allow: /
