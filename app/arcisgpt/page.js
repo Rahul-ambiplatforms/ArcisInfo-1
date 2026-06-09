@@ -1,13 +1,14 @@
 import MainProduct from '@/src/views/Series/MainProduct';
 
 export const metadata = {
-  title: 'ArcisGPT | Gen AI Visual Intelligence & Smart Video Search',
+  title: 'ArcisGPT | Conversational AI for CCTV — Talk to Your Footage',
   description:
-    'ArcisGPT is a GenAI-powered video analytics platform enabling natural language search across surveillance footage. Ask questions in plain English to find incidents, track objects, and retrieve evidence instantly.',
+    'ArcisGPT is India’s conversational AI for surveillance — search your CCTV footage in plain language. Ask "show all unauthorized entries after 9pm" and get the clip instantly, plus AI video summaries. GenAI video intelligence by ArcisAI.',
   keywords: [
-    'ArcisGPT', 'generative AI video analytics', 'visual intelligence',
-    'natural language video search', 'AI video search', 'GenAI surveillance',
-    'video evidence retrieval', 'LLM video analytics',
+    'ArcisGPT', 'conversational AI CCTV', 'conversational AI for surveillance India',
+    'talk to your CCTV footage', 'natural language video search India', 'AI video search India',
+    'generative AI CCTV India', 'GenAI surveillance', 'AI footage search', 'video summarization AI',
+    'visual intelligence', 'video evidence retrieval', 'LLM video analytics',
   ],
   alternates: { canonical: 'https://arcisai.io/arcisgpt' },
   openGraph: {
