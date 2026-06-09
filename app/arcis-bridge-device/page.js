@@ -5,8 +5,10 @@ export const metadata = {
   description:
     'Convert any ONVIF camera to a smart AI surveillance device with the ArcisAI Bridge Device (ABD). No camera replacement needed — connect legacy cameras to cloud and edge AI instantly.',
   keywords: [
-    'bridge device', 'camera converter', 'ONVIF compatible',
-    'legacy camera upgrade', 'retrofit surveillance', 'ABD ArcisAI',
+    'convert ONVIF camera to AI', 'add AI to existing CCTV India',
+    'retrofit AI to existing CCTV', 'upgrade legacy CCTV to AI India',
+    'AI gateway for CCTV', 'ONVIF to AI converter', 'bridge device',
+    'camera converter', 'legacy camera upgrade', 'ABD ArcisAI',
   ],
   alternates: { canonical: 'https://arcisai.io/arcis-bridge-device' },
   openGraph: {
