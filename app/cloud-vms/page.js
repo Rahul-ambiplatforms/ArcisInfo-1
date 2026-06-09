@@ -5,7 +5,9 @@ export const metadata = {
   description:
     'Cloud & on-premise VMS with STQC certification. Multi-location monitoring, AI alerts, smart playback, ArcisGPT search, and centralized device management for enterprise deployments.',
   keywords: [
-    'cloud VMS', 'video management system', 'STQC certified VMS',
+    'STQC certified VMS India', 'STQC certified video management software',
+    'made in India cloud VMS', 'Indian cloud CCTV software', 'cloud VMS',
+    'video management system', 'AI video management software India',
     'surveillance software', 'centralized monitoring', 'cloud CCTV',
   ],
   alternates: { canonical: 'https://arcisai.io/cloud-vms' },
