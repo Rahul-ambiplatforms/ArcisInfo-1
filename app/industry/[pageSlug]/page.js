@@ -1,4 +1,5 @@
 import SEOLandingPage from '@/src/views/SEOLandingPages/SEOLandingPage';
+import { resolveSeoPageData, resolveSeoKey } from '@/src/data/resolveSeoPageData';
 
 export async function generateMetadata({ params }) {
   const { pageSlug } = params;
@@ -21,5 +22,6 @@ export async function generateMetadata({ params }) {
 }
 
 export default function IndustryPage({ params }) {
-  return <SEOLandingPage paramsOverride={{ category: 'industry', pageSlug: params.pageSlug }} />;
+  const override = { category: 'industry', pageSlug: params.pageSlug };
+  return <SEOLandingPage pageData={resolveSeoPageData(override)} slugKey={resolveSeoKey(override) || params.pageSlug} />;
 }
