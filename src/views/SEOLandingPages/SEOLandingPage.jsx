@@ -1,22 +1,8 @@
 'use client';
 import React from "react";
-import { useParams } from "next/navigation";
 import NextLink from "next/link";
 import { Box, Container, Heading, Text, SimpleGrid, VStack, HStack, Button, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Icon, Flex, Badge, Divider } from "@chakra-ui/react";
 import { Helmet } from "react-helmet-async";
-import seoPageData from "../../data/seoPageData";
-import seoPageDataExpansion from "../../data/seoPageDataExpansion";
-import seoPageDataGeo from "../../data/seoPageDataGeo";
-import seoPageDataCompare from "../../data/seoPageDataCompare";
-import seoPageDataCompliance from "../../data/seoPageDataCompliance";
-import seoPageDataExpansion2 from "../../data/seoPageDataExpansion2";
-import seoPageDataGeoIntl from "../../data/seoPageDataGeoIntl";
-import seoPageDataExpansion3 from "../../data/seoPageDataExpansion3";
-import seoPageDataExpansion4 from "../../data/seoPageDataExpansion4";
-import seoPageDataExpansion5 from "../../data/seoPageDataExpansion5";
-import seoPageDataGujaratCities from "../../data/seoPageDataGujaratCities";
-import seoPageDataMaharashtraCities from "../../data/seoPageDataMaharashtraCities";
-import seoPageDataTier2Cities from "../../data/seoPageDataTier2Cities";
 
 // Brand palette — matches site dark theme (body #171717, accents #9678E1 / #8266C9)
 const ACCENT = "#9678E1";
@@ -24,22 +10,10 @@ const ACCENT_DEEP = "#8266C9";
 const CARD_BG = "rgba(255,255,255,0.04)";
 const CARD_BORDER = "rgba(255,255,255,0.12)";
 
-const SEOLandingPage = ({ paramsOverride }) => {
-  const routerParams = useParams();
-  const params = paramsOverride ? { ...routerParams, ...paramsOverride } : routerParams;
-  const { category, pageSlug, city, slug, seriesId } = params;
-
-  // Multi-strategy key lookup
-  const allSeoData = { ...seoPageData, ...seoPageDataExpansion, ...seoPageDataGeo, ...seoPageDataCompare, ...seoPageDataCompliance, ...seoPageDataExpansion2, ...seoPageDataGeoIntl, ...seoPageDataExpansion3, ...seoPageDataExpansion4, ...seoPageDataExpansion5, ...seoPageDataGujaratCities, ...seoPageDataMaharashtraCities, ...seoPageDataTier2Cities };
-  const lookupKey = (city && allSeoData[`cctv-cameras-${city}`]) ? `cctv-cameras-${city}`
-    : (category && pageSlug && allSeoData[`${category}-${pageSlug}`]) ? `${category}-${pageSlug}`
-    : (pageSlug && allSeoData[pageSlug]) ? pageSlug
-    : (category && allSeoData[category]) ? category
-    : (slug && allSeoData[`ai-cctv-${slug}`]) ? `ai-cctv-${slug}` : (slug && allSeoData[slug]) ? slug
-    : (seriesId && allSeoData[seriesId]) ? seriesId : null;
-
-  const pageData = lookupKey ? allSeoData[lookupKey] : null;
-
+// pageData is resolved on the SERVER (see src/data/resolveSeoPageData.js) and
+// passed in as a prop, so the full ~125-page SEO dataset is NOT bundled to the
+// browser. slugKey is the resolved lookup key, used as a canonical-URL fallback.
+const SEOLandingPage = ({ pageData, slugKey }) => {
   if (!pageData) {
     return (
       <Box minH="60vh" display="flex" alignItems="center" justifyContent="center" bg="#171717">
@@ -52,7 +26,7 @@ const SEOLandingPage = ({ paramsOverride }) => {
     );
   }
 
-  const pageUrl = `https://www.arcisai.io/${pageData.slug || lookupKey}`;
+  const pageUrl = `https://www.arcisai.io/${pageData.slug || slugKey}`;
 
   const jsonLd = {
     "@context": "https://schema.org",
