@@ -112,9 +112,9 @@ const Footer = () => {
           mb={{ base: 6, md: 0 }}
           gap={{ base: 6, md: 0 }}
         >
-          {/* Left: 4 Columns Grid */}
+          {/* Left: Columns Grid */}
           <SimpleGrid
-            columns={{ base: 2, md: 4 }}
+            columns={{ base: 2, md: 5 }}
             spacing={{ base: 4, md: 6 }}
             flex="1"
           >
@@ -175,6 +175,9 @@ const Footer = () => {
               <FooterLink href={"/arcis-nvr"} color="#A8A8A8" fontWeight="bold">
                 NVR
               </FooterLink>
+              <FooterLink href={"/arcisgpt"} color="#A8A8A8" fontWeight="bold">
+                ArcisGPT
+              </FooterLink>
 
               {/* <FooterLink href={"/abd"}>ABD</FooterLink>
               <FooterLink href={"/cloud-vms"}>ArcisVMS</FooterLink> */}
@@ -195,10 +198,11 @@ const Footer = () => {
               <ListHeader>COMPANY</ListHeader>
               <FooterLink href={"/about-us"}>About Us</FooterLink>
               <FooterLink href={"/why-choose-arcisai"}>Why ArcisAI</FooterLink>
-              <FooterLink href={"/BIS-ER-certification"}>BIS-ER Certification</FooterLink>
               <FooterLink href={"/certifications"}>Certifications</FooterLink>
               <FooterLink href={"/partners"}>Partners</FooterLink>
+              <FooterLink href={"/BIS-ER-certification"}>BIS-ER Certification</FooterLink>
               <FooterLink href={"/event"}>Event</FooterLink>
+              <FooterLink href={"/news"}>News</FooterLink>
               <FooterLink href={"/privacy-policy"}>Privacy Policy</FooterLink>
               <FooterLink href={"/terms-of-service"}>
                 Terms And Conditions
@@ -210,6 +214,26 @@ const Footer = () => {
               <ListHeader>RESOURCES</ListHeader>
               <FooterLink href={"/blog"}>Blogs</FooterLink>
               <FooterLink href={"/documents"}>Documents</FooterLink>
+              <FooterLink href={"/faq"}>FAQ</FooterLink>
+              <FooterLink href={"/tools"}>Tools</FooterLink>
+              <FooterLink href={"/tools/cctv-storage-calculator"}>
+                CCTV Storage Calculator
+              </FooterLink>
+            </Stack>
+
+            {/* TOP LOCATIONS — internal links so city pages aren't orphaned */}
+            <Stack align={"flex-start"} spacing={2}>
+              <ListHeader>TOP LOCATIONS</ListHeader>
+              <FooterLink href={"/cctv-cameras-ahmedabad"}>CCTV in Ahmedabad</FooterLink>
+              <FooterLink href={"/cctv-cameras-surat"}>CCTV in Surat</FooterLink>
+              <FooterLink href={"/cctv-cameras-vadodara"}>CCTV in Vadodara</FooterLink>
+              <FooterLink href={"/cctv-cameras-rajkot"}>CCTV in Rajkot</FooterLink>
+              <FooterLink href={"/cctv-cameras-mumbai"}>CCTV in Mumbai</FooterLink>
+              <FooterLink href={"/cctv-cameras-pune"}>CCTV in Pune</FooterLink>
+              <FooterLink href={"/cctv-cameras-delhi"}>CCTV in Delhi</FooterLink>
+              <FooterLink href={"/cctv-cameras-bangalore"}>CCTV in Bangalore</FooterLink>
+              <FooterLink href={"/cctv-cameras-hyderabad"}>CCTV in Hyderabad</FooterLink>
+              <FooterLink href={"/cctv-cameras-chennai"}>CCTV in Chennai</FooterLink>
             </Stack>
           </SimpleGrid>
 
@@ -453,3 +477,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
