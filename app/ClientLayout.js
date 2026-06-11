@@ -5,8 +5,9 @@ import dynamic from 'next/dynamic';
 import { Box } from '@chakra-ui/react';
 import Header from '@/src/Components/Header/Header';
 
-// Footer is below-fold — defer its JS chunk so it doesn't contribute to TBT
-const Footer = dynamic(() => import('@/src/Components/Footer/Footer'), { ssr: false });
+// Footer is below-fold — code-split its JS chunk, but SERVER-RENDER it so its
+// internal links are in the initial HTML and crawlable by search engines (SEO).
+const Footer = dynamic(() => import('@/src/Components/Footer/Footer'), { ssr: true });
 
 // Keep in sync with App.js — set to true to show the event banner
 const SHOW_EVENT_BANNER = false;
@@ -37,3 +38,4 @@ export default function ClientLayout({ children }) {
     </>
   );
 }
+
