@@ -69,11 +69,13 @@ const organizationSchema = {
   ],
   brand: { '@type': 'Brand', name: 'ArcisAI', slogan: "India's Premium AI CCTV" },
   sameAs: [
-    'https://www.linkedin.com/company/arcisai',
+    'https://www.linkedin.com/company/thearcisai/',
     'https://www.instagram.com/_arcisai_/',
     'https://www.youtube.com/@arcisai',
-    'https://twitter.com/ArcisAI',
-    'https://www.facebook.com/ArcisAI',
+    'https://x.com/arcisai',
+    'https://www.facebook.com/thearcisai/',
+    'https://apps.apple.com/in/app/arcisai/id6743403804',
+    'https://play.google.com/store/apps/details?id=com.arcisadiance.app',
   ],
 };
 
@@ -238,3 +240,4 @@ fbq('init','${FB_PIXEL_ID}');fbq('track','PageView');`}
     </html>
   );
 }
+
