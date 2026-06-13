@@ -219,6 +219,9 @@ const Footer = () => {
               <FooterLink href={"/tools/cctv-storage-calculator"}>
                 CCTV Storage Calculator
               </FooterLink>
+              <FooterLink href={"/tools/certificate-verifier"}>
+                Certificate Verifier
+              </FooterLink>
             </Stack>
 
             {/* TOP LOCATIONS — internal links so city pages aren't orphaned */}
