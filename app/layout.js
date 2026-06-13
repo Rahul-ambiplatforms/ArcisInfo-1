@@ -76,7 +76,7 @@ const organizationSchema = {
     'https://www.facebook.com/thearcisai/',
     'https://apps.apple.com/in/app/arcisai/id6743403804',
     'https://play.google.com/store/apps/details?id=com.arcisadiance.app',
-    'https://www.wikidata.org/wiki/Q-ARCIS',
+    'https://www.wikidata.org/wiki/Q140191109',
   ],
 };
 
