@@ -69,14 +69,13 @@ const organizationSchema = {
   ],
   brand: { '@type': 'Brand', name: 'ArcisAI', slogan: "India's Premium AI CCTV" },
   sameAs: [
-    'https://www.linkedin.com/company/arcisai',
+    'https://www.linkedin.com/company/thearcisai/',
     'https://www.instagram.com/_arcisai_/',
     'https://www.youtube.com/@arcisai',
-    'https://twitter.com/ArcisAI',
-    'https://www.facebook.com/ArcisAI',
-    // TODO: swap placeholder with the real numeric Wikidata Q-ID once the item
-    // is approved (e.g. https://www.wikidata.org/wiki/Q108512345). A dead URL
-    // here gives Google no entity-binding signal.
+    'https://x.com/arcisai',
+    'https://www.facebook.com/thearcisai/',
+    'https://apps.apple.com/in/app/arcisai/id6743403804',
+    'https://play.google.com/store/apps/details?id=com.arcisadiance.app',
     'https://www.wikidata.org/wiki/Q-ARCIS',
   ],
 };
@@ -242,3 +241,4 @@ fbq('init','${FB_PIXEL_ID}');fbq('track','PageView');`}
     </html>
   );
 }
+
