@@ -74,6 +74,10 @@ const organizationSchema = {
     'https://www.youtube.com/@arcisai',
     'https://twitter.com/ArcisAI',
     'https://www.facebook.com/ArcisAI',
+    // TODO: swap placeholder with the real numeric Wikidata Q-ID once the item
+    // is approved (e.g. https://www.wikidata.org/wiki/Q108512345). A dead URL
+    // here gives Google no entity-binding signal.
+    'https://www.wikidata.org/wiki/Q-ARCIS',
   ],
 };
 
