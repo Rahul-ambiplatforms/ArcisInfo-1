@@ -200,6 +200,7 @@ const Footer = () => {
               <FooterLink href={"/why-choose-arcisai"}>Why ArcisAI</FooterLink>
               <FooterLink href={"/certifications"}>Certifications</FooterLink>
               <FooterLink href={"/partners"}>Partners</FooterLink>
+              <FooterLink href={"/press"}>Press &amp; Media Kit</FooterLink>
               <FooterLink href={"/BIS-ER-certification"}>BIS-ER Certification</FooterLink>
               <FooterLink href={"/event"}>Event</FooterLink>
               <FooterLink href={"/news"}>News</FooterLink>
