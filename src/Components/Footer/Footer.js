@@ -225,6 +225,9 @@ const Footer = () => {
               <FooterLink href={"/tools/certificate-verifier"}>
                 Certificate Verifier
               </FooterLink>
+              <FooterLink href={"/cctv-compliance-2026"}>
+                CCTV Compliance 2026 Guide
+              </FooterLink>
             </Stack>
 
             {/* TOP LOCATIONS — internal links so city pages aren't orphaned */}
