@@ -55,12 +55,18 @@ const nextConfig = {
     }
     const extras = [];
     if (apiOrigin) extras.push(apiOrigin);
-    if (isDev) extras.push('ws://localhost:3000', 'wss://localhost:3000');
+    if (isDev) extras.push('ws://localhost:*', 'wss://localhost:*', 'http://localhost:*');
     const extraConnect = extras.length ? ' ' + extras.join(' ') : '';
+
+    const scriptSrc = [
+      "script-src 'self' 'unsafe-inline'",
+      isDev ? "'unsafe-eval'" : '',
+      'https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net',
+    ].filter(Boolean).join(' ');
 
     const csp = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net",
+      scriptSrc,
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob: https:",
       "font-src 'self' data:",

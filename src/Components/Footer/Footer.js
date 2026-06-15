@@ -20,6 +20,7 @@ import FacebookIcon from "../Icons/facebook_icon.svg";
 import InstagramIcon from "../Icons/instagram_icon.svg";
 import LinkedInIcon from "../Icons/linkedIn_icon.svg";
 import XIcon from "../Icons/X_icon.svg";
+import YoutubeIcon from "../Icons/youtube_icon.svg";
 import NextLink from "next/link";
 
 const ListHeader = ({ children }) => {
@@ -81,6 +82,7 @@ const Footer = () => {
     twitter: "https://x.com/arcisai",
     instagram: "https://www.instagram.com/_arcisai_/",
     linkedin: "https://www.linkedin.com/company/thearcisai/",
+    youtube: "https://www.youtube.com/@arcisai",
   };
 
   return (
@@ -263,6 +265,7 @@ const Footer = () => {
               <SocialButton icon={XIcon} href={socialLinks.twitter} />
               <SocialButton icon={InstagramIcon} href={socialLinks.instagram} />
               <SocialButton icon={LinkedInIcon} href={socialLinks.linkedin} />
+              <SocialButton icon={YoutubeIcon} href={socialLinks.youtube} />
             </HStack>
           </Stack>
         </Flex>
