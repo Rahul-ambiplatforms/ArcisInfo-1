@@ -1,4 +1,5 @@
 import SEOLandingPage from '@/src/views/SEOLandingPages/SEOLandingPage';
+import { resolveSeoPageData, resolveSeoKey } from '@/src/data/resolveSeoPageData';
 
 /**
  * Catch-all for top-level dynamic slugs that are not matched by more
@@ -88,5 +89,6 @@ export default function SlugPage({ params }) {
     paramsOverride = { seriesId: slug };
   }
 
-  return <SEOLandingPage paramsOverride={paramsOverride} />;
+  const pageData = resolveSeoPageData(paramsOverride);
+  return <SEOLandingPage pageData={pageData} slugKey={resolveSeoKey(paramsOverride) || slug} />;
 }
