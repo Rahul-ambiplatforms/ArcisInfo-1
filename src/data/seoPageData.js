@@ -19,7 +19,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Mumbai?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Mumbai."},
       {q: "Does ArcisAI provide installation in Mumbai?", a: "Yes, we have certified installation partners across Mumbai. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Mumbai Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=mumbai"}
   },
@@ -39,7 +39,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Delhi?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Delhi."},
       {q: "Does ArcisAI provide installation in Delhi?", a: "Yes, we have certified installation partners across Delhi. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Delhi Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=delhi"}
   },
@@ -59,7 +59,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Bangalore?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Bangalore."},
       {q: "Does ArcisAI provide installation in Bangalore?", a: "Yes, we have certified installation partners across Bangalore. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Bangalore Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=bangalore"}
   },
@@ -79,7 +79,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Hyderabad?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Hyderabad."},
       {q: "Does ArcisAI provide installation in Hyderabad?", a: "Yes, we have certified installation partners across Hyderabad. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Hyderabad Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=hyderabad"}
   },
@@ -99,7 +99,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Chennai?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Chennai."},
       {q: "Does ArcisAI provide installation in Chennai?", a: "Yes, we have certified installation partners across Chennai. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Chennai Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=chennai"}
   },
@@ -119,7 +119,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Pune?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Pune."},
       {q: "Does ArcisAI provide installation in Pune?", a: "Yes, we have certified installation partners across Pune. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Pune Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=pune"}
   },
@@ -139,7 +139,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Ahmedabad?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Ahmedabad."},
       {q: "Does ArcisAI provide installation in Ahmedabad?", a: "Yes, we have certified installation partners across Ahmedabad. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Ahmedabad Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=ahmedabad"}
   },
@@ -159,7 +159,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Kolkata?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Kolkata."},
       {q: "Does ArcisAI provide installation in Kolkata?", a: "Yes, we have certified installation partners across Kolkata. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Kolkata Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=kolkata"}
   },
@@ -179,7 +179,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Jaipur?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Jaipur."},
       {q: "Does ArcisAI provide installation in Jaipur?", a: "Yes, we have certified installation partners across Jaipur. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Jaipur Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=jaipur"}
   },
@@ -199,7 +199,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Lucknow?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Lucknow."},
       {q: "Does ArcisAI provide installation in Lucknow?", a: "Yes, we have certified installation partners across Lucknow. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Lucknow Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=lucknow"}
   },
@@ -219,7 +219,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Chandigarh?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Chandigarh."},
       {q: "Does ArcisAI provide installation in Chandigarh?", a: "Yes, we have certified installation partners across Chandigarh. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Chandigarh Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=chandigarh"}
   },
@@ -239,7 +239,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Indore?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Indore."},
       {q: "Does ArcisAI provide installation in Indore?", a: "Yes, we have certified installation partners across Indore. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Indore Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=indore"}
   },
@@ -259,7 +259,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Nagpur?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Nagpur."},
       {q: "Does ArcisAI provide installation in Nagpur?", a: "Yes, we have certified installation partners across Nagpur. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Nagpur Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=nagpur"}
   },
@@ -279,7 +279,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Bhopal?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Bhopal."},
       {q: "Does ArcisAI provide installation in Bhopal?", a: "Yes, we have certified installation partners across Bhopal. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Bhopal Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=bhopal"}
   },
@@ -299,7 +299,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Visakhapatnam?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Visakhapatnam."},
       {q: "Does ArcisAI provide installation in Visakhapatnam?", a: "Yes, we have certified installation partners across Visakhapatnam. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Visakhapatnam Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=visakhapatnam"}
   },
@@ -319,7 +319,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Patna?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Patna."},
       {q: "Does ArcisAI provide installation in Patna?", a: "Yes, we have certified installation partners across Patna. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Patna Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=patna"}
   },
@@ -339,7 +339,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Vadodara?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Vadodara."},
       {q: "Does ArcisAI provide installation in Vadodara?", a: "Yes, we have certified installation partners across Vadodara. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Vadodara Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=vadodara"}
   },
@@ -359,7 +359,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Ghaziabad?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Ghaziabad."},
       {q: "Does ArcisAI provide installation in Ghaziabad?", a: "Yes, we have certified installation partners across Ghaziabad. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Ghaziabad Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=ghaziabad"}
   },
@@ -379,7 +379,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Ludhiana?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Ludhiana."},
       {q: "Does ArcisAI provide installation in Ludhiana?", a: "Yes, we have certified installation partners across Ludhiana. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Ludhiana Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=ludhiana"}
   },
@@ -399,7 +399,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Agra?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Agra."},
       {q: "Does ArcisAI provide installation in Agra?", a: "Yes, we have certified installation partners across Agra. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Agra Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=agra"}
   },
@@ -419,7 +419,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Nashik?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Nashik."},
       {q: "Does ArcisAI provide installation in Nashik?", a: "Yes, we have certified installation partners across Nashik. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Nashik Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=nashik"}
   },
@@ -439,7 +439,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Faridabad?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Faridabad."},
       {q: "Does ArcisAI provide installation in Faridabad?", a: "Yes, we have certified installation partners across Faridabad. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Faridabad Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=faridabad"}
   },
@@ -459,7 +459,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Meerut?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Meerut."},
       {q: "Does ArcisAI provide installation in Meerut?", a: "Yes, we have certified installation partners across Meerut. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Meerut Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=meerut"}
   },
@@ -479,7 +479,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Rajkot?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Rajkot."},
       {q: "Does ArcisAI provide installation in Rajkot?", a: "Yes, we have certified installation partners across Rajkot. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Rajkot Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=rajkot"}
   },
@@ -499,7 +499,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Varanasi?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Varanasi."},
       {q: "Does ArcisAI provide installation in Varanasi?", a: "Yes, we have certified installation partners across Varanasi. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Varanasi Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=varanasi"}
   },
@@ -519,7 +519,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Srinagar?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Srinagar."},
       {q: "Does ArcisAI provide installation in Srinagar?", a: "Yes, we have certified installation partners across Srinagar. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Srinagar Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=srinagar"}
   },
@@ -539,7 +539,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Aurangabad?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Aurangabad."},
       {q: "Does ArcisAI provide installation in Aurangabad?", a: "Yes, we have certified installation partners across Aurangabad. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Aurangabad Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=aurangabad"}
   },
@@ -559,7 +559,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Dhanbad?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Dhanbad."},
       {q: "Does ArcisAI provide installation in Dhanbad?", a: "Yes, we have certified installation partners across Dhanbad. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Dhanbad Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=dhanbad"}
   },
@@ -579,7 +579,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Amritsar?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Amritsar."},
       {q: "Does ArcisAI provide installation in Amritsar?", a: "Yes, we have certified installation partners across Amritsar. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Amritsar Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=amritsar"}
   },
@@ -599,7 +599,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Prayagraj?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Prayagraj."},
       {q: "Does ArcisAI provide installation in Prayagraj?", a: "Yes, we have certified installation partners across Prayagraj. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Prayagraj Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=allahabad"}
   },
@@ -619,7 +619,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Ranchi?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Ranchi."},
       {q: "Does ArcisAI provide installation in Ranchi?", a: "Yes, we have certified installation partners across Ranchi. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Ranchi Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=ranchi"}
   },
@@ -639,7 +639,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Howrah?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Howrah."},
       {q: "Does ArcisAI provide installation in Howrah?", a: "Yes, we have certified installation partners across Howrah. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Howrah Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=howrah"}
   },
@@ -659,7 +659,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Coimbatore?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Coimbatore."},
       {q: "Does ArcisAI provide installation in Coimbatore?", a: "Yes, we have certified installation partners across Coimbatore. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Coimbatore Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=coimbatore"}
   },
@@ -679,7 +679,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Jabalpur?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Jabalpur."},
       {q: "Does ArcisAI provide installation in Jabalpur?", a: "Yes, we have certified installation partners across Jabalpur. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Jabalpur Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=jabalpur"}
   },
@@ -699,7 +699,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Gwalior?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Gwalior."},
       {q: "Does ArcisAI provide installation in Gwalior?", a: "Yes, we have certified installation partners across Gwalior. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Gwalior Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=gwalior"}
   },
@@ -719,7 +719,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Vijayawada?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Vijayawada."},
       {q: "Does ArcisAI provide installation in Vijayawada?", a: "Yes, we have certified installation partners across Vijayawada. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Vijayawada Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=vijayawada"}
   },
@@ -739,7 +739,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Jodhpur?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Jodhpur."},
       {q: "Does ArcisAI provide installation in Jodhpur?", a: "Yes, we have certified installation partners across Jodhpur. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Jodhpur Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=jodhpur"}
   },
@@ -759,7 +759,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Madurai?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Madurai."},
       {q: "Does ArcisAI provide installation in Madurai?", a: "Yes, we have certified installation partners across Madurai. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Madurai Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=madurai"}
   },
@@ -779,7 +779,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Raipur?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Raipur."},
       {q: "Does ArcisAI provide installation in Raipur?", a: "Yes, we have certified installation partners across Raipur. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Raipur Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=raipur"}
   },
@@ -799,7 +799,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Kota?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Kota."},
       {q: "Does ArcisAI provide installation in Kota?", a: "Yes, we have certified installation partners across Kota. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Kota Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=kota"}
   },
@@ -819,7 +819,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Guwahati?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Guwahati."},
       {q: "Does ArcisAI provide installation in Guwahati?", a: "Yes, we have certified installation partners across Guwahati. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Guwahati Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=guwahati"}
   },
@@ -839,7 +839,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Dehradun?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Dehradun."},
       {q: "Does ArcisAI provide installation in Dehradun?", a: "Yes, we have certified installation partners across Dehradun. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Dehradun Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=dehradun"}
   },
@@ -859,7 +859,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Noida?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Noida."},
       {q: "Does ArcisAI provide installation in Noida?", a: "Yes, we have certified installation partners across Noida. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Noida Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=noida"}
   },
@@ -879,7 +879,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Gurugram?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Gurugram."},
       {q: "Does ArcisAI provide installation in Gurugram?", a: "Yes, we have certified installation partners across Gurugram. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Gurugram Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=gurugram"}
   },
@@ -899,7 +899,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Thane?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Thane."},
       {q: "Does ArcisAI provide installation in Thane?", a: "Yes, we have certified installation partners across Thane. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Thane Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=thane"}
   },
@@ -919,7 +919,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Navi Mumbai?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Navi Mumbai."},
       {q: "Does ArcisAI provide installation in Navi Mumbai?", a: "Yes, we have certified installation partners across Navi Mumbai. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Navi Mumbai Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=navi-mumbai"}
   },
@@ -939,7 +939,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Kochi?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Kochi."},
       {q: "Does ArcisAI provide installation in Kochi?", a: "Yes, we have certified installation partners across Kochi. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Kochi Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=kochi"}
   },
@@ -959,7 +959,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Thiruvananthapuram?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Thiruvananthapuram."},
       {q: "Does ArcisAI provide installation in Thiruvananthapuram?", a: "Yes, we have certified installation partners across Thiruvananthapuram. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Thiruvananthapuram Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=thiruvananthapuram"}
   },
@@ -979,7 +979,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Mysore?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Mysore."},
       {q: "Does ArcisAI provide installation in Mysore?", a: "Yes, we have certified installation partners across Mysore. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Mysore Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=mysore"}
   },
@@ -999,7 +999,7 @@ const seoPageData = {
     faqs: [
       {q: "What is ArcisAI CCTV price in Bhubaneswar?", a: "ECO-Series starts at ₹2,800 and S-Series premium cameras from ₹5,500. Contact us for bulk pricing and installation quotes in Bhubaneswar."},
       {q: "Does ArcisAI provide installation in Bhubaneswar?", a: "Yes, we have certified installation partners across Bhubaneswar. Free site survey and professional installation included with enterprise orders."},
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
+      {q: "What makes ArcisAI different?", a: "ArcisAI is India's first AI-native CCTV with STQC certification. Unlike traditional CCTV brands, our cameras do 8 AI detections on-device with Gen AI search via ArcisGPT."}
     ],
     cta: {title: "Get AI CCTV for Your Bhubaneswar Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=bhubaneswar"}
   },
@@ -1258,7 +1258,7 @@ const seoPageData = {
       {title: "The Verdict", features: ["ArcisAI leads in AI innovation and future-readiness", "STQC certification is now mandatory for government projects", "ArcisGPT provides unmatched Gen AI video intelligence", "Made in India advantage for procurement preferences"]}
     ],
     faqs: [
-      {q: "Is ArcisAI better than CP Plus?", a: "ArcisAI excels in AI-native capabilities, STQC certification, and Gen AI with ArcisGPT. CP Plus may offer advantages in pricing or market presence. Your choice depends on whether you prioritize AI intelligence or traditional features."},
+      {q: "What makes ArcisAI different?", a: "ArcisAI excels in AI-native capabilities, STQC certification, and Gen AI with ArcisGPT. CP Plus may offer advantages in pricing or market presence. Your choice depends on whether you prioritize AI intelligence or traditional features."},
       {q: "What's the price difference between ArcisAI and CP Plus?", a: "ArcisAI ECO-Series starts at ₹2,800 for AI-enabled cameras. Contact us for detailed pricing comparison based on your specific requirements."}
     ],
     cta: {title: "See ArcisAI in Action", description: "Book a free demo to compare real AI CCTV performance.", buttonText: "Book Free Demo", buttonLink: "/contact-us?compare=arcisai-vs-cp-plus"}
@@ -1278,7 +1278,7 @@ const seoPageData = {
       {title: "The Verdict", features: ["ArcisAI leads in AI innovation and future-readiness", "STQC certification is now mandatory for government projects", "ArcisGPT provides unmatched Gen AI video intelligence", "Made in India advantage for procurement preferences"]}
     ],
     faqs: [
-      {q: "Is ArcisAI better than Hikvision?", a: "ArcisAI excels in AI-native capabilities, STQC certification, and Gen AI with ArcisGPT. Hikvision may offer advantages in pricing or market presence. Your choice depends on whether you prioritize AI intelligence or traditional features."},
+      {q: "What makes ArcisAI different?", a: "ArcisAI excels in AI-native capabilities, STQC certification, and Gen AI with ArcisGPT. Hikvision may offer advantages in pricing or market presence. Your choice depends on whether you prioritize AI intelligence or traditional features."},
       {q: "What's the price difference between ArcisAI and Hikvision?", a: "ArcisAI ECO-Series starts at ₹2,800 for AI-enabled cameras. Contact us for detailed pricing comparison based on your specific requirements."}
     ],
     cta: {title: "See ArcisAI in Action", description: "Book a free demo to compare real AI CCTV performance.", buttonText: "Book Free Demo", buttonLink: "/contact-us?compare=arcisai-vs-hikvision"}
@@ -1298,7 +1298,7 @@ const seoPageData = {
       {title: "The Verdict", features: ["ArcisAI leads in AI innovation and future-readiness", "STQC certification is now mandatory for government projects", "ArcisGPT provides unmatched Gen AI video intelligence", "Made in India advantage for procurement preferences"]}
     ],
     faqs: [
-      {q: "Is ArcisAI better than Dahua?", a: "ArcisAI excels in AI-native capabilities, STQC certification, and Gen AI with ArcisGPT. Dahua may offer advantages in pricing or market presence. Your choice depends on whether you prioritize AI intelligence or traditional features."},
+      {q: "What makes ArcisAI different?", a: "ArcisAI excels in AI-native capabilities, STQC certification, and Gen AI with ArcisGPT. Dahua may offer advantages in pricing or market presence. Your choice depends on whether you prioritize AI intelligence or traditional features."},
       {q: "What's the price difference between ArcisAI and Dahua?", a: "ArcisAI ECO-Series starts at ₹2,800 for AI-enabled cameras. Contact us for detailed pricing comparison based on your specific requirements."}
     ],
     cta: {title: "See ArcisAI in Action", description: "Book a free demo to compare real AI CCTV performance.", buttonText: "Book Free Demo", buttonLink: "/contact-us?compare=arcisai-vs-dahua"}
@@ -1318,7 +1318,7 @@ const seoPageData = {
       {title: "The Verdict", features: ["ArcisAI leads in AI innovation and future-readiness", "STQC certification is now mandatory for government projects", "ArcisGPT provides unmatched Gen AI video intelligence", "Made in India advantage for procurement preferences"]}
     ],
     faqs: [
-      {q: "Is ArcisAI better than Godrej Security?", a: "ArcisAI excels in AI-native capabilities, STQC certification, and Gen AI with ArcisGPT. Godrej Security may offer advantages in pricing or market presence. Your choice depends on whether you prioritize AI intelligence or traditional features."},
+      {q: "What makes ArcisAI different?", a: "ArcisAI excels in AI-native capabilities, STQC certification, and Gen AI with ArcisGPT. Godrej Security may offer advantages in pricing or market presence. Your choice depends on whether you prioritize AI intelligence or traditional features."},
       {q: "What's the price difference between ArcisAI and Godrej Security?", a: "ArcisAI ECO-Series starts at ₹2,800 for AI-enabled cameras. Contact us for detailed pricing comparison based on your specific requirements."}
     ],
     cta: {title: "See ArcisAI in Action", description: "Book a free demo to compare real AI CCTV performance.", buttonText: "Book Free Demo", buttonLink: "/contact-us?compare=arcisai-vs-godrej"}
@@ -1338,7 +1338,7 @@ const seoPageData = {
       {title: "The Verdict", features: ["ArcisAI leads in AI innovation and future-readiness", "STQC certification is now mandatory for government projects", "ArcisGPT provides unmatched Gen AI video intelligence", "Made in India advantage for procurement preferences"]}
     ],
     faqs: [
-      {q: "Is ArcisAI better than Honeywell?", a: "ArcisAI excels in AI-native capabilities, STQC certification, and Gen AI with ArcisGPT. Honeywell may offer advantages in pricing or market presence. Your choice depends on whether you prioritize AI intelligence or traditional features."},
+      {q: "What makes ArcisAI different?", a: "ArcisAI excels in AI-native capabilities, STQC certification, and Gen AI with ArcisGPT. Honeywell may offer advantages in pricing or market presence. Your choice depends on whether you prioritize AI intelligence or traditional features."},
       {q: "What's the price difference between ArcisAI and Honeywell?", a: "ArcisAI ECO-Series starts at ₹2,800 for AI-enabled cameras. Contact us for detailed pricing comparison based on your specific requirements."}
     ],
     cta: {title: "See ArcisAI in Action", description: "Book a free demo to compare real AI CCTV performance.", buttonText: "Book Free Demo", buttonLink: "/contact-us?compare=arcisai-vs-honeywell"}
