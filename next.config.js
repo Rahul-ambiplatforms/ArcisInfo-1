@@ -158,6 +158,11 @@ const nextConfig = {
       { source: '/products/eco-series',     destination: '/eco-series',          permanent: true },
       { source: '/products/bridge-device',  destination: '/arcis-bridge-device', permanent: true },
       { source: '/products/vms',            destination: '/cloud-vms',           permanent: true },
+      { source: '/compare/arcisai-vs-cp-plus',   destination: '/compare/best-ai-cctv-brand-india',  permanent: true },
+      { source: '/compare/arcisai-vs-hikvision', destination: '/compare/ndaa-compliant-cctv-india', permanent: true },
+      { source: '/compare/arcisai-vs-dahua',     destination: '/compare/made-in-india-cctv-brand',  permanent: true },
+      { source: '/compare/arcisai-vs-godrej',    destination: '/compare/best-enterprise-cctv-india', permanent: true },
+      { source: '/compare/arcisai-vs-honeywell', destination: '/compare/ai-cctv-alternative-india',  permanent: true },
     ];
   },
 };
