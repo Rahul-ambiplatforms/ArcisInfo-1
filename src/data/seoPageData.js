@@ -1243,105 +1243,105 @@ const seoPageData = {
     ],
     cta: {title:"Secure Your Oil & Gas Operations", description:"Free site survey and customized solution design.", buttonText:"Request Demo", buttonLink:"/contact-us?industry=oil-gas-surveillance"}
   },
-  "arcisai-vs-cp-plus": {
-    slug: "arcisai-vs-cp-plus",
-    title: "ArcisAI vs CP Plus — Detailed Comparison 2026 | ArcisAI",
-    metaDescription: "Compare ArcisAI vs CP Plus: features, pricing, AI capabilities, certifications. Find out which is better for your surveillance needs in India.",
-    keywords: ["arcisai vs cp plus", "ArcisAI vs CP Plus", "CP Plus alternative", "best CCTV India 2026"],
-    heroTitle: "ArcisAI vs CP Plus",
-    heroSubtitle: "Which Is the Better Choice for AI Surveillance in India?",
-    heroDescription: "Head-to-head comparison of ArcisAI and CP Plus across features, pricing, AI capabilities, certifications, and support.",
+  "best-ai-cctv-brand-india": {
+    slug: "best-ai-cctv-brand-india",
+    title: "Best AI CCTV Brand in India 2026 — Why Choose ArcisAI | ArcisAI",
+    metaDescription: "Looking for the best AI CCTV brand in India? ArcisAI delivers AI-native cameras, STQC and BIS-ER certification, ArcisGPT Gen AI, and Made-in-India manufacturing.",
+    keywords: ["best AI CCTV brand India", "best CCTV brand India 2026", "AI CCTV India", "top CCTV brand India"],
+    heroTitle: "Best AI CCTV Brand in India",
+    heroSubtitle: "AI-Native, Certified, Made in India",
+    heroDescription: "What to look for in a modern AI surveillance brand and how ArcisAI delivers on every criterion.",
     category: "compare",
     sections: [
-      {title: "Where ArcisAI Wins", features: ["AI-native with 8 on-camera detections","STQC certified","ArcisGPT Gen AI search","Made in India with own factory","Cloud-first architecture"]},
-      {title: "Where CP Plus Has Advantages", features: ["Larger dealer network","Lower entry price point","More SKUs available","Established brand recognition"]},
-      {title: "The Verdict", features: ["ArcisAI leads in AI innovation and future-readiness", "STQC certification is now mandatory for government projects", "ArcisGPT provides unmatched Gen AI video intelligence", "Made in India advantage for procurement preferences"]}
+      {title: "Why ArcisAI Leads", features: ["AI-native with 8 on-camera detections","STQC + BIS-ER (ER01:2024) certified","ArcisGPT Gen AI video search","Made in India with own factory","Cloud-first architecture"]},
+      {title: "What to Look for in an AI CCTV Brand", features: ["On-camera (edge) AI, not just NVR analytics","Government-ready certification (STQC + BIS-ER)","Data sovereignty and secure firmware","Cloud VMS with mobile access","Local manufacturing and support"]},
+      {title: "The Verdict", features: ["ArcisAI is built AI-first, not retrofitted","Certification is now mandatory for government projects","ArcisGPT provides Gen AI video intelligence","Made in India advantage for procurement preferences"]}
     ],
     faqs: [
-      {q: "What makes ArcisAI different?", a: "ArcisAI excels in AI-native capabilities, STQC certification, and Gen AI with ArcisGPT. CP Plus may offer advantages in pricing or market presence. Your choice depends on whether you prioritize AI intelligence or traditional features."},
-      {q: "What's the price difference between ArcisAI and CP Plus?", a: "ArcisAI ECO-Series starts at ₹2,800 for AI-enabled cameras. Contact us for detailed pricing comparison based on your specific requirements."}
+      {q: "What makes ArcisAI the best AI CCTV choice in India?", a: "ArcisAI is AI-native (8 on-camera detections), STQC and BIS-ER (ER01:2024) certified, powered by ArcisGPT Gen AI search, and Made in India with its own factory, covering the criteria that matter most for modern, compliant surveillance."},
+      {q: "How much does an ArcisAI AI camera cost?", a: "ArcisAI ECO-Series starts at the price of an AI-enabled camera suited to most sites. Contact us for pricing tailored to your project."}
     ],
-    cta: {title: "See ArcisAI in Action", description: "Book a free demo to compare real AI CCTV performance.", buttonText: "Book Free Demo", buttonLink: "/contact-us?compare=arcisai-vs-cp-plus"}
+    cta: {title: "See ArcisAI in Action", description: "Book a free demo to see real AI CCTV performance.", buttonText: "Book Free Demo", buttonLink: "/contact-us?compare=best-ai-cctv-brand-india"}
   },
-  "arcisai-vs-hikvision": {
-    slug: "arcisai-vs-hikvision",
-    title: "ArcisAI vs Hikvision — Detailed Comparison 2026 | ArcisAI",
-    metaDescription: "Compare ArcisAI vs Hikvision: features, pricing, AI capabilities, certifications. Find out which is better for your surveillance needs in India.",
-    keywords: ["arcisai vs hikvision", "ArcisAI vs Hikvision", "Hikvision alternative", "best CCTV India 2026"],
-    heroTitle: "ArcisAI vs Hikvision",
-    heroSubtitle: "Which Is the Better Choice for AI Surveillance in India?",
-    heroDescription: "Head-to-head comparison of ArcisAI and Hikvision across features, pricing, AI capabilities, certifications, and support.",
+  "ndaa-compliant-cctv-india": {
+    slug: "ndaa-compliant-cctv-india",
+    title: "NDAA-Compliant, Made-in-India CCTV — Secure Surveillance | ArcisAI",
+    metaDescription: "Need NDAA-compliant, data-sovereign CCTV in India? ArcisAI offers STQC and BIS-ER certified, Made-in-India AI cameras with secure firmware and no data sovereignty concerns.",
+    keywords: ["NDAA compliant CCTV India", "data sovereign CCTV", "secure CCTV India", "made in India CCTV"],
+    heroTitle: "NDAA-Compliant, Made-in-India CCTV",
+    heroSubtitle: "Data Sovereignty Without Compromise",
+    heroDescription: "Why data-sovereign, certified surveillance matters in India and how ArcisAI delivers secure, compliant AI cameras.",
     category: "compare",
     sections: [
-      {title: "Where ArcisAI Wins", features: ["STQC certified (Hikvision facing regulatory issues)","Made in India","No data sovereignty concerns","ArcisGPT visual intelligence","Edge AI processing"]},
-      {title: "Where Hikvision Has Advantages", features: ["Global scale","Wider product range","Lower hardware cost"]},
-      {title: "The Verdict", features: ["ArcisAI leads in AI innovation and future-readiness", "STQC certification is now mandatory for government projects", "ArcisGPT provides unmatched Gen AI video intelligence", "Made in India advantage for procurement preferences"]}
+      {title: "Why ArcisAI for Secure Surveillance", features: ["STQC certified for the software/VMS layer","BIS-ER (ER01:2024) certified hardware","No data sovereignty concerns, data stays in India","Secure boot with signed firmware","Edge AI processing"]},
+      {title: "What Secure CCTV Requires", features: ["No default passwords, encrypted (TLS) video","Secure firmware and disabled debug ports","Transparent supply chain","Government/GeM-eligible certification","Local data residency"]},
+      {title: "The Verdict", features: ["ArcisAI is engineered for security and compliance","STQC + BIS-ER certification is now mandatory for government projects","Made in India ensures data sovereignty","Best fit for sensitive and government sites"]}
     ],
     faqs: [
-      {q: "What makes ArcisAI different?", a: "ArcisAI excels in AI-native capabilities, STQC certification, and Gen AI with ArcisGPT. Hikvision may offer advantages in pricing or market presence. Your choice depends on whether you prioritize AI intelligence or traditional features."},
-      {q: "What's the price difference between ArcisAI and Hikvision?", a: "ArcisAI ECO-Series starts at ₹2,800 for AI-enabled cameras. Contact us for detailed pricing comparison based on your specific requirements."}
+      {q: "Is ArcisAI suitable for sensitive and government sites?", a: "Yes. ArcisAI is STQC and BIS-ER (ER01:2024) certified, Made in India with secure firmware and data residency in India, designed for government, PSU and high-security deployments."},
+      {q: "Does ArcisAI keep surveillance data within India?", a: "Yes. ArcisAI is Made in India with Indian data residency and secure, signed firmware, so there are no data sovereignty concerns. Contact us to discuss your security requirements."}
     ],
-    cta: {title: "See ArcisAI in Action", description: "Book a free demo to compare real AI CCTV performance.", buttonText: "Book Free Demo", buttonLink: "/contact-us?compare=arcisai-vs-hikvision"}
+    cta: {title: "See ArcisAI in Action", description: "Book a free demo to see real AI CCTV performance.", buttonText: "Book Free Demo", buttonLink: "/contact-us?compare=ndaa-compliant-cctv-india"}
   },
-  "arcisai-vs-dahua": {
-    slug: "arcisai-vs-dahua",
-    title: "ArcisAI vs Dahua — Detailed Comparison 2026 | ArcisAI",
-    metaDescription: "Compare ArcisAI vs Dahua: features, pricing, AI capabilities, certifications. Find out which is better for your surveillance needs in India.",
-    keywords: ["arcisai vs dahua", "ArcisAI vs Dahua", "Dahua alternative", "best CCTV India 2026"],
-    heroTitle: "ArcisAI vs Dahua",
-    heroSubtitle: "Which Is the Better Choice for AI Surveillance in India?",
-    heroDescription: "Head-to-head comparison of ArcisAI and Dahua across features, pricing, AI capabilities, certifications, and support.",
+  "made-in-india-cctv-brand": {
+    slug: "made-in-india-cctv-brand",
+    title: "Best Made-in-India CCTV Camera Brand 2026 | ArcisAI",
+    metaDescription: "ArcisAI is a Made-in-India AI CCTV brand by Adiance Technologies, STQC and BIS-ER certified, with its own factory, edge AI, and ArcisGPT. Built for Make-in-India procurement.",
+    keywords: ["made in India CCTV brand", "Indian CCTV camera brand", "made in India CCTV camera", "Indian AI CCTV"],
+    heroTitle: "Best Made-in-India CCTV Brand",
+    heroSubtitle: "Designed and Manufactured in India",
+    heroDescription: "Why Make-in-India surveillance matters for procurement and security and how ArcisAI delivers it end to end.",
     category: "compare",
     sections: [
-      {title: "Where ArcisAI Wins", features: ["STQC certified","Made in India","No import dependency","ArcisGPT Gen AI","Government project eligible"]},
-      {title: "Where Dahua Has Advantages", features: ["Global presence","Competitive pricing","PTZ range"]},
-      {title: "The Verdict", features: ["ArcisAI leads in AI innovation and future-readiness", "STQC certification is now mandatory for government projects", "ArcisGPT provides unmatched Gen AI video intelligence", "Made in India advantage for procurement preferences"]}
+      {title: "Why ArcisAI", features: ["Made in India with own factory","STQC + BIS-ER (ER01:2024) certified","No import dependency","ArcisGPT Gen AI","Government/GeM project eligible"]},
+      {title: "The Make-in-India Advantage", features: ["Local-content preference in tenders","Faster support and shorter supply chains","Data residency in India","Aligned with India certified-only shift","Backing Indian manufacturing"]},
+      {title: "The Verdict", features: ["ArcisAI is genuinely designed and built in India","Certification is now mandatory for government projects","ArcisGPT provides Gen AI video intelligence","Made in India advantage for procurement preferences"]}
     ],
     faqs: [
-      {q: "What makes ArcisAI different?", a: "ArcisAI excels in AI-native capabilities, STQC certification, and Gen AI with ArcisGPT. Dahua may offer advantages in pricing or market presence. Your choice depends on whether you prioritize AI intelligence or traditional features."},
-      {q: "What's the price difference between ArcisAI and Dahua?", a: "ArcisAI ECO-Series starts at ₹2,800 for AI-enabled cameras. Contact us for detailed pricing comparison based on your specific requirements."}
+      {q: "Is ArcisAI really Made in India?", a: "Yes, ArcisAI is designed and manufactured in India by Adiance Technologies (Ahmedabad) in its own factory, with STQC and BIS-ER (ER01:2024) certification."},
+      {q: "What does an ArcisAI camera cost?", a: "ArcisAI ECO-Series is priced for mainstream AI deployments. Contact us for detailed, project-based pricing."}
     ],
-    cta: {title: "See ArcisAI in Action", description: "Book a free demo to compare real AI CCTV performance.", buttonText: "Book Free Demo", buttonLink: "/contact-us?compare=arcisai-vs-dahua"}
+    cta: {title: "See ArcisAI in Action", description: "Book a free demo to see real AI CCTV performance.", buttonText: "Book Free Demo", buttonLink: "/contact-us?compare=made-in-india-cctv-brand"}
   },
-  "arcisai-vs-godrej": {
-    slug: "arcisai-vs-godrej",
-    title: "ArcisAI vs Godrej Security — Detailed Comparison 2026 | ArcisAI",
-    metaDescription: "Compare ArcisAI vs Godrej Security: features, pricing, AI capabilities, certifications. Find out which is better for your surveillance needs in India.",
-    keywords: ["arcisai vs godrej", "ArcisAI vs Godrej Security", "Godrej Security alternative", "best CCTV India 2026"],
-    heroTitle: "ArcisAI vs Godrej Security",
-    heroSubtitle: "Which Is the Better Choice for AI Surveillance in India?",
-    heroDescription: "Head-to-head comparison of ArcisAI and Godrej Security across features, pricing, AI capabilities, certifications, and support.",
+  "best-enterprise-cctv-india": {
+    slug: "best-enterprise-cctv-india",
+    title: "Best Enterprise AI Surveillance in India 2026 | ArcisAI",
+    metaDescription: "ArcisAI delivers enterprise-grade AI surveillance in India: edge AI cameras, Cloud VMS, ArcisGPT, 30+ models, and STQC/BIS-ER certification for large-scale deployments.",
+    keywords: ["enterprise CCTV India", "enterprise AI surveillance", "business CCTV India", "scalable CCTV India"],
+    heroTitle: "Best Enterprise AI Surveillance in India",
+    heroSubtitle: "Scalable, Certified, AI-First",
+    heroDescription: "What enterprises need from a surveillance platform and how ArcisAI scales to meet it.",
     category: "compare",
     sections: [
-      {title: "Where ArcisAI Wins", features: ["AI-native cameras","Edge computing","ArcisGPT","Cloud VMS platform","30+ camera models"]},
-      {title: "Where Godrej Security Has Advantages", features: ["Trusted Indian conglomerate","Physical security expertise","Access control integration"]},
-      {title: "The Verdict", features: ["ArcisAI leads in AI innovation and future-readiness", "STQC certification is now mandatory for government projects", "ArcisGPT provides unmatched Gen AI video intelligence", "Made in India advantage for procurement preferences"]}
+      {title: "Why ArcisAI for Enterprise", features: ["AI-native cameras with edge computing","Cloud VMS platform","ArcisGPT Gen AI search","30+ camera models","STQC + BIS-ER certified"]},
+      {title: "What Enterprises Need", features: ["Centralised multi-site management","Edge AI to cut bandwidth and storage","Role-based access and secure firmware","Scalable cloud architecture","Reliable local support"]},
+      {title: "The Verdict", features: ["ArcisAI scales from single sites to large deployments","Certification is now mandatory for government projects","ArcisGPT provides Gen AI video intelligence","Made in India advantage for procurement preferences"]}
     ],
     faqs: [
-      {q: "What makes ArcisAI different?", a: "ArcisAI excels in AI-native capabilities, STQC certification, and Gen AI with ArcisGPT. Godrej Security may offer advantages in pricing or market presence. Your choice depends on whether you prioritize AI intelligence or traditional features."},
-      {q: "What's the price difference between ArcisAI and Godrej Security?", a: "ArcisAI ECO-Series starts at ₹2,800 for AI-enabled cameras. Contact us for detailed pricing comparison based on your specific requirements."}
+      {q: "Can ArcisAI handle large multi-site deployments?", a: "Yes. ArcisAI offers a Cloud VMS platform, edge AI cameras and 30+ models with centralised multi-site management, built to scale across enterprise deployments."},
+      {q: "What is ArcisAI pricing for enterprise?", a: "ArcisAI ECO-Series starts the range, with enterprise pricing tailored to scale. Contact us for a quote."}
     ],
-    cta: {title: "See ArcisAI in Action", description: "Book a free demo to compare real AI CCTV performance.", buttonText: "Book Free Demo", buttonLink: "/contact-us?compare=arcisai-vs-godrej"}
+    cta: {title: "See ArcisAI in Action", description: "Book a free demo to see real AI CCTV performance.", buttonText: "Book Free Demo", buttonLink: "/contact-us?compare=best-enterprise-cctv-india"}
   },
-  "arcisai-vs-honeywell": {
-    slug: "arcisai-vs-honeywell",
-    title: "ArcisAI vs Honeywell — Detailed Comparison 2026 | ArcisAI",
-    metaDescription: "Compare ArcisAI vs Honeywell: features, pricing, AI capabilities, certifications. Find out which is better for your surveillance needs in India.",
-    keywords: ["arcisai vs honeywell", "ArcisAI vs Honeywell", "Honeywell alternative", "best CCTV India 2026"],
-    heroTitle: "ArcisAI vs Honeywell",
-    heroSubtitle: "Which Is the Better Choice for AI Surveillance in India?",
-    heroDescription: "Head-to-head comparison of ArcisAI and Honeywell across features, pricing, AI capabilities, certifications, and support.",
+  "ai-cctv-alternative-india": {
+    slug: "ai-cctv-alternative-india",
+    title: "Best AI CCTV Alternative for Indian Businesses 2026 | ArcisAI",
+    metaDescription: "Switching to AI CCTV? ArcisAI is the AI-native, STQC and BIS-ER certified, Made-in-India choice, with ArcisGPT Gen AI, edge processing, and an Indian support team.",
+    keywords: ["AI CCTV alternative", "best CCTV alternative India", "AI surveillance alternative", "switch to AI CCTV"],
+    heroTitle: "The AI-Native CCTV Alternative",
+    heroSubtitle: "Upgrade to Certified, AI-First Surveillance",
+    heroDescription: "What to expect when you move to a modern AI surveillance platform and why businesses choose ArcisAI.",
     category: "compare",
     sections: [
-      {title: "Where ArcisAI Wins", features: ["AI-first design","ArcisGPT Gen AI","Competitive pricing","STQC certified","Indian support team"]},
-      {title: "Where Honeywell Has Advantages", features: ["Enterprise brand trust","Building management integration","Global certifications"]},
-      {title: "The Verdict", features: ["ArcisAI leads in AI innovation and future-readiness", "STQC certification is now mandatory for government projects", "ArcisGPT provides unmatched Gen AI video intelligence", "Made in India advantage for procurement preferences"]}
+      {title: "Why Switch to ArcisAI", features: ["AI-first design, not retrofitted analytics","ArcisGPT Gen AI video search","Transparent, project-based pricing","STQC + BIS-ER certified","Indian support team"]},
+      {title: "What You Gain by Switching", features: ["On-camera detections reduce false alarms","Gen AI search across footage","Cloud access from anywhere","Aligned with India certified-only shift","Future-ready architecture"]},
+      {title: "The Verdict", features: ["ArcisAI is built AI-first for the next decade","Certification is now mandatory for government projects","ArcisGPT provides Gen AI video intelligence","Made in India advantage for procurement preferences"]}
     ],
     faqs: [
-      {q: "What makes ArcisAI different?", a: "ArcisAI excels in AI-native capabilities, STQC certification, and Gen AI with ArcisGPT. Honeywell may offer advantages in pricing or market presence. Your choice depends on whether you prioritize AI intelligence or traditional features."},
-      {q: "What's the price difference between ArcisAI and Honeywell?", a: "ArcisAI ECO-Series starts at ₹2,800 for AI-enabled cameras. Contact us for detailed pricing comparison based on your specific requirements."}
+      {q: "Why choose ArcisAI as an AI CCTV alternative?", a: "ArcisAI is AI-native, STQC and BIS-ER (ER01:2024) certified, Made in India, and powered by ArcisGPT Gen AI search, a future-ready choice with an Indian support team."},
+      {q: "How do I switch to ArcisAI?", a: "Book a free demo and our team will assess your sites and plan a migration. Contact us for a tailored quote."}
     ],
-    cta: {title: "See ArcisAI in Action", description: "Book a free demo to compare real AI CCTV performance.", buttonText: "Book Free Demo", buttonLink: "/contact-us?compare=arcisai-vs-honeywell"}
+    cta: {title: "See ArcisAI in Action", description: "Book a free demo to see real AI CCTV performance.", buttonText: "Book Free Demo", buttonLink: "/contact-us?compare=ai-cctv-alternative-india"}
   },
   "ai-cctv-vs-traditional-cctv": {
     slug: "ai-cctv-vs-traditional-cctv",
@@ -1358,7 +1358,7 @@ const seoPageData = {
       {title: "The Verdict", features: ["AI CCTV leads in AI innovation and future-readiness", "STQC certification is now mandatory for government projects", "ArcisGPT provides unmatched Gen AI video intelligence", "Made in India advantage for procurement preferences"]}
     ],
     faqs: [
-      {q: "Is AI CCTV better than Traditional CCTV?", a: "AI CCTV excels in AI-native capabilities, STQC certification, and Gen AI with ArcisGPT. Traditional CCTV may offer advantages in pricing or market presence. Your choice depends on whether you prioritize AI intelligence or traditional features."},
+      {q: "Is AI CCTV better than Traditional CCTV?", a: "AI CCTV is a major step up: it detects threats in real time, sends automatic alerts, and sharply reduces false alarms, while traditional CCTV only records for after-the-fact review. ArcisAI cameras add on-camera detections and ArcisGPT Gen AI search for proactive security."},
       {q: "What's the price difference between AI CCTV and Traditional CCTV?", a: "ArcisAI ECO-Series starts at ₹2,800 for AI-enabled cameras. Contact us for detailed pricing comparison based on your specific requirements."}
     ],
     cta: {title: "See ArcisAI in Action", description: "Book a free demo to compare real AI CCTV performance.", buttonText: "Book Free Demo", buttonLink: "/contact-us?compare=ai-cctv-vs-traditional-cctv"}
@@ -1378,7 +1378,7 @@ const seoPageData = {
       {title: "The Verdict", features: ["Cloud VMS leads in AI innovation and future-readiness", "STQC certification is now mandatory for government projects", "ArcisGPT provides unmatched Gen AI video intelligence", "Made in India advantage for procurement preferences"]}
     ],
     faqs: [
-      {q: "Is Cloud VMS better than DVR/NVR?", a: "Cloud VMS excels in AI-native capabilities, STQC certification, and Gen AI with ArcisGPT. DVR/NVR may offer advantages in pricing or market presence. Your choice depends on whether you prioritize AI intelligence or traditional features."},
+      {q: "Is Cloud VMS better than DVR/NVR?", a: "For most modern deployments, yes. Cloud VMS gives access from anywhere, automatic updates, scalable storage and built-in AI analytics with no single hardware point of failure. ArcisAI Cloud VMS is AI-native and STQC certified; DVR/NVR still suits fully offline sites."},
       {q: "What's the price difference between Cloud VMS and DVR/NVR?", a: "ArcisAI ECO-Series starts at ₹2,800 for AI-enabled cameras. Contact us for detailed pricing comparison based on your specific requirements."}
     ],
     cta: {title: "See ArcisAI in Action", description: "Book a free demo to compare real AI CCTV performance.", buttonText: "Book Free Demo", buttonLink: "/contact-us?compare=cloud-vms-vs-dvr-nvr"}
@@ -1398,7 +1398,7 @@ const seoPageData = {
       {title: "The Verdict", features: ["4G SIM Cameras leads in AI innovation and future-readiness", "STQC certification is now mandatory for government projects", "ArcisGPT provides unmatched Gen AI video intelligence", "Made in India advantage for procurement preferences"]}
     ],
     faqs: [
-      {q: "Is 4G SIM Cameras better than WiFi Cameras?", a: "4G SIM Cameras excels in AI-native capabilities, STQC certification, and Gen AI with ArcisGPT. WiFi Cameras may offer advantages in pricing or market presence. Your choice depends on whether you prioritize AI intelligence or traditional features."},
+      {q: "Is 4G SIM Cameras better than WiFi Cameras?", a: "It depends on the site. 4G SIM cameras work anywhere with cellular signal, ideal for remote, temporary or construction sites with no fixed internet, while WiFi cameras suit locations with reliable broadband. ArcisAI offers both so you can match connectivity to each location."},
       {q: "What's the price difference between 4G SIM Cameras and WiFi Cameras?", a: "ArcisAI ECO-Series starts at ₹2,800 for AI-enabled cameras. Contact us for detailed pricing comparison based on your specific requirements."}
     ],
     cta: {title: "See ArcisAI in Action", description: "Book a free demo to compare real AI CCTV performance.", buttonText: "Book Free Demo", buttonLink: "/contact-us?compare=4g-cameras-vs-wifi-cameras"}
@@ -1418,7 +1418,7 @@ const seoPageData = {
       {title: "The Verdict", features: ["Indian CCTV Brands leads in AI innovation and future-readiness", "STQC certification is now mandatory for government projects", "ArcisGPT provides unmatched Gen AI video intelligence", "Made in India advantage for procurement preferences"]}
     ],
     faqs: [
-      {q: "Is Indian CCTV Brands better than Chinese CCTV Brands?", a: "Indian CCTV Brands excels in AI-native capabilities, STQC certification, and Gen AI with ArcisGPT. Chinese CCTV Brands may offer advantages in pricing or market presence. Your choice depends on whether you prioritize AI intelligence or traditional features."},
+      {q: "Is Indian CCTV Brands better than Chinese CCTV Brands?", a: "For Indian buyers, Indian-made CCTV has clear advantages: STQC/BIS-ER certification, data residency in India, eligibility for government and GeM procurement, and local support and warranty. ArcisAI is designed and manufactured in India by Adiance Technologies."},
       {q: "What's the price difference between Indian CCTV Brands and Chinese CCTV Brands?", a: "ArcisAI ECO-Series starts at ₹2,800 for AI-enabled cameras. Contact us for detailed pricing comparison based on your specific requirements."}
     ],
     cta: {title: "See ArcisAI in Action", description: "Book a free demo to compare real AI CCTV performance.", buttonText: "Book Free Demo", buttonLink: "/contact-us?compare=indian-vs-chinese-cctv"}
@@ -1438,7 +1438,7 @@ const seoPageData = {
       {title: "The Verdict", features: ["STQC Certified leads in AI innovation and future-readiness", "STQC certification is now mandatory for government projects", "ArcisGPT provides unmatched Gen AI video intelligence", "Made in India advantage for procurement preferences"]}
     ],
     faqs: [
-      {q: "Is STQC Certified better than Non-Certified?", a: "STQC Certified excels in AI-native capabilities, STQC certification, and Gen AI with ArcisGPT. Non-Certified may offer advantages in pricing or market presence. Your choice depends on whether you prioritize AI intelligence or traditional features."},
+      {q: "Is STQC Certified better than Non-Certified?", a: "Yes, and increasingly it is mandatory. STQC certification means the device has been tested for cyber-security and data protection, and it is required for government procurement. ArcisAI is STQC and BIS-ER (ER01:2024) certified, so it is both secure and tender-ready."},
       {q: "What's the price difference between STQC Certified and Non-Certified?", a: "ArcisAI ECO-Series starts at ₹2,800 for AI-enabled cameras. Contact us for detailed pricing comparison based on your specific requirements."}
     ],
     cta: {title: "See ArcisAI in Action", description: "Book a free demo to compare real AI CCTV performance.", buttonText: "Book Free Demo", buttonLink: "/contact-us?compare=stqc-certified-vs-non-certified"}
