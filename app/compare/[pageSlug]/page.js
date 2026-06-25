@@ -8,7 +8,10 @@ export async function generateMetadata({ params }) {
     .split('-')
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(' ');
-  const title = data?.title || `${fallbackName} | AI CCTV Comparison | ArcisAI`;
+  const rawTitle = data?.title || `${fallbackName} | AI CCTV Comparison | ArcisAI`;
+  // Parent layout applies the "%s | ArcisAI" template, so strip a trailing
+  // "| ArcisAI" from the page title to avoid a duplicated brand suffix.
+  const title = rawTitle.replace(/\s*\|\s*ArcisAI\s*$/i, '');
   const description =
     data?.metaDescription ||
     `AI CCTV comparison for India: features, price, and performance for enterprise AI CCTV cameras by ArcisAI.`;
