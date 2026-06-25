@@ -3,19 +3,26 @@ import { resolveSeoPageData, resolveSeoKey } from '@/src/data/resolveSeoPageData
 
 export async function generateMetadata({ params }) {
   const { pageSlug } = params;
-  const name = pageSlug
+  const data = resolveSeoPageData({ category: 'compare', pageSlug });
+  const fallbackName = pageSlug
     .split('-')
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(' ');
+  const title = data?.title || `${fallbackName} | AI CCTV Comparison | ArcisAI`;
+  const description =
+    data?.metaDescription ||
+    `AI CCTV comparison for India: features, price, and performance for enterprise AI CCTV cameras by ArcisAI.`;
+  const canonical = `https://arcisai.io/compare/${pageSlug}`;
 
   return {
-    title: `${name} | AI CCTV Comparison | ArcisAI`,
-    description: `Compare ArcisAI with ${name}. Detailed feature, price, and performance comparison for enterprise AI CCTV cameras.`,
-    alternates: { canonical: `https://arcisai.io/compare/${pageSlug}` },
+    title,
+    description,
+    ...(data?.keywords ? { keywords: data.keywords } : {}),
+    alternates: { canonical },
     openGraph: {
-      title: `${name} | AI CCTV Comparison | ArcisAI`,
-      description: `AI CCTV comparison: ArcisAI vs ${name}.`,
-      url: `https://arcisai.io/compare/${pageSlug}`,
+      title,
+      description,
+      url: canonical,
       images: [{ url: '/og/compare.jpg', width: 1200, height: 630 }],
     },
   };
