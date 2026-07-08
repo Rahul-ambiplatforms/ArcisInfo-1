@@ -1,4 +1,5 @@
 import SEOLandingPage from '@/src/views/SEOLandingPages/SEOLandingPage';
+import {notFound} from 'next/navigation';
 import { resolveSeoPageData, resolveSeoKey } from '@/src/data/resolveSeoPageData';
 
 export async function generateMetadata({ params }) {

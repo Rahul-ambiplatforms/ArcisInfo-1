@@ -1,4 +1,5 @@
 import SEOLandingPage from '@/src/views/SEOLandingPages/SEOLandingPage';
+import {notFound} from 'next/navigation';
 import { resolveSeoPageData, resolveSeoKey } from '@/src/data/resolveSeoPageData';
 
 /**
@@ -90,5 +91,8 @@ export default function SlugPage({ params }) {
   }
 
   const pageData = resolveSeoPageData(paramsOverride);
+  if (!pageData) {
+    notFound();
+  }
   return <SEOLandingPage pageData={pageData} slugKey={resolveSeoKey(paramsOverride) || slug} />;
 }
