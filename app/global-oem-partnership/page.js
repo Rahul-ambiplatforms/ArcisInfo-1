@@ -1,7 +1,7 @@
 import OEMExport from '@/src/views/Partners/OEMExport';
 
 const SITE_URL = 'https://arcisai.io';
-const TITLE = 'International CCTV Distribution & OEM Partnership | NDAA-Compliant Made-in-India | ArcisAI';
+const TITLE = 'International CCTV Distribution & OEM Partnership | NDAA-Compliant Made-in-India CCTV';
 const DESCRIPTION =
   'Distribute ArcisAI or white-label NDAA-compliant, Made-in-India AI CCTV for US, UK, EU, GCC & ANZ markets. OEM/ODM from Adiance Technologies — MOQ from 100 units per SKU. Enquire now.';
 
