@@ -192,6 +192,9 @@ const nextConfig = {
         permanent: true,
       },
       { source: "/products/vms", destination: "/cloud-vms", permanent: true },
+      // Redirect common broken/legacy VMS paths to the canonical VMS page
+      { source: "/vms", destination: "/cloud-vms", permanent: true },
+      { source: "/arcis-vms", destination: "/cloud-vms", permanent: true },
       {
         source: "/compare/arcisai-vs-cp-plus",
         destination: "/compare/best-ai-cctv-brand-india",

@@ -316,6 +316,17 @@ async function generate() {
     { loc: buildUrlLoc("/ai-cctv-cameras-los-angeles"), changefreq: "monthly", priority: "0.8" },
     { loc: buildUrlLoc("/ai-cctv-cameras-chicago"), changefreq: "monthly", priority: "0.8" },
     { loc: buildUrlLoc("/ai-cctv-cameras-abu-dhabi"), changefreq: "monthly", priority: "0.8" },
+    // Additional manually-verified pages requested for sitemap
+    { loc: buildUrlLoc("/arcisai-vs-godrej"), changefreq: "monthly", priority: "0.7" },
+    { loc: buildUrlLoc("/blog/arcisai-vs-dahua-ai-cctv-comparison-india-2026"), changefreq: "monthly", priority: "0.6" },
+    { loc: buildUrlLoc("/blog/top-ai-cctv-camera-brands-india-2026"), changefreq: "monthly", priority: "0.6" },
+    { loc: buildUrlLoc("/blog/arcisai-vs-hikvision-vs-dahua-ai-camera-comparison-2026"), changefreq: "monthly", priority: "0.6" },
+    { loc: buildUrlLoc("/blog/best-4g-5g-cctv-camera-india-2026"), changefreq: "monthly", priority: "0.6" },
+    { loc: buildUrlLoc("/blog/best-ai-cctv-camera-business-security-india-2026"), changefreq: "monthly", priority: "0.6" },
+    { loc: buildUrlLoc("/blog/ai-powered-retail-surveillance"), changefreq: "monthly", priority: "0.6" },
+    { loc: buildUrlLoc("/blog/ai-surveillance-for-warehousing"), changefreq: "monthly", priority: "0.6" },
+    { loc: buildUrlLoc("/blog/what-is-ai-surveillance"), changefreq: "monthly", priority: "0.6" },
+    { loc: buildUrlLoc("/blog/choosing-the-right-cctv-camera"), changefreq: "monthly", priority: "0.6" },
   ];
 
   // Dynamic blog routes

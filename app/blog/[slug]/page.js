@@ -1,5 +1,7 @@
 import BlogsContent from '@/src/views/Blogs/BlogsContents';
 
+const API_BASE = process.env.API_BASE_URL || 'https://vmukti.com/backend/api';
+
 export async function generateMetadata({ params }) {
   const { slug } = params;
   const title = slug
@@ -21,8 +23,25 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function BlogPostPage({ params }) {
+export default async function BlogPostPage({ params }) {
   const { slug } = params;
+  let initialBlog = null;
+
+  try {
+    const res = await fetch(`${API_BASE}/blogs/urlWords/${slug}`, {
+      headers: { 'User-Agent': 'next-server' },
+      cache: 'no-store',
+    });
+    if (res.ok) {
+      const json = await res.json();
+      // Client expects `blog` state to be the response.data object
+      initialBlog = json && json.data ? json.data : null;
+    }
+  } catch (e) {
+    // swallow - component will handle missing blog
+    console.error('Server blog fetch failed:', e?.message || e);
+    initialBlog = null;
+  }
   const title = slug
     .split('-')
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
@@ -85,7 +104,7 @@ export default function BlogPostPage({ params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <BlogsContent urlWords={slug} />
+      <BlogsContent urlWords={slug} initialBlog={initialBlog} />
     </>
   );
 }

@@ -143,20 +143,20 @@ const TableOfContents = ({ components }) => {
         sx={
           enableScroll
             ? {
-                "&::-webkit-scrollbar": {
-                  width: "6px",
-                },
-                "&::-webkit-scrollbar-track": {
-                  background: "transparent",
-                },
-                "&::-webkit-scrollbar-thumb": {
-                  background: "#8266C9",
-                  borderRadius: "24px",
-                },
-                "&::-webkit-scrollbar-thumb:hover": {
-                  background: "#4d27abff",
-                },
-              }
+              "&::-webkit-scrollbar": {
+                width: "6px",
+              },
+              "&::-webkit-scrollbar-track": {
+                background: "transparent",
+              },
+              "&::-webkit-scrollbar-thumb": {
+                background: "#8266C9",
+                borderRadius: "24px",
+              },
+              "&::-webkit-scrollbar-thumb:hover": {
+                background: "#4d27abff",
+              },
+            }
             : {}
         }
       >
@@ -209,11 +209,11 @@ const TableOfContents = ({ components }) => {
   );
 };
 
-const BlogsOverviewDash = ({ urlWords: urlWordsProp }) => {
+const BlogsOverviewDash = ({ urlWords: urlWordsProp, initialBlog }) => {
   const routerParams = useParams();
   const urlWords = urlWordsProp ?? routerParams?.slug;
-  const [blog, setBlog] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [blog, setBlog] = useState(initialBlog || null);
+  const [loading, setLoading] = useState(initialBlog ? false : true);
   const [error, setError] = useState(null);
   // Add at the top of your component
   const [currentUrl, setCurrentUrl] = useState("");
@@ -356,6 +356,13 @@ const BlogsOverviewDash = ({ urlWords: urlWordsProp }) => {
       }
     };
 
+    // If server provided an initialBlog, skip client fetch to ensure crawlers
+    // received full HTML from the server. Otherwise fetch on the client.
+    if (initialBlog) {
+      // already set via initial state
+      return;
+    }
+
     // Only run the fetch function if urlWords exists
     if (urlWords) {
       fetchBlog();
@@ -363,7 +370,7 @@ const BlogsOverviewDash = ({ urlWords: urlWordsProp }) => {
       setError("No urlWords parameter found.");
       setLoading(false);
     }
-  }, [urlWords]);
+  }, [urlWords, initialBlog]);
 
   const [mainImageOg, setMainImageOg] = useState("");
   useEffect(() => {
@@ -416,7 +423,7 @@ const BlogsOverviewDash = ({ urlWords: urlWordsProp }) => {
       // First 2 words - color 1
       colorScheme.push(
         <span style={{ color: colors[0] }}>
-          {words[0]} {words[1]} {}
+          {words[0]} {words[1]} { }
         </span>
       );
 
@@ -588,39 +595,39 @@ const BlogsOverviewDash = ({ urlWords: urlWordsProp }) => {
               mb={{ base: "4%", md: "2%" }}
               w="fit-content"
               justifyContent="center"
-              // alignItems="center"
-              // w="159px"
+            // alignItems="center"
+            // w="159px"
             >
               {/* Author Information */}
               {(blog.content?.blogAuthor ||
                 blog.content?.author ||
                 blog.blogAuthor) && (
-                <Flex alignItems="center" gap={2}>
-                  <Box>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="21"
-                      height="21"
-                      viewBox="0 0 21 21"
-                      fill="none"
-                    >
-                      <path
-                        d="M20.088 19.9496C20.088 20.2281 19.9758 20.4951 19.776 20.6921C19.5763 20.889 19.3053 20.9996 19.0228 20.9996C18.7402 20.9996 18.4693 20.889 18.2695 20.6921C18.0697 20.4951 17.9575 20.2281 17.9575 19.9496V17.8496C17.9575 17.0142 17.6209 16.2129 17.0216 15.6222C16.4223 15.0315 15.6094 14.6996 14.7619 14.6996H6.24015C5.39261 14.6996 4.57976 15.0315 3.98046 15.6222C3.38116 16.2129 3.0445 17.0142 3.0445 17.8496V19.9496C3.0445 20.2281 2.93232 20.4951 2.73255 20.6921C2.53279 20.889 2.26179 20.9996 1.97928 20.9996C1.69677 20.9996 1.42577 20.889 1.22601 20.6921C1.02624 20.4951 0.914062 20.2281 0.914062 19.9496V17.8496C0.914062 16.4572 1.47521 15.1219 2.47405 14.1373C3.47288 13.1527 4.82758 12.5996 6.24015 12.5996H14.7619C16.1745 12.5996 17.5292 13.1527 18.528 14.1373C19.5268 15.1219 20.088 16.4572 20.088 17.8496V19.9496Z"
-                        fill="#8266C9"
-                      />
-                      <path
-                        d="M10.4999 10.5C9.44652 10.5 8.41679 10.1921 7.54092 9.61522C6.66505 9.03834 5.98239 8.21837 5.57927 7.25906C5.17615 6.29975 5.07066 5.24416 5.27617 4.22576C5.48167 3.20736 5.98895 2.27193 6.73382 1.5377C7.47868 0.803478 8.42768 0.303447 9.46084 0.100875C10.494 -0.101697 11.5649 0.0022881 12.5382 0.399648C13.5114 0.797008 14.3432 1.46992 14.9284 2.33328C15.5136 3.19664 15.826 4.21165 15.826 5.25C15.826 6.64239 15.2649 7.97773 14.266 8.9623C13.2672 9.94687 11.9125 10.5 10.4999 10.5ZM10.4999 8.4C11.132 8.4 11.7498 8.21523 12.2754 7.86911C12.8009 7.52298 13.2104 7.03106 13.4523 6.45548C13.6942 5.87989 13.7575 5.24651 13.6342 4.63547C13.5109 4.02443 13.2065 3.46313 12.7596 3.0226C12.3127 2.58206 11.7433 2.28204 11.1234 2.1605C10.5035 2.03896 9.8609 2.10134 9.27697 2.33975C8.69304 2.57817 8.194 2.98197 7.84286 3.49998C7.49171 4.018 7.30427 4.62699 7.30427 5.25C7.30427 6.08543 7.64093 6.88667 8.24023 7.47741C8.83953 8.06815 9.65238 8.4 10.4999 8.4Z"
-                        fill="#8266C9"
-                      />
-                    </svg>
-                  </Box>
-                  <Text fontSize="16px" fontWeight="500" color="black">
-                    {blog.content?.blogAuthor ||
-                      blog.content?.author ||
-                      blog.blogAuthor}
-                  </Text>
-                </Flex>
-              )}
+                  <Flex alignItems="center" gap={2}>
+                    <Box>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="21"
+                        height="21"
+                        viewBox="0 0 21 21"
+                        fill="none"
+                      >
+                        <path
+                          d="M20.088 19.9496C20.088 20.2281 19.9758 20.4951 19.776 20.6921C19.5763 20.889 19.3053 20.9996 19.0228 20.9996C18.7402 20.9996 18.4693 20.889 18.2695 20.6921C18.0697 20.4951 17.9575 20.2281 17.9575 19.9496V17.8496C17.9575 17.0142 17.6209 16.2129 17.0216 15.6222C16.4223 15.0315 15.6094 14.6996 14.7619 14.6996H6.24015C5.39261 14.6996 4.57976 15.0315 3.98046 15.6222C3.38116 16.2129 3.0445 17.0142 3.0445 17.8496V19.9496C3.0445 20.2281 2.93232 20.4951 2.73255 20.6921C2.53279 20.889 2.26179 20.9996 1.97928 20.9996C1.69677 20.9996 1.42577 20.889 1.22601 20.6921C1.02624 20.4951 0.914062 20.2281 0.914062 19.9496V17.8496C0.914062 16.4572 1.47521 15.1219 2.47405 14.1373C3.47288 13.1527 4.82758 12.5996 6.24015 12.5996H14.7619C16.1745 12.5996 17.5292 13.1527 18.528 14.1373C19.5268 15.1219 20.088 16.4572 20.088 17.8496V19.9496Z"
+                          fill="#8266C9"
+                        />
+                        <path
+                          d="M10.4999 10.5C9.44652 10.5 8.41679 10.1921 7.54092 9.61522C6.66505 9.03834 5.98239 8.21837 5.57927 7.25906C5.17615 6.29975 5.07066 5.24416 5.27617 4.22576C5.48167 3.20736 5.98895 2.27193 6.73382 1.5377C7.47868 0.803478 8.42768 0.303447 9.46084 0.100875C10.494 -0.101697 11.5649 0.0022881 12.5382 0.399648C13.5114 0.797008 14.3432 1.46992 14.9284 2.33328C15.5136 3.19664 15.826 4.21165 15.826 5.25C15.826 6.64239 15.2649 7.97773 14.266 8.9623C13.2672 9.94687 11.9125 10.5 10.4999 10.5ZM10.4999 8.4C11.132 8.4 11.7498 8.21523 12.2754 7.86911C12.8009 7.52298 13.2104 7.03106 13.4523 6.45548C13.6942 5.87989 13.7575 5.24651 13.6342 4.63547C13.5109 4.02443 13.2065 3.46313 12.7596 3.0226C12.3127 2.58206 11.7433 2.28204 11.1234 2.1605C10.5035 2.03896 9.8609 2.10134 9.27697 2.33975C8.69304 2.57817 8.194 2.98197 7.84286 3.49998C7.49171 4.018 7.30427 4.62699 7.30427 5.25C7.30427 6.08543 7.64093 6.88667 8.24023 7.47741C8.83953 8.06815 9.65238 8.4 10.4999 8.4Z"
+                          fill="#8266C9"
+                        />
+                      </svg>
+                    </Box>
+                    <Text fontSize="16px" fontWeight="500" color="black">
+                      {blog.content?.blogAuthor ||
+                        blog.content?.author ||
+                        blog.blogAuthor}
+                    </Text>
+                  </Flex>
+                )}
             </Box>
             <Box
               display="flex"
@@ -723,7 +730,7 @@ const BlogsOverviewDash = ({ urlWords: urlWordsProp }) => {
           align="start"
           py={{ base: 0, md: 8 }}
           gap={4}
-          // bg="red"
+        // bg="red"
         >
           {/* Content Section */}
           <Box width={{ base: "100%", md: "70%" }}>
@@ -826,8 +833,8 @@ const BlogsOverviewDash = ({ urlWords: urlWordsProp }) => {
                           return (
                             <Box key={component.id} my={4}>
                               {component.content.file ||
-                              component.content.url ||
-                              component.content.imagePath ? (
+                                component.content.url ||
+                                component.content.imagePath ? (
                                 <Image loading="lazy"
                                   src={
                                     component.content.file ||
@@ -838,7 +845,7 @@ const BlogsOverviewDash = ({ urlWords: urlWordsProp }) => {
                                   borderRadius="24px"
                                   w="full"
                                   h="auto"
-                                  // maxH="250px"
+                                // maxH="250px"
                                 />
                               ) : (
                                 <Box
@@ -954,7 +961,7 @@ const BlogsOverviewDash = ({ urlWords: urlWordsProp }) => {
             position={{ base: "relative", md: "sticky" }}
             top={{ base: "20px", md: "50px" }} //85px
             borderRadius={{ base: "20px", md: "24px" }}
-            // boxShadow="sm"
+          // boxShadow="sm"
           >
             <Box
               p="2%"
