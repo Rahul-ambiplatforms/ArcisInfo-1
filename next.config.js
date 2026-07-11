@@ -231,6 +231,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/arcisai-vs-godrej",
+        destination: "/compare/best-enterprise-cctv-india",
+        permanent: true,
+      },
+      {
         source: "/compare/arcisai-vs-honeywell",
         destination: "/compare/ai-cctv-alternative-india",
         permanent: true,

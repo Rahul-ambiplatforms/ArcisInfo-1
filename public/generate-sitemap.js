@@ -235,6 +235,7 @@ async function generate() {
     { loc: buildUrlLoc("/compare/arcisai-vs-dahua"), changefreq: "monthly", priority: "0.7" },
     { loc: buildUrlLoc("/compare/arcisai-vs-godrej"), changefreq: "monthly", priority: "0.7" },
     { loc: buildUrlLoc("/compare/arcisai-vs-honeywell"), changefreq: "monthly", priority: "0.7" },
+    { loc: buildUrlLoc("/compare/best-enterprise-cctv-india"), changefreq: "monthly", priority: "0.7" },
     { loc: buildUrlLoc("/compare/arcisai-vs-verkada"), changefreq: "monthly", priority: "0.8" },
     { loc: buildUrlLoc("/compare/arcisai-vs-rhombus"), changefreq: "monthly", priority: "0.8" },
     { loc: buildUrlLoc("/compare/ai-cctv-vs-traditional-cctv"), changefreq: "monthly", priority: "0.7" },
@@ -334,13 +335,17 @@ async function generate() {
   try {
     const blogs = await fetchAllPublishedBlogs();
     dynamicRoutes = blogs
-      .filter((b) => b && b.metadata && b.metadata.urlWords)
-      .map((b) => ({
-        loc: buildUrlLoc(`/blog/${b.metadata.urlWords}`),
-        lastmod: formatDateISO(b.updatedAt || b.createdAt),
-        changefreq: "monthly",
-        priority: "0.6",
-      }));
+      .map((b) => {
+        const urlWords = b?.metadata?.urlWords || b?.urlWords || b?.slug || b?.metadata?.slug;
+        if (!urlWords) return null;
+        return {
+          loc: buildUrlLoc(`/blog/${urlWords}`),
+          lastmod: formatDateISO(b.updatedAt || b.createdAt),
+          changefreq: "monthly",
+          priority: "0.6",
+        };
+      })
+      .filter(Boolean);
   } catch (e) {
     console.error("Failed to fetch blogs for sitemap:", e.message || e);
   }
