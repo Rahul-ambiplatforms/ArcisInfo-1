@@ -218,9 +218,9 @@ const SEOLandingPage = ({ pageData, slugKey }) => {
         <Box py={{base: 16, md: 20}} bg={`linear-gradient(135deg, ${ACCENT_DEEP} 0%, ${ACCENT} 100%)`} color="white" textAlign="center">
           <Container maxW="700px">
             <Heading as="h2" size={{base: "lg", md: "xl"}} mb={4}>{pageData.cta.title}</Heading>
-            <Text color="whiteAlpha.900" mb={8} fontSize="lg">{pageData.cta.description}</Text>
-            <Button as={NextLink} href={pageData.cta.buttonLink} bg="white" color={ACCENT_DEEP} size="lg" px={10} _hover={{bg: "gray.100", transform: "translateY(-2px)"}} transition="all 0.2s" fontWeight="700">
-              {pageData.cta.buttonText}
+            <Text color="whiteAlpha.900" mb={8} fontSize="lg">{pageData.cta.description || pageData.cta.subtitle || ""}</Text>
+            <Button as={NextLink} href={pageData.cta.buttonLink || "/contact-us"} bg="white" color={ACCENT_DEEP} size="lg" px={10} _hover={{bg: "gray.100", transform: "translateY(-2px)"}} transition="all 0.2s" fontWeight="700">
+              {pageData.cta.buttonText || "Get Free Quote"}
             </Button>
           </Container>
         </Box>
