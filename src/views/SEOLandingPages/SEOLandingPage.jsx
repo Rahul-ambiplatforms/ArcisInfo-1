@@ -26,7 +26,7 @@ const SEOLandingPage = ({ pageData, slugKey }) => {
     );
   }
 
-  const pageUrl = `https://www.arcisai.io/${pageData.slug || slugKey}`;
+  const pageUrl = `https://arcisai.io/${pageData.slug || slugKey}`;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -37,8 +37,8 @@ const SEOLandingPage = ({ pageData, slugKey }) => {
     publisher: {
       "@type": "Organization",
       name: "ArcisAI",
-      url: "https://www.arcisai.io",
-      logo: "https://www.arcisai.io/logo.webp",
+      url: "https://arcisai.io",
+      logo: "https://arcisai.io/logo.webp",
       sameAs: ["https://www.linkedin.com/company/arcisai"]
     }
   };
@@ -48,9 +48,9 @@ const SEOLandingPage = ({ pageData, slugKey }) => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.arcisai.io/" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://arcisai.io/" },
       ...(pageData.category === "city" || pageData.category === "state" ? [
-        { "@type": "ListItem", position: 2, name: pageData.category === "city" ? "Cities" : "States", item: "https://www.arcisai.io/" },
+        { "@type": "ListItem", position: 2, name: pageData.category === "city" ? "Cities" : "States", item: "https://arcisai.io/" },
         { "@type": "ListItem", position: 3, name: pageData.heroTitle || pageData.title }
       ] : [
         { "@type": "ListItem", position: 2, name: pageData.heroTitle || pageData.title }
@@ -65,7 +65,7 @@ const SEOLandingPage = ({ pageData, slugKey }) => {
     name: "ArcisAI Smart CCTV Camera",
     description: pageData.metaDescription,
     brand: { "@type": "Brand", name: "ArcisAI" },
-    manufacturer: { "@type": "Organization", name: "ArcisAI", url: "https://www.arcisai.io" },
+    manufacturer: { "@type": "Organization", name: "ArcisAI", url: "https://arcisai.io" },
     category: "AI CCTV Cameras",
     url: pageUrl,
     aggregateRating: {
@@ -93,7 +93,7 @@ const SEOLandingPage = ({ pageData, slugKey }) => {
     url: pageUrl,
     telephone: "+91-9909000616",
     priceRange: "₹₹₹",
-    image: "https://www.arcisai.io/logo.webp",
+    image: "https://arcisai.io/logo.webp",
     address: {
       "@type": "PostalAddress",
       addressCountry: "IN"
