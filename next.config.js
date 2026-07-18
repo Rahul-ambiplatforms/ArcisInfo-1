@@ -231,12 +231,6 @@ const nextConfig = {
         statusCode: 301,
       },
       {
-        source: "/compare/arcisai-vs-cp-plus",
-        destination: "/compare/best-ai-cctv-brand-india",
-        permanent: true,
-        statusCode: 301,
-      },
-      {
         source: "/products/5g-ptz",
         destination: "/s-series/ai-ptz-cctv-camera",
         permanent: true,
@@ -251,18 +245,6 @@ const nextConfig = {
       {
         source: "/products/4g-bullet",
         destination: "/s-series/ai-bullet-cctv-camera",
-        permanent: true,
-        statusCode: 301,
-      },
-      {
-        source: "/compare/arcisai-vs-hikvision",
-        destination: "/compare/ndaa-compliant-cctv-india",
-        permanent: true,
-        statusCode: 301,
-      },
-      {
-        source: "/compare/arcisai-vs-dahua",
-        destination: "/compare/made-in-india-cctv-brand",
         permanent: true,
         statusCode: 301,
       },
