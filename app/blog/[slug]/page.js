@@ -1,4 +1,5 @@
 import BlogsContent from '@/src/views/Blogs/BlogsContents';
+import { notFound } from 'next/navigation';
 
 const API_BASE = process.env.API_BASE_URL || 'https://vmukti.com/backend/api';
 
@@ -29,7 +30,7 @@ export default async function BlogPostPage({ params }) {
 
   try {
     const res = await fetch(`${API_BASE}/blogs/urlWords/${slug}`, {
-      headers: { 'User-Agent': 'next-server' },
+      headers: { 'User-Agent': 'next-server', Origin: 'https://arcisai.io' },
       cache: 'no-store',
     });
     if (res.ok) {
@@ -46,6 +47,9 @@ export default async function BlogPostPage({ params }) {
     .split('-')
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(' ');
+  if (!initialBlog) {
+    notFound();
+  }
   const canonicalUrl = `https://arcisai.io/blog/${slug}`;
 
   // Static Article + BreadcrumbList JSON-LD rendered server-side so crawlers

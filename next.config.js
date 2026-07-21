@@ -176,6 +176,18 @@ const nextConfig = {
         statusCode: 301,
       },
       {
+        source: "/solution/cloud-ai-cctv-camera",
+        destination: "/solution/cloud-ai",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/solution/edge-ai-cctv-camera",
+        destination: "/solution/edge-ai",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
         source: "/about",
         destination: "/about-us",
         permanent: true,

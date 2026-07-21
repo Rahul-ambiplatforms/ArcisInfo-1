@@ -35,7 +35,7 @@ export const getOrganizationSchema = () => ({
     "contactType": "Sales",
     "telephone": "+91-80-4141-1000",
     "email": "sales@arcisai.io",
-    "url": "https://arcisai.io/contact"
+    "url": "https://arcisai.io/contact-us"
   },
   "sameAs": [
     "https://www.linkedin.com/company/arcisai",
@@ -187,7 +187,7 @@ export const getIndoorCameraProductSchema = () => ({
     "@type": "TradeAction",
     "target": {
       "@type": "EntryPoint",
-      "urlTemplate": "https://arcisai.io/contact"
+      "urlTemplate": "https://arcisai.io/contact-us"
     },
     "name": "Request Quote"
   }
@@ -314,7 +314,7 @@ export const getOutdoorCameraProductSchema = () => ({
     "@type": "TradeAction",
     "target": {
       "@type": "EntryPoint",
-      "urlTemplate": "https://arcisai.io/contact"
+      "urlTemplate": "https://arcisai.io/contact-us"
     },
     "name": "Request Demo"
   }
@@ -695,7 +695,7 @@ export const getLocalBusinessSchema = () => ({
   "name": "ArcisAI by Adiance - Bangalore Office",
   "image": "https://arcisai.io/images/office.jpg",
   "description": "ArcisAI headquarters in Bangalore, Karnataka, India. Manufacturing and distribution center for AI CCTV cameras.",
-  "url": "https://arcisai.io/about",
+  "url": "https://arcisai.io/about-us",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Tech Park, Bangalore",
