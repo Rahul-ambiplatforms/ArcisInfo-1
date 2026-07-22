@@ -4,7 +4,7 @@ import HeroSection from "./HeroSection";
 import BlogsGrid from "./BlogsGrid";
 import { Box } from "@chakra-ui/react";
 import { Helmet } from "react-helmet-async";
-const BlogsDashboard = () => {
+const BlogsDashboard = ({ initialBlogs = [] }) => {
   return (
     <>
       <Helmet>
@@ -49,7 +49,7 @@ const BlogsDashboard = () => {
       </Helmet>
       <Box>
         {/* <HeroSection /> */}
-        <BlogsGrid />
+        <BlogsGrid initialBlogs={initialBlogs} />
       </Box>
     </>
   );

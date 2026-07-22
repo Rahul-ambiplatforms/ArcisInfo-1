@@ -63,14 +63,17 @@ const EmptyState = ({ searchTerm }) => {
   );
 };
 
-export default function BlogsContent() {
+export default function BlogsContent({ initialBlogs = [] }) {
   // We fetch the full published list once and paginate on the client so the
   // VMukti denylist below can drop entries without leaving page 1 empty
   // (all 6 VMukti blogs sit at the top of sort=latest on the shared backend).
-  const [allBlogs, setAllBlogs] = useState([]);
+  // `initialBlogs` is the same list already fetched + filtered on the server
+  // (app/blog/page.js) so the post links render into the initial HTML; when it
+  // is present we skip the client fetch, otherwise we fall back to it.
+  const [allBlogs, setAllBlogs] = useState(initialBlogs);
   const [currentPage, setCurrentPage] = useState(1);
   const blogsPerPage = 6;
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(initialBlogs.length === 0);
   const borderColor = useColorModeValue("gray.200", "gray.700");
   const toast = useToast();
 
@@ -97,6 +100,8 @@ export default function BlogsContent() {
   // denylist client-side, search / sort / pagination all run against the
   // in-memory list — no per-page round-trips.
   useEffect(() => {
+    // Already seeded from the server render — no client refetch needed.
+    if (allBlogs.length > 0) return;
     let cancelled = false;
     setIsLoading(true);
     getBlogs(1, 200, "", "latest", "published")
@@ -174,6 +179,33 @@ export default function BlogsContent() {
 
   return (
     <Box m="1%" mt="7%" mb="14%">
+      {/* Crawlable index of every published post. Visually hidden (no design
+          change) but present in the server-rendered HTML so search engines —
+          and assistive tech / no-JS users — can reach posts beyond page 1,
+          which the client-side pagination below would otherwise hide. Maps the
+          full `allBlogs` list, not the paginated `blogs` slice. */}
+      <Box
+        as="nav"
+        aria-label="All blog posts"
+        position="absolute"
+        w="1px"
+        h="1px"
+        overflow="hidden"
+        clip="rect(0 0 0 0)"
+        whiteSpace="nowrap"
+        border="0"
+      >
+        {allBlogs.map((post) =>
+          post?.metadata?.urlWords ? (
+            <Link
+              key={`idx-${post._id || post.metadata.urlWords}`}
+              href={`/blog/${post.metadata.urlWords}`}
+            >
+              {post.content?.title || post.metadata.urlWords}
+            </Link>
+          ) : null
+        )}
+      </Box>
       {/* Header */}
       <Flex
         direction={{ base: "column", md: "row" }}
