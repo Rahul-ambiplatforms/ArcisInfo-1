@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import HomeDashboard from '@/src/views/HomePage/HomeDashboard';
 import { homeSEO } from '@/src/views/HomePage/Data/SEOContent';
-import { getResourceLinks } from '@/src/data/resolveSeoPageData';
+import { getResourceLinks, getCompareLinks } from '@/src/data/resolveSeoPageData';
 
 // SEO copy is sourced from `homeSEO` (the same content that previously ran
 // client-side via react-helmet-async) so Google and JS-disabled crawlers see
@@ -84,6 +84,32 @@ export default function HomePage() {
       >
         {getResourceLinks().map((l) => (
           <Link key={`res-${l.slug}`} href={`/resources/${l.slug}`}>
+            {l.title || l.slug}
+          </Link>
+        ))}
+      </nav>
+      {/*
+        Crawl entry point for the /compare/* landing pages — an orphaned
+        cluster whose only inbound reference is a redirect stub. Visually
+        hidden (off-screen, 1px, clipped) so there is ZERO impact on the
+        visible UI/design/layout; exists only in the server-rendered HTML for
+        search engines and assistive tech. Server component → SEO dataset is
+        not bundled to the client.
+      */}
+      <nav
+        aria-label="CCTV comparisons"
+        style={{
+          position: 'absolute',
+          width: '1px',
+          height: '1px',
+          overflow: 'hidden',
+          clip: 'rect(0 0 0 0)',
+          whiteSpace: 'nowrap',
+          border: 0,
+        }}
+      >
+        {getCompareLinks().map((l) => (
+          <Link key={`cmp-${l.slug}`} href={`/compare/${l.slug}`}>
             {l.title || l.slug}
           </Link>
         ))}

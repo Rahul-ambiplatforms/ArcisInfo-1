@@ -64,3 +64,14 @@ export function getResourceLinks() {
     .filter(([k, v]) => v && v.category === 'resources' && !k.startsWith('/'))
     .map(([k, v]) => ({ slug: k, title: (v.heroTitle || v.title) || k }));
 }
+
+// Server-only: every /compare/<slug> landing-page link, for building a
+// crawlable internal-link index. The /compare/* pages are a fully orphaned
+// cluster (only a redirect stub points at one of them), so these links create
+// the crawl entry point. Uses the bare data KEY as the slug (skips any
+// leading-slash keys, which don't round-trip through the compare route).
+export function getCompareLinks() {
+  return Object.entries(allSeoData)
+    .filter(([k, v]) => v && v.category === 'compare' && !k.startsWith('/'))
+    .map(([k, v]) => ({ slug: k, title: (v.heroTitle || v.title) || k }));
+}

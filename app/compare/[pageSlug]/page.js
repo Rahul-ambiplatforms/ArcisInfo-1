@@ -1,5 +1,14 @@
 import SEOLandingPage from '@/src/views/SEOLandingPages/SEOLandingPage';
-import { resolveSeoPageData, resolveSeoKey } from '@/src/data/resolveSeoPageData';
+import { resolveSeoPageData, resolveSeoKey, getCompareLinks } from '@/src/data/resolveSeoPageData';
+
+// Statically prerender the comparison landing pages so crawlers get fast
+// static HTML. Other slugs still render on demand (dynamicParams defaults to
+// true), so no other route or behavior changes.
+export const revalidate = 86400;
+
+export function generateStaticParams() {
+  return getCompareLinks().map(({ slug }) => ({ pageSlug: slug }));
+}
 
 export async function generateMetadata({ params }) {
   const { pageSlug } = params;
