@@ -53,3 +53,14 @@ export function getCctvLocationLinks() {
     )
     .map(([k, v]) => ({ slug: k, title: (v && (v.heroTitle || v.title)) || k }));
 }
+
+// Server-only: every /resources/<slug> landing-page link, for building a
+// crawlable internal-link index. The /resources/* pages are a fully orphaned
+// cluster (no site link points into them), so these links create the crawl
+// entry point. Uses the bare data KEY as the slug (skips any leading-slash
+// keys, which don't round-trip through the /resources/[pageSlug] route).
+export function getResourceLinks() {
+  return Object.entries(allSeoData)
+    .filter(([k, v]) => v && v.category === 'resources' && !k.startsWith('/'))
+    .map(([k, v]) => ({ slug: k, title: (v.heroTitle || v.title) || k }));
+}
