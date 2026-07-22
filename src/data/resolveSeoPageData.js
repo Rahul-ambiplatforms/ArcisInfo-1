@@ -41,3 +41,15 @@ export function resolveSeoPageData(params = {}) {
   // Attach the resolved key so the view can build canonical URLs without it.
   return { ...allSeoData[key], slug: allSeoData[key].slug || key };
 }
+
+// Server-only: every CCTV city / industry landing-page link, for building a
+// crawlable internal-link index (fixes the orphan-page crawlability issue).
+// Uses the data KEY as the slug — keys have no leading slash, whereas some
+// `slug` fields do — and each key round-trips through the /[slug] catch-all.
+export function getCctvLocationLinks() {
+  return Object.entries(allSeoData)
+    .filter(
+      ([k]) => k.startsWith('cctv-cameras-') || k.startsWith('ai-cctv-cameras-'),
+    )
+    .map(([k, v]) => ({ slug: k, title: (v && (v.heroTitle || v.title)) || k }));
+}

@@ -13,7 +13,7 @@ const CARD_BORDER = "rgba(255,255,255,0.12)";
 // pageData is resolved on the SERVER (see src/data/resolveSeoPageData.js) and
 // passed in as a prop, so the full ~125-page SEO dataset is NOT bundled to the
 // browser. slugKey is the resolved lookup key, used as a canonical-URL fallback.
-const SEOLandingPage = ({ pageData, slugKey }) => {
+const SEOLandingPage = ({ pageData, slugKey, relatedLinks = [] }) => {
   if (!pageData) {
     return (
       <Box minH="60vh" display="flex" alignItems="center" justifyContent="center" bg="#171717">
@@ -223,6 +223,36 @@ const SEOLandingPage = ({ pageData, slugKey }) => {
               {pageData.cta.buttonText || "Get Free Quote"}
             </Button>
           </Container>
+        </Box>
+      )}
+
+      {/* Crawlable index of related CCTV location / industry pages. Visually
+          hidden (no design change) but present in the server-rendered HTML so
+          search engines can discover sibling pages that are otherwise only in
+          the sitemap. Fed as a prop from the server route (app/[slug]/page.js);
+          other routes render nothing (default []). */}
+      {relatedLinks.length > 0 && (
+        <Box
+          as="nav"
+          aria-label="CCTV locations and industries"
+          position="absolute"
+          w="1px"
+          h="1px"
+          overflow="hidden"
+          clip="rect(0 0 0 0)"
+          whiteSpace="nowrap"
+          border="0"
+        >
+          {relatedLinks.map((l) =>
+            l?.slug ? (
+              <NextLink
+                key={`rel-${l.slug}`}
+                href={`/${String(l.slug).replace(/^\/+/, '')}`}
+              >
+                {l.title || l.slug}
+              </NextLink>
+            ) : null,
+          )}
         </Box>
       )}
     </>

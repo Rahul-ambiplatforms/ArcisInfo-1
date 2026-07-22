@@ -1,6 +1,16 @@
 import SEOLandingPage from '@/src/views/SEOLandingPages/SEOLandingPage';
 import {notFound} from 'next/navigation';
-import { resolveSeoPageData, resolveSeoKey } from '@/src/data/resolveSeoPageData';
+import { resolveSeoPageData, resolveSeoKey, getCctvLocationLinks } from '@/src/data/resolveSeoPageData';
+
+// Statically prerender every CCTV city / industry landing page (all keys
+// round-trip through this catch-all) so crawlers get fast static HTML. Other
+// slugs still render on demand (dynamicParams defaults to true), so no other
+// route or behavior changes.
+export const revalidate = 86400;
+
+export function generateStaticParams() {
+  return getCctvLocationLinks().map(({ slug }) => ({ slug }));
+}
 
 /**
  * Catch-all for top-level dynamic slugs that are not matched by more
@@ -94,5 +104,11 @@ export default function SlugPage({ params }) {
   if (!pageData) {
     notFound();
   }
-  return <SEOLandingPage pageData={pageData} slugKey={resolveSeoKey(paramsOverride) || slug} />;
+  return (
+    <SEOLandingPage
+      pageData={pageData}
+      slugKey={resolveSeoKey(paramsOverride) || slug}
+      relatedLinks={getCctvLocationLinks()}
+    />
+  );
 }
