@@ -246,6 +246,9 @@ const ContactSection = () => {
         <meta name="description" content={contactUsSEO.metadescription} />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={contactUsSEO.canonical} />
+        <link rel="alternate" hrefLang="en-IN" href={contactUsSEO.canonical} />
+        <link rel="alternate" hrefLang="en" href={contactUsSEO.canonical} />
+        <link rel="alternate" hrefLang="x-default" href={contactUsSEO.canonical} />
 
         {/* Open Graph / Facebook */}
         <meta property="og:title" content={contactUsSEO.metatitle} />
