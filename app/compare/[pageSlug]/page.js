@@ -1,21 +1,40 @@
 import SEOLandingPage from '@/src/views/SEOLandingPages/SEOLandingPage';
-import { resolveSeoPageData, resolveSeoKey } from '@/src/data/resolveSeoPageData';
+import { resolveSeoPageData, resolveSeoKey, getCompareLinks } from '@/src/data/resolveSeoPageData';
+
+// Statically prerender the comparison landing pages so crawlers get fast
+// static HTML. Other slugs still render on demand (dynamicParams defaults to
+// true), so no other route or behavior changes.
+export const revalidate = 86400;
+
+export function generateStaticParams() {
+  return getCompareLinks().map(({ slug }) => ({ pageSlug: slug }));
+}
 
 export async function generateMetadata({ params }) {
   const { pageSlug } = params;
-  const name = pageSlug
+  const data = resolveSeoPageData({ category: 'compare', pageSlug });
+  const fallbackName = pageSlug
     .split('-')
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(' ');
+  const rawTitle = data?.title || `${fallbackName} | AI CCTV Comparison | ArcisAI`;
+  // Parent layout applies the "%s | ArcisAI" template, so strip a trailing
+  // "| ArcisAI" from the page title to avoid a duplicated brand suffix.
+  const title = rawTitle.replace(/\s*\|\s*ArcisAI\s*$/i, '');
+  const description =
+    data?.metaDescription ||
+    `AI CCTV comparison for India: features, price, and performance for enterprise AI CCTV cameras by ArcisAI.`;
+  const canonical = `https://arcisai.io/compare/${pageSlug}`;
 
   return {
-    title: `${name} | AI CCTV Comparison | ArcisAI`,
-    description: `Compare ArcisAI with ${name}. Detailed feature, price, and performance comparison for enterprise AI CCTV cameras.`,
-    alternates: { canonical: `https://arcisai.io/compare/${pageSlug}` },
+    title,
+    description,
+    ...(data?.keywords ? { keywords: data.keywords } : {}),
+    alternates: { canonical },
     openGraph: {
-      title: `${name} | AI CCTV Comparison | ArcisAI`,
-      description: `AI CCTV comparison: ArcisAI vs ${name}.`,
-      url: `https://arcisai.io/compare/${pageSlug}`,
+      title,
+      description,
+      url: canonical,
       images: [{ url: '/og/compare.jpg', width: 1200, height: 630 }],
     },
   };

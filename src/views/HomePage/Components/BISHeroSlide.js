@@ -16,8 +16,8 @@ const BISHeroSlide = ({ showExploreButton = true }) => {
       w="100%"
       px={{ base: 0, md: 8 }}
       align={{ base: "flex-start", md: "center" }}
-      pt={{ base: "18vh", sm: "16vh", md: "140px" }}
-      pb={{ base: 0, md: 0 }}
+      pt={{ base: "18vh", sm: "16vh", md: "90px" }}
+      pb={{ base: 0, md: 12 }}
       direction={{ base: "column", md: "row" }}
     >
       {/* Mobile: centered top content */}
@@ -66,7 +66,7 @@ const BISHeroSlide = ({ showExploreButton = true }) => {
           direction="column"
           align={{ base: "center", md: "flex-start" }}
           gap={1}
-          mb={{ base: 0, md: 6 }}
+          mb={{ base: 0, md: 4 }}
           px={{ base: 4, md: 0 }}
         >
           {/* Mobile: logo with certificate number built in */}
@@ -83,7 +83,7 @@ const BISHeroSlide = ({ showExploreButton = true }) => {
           <Image
             src="/images/bis_icon.svg"
             alt="BIS Certification Icon"
-            w="280px"
+            w={{ md: "220px", lg: "260px" }}
             h="auto"
             objectFit="contain"
             display={{ base: "none", md: "block" }}
@@ -93,7 +93,7 @@ const BISHeroSlide = ({ showExploreButton = true }) => {
 
         {/* Desktop: button inline */}
         {showExploreButton && (
-          <Box display={{ base: "none", md: "block" }} mt={4}>
+          <Box display={{ base: "none", md: "block" }} mt={2}>
             <CustomButton
               onClick={() => window.open("/BIS-ER-certification", "_self")}
               width="145px"

@@ -1,8 +1,13 @@
 import axios from 'axios';
 
-// process.env.REACT_APP_API_URL || 
+// process.env.REACT_APP_API_URL ||
 const API_URL = 'https://vmukti.com/backend/api' ||  'http://localhost:5000/api';
 // const API_URL = 'https://vmukti.com/backend/api';
+
+// The shared backend resolves the tenant from the request's Origin/Referer.
+// On localhost neither contains "arcis", so we send the header explicitly so
+// admin calls always land on the arcis tenant's collections.
+const TENANT_HEADER = { 'x-tenant': 'arcis' };
 
 
 // Helper function to check if data contains files
@@ -59,6 +64,7 @@ export const createBlog = async (data) => {
     const response = await axios.post(`${API_URL}/blogs`, requestData, {
       headers: {
         'Content-Type': hasFileUploads ? 'multipart/form-data' : 'application/json',
+        ...TENANT_HEADER,
         ...(token ? { Authorization: `Bearer ${token}` } : {}),
       },
     });
@@ -73,6 +79,7 @@ export const getBlogs = async (page = 1, limit = 10, status, search) => {
   try {
     const response = await axios.get(`${API_URL}/blogs`, {
       params: { page, limit, ...(status ? { status } : {}), ...(search ? { search } : {}) },
+      headers: TENANT_HEADER,
     });
     return response.data;
   } catch (error) {
@@ -83,7 +90,7 @@ export const getBlogs = async (page = 1, limit = 10, status, search) => {
 // Get a single blog by ID
 export const getBlogById = async (id) => {
   try {
-    const response = await axios.get(`${API_URL}/blogs/${id}`);
+    const response = await axios.get(`${API_URL}/blogs/${id}`, { headers: TENANT_HEADER });
     return response.data;
   } catch (error) {
     throw error.response?.data || error.message;
@@ -100,6 +107,7 @@ export const updateBlog = async (id, data) => {
     const response = await axios.put(`${API_URL}/blogs/${id}`, requestData, {
       headers: {
         'Content-Type': hasFileUploads ? 'multipart/form-data' : 'application/json',
+        ...TENANT_HEADER,
         ...(token ? { Authorization: `Bearer ${token}` } : {}),
       },
     });
@@ -113,7 +121,9 @@ export const updateBlog = async (id, data) => {
 export const deleteBlog = async (id) => {
   try {
     const token = localStorage.getItem('jwtToken');
-    const response = await axios.delete(`${API_URL}/blogs/${id}`, { headers: token ? { Authorization: `Bearer ${token}` } : {} });
+    const response = await axios.delete(`${API_URL}/blogs/${id}`, {
+      headers: { ...TENANT_HEADER, ...(token ? { Authorization: `Bearer ${token}` } : {}) },
+    });
     return response.data;
   } catch (error) {
     throw error.response?.data || error.message;
@@ -124,7 +134,9 @@ export const deleteBlog = async (id) => {
 export const updateBlogStatus = async (id, status) => {
   try {
     const token = localStorage.getItem('jwtToken');
-    const response = await axios.patch(`${API_URL}/blogs/${id}/status`, { status }, { headers: token ? { Authorization: `Bearer ${token}` } : {} });
+    const response = await axios.patch(`${API_URL}/blogs/${id}/status`, { status }, {
+      headers: { ...TENANT_HEADER, ...(token ? { Authorization: `Bearer ${token}` } : {}) },
+    });
     return response.data;
   } catch (error) {
     throw error.response?.data || error.message;

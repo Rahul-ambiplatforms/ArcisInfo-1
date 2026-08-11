@@ -43,7 +43,8 @@ const downloadAppById = async (id, type) => {
     responseType: 'blob',
     timeout: 60000,
   });
-  let filename = type === 'releaseNotes' ? 'releaseNotes.txt' : 'applicationFiles.zip';
+  let filename = 'applicationFiles.zip';
+  if (type === 'userManual') filename = 'userManual.pdf';
   const disposition = res.headers['content-disposition'];
   if (disposition && disposition.includes('filename=')) {
     filename = disposition.split('filename=')[1].replace(/["']/g, '').trim() || filename;
@@ -314,7 +315,7 @@ const Tools = () => {
                         Uploaded On
                       </Th>
                       <Th color="#A4FF79" fontSize="11px" letterSpacing="0.14em" textTransform="uppercase" borderBottom="1px solid" borderColor="whiteAlpha.200" py={4}>
-                        Release Notes
+                        User Manual
                       </Th>
                       <Th color="#A4FF79" fontSize="11px" letterSpacing="0.14em" textTransform="uppercase" borderBottom="1px solid" borderColor="whiteAlpha.200" py={4}>
                         Download
@@ -323,9 +324,10 @@ const Tools = () => {
                   </Thead>
                   <Tbody>
                     {pageData.map((row) => {
-                      const notesKey = `${row._id}:releaseNotes`;
+                      const manualKey = `${row._id}:userManual`;
                       const fileKey = `${row._id}:app`;
                       const appName = row.appName || row.cameraName || '-';
+                      const hasManual = Boolean(row.userManualFile);
                       return (
                         <Tr key={row._id} _hover={{ bg: 'rgba(164, 255, 121, 0.04)' }} transition="background 0.15s ease">
                           <Td color="white" borderBottom="1px solid" borderColor="whiteAlpha.100" py={4} fontWeight="500">
@@ -338,19 +340,23 @@ const Tools = () => {
                             {formatDate(row.updatedAt || row.uploadedAt || row.createdAt)}
                           </Td>
                           <Td borderBottom="1px solid" borderColor="whiteAlpha.100" py={4}>
-                            <Button
-                              size="sm"
-                              variant="ghost"
-                              color="#A4FF79"
-                              borderRadius="0"
-                              isLoading={downloadingKey === notesKey}
-                              loadingText="Fetching"
-                              leftIcon={<Icon as={FaFileAlt} boxSize={3.5} />}
-                              _hover={{ bg: 'rgba(164, 255, 121, 0.1)' }}
-                              onClick={() => handleDownload(row._id, 'releaseNotes')}
-                            >
-                              View
-                            </Button>
+                            {hasManual ? (
+                              <Button
+                                size="sm"
+                                variant="ghost"
+                                color="#A4FF79"
+                                borderRadius="0"
+                                isLoading={downloadingKey === manualKey}
+                                loadingText="Fetching"
+                                leftIcon={<Icon as={FaFileAlt} boxSize={3.5} />}
+                                _hover={{ bg: 'rgba(164, 255, 121, 0.1)' }}
+                                onClick={() => handleDownload(row._id, 'userManual')}
+                              >
+                                Download
+                              </Button>
+                            ) : (
+                              <Text color="gray.500" fontSize="sm">—</Text>
+                            )}
                           </Td>
                           <Td borderBottom="1px solid" borderColor="whiteAlpha.100" py={4}>
                             <Button

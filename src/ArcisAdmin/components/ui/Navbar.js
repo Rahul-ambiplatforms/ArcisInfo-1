@@ -202,7 +202,9 @@ const Navbar = ({ adminSection, setAdminSection }) => {
               </Box>
               <Box>
                 {/* Admin Section Management */}
-                {userInfo.role === "ADMIN" && adminSection && (
+                {(userInfo.role === "ADMIN" ||
+                  userInfo.role === "MARKETING") &&
+                  adminSection && (
                   <Box zIndex={1000} bg="#EDF2F7" borderRadius="24px">
                     <Flex gap={1} align="center" borderRadius="24px">
                       <Menu>
@@ -213,15 +215,24 @@ const Navbar = ({ adminSection, setAdminSection }) => {
                           variant="solid"
                           borderRadius="24px"
                         >
-                          {adminSection === "BLOG" ? "Blogs" : "Jobs"}
+                          {adminSection === "BLOG"
+                            ? "Blogs"
+                            : adminSection === "NEWS"
+                            ? "News"
+                            : "Jobs"}
                         </MenuButton>
                         <MenuList>
                           <MenuItem onClick={() => setAdminSection("BLOG")}>
                             Blogs
                           </MenuItem>
-                          <MenuItem onClick={() => setAdminSection("JOB")}>
-                            Jobs
+                          <MenuItem onClick={() => setAdminSection("NEWS")}>
+                            News
                           </MenuItem>
+                          {userInfo.role === "ADMIN" && (
+                            <MenuItem onClick={() => setAdminSection("JOB")}>
+                              Jobs
+                            </MenuItem>
+                          )}
                         </MenuList>
                       </Menu>
                       <Button

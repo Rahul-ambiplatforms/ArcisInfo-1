@@ -11,7 +11,7 @@ import { usePathname } from 'next/navigation';
  * - STQC certified, India's first premium AI CCTV
  */
 
-const BASE_URL = 'https://www.arcisai.io';
+const BASE_URL = 'https://arcisai.io';
 
 const CanonicalUrl = ({ path: overridePath, noIndex = false }) => {
   const pathname = usePathname();

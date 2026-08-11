@@ -8,8 +8,8 @@ import {
 } from "@chakra-ui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import CustomButton from "./CustomButton";
-import LeftButtonIcon from "./Icons/LeftButton.svg";
-import RightButtonIcon from "./Icons/RightButton.svg";
+import LeftButtonIcon from "./Icons/LeftButton_Hero.svg";
+import RightButtonIcon from "./Icons/RightButton_Hero.svg";
 
 const HeroSectionCarousel = ({ data }) => {
   const slides = data || [];

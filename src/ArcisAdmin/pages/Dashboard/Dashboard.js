@@ -14,6 +14,7 @@ import { useRouter } from "next/navigation";
 import Navbar from "../../components/ui/Navbar";
 import { blogData } from "./data/blogData";
 import CreateBlogPage from "./components/CreateBlogPage";
+import CreateNewsPage from "./components/CreateNewsPage";
 import HRAddJobPage from "./components/HRAddJobPage";
 import HRJobListPage from "./components/HRJobListPage";
 import PageContentWrapper from "../../components/ui/PageContentWrapper";
@@ -94,7 +95,52 @@ const Dashboard = () => {
           )}
           {role === "MARKETING" && (
             <>
-              <CreateBlogPage />
+              {!adminSection && (
+                <Box
+                  display="flex"
+                  justifyContent="center"
+                  alignItems="center"
+                  height="100vh"
+                  bg="gray.50"
+                >
+                  <Box
+                    bg="white"
+                    borderRadius="md"
+                    p={6}
+                    boxShadow="sm"
+                    textAlign="center"
+                  >
+                    Select a section to manage:
+                    <Box h={4} />
+                    <Flex gap={4} justify="center">
+                      <Box
+                        as="button"
+                        onClick={() => setAdminSection("BLOG")}
+                        bg="#9678E1"
+                        color="white"
+                        px={4}
+                        py={2}
+                        borderRadius="md"
+                      >
+                        Blogs
+                      </Box>
+                      <Box
+                        as="button"
+                        onClick={() => setAdminSection("NEWS")}
+                        bg="#9678E1"
+                        color="white"
+                        px={4}
+                        py={2}
+                        borderRadius="md"
+                      >
+                        News
+                      </Box>
+                    </Flex>
+                  </Box>
+                </Box>
+              )}
+              {adminSection === "BLOG" && <CreateBlogPage />}
+              {adminSection === "NEWS" && <CreateNewsPage />}
             </>
           )}
           {role === "ADMIN" && (
@@ -130,6 +176,17 @@ const Dashboard = () => {
                       </Box>
                       <Box
                         as="button"
+                        onClick={() => setAdminSection("NEWS")}
+                        bg="#9678E1"
+                        color="white"
+                        px={4}
+                        py={2}
+                        borderRadius="md"
+                      >
+                        News
+                      </Box>
+                      <Box
+                        as="button"
                         onClick={() => setAdminSection("JOB")}
                         bg="#9678E1"
                         color="white"
@@ -146,6 +203,11 @@ const Dashboard = () => {
               {adminSection === "BLOG" && (
                 <>
                   <CreateBlogPage />
+                </>
+              )}
+              {adminSection === "NEWS" && (
+                <>
+                  <CreateNewsPage />
                 </>
               )}
               {adminSection === "JOB" && (

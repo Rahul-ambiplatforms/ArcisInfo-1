@@ -13,7 +13,7 @@ const CARD_BORDER = "rgba(255,255,255,0.12)";
 // pageData is resolved on the SERVER (see src/data/resolveSeoPageData.js) and
 // passed in as a prop, so the full ~125-page SEO dataset is NOT bundled to the
 // browser. slugKey is the resolved lookup key, used as a canonical-URL fallback.
-const SEOLandingPage = ({ pageData, slugKey }) => {
+const SEOLandingPage = ({ pageData, slugKey, relatedLinks = [] }) => {
   if (!pageData) {
     return (
       <Box minH="60vh" display="flex" alignItems="center" justifyContent="center" bg="#171717">
@@ -26,7 +26,7 @@ const SEOLandingPage = ({ pageData, slugKey }) => {
     );
   }
 
-  const pageUrl = `https://www.arcisai.io/${pageData.slug || slugKey}`;
+  const pageUrl = `https://arcisai.io/${pageData.slug || slugKey}`;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -37,8 +37,8 @@ const SEOLandingPage = ({ pageData, slugKey }) => {
     publisher: {
       "@type": "Organization",
       name: "ArcisAI",
-      url: "https://www.arcisai.io",
-      logo: "https://www.arcisai.io/logo.webp",
+      url: "https://arcisai.io",
+      logo: "https://arcisai.io/logo.webp",
       sameAs: ["https://www.linkedin.com/company/arcisai"]
     }
   };
@@ -48,9 +48,9 @@ const SEOLandingPage = ({ pageData, slugKey }) => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.arcisai.io/" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://arcisai.io/" },
       ...(pageData.category === "city" || pageData.category === "state" ? [
-        { "@type": "ListItem", position: 2, name: pageData.category === "city" ? "Cities" : "States", item: "https://www.arcisai.io/" },
+        { "@type": "ListItem", position: 2, name: pageData.category === "city" ? "Cities" : "States", item: "https://arcisai.io/" },
         { "@type": "ListItem", position: 3, name: pageData.heroTitle || pageData.title }
       ] : [
         { "@type": "ListItem", position: 2, name: pageData.heroTitle || pageData.title }
@@ -65,7 +65,7 @@ const SEOLandingPage = ({ pageData, slugKey }) => {
     name: "ArcisAI Smart CCTV Camera",
     description: pageData.metaDescription,
     brand: { "@type": "Brand", name: "ArcisAI" },
-    manufacturer: { "@type": "Organization", name: "ArcisAI", url: "https://www.arcisai.io" },
+    manufacturer: { "@type": "Organization", name: "ArcisAI", url: "https://arcisai.io" },
     category: "AI CCTV Cameras",
     url: pageUrl,
     aggregateRating: {
@@ -93,7 +93,7 @@ const SEOLandingPage = ({ pageData, slugKey }) => {
     url: pageUrl,
     telephone: "+91-9909000616",
     priceRange: "₹₹₹",
-    image: "https://www.arcisai.io/logo.webp",
+    image: "https://arcisai.io/logo.webp",
     address: {
       "@type": "PostalAddress",
       addressCountry: "IN"
@@ -218,11 +218,41 @@ const SEOLandingPage = ({ pageData, slugKey }) => {
         <Box py={{base: 16, md: 20}} bg={`linear-gradient(135deg, ${ACCENT_DEEP} 0%, ${ACCENT} 100%)`} color="white" textAlign="center">
           <Container maxW="700px">
             <Heading as="h2" size={{base: "lg", md: "xl"}} mb={4}>{pageData.cta.title}</Heading>
-            <Text color="whiteAlpha.900" mb={8} fontSize="lg">{pageData.cta.description}</Text>
-            <Button as={NextLink} href={pageData.cta.buttonLink} bg="white" color={ACCENT_DEEP} size="lg" px={10} _hover={{bg: "gray.100", transform: "translateY(-2px)"}} transition="all 0.2s" fontWeight="700">
-              {pageData.cta.buttonText}
+            <Text color="whiteAlpha.900" mb={8} fontSize="lg">{pageData.cta.description || pageData.cta.subtitle || ""}</Text>
+            <Button as={NextLink} href={pageData.cta.buttonLink || "/contact-us"} bg="white" color={ACCENT_DEEP} size="lg" px={10} _hover={{bg: "gray.100", transform: "translateY(-2px)"}} transition="all 0.2s" fontWeight="700">
+              {pageData.cta.buttonText || "Get Free Quote"}
             </Button>
           </Container>
+        </Box>
+      )}
+
+      {/* Crawlable index of related CCTV location / industry pages. Visually
+          hidden (no design change) but present in the server-rendered HTML so
+          search engines can discover sibling pages that are otherwise only in
+          the sitemap. Fed as a prop from the server route (app/[slug]/page.js);
+          other routes render nothing (default []). */}
+      {relatedLinks.length > 0 && (
+        <Box
+          as="nav"
+          aria-label="CCTV locations and industries"
+          position="absolute"
+          w="1px"
+          h="1px"
+          overflow="hidden"
+          clip="rect(0 0 0 0)"
+          whiteSpace="nowrap"
+          border="0"
+        >
+          {relatedLinks.map((l) =>
+            l?.slug ? (
+              <NextLink
+                key={`rel-${l.slug}`}
+                href={`/${String(l.slug).replace(/^\/+/, '')}`}
+              >
+                {l.title || l.slug}
+              </NextLink>
+            ) : null,
+          )}
         </Box>
       )}
     </>

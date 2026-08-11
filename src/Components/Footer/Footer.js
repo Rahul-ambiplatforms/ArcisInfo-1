@@ -226,6 +226,9 @@ const Footer = () => {
               <FooterLink href={"/cctv-compliance-2026"}>
                 CCTV Compliance 2026 Guide
               </FooterLink>
+              <FooterLink href={"/india-cctv-market-report-2026"}>
+                CCTV Market Report 2026
+              </FooterLink>
             </Stack>
 
             {/* TOP LOCATIONS — internal links so city pages aren't orphaned */}

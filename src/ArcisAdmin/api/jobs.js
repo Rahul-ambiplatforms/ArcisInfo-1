@@ -3,9 +3,17 @@ import axios from "axios";
 // process.env.REACT_APP_API_URL ||
 const API_URL = "https://vmukti.com/backend/api" || "http://localhost:5000/api";
 
+// Always tell the shared backend we're the arcis tenant — without this the
+// backend would sniff the Referer (which doesn't contain "arcis" on localhost)
+// and fall back to the vmukti tenant's collections.
+const TENANT_HEADER = { "x-tenant": "arcis" };
+
 const authHeader = () => {
   const token = localStorage.getItem("jwtToken");
-  return token ? { Authorization: `Bearer ${token}` } : {};
+  return {
+    ...TENANT_HEADER,
+    ...(token ? { Authorization: `Bearer ${token}` } : {}),
+  };
 };
 
 export const createJob = async (data) => {
@@ -35,12 +43,13 @@ export const deleteJobJD = async (filename) => {
 export const getJobs = async (page = 1, limit = 10, status) => {
   const res = await axios.get(`${API_URL}/jobs`, {
     params: { page, limit, ...(status ? { status } : {}) },
+    headers: TENANT_HEADER,
   });
   return res.data;
 };
 
 export const getJob = async (id) => {
-  const res = await axios.get(`${API_URL}/jobs/${id}`);
+  const res = await axios.get(`${API_URL}/jobs/${id}`, { headers: TENANT_HEADER });
   return res.data;
 };
 

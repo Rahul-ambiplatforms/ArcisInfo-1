@@ -32,20 +32,23 @@ const API_URL = 'https://vmukti.com/backend/api' || "http://localhost:5000/api";
 //   }
 // };
 
+// The backend's Cloudinary upload routes (file controller) pick the folder
+// based on req.tenant — arcis uploads go to upload_arcis. Send the header
+// explicitly so dev (localhost) lands in the same folder as prod.
+const TENANT_HEADER = { 'x-tenant': 'arcis' };
+
 export const uploadFile = async (file) => {
-  // console.log("UPLOAD API FROM THE FRONTEND", file);
   try {
     const formData = new FormData();
     formData.append("file", file);
-    // console.log("UPLOAD API FROM THE FRONTEND ---------INSIDE---------", file);
     const token = localStorage.getItem("jwtToken");
     const response = await axios.post(`${API_URL}/files/upload`, formData, {
       headers: {
         "Content-Type": "multipart/form-data",
+        ...TENANT_HEADER,
         ...(token ? { Authorization: `Bearer ${token}` } : {}),
       },
     });
-    // console.log("UPLOAD API FROM THE FRONTEND ---------INSIDE BELOW---------", response);
     return response.data;
   } catch (error) {
     throw error.response?.data || error.message;
@@ -57,7 +60,7 @@ export const deleteFile = async (publicId) => {
   try {
     const token = localStorage.getItem("jwtToken");
     const response = await axios.delete(`${API_URL}/files/${publicId}`, {
-      headers: token ? { Authorization: `Bearer ${token}` } : {},
+      headers: { ...TENANT_HEADER, ...(token ? { Authorization: `Bearer ${token}` } : {}) },
     });
 
     return response.data;

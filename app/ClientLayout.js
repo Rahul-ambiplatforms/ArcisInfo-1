@@ -4,8 +4,9 @@ import { usePathname } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import { Box } from '@chakra-ui/react';
 import Header from '@/src/Components/Header/Header';
+import FloatingContact from '@/src/Components/FloatingContact';
 
-// Footer is below-fold — code-split its JS chunk, but SERVER-RENDER it so its
+// Footer is below-fold — code-split its chunk, but SERVER-RENDER it so its
 // internal links are in the initial HTML and crawlable by search engines (SEO).
 const Footer = dynamic(() => import('@/src/Components/Footer/Footer'), { ssr: true });
 
@@ -35,6 +36,7 @@ export default function ClientLayout({ children }) {
         {children}
       </Box>
       {!isAdmin && <Footer />}
+      {!isAdmin && <FloatingContact />}
     </>
   );
 }
