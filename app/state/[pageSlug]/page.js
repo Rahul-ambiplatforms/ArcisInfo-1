@@ -1,7 +1,8 @@
 import SEOLandingPage from '@/src/views/SEOLandingPages/SEOLandingPage';
 import { resolveSeoPageData, resolveSeoKey } from '@/src/data/resolveSeoPageData';
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const { pageSlug } = params;
   const name = pageSlug
     .split('-')
@@ -21,7 +22,8 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function StatePage({ params }) {
+export default async function StatePage(props) {
+  const params = await props.params;
   const override = { category: 'state', pageSlug: params.pageSlug };
   return <SEOLandingPage pageData={resolveSeoPageData(override)} slugKey={resolveSeoKey(override) || params.pageSlug} />;
 }

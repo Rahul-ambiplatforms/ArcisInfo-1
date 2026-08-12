@@ -10,7 +10,8 @@ export function generateStaticParams() {
   return getCompareLinks().map(({ slug }) => ({ pageSlug: slug }));
 }
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const { pageSlug } = params;
   const data = resolveSeoPageData({ category: 'compare', pageSlug });
   const fallbackName = pageSlug
@@ -40,7 +41,8 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function ComparisonPage({ params }) {
+export default async function ComparisonPage(props) {
+  const params = await props.params;
   const override = { category: 'compare', pageSlug: params.pageSlug };
   return <SEOLandingPage pageData={resolveSeoPageData(override)} slugKey={resolveSeoKey(override) || params.pageSlug} />;
 }

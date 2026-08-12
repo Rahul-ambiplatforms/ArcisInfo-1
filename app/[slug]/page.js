@@ -25,7 +25,8 @@ export function generateStaticParams() {
  * catch-all, so they are unaffected.
  */
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const { slug } = params;
 
   // City pages: /cctv-cameras-<city>
@@ -87,7 +88,8 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function SlugPage({ params }) {
+export default async function SlugPage(props) {
+  const params = await props.params;
   const { slug } = params;
 
   // Determine which params to pass to SEOLandingPage based on slug pattern

@@ -1,6 +1,7 @@
 import Products from '@/src/views/Product/Products';
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const { productId } = params;
   const name = productId
     .split('-')
@@ -20,6 +21,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function SSeriesProductPage({ params }) {
+export default async function SSeriesProductPage(props) {
+  const params = await props.params;
   return <Products productId={params.productId} seriesPrefix="s-series" />;
 }

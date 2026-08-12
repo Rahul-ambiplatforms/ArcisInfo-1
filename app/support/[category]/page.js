@@ -6,7 +6,8 @@ export function generateStaticParams() {
   return supportCategories.map((c) => ({ category: c.slug }));
 }
 
-export function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const cat = getCategoryBySlug(params.category);
 
   if (!cat) {
@@ -33,7 +34,8 @@ export function generateMetadata({ params }) {
   };
 }
 
-export default function SupportCategoryPage({ params }) {
+export default async function SupportCategoryPage(props) {
+  const params = await props.params;
   const cat = getCategoryBySlug(params.category);
   if (!cat) notFound();
   return <SupportCategory category={cat} />;

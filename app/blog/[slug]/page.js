@@ -47,7 +47,8 @@ const getBlog = cache(async (slug) => {
   }
 });
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const { slug } = params;
   // Shared with the page render via cache() — no extra request.
   const blog = await getBlog(slug);
@@ -88,7 +89,8 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default async function BlogPostPage({ params }) {
+export default async function BlogPostPage(props) {
+  const params = await props.params;
   const { slug } = params;
   // Same cached fetch used by generateMetadata — deduped to one request.
   const initialBlog = await getBlog(slug);

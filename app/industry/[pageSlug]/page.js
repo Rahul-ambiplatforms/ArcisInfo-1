@@ -2,7 +2,8 @@ import SEOLandingPage from '@/src/views/SEOLandingPages/SEOLandingPage';
 import {notFound} from 'next/navigation';
 import { resolveSeoPageData, resolveSeoKey } from '@/src/data/resolveSeoPageData';
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const { pageSlug } = params;
   const name = pageSlug
     .split('-')
@@ -22,7 +23,8 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function IndustryPage({ params }) {
+export default async function IndustryPage(props) {
+  const params = await props.params;
   const override = { category: 'industry', pageSlug: params.pageSlug };
   return <SEOLandingPage pageData={resolveSeoPageData(override)} slugKey={resolveSeoKey(override) || params.pageSlug} />;
 }

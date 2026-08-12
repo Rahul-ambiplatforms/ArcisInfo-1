@@ -1,6 +1,7 @@
 import IFSEC from '@/src/views/EventPage/IFSEC';
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const { eventId } = params;
   const name = eventId
     .split('-')
@@ -20,6 +21,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function EventDetailPage({ params }) {
+export default async function EventDetailPage(props) {
+  const params = await props.params;
   return <IFSEC eventId={params.eventId} />;
 }

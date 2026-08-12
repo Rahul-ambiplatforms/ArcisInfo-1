@@ -36,7 +36,8 @@ const SOLUTION_META = {
   },
 };
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const { solutionId } = params;
 
   // Prefer the keyword-optimized copy from SEOContent.js (this is what
@@ -75,6 +76,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function SolutionPage({ params }) {
+export default async function SolutionPage(props) {
+  const params = await props.params;
   return <Solutions solutionId={params.solutionId} />;
 }

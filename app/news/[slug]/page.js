@@ -1,6 +1,7 @@
 import NewsContent from '@/src/views/News/NewsContent';
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const { slug } = params;
   const title = slug
     .split('-')
@@ -21,6 +22,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function NewsArticlePage({ params }) {
+export default async function NewsArticlePage(props) {
+  const params = await props.params;
   return <NewsContent urlWords={params.slug} />;
 }

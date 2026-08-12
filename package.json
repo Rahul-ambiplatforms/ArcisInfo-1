@@ -13,10 +13,10 @@
     "axios": "^1.12.2",
     "framer-motion": "^10.0.0",
     "gsap": "^3.13.0",
-    "next": "^14.2.0",
-    "react": "^18.0.0",
+    "next": "^15.5.23",
+    "react": "^18.3.1",
     "react-custom-scrollbars-2": "^4.5.0",
-    "react-dom": "^18.0.0",
+    "react-dom": "^18.3.1",
     "react-dropzone": "^14.3.8",
     "react-helmet-async": "^2.0.5",
     "react-hook-form": "^7.65.0",
@@ -58,6 +58,6 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@svgr/webpack": "^8.1.0",
     "eslint": "^8.0.0",
-    "eslint-config-next": "^14.2.0"
+    "eslint-config-next": "^15.5.23"
   }
 }
