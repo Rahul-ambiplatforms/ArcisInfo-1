@@ -16,7 +16,7 @@ const theme = extendTheme({
       html: {
         bg: "#171717",
       },
-    },
+    }
   },
   fonts: {
     heading: "'WixMadeforDisplay', sans-serif",
