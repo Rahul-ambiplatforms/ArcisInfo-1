@@ -82,7 +82,7 @@ export const Series = {
       },
     },
     productList: {
-      bg_image: "/images/home_wave_gif_1.gif",
+      bg_image: "/images/home_wave_gif_1.webp",
       heading: "AI CCTV Camera Range for Every Need",
       description: "",
       products: [
@@ -210,7 +210,7 @@ export const Series = {
       },
     },
     productList: {
-      bg_image: "/images/home_wave_gif_1.gif",
+      bg_image: "/images/home_wave_gif_1.webp",
       heading: "Eco-Series: India’s Most Trusted CCTV Camera Range",
       description: "",
       products: [

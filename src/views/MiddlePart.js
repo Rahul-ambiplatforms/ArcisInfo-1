@@ -358,7 +358,7 @@ function MiddlePart() {
         {/* White and Purple Section with Image */}
         {/* Floating Image */}
         <Image loading="lazy"
-          src="/images/screen.webp"
+          src="/images/screen.webp" htmlWidth="1276" htmlHeight="930"
           alt="Security Suite"
           position="absolute"
           top={{ base: "0", md: "85%" }}
@@ -373,7 +373,7 @@ function MiddlePart() {
         />
       </Flex>
       <Image loading="lazy"
-        src="/images/screen.webp"
+        src="/images/screen.webp" htmlWidth="1276" htmlHeight="930"
         alt="Security Suite"
         w={{ base: "90%", md: "120%" }}
         maxW={{ base: "400px", md: "none" }}

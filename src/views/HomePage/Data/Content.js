@@ -399,7 +399,7 @@ export const homeContent = {
     // },
   ],
   productList: {
-    bg_image: "/images/home_wave_gif_1.gif",
+    bg_image: "/images/home_wave_gif_1.webp",
     heading: "AI CCTV Camera Range for Every Need",
     description:
       "Explore our AI enabled Bullet, Dome and PTZ cameras - built for every use case, with flexible 4G, 5G, WiFi or PoE connectivity.",

@@ -181,9 +181,9 @@ export default function RootLayout({ children }) {
         {/* Preload custom font */}
         <link
           rel="preload"
-          href="/fonts/WixMadeforDisplay-VariableFont_wght.ttf"
+          href="/fonts/WixMadeforDisplay-VariableFont_wght.woff2"
           as="font"
-          type="font/ttf"
+          type="font/woff2"
           crossOrigin="anonymous"
         />
         {/* CSP meta tag — supplements the HTTP header set in next.config.js.

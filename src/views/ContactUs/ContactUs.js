@@ -289,7 +289,7 @@ const ContactSection = () => {
                 pointerEvents="none"
               >
                 <Image loading="lazy"
-                  src="/images/home_wave_gif_1.gif"
+                  src="/images/home_wave_gif_1.webp" htmlWidth="800" htmlHeight="600"
                   alt="Background Wave"
                   w="100%"
                   h="100%"

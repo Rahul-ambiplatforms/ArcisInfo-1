@@ -191,7 +191,7 @@ const Navbar = ({ adminSection, setAdminSection }) => {
                   onClick={() => navigateTo("/", "Home")}
                 >
                   <Image loading="lazy"
-                    src="/images/ArcisAi.webp"
+                    src="/images/ArcisAi.webp" htmlWidth="1418" htmlHeight="306"
                     alt="Company Logo"
                     boxSize="40px"
                     w="107px"

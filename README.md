@@ -84,14 +84,33 @@ redirects.
 
 ## Deployment
 
-⚠️ **The real production deploy mechanism for arcisai.io is not recorded in
-this repo.** The only CI workflow that existed built a CRA app and pushed it to
-GitHub Pages, which cannot serve this application; it has been deleted rather
-than left as misleading documentation.
+**Host: DigitalOcean App Platform, behind Cloudflare.** Identified from the
+response headers on the dev deployment
+(`https://arcisinfo1-dev-v7u4w.ondigitalocean.app`):
 
-Whoever administers hosting needs to document the actual pipeline here. The
-build requires a Node server (or a platform with Next.js SSR support such as
-Vercel); `npm run build` produces `.next/` and `npm run start` serves it.
+```
+x-do-app-origin: cb7881e7-cae1-419e-bc8b-6177102c7806
+server: cloudflare
+x-powered-by: Next.js
+```
+
+App Platform builds from a connected branch and runs `npm run build` then
+`npm run start`, so `.next/` is the artifact — there is nothing to configure
+for SSR. The build needs a Node server; **this app cannot be statically
+exported.** A static export silently drops all 25 redirects in
+`next.config.js`, the CSP in `headers()`, the ISR revalidation on 11 routes,
+the `/api/version` route, and image optimization.
+
+The GitHub Pages workflow that used to live in `.github/workflows/` built a
+CRA app (`build/index.html`) and has been deleted — it could not have worked
+since the Next migration, and its last successful run was Feb 2026.
+
+> ⚠️ **`www.arcisai.io` is separate and stale.** The `gh-pages` branch carries
+> `CNAME = www.arcisai.io` and a CRA build from Feb 2026. `next.config.js` has
+> a host-based 301 from `www` to the apex, but that redirect runs *inside the
+> Next app* — if `www` resolves to GitHub Pages the request never reaches Next
+> and the redirect cannot fire, leaving a stale duplicate of the whole site.
+> Resolving this is a DNS/repo-settings task, not a code change.
 
 ### Environment variables
 

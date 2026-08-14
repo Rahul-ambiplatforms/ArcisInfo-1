@@ -101,7 +101,7 @@ const VisionMission = ({ visionData, missionData }) => {
       {/* Background GIF */}
       <Image loading="lazy"
         alt="ArcisAI vision and mission wave animation background"
-        src="/images/home_wave_gif_1.gif"
+        src="/images/home_wave_gif_1.webp" htmlWidth="800" htmlHeight="600"
         position="absolute"
         top="50%"
         left="50%"

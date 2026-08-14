@@ -4,17 +4,17 @@ import { Box, Heading, Text, Flex, Image, SimpleGrid } from "@chakra-ui/react";
 
 const cards = [
   {
-    image: "/images/Goverment&SmartCity.png",
+    image: "/images/Goverment&SmartCity.webp",
     title: "Government & Smart Cities",
     description: "Ready for approvals. Faster project execution.",
   },
   {
-    image: "/images/SystemIntergratoPartner.png",
+    image: "/images/SystemIntergratoPartner.webp",
     title: "System Integrators & Partners",
     description: "Sell without compliance risk. Close deals with confidence.",
   },
   {
-    image: "/images/Enterprice&Critical.png",
+    image: "/images/Enterprice&Critical.webp",
     title: "Enterprise & Critical Infrastructure",
     description: "Audit-ready surveillance built for secure operations.",
   },

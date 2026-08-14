@@ -13,8 +13,8 @@ const bisSlide = {
   id: "bis",
   // Kept so legacy code paths still resolve, but the carousel now prefers
   // `sources`/`fallback` below to render a real <picture> for LCP.
-  d_image: "/images/BIS_bg.png",
-  m_image: "/images/bis-mobile-bg.png",
+  d_image: "/images/BIS_bg.webp",
+  m_image: "/images/bis-mobile-bg.webp",
   // Responsive AVIF/WebP sources for <picture>. Mobile + desktop art-directed.
   // ~15-20 KB AVIF replaces the original 596 KB / 2.2 MB PNGs and fixes the
   // mobile LCP image-download bottleneck.

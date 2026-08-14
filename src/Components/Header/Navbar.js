@@ -301,7 +301,7 @@ const Navbar = () => {
           <NextLink href="/">
             <Image
               loading="lazy"
-              src="/images/ArcisAi_logo.webp"
+              src="/images/ArcisAi_logo.webp" htmlWidth="601" htmlHeight="120"
               alt="ArcisAI Logo"
               w="150px"
               h="30px"

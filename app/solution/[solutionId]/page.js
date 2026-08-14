@@ -36,6 +36,19 @@ const SOLUTION_META = {
   },
 };
 
+// Prerender every solution page. Without this the route had no static output,
+// so Next rendered it per-request and sent
+// `Cache-Control: private, no-cache, no-store` — measured on the live
+// deployment as a 1,334 ms TTFB with `cf-cache-status: BYPASS`, i.e. Cloudflare
+// caching nothing. Prerendering makes the HTML cacheable at the edge.
+// dynamicParams stays at its default (true), so any id not listed here still
+// renders on demand exactly as before.
+export const revalidate = 86400;
+
+export function generateStaticParams() {
+  return Object.keys(SOLUTION_META).map((solutionId) => ({ solutionId }));
+}
+
 export async function generateMetadata(props) {
   const params = await props.params;
   const { solutionId } = params;

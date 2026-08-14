@@ -1,5 +1,18 @@
 import Products from '@/src/views/Product/Products';
 
+// Prerendered so the HTML is edge-cacheable instead of rendered per request.
+// Keys mirror src/views/Product/Data/Content.js, which the view resolves by
+// stripping dashes from the URL segment.
+export const revalidate = 86400;
+
+export function generateStaticParams() {
+  return [
+    { productId: 'ai-bullet-cctv-camera' },
+    { productId: 'ai-ptz-cctv-camera' },
+    { productId: 'ai-dome-cctv-camera' },
+  ];
+}
+
 export async function generateMetadata(props) {
   const params = await props.params;
   const { productId } = params;

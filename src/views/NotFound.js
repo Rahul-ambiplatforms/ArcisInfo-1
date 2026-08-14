@@ -44,7 +44,7 @@ const NotFound = () => {
           left="0"
           right="0"
           bottom="0"
-          bgImage="url('/images/home_wave_gif_1.gif')"
+          bgImage="url('/images/home_wave_gif_1.webp')"
           bgSize="cover"
           bgPosition="center"
           opacity={0.4}

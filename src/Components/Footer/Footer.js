@@ -95,7 +95,7 @@ const Footer = () => {
           <NextLink href="/">
             <Image loading="lazy"
               display={{ base: "block", md: "none" }}
-              src="/images/ArcisAi_logo.webp"
+              src="/images/ArcisAi_logo.webp" htmlWidth="601" htmlHeight="120"
               alt="ArcisAI"
               h={{ base: "30px", md: "35px" }}
               objectFit="contain"
@@ -284,7 +284,7 @@ const Footer = () => {
           {/* Left Side: Make In India, App Stores, Logo */}
           <HStack align="center" spacing={{ base: 2, md: 3 }} flexWrap="nowrap">
             <Image loading="lazy"
-              src="/images/footer_makeinindia.webp"
+              src="/images/footer_makeinindia.webp" htmlWidth="264" htmlHeight="120"
               alt="Make in India"
               h={{ base: "35px", md: "40px" }}
               objectFit="contain"
@@ -297,7 +297,7 @@ const Footer = () => {
               transition="all 0.3s ease"
             >
               <Image loading="lazy"
-                src="/images/footer-app-store.webp"
+                src="/images/footer-app-store.webp" htmlWidth="422" htmlHeight="116"
                 alt="App Store"
                 h={{ base: "35px", md: "40px" }}
                 cursor="pointer"
@@ -313,7 +313,7 @@ const Footer = () => {
               transition="all 0.3s ease"
             >
               <Image loading="lazy"
-                src="/images/footer-play-store.webp"
+                src="/images/footer-play-store.webp" htmlWidth="422" htmlHeight="116"
                 alt="Google Play"
                 h={{ base: "35px", md: "40px" }}
                 cursor="pointer"
@@ -324,7 +324,7 @@ const Footer = () => {
           </HStack>
           {/* <NextLink href="/">
               <Image loading="lazy"
-                src="/images/ArcisAi_logo.webp"
+                src="/images/ArcisAi_logo.webp" htmlWidth="601" htmlHeight="120"
                 alt="ArcisAI"
                 h={{ base: "30px", md: "35px" }}
                 objectFit="contain"
@@ -438,7 +438,7 @@ const Footer = () => {
           <NextLink href="/">
             <Image loading="lazy"
               display={{ base: "none", md: "block" }}
-              src="/images/ArcisAi_logo.webp"
+              src="/images/ArcisAi_logo.webp" htmlWidth="601" htmlHeight="120"
               alt="ArcisAI"
               h={{ base: "30px", md: "35px" }}
               objectFit="contain"

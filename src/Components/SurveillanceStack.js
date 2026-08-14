@@ -56,7 +56,7 @@ const SurveillanceStack = ({ data }) => {
         left={0}
         w="100%"
         h="90%"
-        bgImage="url(/images/home_wave_gif_1.gif)"
+        bgImage="url(/images/home_wave_gif_1.webp)"
         bgSize="cover"
         bgRepeat="no-repeat"
         opacity={0.4}

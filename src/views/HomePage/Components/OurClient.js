@@ -122,7 +122,7 @@ const OurClient = ({ testimonials = true }) => {
         pointerEvents="none"
       >
         <Image loading="lazy"
-          src="/images/home_wave_gif.gif"
+          src="/images/home_wave_gif.webp" htmlWidth="800" htmlHeight="600"
           alt="Background Wave"
           w={{ base: "100%", md: "100%" }}
           h={{ base: "50%", md: "100%" }}

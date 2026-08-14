@@ -42,7 +42,7 @@ function Header() {
       <Flex alignItems="center">
         <Link as={NextLink} href="/">
           <Image loading="lazy"
-            src="/images/ArcisAi.webp"
+            src="/images/ArcisAi.webp" htmlWidth="1418" htmlHeight="306"
             alt="Company Logo"
             w="107px"
             h="24px"
@@ -163,7 +163,7 @@ function Header() {
             alignItems="center"
           >
             <Image loading="lazy"
-              src="/images/ArcisAi.webp"
+              src="/images/ArcisAi.webp" htmlWidth="1418" htmlHeight="306"
               alt="Company Logo"
               w="107px"
               h="24px"

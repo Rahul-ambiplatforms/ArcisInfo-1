@@ -1,5 +1,12 @@
 import IFSEC from '@/src/views/EventPage/IFSEC';
 
+// Prerendered so the HTML is edge-cacheable instead of rendered per request.
+export const revalidate = 86400;
+
+export function generateStaticParams() {
+  return [{ eventId: 'ifsec-india-2025' }];
+}
+
 export async function generateMetadata(props) {
   const params = await props.params;
   const { eventId } = params;

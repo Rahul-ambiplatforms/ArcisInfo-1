@@ -10,7 +10,7 @@ const BISHeroSection = () => {
       h={{ base: "100vh", md: "919px" }}
       position="relative"
       overflow="hidden"
-      bgImage={{ base: "url(/images/bis-mobile-bg.png)", md: "url(/images/BIS_bg.png)" }}
+      bgImage={{ base: "url(/images/bis-mobile-bg.webp)", md: "url(/images/BIS_bg.webp)" }}
       bgSize={{ base: "contain", md: "cover" }}
       bgPosition="center bottom"
       bgRepeat="no-repeat"
