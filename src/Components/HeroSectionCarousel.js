@@ -356,7 +356,7 @@ const HeroSectionCarousel = ({ data }) => {
               aria-hidden="true"
               // First slide is the LCP candidate — eager + high priority so the
               // preload scanner fetches it before hydration.
-              fetchpriority={currentSlide === 0 ? "high" : "auto"}
+              fetchPriority={currentSlide === 0 ? "high" : "auto"}
               loading={currentSlide === 0 ? "eager" : "lazy"}
               decoding="async"
               style={{

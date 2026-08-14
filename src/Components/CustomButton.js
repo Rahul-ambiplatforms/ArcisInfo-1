@@ -39,24 +39,29 @@ const CustomButton = ({
   glowColor,
   showTicks = true,
   textBgClip, // New prop
+  // Custom (non-DOM) style props — destructured so they never leak onto the
+  // native element via {...rest}. Chakra v2 forwards unrecognized props to the
+  // DOM, so these must be consumed here.
+  borderGradient,
+  textGradient,
   sx = {},
   onClick,
   as = "button",
-  ...props
+  ...rest
 }) => {
   const finalGlowColor = glowColor || hoverBorderColor;
 
   // Corner Line Styles (for gradient support)
   const cornerLineBase = {
     position: "absolute",
-    bg: props.borderGradient || borderColor,
+    bg: borderGradient || borderColor,
     transition: "all 0.2s ease-in-out",
   };
 
   // Middle Tick Base Styles (inside the button)
   const tickBase = {
     position: "absolute",
-    bg: props.borderGradient || borderColor,
+    bg: borderGradient || borderColor,
     w: "2px",
     h: "8px",
     top: "50%",
@@ -64,8 +69,11 @@ const CustomButton = ({
     transition: "all 0.2s ease-in-out",
   };
 
-  // Merge custom styles with default styles
-  const buttonStyles = {
+  // All visual styling (including the nested `& .corner-*` / `& > .tick`
+  // selectors) is passed through Chakra's `sx` prop. `sx` is always parsed as
+  // CSS and its keys are NEVER forwarded to the DOM, so no style/selector keys
+  // leak as invalid attributes on the native button.
+  const buttonSx = {
     position: "relative",
     display: "flex",
     alignItems: "center",
@@ -80,18 +88,18 @@ const CustomButton = ({
       bg: hoverBgColor,
       "& .corner-h": {
         w: "calc(50% + 4px)",
-        bg: props.borderGradient || hoverBorderColor,
+        bg: borderGradient || hoverBorderColor,
       },
       "& .corner-v-top": {
         h: "calc(50% - 4px)",
-        bg: props.borderGradient || hoverBorderColor,
+        bg: borderGradient || hoverBorderColor,
       },
       "& .corner-v-bottom": {
         h: "calc(50% - 4px)",
-        bg: props.borderGradient || hoverBorderColor,
+        bg: borderGradient || hoverBorderColor,
       },
       "& > .tick": {
-        bg: props.borderGradient || hoverBorderColor,
+        bg: borderGradient || hoverBorderColor,
         ...(showGlow && {
           boxShadow: `0 0 8px ${finalGlowColor}`,
         }),
@@ -105,13 +113,12 @@ const CustomButton = ({
       transform: "scale(0.95)",
       ...(sx._active || {}),
     },
-    ...props,
   };
 
   const offset = "4px";
 
   return (
-    <Box as={as} onClick={onClick} {...buttonStyles}>
+    <Box as={as} onClick={onClick} sx={buttonSx} {...rest}>
       {/* TOP LEFT CORNER */}
       <Box
         className="corner-h"
@@ -199,8 +206,8 @@ const CustomButton = ({
         as="span"
         className="btn-text"
         color={textColor}
-        bgGradient={props.textGradient}
-        bgClip={textBgClip !== undefined ? textBgClip : (props.textGradient ? "text" : undefined)}
+        bgGradient={textGradient}
+        bgClip={textBgClip !== undefined ? textBgClip : (textGradient ? "text" : undefined)}
         fontSize={fontSize}
         fontWeight={fontWeight}
         transition="color 0.1s"
