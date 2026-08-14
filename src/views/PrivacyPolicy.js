@@ -16,7 +16,6 @@ import {
   UnorderedList,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { Helmet } from "react-helmet-async";
 // import theme from "../theme";
 function PrivacyPolicy() {
   // const secondaryTextColor = useColorModeValue(
@@ -25,12 +24,10 @@ function PrivacyPolicy() {
   // );
   return (
     <>
-      <Helmet>
-        <title>Privacy Policy</title>
-        <meta name="description" content="Your privacy matters. Explore ArcisAI's policy on data protection, security measures, usage practices, and user rights to ensure a safe digital experience." />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://arcisai.io/privacy-policy" />
-      </Helmet>
+      {/* The <Helmet> block that used to sit here was inert: HelmetProvider is
+          mounted in the client-only app/providers.js tree, so nothing Helmet
+          renders reaches the server HTML. Its title/description/canonical are
+          already emitted by the route's `metadata` export. */}
       <Box
         mt="6%"
         p="2%"

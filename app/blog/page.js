@@ -66,7 +66,60 @@ export const metadata = {
   },
 };
 
+// /blog previously shipped no structured data at all: the only JSON-LD in
+// BlogsDashboard was commented out, and everything else on that component went
+// through the client-only <Helmet>. Built here, in the server component, from
+// the same post list the page renders — so the markup can't drift from the
+// visible content.
+function buildBlogSchemas(posts) {
+  const SITE = 'https://arcisai.io';
+  const url = `${SITE}/blog`;
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Blog',
+      '@id': `${url}#blog`,
+      url,
+      name: 'ArcisAI Blog',
+      description:
+        'Latest in AI surveillance, smart cities, edge analytics, and video intelligence.',
+      inLanguage: 'en-IN',
+      isPartOf: { '@id': `${SITE}/#website` },
+      publisher: { '@id': `${SITE}/#organization` },
+      blogPost: posts.slice(0, 50).map((b) => ({
+        '@type': 'BlogPosting',
+        headline: b.content?.title,
+        url: `${SITE}/blog/${b.metadata?.urlWords}`,
+        ...(b.createdAt ? { datePublished: b.createdAt } : {}),
+        ...(b.updatedAt ? { dateModified: b.updatedAt } : {}),
+        author: { '@id': `${SITE}/#organization` },
+      })),
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      '@id': `${url}#breadcrumb`,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: url },
+      ],
+    },
+  ];
+}
+
 export default async function BlogPage() {
   const initialBlogs = await getInitialBlogs();
-  return <BlogsDashboard initialBlogs={initialBlogs} />;
+  const schemas = buildBlogSchemas(initialBlogs);
+  return (
+    <>
+      {schemas.map((schema) => (
+        <script
+          key={schema['@id']}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, '\\u003c') }}
+        />
+      ))}
+      <BlogsDashboard initialBlogs={initialBlogs} />
+    </>
+  );
 }

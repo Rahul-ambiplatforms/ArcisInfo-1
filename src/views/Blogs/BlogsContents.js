@@ -27,7 +27,6 @@ import {
 import { useEffect, useRef, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { getBlogs, getBlogById, getBlogByUrlWords } from "./blog";
-import { Helmet } from "react-helmet-async";
 // import ContactUs from "../ContactUs/ContactUs";
 // import ImagePop from "../../components/Animation/Image/ImagePop";
 
@@ -478,80 +477,14 @@ const BlogsOverviewDash = ({ urlWords: urlWordsProp, initialBlog }) => {
           }}
         />
       ))}
-      <Helmet>
-        <title>
-          {blog.content?.metaTitle ||
-            blog.metadata?.metaTitle ||
-            "Default Title my name is again default title"}
-        </title>
-        <meta
-          name="description"
-          content={
-            blog.content?.metaDescription ||
-            blog.metadata?.metaDescription ||
-            "Default Description"
-          }
-        />
-        <meta name="robots" content="index, follow" />
-        <meta
-          property="og:title"
-          content={
-            blog.content?.metaTitle ||
-            blog.metadata?.metaTitle ||
-            "Default OG Title"
-          }
-        />
-        <meta
-          property="og:description"
-          content={
-            blog.content?.metaDescription ||
-            blog.metadata?.metaDescription ||
-            "Default OG Description"
-          }
-        />
-        <meta property="og:url" content={currentUrl} />
-        <meta property="og:type" content="blog" />
-        <meta property="og:site_name" content="ArcisAI" />
-        <meta property="og:image" content={mainImageOg} />
-        <meta property="og:locale" content="en_US" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@arcisai" />
-        <meta
-          name="twitter:title"
-          content={
-            blog.content?.metaTitle ||
-            blog.metadata?.metaTitle ||
-            "Default Twitter Title"
-          }
-        />
-        <meta
-          name="twitter:description"
-          content={
-            blog.content?.metaDescription ||
-            blog.metadata?.metaDescription ||
-            "Default Twiter Description"
-          }
-        />
-        <meta name="twitter:site" content="@vmukti" />
-        <meta
-          name="twitter:title"
-          content={
-            blog.content?.metaTitle ||
-            blog.metadata?.metaTitle ||
-            "Default Twitter Title"
-          }
-        />
-        <meta
-          name="twitter:description"
-          content={
-            blog.content?.metaDescription ||
-            blog.metadata?.metaDescription ||
-            "Default Twiter Description"
-          }
-        />
-        <meta name="twitter:image" content={mainImageOg} />
-        <link rel="canonical" href={`${currentUrl}`} />
-      </Helmet>
+      {/* Schema Markup — deliberately NOT inside <Helmet>.
+          HelmetProvider is mounted in app/providers.js, a 'use client' module,
+          so Helmet only injects into <head> after hydration and nothing it
+          renders reaches the server HTML a crawler reads. Rendered inline the
+          <script> is server-rendered normally; JSON-LD is valid anywhere in
+          the document. The meta/title/canonical tags that used to sit here
+          were dead for the same reason and are already emitted by the route's
+          `metadata` export. */}
       <Box px="2%">
         {/* Blog Header */}
         <Box mb={8}>

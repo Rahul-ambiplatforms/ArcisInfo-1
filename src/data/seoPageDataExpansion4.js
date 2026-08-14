@@ -221,36 +221,9 @@ const seoPageDataExpansion4 = {
     "cta": {"title": "Protect Your Warehouse with ArcisAI", "subtitle": "Get a free warehouse security assessment. AI pilferage detection, Made in India."}
   },
 
-  "ai-cctv-banks": {
-    "slug": "/ai-cctv-banks",
-    "title": "AI CCTV for Banks & Financial Institutions 2026 | ArcisAI",
-    "metaDescription": "AI CCTV cameras for banks, ATMs, and financial institutions. Non-Chinese SoC for financial data security, STQC certified, RBI compliant. ArcisAI banking surveillance.",
-    "keywords": ["bank CCTV camera", "ATM surveillance camera", "bank security system India", "financial institution CCTV", "RBI compliant surveillance"],
-    "heroTitle": "AI CCTV for Banks â Financial Security with Data Sovereignty",
-    "heroSubtitle": "Non-Chinese SoC | Made in India | RBI Compliance Ready",
-    "heroDescription": "Secure bank branches, ATM kiosks, and financial offices with ArcisAI AI-powered CCTV cameras. Non-Chinese SoC ensures financial video data stays completely sovereign.",
-    "category": "industry",
-    "sections": [
-      {
-        "title": "Banking-Grade AI Surveillance",
-        "content": "Banks and financial institutions handle India most sensitive data. ArcisAI cameras with non-Chinese SoC ensure all video footage from vaults, cash counting rooms, and ATM kiosks is processed on indigenous hardware with zero foreign data routing. AI analytics detect suspicious loitering, tailgating at secure doors, and ATM tampering in real-time.",
-        "stats": [{"value": "Non-Chinese", "label": "Financial Data Safe"}, {"value": "AI", "label": "Fraud Detection"}, {"value": "STQC", "label": "Government Certified"}],
-        "features": ["Vault and cash room monitoring", "ATM tampering detection", "Customer queue analytics", "Suspicious behavior alerts"]
-      },
-      {
-        "title": "Multi-Branch Banking Dashboard",
-        "content": "Monitor hundreds of bank branches and ATM locations from a centralized ArcisAI cloud VMS dashboard. Branch managers, regional heads, and security teams get role-based access with audit trails â meeting RBI surveillance guidelines while maintaining operational efficiency across the entire banking network.",
-        "stats": [{"value": "Multi-branch", "label": "Unified Control"}, {"value": "Audit", "label": "Trail Logging"}, {"value": "RBI", "label": "Compliance Ready"}],
-        "features": ["Multi-branch unified surveillance", "ATM network monitoring", "Regulatory audit trail", "Cash transit vehicle tracking"]
-      }
-    ],
-    "faqs": [
-      {"q": "Does ArcisAI meet RBI CCTV guidelines for banks?", "a": "Yes, ArcisAI cameras meet RBI guidelines for bank surveillance including mandatory recording retention, STQC certification, and non-Chinese SoC for data sovereignty â critical for financial institution security."},
-      {"q": "Can ArcisAI monitor ATM networks centrally?", "a": "Yes, ArcisAI cloud VMS supports centralized monitoring of entire ATM networks. AI analytics detect tampering, card skimming attempts, and suspicious activity with instant alerts to the security operations center."},
-      {"q": "Why is non-Chinese SoC important for banks?", "a": "Banks handle highly sensitive financial data. Non-Chinese SoC ensures video data from vaults, cash rooms, and customer areas is processed on indigenous hardware with no risk of foreign firmware backdoors or data routing."}
-    ],
-    "cta": {"title": "Secure Your Bank with ArcisAI", "subtitle": "Request a free banking security assessment. RBI compliant, data sovereign, Made in India."}
-  },
+  // REMOVED (SEO, keyword cannibalisation): this banking/ATM entry duplicated
+  // "ai-cctv-banking-atm-security", which is now the single canonical banking
+  // page. The old URL 301s to it from next.config.js.
 
   "ai-cctv-temples-religious": {
     "slug": "/ai-cctv-temples-religious",

@@ -1,23 +1,25 @@
 'use client';
 import React from 'react';
 import {Box,Container,Heading,Text,Button,Flex,VStack,HStack,Badge,SimpleGrid,Icon,List,ListItem,ListIcon} from '@chakra-ui/react';
-import {Helmet} from 'react-helmet-async';
 import NextLink from 'next/link';
 import {MdCheckCircle,MdLocationOn,MdEvent} from 'react-icons/md';
 const ConvergenceIndia2026=()=>{
-const es={"@context":"https://schema.org","@type":"Event","name":"ArcisAI at Convergence India 2026","description":"Visit ArcisAI at Convergence India 2026 for AI video surveillance demos.","startDate":"2026-03-23T10:00+05:30","endDate":"2026-03-25T18:00+05:30","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Bharat Mandapam","address":{"@type":"PostalAddress","streetAddress":"Pragati Maidan","addressLocality":"New Delhi","postalCode":"110001","addressCountry":"IN"}},"performer":{"@type":"Organization","name":"ArcisAI Solutions","url":"https://www.arcisai.io"}};
-const bc={"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.arcisai.io/"},{"@type":"ListItem","position":2,"name":"Events","item":"https://www.arcisai.io/whoweare/eventspotlight"},{"@type":"ListItem","position":3,"name":"Convergence India 2026"}]};
+// Host is the apex arcisai.io — the www. host 301s to it, so www URLs inside
+// structured data pointed at redirects and disagreed with every canonical on
+// the site. The old "Events" crumb linked to /whoweare/eventspotlight, which
+// does not exist on this site; it now points at the real /event hub.
+const es={"@context":"https://schema.org","@type":"Event","name":"ArcisAI at Convergence India 2026","description":"Visit ArcisAI at Convergence India 2026 for AI video surveillance demos.","startDate":"2026-03-23T10:00+05:30","endDate":"2026-03-25T18:00+05:30","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"Bharat Mandapam","address":{"@type":"PostalAddress","streetAddress":"Pragati Maidan","addressLocality":"New Delhi","postalCode":"110001","addressCountry":"IN"}},"performer":{"@type":"Organization","name":"ArcisAI","url":"https://arcisai.io"},"organizer":{"@type":"Organization","name":"ArcisAI","url":"https://arcisai.io"},"url":"https://arcisai.io/events/convergence-india-2026"};
+const bc={"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://arcisai.io/"},{"@type":"ListItem","position":2,"name":"Events","item":"https://arcisai.io/event"},{"@type":"ListItem","position":3,"name":"Convergence India 2026","item":"https://arcisai.io/events/convergence-india-2026"}]};
 const demos=[{title:"AI-Powered Cloud VMS",desc:"Live demo of cloud-native video management with AI analytics and ANPR."},{title:"Edge AI Cameras",desc:"Real-time edge processing with on-camera AI for intrusion and fire detection."},{title:"Smart City Command Center",desc:"Integrated ICCC solution for urban surveillance and emergency response."},{title:"ArcisAI Platform",desc:"Next-gen AI surveillance with generative AI search and predictive analytics."}];
-return(<Box bg="#E7E7E7" minH="100vh"><Helmet><title>ArcisAI at Convergence India 2026 | Bharat Mandapam, New Delhi</title>
-<meta name="description" content="Visit ArcisAI at Convergence India 2026, March 23-25, Bharat Mandapam, New Delhi. Bharat Mandapam, New Delhi. AI cloud VMS, edge AI, smart city solutions." />
-<meta name="keywords" content="Convergence India 2026,ArcisAI,AI surveillance,cloud VMS,edge AI,smart city,CCTV,Bharat Mandapam" />
-<link rel="canonical" href="https://www.arcisai.io/events/convergence-india-2026" />
-<meta property="og:title" content="ArcisAI at Convergence India 2026" />
-<meta property="og:description" content="AI surveillance demos at Bharat Mandapam, New Delhi, Bharat Mandapam." />
-<meta property="og:type" content="event" />
-<script type="application/ld+json">{JSON.stringify(es)}</script>
-<script type="application/ld+json">{JSON.stringify(bc)}</script>
-</Helmet>
+return(<Box bg="#E7E7E7" minH="100vh">
+{/* Rendered inline, NOT via <Helmet>. HelmetProvider lives in the client-only
+    app/providers.js tree, so Helmet output never reached the server HTML and
+    Google saw no Event markup here at all. The meta/title/canonical tags that
+    used to sit alongside these scripts were dead for the same reason and are
+    already emitted by the `metadata` export in
+    app/events/convergence-india-2026/page.js. */}
+<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(es)}} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(bc)}} />
 <Box bg="linear-gradient(135deg,#1a1a2e 0%,#2d1b69 100%)" color="white" py={{base:12,md:20}} px={4}><Container maxW="1200px"><Flex direction={{base:"column",md:"row"}} align="center" gap={8}><VStack align={{base:"center",md:"flex-start"}} spacing={4} flex={1}><Badge colorScheme="purple" fontSize="md" px={3} py={1}>March 23-25, 2026</Badge><Heading as="h1" size={{base:"xl",md:"2xl"}}>ArcisAI at Convergence India 2026</Heading><Text fontSize={{base:"md",md:"lg"}} opacity={0.9}>Experience AI-powered video surveillance. Visit us at <strong>Bharat Mandapam, New Delhi</strong>, Bharat Mandapam, New Delhi.</Text><HStack spacing={4} pt={2}><Button as={NextLink} href="/book-a-demo" colorScheme="purple" size="lg">Book a Meeting</Button><Button as={NextLink} href="/solution" variant="outline" colorScheme="whiteAlpha" size="lg">Explore Solutions</Button></HStack></VStack>
 <Box flex={1} textAlign="center"><Box bg="whiteAlpha.100" borderRadius="xl" p={6} border="1px solid" borderColor="whiteAlpha.200"><VStack spacing={3}><Icon as={MdLocationOn} boxSize={8} color="purple.300"/><Text fontWeight="bold" fontSize="lg">Bharat Mandapam, New Delhi</Text><Text>Bharat Mandapam, New Delhi</Text><Badge colorScheme="green" fontSize="sm">Free Entry for Trade Visitors</Badge></VStack></Box></Box></Flex></Container></Box>
 <Box py={{base:10,md:16}} px={4}><Container maxW="1200px"><VStack spacing={8}><Heading as="h2" size="xl" textAlign="center">What We Are Showcasing</Heading><SimpleGrid columns={{base:1,md:2}} spacing={6} w="100%">{demos.map((d,i)=>(<Box key={i} bg="white" p={6} borderRadius="lg" boxShadow="md"><Heading as="h3" size="md" mb={3} color="#2d1b69">{d.title}</Heading><Text color="gray.600">{d.desc}</Text></Box>))}</SimpleGrid></VStack></Container></Box>

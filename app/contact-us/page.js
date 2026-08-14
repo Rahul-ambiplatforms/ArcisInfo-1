@@ -8,7 +8,17 @@ export const metadata = {
     'contact ArcisAI', 'demo request', 'pricing inquiry',
     'technical support', 'surveillance quote',
   ],
-  alternates: { canonical: 'https://arcisai.io/contact-us' },
+  // The en-IN / en / x-default hreflang set used to be declared inside
+  // ContactUs.js via <Helmet>, where it never reached the server HTML. Moved
+  // here so the alternates are actually emitted.
+  alternates: {
+    canonical: 'https://arcisai.io/contact-us',
+    languages: {
+      'en-IN': 'https://arcisai.io/contact-us',
+      en: 'https://arcisai.io/contact-us',
+      'x-default': 'https://arcisai.io/contact-us',
+    },
+  },
   openGraph: {
     title: 'Contact ArcisAI | Get Surveillance Solutions',
     description: 'Request a demo, pricing, or technical consultation for AI surveillance.',

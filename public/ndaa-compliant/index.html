@@ -6,6 +6,19 @@
     <title>NDAA Compliant AI Cameras | Section 889 Certified | ArcisAI</title>
     <meta name="description" content="ArcisAI cameras are NDAA Section 889 compliant. Zero Chinese components. Full supply chain documentation. The trusted Hikvision/Dahua replacement for US federal, banking, and enterprise.">
 
+    <!-- Campaign landing page: no internal link points here and it is not in
+         the sitemap, but it was fully indexable and competing organically with
+         three real routes on the same NDAA intent — /compare/ndaa-compliant-cameras,
+         /compare/ndaa-compliant-cctv-india and /ai-cctv-replace-chinese-cctv-india-alternative.
+         noindex,follow keeps it usable for paid traffic while removing it from
+         the organic competition; `follow` still passes its links through.
+
+         Deliberately NO rel=canonical: pairing noindex with a canonical that
+         points at a different URL is contradictory, and Google can propagate
+         the noindex to the canonical target — which would deindex the real
+         /compare/ndaa-compliant-cameras page. One signal only. -->
+    <meta name="robots" content="noindex, follow">
+
     <!-- GA4 Tracking for ArcisAI -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGKLN98WFR"></script>
     <script>

@@ -1,6 +1,5 @@
 'use client';
 import React, { useState, useMemo } from "react";
-import { Helmet } from "react-helmet-async";
 import {
   Box, Container, Heading, Text, Input, InputGroup, InputLeftElement,
   VStack, HStack, SimpleGrid, Badge, Divider, Button, Wrap, WrapItem,
@@ -92,29 +91,28 @@ const Glossary = () => {
     "@type": "DefinedTermSet",
     name: "AI Video Surveillance Glossary",
     description: "Comprehensive glossary of AI video surveillance terminology covering edge AI, NDAA compliance, camera hardware, analytics, and system architecture.",
-    url: "https://www.arcisai.io/glossary",
-    publisher: { "@type": "Organization", name: "ArcisAI", url: "https://www.arcisai.io" },
+    url: "https://arcisai.io/glossary",
+    publisher: { "@type": "Organization", name: "ArcisAI", url: "https://arcisai.io" },
     hasPart: glossaryTerms.map(t => ({
       "@type": "DefinedTerm",
       name: t.term,
       description: t.definition,
-      inDefinedTermSet: "https://www.arcisai.io/glossary"
+      inDefinedTermSet: "https://arcisai.io/glossary"
     }))
   };
 
   return (
     <>
-      <Helmet>
-        <title>{`AI Video Surveillance Glossary | ${glossaryTerms.length}+ Terms Explained | ArcisAI`}</title>
-        <meta name="description" content={`Comprehensive glossary of ${glossaryTerms.length}+ AI video surveillance terms. Covering edge AI, NDAA compliance, facial recognition, ANPR, camera specifications, VMS architecture, and more.`} />
-        <meta name="keywords" content="AI CCTV glossary, video surveillance terminology, NDAA definition, edge AI meaning, ANPR explained, security camera terms, VMS definition, ONVIF explained" />
-        <link rel="canonical" href="https://www.arcisai.io/glossary" />
-        <meta property="og:title" content={`AI Video Surveillance Glossary | ${glossaryTerms.length}+ Terms | ArcisAI`} />
-        <meta property="og:description" content="The definitive reference for AI video surveillance terminology. From edge AI to NDAA compliance, every term explained." />
-        <meta property="og:url" content="https://www.arcisai.io/glossary" />
-        <meta property="og:type" content="website" />
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-      </Helmet>
+      {/* Rendered inline, NOT via <Helmet>. HelmetProvider lives in the
+          client-only app/providers.js tree, so Helmet output never reached the
+          server HTML and Google saw no DefinedTermSet markup here. The
+          meta/title/canonical tags that used to sit alongside were dead for
+          the same reason and are already emitted by the `metadata` export in
+          app/glossary/page.js. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
 
       {/* Hero */}
       <Box bg="linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%)" color="white" py={{ base: 16, md: 20 }}>

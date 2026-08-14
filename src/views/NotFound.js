@@ -9,7 +9,6 @@ import {
   Icon,
   Link,
 } from "@chakra-ui/react";
-import { Helmet } from "react-helmet-async";
 import { useRouter } from "next/navigation";
 import { FaGlobe, FaEnvelope, FaPhone } from "react-icons/fa";
 import CustomButton from "../Components/CustomButton";
@@ -23,11 +22,10 @@ const NotFound = () => {
 
   return (
     <>
-      <Helmet>
-        <title>404 - Page Not Found</title>
-        <meta name="description" content="The page you are looking for does not exist." />
-        <meta name="robots" content="noindex, follow" />
-      </Helmet>
+      {/* The <Helmet> block that used to sit here was inert: HelmetProvider is
+          mounted in the client-only app/providers.js tree, so nothing Helmet
+          renders reaches the server HTML. Its title/description/canonical are
+          already emitted by the route's `metadata` export. */}
 
       <Box
         position="fixed"

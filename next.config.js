@@ -278,6 +278,49 @@ const nextConfig = {
         permanent: true,
         statusCode: 301,
       },
+
+      // ─── Banking / ATM consolidation ────────────────────────────────────
+      // Five separate pages targeted the same bank/ATM CCTV intent and split
+      // the ranking signal between them. /ai-cctv-banking-atm-security is now
+      // the single canonical page (deepest content, covers both the "bank"
+      // and "ATM" head terms); the other four data entries were deleted so
+      // they cannot regenerate, and every old URL 301s here.
+      {
+        source: "/banking-finance-cctv",
+        destination: "/ai-cctv-banking-atm-security",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/industry/banking-finance-cctv",
+        destination: "/ai-cctv-banking-atm-security",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/cctv-cameras-for-banking-finance",
+        destination: "/ai-cctv-banking-atm-security",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/industry/cctv-cameras-for-banking-finance",
+        destination: "/ai-cctv-banking-atm-security",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/ai-cctv-banks",
+        destination: "/ai-cctv-banking-atm-security",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/ai-cctv-for-banks-india",
+        destination: "/ai-cctv-banking-atm-security",
+        permanent: true,
+        statusCode: 301,
+      },
     ];
   },
 };

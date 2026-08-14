@@ -1003,26 +1003,9 @@ const seoPageData = {
     ],
     cta: {title: "Get AI CCTV for Your Bhubaneswar Property", description: "Free site survey, professional installation, and 24/7 cloud monitoring.", buttonText: "Get Free Quote", buttonLink: "/contact-us?city=bhubaneswar"}
   },
-  "banking-finance-cctv": {
-    slug: "banking-finance-cctv",
-    title: "Banking & Finance AI CCTV Solutions | ArcisAI Surveillance",
-    metaDescription: "ArcisAI AI surveillance for banks, ATMs, and financial institutions. STQC certified, edge AI analytics, cloud VMS with ArcisGPT. Made in India.",
-    keywords: ["bank CCTV","ATM camera","finance surveillance","ArcisAI","STQC certified","AI surveillance India"],
-    heroTitle: "AI Surveillance for Banking & Finance",
-    heroSubtitle: "Intelligent Security Tailored for Banking & Finance Operations",
-    heroDescription: "AI surveillance for banks, ATMs, and financial institutions. ArcisAI delivers STQC-certified, edge AI-powered cameras with cloud VMS and ArcisGPT analytics.",
-    category: "industry",
-    sections: [
-      {title: "Why Banking & Finance Needs AI CCTV", stats: [{label:"AI Detections",value:"8+"},{label:"False Alarm Reduction",value:"95%"},{label:"Response Time",value:"<3 sec"},{label:"ROI Period",value:"6 months"}], features: ["Real-time AI threat detection on camera","Cloud VMS for multi-location monitoring","ArcisGPT: Natural language video search","STQC certified for government compliance","24/7 support with 99.9% uptime SLA"]},
-      {title: "Recommended Products", features: ["S-Series PTZ for large area coverage","S-Series Dome for indoor monitoring","ECO-Series for budget deployments","4G SIM cameras for remote sites","Bridge Device for legacy camera upgrade"]}
-    ],
-    faqs: [
-      {q:"What ArcisAI cameras are best for Banking & Finance?",a:"We recommend S-Series for premium Banking & Finance deployments and ECO-Series for cost-effective coverage. Our team provides free site surveys to recommend the optimal configuration."},
-      {q:"Is ArcisAI STQC certified for Banking & Finance?",a:"Yes, ArcisAI is STQC certified — mandatory for all government and regulated Banking & Finance installations since April 2025."},
-      {q:"How does ArcisGPT help Banking & Finance?",a:"ArcisGPT lets you search video footage in plain English. Ask 'Show me all unauthorized entries after 9pm' and get instant results across all cameras."}
-    ],
-    cta: {title:"Secure Your Banking & Finance Operations", description:"Free site survey and customized solution design.", buttonText:"Request Demo", buttonLink:"/contact-us?industry=banking-finance-cctv"}
-  },
+  // REMOVED (SEO, keyword cannibalisation): this banking/ATM entry duplicated
+  // "ai-cctv-banking-atm-security", which is now the single canonical banking
+  // page. The old URL 301s to it from next.config.js.
   "retail-surveillance": {
     slug: "retail-surveillance",
     title: "Retail AI CCTV Solutions | ArcisAI Surveillance",

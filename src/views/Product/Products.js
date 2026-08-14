@@ -2,7 +2,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import { useParams } from "next/navigation";
-import { Helmet } from "react-helmet-async";
 import HeroSectionCarousel from "../../Components/HeroSectionCarousel";
 import { Product } from "./Data/Content";
 import { getProductSEO } from "./Data/SEOContent";
@@ -48,32 +47,14 @@ const Products = ({ productId: productIdProp }) => {
 
   return (
     <>
-      <Helmet>
-        {/* Primary Meta Tags */}
-        <title>{productSEO.metatitle}</title>
-        <meta name="description" content={productSEO.metadescription} />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={productSEO.canonical} />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:title" content={productSEO.metatitle} />
-        <meta property="og:description" content={productSEO.metadescription} />
-        <meta property="og:image" content={productSEO.ogimage} />
-        <meta property="og:type" content="product" />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:url" content={productSEO.canonical} />
-        <meta property="og:site_name" content="ArcisAI" />
-
-        {/* Twitter Card Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@arcisai" />
-        <meta name="twitter:title" content={productSEO.metatitle} />
-        <meta name="twitter:description" content={productSEO.metadescription} />
-        <meta name="twitter:image" content={productSEO.ogimage} />
-
-
-      </Helmet>
-      {/* Schema Markup */}
+      {/* Schema Markup — deliberately NOT inside <Helmet>.
+          HelmetProvider is mounted in app/providers.js, a 'use client' module,
+          so Helmet only injects into <head> after hydration and nothing it
+          renders reaches the server HTML a crawler reads. Rendered inline the
+          <script> is server-rendered normally; JSON-LD is valid anywhere in
+          the document. The meta/title/canonical tags that used to sit here
+          were dead for the same reason and are already emitted by the route's
+          `metadata` export. */}
       {productSEO.schema &&
         productSEO.schema.length > 0 &&
         productSEO.schema.map((schema, index) => (

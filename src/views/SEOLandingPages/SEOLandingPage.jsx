@@ -2,7 +2,6 @@
 import React from "react";
 import NextLink from "next/link";
 import { Box, Container, Heading, Text, SimpleGrid, VStack, HStack, Button, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Icon, Flex, Badge, Divider } from "@chakra-ui/react";
-import { Helmet } from "react-helmet-async";
 
 // Brand palette — matches site dark theme (body #171717, accents #9678E1 / #8266C9)
 const ACCENT = "#9678E1";
@@ -26,113 +25,27 @@ const SEOLandingPage = ({ pageData, slugKey, relatedLinks = [] }) => {
     );
   }
 
-  const pageUrl = `https://arcisai.io/${pageData.slug || slugKey}`;
+  // NOTE: this component no longer emits <title>, <meta>, <link rel=canonical>
+  // or JSON-LD.
+  //
+  // It is a `'use client'` component and HelmetProvider is mounted inside
+  // app/providers.js, which is also `'use client'` — so everything Helmet
+  // rendered here was injected by the browser AFTER hydration and never
+  // appeared in the server-rendered HTML that crawlers read. On top of that,
+  // the tags fought Next.js's own metadata output, and the Product/
+  // LocalBusiness blocks carried a hard-coded 4.8★/150-review aggregateRating
+  // that no page on the site backs up.
+  //
+  // Title/description/canonical now come from each route's generateMetadata(),
+  // and the JSON-LD from src/data/buildSeoPageSchemas.js rendered server-side
+  // by <SeoPageSchemaScripts>. Use that pair as the template for any remaining
+  // Helmet-based page.
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    name: pageData.title,
-    description: pageData.metaDescription,
-    url: pageUrl,
-    publisher: {
-      "@type": "Organization",
-      name: "ArcisAI",
-      url: "https://arcisai.io",
-      logo: "https://arcisai.io/logo.webp",
-      sameAs: ["https://www.linkedin.com/company/arcisai"]
-    }
-  };
-
-  // BreadcrumbList schema - shows breadcrumb in Google
-  const breadcrumbLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://arcisai.io/" },
-      ...(pageData.category === "city" || pageData.category === "state" ? [
-        { "@type": "ListItem", position: 2, name: pageData.category === "city" ? "Cities" : "States", item: "https://arcisai.io/" },
-        { "@type": "ListItem", position: 3, name: pageData.heroTitle || pageData.title }
-      ] : [
-        { "@type": "ListItem", position: 2, name: pageData.heroTitle || pageData.title }
-      ])
-    ]
-  };
-
-  // Product schema for rich snippets
-  const productLd = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: "ArcisAI Smart CCTV Camera",
-    description: pageData.metaDescription,
-    brand: { "@type": "Brand", name: "ArcisAI" },
-    manufacturer: { "@type": "Organization", name: "ArcisAI", url: "https://arcisai.io" },
-    category: "AI CCTV Cameras",
-    url: pageUrl,
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      reviewCount: "150",
-      bestRating: "5"
-    },
-    offers: {
-      "@type": "AggregateOffer",
-      priceCurrency: "USD",
-      lowPrice: "299",
-      highPrice: "1999",
-      offerCount: "24",
-      availability: "https://schema.org/InStock"
-    }
-  };
-
-  // LocalBusiness schema for city pages
-  const localBusinessLd = (pageData.category === "city") ? {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "ArcisAI CCTV Cameras",
-    description: pageData.metaDescription,
-    url: pageUrl,
-    telephone: "+91-9909000616",
-    priceRange: "₹₹₹",
-    image: "https://arcisai.io/logo.webp",
-    address: {
-      "@type": "PostalAddress",
-      addressCountry: "IN"
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      reviewCount: "150"
-    }
-  } : null;
-
+  // Still needed for the visible on-page FAQ accordion below.
   const faqItems = pageData.faqs || pageData.faq || [];
-  const faqJsonLd = faqItems.length ? {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqItems.map(faq => ({
-      "@type": "Question", name: faq.q || faq.question,
-      acceptedAnswer: { "@type": "Answer", text: faq.a || faq.answer }
-    }))
-  } : null;
 
   return (
     <>
-      <Helmet>
-        <title>{pageData.title}</title>
-        <meta name="description" content={pageData.metaDescription} />
-        <meta name="keywords" content={pageData.keywords?.join(", ")} />
-        <link rel="canonical" href={pageUrl} />
-        <meta property="og:title" content={pageData.title} />
-        <meta property="og:description" content={pageData.metaDescription} />
-        <meta property="og:url" content={pageUrl} />
-        <meta property="og:type" content="website" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(productLd)}</script>
-        {localBusinessLd && <script type="application/ld+json">{JSON.stringify(localBusinessLd)}</script>}
-        {faqJsonLd && <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>}
-      </Helmet>
-
       {/* Hero Section */}
       <Box bg={`linear-gradient(135deg, #171717 0%, #241d3a 50%, #171717 100%)`} color="white" py={{base: 16, md: 24}} position="relative" overflow="hidden">
         <Box position="absolute" top="0" left="0" right="0" bottom="0" bg={`radial-gradient(circle at 30% 50%, rgba(150,120,225,0.18) 0%, transparent 60%)`} />

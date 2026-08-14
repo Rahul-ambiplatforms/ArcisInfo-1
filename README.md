@@ -1,71 +1,104 @@
-# Getting Started with Create React App
+# ArcisAI — arcisai.io
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Marketing and SEO site for ArcisAI (Adiance Technologies). **Next.js 15 App
+Router**, React 18, Chakra UI.
 
-## Available Scripts
+> The previous README was Create React App boilerplate left over from the
+> pre-migration stack. It described `npm test`, a `build/` output directory and
+> a GitHub Pages deploy, none of which exist in this project.
 
-In the project directory, you can run:
+## Requirements
 
-### `npm start`
+- Node.js 20+
+- npm
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Commands
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+npm install          # install dependencies
+npm run dev          # dev server on http://localhost:3000
+npm run build        # production build → .next/  (NOT build/)
+npm run start        # serve the production build
+npm run lint         # next lint
+```
 
-### `npm test`
+There is no test runner configured.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Stack and layout
 
-### `npm run build`
+| Path | What lives there |
+| --- | --- |
+| `app/` | App Router routes. Every `page.js` is a **server component** unless marked otherwise. |
+| `app/layout.js` | Root layout, global `metadata`, CSP, GTM, and the canonical Organization + WebSite JSON-LD. |
+| `app/sitemap.js` | Generated `/sitemap.xml`. |
+| `app/robots.js` | Generated `/robots.txt`. |
+| `src/views/` | Page bodies. Most are `'use client'` and receive server-resolved data as props. |
+| `src/data/` | SEO landing-page dataset (~270 entries) plus the server-only resolver and schema builders. |
+| `src/Components/` | Shared UI. |
+| `public/` | Static assets served verbatim at the site root. |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Rendering is SSR/ISR — the app **cannot** be exported as a static site or
+deployed to GitHub Pages.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## SEO conventions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+These are load-bearing. Breaking them silently removes pages from search
+results, which is exactly what happened before the current fixes.
 
-### `npm run eject`
+**1. Never use `react-helmet-async` for anything a crawler must see.**
+`HelmetProvider` is mounted in `app/providers.js`, which is `'use client'`.
+Helmet therefore only injects into `<head>` *after hydration*, and nothing it
+renders appears in the server HTML that Googlebot reads. Titles, descriptions,
+canonicals, hreflang and JSON-LD emitted through Helmet are invisible to search
+engines.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Metadata** → the route's `metadata` export or `generateMetadata()`.
+- **JSON-LD** → build the object in a server-safe module and render
+  `<script type="application/ld+json" dangerouslySetInnerHTML={...} />` from the
+  route's server component. JSON-LD is valid anywhere in the document, so
+  rendering it inline in a client component's body also works — it is only
+  `<Helmet>` that loses it.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Templates: [`src/data/buildSeoPageSchemas.js`](src/data/buildSeoPageSchemas.js)
+and [`src/Components/SEO/SeoPageSchemaScripts.jsx`](src/Components/SEO/SeoPageSchemaScripts.jsx).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**2. One URL per page.** Every bare key in the SEO dataset also round-trips
+through the `/[slug]` catch-all, so entries in a sectioned category
+(`compare`, `industry`, `resources`, `state`) would otherwise be served at two
+self-canonicalising URLs. `/[slug]` 301s those to the sectioned URL, and each
+section route rejects entries from other categories. See
+`SECTION_BY_CATEGORY` in [`src/data/resolveSeoPageData.js`](src/data/resolveSeoPageData.js).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**3. Missing data must 404, not render an empty page.** A "Page Not Found" body
+served with HTTP 200 is a soft 404 and pushes URLs into Search Console's
+"crawled – currently not indexed" bucket. Landing routes call `notFound()`.
 
-## Learn More
+**4. Never invent `aggregateRating`, review counts or prices.** Rating markup
+without reviews visible on the page violates Google's structured-data policy
+and risks a manual action. A hard-coded 4.8★/150-review block previously
+shipped on every landing page and has been removed.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**5. The sitemap is generated, not hand-edited.** Add pages to the data
+modules or `STATIC_ROUTES` in `app/sitemap.js`. Never list a URL that
+redirects.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Deployment
 
-### Code Splitting
+⚠️ **The real production deploy mechanism for arcisai.io is not recorded in
+this repo.** The only CI workflow that existed built a CRA app and pushed it to
+GitHub Pages, which cannot serve this application; it has been deleted rather
+than left as misleading documentation.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Whoever administers hosting needs to document the actual pipeline here. The
+build requires a Node server (or a platform with Next.js SSR support such as
+Vercel); `npm run build` produces `.next/` and `npm run start` serves it.
 
-### Analyzing the Bundle Size
+### Environment variables
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+| Variable | Used for | Default |
+| --- | --- | --- |
+| `API_BASE_URL` | Server-side blog/CMS fetches | `https://vmukti.com/backend/api` |
+| `NEXT_PUBLIC_API_BASE_URL` | Client API origin; also widens the CSP `connect-src` | — |
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
+A production/local mismatch in these is one of the few things that can make a
+page behave differently in production than it does locally.

@@ -1,29 +1,67 @@
 import SEOLandingPage from '@/src/views/SEOLandingPages/SEOLandingPage';
-import { resolveSeoPageData, resolveSeoKey } from '@/src/data/resolveSeoPageData';
+import SeoPageSchemaScripts from '@/src/Components/SEO/SeoPageSchemaScripts';
+import { notFound } from 'next/navigation';
+import {
+  resolveSeoPageData,
+  resolveSeoKey,
+  getStateLinks,
+  canonicalPathForKey,
+} from '@/src/data/resolveSeoPageData';
+import { buildSeoPageSchemas, buildSeoPageMetadata, humanizeSlug } from '@/src/data/buildSeoPageSchemas';
+
+// Prerender the state landing pages so crawlers get static HTML instead of an
+// on-demand render on first hit.
+export const revalidate = 86400;
+
+export function generateStaticParams() {
+  return getStateLinks().map(({ slug }) => ({ pageSlug: slug }));
+}
 
 export async function generateMetadata(props) {
   const params = await props.params;
   const { pageSlug } = params;
-  const name = pageSlug
-    .split('-')
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(' ');
+  const pageData = resolveSeoPageData({ category: 'state', pageSlug });
 
-  return {
-    title: `AI CCTV Cameras in ${name} | ArcisAI`,
-    description: `ArcisAI enterprise AI CCTV cameras in ${name}. NDAA-compliant, STQC-certified surveillance solutions for businesses and government in ${name}.`,
-    alternates: { canonical: `https://arcisai.io/state/${pageSlug}` },
-    openGraph: {
-      title: `AI CCTV Cameras in ${name} | ArcisAI`,
-      description: `Enterprise AI surveillance solutions in ${name} from ArcisAI.`,
-      url: `https://arcisai.io/state/${pageSlug}`,
-      images: [{ url: '/og/state.jpg', width: 1200, height: 630 }],
-    },
-  };
+  if (pageData?.category !== 'state') {
+    return { title: 'Page Not Found', robots: { index: false, follow: false } };
+  }
+
+  const name = humanizeSlug(pageSlug);
+  // For the 12 states that also have a /cctv-cameras-<state> page,
+  // canonicalPathForKey() points here at that URL instead of this one, so the
+  // two duplicates consolidate onto a single indexed URL. The page still
+  // renders normally — only the declared canonical changes.
+  return buildSeoPageMetadata({
+    pageData,
+    path: canonicalPathForKey(pageSlug) || `/state/${pageSlug}`,
+    fallbackTitle: `AI CCTV Cameras in ${name}`,
+    fallbackDescription: `ArcisAI enterprise AI CCTV cameras in ${name}. NDAA-compliant, STQC-certified surveillance solutions for businesses and government in ${name}.`,
+    ogImage: '/og/state.jpg',
+  });
 }
 
 export default async function StatePage(props) {
   const params = await props.params;
   const override = { category: 'state', pageSlug: params.pageSlug };
-  return <SEOLandingPage pageData={resolveSeoPageData(override)} slugKey={resolveSeoKey(override) || params.pageSlug} />;
+  const pageData = resolveSeoPageData(override);
+
+  // Real 404 instead of a 200 "Page Not Found" body (soft 404), and the
+  // category check stops another section's entry rendering at a /state/ URL
+  // via the resolver's bare-key fallback.
+  if (pageData?.category !== 'state') notFound();
+
+  // Same path the canonical uses, so the JSON-LD @id/url agree with the
+  // canonical instead of contradicting it.
+  const schemas = buildSeoPageSchemas({
+    pageData,
+    path: canonicalPathForKey(params.pageSlug) || `/state/${params.pageSlug}`,
+    areaServed: humanizeSlug(params.pageSlug),
+  });
+
+  return (
+    <>
+      <SeoPageSchemaScripts schemas={schemas} />
+      <SEOLandingPage pageData={pageData} slugKey={resolveSeoKey(override) || params.pageSlug} />
+    </>
+  );
 }

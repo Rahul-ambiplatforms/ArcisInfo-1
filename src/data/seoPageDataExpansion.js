@@ -257,92 +257,9 @@ const seoPageDataExpansion = {
       "buttonLink": "/contact-us"
     }
   },
-  "cctv-cameras-for-banking-finance": {
-    "slug": "cctv-cameras-for-banking-finance",
-    "category": "industry",
-    "title": "CCTV for Banks | ArcisAI Financial Security",
-    "metaDescription": "AI CCTV for banks & financial institutions. Vault security, ATM monitoring. STQC certified.",
-    "keywords": [
-      "\"CCTV Banking & Finance\"",
-      "\"surveillance Banking & Finance\"",
-      "\"AI cameras Banking & Finance\"",
-      "\"security systems Banking & Finance\"",
-      "\"smart CCTV Banking & Finance\""
-    ],
-    "heroTitle": "Smart CCTV for Banking",
-    "heroSubtitle": "Intelligent Financial Security Solutions",
-    "heroDescription": "AI CCTV for banks & financial institutions. Vault security, ATM monitoring ArcisAI delivers cutting-edge AI surveillance with comprehensive coverage and intelligent analytics.",
-    "sections": [
-      {
-        "title": "Industry-Specific Security Challenges",
-        "content": "The Banking & Finance sector faces unique security challenges requiring specialized CCTV solutions. ArcisAI provides AI-powered surveillance systems designed specifically for banking & finance environments. Our STQC-certified cameras deliver intelligent analytics, real-time threat detection, and comprehensive monitoring capabilities. From perimeter security to internal operations monitoring, our systems ensure complete coverage with minimal blind spots. Advanced features include facial recognition, object detection, and behavioral analytics tailored to banking & finance operational requirements. Integration with existing security infrastructure provides seamless deployment and centralized management.",
-        "stats": [
-          {
-            "value": "95%",
-            "label": "Threat detection accuracy"
-          },
-          {
-            "value": "24/7",
-            "label": "Continuous AI monitoring"
-          },
-          {
-            "value": "60%",
-            "label": "Reduction in security incidents"
-          }
-        ]
-      },
-      {
-        "title": "Smart Analytics & Integration",
-        "content": "ArcisAI systems for banking & finance provide advanced analytics beyond traditional surveillance. Heat mapping identifies high-traffic zones for resource optimization. People counting enables occupancy management and compliance monitoring. Behavioral analytics detect unusual patterns triggering proactive alerts. Integration with access control systems creates unified security management. Cloud-based storage ensures footage accessibility from anywhere. Mobile apps enable real-time monitoring and instant alert notifications. Custom dashboards provide actionable insights for management decision-making.",
-        "features": [
-          "AI-powered threat detection",
-          "Real-time analytics dashboard",
-          "Mobile monitoring app",
-          "Cloud storage integration",
-          "Access control integration",
-          "Custom alert configurations"
-        ]
-      },
-      {
-        "title": "Installation & Support",
-        "content": "ArcisAI provides comprehensive installation and support services for banking & finance clients across India. Our certified technicians understand industry-specific requirements and compliance standards. Installation planning minimizes operational disruption. We provide thorough staff training on system operation. Quarterly maintenance ensures optimal performance. 24/7 technical support responds to emergencies rapidly. Spare parts availability ensures minimal downtime. Flexible service agreements accommodate varying operational needs.",
-        "stats": [
-          {
-            "value": "500+",
-            "label": "Certified technicians nationwide"
-          },
-          {
-            "value": "4hrs",
-            "label": "Average emergency response time"
-          },
-          {
-            "value": "99.5%",
-            "label": "System uptime guarantee"
-          }
-        ]
-      }
-    ],
-    "faqs": [
-      {
-        "question": "What makes ArcisAI suitable for banking & finance?",
-        "answer": "Our systems are specifically designed for banking & finance environments with industry-specific AI models, compliance features, and specialized hardware rated for the unique conditions of this sector."
-      },
-      {
-        "question": "How quickly can systems be installed?",
-        "answer": "Typical installation takes 1-3 weeks depending on facility size and complexity. We coordinate with your operations team to minimize disruption during installation."
-      },
-      {
-        "question": "What is the typical cost for banking & finance CCTV systems?",
-        "answer": "Costs vary based on facility size and requirements. Basic systems start from Rs.1.5 lakhs, comprehensive enterprise solutions range from Rs.5-20 lakhs. We provide detailed quotes after site assessment."
-      }
-    ],
-    "cta": {
-      "title": "Secure Your Banking & Finance Operations",
-      "description": "Get AI-powered CCTV solutions designed for banking & finance environments.",
-      "buttonText": "Get Free Security Audit",
-      "buttonLink": "/contact-us"
-    }
-  },
+  // REMOVED (SEO, keyword cannibalisation): this banking/ATM entry duplicated
+  // "ai-cctv-banking-atm-security", which is now the single canonical banking
+  // page. The old URL 301s to it from next.config.js.
   "cctv-cameras-for-logistics-warehousing": {
     "slug": "cctv-cameras-for-logistics-warehousing",
     "category": "industry",

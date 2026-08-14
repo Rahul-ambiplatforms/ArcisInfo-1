@@ -1,5 +1,8 @@
 import SEOLandingPage from '@/src/views/SEOLandingPages/SEOLandingPage';
+import SeoPageSchemaScripts from '@/src/Components/SEO/SeoPageSchemaScripts';
+import { notFound } from 'next/navigation';
 import { resolveSeoPageData, resolveSeoKey, getCompareLinks } from '@/src/data/resolveSeoPageData';
+import { buildSeoPageSchemas, buildSeoPageMetadata, humanizeSlug } from '@/src/data/buildSeoPageSchemas';
 
 // Statically prerender the comparison landing pages so crawlers get fast
 // static HTML. Other slugs still render on demand (dynamicParams defaults to
@@ -13,36 +16,42 @@ export function generateStaticParams() {
 export async function generateMetadata(props) {
   const params = await props.params;
   const { pageSlug } = params;
-  const data = resolveSeoPageData({ category: 'compare', pageSlug });
-  const fallbackName = pageSlug
-    .split('-')
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(' ');
-  const rawTitle = data?.title || `${fallbackName} | AI CCTV Comparison | ArcisAI`;
-  // Parent layout applies the "%s | ArcisAI" template, so strip a trailing
-  // "| ArcisAI" from the page title to avoid a duplicated brand suffix.
-  const title = rawTitle.replace(/\s*\|\s*ArcisAI\s*$/i, '');
-  const description =
-    data?.metaDescription ||
-    `AI CCTV comparison for India: features, price, and performance for enterprise AI CCTV cameras by ArcisAI.`;
-  const canonical = `https://arcisai.io/compare/${pageSlug}`;
+  const pageData = resolveSeoPageData({ category: 'compare', pageSlug });
 
-  return {
-    title,
-    description,
-    ...(data?.keywords ? { keywords: data.keywords } : {}),
-    alternates: { canonical },
-    openGraph: {
-      title,
-      description,
-      url: canonical,
-      images: [{ url: '/og/compare.jpg', width: 1200, height: 630 }],
-    },
-  };
+  if (pageData?.category !== 'compare') {
+    return { title: 'Page Not Found', robots: { index: false, follow: false } };
+  }
+
+  return buildSeoPageMetadata({
+    pageData,
+    path: `/compare/${pageSlug}`,
+    fallbackTitle: `${humanizeSlug(pageSlug)} | AI CCTV Comparison`,
+    fallbackDescription:
+      'AI CCTV comparison for India: features, price, and performance for enterprise AI CCTV cameras by ArcisAI.',
+    ogImage: '/og/compare.jpg',
+  });
 }
 
 export default async function ComparisonPage(props) {
   const params = await props.params;
   const override = { category: 'compare', pageSlug: params.pageSlug };
-  return <SEOLandingPage pageData={resolveSeoPageData(override)} slugKey={resolveSeoKey(override) || params.pageSlug} />;
+  const pageData = resolveSeoPageData(override);
+
+  // Previously an unknown slug rendered a "Page Not Found" body with HTTP 200
+  // — a soft 404, which is one of the patterns that lands URLs in Search
+  // Console's "crawled – currently not indexed" bucket.
+  //
+  // The category check also closes a cross-section duplicate: the resolver
+  // falls back to a bare-key lookup, so /compare/<any-industry-key> used to
+  // render the industry page under a /compare/ URL.
+  if (pageData?.category !== 'compare') notFound();
+
+  const schemas = buildSeoPageSchemas({ pageData, path: `/compare/${params.pageSlug}` });
+
+  return (
+    <>
+      <SeoPageSchemaScripts schemas={schemas} />
+      <SEOLandingPage pageData={pageData} slugKey={resolveSeoKey(override) || params.pageSlug} />
+    </>
+  );
 }

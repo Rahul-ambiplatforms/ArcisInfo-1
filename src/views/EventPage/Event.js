@@ -5,7 +5,6 @@ import { Box } from "@chakra-ui/react";
 import EventHeroSection from "./Components/HeroSection";
 import { EventData } from "./Data/Content";
 import { EventSEO } from "./Data/SEOContent";
-import { Helmet } from "react-helmet-async";
 
 const EventCarousel = dynamic(() => import("./Components/EventCarousel"));
 const CTAButton     = dynamic(() => import("../../Components/CTAButton"));
@@ -13,30 +12,14 @@ const CTAButton     = dynamic(() => import("../../Components/CTAButton"));
 const Event = () => {
   return (
     <Box>
-      <Helmet>
-        {/* Primary Meta Tags */}
-        <title>{EventSEO.metatitle}</title>
-        <meta name="description" content={EventSEO.metadescription} />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={EventSEO.canonical} />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:title" content={EventSEO.metatitle} />
-        <meta property="og:description" content={EventSEO.metadescription} />
-        <meta property="og:image" content={EventSEO.ogimage} />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:url" content={EventSEO.canonical} />
-        <meta property="og:site_name" content="ArcisAI" />
-
-        {/* Twitter Card Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@arcisai" />
-        <meta name="twitter:title" content={EventSEO.metatitle} />
-        <meta name="twitter:description" content={EventSEO.metadescription} />
-        <meta name="twitter:image" content={EventSEO.ogimage} />
-      </Helmet>
-      {/* Schema Markup */}
+      {/* Schema Markup — deliberately NOT inside <Helmet>.
+          HelmetProvider is mounted in app/providers.js, a 'use client' module,
+          so Helmet only injects into <head> after hydration and nothing it
+          renders reaches the server HTML a crawler reads. Rendered inline the
+          <script> is server-rendered normally; JSON-LD is valid anywhere in
+          the document. The meta/title/canonical tags that used to sit here
+          were dead for the same reason and are already emitted by the route's
+          `metadata` export. */}
       {EventSEO.schema &&
         EventSEO.schema.length > 0 &&
         EventSEO.schema.map((schema, index) => (

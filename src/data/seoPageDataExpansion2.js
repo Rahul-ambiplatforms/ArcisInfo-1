@@ -51,13 +51,6 @@ const seoPageDataExpansion2 = {
         "country": "India"
       },
       "image": "https://arcisai.io/products/ai-bullet-camera-ndaa.jpg",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "156",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
       "offers": {
         "@type": "Offer",
         "price": "POA",
@@ -210,13 +203,6 @@ const seoPageDataExpansion2 = {
         "name": "Adiance",
         "country": "India"
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.7",
-        "ratingCount": "203",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
       "offers": {
         "@type": "Offer",
         "price": "POA",
@@ -362,13 +348,6 @@ const seoPageDataExpansion2 = {
         "@type": "Organization",
         "name": "Adiance",
         "country": "India"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "ratingCount": "178",
-        "bestRating": "5",
-        "worstRating": "1"
       },
       "offers": {
         "@type": "Offer",
@@ -520,13 +499,6 @@ const seoPageDataExpansion2 = {
         "name": "Adiance",
         "country": "India"
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "267",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
       "offers": {
         "@type": "Offer",
         "price": "POA",
@@ -667,7 +639,6 @@ const seoPageDataExpansion2 = {
       "description": "Edge AI cameras manufactured in India with local AI processing, BIS certification, and support for India's indigenous technology and Make in India initiatives.",
       "brand": { "@type": "Brand", "name": "ArcisAI" },
       "manufacturer": { "@type": "Organization", "name": "Adiance", "country": "India" },
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "ratingCount": "189", "bestRating": "5", "worstRating": "1" },
       "offers": { "@type": "Offer", "price": "POA", "priceCurrency": "INR", "availability": "https://schema.org/InStock" }
     },
     content: {
@@ -715,7 +686,7 @@ const seoPageDataExpansion2 = {
     keywords: ["ANPR camera system", "LPR camera system", "license plate recognition", "automatic number plate recognition", "vehicle identification camera", "traffic enforcement camera", "border control camera", "parking lot camera", "toll collection camera", "vehicle tracking system", "plate reader camera", "GDPR compliant ANPR", "99.2% accuracy camera", "real-time ANPR", "AI vehicle identification", "edge AI ANPR", "non-Chinese ANPR", "made in India camera", "smart city traffic camera", "government approved ANPR"],
     canonical: "https://arcisai.io/anpr-lpr-camera-system",
     og: { title: "ANPR/LPR Camera System - AI License Plate Recognition", description: "High-accuracy ANPR/LPR camera system with 99.2% recognition rate. Real-time vehicle identification for traffic, border control, and parking.", image: "https://arcisai.io/og-anpr-camera.jpg", type: "product" },
-    schema: { "@context": "https://schema.org", "@type": "Product", "name": "ArcisAI ANPR/LPR Camera System", "description": "Professional ANPR/LPR camera system with 99.2% accuracy, edge AI processing, and real-time vehicle identification.", "brand": { "@type": "Brand", "name": "ArcisAI" }, "manufacturer": { "@type": "Organization", "name": "Adiance", "country": "India" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "156", "bestRating": "5", "worstRating": "1" }, "offers": { "@type": "Offer", "price": "POA", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } },
+    schema: { "@context": "https://schema.org", "@type": "Product", "name": "ArcisAI ANPR/LPR Camera System", "description": "Professional ANPR/LPR camera system with 99.2% accuracy, edge AI processing, and real-time vehicle identification.", "brand": { "@type": "Brand", "name": "ArcisAI" }, "manufacturer": { "@type": "Organization", "name": "Adiance", "country": "India" },"offers": { "@type": "Offer", "price": "POA", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } },
     content: {
       hero: { headline: "AI License Plate Recognition with 99.2% Accuracy", subheadline: "Real-time ANPR/LPR for traffic enforcement, border control, and vehicle tracking. Edge processing, GDPR compliant.", cta: { text: "View Demo", link: "https://arcisai.io/demo" } },
       sections: [
@@ -757,7 +728,7 @@ const seoPageDataExpansion2 = {
     keywords: ["face recognition camera", "facial recognition camera", "AI face detection camera", "biometric camera", "facial identification system", "person identification camera", "watchlist camera", "known person detection", "missing person search", "security screening camera", "access control camera", "building entry camera", "GDPR compliant face recognition", "privacy-respecting camera", "local processing camera", "real-time identification", "smart security camera", "intelligent building camera", "border security camera", "government approved camera"],
     canonical: "https://arcisai.io/face-recognition-camera",
     og: { title: "AI Face Recognition Camera - Real-time Identification", description: "Advanced facial recognition cameras with local processing and GDPR compliance. Watchlist integration for security and access control applications.", image: "https://arcisai.io/og-face-recognition-camera.jpg", type: "product" },
-    schema: { "@context": "https://schema.org", "@type": "Product", "name": "ArcisAI AI Face Recognition Camera", "description": "Professional face recognition camera with local biometric processing, watchlist integration, and real-time person identification.", "brand": { "@type": "Brand", "name": "ArcisAI" }, "manufacturer": { "@type": "Organization", "name": "Adiance", "country": "India" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "201", "bestRating": "5", "worstRating": "1" }, "offers": { "@type": "Offer", "price": "POA", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } },
+    schema: { "@context": "https://schema.org", "@type": "Product", "name": "ArcisAI AI Face Recognition Camera", "description": "Professional face recognition camera with local biometric processing, watchlist integration, and real-time person identification.", "brand": { "@type": "Brand", "name": "ArcisAI" }, "manufacturer": { "@type": "Organization", "name": "Adiance", "country": "India" },"offers": { "@type": "Offer", "price": "POA", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } },
     content: {
       hero: { headline: "Real-Time Face Recognition with Local Privacy Protection", subheadline: "Identify known individuals against watchlists while protecting privacy through on-device processing.", cta: { text: "Learn More", link: "https://arcisai.io/face-recognition" } },
       sections: [
@@ -783,7 +754,7 @@ const seoPageDataExpansion2 = {
     keywords: ["fire detection camera", "smoke detection camera", "AI fire detection", "industrial fire detection", "building fire system", "early warning system", "fire alert camera", "smoke alert system", "facility safety camera", "warehouse fire detection", "chemical plant camera", "critical infrastructure safety", "real-time fire alert", "video fire detection", "AI safety system", "emergency response camera", "occupancy safety camera", "IoT fire detection", "smart building safety", "government approved system"],
     canonical: "https://arcisai.io/fire-smoke-detection-camera",
     og: { title: "AI Fire & Smoke Detection Camera - Real-Time Safety Alerts", description: "Advanced fire and smoke detection using AI video analytics. Early warning system for buildings, industrial facilities, and critical infrastructure.", image: "https://arcisai.io/og-fire-smoke-detection.jpg", type: "product" },
-    schema: { "@context": "https://schema.org", "@type": "Product", "name": "ArcisAI Fire & Smoke Detection Camera", "description": "AI-powered fire and smoke detection camera with real-time alerting for industrial safety, building protection, and emergency response.", "brand": { "@type": "Brand", "name": "ArcisAI" }, "manufacturer": { "@type": "Organization", "name": "Adiance", "country": "India" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "134", "bestRating": "5", "worstRating": "1" }, "offers": { "@type": "Offer", "price": "POA", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } },
+    schema: { "@context": "https://schema.org", "@type": "Product", "name": "ArcisAI Fire & Smoke Detection Camera", "description": "AI-powered fire and smoke detection camera with real-time alerting for industrial safety, building protection, and emergency response.", "brand": { "@type": "Brand", "name": "ArcisAI" }, "manufacturer": { "@type": "Organization", "name": "Adiance", "country": "India" },"offers": { "@type": "Offer", "price": "POA", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } },
     content: {
       hero: { headline: "Early Fire & Smoke Detection Saves Lives & Assets", subheadline: "AI video analytics detects fires and smoke minutes before traditional sensors. Real-time alerts enable rapid emergency response.", cta: { text: "View Case Studies", link: "https://arcisai.io/case-studies" } },
       sections: [
@@ -810,7 +781,7 @@ const seoPageDataExpansion2 = {
     keywords: ["people counting camera","occupancy counting","crowd management camera","visitor counting","foot traffic analytics","retail analytics camera","transit passenger counter","smart building occupancy","real-time counting","occupancy management","pedestrian counter","queue management","capacity management","building management system","GDPR compliant counting","privacy-respecting analytics","occupancy trending","smart city camera","retail performance camera","emergency evacuation camera"],
     canonical: "https://arcisai.io/people-counting-camera",
     og: { title: "AI People Counting Camera - Real-Time Occupancy Analytics", description: "Advanced people counting for retail, transit, and smart buildings. Real-time metrics, crowd management, and traffic pattern analysis.", image: "https://arcisai.io/og-people-counting.jpg", type: "product" },
-    schema: { "@context": "https://schema.org", "@type": "Product", "name": "ArcisAI People Counting Camera", "description": "AI-powered people counting camera with real-time occupancy metrics, crowd analytics, and privacy-compliant processing.", "brand": { "@type": "Brand", "name": "ArcisAI" }, "manufacturer": { "@type": "Organization", "name": "Adiance", "country": "India" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "ratingCount": "187", "bestRating": "5", "worstRating": "1" }, "offers": { "@type": "Offer", "price": "POA", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } },
+    schema: { "@context": "https://schema.org", "@type": "Product", "name": "ArcisAI People Counting Camera", "description": "AI-powered people counting camera with real-time occupancy metrics, crowd analytics, and privacy-compliant processing.", "brand": { "@type": "Brand", "name": "ArcisAI" }, "manufacturer": { "@type": "Organization", "name": "Adiance", "country": "India" },"offers": { "@type": "Offer", "price": "POA", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } },
     content: {
       hero: { headline: "Real-Time Occupancy Intelligence for Smarter Operations", subheadline: "Accurate people counting for retail optimization, transit management, and smart building control.", cta: { text: "Explore Use Cases", link: "https://arcisai.io/use-cases/people-counting" } },
       sections: [
@@ -835,7 +806,7 @@ const seoPageDataExpansion2 = {
     keywords: ["intrusion detection camera","perimeter security camera","intruder detection system","perimeter monitoring","zone monitoring camera","facility protection camera","boundary monitoring","unauthorized access detection","motion detection camera","intelligent alarm system","real-time alert system","security camera system","NDAA compliant camera","critical infrastructure camera","border security camera","fence monitoring camera","gate security camera","facility entrance camera","24/7 monitoring system","smart security solution"],
     canonical: "https://arcisai.io/intrusion-detection-camera",
     og: { title: "AI Intrusion Detection Camera - Perimeter Security", description: "Intelligent intrusion detection with real-time alerts and perimeter tracking. NDAA compliant, edge AI processing.", image: "https://arcisai.io/og-intrusion-detection.jpg", type: "product" },
-    schema: { "@context": "https://schema.org", "@type": "Product", "name": "ArcisAI Intrusion Detection Camera", "description": "Advanced intrusion detection camera with perimeter monitoring, real-time alerts, and intelligent threat tracking.", "brand": { "@type": "Brand", "name": "ArcisAI" }, "manufacturer": { "@type": "Organization", "name": "Adiance", "country": "India" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "172", "bestRating": "5", "worstRating": "1" }, "offers": { "@type": "Offer", "price": "POA", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } },
+    schema: { "@context": "https://schema.org", "@type": "Product", "name": "ArcisAI Intrusion Detection Camera", "description": "Advanced intrusion detection camera with perimeter monitoring, real-time alerts, and intelligent threat tracking.", "brand": { "@type": "Brand", "name": "ArcisAI" }, "manufacturer": { "@type": "Organization", "name": "Adiance", "country": "India" },"offers": { "@type": "Offer", "price": "POA", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } },
     content: {
       hero: { headline: "Intelligent Perimeter Security with AI Intrusion Detection", subheadline: "Real-time threat detection and automated tracking for facility protection and critical infrastructure.", cta: { text: "Explore Protection", link: "https://arcisai.io/security" } },
       sections: [
@@ -860,7 +831,7 @@ const seoPageDataExpansion2 = {
     keywords: ["NVR recorder","network video recorder","video management system","AI video storage","intelligent video analytics","video surveillance platform","distributed NVR","scalable NVR","edge AI processing","real-time video search","video indexing system","GDPR compliant NVR","ArcisAI Cloud VMS","on-premise NVR","hybrid NVR system","video archive system","security operations platform","incident investigation tool","multi-site management","intelligent storage"],
     canonical: "https://arcisai.io/nvr-network-video-recorder",
     og: { title: "AI NVR Network Video Recorder - Video Management System", description: "Intelligent NVR with distributed processing, scalable storage, and GDPR-compliant video management.", image: "https://arcisai.io/og-nvr-recorder.jpg", type: "product" },
-    schema: { "@context": "https://schema.org", "@type": "Product", "name": "ArcisAI AI NVR Network Video Recorder", "description": "Scalable NVR platform with distributed AI processing, intelligent storage, and comprehensive video management capabilities.", "brand": { "@type": "Brand", "name": "ArcisAI" }, "manufacturer": { "@type": "Organization", "name": "Adiance", "country": "India" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "ratingCount": "156", "bestRating": "5", "worstRating": "1" }, "offers": { "@type": "Offer", "price": "POA", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } },
+    schema: { "@context": "https://schema.org", "@type": "Product", "name": "ArcisAI AI NVR Network Video Recorder", "description": "Scalable NVR platform with distributed AI processing, intelligent storage, and comprehensive video management capabilities.", "brand": { "@type": "Brand", "name": "ArcisAI" }, "manufacturer": { "@type": "Organization", "name": "Adiance", "country": "India" },"offers": { "@type": "Offer", "price": "POA", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } },
     content: {
       hero: { headline: "Intelligent Video Management for Massive Scale", subheadline: "Distributed NVR platform with edge AI, scalable storage, and comprehensive video analytics.", cta: { text: "View Architecture", link: "https://arcisai.io/nvr-architecture" } },
       sections: [
@@ -885,7 +856,7 @@ const seoPageDataExpansion2 = {
     keywords: ["BIS certified CCTV","BIS certified camera","CCTV camera India","India certified camera","quality assured camera","government approved camera","Indian standard camera","made in India camera","Bureau of Indian Standards","manufacturing certification","quality management system","Indian government camera","infrastructure camera India","security camera India","smart city camera India","government procurement camera","contract procurement camera","trusted camera manufacturer","indigenous camera","India security solution"],
     canonical: "https://arcisai.io/bis-certified-cctv-india",
     og: { title: "BIS Certified CCTV Cameras for Indian Market - ArcisAI", description: "Quality-assured CCTV cameras with BIS certification. Made in India by Adiance, approved for government procurement.", image: "https://arcisai.io/og-bis-certified.jpg", type: "product" },
-    schema: { "@context": "https://schema.org", "@type": "Product", "name": "ArcisAI BIS Certified CCTV Cameras", "description": "BIS certified CCTV cameras manufactured in India meeting quality and security standards for government procurement.", "brand": { "@type": "Brand", "name": "ArcisAI" }, "manufacturer": { "@type": "Organization", "name": "Adiance", "country": "India" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "189", "bestRating": "5", "worstRating": "1" }, "offers": { "@type": "Offer", "price": "POA", "priceCurrency": "INR", "availability": "https://schema.org/InStock" } },
+    schema: { "@context": "https://schema.org", "@type": "Product", "name": "ArcisAI BIS Certified CCTV Cameras", "description": "BIS certified CCTV cameras manufactured in India meeting quality and security standards for government procurement.", "brand": { "@type": "Brand", "name": "ArcisAI" }, "manufacturer": { "@type": "Organization", "name": "Adiance", "country": "India" },"offers": { "@type": "Offer", "price": "POA", "priceCurrency": "INR", "availability": "https://schema.org/InStock" } },
     content: {
       hero: { headline: "BIS Certified CCTV Cameras for Government & Enterprise", subheadline: "Quality-assured cameras meeting Indian standards. Made in India by Adiance for smart cities and critical infrastructure.", cta: { text: "View Certifications", link: "https://arcisai.io/certifications" } },
       sections: [
@@ -910,7 +881,7 @@ const seoPageDataExpansion2 = {
     keywords: ["smart city camera","intelligent city camera","smart city surveillance","traffic management camera","public safety camera","urban monitoring camera","infrastructure camera","smart city IoT","connected city camera","city-wide surveillance","traffic analytics","crowd management camera","environmental monitoring","urban planning camera","city infrastructure AI","public transportation camera","smart parking camera","urban security camera","government smart city","citizen safety camera"],
     canonical: "https://arcisai.io/camera-for-smart-city",
     og: { title: "AI Cameras for Smart City Projects - Connected Infrastructure", description: "Smart city camera platform for traffic management, public safety, and infrastructure monitoring. Integrated IoT solution.", image: "https://arcisai.io/og-smart-city.jpg", type: "product" },
-    schema: { "@context": "https://schema.org", "@type": "Product", "name": "ArcisAI Smart City Camera Platform", "description": "Comprehensive AI camera platform designed for smart city applications including traffic management, public safety, and infrastructure monitoring.", "brand": { "@type": "Brand", "name": "ArcisAI" }, "manufacturer": { "@type": "Organization", "name": "Adiance", "country": "India" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "156", "bestRating": "5", "worstRating": "1" }, "offers": { "@type": "Offer", "price": "POA", "priceCurrency": "INR", "availability": "https://schema.org/InStock" } },
+    schema: { "@context": "https://schema.org", "@type": "Product", "name": "ArcisAI Smart City Camera Platform", "description": "Comprehensive AI camera platform designed for smart city applications including traffic management, public safety, and infrastructure monitoring.", "brand": { "@type": "Brand", "name": "ArcisAI" }, "manufacturer": { "@type": "Organization", "name": "Adiance", "country": "India" },"offers": { "@type": "Offer", "price": "POA", "priceCurrency": "INR", "availability": "https://schema.org/InStock" } },
     content: {
       hero: { headline: "AI-Powered Smart City Platform for Connected Cities", subheadline: "Integrated camera network enabling traffic optimization, public safety, and infrastructure intelligence.", cta: { text: "View Smart City Vision", link: "https://arcisai.io/smart-city-vision" } },
       sections: [
@@ -935,7 +906,7 @@ const seoPageDataExpansion2 = {
     keywords: ["Hikvision alternative","Dahua alternative","non-Chinese camera","NDAA compliant camera","Chinese camera replacement","trusted camera manufacturer","government approved camera","US approved camera","camera without restrictions","alternative to Chinese cameras","comparable to Hikvision","comparable to Dahua","feature parity camera","performance equivalent camera","cost competitive camera","government procurement camera","contract camera","defense camera","made in India camera","indigenous camera solution"],
     canonical: "https://arcisai.io/hikvision-dahua-alternative",
     og: { title: "Best Hikvision and Dahua Alternative - NDAA Compliant", description: "ArcisAI provides feature-equivalent alternatives to Hikvision and Dahua with NDAA compliance and no procurement restrictions.", image: "https://arcisai.io/og-hikvision-dahua-alternative.jpg", type: "product" },
-    schema: { "@context": "https://schema.org", "@type": "Product", "name": "ArcisAI Hikvision & Dahua Alternative", "description": "Non-Chinese camera alternative to Hikvision and Dahua with equivalent features, NDAA compliance, and transparent supply chains.", "brand": { "@type": "Brand", "name": "ArcisAI" }, "manufacturer": { "@type": "Organization", "name": "Adiance", "country": "India" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "234", "bestRating": "5", "worstRating": "1" }, "offers": { "@type": "Offer", "price": "POA", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } },
+    schema: { "@context": "https://schema.org", "@type": "Product", "name": "ArcisAI Hikvision & Dahua Alternative", "description": "Non-Chinese camera alternative to Hikvision and Dahua with equivalent features, NDAA compliance, and transparent supply chains.", "brand": { "@type": "Brand", "name": "ArcisAI" }, "manufacturer": { "@type": "Organization", "name": "Adiance", "country": "India" },"offers": { "@type": "Offer", "price": "POA", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } },
     content: {
       hero: { headline: "Superior Alternative to Hikvision & Dahua", subheadline: "Feature-equivalent performance with NDAA compliance and government procurement advantages.", cta: { text: "View Comparison", link: "https://arcisai.io/comparison" } },
       sections: [
@@ -960,7 +931,7 @@ const seoPageDataExpansion2 = {
     keywords: ["critical infrastructure camera","infrastructure protection camera","power grid camera","water treatment camera","transportation security camera","nuclear facility camera","utilities camera","SCADA system camera","infrastructure monitoring","facility protection","perimeter security camera","NDAA compliant camera","government approved camera","defense infrastructure camera","border security camera","port security camera","airport security camera","emergency response camera","disaster recovery camera","resilient surveillance system"],
     canonical: "https://arcisai.io/camera-for-critical-infrastructure",
     og: { title: "AI Cameras for Critical Infrastructure - Government Grade", description: "Mission-critical surveillance for power grids, water systems, and essential infrastructure. NDAA compliant, resilient architecture.", image: "https://arcisai.io/og-critical-infrastructure.jpg", type: "product" },
-    schema: { "@context": "https://schema.org", "@type": "Product", "name": "ArcisAI Critical Infrastructure Camera Platform", "description": "Government-grade surveillance platform for critical infrastructure protection with mission-critical reliability and NDAA compliance.", "brand": { "@type": "Brand", "name": "ArcisAI" }, "manufacturer": { "@type": "Organization", "name": "Adiance", "country": "India" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "189", "bestRating": "5", "worstRating": "1" }, "offers": { "@type": "Offer", "price": "POA", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } },
+    schema: { "@context": "https://schema.org", "@type": "Product", "name": "ArcisAI Critical Infrastructure Camera Platform", "description": "Government-grade surveillance platform for critical infrastructure protection with mission-critical reliability and NDAA compliance.", "brand": { "@type": "Brand", "name": "ArcisAI" }, "manufacturer": { "@type": "Organization", "name": "Adiance", "country": "India" },"offers": { "@type": "Offer", "price": "POA", "priceCurrency": "USD", "availability": "https://schema.org/InStock" } },
     content: {
       hero: { headline: "Mission-Critical Surveillance for National Security Infrastructure", subheadline: "NDAA-compliant cameras with resilient architecture protecting power grids, water systems, and essential services.", cta: { text: "Explore Solutions", link: "https://arcisai.io/critical-infrastructure" } },
       sections: [

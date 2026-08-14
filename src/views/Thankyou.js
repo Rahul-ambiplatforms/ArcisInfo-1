@@ -9,7 +9,6 @@ import {
   Icon,
   Link,
 } from "@chakra-ui/react";
-import { Helmet } from "react-helmet-async";
 import { useRouter } from "next/navigation";
 import { FaGlobe, FaEnvelope, FaPhone } from "react-icons/fa";
 import CustomButton from "../Components/CustomButton";
@@ -23,12 +22,10 @@ const Thankyou = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Thank You</title>
-        <meta name="description" content="Thank You!" />
-        <meta name="robots" content="noindex, follow" />
-        <link rel="canonical" href="https://arcisai.io/thank-you/" />
-      </Helmet>
+      {/* The <Helmet> block that used to sit here was inert: HelmetProvider is
+          mounted in the client-only app/providers.js tree, so nothing Helmet
+          renders reaches the server HTML. Its title/description/canonical are
+          already emitted by the route's `metadata` export. */}
 
       <Box
         position="fixed"

@@ -981,54 +981,9 @@ const seoPageDataGeo = {
     cta: { title: "Boost Retail Profitability", description: "AI-powered store security", buttonText: "Get Quote", buttonLink: "/contact" }
   },
 
-  "ai-cctv-for-banks-india": {
-    slug: "/ai-cctv-for-banks-india",
-    title: "AI CCTV for Banks & Financial Institutions | STQC Certified | ArcisAI",
-    metaDescription: "High-security AI CCTV for banks across India. STQC & BIS certified with facial recognition, encrypted storage, and RBI compliance.",
-    keywords: ["bank CCTV India", "financial institution security", "vault surveillance", "RBI compliant CCTV"],
-    heroTitle: "Enterprise Banking Security",
-    heroSubtitle: "STQC & BIS Certified for Financial Institutions",
-    heroDescription: "Protect bank assets with ArcisAI's facial recognition, encrypted vault monitoring, and RBI-compliant surveillance.",
-    category: "geo",
-    sections: [
-      {
-        title: "Vault & Cash Room Security",
-        content: "ArcisAI's STQC and RBI-certified cameras provide high-resolution monitoring of vaults, cash rooms, and sensitive areas. Multi-layer encryption, tamper detection, and automated alerts ensure maximum protection of financial assets.",
-        stats: [
-          { value: "1000+", label: "Banks Secured" },
-          { value: "RBI Certified", label: "Compliant" },
-          { value: "Multi-Encryption", label: "Data Protection" }
-        ],
-        features: ["Vault Monitoring", "Tamper Detection", "Encrypted Storage"]
-      },
-      {
-        title: "Customer Area & Fraud Prevention",
-        content: "Facial recognition systems identify known fraudsters and suspicious individuals in real-time. AI-powered behavior detection monitors customer areas and ATMs, preventing fraud and unauthorized access.",
-        stats: [
-          { value: "5000+", label: "ATMs Secured" },
-          { value: "99%", label: "Fraudster Detection" },
-          { value: "Real-Time", label: "Alerts" }
-        ],
-        features: ["Facial Recognition", "Fraud Detection AI", "ATM Monitoring"]
-      },
-      {
-        title: "Employee & Loan Processing Areas",
-        content: "STQC-certified cameras monitor loan processing, employee areas, and back-office operations for compliance and integrity. Automated alerts detect unauthorized access and suspicious activities in real-time.",
-        stats: [
-          { value: "3000+", label: "Bank Branches" },
-          { value: "95%", label: "Incident Prevention" },
-          { value: "24/7", label: "Monitoring" }
-        ],
-        features: ["Access Control", "Behavior Monitoring", "Compliance Tracking"]
-      }
-    ],
-    faq: [
-      { question: "Is ArcisAI compliant with RBI surveillance standards?", answer: "Yes, ArcisAI is STQC and BIS certified, RBI-compliant, and approved for all banking institutions across India." },
-      { question: "How does ArcisAI prevent bank fraud?", answer: "Our facial recognition identifies known fraudsters, behavioral AI detects suspicious transactions, and real-time monitoring prevents unauthorized access." },
-      { question: "What encryption standards does ArcisAI use for banking?", answer: "ArcisAI uses military-grade multi-layer encryption, tamper detection, and secure cloud storage meeting RBI and Reserve Bank guidelines." }
-    ],
-    cta: { title: "Secure Your Bank", description: "RBI-compliant banking surveillance", buttonText: "Get Quote", buttonLink: "/contact" }
-  },
+  // REMOVED (SEO, keyword cannibalisation): this banking/ATM entry duplicated
+  // "ai-cctv-banking-atm-security", which is now the single canonical banking
+  // page. The old URL 301s to it from next.config.js.
 
   "ai-cctv-for-hotels-india": {
     slug: "/ai-cctv-for-hotels-india",

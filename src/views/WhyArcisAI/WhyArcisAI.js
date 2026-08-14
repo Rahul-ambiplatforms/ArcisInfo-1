@@ -1,7 +1,6 @@
 'use client';
 import React from "react";
 import dynamic from "next/dynamic";
-import { Helmet } from "react-helmet-async";
 import HeroSectionCarousel from "../../Components/HeroSectionCarousel";
 import { WhyArcisAIContent } from "./Data/Content";
 import { whyArcisAISEO } from "./Data/SEOContent";
@@ -18,50 +17,14 @@ const CTAButton      = dynamic(() => import("../../Components/CTAButton"));
 const WhyArcisAI = () => {
   return (
     <>
-      <Helmet>
-        {/* Primary Meta Tags */}
-        <title>{whyArcisAISEO.metatitle}</title>
-        <meta name="description" content={whyArcisAISEO.metadescription} />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={whyArcisAISEO.canonical} />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:title" content={whyArcisAISEO.metatitle} />
-        <meta
-          property="og:description"
-          content={whyArcisAISEO.metadescription}
-        />
-        <meta property="og:image" content={whyArcisAISEO.ogimage} />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:url" content={whyArcisAISEO.canonical} />
-        <meta property="og:site_name" content="ArcisAI" />
-
-        {/* Twitter Card Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@arcisai" />
-        <meta name="twitter:title" content={whyArcisAISEO.metatitle} />
-        <meta
-          name="twitter:description"
-          content={whyArcisAISEO.metadescription}
-        />
-        <meta name="twitter:image" content={whyArcisAISEO.ogimage} />
-
-        {/* Additional Meta Tags */}
-        <meta
-          name="keywords"
-          content="ArcisAI, Edge AI, Cloud AI, AI CCTV, VMS, ArcisGPT, STQC VMS, Intelligent Surveillance, CCTV Platform, India Surveillance"
-        />
-        <meta name="author" content="ArcisAI" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="language" content="English" />
-        <meta name="revisit-after" content="7 days" />
-        <meta name="distribution" content="global" />
-        <meta name="rating" content="general" />
-
-      </Helmet>
-      {/* Schema Markup */}
+      {/* Schema Markup — deliberately NOT inside <Helmet>.
+          HelmetProvider is mounted in app/providers.js, a 'use client' module,
+          so Helmet only injects into <head> after hydration and nothing it
+          renders reaches the server HTML a crawler reads. Rendered inline the
+          <script> is server-rendered normally; JSON-LD is valid anywhere in
+          the document. The meta/title/canonical tags that used to sit here
+          were dead for the same reason and are already emitted by the route's
+          `metadata` export. */}
       {whyArcisAISEO.schema &&
         whyArcisAISEO.schema.length > 0 &&
         whyArcisAISEO.schema.map((schema, index) => (

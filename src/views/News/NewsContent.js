@@ -10,7 +10,6 @@ import {
   Button,
 } from '@chakra-ui/react';
 import { useParams, useRouter } from 'next/navigation';
-import { Helmet } from 'react-helmet-async';
 import { getNewsByUrlWords } from './news';
 
 const IMAGE_BASE_URL =
@@ -95,22 +94,10 @@ const NewsContent = ({ urlWords: urlWordsProp }) => {
 
   return (
     <Box mt={{ base: '6%', md: '4%' }} mb="6%" px={{ base: '4%', md: '2%' }}>
-      <Helmet>
-        <title>{news.title} | ArcisAI News</title>
-        <meta
-          name="description"
-          content={news.brief || `${news.title} - ArcisAI news article.`}
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content={`${news.title} | ArcisAI News`} />
-        <meta property="og:description" content={news.brief || news.title} />
-        <meta property="og:type" content="article" />
-        <meta property="og:image" content={image} />
-        <link
-          rel="canonical"
-          href={`https://arcisai.io/news/${news.urlWords}`}
-        />
-      </Helmet>
+      {/* The <Helmet> block that used to sit here was inert: HelmetProvider is
+          mounted in the client-only app/providers.js tree, so nothing Helmet
+          renders reaches the server HTML. Its title/description/canonical are
+          already emitted by the route's `metadata` export. */}
 
       <Box maxW="900px" mx="auto">
         <Button

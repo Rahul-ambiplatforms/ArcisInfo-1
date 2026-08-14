@@ -9,7 +9,6 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import React from "react";
-import { Helmet } from "react-helmet-async";
 // import theme from "../theme";
 
 function TermsOfService({ headingHide }) {
@@ -19,15 +18,10 @@ function TermsOfService({ headingHide }) {
   // );
   return (
     <>
-      <Helmet>
-        <title>Terms Of Service</title>
-        <meta
-          name="description"
-          content="Read the official Terms & Conditions of ArcisAI. Review policies on service usage, responsibilities, privacy, and compliance for all users and partners."
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://arcisai.io/privacy-policy" />
-      </Helmet>
+      {/* The <Helmet> block that used to sit here was inert: HelmetProvider is
+          mounted in the client-only app/providers.js tree, so nothing Helmet
+          renders reaches the server HTML. Its title/description/canonical are
+          already emitted by the route's `metadata` export. */}
       <Box
         mt="6%"
         p="2%"

@@ -1,6 +1,5 @@
 'use client';
 import React, { useState } from "react";
-import { Helmet } from "react-helmet-async";
 import {
   Box,
   FormControl,
@@ -240,64 +239,25 @@ const ContactSection = () => {
 
   return (
     <>
-      <Helmet>
-        {/* Primary Meta Tags */}
-        <title>{contactUsSEO.metatitle}</title>
-        <meta name="description" content={contactUsSEO.metadescription} />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={contactUsSEO.canonical} />
-        <link rel="alternate" hrefLang="en-IN" href={contactUsSEO.canonical} />
-        <link rel="alternate" hrefLang="en" href={contactUsSEO.canonical} />
-        <link rel="alternate" hrefLang="x-default" href={contactUsSEO.canonical} />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:title" content={contactUsSEO.metatitle} />
-        <meta
-          property="og:description"
-          content={contactUsSEO.metadescription}
-        />
-        <meta property="og:image" content={contactUsSEO.ogimage} />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:url" content={contactUsSEO.canonical} />
-        <meta property="og:site_name" content="ArcisAI" />
-
-        {/* Twitter Card Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@arcisai" />
-        <meta name="twitter:title" content={contactUsSEO.metatitle} />
-        <meta
-          name="twitter:description"
-          content={contactUsSEO.metadescription}
-        />
-        <meta name="twitter:image" content={contactUsSEO.ogimage} />
-
-        {/* Additional Meta Tags */}
-        <meta
-          name="keywords"
-          content="ArcisAI, Contact ArcisAI, AI CCTV, Edge AI, ArcisGPT, Indian Cloud Compliance, Security Solutions, Contact Us"
-        />
-        <meta name="author" content="ArcisAI" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="language" content="English" />
-        <meta name="revisit-after" content="7 days" />
-        <meta name="distribution" content="global" />
-        <meta name="rating" content="general" />
-
-        {/* Schema Markup */}
-        {contactUsSEO.schema &&
-          contactUsSEO.schema.length > 0 &&
-          contactUsSEO.schema.map((schema, index) => (
-            <script
-              key={`schema-${index}`}
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify(schema),
-              }}
-            />
-          ))}
-      </Helmet>
+      {/* Schema Markup — deliberately NOT inside <Helmet>.
+          HelmetProvider is mounted in app/providers.js, a 'use client' module,
+          so Helmet only injects into <head> after hydration and nothing it
+          renders reaches the server HTML a crawler reads. Rendered inline the
+          <script> is server-rendered normally; JSON-LD is valid anywhere in
+          the document. The meta/title/canonical tags that used to sit here
+          were dead for the same reason and are already emitted by the
+          `metadata` export in app/contact-us/page.js — including the
+          en-IN / en / x-default hreflang set, which was likewise inert here. */}
+      {contactUsSEO.schema?.length > 0 &&
+        contactUsSEO.schema.map((schema, index) => (
+          <script
+            key={`schema-${index}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(schema),
+            }}
+          />
+        ))}
       <PageContentWrapper noPadding>
         <Box
           bg="#171717"

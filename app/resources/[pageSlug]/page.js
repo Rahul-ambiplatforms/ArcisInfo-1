@@ -1,5 +1,8 @@
 import SEOLandingPage from '@/src/views/SEOLandingPages/SEOLandingPage';
+import SeoPageSchemaScripts from '@/src/Components/SEO/SeoPageSchemaScripts';
+import { notFound } from 'next/navigation';
 import { resolveSeoPageData, resolveSeoKey, getResourceLinks } from '@/src/data/resolveSeoPageData';
+import { buildSeoPageSchemas, buildSeoPageMetadata, humanizeSlug } from '@/src/data/buildSeoPageSchemas';
 
 // Statically prerender the resource landing pages so crawlers get fast static
 // HTML. Other slugs still render on demand (dynamicParams defaults to true),
@@ -13,26 +16,38 @@ export function generateStaticParams() {
 export async function generateMetadata(props) {
   const params = await props.params;
   const { pageSlug } = params;
-  const name = pageSlug
-    .split('-')
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(' ');
+  const pageData = resolveSeoPageData({ category: 'resources', pageSlug });
 
-  return {
-    title: `${name} | AI Surveillance Resources | ArcisAI`,
-    description: `ArcisAI resource: ${name}. In-depth guides, whitepapers, and technical documentation on AI CCTV and surveillance.`,
-    alternates: { canonical: `https://arcisai.io/resources/${pageSlug}` },
-    openGraph: {
-      title: `${name} | AI Surveillance Resources | ArcisAI`,
-      description: `ArcisAI resource: ${name}.`,
-      url: `https://arcisai.io/resources/${pageSlug}`,
-      images: [{ url: '/og/resources.jpg', width: 1200, height: 630 }],
-    },
-  };
+  if (pageData?.category !== 'resources') {
+    return { title: 'Page Not Found', robots: { index: false, follow: false } };
+  }
+
+  const name = humanizeSlug(pageSlug);
+  return buildSeoPageMetadata({
+    pageData,
+    path: `/resources/${pageSlug}`,
+    fallbackTitle: `${name} | AI Surveillance Resources`,
+    fallbackDescription: `ArcisAI resource: ${name}. In-depth guides, whitepapers, and technical documentation on AI CCTV and surveillance.`,
+    ogImage: '/og/resources.jpg',
+  });
 }
 
 export default async function ResourcePage(props) {
   const params = await props.params;
   const override = { category: 'resources', pageSlug: params.pageSlug };
-  return <SEOLandingPage pageData={resolveSeoPageData(override)} slugKey={resolveSeoKey(override) || params.pageSlug} />;
+  const pageData = resolveSeoPageData(override);
+
+  // Real 404 instead of a 200 "Page Not Found" body (soft 404), and the
+  // category check stops another section's entry rendering at a /resources/
+  // URL via the resolver's bare-key fallback.
+  if (pageData?.category !== 'resources') notFound();
+
+  const schemas = buildSeoPageSchemas({ pageData, path: `/resources/${params.pageSlug}` });
+
+  return (
+    <>
+      <SeoPageSchemaScripts schemas={schemas} />
+      <SEOLandingPage pageData={pageData} slugKey={resolveSeoKey(override) || params.pageSlug} />
+    </>
+  );
 }
