@@ -481,25 +481,25 @@ export default function BlogsContent({ initialBlogs = [] }) {
                       </Flex>
                     </Box>
 
-                    <Link href={`/blog/${post.metadata.urlWords}`}>
-                      <Flex align="center" gap="2">
-                        <Text fontSize="14px" fontWeight={500} color="#000000">
-                          Learn More
-                        </Text>
-                        <svg
-                          width="22"
-                          height="23"
-                          viewBox="0 0 22 23"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M20.9612 12.9601C21.547 12.3743 21.547 11.4245 20.9612 10.8388L11.4153 1.29281C10.8295 0.707026 9.87974 0.707026 9.29395 1.29281C8.70816 1.8786 8.70816 2.82835 9.29395 3.41413L17.7792 11.8994L9.29395 20.3847C8.70816 20.9705 8.70816 21.9202 9.29395 22.506C9.87974 23.0918 10.8295 23.0918 11.4153 22.506L20.9612 12.9601ZM0.101562 13.3994L19.9006 13.3994V10.3994L0.101562 10.3994V13.3994Z"
-                            fill="black"
-                          />
-                        </svg>
-                      </Flex>
-                    </Link>
+                    {/* Not a nested <a>: the whole card is already wrapped in
+                        the outer <Link>. This is a visual affordance only. */}
+                    <Flex align="center" gap="2">
+                      <Text fontSize="14px" fontWeight={500} color="#000000">
+                        Learn More
+                      </Text>
+                      <svg
+                        width="22"
+                        height="23"
+                        viewBox="0 0 22 23"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M20.9612 12.9601C21.547 12.3743 21.547 11.4245 20.9612 10.8388L11.4153 1.29281C10.8295 0.707026 9.87974 0.707026 9.29395 1.29281C8.70816 1.8786 8.70816 2.82835 9.29395 3.41413L17.7792 11.8994L9.29395 20.3847C8.70816 20.9705 8.70816 21.9202 9.29395 22.506C9.87974 23.0918 10.8295 23.0918 11.4153 22.506L20.9612 12.9601ZM0.101562 13.3994L19.9006 13.3994V10.3994L0.101562 10.3994V13.3994Z"
+                          fill="black"
+                        />
+                      </svg>
+                    </Flex>
                   </Flex>
                 </GridItem>
               </Link>
