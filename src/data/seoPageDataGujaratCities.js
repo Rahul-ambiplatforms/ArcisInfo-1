@@ -63,7 +63,7 @@ const seoPageDataGujaratCities = {
         a: "Yes. ArcisAI (by Adiance Technologies) is based in Ahmedabad, Gujarat. This means Ahmedabad customers receive the fastest installation timelines, same-day on-site support, and direct access to our engineering team — advantages no out-of-state brand can match."
       },
       {
-        q: "Does ArcisAI hold BIS-ER certification required since April 2025?",
+        q: "Does ArcisAI hold BIS-ER certification required since April 2026?",
         a: "Yes. ArcisAI carries BIS Electronics and IT Goods (EITG) registration number R-72003735 under ER01:2024, as well as STQC certification on its Video Management System. Both certifications are mandatory for government and enterprise surveillance deployments in India."
       },
       {
@@ -118,7 +118,7 @@ const seoPageDataGujaratCities = {
       },
       {
         title: "Why Surat Businesses Trust ArcisAI",
-        content: "Surat businesses have long relied on imported camera brands — but BIS-ER certification mandates (since April 2025) have changed the landscape. ArcisAI is one of the very few Indian brands carrying BIS-ER registration R-72003735 and STQC certification on its Video Management System, making it fully compliant for insurance, government, and export-audit requirements. With ArcisAI's Ahmedabad headquarters just 270 km away, Surat customers receive rapid installation and next-day on-site support — a genuine local advantage.",
+        content: "Surat businesses have long relied on imported camera brands — but BIS-ER certification mandates (since April 2026) have changed the landscape. ArcisAI is one of the very few Indian brands carrying BIS-ER registration R-72003735 and STQC certification on its Video Management System, making it fully compliant for insurance, government, and export-audit requirements. With ArcisAI's Ahmedabad headquarters just 270 km away, Surat customers receive rapid installation and next-day on-site support — a genuine local advantage.",
         stats: [
           { label: "BIS-ER Reg.", value: "R-72003735" },
           { label: "VMS Cert.", value: "STQC" },
@@ -150,7 +150,7 @@ const seoPageDataGujaratCities = {
       },
       {
         q: "Is ArcisAI compliant with BIS-ER requirements for new camera installations in Surat?",
-        a: "Yes. Since April 2025, all surveillance camera installations in India require BIS Electronics and IT Goods certification. ArcisAI holds registration number R-72003735 under ER01:2024 — one of the few certified Indian AI CCTV brands."
+        a: "Yes. Since April 2026, all surveillance camera installations in India require BIS Electronics and IT Goods certification. ArcisAI holds registration number R-72003735 under ER01:2024 — one of the few certified Indian AI CCTV brands."
       }
     ],
     cta: {
@@ -228,7 +228,7 @@ const seoPageDataGujaratCities = {
       },
       {
         q: "What is the BIS-ER certification requirement for new CCTV installations in Vadodara?",
-        a: "Since April 2025, all surveillance cameras installed in India must comply with BIS Electronics and IT Goods (EITG) Registration Order. ArcisAI holds registration R-72003735 under ER01:2024, making it fully compliant for new industrial, commercial, and government installations in Vadodara and across India."
+        a: "Since April 2026, all surveillance cameras installed in India must comply with BIS Electronics and IT Goods (EITG) Registration Order. ArcisAI holds registration R-72003735 under ER01:2024, making it fully compliant for new industrial, commercial, and government installations in Vadodara and across India."
       }
     ],
     cta: {

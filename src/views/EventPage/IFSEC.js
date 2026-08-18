@@ -20,19 +20,11 @@ const IFSEC = ({ eventId: eventIdProp }) => {
   const eventData = eventId === "ifsec-india-2025" ? IFSECData : null;
   const seoData = eventId === "ifsec-india-2025" ? IFSECSEO : null;
 
+  if (!eventData) return null;
+
   return (
     <Box>
-      {seoData && (
-      {/* Schema Markup — deliberately NOT inside <Helmet>.
-          HelmetProvider is mounted in app/providers.js, a 'use client' module,
-          so Helmet only injects into <head> after hydration and nothing it
-          renders reaches the server HTML a crawler reads. Rendered inline the
-          <script> is server-rendered normally; JSON-LD is valid anywhere in
-          the document. The meta/title/canonical tags that used to sit here
-          were dead for the same reason and are already emitted by the route's
-          `metadata` export. */}
-      )}
-      {seoData.schema &&
+      {seoData?.schema &&
         seoData.schema.length > 0 &&
         seoData.schema.map((schema, index) => (
           <script

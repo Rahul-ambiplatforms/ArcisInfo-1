@@ -68,7 +68,7 @@ const seoPageDataTier2Cities = {
       },
       {
         q: "Is ArcisAI certified for industrial procurement in Jamnagar?",
-        a: "ArcisAI holds BIS-ER registration R-72003735 under ER01:2024 and STQC VMS certification — both mandatory for government, PSU, and enterprise procurement in India since April 2025."
+        a: "ArcisAI holds BIS-ER registration R-72003735 under ER01:2024 and STQC VMS certification — both mandatory for government, PSU, and enterprise procurement in India since April 2026."
       },
       {
         q: "How quickly can ArcisAI deploy in Jamnagar?",
@@ -306,7 +306,7 @@ const seoPageDataTier2Cities = {
       },
       {
         q: "Is ArcisAI BIS-ER certified — and why does it matter for Anand?",
-        a: "Yes. BIS-ER registration R-72003735 under ER01:2024 is mandatory for all CCTV cameras sold in India since April 2025. This is especially relevant for government colleges, NDDB, and state-procurement projects in Anand."
+        a: "Yes. BIS-ER registration R-72003735 under ER01:2024 is mandatory for all CCTV cameras sold in India since April 2026. This is especially relevant for government colleges, NDDB, and state-procurement projects in Anand."
       }
     ],
     cta: {

@@ -1021,7 +1021,7 @@ const seoPageData = {
     ],
     faqs: [
       {q:"What ArcisAI cameras are best for Retail?",a:"We recommend S-Series for premium Retail deployments and ECO-Series for cost-effective coverage. Our team provides free site surveys to recommend the optimal configuration."},
-      {q:"Is ArcisAI STQC certified for Retail?",a:"Yes, ArcisAI is STQC certified — mandatory for all government and regulated Retail installations since April 2025."},
+      {q:"Is ArcisAI STQC certified for Retail?",a:"Yes, ArcisAI is STQC certified — mandatory for all government and regulated Retail installations since April 2026."},
       {q:"How does ArcisGPT help Retail?",a:"ArcisGPT lets you search video footage in plain English. Ask 'Show me all unauthorized entries after 9pm' and get instant results across all cameras."}
     ],
     cta: {title:"Secure Your Retail Operations", description:"Free site survey and customized solution design.", buttonText:"Request Demo", buttonLink:"/contact-us?industry=retail-surveillance"}
@@ -1041,7 +1041,7 @@ const seoPageData = {
     ],
     faqs: [
       {q:"What ArcisAI cameras are best for Healthcare?",a:"We recommend S-Series for premium Healthcare deployments and ECO-Series for cost-effective coverage. Our team provides free site surveys to recommend the optimal configuration."},
-      {q:"Is ArcisAI STQC certified for Healthcare?",a:"Yes, ArcisAI is STQC certified — mandatory for all government and regulated Healthcare installations since April 2025."},
+      {q:"Is ArcisAI STQC certified for Healthcare?",a:"Yes, ArcisAI is STQC certified — mandatory for all government and regulated Healthcare installations since April 2026."},
       {q:"How does ArcisGPT help Healthcare?",a:"ArcisGPT lets you search video footage in plain English. Ask 'Show me all unauthorized entries after 9pm' and get instant results across all cameras."}
     ],
     cta: {title:"Secure Your Healthcare Operations", description:"Free site survey and customized solution design.", buttonText:"Request Demo", buttonLink:"/contact-us?industry=healthcare-security"}
@@ -1061,7 +1061,7 @@ const seoPageData = {
     ],
     faqs: [
       {q:"What ArcisAI cameras are best for Education?",a:"We recommend S-Series for premium Education deployments and ECO-Series for cost-effective coverage. Our team provides free site surveys to recommend the optimal configuration."},
-      {q:"Is ArcisAI STQC certified for Education?",a:"Yes, ArcisAI is STQC certified — mandatory for all government and regulated Education installations since April 2025."},
+      {q:"Is ArcisAI STQC certified for Education?",a:"Yes, ArcisAI is STQC certified — mandatory for all government and regulated Education installations since April 2026."},
       {q:"How does ArcisGPT help Education?",a:"ArcisGPT lets you search video footage in plain English. Ask 'Show me all unauthorized entries after 9pm' and get instant results across all cameras."}
     ],
     cta: {title:"Secure Your Education Operations", description:"Free site survey and customized solution design.", buttonText:"Request Demo", buttonLink:"/contact-us?industry=education-campus-cctv"}
@@ -1081,7 +1081,7 @@ const seoPageData = {
     ],
     faqs: [
       {q:"What ArcisAI cameras are best for Manufacturing?",a:"We recommend S-Series for premium Manufacturing deployments and ECO-Series for cost-effective coverage. Our team provides free site surveys to recommend the optimal configuration."},
-      {q:"Is ArcisAI STQC certified for Manufacturing?",a:"Yes, ArcisAI is STQC certified — mandatory for all government and regulated Manufacturing installations since April 2025."},
+      {q:"Is ArcisAI STQC certified for Manufacturing?",a:"Yes, ArcisAI is STQC certified — mandatory for all government and regulated Manufacturing installations since April 2026."},
       {q:"How does ArcisGPT help Manufacturing?",a:"ArcisGPT lets you search video footage in plain English. Ask 'Show me all unauthorized entries after 9pm' and get instant results across all cameras."}
     ],
     cta: {title:"Secure Your Manufacturing Operations", description:"Free site survey and customized solution design.", buttonText:"Request Demo", buttonLink:"/contact-us?industry=manufacturing-surveillance"}
@@ -1101,7 +1101,7 @@ const seoPageData = {
     ],
     faqs: [
       {q:"What ArcisAI cameras are best for Warehouse & Logistics?",a:"We recommend S-Series for premium Warehouse & Logistics deployments and ECO-Series for cost-effective coverage. Our team provides free site surveys to recommend the optimal configuration."},
-      {q:"Is ArcisAI STQC certified for Warehouse & Logistics?",a:"Yes, ArcisAI is STQC certified — mandatory for all government and regulated Warehouse & Logistics installations since April 2025."},
+      {q:"Is ArcisAI STQC certified for Warehouse & Logistics?",a:"Yes, ArcisAI is STQC certified — mandatory for all government and regulated Warehouse & Logistics installations since April 2026."},
       {q:"How does ArcisGPT help Warehouse & Logistics?",a:"ArcisGPT lets you search video footage in plain English. Ask 'Show me all unauthorized entries after 9pm' and get instant results across all cameras."}
     ],
     cta: {title:"Secure Your Warehouse & Logistics Operations", description:"Free site survey and customized solution design.", buttonText:"Request Demo", buttonLink:"/contact-us?industry=warehouse-logistics-cctv"}
@@ -1121,7 +1121,7 @@ const seoPageData = {
     ],
     faqs: [
       {q:"What ArcisAI cameras are best for Government & Defense?",a:"We recommend S-Series for premium Government & Defense deployments and ECO-Series for cost-effective coverage. Our team provides free site surveys to recommend the optimal configuration."},
-      {q:"Is ArcisAI STQC certified for Government & Defense?",a:"Yes, ArcisAI is STQC certified — mandatory for all government and regulated Government & Defense installations since April 2025."},
+      {q:"Is ArcisAI STQC certified for Government & Defense?",a:"Yes, ArcisAI is STQC certified — mandatory for all government and regulated Government & Defense installations since April 2026."},
       {q:"How does ArcisGPT help Government & Defense?",a:"ArcisGPT lets you search video footage in plain English. Ask 'Show me all unauthorized entries after 9pm' and get instant results across all cameras."}
     ],
     cta: {title:"Secure Your Government & Defense Operations", description:"Free site survey and customized solution design.", buttonText:"Request Demo", buttonLink:"/contact-us?industry=government-defense-cctv"}
@@ -1141,7 +1141,7 @@ const seoPageData = {
     ],
     faqs: [
       {q:"What ArcisAI cameras are best for Smart City?",a:"We recommend S-Series for premium Smart City deployments and ECO-Series for cost-effective coverage. Our team provides free site surveys to recommend the optimal configuration."},
-      {q:"Is ArcisAI STQC certified for Smart City?",a:"Yes, ArcisAI is STQC certified — mandatory for all government and regulated Smart City installations since April 2025."},
+      {q:"Is ArcisAI STQC certified for Smart City?",a:"Yes, ArcisAI is STQC certified — mandatory for all government and regulated Smart City installations since April 2026."},
       {q:"How does ArcisGPT help Smart City?",a:"ArcisGPT lets you search video footage in plain English. Ask 'Show me all unauthorized entries after 9pm' and get instant results across all cameras."}
     ],
     cta: {title:"Secure Your Smart City Operations", description:"Free site survey and customized solution design.", buttonText:"Request Demo", buttonLink:"/contact-us?industry=smart-city-surveillance"}
@@ -1161,7 +1161,7 @@ const seoPageData = {
     ],
     faqs: [
       {q:"What ArcisAI cameras are best for Hospitality?",a:"We recommend S-Series for premium Hospitality deployments and ECO-Series for cost-effective coverage. Our team provides free site surveys to recommend the optimal configuration."},
-      {q:"Is ArcisAI STQC certified for Hospitality?",a:"Yes, ArcisAI is STQC certified — mandatory for all government and regulated Hospitality installations since April 2025."},
+      {q:"Is ArcisAI STQC certified for Hospitality?",a:"Yes, ArcisAI is STQC certified — mandatory for all government and regulated Hospitality installations since April 2026."},
       {q:"How does ArcisGPT help Hospitality?",a:"ArcisGPT lets you search video footage in plain English. Ask 'Show me all unauthorized entries after 9pm' and get instant results across all cameras."}
     ],
     cta: {title:"Secure Your Hospitality Operations", description:"Free site survey and customized solution design.", buttonText:"Request Demo", buttonLink:"/contact-us?industry=hospitality-cctv"}
@@ -1181,7 +1181,7 @@ const seoPageData = {
     ],
     faqs: [
       {q:"What ArcisAI cameras are best for Real Estate & Construction?",a:"We recommend S-Series for premium Real Estate & Construction deployments and ECO-Series for cost-effective coverage. Our team provides free site surveys to recommend the optimal configuration."},
-      {q:"Is ArcisAI STQC certified for Real Estate & Construction?",a:"Yes, ArcisAI is STQC certified — mandatory for all government and regulated Real Estate & Construction installations since April 2025."},
+      {q:"Is ArcisAI STQC certified for Real Estate & Construction?",a:"Yes, ArcisAI is STQC certified — mandatory for all government and regulated Real Estate & Construction installations since April 2026."},
       {q:"How does ArcisGPT help Real Estate & Construction?",a:"ArcisGPT lets you search video footage in plain English. Ask 'Show me all unauthorized entries after 9pm' and get instant results across all cameras."}
     ],
     cta: {title:"Secure Your Real Estate & Construction Operations", description:"Free site survey and customized solution design.", buttonText:"Request Demo", buttonLink:"/contact-us?industry=real-estate-construction"}
@@ -1201,7 +1201,7 @@ const seoPageData = {
     ],
     faqs: [
       {q:"What ArcisAI cameras are best for Transportation?",a:"We recommend S-Series for premium Transportation deployments and ECO-Series for cost-effective coverage. Our team provides free site surveys to recommend the optimal configuration."},
-      {q:"Is ArcisAI STQC certified for Transportation?",a:"Yes, ArcisAI is STQC certified — mandatory for all government and regulated Transportation installations since April 2025."},
+      {q:"Is ArcisAI STQC certified for Transportation?",a:"Yes, ArcisAI is STQC certified — mandatory for all government and regulated Transportation installations since April 2026."},
       {q:"How does ArcisGPT help Transportation?",a:"ArcisGPT lets you search video footage in plain English. Ask 'Show me all unauthorized entries after 9pm' and get instant results across all cameras."}
     ],
     cta: {title:"Secure Your Transportation Operations", description:"Free site survey and customized solution design.", buttonText:"Request Demo", buttonLink:"/contact-us?industry=transportation-highways"}
@@ -1221,7 +1221,7 @@ const seoPageData = {
     ],
     faqs: [
       {q:"What ArcisAI cameras are best for Oil & Gas?",a:"We recommend S-Series for premium Oil & Gas deployments and ECO-Series for cost-effective coverage. Our team provides free site surveys to recommend the optimal configuration."},
-      {q:"Is ArcisAI STQC certified for Oil & Gas?",a:"Yes, ArcisAI is STQC certified — mandatory for all government and regulated Oil & Gas installations since April 2025."},
+      {q:"Is ArcisAI STQC certified for Oil & Gas?",a:"Yes, ArcisAI is STQC certified — mandatory for all government and regulated Oil & Gas installations since April 2026."},
       {q:"How does ArcisGPT help Oil & Gas?",a:"ArcisGPT lets you search video footage in plain English. Ask 'Show me all unauthorized entries after 9pm' and get instant results across all cameras."}
     ],
     cta: {title:"Secure Your Oil & Gas Operations", description:"Free site survey and customized solution design.", buttonText:"Request Demo", buttonLink:"/contact-us?industry=oil-gas-surveillance"}
@@ -1416,7 +1416,7 @@ const seoPageData = {
     heroDescription: "Head-to-head comparison of STQC Certified and Non-Certified across features, pricing, AI capabilities, certifications, and support.",
     category: "compare",
     sections: [
-      {title: "Where STQC Certified Wins", features: ["Mandatory for govt since April 2025","Tested for cyber security","Data protection compliant","Quality assured","Future-proof investment"]},
+      {title: "Where STQC Certified Wins", features: ["Mandatory for govt since April 2026","Tested for cyber security","Data protection compliant","Quality assured","Future-proof investment"]},
       {title: "Where Non-Certified Has Advantages", features: ["More choices available","Sometimes cheaper","Faster procurement"]},
       {title: "The Verdict", features: ["STQC Certified leads in AI innovation and future-readiness", "STQC certification is now mandatory for government projects", "ArcisGPT provides unmatched Gen AI video intelligence", "Made in India advantage for procurement preferences"]}
     ],
@@ -1448,9 +1448,9 @@ const seoPageData = {
   },
   "stqc-certification-guide": {
     slug: "stqc-certification-guide", title: "STQC Certification for CCTV — Everything You Need to Know | ArcisAI",
-    metaDescription: "What is STQC, why it's mandatory since April 2025, certified brands list. Expert guide by ArcisAI — India's first premium AI CCTV brand.",
+    metaDescription: "What is STQC, why it's mandatory since April 2026, certified brands list. Expert guide by ArcisAI — India's first premium AI CCTV brand.",
     keywords: ["stqc certification guide", "CCTV guide India", "surveillance guide 2026", "ArcisAI"],
-    heroTitle: "STQC Certification for CCTV — Everything You Need to Know", heroSubtitle: "Expert Guide by ArcisAI", heroDescription: "What is STQC, why it's mandatory since April 2025, certified brands list",
+    heroTitle: "STQC Certification for CCTV — Everything You Need to Know", heroSubtitle: "Expert Guide by ArcisAI", heroDescription: "What is STQC, why it's mandatory since April 2026, certified brands list",
     category: "resources",
     sections: [{title: "Key Takeaways", features: ["Comprehensive India-specific guidance", "Updated for 2026 regulations including STQC mandate", "Expert recommendations from ArcisAI engineers", "Actionable steps you can implement today", "Free consultation available"]}],
     faqs: [{q:"Is this guide free?",a:"Yes, all ArcisAI resources are free. We believe in educating the market about AI surveillance."},{q:"Can I get personalized advice?",a:"Absolutely. Contact our team for a free consultation tailored to your specific needs."}],
