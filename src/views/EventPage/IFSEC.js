@@ -22,7 +22,6 @@ const IFSEC = ({ eventId: eventIdProp }) => {
 
   return (
     <Box>
-      {seoData && (
       {/* Schema Markup — deliberately NOT inside <Helmet>.
           HelmetProvider is mounted in app/providers.js, a 'use client' module,
           so Helmet only injects into <head> after hydration and nothing it
@@ -30,8 +29,7 @@ const IFSEC = ({ eventId: eventIdProp }) => {
           <script> is server-rendered normally; JSON-LD is valid anywhere in
           the document. The meta/title/canonical tags that used to sit here
           were dead for the same reason and are already emitted by the route's
-          `metadata` export. */}
-      )}
+          `metadata` export. The JSON-LD itself is rendered below. */}
       {seoData.schema &&
         seoData.schema.length > 0 &&
         seoData.schema.map((schema, index) => (
