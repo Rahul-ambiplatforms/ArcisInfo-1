@@ -24,9 +24,6 @@ const IFSEC = ({ eventId: eventIdProp }) => {
 
   return (
     <Box>
-<<<<<<< HEAD
-      {seoData?.schema &&
-=======
       {/* Schema Markup — deliberately NOT inside <Helmet>.
           HelmetProvider is mounted in app/providers.js, a 'use client' module,
           so Helmet only injects into <head> after hydration and nothing it
@@ -35,8 +32,7 @@ const IFSEC = ({ eventId: eventIdProp }) => {
           the document. The meta/title/canonical tags that used to sit here
           were dead for the same reason and are already emitted by the route's
           `metadata` export. The JSON-LD itself is rendered below. */}
-      {seoData.schema &&
->>>>>>> 6da4e4a5afc5bec2e6ee37de16852c19d9820abf
+      {seoData?.schema &&
         seoData.schema.length > 0 &&
         seoData.schema.map((schema, index) => (
           <script
