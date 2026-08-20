@@ -1228,7 +1228,7 @@ const seoPageData = {
   },
   "best-ai-cctv-brand-india": {
     slug: "best-ai-cctv-brand-india",
-    title: "Best AI CCTV Brand in India 2026 — Why Choose ArcisAI | ArcisAI",
+    title: "Best AI CCTV Brand in India 2026",
     metaDescription: "Looking for the best AI CCTV brand in India? ArcisAI delivers AI-native cameras, STQC and BIS-ER certification, ArcisGPT Gen AI, and Made-in-India manufacturing.",
     keywords: ["best AI CCTV brand India", "best CCTV brand India 2026", "AI CCTV India", "top CCTV brand India"],
     heroTitle: "Best AI CCTV Brand in India",

@@ -1,7 +1,7 @@
 import Series from '@/src/views/Series/Series';
 
 export const metadata = {
-  title: 'S-Series Premium AI CCTV Cameras | ArcisAI',
+  title: 'S-Series Premium AI CCTV Cameras',
   description:
     'Premium S-Series PTZ, Dome, Bullet AI cameras. 4G SIM, WiFi, PoE variants with edge AI, STQC certified. Enterprise-grade surveillance for demanding environments.',
   keywords: [

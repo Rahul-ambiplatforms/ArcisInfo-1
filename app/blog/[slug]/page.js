@@ -101,24 +101,42 @@ export default async function BlogPostPage(props) {
   }
   const canonicalUrl = `https://arcisai.io/blog/${slug}`;
 
-  // Static Article + BreadcrumbList JSON-LD rendered server-side so crawlers
+  // Static BlogPosting + BreadcrumbList JSON-LD rendered server-side so crawlers
   // see structured data immediately without executing JavaScript.
   // The client-side BlogsContent component additionally injects any richer
   // schemas stored in blog.content.schemas from the API.
+  //
+  // Pull the real CMS values (title, author, publish/modify dates, hero image)
+  // so the schema reflects the actual post: this carries author for E-E-A-T and
+  // dateModified for freshness signals in AI/search surfaces. Every field is
+  // guarded and omitted when the backend doesn't supply it — never fabricated.
+  const realTitle =
+    initialBlog?.content?.metaTitle || initialBlog?.metadata?.metaTitle || null;
+  const realDescription =
+    initialBlog?.content?.metaDescription ||
+    initialBlog?.metadata?.metaDescription ||
+    null;
+  const authorName =
+    initialBlog?.content?.author || initialBlog?.blogAuthor || null;
+  const datePublished = initialBlog?.createdAt || null;
+  const dateModified = initialBlog?.updatedAt || initialBlog?.createdAt || null;
+
   const articleSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: title,
+    '@type': 'BlogPosting',
+    headline: realTitle || title,
     url: canonicalUrl,
-    author: {
-      '@type': 'Organization',
-      '@id': 'https://arcisai.io/#organization',
-      name: 'ArcisAI',
-    },
+    mainEntityOfPage: canonicalUrl,
+    ...(realDescription ? { description: realDescription } : {}),
+    author: authorName
+      ? { '@type': 'Person', name: authorName }
+      : { '@type': 'Organization', '@id': 'https://arcisai.io/#organization', name: 'ArcisAI' },
     publisher: {
       '@id': 'https://arcisai.io/#organization',
     },
-    image: 'https://arcisai.io/og/blog.jpg',
+    image: buildOgImage(initialBlog),
+    ...(datePublished ? { datePublished } : {}),
+    ...(dateModified ? { dateModified } : {}),
     inLanguage: 'en-IN',
   };
 

@@ -1,7 +1,7 @@
 import NewsDashboard from '@/src/views/News/NewsDashboard';
 
 export const metadata = {
-  title: 'News & Press Releases | ArcisAI',
+  title: 'News & Press Releases',
   description:
     'Latest news, announcements and press releases from ArcisAI. Stay up to date with our newest AI surveillance products, events and milestones.',
   keywords: [

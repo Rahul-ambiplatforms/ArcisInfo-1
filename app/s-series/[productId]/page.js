@@ -22,7 +22,7 @@ export async function generateMetadata(props) {
     .join(' ');
 
   return {
-    title: `${name} | S-Series AI Camera | ArcisAI`,
+    title: `${name} | S-Series AI Camera`,
     description: `Explore the ArcisAI ${name} — a premium S-Series AI CCTV camera with edge AI analytics, STQC certification, and enterprise-grade reliability.`,
     alternates: { canonical: `https://arcisai.io/s-series/${productId}` },
     openGraph: {

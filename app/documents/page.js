@@ -6,7 +6,7 @@ const DESCRIPTION =
   'Download official ArcisAI user manuals, datasheets, and product guides. Get the latest installation and operation documentation for ArcisAI Eco-Series, S-Series, NVRs, and Bridge Devices.';
 
 export const metadata = {
-  title: TITLE,
+  title: TITLE.replace(/\s*\|\s*ArcisAI$/, ""),
   description: DESCRIPTION,
   keywords: [
     'ArcisAI documents', 'ArcisAI user manual', 'Eco-Series user manual',
@@ -83,4 +83,4 @@ export default function DocumentsPage() {
       <Documents />
     </>
   );
-}
+}

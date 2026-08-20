@@ -1,7 +1,7 @@
 import NotFound from '@/src/views/NotFound';
 
 export const metadata = {
-  title: '404 - Page Not Found | ArcisAI',
+  title: '404 - Page Not Found',
   description: "The page you're looking for doesn't exist.",
   robots: { index: false, follow: false },
 };

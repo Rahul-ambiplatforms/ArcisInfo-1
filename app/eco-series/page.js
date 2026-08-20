@@ -1,7 +1,7 @@
 import Series from '@/src/views/Series/Series';
 
 export const metadata = {
-  title: 'ECO-Series Value AI Cameras | Affordable Smart CCTV | ArcisAI',
+  title: 'ECO-Series Value AI Cameras | Affordable Smart CCTV',
   description:
     'ECO-Series PTZ, Dome, Bullet cameras for budget-conscious deployments. Same powerful AI capabilities at value pricing. 30+ models available with edge AI analytics.',
   keywords: [

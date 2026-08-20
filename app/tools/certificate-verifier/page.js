@@ -6,7 +6,7 @@ const DESCRIPTION =
   'Free tool to verify BIS-ER and STQC CCTV certificates on official government portals. Check if a CCTV camera brand is legally eligible to sell in India under the April 2026 mandate.';
 
 export const metadata = {
-  title: TITLE,
+  title: TITLE.replace(/\s*\|\s*ArcisAI$/, ""),
   description: DESCRIPTION,
   keywords: [
     'BIS-ER certificate verify', 'STQC certificate check', 'is CCTV BIS certified',

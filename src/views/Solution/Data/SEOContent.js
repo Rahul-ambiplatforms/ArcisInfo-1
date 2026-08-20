@@ -1,5 +1,5 @@
 export const edgeAISEO = {
-  metatitle: "EdgeAI CCTV Cameras for Smarter Real-Time Security - ArcisAI",
+  metatitle: "EdgeAI CCTV Cameras for Smarter Real-Time Security",
   metadescription:
     "Discover ArcisAI EdgeAI - AI-powered CCTV cameras that detect, analyze, and alert in real time. Smarter surveillance starts right inside the camera.",
   ogimage: "https://arcisai.io/images/solution_edgeai_hero.webp",

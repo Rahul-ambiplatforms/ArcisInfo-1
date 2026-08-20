@@ -6,7 +6,7 @@ const DESCRIPTION =
   'Free CCTV storage calculator — estimate NVR / hard disk size from camera count, resolution, codec and retention days. Accurate H.265/H.264 bitrate model by ArcisAI.';
 
 export const metadata = {
-  title: TITLE,
+  title: TITLE.replace(/\s*\|\s*ArcisAI$/, ""),
   description: DESCRIPTION,
   keywords: [
     'CCTV storage calculator', 'NVR storage calculator', 'CCTV hard disk calculator',

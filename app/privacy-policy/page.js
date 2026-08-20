@@ -1,7 +1,7 @@
 import PrivacyPolicy from '@/src/views/PrivacyPolicy';
 
 export const metadata = {
-  title: 'Privacy Policy | ArcisAI',
+  title: 'Privacy Policy',
   description: 'ArcisAI privacy policy — how we collect, use, and protect your data.',
   alternates: { canonical: 'https://arcisai.io/privacy-policy' },
   robots: { index: true, follow: false },
