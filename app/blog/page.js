@@ -19,7 +19,7 @@ const VMUKTI_BLOG_SLUGS = new Set([
   'logistics-video-analytics',
 ]);
 
-export const revalidate = 3600;
+export const revalidate = 60;
 
 async function getInitialBlogs() {
   try {
@@ -31,7 +31,7 @@ async function getInitialBlogs() {
           'x-tenant': 'arcis',
           'User-Agent': 'next-server',
         },
-        next: { revalidate: 3600 },
+        next: { revalidate: 60 },
       },
     );
     if (!res.ok) return [];
