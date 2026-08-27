@@ -39,6 +39,10 @@ const CustomButton = ({
   glowColor,
   showTicks = true,
   textBgClip, // New prop
+  // Blocks interaction and dims the button while an async action is in flight.
+  // `loadingText` optionally replaces the label for the duration.
+  isLoading = false,
+  loadingText,
   // Custom (non-DOM) style props — destructured so they never leak onto the
   // native element via {...rest}. Chakra v2 forwards unrecognized props to the
   // DOM, so these must be consumed here.
@@ -84,6 +88,12 @@ const CustomButton = ({
     transition: "all 0.1s",
     cursor: "pointer",
     ...sx,
+    // Applied after `sx` so a caller's styles can't re-enable a loading button.
+    ...(isLoading && {
+      pointerEvents: "none",
+      opacity: 0.6,
+      cursor: "wait",
+    }),
     _hover: {
       bg: hoverBgColor,
       "& .corner-h": {
@@ -118,7 +128,16 @@ const CustomButton = ({
   const offset = "4px";
 
   return (
-    <Box as={as} onClick={onClick} sx={buttonSx} {...rest}>
+    <Box
+      as={as}
+      onClick={onClick}
+      sx={buttonSx}
+      {...rest}
+      aria-busy={isLoading || undefined}
+      // `disabled` is only valid on a native <button>; for any other `as` the
+      // pointerEvents rule above is what blocks the click.
+      {...(as === "button" && isLoading ? { disabled: true } : {})}
+    >
       {/* TOP LEFT CORNER */}
       <Box
         className="corner-h"
@@ -216,7 +235,7 @@ const CustomButton = ({
         alignItems="center"
         justifyContent="center"
       >
-        {children}
+        {isLoading && loadingText ? loadingText : children}
       </Text>
     </Box>
   );

@@ -8,6 +8,7 @@ import PageContentWrapper from "../../Components/PageContentWrapper";
 import { homeContent } from "./Data/Content";
 import { homeSEO } from "./Data/SEOContent";
 import BISHeroSlide from "./Components/BISHeroSlide";
+import Event from "../Events/Event";
 
 const bisSlide = {
   id: "bis",
@@ -82,7 +83,7 @@ const HomeDashboard = () => {
         />
       ))}
       <PageContentWrapper noPadding>
-        {/* <Event /> */}
+        <Event />
         <HeroSectionCarousel data={heroSlides} />
         <ProductList />
         <Certifications />

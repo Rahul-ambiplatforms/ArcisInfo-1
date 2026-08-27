@@ -7,7 +7,7 @@ const Header = ({ showEvent }) => {
   return (
     <>
       <Navbar />
-      {/* {showEvent && <Event />} */}
+      {showEvent && <Event />}
     </>
   );
 };

@@ -34,7 +34,7 @@ const MarqueeText = ({ children }) => {
 const Event = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const eventText =
-    "Meet ArcisAI at SSSA Business Expo 2026 on 23–24 January in Rajkot. Visit us at Booth No. B5 to explore our Eco Series CCTV Cameras, along with our latest AI-powered CCTV cameras, VMS & Cloud solutions.";
+    "Meet ArcisAI at Jio World Convention Centre on 3–5 September 2026. Visit us at Booth No. C13 to see India's first AI CCTV camera, along with our latest AI-powered CCTV cameras, VMS & Cloud solutions.";
 
   return (
     <>
@@ -43,7 +43,10 @@ const Event = () => {
         h="50px"
         position="fixed"
         top="96px"
-        bg="rgba(255,255,255,0.2)"
+        // Dark scrim, not a white one: the first hero slide (BIS) is near-white
+        // (#F9F9F9), so a white tint left the white marquee text invisible.
+        // Tinting dark keeps contrast >4.5:1 over any slide, light or dark.
+        bg="rgba(0,0,0,0.55)"
         backdropFilter="blur(25px)"
         zIndex={999}
         overflow="hidden"

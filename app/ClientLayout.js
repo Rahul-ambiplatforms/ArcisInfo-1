@@ -11,7 +11,7 @@ import FloatingContact from '@/src/Components/FloatingContact';
 const Footer = dynamic(() => import('@/src/Components/Footer/Footer'), { ssr: true });
 
 // Keep in sync with App.js — set to true to show the event banner
-const SHOW_EVENT_BANNER = false;
+const SHOW_EVENT_BANNER = true;
 
 /**
  * ClientLayout renders the global Header and Footer around every public page.
@@ -20,15 +20,18 @@ const SHOW_EVENT_BANNER = false;
 export default function ClientLayout({ children }) {
   const pathname = usePathname();
   const isAdmin = pathname.startsWith('/admin');
+  // Banner is scoped to the homepage: the modal it opens is mounted in
+  // HomeDashboard, so on any other route the banner's CTA has no counterpart.
+  const showEventBanner = SHOW_EVENT_BANNER && pathname === '/';
 
   return (
     <>
-      {!isAdmin && <Header showEvent={SHOW_EVENT_BANNER} />}
+      {!isAdmin && <Header showEvent={showEventBanner} />}
       <Box
         pt={
           isAdmin
             ? '0'
-            : SHOW_EVENT_BANNER
+            : showEventBanner
               ? { base: '150px', md: '150px' }
               : { base: '100px', md: '100px' }
         }
