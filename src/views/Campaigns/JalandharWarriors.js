@@ -51,7 +51,7 @@ const FAQS = [
   },
   {
     q: 'How can I get ArcisAI for my organisation?',
-    a: 'Contact the ArcisAI team for a demo or quote. Cameras are available across the premium S-Series and value ECO-Series lines in PoE, Wi-Fi and 4G-SIM variants, with a 3-year warranty (extendable to 5).',
+    a: 'Contact the ArcisAI team for a demo or quote. Cameras are available across ArcisAI\'s AI CCTV lineup in PoE, Wi-Fi and 4G-SIM variants, with a 3-year warranty (extendable to 5).',
   },
 ];
 
@@ -73,7 +73,7 @@ const JalandharWarriors = () => {
   };
 
   const entityLinks = [
-    { href: '/s-series', icon: MdBolt, label: 'S-Series AI Cameras', desc: 'Premium edge-AI CCTV with on-camera analytics.' },
+    { href: '/eco-series', icon: MdBolt, label: 'ECO-Series AI Cameras', desc: 'Value edge-AI CCTV with on-camera analytics.' },
     { href: '/cloud-vms', icon: MdCloud, label: 'Cloud VMS', desc: 'STQC-certified video management, any scale.' },
     { href: '/arcisgpt', icon: MdSearch, label: 'ArcisGPT', desc: 'Natural-language search across your footage.' },
     { href: '/about-us', icon: MdVerified, label: 'About ArcisAI', desc: 'Made-in-India, STQC & BIS-ER certified.' },
@@ -99,7 +99,7 @@ const JalandharWarriors = () => {
             </Text>
             <HStack spacing={4} pt={2} flexWrap="wrap" justify={{ base: 'center', md: 'flex-start' }}>
               <CustomButton as={NextLink} href="/contact-us" onClick={onCta('follow_warriors')} width="200px" height="50px" fontSize="16px" fontWeight="600" hoverBorderColor={GREEN}>Follow the Warriors</CustomButton>
-              <CustomButton as={NextLink} href="/s-series" onClick={onCta('explore_arcisai')} width="180px" height="50px" fontSize="16px" fontWeight="600">Explore ArcisAI</CustomButton>
+              <CustomButton as={NextLink} href="/eco-series" onClick={onCta('explore_arcisai')} width="180px" height="50px" fontSize="16px" fontWeight="600">Explore ArcisAI</CustomButton>
             </HStack>
           </VStack>
         </Container>
@@ -136,8 +136,7 @@ const JalandharWarriors = () => {
                 ArcisAI is one of the few Indian brands certified across both hardware and software, so it is fully
                 eligible for government, PSU and GeM procurement under India&rsquo;s April 2026 CCTV mandate. Its edge-AI
                 approach runs analytics on the camera with no per-camera annual licence fees, and cameras ship in PoE,
-                Wi-Fi and 4G-SIM variants across the <CLink as={NextLink} href="/s-series" sx={inlineLink}>S-Series</CLink> and{' '}
-                <CLink as={NextLink} href="/eco-series" sx={inlineLink}>ECO-Series</CLink> lines.
+                Wi-Fi and 4G-SIM variants across the <CLink as={NextLink} href="/eco-series" sx={inlineLink}>ECO-Series</CLink> lineup.
               </Text>
               <Text color="whiteAlpha.800" fontSize={{ base: 'md', md: 'lg' }}>
                 The stack is complete end to end: on-camera <CLink as={NextLink} href="/solution/edge-ai" sx={inlineLink}>edge AI</CLink>,
@@ -146,17 +145,19 @@ const JalandharWarriors = () => {
                 conversational AI layer most Indian competitors do not offer.
               </Text>
             </VStack>
-            <Box flex={1} w="100%" maxW={{ base: '100%', md: '440px' }}>
+            <Box
+              flex={1} w="100%" maxW={{ base: '100%', md: '440px' }}
+              bg={PANEL} borderRadius="xl" border="1px solid" borderColor="whiteAlpha.100" p={6}
+            >
               <Image
                 loading="lazy"
-                src="/images/combo.webp"
-                alt="ArcisAI S-Series and ECO-Series AI CCTV cameras"
+                src="/images/camera2-card.webp"
+                htmlWidth="880"
+                htmlHeight="790"
+                alt="ArcisAI AI CCTV camera"
                 w="100%"
                 h={{ base: '220px', md: '300px' }}
-                objectFit="cover"
-                borderRadius="xl"
-                border="1px solid"
-                borderColor="whiteAlpha.100"
+                objectFit="contain"
               />
             </Box>
           </Flex>

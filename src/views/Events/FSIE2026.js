@@ -66,7 +66,7 @@ const FAQS = [
   },
   {
     q: 'Do ArcisAI cameras charge a per-camera AI licence fee?',
-    a: 'No. Edge-AI analytics run on the camera itself, so there are no per-camera annual AI-analytics licence fees. Cameras ship in PoE, Wi-Fi and 4G-SIM variants across the S-Series and ECO-Series lines.',
+    a: 'No. Edge-AI analytics run on the camera itself, so there are no per-camera annual AI-analytics licence fees. Cameras ship in PoE, Wi-Fi and 4G-SIM variants across the ECO-Series lineup.',
   },
 ];
 
@@ -177,18 +177,21 @@ const FSIE2026 = () => {
               </CustomButton>
             </VStack>
             <Box flex={1} w="100%" maxW="440px">
-              <Image
-                loading="lazy"
-                src="/images/STQC_hero_main.webp"
-                alt="ArcisAI STQC and BIS-ER certified AI CCTV camera"
-                w="100%"
-                h={{ base: '220px', md: '260px' }}
-                objectFit="cover"
-                borderRadius="2xl"
-                border="1px solid"
-                borderColor="whiteAlpha.200"
-                mb={4}
-              />
+              <Box
+                bg="whiteAlpha.100" borderRadius="2xl" border="1px solid" borderColor="whiteAlpha.200"
+                p={4} mb={4}
+              >
+                <Image
+                  loading="lazy"
+                  src="/images/camera3-card.webp"
+                  htmlWidth="720"
+                  htmlHeight="450"
+                  alt="ArcisAI STQC and BIS-ER certified AI CCTV camera"
+                  w="100%"
+                  h={{ base: '200px', md: '240px' }}
+                  objectFit="contain"
+                />
+              </Box>
               <Box bg="whiteAlpha.100" borderRadius="2xl" p={7} border="1px solid" borderColor="whiteAlpha.200">
                 <VStack spacing={4} align="stretch">
                   <HStack><Icon as={MdLocationOn} boxSize={6} color={PURPLE} /><Text fontWeight="600">Fire &amp; Safety India Expo — Mumbai</Text></HStack>
@@ -216,8 +219,7 @@ const FSIE2026 = () => {
             </Text>
             <Text color="whiteAlpha.800" fontSize={{ base: 'md', md: 'lg' }}>
               Our engineers will demo edge-AI cameras from the{' '}
-              <CLink as={NextLink} href="/s-series" sx={inlineLink}>S-Series</CLink> and value{' '}
-              <CLink as={NextLink} href="/eco-series" sx={inlineLink}>ECO-Series</CLink> lines, the{' '}
+              <CLink as={NextLink} href="/eco-series" sx={inlineLink}>ECO-Series</CLink> lineup, the{' '}
               <CLink as={NextLink} href="/cloud-vms" sx={inlineLink}>Cloud VMS</CLink> that scales to 10,000+ cameras,
               and <CLink as={NextLink} href="/arcisgpt" sx={inlineLink}>ArcisGPT</CLink> for natural-language video
               search. Every camera carries 20+ on-camera analytics and ships in PoE, Wi-Fi and 4G-SIM variants,
@@ -234,18 +236,18 @@ const FSIE2026 = () => {
         <Container maxW="1200px">
           <VStack spacing={10}>
             <Heading as="h2" size="xl" textAlign="center" fontWeight="700">What you will see at Booth C13</Heading>
-            <Image
-              loading="lazy"
-              src="/images/combo.webp"
-              alt="ArcisAI camera lineup on display"
-              w="100%"
-              maxW="700px"
-              h={{ base: '200px', md: '280px' }}
-              objectFit="cover"
-              borderRadius="xl"
-              border="1px solid"
-              borderColor="whiteAlpha.100"
-            />
+            <Box bg={PANEL} borderRadius="xl" border="1px solid" borderColor="whiteAlpha.100" p={6} w="100%" maxW="700px">
+              <Image
+                loading="lazy"
+                src="/images/deviceimage-card.webp"
+                htmlWidth="1120"
+                htmlHeight="989"
+                alt="ArcisAI Cloud VMS and ArcisGPT dashboard on desktop, tablet and mobile"
+                w="100%"
+                h={{ base: '200px', md: '280px' }}
+                objectFit="contain"
+              />
+            </Box>
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} w="100%">
               {highlights.map((h, i) => (
                 <Box key={i} bg={PANEL} p={7} borderRadius="xl" border="1px solid" borderColor="whiteAlpha.100" borderLeft="3px solid" borderLeftColor={GREEN} transition="all .2s" _hover={{ borderColor: 'whiteAlpha.300', transform: 'translateY(-2px)' }}>
@@ -341,7 +343,7 @@ const FSIE2026 = () => {
           <Heading as="h2" size="lg" mb={4} fontWeight="700">Explore ArcisAI before the show</Heading>
           <Text mb={8} color="whiteAlpha.800">See the products we will demo at Booth C13, or <CLink as={NextLink} href="/contact-us" sx={inlineLink}>contact our team</CLink> ahead of FSIE.</Text>
           <HStack justify="center" spacing={4} flexWrap="wrap">
-            <CustomButton as={NextLink} href="/s-series" width="170px" height="46px" fontSize="15px">S-Series Cameras</CustomButton>
+            <CustomButton as={NextLink} href="/eco-series" width="170px" height="46px" fontSize="15px">ECO-Series Cameras</CustomButton>
             <CustomButton as={NextLink} href="/cloud-vms" width="150px" height="46px" fontSize="15px">Cloud VMS</CustomButton>
             <CustomButton as={NextLink} href="/arcisgpt" width="150px" height="46px" fontSize="15px">ArcisGPT</CustomButton>
             <CustomButton as={NextLink} href="/contact-us" width="150px" height="46px" fontSize="15px" hoverBorderColor={GREEN}>Contact Us</CustomButton>
