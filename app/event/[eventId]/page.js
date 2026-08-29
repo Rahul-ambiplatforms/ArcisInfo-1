@@ -16,7 +16,7 @@ export async function generateMetadata(props) {
     .join(' ');
 
   return {
-    title: `${name} | ArcisAI Events`,
+    title: `${name}`,
     description: `ArcisAI at ${name} — experience live demos of AI CCTV cameras, ArcisGPT, and Cloud VMS. Meet our team and explore enterprise surveillance solutions.`,
     alternates: { canonical: `https://arcisai.io/event/${eventId}` },
     openGraph: {

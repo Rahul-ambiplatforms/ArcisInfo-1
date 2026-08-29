@@ -3,35 +3,35 @@ import { getSolutionSEO } from '@/src/views/Solution/Data/SEOContent';
 
 const SOLUTION_META = {
   'edge-ai': {
-    title: 'Edge AI Surveillance Solutions | ArcisAI',
+    title: 'Edge AI Surveillance Solutions',
     description: 'Enterprise edge AI surveillance solutions with on-device processing, face recognition, ANPR, and crowd analytics. Real-time insights without cloud dependency.',
   },
   'corporate': {
-    title: 'Corporate Office Surveillance | ArcisAI Solutions',
+    title: 'Corporate Office Surveillance',
     description: 'AI surveillance for corporate offices — access control, visitor management, perimeter security, and employee safety with edge AI cameras.',
   },
   'retail': {
-    title: 'Retail Surveillance & Analytics | ArcisAI Solutions',
+    title: 'Retail Surveillance & Analytics',
     description: 'AI-powered retail surveillance with footfall analytics, queue management, theft detection, and customer behavior insights.',
   },
   'banking': {
-    title: 'Banking & Finance Surveillance | ArcisAI Solutions',
+    title: 'Banking & Finance Surveillance',
     description: 'Secure banking surveillance with ATM monitoring, vault security, ANPR, and AI-based fraud detection cameras.',
   },
   'smart-city': {
-    title: 'Smart City Surveillance | ArcisAI Solutions',
+    title: 'Smart City Surveillance',
     description: 'Smart city AI surveillance with crowd analytics, traffic monitoring, ANPR, and emergency response integration.',
   },
   'healthcare': {
-    title: 'Healthcare Surveillance | ArcisAI Solutions',
+    title: 'Healthcare Surveillance',
     description: 'Healthcare facility surveillance with patient safety monitoring, PPE compliance, and restricted area access control.',
   },
   'manufacturing': {
-    title: 'Manufacturing & Factory Surveillance | ArcisAI Solutions',
+    title: 'Manufacturing & Factory Surveillance',
     description: 'Industrial AI surveillance for manufacturing — PPE compliance, equipment monitoring, fire detection, and worker safety analytics.',
   },
   'logistics': {
-    title: 'Logistics & Warehouse Surveillance | ArcisAI Solutions',
+    title: 'Logistics & Warehouse Surveillance',
     description: 'Logistics surveillance with inventory monitoring, dock security, vehicle tracking, and ANPR for warehouses and distribution centers.',
   },
 };
@@ -59,7 +59,7 @@ export async function generateMetadata(props) {
   // and finally to a generic computed title.
   const solutionSEO = getSolutionSEO(solutionId);
   const fallback = SOLUTION_META[solutionId] || {
-    title: `${solutionId.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())} Surveillance Solutions | ArcisAI`,
+    title: `${solutionId.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())} Surveillance Solutions`,
     description: `AI surveillance solutions for ${solutionId.replace(/-/g, ' ')} — edge AI cameras, cloud VMS, and smart analytics from ArcisAI.`,
   };
 

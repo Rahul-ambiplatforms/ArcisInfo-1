@@ -1,7 +1,7 @@
 import Glossary from '@/src/views/Glossary/Glossary';
 
 export const metadata = {
-  title: 'AI Surveillance Glossary | CCTV & Security Terms | ArcisAI',
+  title: 'AI Surveillance Glossary | CCTV & Security Terms',
   description:
     'Complete glossary of AI surveillance, CCTV, video analytics, and security technology terms. Understand NDAA, STQC, ANPR, edge AI, VMS, and more.',
   keywords: [

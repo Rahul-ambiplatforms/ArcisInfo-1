@@ -6,7 +6,7 @@ const DESCRIPTION =
   'Data report on India\'s shift to certified surveillance in 2026 — the BIS-ER & STQC mandate, market impact, certification requirements, and what it means for CCTV buyers. By ArcisAI.';
 
 export const metadata = {
-  title: TITLE,
+  title: TITLE.replace(/\s*\|\s*ArcisAI$/, ""),
   description: DESCRIPTION,
   keywords: [
     'India CCTV market 2026', 'CCTV certification report India', 'BIS-ER STQC market impact',

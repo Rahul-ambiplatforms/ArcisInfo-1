@@ -20,6 +20,8 @@ const IFSEC = ({ eventId: eventIdProp }) => {
   const eventData = eventId === "ifsec-india-2025" ? IFSECData : null;
   const seoData = eventId === "ifsec-india-2025" ? IFSECSEO : null;
 
+  if (!eventData) return null;
+
   return (
     <Box>
       {/* Schema Markup — deliberately NOT inside <Helmet>.
@@ -30,7 +32,7 @@ const IFSEC = ({ eventId: eventIdProp }) => {
           the document. The meta/title/canonical tags that used to sit here
           were dead for the same reason and are already emitted by the route's
           `metadata` export. The JSON-LD itself is rendered below. */}
-      {seoData.schema &&
+      {seoData?.schema &&
         seoData.schema.length > 0 &&
         seoData.schema.map((schema, index) => (
           <script

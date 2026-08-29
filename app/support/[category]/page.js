@@ -12,7 +12,7 @@ export async function generateMetadata(props) {
 
   if (!cat) {
     return {
-      title: 'Support Topic Not Found | ArcisAI',
+      title: 'Support Topic Not Found',
       description: 'The requested support topic could not be found.',
     };
   }

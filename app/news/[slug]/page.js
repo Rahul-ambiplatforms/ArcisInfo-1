@@ -9,7 +9,7 @@ export async function generateMetadata(props) {
     .join(' ');
 
   return {
-    title: `${title} | ArcisAI News`,
+    title: `${title}`,
     description: `Read the ArcisAI news article: ${title}.`,
     alternates: { canonical: `https://arcisai.io/news/${slug}` },
     openGraph: {

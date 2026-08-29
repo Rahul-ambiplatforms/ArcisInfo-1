@@ -6,7 +6,7 @@ const DESCRIPTION =
   'Download the latest ArcisAI tools, configuration utilities, and software updates for ArcisAI cameras and the Cloud VMS, along with their release notes.';
 
 export const metadata = {
-  title: TITLE,
+  title: TITLE.replace(/\s*\|\s*ArcisAI$/, ""),
   description: DESCRIPTION,
   keywords: [
     'ArcisAI tools', 'ArcisAI software', 'ArcisAI configurator',

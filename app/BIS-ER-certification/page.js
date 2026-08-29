@@ -1,7 +1,7 @@
 import BISCertification from '@/src/views/BISCertification/BISCertification';
 
 export const metadata = {
-  title: 'BIS-ER Certified AI CCTV Cameras | ArcisAI',
+  title: 'BIS-ER Certified AI CCTV Cameras',
   description:
     'ArcisAI cameras are now BIS-ER certified (R-72003735 ER01:2024). Compliant, secure, and deployment-ready AI surveillance systems for India.',
   keywords: [

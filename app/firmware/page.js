@@ -6,7 +6,7 @@ const DESCRIPTION =
   'Download the latest firmware updates and release notes for ArcisAI security cameras. Keep your surveillance hardware secure and up to date.';
 
 export const metadata = {
-  title: TITLE,
+  title: TITLE.replace(/\s*\|\s*ArcisAI$/, ""),
   description: DESCRIPTION,
   keywords: [
     'ArcisAI firmware', 'CCTV firmware update', 'AI camera firmware',
@@ -66,4 +66,4 @@ export default function FirmwarePage() {
       <Firmware />
     </>
   );
-}
+}
