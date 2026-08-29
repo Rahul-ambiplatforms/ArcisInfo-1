@@ -203,6 +203,7 @@ const Footer = () => {
               <FooterLink href={"/press"}>Press &amp; Media Kit</FooterLink>
               <FooterLink href={"/BIS-ER-certification"}>BIS-ER Certification</FooterLink>
               <FooterLink href={"/event"}>Event</FooterLink>
+              <FooterLink href={"/jalandhar-warriors"}>Jalandhar Warriors</FooterLink>
               <FooterLink href={"/news"}>News</FooterLink>
               <FooterLink href={"/privacy-policy"}>Privacy Policy</FooterLink>
               <FooterLink href={"/terms-of-service"}>
