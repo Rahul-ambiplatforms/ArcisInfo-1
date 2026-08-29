@@ -71,6 +71,10 @@ const STATIC_ROUTES = [
   ['/cctv-compliance-2026', 0.8, 'monthly'],
   ['/india-cctv-market-report-2026', 0.8, 'monthly'],
 
+  // Campaign / event landing pages
+  ['/jalandhar-warriors', 0.7, 'weekly'],
+  ['/fsie-2026', 0.7, 'weekly'],
+
   // Content hubs
   ['/blog', 0.9, 'daily'],
   ['/news', 0.7, 'weekly'],
