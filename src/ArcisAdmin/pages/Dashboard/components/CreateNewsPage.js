@@ -27,8 +27,13 @@ import { FaTrash, FaUpload } from 'react-icons/fa';
 import { IoIosArrowUp } from 'react-icons/io';
 import { useDropzone } from 'react-dropzone';
 import NewsListPage from './NewsListPage';
+import { SlateEditor } from './SlateEditor';
 import { createNews, updateNews } from '../../../api/news';
 import { uploadFile, deleteFile } from '../../../api/files';
+import {
+  contentToSlate,
+  slateToContentString,
+} from '../../../../utils/slateContent';
 
 const API_IMAGE_URL =
   'https://res.cloudinary.com/dzs02ecai/image/upload/v1760695912/upload_arcis';
@@ -146,44 +151,44 @@ const FileUploadBox = ({ onFileUpload, file, isLoading }) => {
   );
 };
 
+// `content` is held in form state as a Slate node array (the SlateEditor's
+// native format). Stored content — Slate JSON or legacy plain text — is
+// converted on load via contentToSlate and serialized back on submit.
+const buildFormData = (news) => {
+  if (!news) {
+    return {
+      title: '',
+      urlWords: '',
+      category: 'Announcement',
+      brief: '',
+      content: contentToSlate(''),
+      status: 'published',
+      publishedAt: toDateInputValue(new Date()),
+    };
+  }
+  return {
+    title: news.title || '',
+    urlWords: news.urlWords || '',
+    category: news.category || 'Announcement',
+    brief: news.brief || '',
+    content: contentToSlate(news.content || ''),
+    status: news.status || 'published',
+    publishedAt: toDateInputValue(news.publishedAt || news.createdAt),
+  };
+};
+
 const CreateNewsForm = ({ news, onSaved, onCancelEdit }) => {
   const toast = useToast();
   const [isImageUploading, setIsImageUploading] = useState(false);
-  const [imagePath, setImagePath] = useState('');
-  const [formData, setFormData] = useState({
-    title: '',
-    urlWords: '',
-    category: 'Announcement',
-    brief: '',
-    content: '',
-    status: 'published',
-    publishedAt: toDateInputValue(new Date()),
-  });
+  // Seed state from `news` synchronously: the SlateEditor only reads its
+  // value on mount, so it must be correct on the first render. The parent
+  // remounts this form via `key` whenever the edited item changes.
+  const [imagePath, setImagePath] = useState(news?.image || '');
+  const [formData, setFormData] = useState(() => buildFormData(news));
 
   useEffect(() => {
-    if (!news) {
-      setFormData({
-        title: '',
-        urlWords: '',
-        category: 'Announcement',
-        brief: '',
-        content: '',
-        status: 'published',
-        publishedAt: toDateInputValue(new Date()),
-      });
-      setImagePath('');
-      return;
-    }
-    setFormData({
-      title: news.title || '',
-      urlWords: news.urlWords || '',
-      category: news.category || 'Announcement',
-      brief: news.brief || '',
-      content: news.content || '',
-      status: news.status || 'published',
-      publishedAt: toDateInputValue(news.publishedAt || news.createdAt),
-    });
-    setImagePath(news.image || '');
+    setFormData(buildFormData(news));
+    setImagePath(news?.image || '');
   }, [news]);
 
   const handleChange = (field, value) => {
@@ -252,7 +257,8 @@ const CreateNewsForm = ({ news, onSaved, onCancelEdit }) => {
       urlWords: slugify(formData.urlWords),
       category: formData.category,
       brief: formData.brief.trim(),
-      content: formData.content,
+      // Slate JSON stored in the existing string field ('' when left empty).
+      content: slateToContentString(formData.content),
       image: imagePath,
       status: statusOverride || formData.status,
       publishedAt: formData.publishedAt
@@ -383,12 +389,12 @@ const CreateNewsForm = ({ news, onSaved, onCancelEdit }) => {
 
         <FormControl>
           <FormLabel fontWeight="medium">Full content (optional)</FormLabel>
-          <Textarea
-            placeholder="Full article body shown on the detail page. Leave empty if the brief is enough."
+          <SlateEditor
             value={formData.content}
-            onChange={(e) => handleChange('content', e.target.value)}
-            rows={10}
-            _focus={{ borderColor: '#9678E1', boxShadow: 'none' }}
+            onChange={(value) => handleChange('content', value)}
+            placeholder="Full article body shown on the detail page. Leave empty if the brief is enough."
+            showColorOption={true}
+            fontSize="lg"
           />
         </FormControl>
 

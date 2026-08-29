@@ -11,6 +11,10 @@ import {
 } from '@chakra-ui/react';
 import { useParams, useRouter } from 'next/navigation';
 import { getNewsByUrlWords } from './news';
+import {
+  parseSlateContent,
+  renderSlateContent,
+} from '../../utils/slateContent';
 
 const IMAGE_BASE_URL =
   'https://res.cloudinary.com/dzs02ecai/image/upload/f_auto,q_auto,w_1920/v1761637680/upload_arcis';
@@ -91,6 +95,9 @@ const NewsContent = ({ urlWords: urlWordsProp }) => {
 
   const image = resolveImage(news.image);
   const displayDate = formatDate(news.publishedAt || news.createdAt);
+  // Rich-text posts store Slate JSON in `content`; legacy posts store plain
+  // text. parseSlateContent returns null for the latter → plain-text render.
+  const slateContent = parseSlateContent(news.content);
 
   return (
     <Box mt={{ base: '6%', md: '4%' }} mb="6%" px={{ base: '4%', md: '2%' }}>
@@ -180,7 +187,12 @@ const NewsContent = ({ urlWords: urlWordsProp }) => {
               {news.brief}
             </Text>
           )}
-          {news.content && (
+          {news.content && slateContent && (
+            <Box fontSize="16px" lineHeight="1.7" color="#444">
+              {renderSlateContent(slateContent)}
+            </Box>
+          )}
+          {news.content && !slateContent && (
             <Box
               fontSize="16px"
               lineHeight="1.7"

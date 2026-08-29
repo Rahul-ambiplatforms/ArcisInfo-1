@@ -111,6 +111,22 @@ const nextConfig = {
           },
         ],
       },
+      // The blog index is the one page whose content changes without a deploy,
+      // so it cannot inherit Next's ISR default of
+      // `s-maxage=<revalidate>, stale-while-revalidate=31532400`. That 365-day
+      // stale-while-revalidate window lets the browser and Cloudflare both serve
+      // the stored copy immediately and refresh behind the visitor, which put a
+      // newly published post one full page-load behind — it only appeared after
+      // a manual refresh. A short max-age with no stale-while-revalidate bounds
+      // end-to-end staleness to roughly two minutes instead.
+      // Exact `/blog` only: /blog/:slug is dynamic (`cache: 'no-store'`) and
+      // must keep its own headers.
+      {
+        source: "/blog",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=60, s-maxage=60" },
+        ],
+      },
       // Force every PDF under /pdfs/ to be downloaded as a file rather than
       // rendered inline by the browser's PDF viewer. This guarantees the
       // Download button on /documents always saves the file.

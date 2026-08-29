@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   Box,
   Button,
@@ -31,6 +31,13 @@ import EventIcon from "../../Components/Icons/event_close.svg";
 // Track if popup has been shown in this session (resets on refresh)
 let hasShownPopup = false;
 
+// Current event. Swap these when the next expo comes around — previous posters
+// stay in /public/images so they can be pointed at again.
+const EVENT_DATES = ["3rd Sep 2026", "4th Sep 2026", "5th Sep 2026"];
+const EVENT_BOOTH = "Booth C13";
+const EVENT_VENUE = "Jio World Convention Centre";
+const EVENT_POSTER_ALT = "ArcisAI at Jio World Convention Centre 2026 Booth C13";
+
 const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
   const {
     isOpen: internalIsOpen,
@@ -44,11 +51,19 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
 
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+  // `isLoading` only lands on the next render, so two clicks in the same tick
+  // would both pass a state check. A ref updates synchronously and also covers
+  // Enter-key submits, which never touch the button at all.
+  const submittingRef = useRef(false);
 
   // Determine which image to show based on screen size
+  // TODO: desktop is temporarily reusing the 4:5 poster. Swap `lg` to a 1:1
+  // FSIE poster (~2464x2464) once that artwork exists, and restore the square
+  // image box below.
   const eventImageSrc = useBreakpointValue({
-    base: "/images/event_popup_mobile.webp",
-    lg: "/images/event_popup.webp",
+    base: "/images/event_popup_fsie.webp",
+    lg: "/images/event_popup_fsie.webp",
   });
 
   useEffect(() => {
@@ -62,7 +77,7 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
     name: "",
     email: "",
     phone: "",
-    date: "24th Jan 2026",
+    date: EVENT_DATES[0],
     time: "",
   });
 
@@ -80,6 +95,8 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (submittingRef.current) return;
 
     if (
       !formData.name ||
@@ -101,7 +118,9 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
       return;
     }
 
+    submittingRef.current = true;
     setIsLoading(true);
+    setSubmitError("");
 
     const payload = {
       name: formData.name,
@@ -129,7 +148,11 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
       }
     } catch (error) {
       console.error("Error:", error);
+      setSubmitError(
+        "We couldn't book your slot just now. Please try again."
+      );
     } finally {
+      submittingRef.current = false;
       setIsLoading(false);
     }
   };
@@ -141,21 +164,47 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
       textAlign="center"
       bg="white"
       borderRadius="xl"
-      p={8}
+      // This nests inside a Box that also pads; at p={8} on both, a 360px
+      // phone lost 128px of its width to padding alone.
+      p={{ base: 4, md: 8 }}
+      w="100%"
     >
-      <Heading size="lg" color="gray.800">
+      <Heading size={{ base: "md", md: "lg" }} color="gray.800">
         Thank You for Booking!
       </Heading>
       <Box w="50px" h="4px" bg="#9678E1" />
 
-      <Box color="gray.600" fontSize="6xl">
+      <Box color="gray.600" fontSize={{ base: "4xl", md: "6xl" }}>
         🎉
       </Box>
 
       <Text fontSize="xl" color="gray.600" fontWeight="500">
         Your booth visit is confirmed
       </Text>
-      <Text fontSize="md" color="gray.500">
+
+      {/* Echo back the exact slot that was booked — the confirmation is the
+          only place the visitor sees it, since no email lands on their side. */}
+      <VStack
+        spacing={1}
+        bg="#F6F3FD"
+        borderRadius="lg"
+        px={{ base: 3, md: 6 }}
+        py={4}
+        w="100%"
+        mt={2}
+      >
+        <Text fontSize="lg" fontWeight="700" color="gray.800">
+          {formData.date}
+        </Text>
+        <Text fontSize="md" fontWeight="600" color="#9678E1">
+          {formData.time}
+        </Text>
+        <Text fontSize="sm" color="gray.600" pt={1}>
+          {EVENT_BOOTH} &middot; {EVENT_VENUE}
+        </Text>
+      </VStack>
+
+      <Text fontSize="md" color="gray.500" pt={2}>
         We look forward to meeting you at our booth!
       </Text>
 
@@ -207,8 +256,8 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
         bg="#9678E1"
         _hover={{ bg: "#8266C9" }}
         color="white"
-        size="lg"
-        w="200px"
+        size={{ base: "md", md: "lg" }}
+        w={{ base: "100%", md: "200px" }}
         onClick={onClose}
         mt={4}
       >
@@ -221,7 +270,7 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
     <Modal isOpen={isOpen} onClose={onClose} size="full" isCentered>
       <ModalOverlay backdropFilter="blur(10px)" />
       <ModalContent
-        maxW={isSubmitted ? "500px" : "fit-content"}
+        maxW={isSubmitted ? { base: "92vw", md: "500px" } : "fit-content"}
         maxH="90vh"
         bg="transparent"
         boxShadow="none"
@@ -237,7 +286,10 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
           py={{ base: 4, md: 0 }}
         >
           {isSubmitted ? (
-            <Box bg="white" p={8} boxShadow="2xl">
+            /* w=100% so the panel takes ModalContent's width instead of
+               shrink-to-fitting around its longest line, which on a phone
+               pushed it wider than the viewport. */
+            <Box w="100%" bg="white" p={{ base: 3, md: 8 }} boxShadow="2xl">
               <ThankYouContent />
             </Box>
           ) : (
@@ -261,46 +313,59 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
               <Flex
                 overflow="hidden"
                 direction={{ base: "column-reverse", lg: "row" }}
-                maxW={{ base: "90%", sm: "500px", md: "550px", lg: "1350px" }}
+                w={{
+                  base: "90vw",
+                  sm: "500px",
+                  md: "550px",
+                  lg: "min(1316px, 94vw)",
+                }}
                 mx="auto"
                 boxShadow="2xl"
               >
-                {/* Event Poster - Bottom on mobile, Left on desktop */}
+                {/* Event Poster - Bottom on mobile, Left on desktop.
+                    On mobile it carries the same horizontal padding as the form
+                    so its edges line up with the input fields. aspectRatio sits
+                    on the Image (not the Box) so that padding can't squash the
+                    4:5 art — width drives height at every breakpoint. */}
                 <Box
-                  w={{ base: "100%", lg: "616px" }}
-                  h={{ base: "auto", lg: "616px" }}
+                  w={{ base: "100%", lg: "42%" }}
+                  px={{ base: 4, md: 6, lg: 0 }}
+                  pb={{ base: 4, md: 6, lg: 0 }}
+                  alignSelf={{ base: "center", lg: "flex-start" }}
                   flexShrink={0}
                 >
                   <Image loading="lazy"
                     src={eventImageSrc}
-                    alt="Business Expo Event"
+                    alt={EVENT_POSTER_ALT}
                     w="100%"
-                    h="100%"
-                    objectFit={{ base: "contain", lg: "cover" }}
+                    aspectRatio="1368 / 1708"
+                    objectFit="cover"
                   />
                 </Box>
 
                 {/* Form Section */}
                 <Box
-                  flex="1"
-                  mt={10}
-                  p={{ base: 5, md: 6, lg: 8 }}
-                  minW={{ base: "100%", lg: "700px" }}
-                  maxW={{ base: "100%", lg: "700px" }}
+                  flex={{ base: "0 0 auto", lg: "1" }}
+                  minW={0}
+                  mt={{ base: 14, lg: 10 }}
+                  p={{ base: 4, md: 6, lg: 8 }}
                 >
                   <VStack
-                    spacing={6}
+                    spacing={{ base: 4, md: 6 }}
                     align="stretch"
                     as="form"
                     onSubmit={handleSubmit}
                   >
                     {/* Row 1: Full name & Email Address */}
-                    <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4}>
+                    <SimpleGrid
+                      columns={{ base: 1, md: 2 }}
+                      spacing={{ base: 3, md: 4 }}
+                    >
                       <FormControl isRequired>
                         <FormLabel
                           fontSize="14px"
                           fontWeight="500"
-                          mb="8px"
+                          mb={{ base: "4px", md: "8px" }}
                           color="white"
                         >
                           Full name
@@ -312,7 +377,7 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
                           onChange={handleChange}
                           bg="rgba(255,255,255,0.2)"
                           border="none"
-                          h="52px"
+                          h={{ base: "44px", md: "52px" }}
                           color="white"
                           _placeholder={{ color: "white" }}
                           _focus={{
@@ -329,7 +394,7 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
                         <FormLabel
                           fontSize="14px"
                           fontWeight="500"
-                          mb="8px"
+                          mb={{ base: "4px", md: "8px" }}
                           color="white"
                         >
                           Email Address
@@ -342,7 +407,7 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
                           onChange={handleChange}
                           bg="rgba(255,255,255,0.2)"
                           border="none"
-                          h="52px"
+                          h={{ base: "44px", md: "52px" }}
                           color="white"
                           _placeholder={{ color: "white" }}
                           _focus={{
@@ -357,23 +422,26 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
                     </SimpleGrid>
 
                     {/* Row 2: Book a slot & Time slot */}
-                    <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4}>
+                    <SimpleGrid
+                      columns={{ base: 1, md: 2 }}
+                      spacing={{ base: 3, md: 4 }}
+                    >
                       <FormControl isRequired>
                         <FormLabel
                           fontSize="14px"
                           fontWeight="500"
-                          mb="8px"
+                          mb={{ base: "4px", md: "8px" }}
                           color="white"
                         >
                           Book a slot*
                         </FormLabel>
-                        <Input
+                        <Select
                           name="date"
-                          value="24th Jan 2026"
-                          isReadOnly
+                          value={formData.date}
+                          onChange={handleChange}
                           bg="rgba(255,255,255,0.2)"
                           border="none"
-                          h="52px"
+                          h={{ base: "44px", md: "52px" }}
                           color="white"
                           fontSize="16px"
                           borderRadius="0"
@@ -381,14 +449,31 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
                             border: "1px solid #A4FF79",
                             boxShadow: "0 0 0 1px #A4FF79",
                           }}
-                        />
+                          sx={{
+                            option: {
+                              bg: "black",
+                              color: "white",
+                              _hover: { bg: "#333" },
+                            },
+                          }}
+                        >
+                          {EVENT_DATES.map((date) => (
+                            <option
+                              key={date}
+                              value={date}
+                              style={{ background: "black", color: "white" }}
+                            >
+                              {date}
+                            </option>
+                          ))}
+                        </Select>
                       </FormControl>
 
                       <FormControl isRequired>
                         <FormLabel
                           fontSize="14px"
                           fontWeight="500"
-                          mb="8px"
+                          mb={{ base: "4px", md: "8px" }}
                           color="white"
                         >
                           Time slot*
@@ -400,7 +485,7 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
                           onChange={handleChange}
                           bg="rgba(255,255,255,0.2)"
                           border="none"
-                          h="52px"
+                          h={{ base: "44px", md: "52px" }}
                           color="white"
                           _placeholder={{ color: "white" }}
                           _focus={{
@@ -518,12 +603,15 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
                     </SimpleGrid>
 
                     {/* Row 3: Phone Number & Submit Button */}
-                    <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4}>
+                    <SimpleGrid
+                      columns={{ base: 1, md: 2 }}
+                      spacing={{ base: 3, md: 4 }}
+                    >
                       <FormControl isRequired>
                         <FormLabel
                           fontSize="14px"
                           fontWeight="500"
-                          mb="8px"
+                          mb={{ base: "4px", md: "8px" }}
                           color="white"
                         >
                           Phone Number
@@ -533,7 +621,7 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
                             bg="rgba(255,255,255,0.1)"
                             border="none"
                             color="white"
-                            h="52px"
+                            h={{ base: "44px", md: "52px" }}
                             borderRadius="0"
                             fontSize="16px"
                           >
@@ -547,7 +635,7 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
                             onChange={handleChange}
                             bg="rgba(255,255,255,0.2)"
                             border="none"
-                            h="52px"
+                            h={{ base: "44px", md: "52px" }}
                             color="white"
                             _placeholder={{ color: "white" }}
                             _focus={{
@@ -566,7 +654,7 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
                         <FormLabel
                           fontSize="14px"
                           fontWeight="500"
-                          mb="8px"
+                          mb={{ base: "4px", md: "8px" }}
                           color="transparent"
                         >
                           .
@@ -574,7 +662,7 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
                         <CustomButton
                           type="submit"
                           width={{ base: "100%", md: "60%" }}
-                          height="52px"
+                          height={{ base: "44px", md: "52px" }}
                           fontSize="16px"
                           fontWeight="600"
                           bgColor="rgba(255, 255, 255, 0.1)"
@@ -586,11 +674,26 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
                           showGlow={true}
                           showTicks={true}
                           isLoading={isLoading}
+                          loadingText="Submitting..."
                         >
                           Submit
                         </CustomButton>
                       </Box>
                     </SimpleGrid>
+
+                    {submitError && (
+                      <Text
+                        role="alert"
+                        fontSize="14px"
+                        fontWeight="500"
+                        color="#FFB4B4"
+                        bg="rgba(0,0,0,0.35)"
+                        p={3}
+                        borderLeft="3px solid #FF6B6B"
+                      >
+                        {submitError}
+                      </Text>
+                    )}
                   </VStack>
                 </Box>
               </Flex>
