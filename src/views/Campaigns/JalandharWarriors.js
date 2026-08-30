@@ -1,7 +1,8 @@
 'use client';
 import React, { useCallback } from 'react';
 import {
-  Box, Container, Heading, Text, Flex, VStack, HStack, SimpleGrid, Icon, Link as CLink, Image,
+  Box, Container, Heading, Text, Flex, VStack, SimpleGrid, Icon, Link as CLink, Image,
+  AspectRatio,
   Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
@@ -22,6 +23,53 @@ const PURPLE = '#7F56D9';
 const GREEN = '#A4FF79';
 const DARK = '#171717';
 const PANEL = '#1E1E1E';
+
+// COPY: campaign video for the "About the campaign" section. Set `src` to a
+// privacy-friendly YouTube embed URL (https://www.youtube-nocookie.com/embed/<id>)
+// or any other embeddable player URL. While `src` is empty the right column
+// renders a neutral placeholder instead of a broken iframe.
+// Source clip: https://youtube.com/shorts/CTll96CBQ60 — Shorts play in the
+// standard embed player, so the /shorts/<id> link becomes /embed/<id>.
+// controls=1 gives the viewer play/pause, scrubbing and volume; rel=0 keeps
+// end-screen suggestions to this channel; the -nocookie host avoids setting
+// tracking cookies until the viewer actually plays.
+const CAMPAIGN_VIDEO = {
+  src: 'https://www.youtube-nocookie.com/embed/CTll96CBQ60?controls=1&rel=0',
+  title: 'Jalandhar Warriors campaign video',
+};
+
+// Real CustomButtons — corner brackets, ticks, hover animation and all — in
+// place of the ones that were painted into the supplied banner.
+//
+// The row is anchored to where the artwork's buttons were drawn: left edge at
+// x141 of the 1066x364 source. Sizes are given in
+// cqw so they track the banner's own width (not the viewport) and resolve to
+// the site's usual 200x50 / 180x50 buttons once the banner is at full width.
+const HERO_BUTTONS = [
+  {
+    label: 'Follow the Warriors', href: '/contact-us', event: 'follow_warriors',
+    width: 'clamp(150px, 18.2cqw, 200px)',
+  },
+  {
+    label: 'Explore ArcisAI', href: '/eco-series', event: 'explore_arcisai',
+    width: 'clamp(135px, 16.4cqw, 180px)',
+  },
+];
+// Copy and buttons are anchored by their top edge to percentages of the banner,
+// so they hold position as the artwork scales. The left inset matches where the
+// artwork's own copy block started (x141 of 1066).
+const HERO_COPY_LEFT = '13.23%';
+const HERO_COPY_TOP = '22%';
+const HERO_BUTTON_TOP = '70%';
+
+// Type scales with the banner's width (cqw), not the viewport, so it stays in
+// proportion to the artwork. Sizes are a step up from the artwork's baked-in
+// text, which read too small once the banner was placed at container width.
+const HERO_EYEBROW_FONT = 'clamp(12px, 1.5cqw, 16px)';
+const HERO_TITLE_FONT = 'clamp(28px, 4.8cqw, 51px)';
+const HERO_TAGLINE_FONT = 'clamp(14px, 1.7cqw, 18px)';
+const HERO_BUTTON_HEIGHT = 'clamp(38px, 4.6cqw, 50px)';
+const HERO_BUTTON_FONT = 'clamp(12px, 1.45cqw, 16px)';
 
 function pushDL(payload) {
   if (typeof window === 'undefined') return;
@@ -85,6 +133,7 @@ const JalandharWarriors = () => {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
+<<<<<<< HEAD
       {/* HERO */}
       <Box bgGradient={`linear(135deg, ${DARK} 0%, #2A1B4A 100%)`} py={{ base: 16, md: 28 }} px={4} position="relative" overflow="hidden">
         <Box position="absolute" bottom="-25%" left="-10%" w="520px" h="520px" bg={PURPLE} opacity={0.2} filter="blur(130px)" borderRadius="full" />
@@ -102,10 +151,85 @@ const JalandharWarriors = () => {
               <CustomButton as={NextLink} href="/eco-series" onClick={onCta('explore_arcisai')} width="180px" height="50px" fontSize="16px" fontWeight="600">Explore ArcisAI</CustomButton>
             </HStack>
           </VStack>
+=======
+      {/* HERO — campaign artwork as the backdrop, with the copy and buttons as
+          real elements on top. The banner's own text was baked in at a size that
+          read too small at container width, so PUNJAB_WARRIOR_BANNER_BG.webp is
+          the supplied banner with the left-hand copy block painted out; the
+          gradient, geometry, team photo and both logos are untouched.
+
+          Copy and buttons switch from overlay to normal flow below md, where the
+          artwork is too small to hold them. They stay a single instance in the
+          DOM either way, so the page keeps exactly one <h1>. */}
+      <Box bg={DARK} py={{ base: 6, md: 8 }} px={4}>
+        <Container maxW="1100px">
+          <Box position="relative" w="100%" sx={{ containerType: 'inline-size' }}>
+            <Image
+              src="/images/PUNJAB_WARRIOR_BANNER_BG.webp"
+              alt="ArcisAI and Jalandhar Warriors campaign banner"
+              htmlWidth="1066"
+              htmlHeight="364"
+              w="100%"
+              h="auto"
+              display="block"
+              loading="eager"
+            />
+
+            <VStack
+              position={{ base: 'static', md: 'absolute' }}
+              left={{ md: HERO_COPY_LEFT }}
+              top={{ md: HERO_COPY_TOP }}
+              maxW={{ base: '100%', md: '48%' }}
+              pt={{ base: 6, md: 0 }}
+              align="flex-start"
+              spacing={3}
+            >
+              <Text color={GREEN} fontWeight="bold" letterSpacing="wide" fontSize={HERO_EYEBROW_FONT}>
+                OFFICIAL CAMPAIGN HUB
+              </Text>
+              <Heading as="h1" fontSize={HERO_TITLE_FONT} lineHeight={1.05} fontWeight="700">
+                Jalandhar Warriors
+              </Heading>
+              {/* COPY: campaign tagline / positioning from content team. */}
+              <Text color="whiteAlpha.900" fontSize={HERO_TAGLINE_FONT}>
+                The official campaign hub — powered by ArcisAI, built by{' '}
+                <CLink href="https://www.adiance.com" isExternal sx={inlineLink}>Adiance Technologies</CLink>.
+              </Text>
+            </VStack>
+
+            <Flex
+              position={{ base: 'static', md: 'absolute' }}
+              left={{ md: HERO_COPY_LEFT }}
+              top={{ md: HERO_BUTTON_TOP }}
+              pt={{ base: 5, md: 0 }}
+              align="center"
+              flexWrap="wrap"
+              gap={4}
+            >
+              {HERO_BUTTONS.map((b) => (
+                <CustomButton
+                  key={b.href}
+                  as={NextLink}
+                  href={b.href}
+                  onClick={onCta(b.event)}
+                  width={b.width}
+                  height={HERO_BUTTON_HEIGHT}
+                  fontSize={HERO_BUTTON_FONT}
+                  fontWeight="600"
+                  hoverBorderColor={GREEN}
+                  sx={{ whiteSpace: 'nowrap' }}
+                >
+                  {b.label}
+                </CustomButton>
+              ))}
+            </Flex>
+          </Box>
+>>>>>>> eda4366db0ccbc2ab87393adc825167c03dcb69a
         </Container>
       </Box>
 
       {/* ABOUT THE CAMPAIGN */}
+<<<<<<< HEAD
       <Box py={{ base: 12, md: 16 }} px={4}>
         <Container maxW="900px">
           <VStack spacing={5} align="flex-start">
@@ -123,6 +247,60 @@ const JalandharWarriors = () => {
               see the full <CLink as={NextLink} href="/certifications" sx={inlineLink}>certifications</CLink>.
             </Text>
           </VStack>
+=======
+      <Box py={{ base: 10, md: 8 }} px={4}>
+        <Container maxW="1100px">
+          {/* The prose column stays flush-left with the hero heading and buttons
+              above; the video sits alongside it from md up. */}
+          <Flex direction={{ base: 'column', md: 'row' }} align="stretch" gap={{ base: 10, md: 12 }}>
+            {/* space-between spreads the heading and paragraphs over the full
+                height of the video alongside, so both columns end level. */}
+            <VStack spacing={5} align="flex-start" justify="space-between" flex={1} minW={0}>
+              <Heading as="h2" size="lg" fontWeight="700">About the campaign</Heading>
+              {/* COPY: content team supplies the campaign narrative as real, visible prose. */}
+              <Text color="whiteAlpha.800" fontSize={{ base: 'md', md: 'xl' }}>
+                This is the permanent home for the Jalandhar Warriors campaign — the story, updates and imagery are
+                curated by the ArcisAI team. The campaign is powered by ArcisAI, whose cameras keep venues, campuses
+                and public spaces secure with real-time, on-camera intelligence.
+              </Text>
+              <Text color="whiteAlpha.800" fontSize={{ base: 'md', md: 'xl' }}>
+                ArcisAI cameras are STQC and BIS-ER certified and NDAA Section 889 compliant, running 20+ analytics
+                directly on the camera — face recognition, ANPR, crowd counting, intrusion and fire detection and more.
+                Explore <CLink as={NextLink} href="/why-choose-arcisai" sx={inlineLink}>why teams choose ArcisAI</CLink> or
+                see the full <CLink as={NextLink} href="/certifications" sx={inlineLink}>certifications</CLink>.
+              </Text>
+            </VStack>
+
+            {/* The video keeps its 7:6 shape but its width is also capped against
+                the viewport height, so on short laptop screens the whole player
+                still lands above the fold instead of being clipped. */}
+            <Box
+              flex={1} w="100%"
+              maxW={{ base: '100%', md: 'max(320px, min(520px, calc((100vh - 560px) * 7 / 6)))' }}
+              bg={PANEL} borderRadius="xl" border="1px solid" borderColor="whiteAlpha.100"
+              p={3} overflow="hidden" display="flex" alignItems="center"
+            >
+              <AspectRatio ratio={7 / 6} w="100%" borderRadius="lg" overflow="hidden">
+                {CAMPAIGN_VIDEO.src ? (
+                  <Box
+                    as="iframe"
+                    src={CAMPAIGN_VIDEO.src}
+                    title={CAMPAIGN_VIDEO.title}
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    border="0"
+                  />
+                ) : (
+                  <Flex bg="#0F0F0F" align="center" justify="center">
+                    <Text color="whiteAlpha.500" fontSize="sm">Campaign video coming soon</Text>
+                  </Flex>
+                )}
+              </AspectRatio>
+            </Box>
+          </Flex>
+>>>>>>> eda4366db0ccbc2ab87393adc825167c03dcb69a
         </Container>
       </Box>
 

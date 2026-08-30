@@ -77,7 +77,7 @@ const nextConfig = {
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob: https:",
       "font-src 'self' data:",
-      "frame-src https://www.googletagmanager.com https://www.facebook.com",
+      "frame-src https://www.googletagmanager.com https://www.facebook.com https://www.youtube.com https://www.youtube-nocookie.com",
       `connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.facebook.com https://connect.facebook.net https://www.arcisai.io https://arcisai.io https://vmukti.com https://hook.eu1.make.com https://etaems.arcisai.io:5000${extraConnect}`,
       "media-src 'self' https:",
       "object-src 'none'",
