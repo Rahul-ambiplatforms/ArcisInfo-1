@@ -116,7 +116,7 @@ const FSIE2026 = () => {
   };
   const eventSchema = {
     '@context': 'https://schema.org', '@type': 'Event',
-    name: 'ArcisAI at FSIE Mumbai 2026 — Booth C13',
+    name: 'ArcisAI at FSIE Mumbai 2026: Booth C13',
     description: 'ArcisAI exhibits Made-in-India, STQC & BIS-ER certified AI CCTV, Cloud VMS and ArcisGPT at Booth C13, FSIE (Fire & Safety India Expo), Mumbai.',
     startDate: '2026-09-03',
     endDate: '2026-09-05',
@@ -132,9 +132,9 @@ const FSIE2026 = () => {
   };
 
   const highlights = [
-    { title: 'Live edge-AI CCTV demos', desc: 'On-camera analytics — intrusion, ANPR, line-crossing, fire/smoke and PPE detection — running in real time, with no server round-trip.' },
+    { title: 'Live edge-AI CCTV demos', desc: 'On-camera analytics (intrusion, ANPR, line-crossing, fire/smoke and PPE detection) running in real time, with no server round-trip.' },
     { title: 'ArcisGPT video search', desc: 'Ask questions of recorded footage in natural language ("show vehicles after 10 PM") and get instant, timestamped answers.' },
-    { title: 'STQC & BIS-ER compliance clinic', desc: 'See exactly what is required to sell and deploy CCTV in India from April 2026 — and how ArcisAI qualifies on both hardware and software.' },
+    { title: 'STQC & BIS-ER compliance clinic', desc: 'See exactly what is required to sell and deploy CCTV in India from April 2026, and how ArcisAI qualifies on both hardware and software.' },
     { title: 'Cloud VMS & partner desk', desc: 'Walk through multi-site Cloud VMS at any scale, and meet the channel team for reseller and OEM opportunities.' },
   ];
 
@@ -169,7 +169,7 @@ const FSIE2026 = () => {
               <Heading as="h1" size={{ base: 'xl', md: '2xl' }} lineHeight={1.15} fontWeight="700">ArcisAI at FSIE Mumbai 2026</Heading>
               <Text fontSize={{ base: 'md', md: 'lg' }} color="whiteAlpha.800" maxW="580px">
                 Meet the ArcisAI team at Booth C13 from <Text as="span" color="white" fontWeight="600">3–5 September 2026</Text> for
-                live demos of Made-in-India, STQC &amp; BIS-ER certified AI CCTV — edge-AI cameras, Cloud VMS and
+                live demos of Made-in-India, STQC &amp; BIS-ER certified AI CCTV: edge-AI cameras, Cloud VMS and
                 ArcisGPT. Book a meeting slot below and we&rsquo;ll confirm a time.
               </Text>
               <CustomButton onClick={onBookMeeting} as="button" width="220px" height="50px" fontSize="16px" fontWeight="600" hoverBorderColor={GREEN}>
@@ -194,10 +194,10 @@ const FSIE2026 = () => {
               </Box>
               <Box bg="whiteAlpha.100" borderRadius="2xl" p={7} border="1px solid" borderColor="whiteAlpha.200">
                 <VStack spacing={4} align="stretch">
-                  <HStack><Icon as={MdLocationOn} boxSize={6} color={PURPLE} /><Text fontWeight="600">Fire &amp; Safety India Expo — Mumbai</Text></HStack>
+                  <HStack><Icon as={MdLocationOn} boxSize={6} color={PURPLE} /><Text fontWeight="600">Fire &amp; Safety India Expo, Mumbai</Text></HStack>
                   <HStack><Icon as={MdEvent} boxSize={6} color={PURPLE} /><Text><Text as="span" color="whiteAlpha.700">Dates:</Text> 3–5 September 2026</Text></HStack>
                   <HStack><Icon as={MdPlace} boxSize={6} color={PURPLE} /><Text><Text as="span" color="whiteAlpha.700">Booth:</Text> C13</Text></HStack>
-                  <Text color="whiteAlpha.700" fontSize="sm">Bring your site requirements — our engineers will map the right camera, VMS and analytics on the spot.</Text>
+                  <Text color="whiteAlpha.700" fontSize="sm">Bring your site requirements and our engineers will map the right camera, VMS and analytics on the spot.</Text>
                 </VStack>
               </Box>
             </Box>
@@ -214,7 +214,7 @@ const FSIE2026 = () => {
               FSIE Mumbai 2026 is where India&rsquo;s fire, safety and security buyers evaluate what they can
               legally specify and deploy this year. ArcisAI is a Made-in-India brand of AI CCTV built by{' '}
               <CLink as={NextLink} href="/about-us" sx={inlineLink}>Adiance Technologies</CLink>, and one of the few
-              Indian brands certified across both hardware and software — so at Booth C13 you can see compliant,
+              Indian brands certified across both hardware and software, so at Booth C13 you can see compliant,
               enterprise-grade AI surveillance running live rather than on a slide.
             </Text>
             <Text color="whiteAlpha.800" fontSize={{ base: 'md', md: 'lg' }}>

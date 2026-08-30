@@ -43,11 +43,11 @@ const FAQS = [
   },
   {
     q: 'Is ArcisAI certified to sell in India?',
-    a: 'Yes. ArcisAI holds STQC certification (Video Management Software) and BIS-ER certification (hardware, R-72003735 under ER01:2024) — both required for CCTV sold and installed in India from April 2026, including government, PSU and GeM procurement.',
+    a: 'Yes. ArcisAI holds STQC certification (Video Management Software) and BIS-ER certification (hardware, R-72003735 under ER01:2024), both required for CCTV sold and installed in India from April 2026, including government, PSU and GeM procurement.',
   },
   {
     q: 'What makes ArcisAI different from other CCTV brands?',
-    a: 'ArcisAI runs AI analytics on the camera (edge AI) with no per-camera annual licence fees, is Made-in-India and NDAA compliant, and pairs a cloud-native VMS with ArcisGPT — a conversational AI layer that most Indian competitors do not offer.',
+    a: 'ArcisAI runs AI analytics on the camera (edge AI) with no per-camera annual licence fees, is Made-in-India and NDAA compliant, and pairs a cloud-native VMS with ArcisGPT, a conversational AI layer that most Indian competitors do not offer.',
   },
   {
     q: 'How can I get ArcisAI for my organisation?',
@@ -94,7 +94,7 @@ const JalandharWarriors = () => {
             <Heading as="h1" size={{ base: '2xl', md: '3xl' }} lineHeight={1.05} fontWeight="700">Jalandhar Warriors</Heading>
             {/* COPY: campaign tagline / positioning from content team. */}
             <Text fontSize={{ base: 'md', md: 'xl' }} color="whiteAlpha.800" maxW="640px">
-              The official campaign hub — powered by ArcisAI, built by{' '}
+              The official campaign hub, powered by ArcisAI, built by{' '}
               <CLink as={NextLink} href="/about-us" sx={inlineLink}>Adiance Technologies</CLink>.
             </Text>
             <HStack spacing={4} pt={2} flexWrap="wrap" justify={{ base: 'center', md: 'flex-start' }}>
@@ -112,13 +112,13 @@ const JalandharWarriors = () => {
             <Heading as="h2" size="lg" fontWeight="700">About the campaign</Heading>
             {/* COPY: content team supplies the campaign narrative as real, visible prose. */}
             <Text color="whiteAlpha.800" fontSize={{ base: 'md', md: 'lg' }}>
-              This is the permanent home for the Jalandhar Warriors campaign — the story, updates and imagery are
+              This is the permanent home for the Jalandhar Warriors campaign. The story, updates and imagery are
               curated by the ArcisAI team. The campaign is powered by ArcisAI, whose cameras keep venues, campuses
               and public spaces secure with real-time, on-camera intelligence.
             </Text>
             <Text color="whiteAlpha.800" fontSize={{ base: 'md', md: 'lg' }}>
               ArcisAI cameras are STQC and BIS-ER certified and NDAA Section 889 compliant, running 20+ analytics
-              directly on the camera — face recognition, ANPR, crowd counting, intrusion and fire detection and more.
+              directly on the camera: face recognition, ANPR, crowd counting, intrusion and fire detection and more.
               Explore <CLink as={NextLink} href="/why-choose-arcisai" sx={inlineLink}>why teams choose ArcisAI</CLink> or
               see the full <CLink as={NextLink} href="/certifications" sx={inlineLink}>certifications</CLink>.
             </Text>
@@ -141,7 +141,7 @@ const JalandharWarriors = () => {
               <Text color="whiteAlpha.800" fontSize={{ base: 'md', md: 'lg' }}>
                 The stack is complete end to end: on-camera <CLink as={NextLink} href="/solution/edge-ai" sx={inlineLink}>edge AI</CLink>,
                 a <CLink as={NextLink} href="/cloud-vms" sx={inlineLink}>Cloud VMS</CLink> that scales to 10,000+ cameras, and{' '}
-                <CLink as={NextLink} href="/arcisgpt" sx={inlineLink}>ArcisGPT</CLink> for natural-language video search — a
+                <CLink as={NextLink} href="/arcisgpt" sx={inlineLink}>ArcisGPT</CLink> for natural-language video search, a
                 conversational AI layer most Indian competitors do not offer.
               </Text>
             </VStack>

@@ -12,7 +12,7 @@ const GA4_ID = 'G-FGCHHSNZ7D';
 // Bare title — the root layout applies the "%s | ArcisAI" template, so brand is
 // appended exactly once. Canonical is absolute + self-referencing.
 export const metadata = {
-  title: 'ArcisAI at FSIE Mumbai 2026 — Booth C13',
+  title: 'ArcisAI at FSIE Mumbai 2026: Booth C13',
   description:
     'Meet ArcisAI at FSIE Mumbai 2026 (3–5 Sep), Booth C13. Live demos of STQC & BIS-ER certified AI CCTV, Cloud VMS and ArcisGPT. Book your meeting slot.',
   keywords: [
@@ -21,7 +21,7 @@ export const metadata = {
   ],
   alternates: { canonical: 'https://arcisai.io/fsie-2026' },
   openGraph: {
-    title: 'ArcisAI at FSIE Mumbai 2026 — Booth C13',
+    title: 'ArcisAI at FSIE Mumbai 2026: Booth C13',
     description:
       'Live demos of AI CCTV, Cloud VMS and ArcisGPT at FSIE Mumbai 2026, 3–5 Sep. Book your meeting at Booth C13.',
     url: 'https://arcisai.io/fsie-2026',
@@ -31,7 +31,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@arcisai',
-    title: 'ArcisAI at FSIE Mumbai 2026 — Booth C13',
+    title: 'ArcisAI at FSIE Mumbai 2026: Booth C13',
     description: 'Live AI surveillance demos at FSIE Mumbai 2026. Book a meeting at Booth C13.',
     images: ['/og/home.jpg'],
   },

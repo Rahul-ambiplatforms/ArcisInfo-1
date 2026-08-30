@@ -14,15 +14,15 @@ const GA4_ID = 'G-FGCHHSNZ7D';
 // Permanent entity hub. Bare title → root layout appends "| ArcisAI" once.
 // Absolute self-referencing canonical.
 export const metadata = {
-  title: 'Jalandhar Warriors — Official Campaign Hub',
+  title: 'Jalandhar Warriors: Official Campaign Hub',
   description:
-    'The official Jalandhar Warriors campaign hub, powered by ArcisAI — India’s Made-in-India, STQC & BIS-ER certified AI CCTV brand.',
+    'The official Jalandhar Warriors campaign hub, powered by ArcisAI, India’s Made-in-India, STQC & BIS-ER certified AI CCTV brand.',
   keywords: [
     'Jalandhar Warriors', 'ArcisAI', 'AI CCTV India', 'Made in India surveillance',
   ],
   alternates: { canonical: 'https://arcisai.io/jalandhar-warriors' },
   openGraph: {
-    title: 'Jalandhar Warriors — Powered by ArcisAI',
+    title: 'Jalandhar Warriors: Powered by ArcisAI',
     description:
       'The official Jalandhar Warriors campaign hub, powered by ArcisAI’s Made-in-India AI surveillance.',
     url: 'https://arcisai.io/jalandhar-warriors',
@@ -32,7 +32,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@arcisai',
-    title: 'Jalandhar Warriors — Powered by ArcisAI',
+    title: 'Jalandhar Warriors: Powered by ArcisAI',
     description: 'The official Jalandhar Warriors campaign hub, powered by ArcisAI.',
     images: ['/og/home.jpg'],
   },

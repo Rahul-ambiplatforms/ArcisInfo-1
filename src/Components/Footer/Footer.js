@@ -204,6 +204,7 @@ const Footer = () => {
               <FooterLink href={"/BIS-ER-certification"}>BIS-ER Certification</FooterLink>
               <FooterLink href={"/event"}>Event</FooterLink>
               <FooterLink href={"/jalandhar-warriors"}>Jalandhar Warriors</FooterLink>
+              <FooterLink href={"/fsie-2026"}>FSIE 2026</FooterLink>
               <FooterLink href={"/news"}>News</FooterLink>
               <FooterLink href={"/privacy-policy"}>Privacy Policy</FooterLink>
               <FooterLink href={"/terms-of-service"}>
