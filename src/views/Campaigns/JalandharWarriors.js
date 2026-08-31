@@ -133,25 +133,6 @@ const JalandharWarriors = () => {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-<<<<<<< HEAD
-      {/* HERO */}
-      <Box bgGradient={`linear(135deg, ${DARK} 0%, #2A1B4A 100%)`} py={{ base: 16, md: 28 }} px={4} position="relative" overflow="hidden">
-        <Box position="absolute" bottom="-25%" left="-10%" w="520px" h="520px" bg={PURPLE} opacity={0.2} filter="blur(130px)" borderRadius="full" />
-        <Container maxW="1100px" position="relative">
-          <VStack spacing={6} align={{ base: 'center', md: 'flex-start' }} textAlign={{ base: 'center', md: 'left' }}>
-            <Text color={GREEN} fontWeight="bold" letterSpacing="wide">OFFICIAL CAMPAIGN HUB</Text>
-            <Heading as="h1" size={{ base: '2xl', md: '3xl' }} lineHeight={1.05} fontWeight="700">Jalandhar Warriors</Heading>
-            {/* COPY: campaign tagline / positioning from content team. */}
-            <Text fontSize={{ base: 'md', md: 'xl' }} color="whiteAlpha.800" maxW="640px">
-              The official campaign hub, powered by ArcisAI, built by{' '}
-              <CLink as={NextLink} href="/about-us" sx={inlineLink}>Adiance Technologies</CLink>.
-            </Text>
-            <HStack spacing={4} pt={2} flexWrap="wrap" justify={{ base: 'center', md: 'flex-start' }}>
-              <CustomButton as={NextLink} href="/contact-us" onClick={onCta('follow_warriors')} width="200px" height="50px" fontSize="16px" fontWeight="600" hoverBorderColor={GREEN}>Follow the Warriors</CustomButton>
-              <CustomButton as={NextLink} href="/eco-series" onClick={onCta('explore_arcisai')} width="180px" height="50px" fontSize="16px" fontWeight="600">Explore ArcisAI</CustomButton>
-            </HStack>
-          </VStack>
-=======
       {/* HERO — campaign artwork as the backdrop, with the copy and buttons as
           real elements on top. The banner's own text was baked in at a size that
           read too small at container width, so PUNJAB_WARRIOR_BANNER_BG.webp is
@@ -224,30 +205,10 @@ const JalandharWarriors = () => {
               ))}
             </Flex>
           </Box>
->>>>>>> eda4366db0ccbc2ab87393adc825167c03dcb69a
         </Container>
       </Box>
 
       {/* ABOUT THE CAMPAIGN */}
-<<<<<<< HEAD
-      <Box py={{ base: 12, md: 16 }} px={4}>
-        <Container maxW="900px">
-          <VStack spacing={5} align="flex-start">
-            <Heading as="h2" size="lg" fontWeight="700">About the campaign</Heading>
-            {/* COPY: content team supplies the campaign narrative as real, visible prose. */}
-            <Text color="whiteAlpha.800" fontSize={{ base: 'md', md: 'lg' }}>
-              This is the permanent home for the Jalandhar Warriors campaign. The story, updates and imagery are
-              curated by the ArcisAI team. The campaign is powered by ArcisAI, whose cameras keep venues, campuses
-              and public spaces secure with real-time, on-camera intelligence.
-            </Text>
-            <Text color="whiteAlpha.800" fontSize={{ base: 'md', md: 'lg' }}>
-              ArcisAI cameras are STQC and BIS-ER certified and NDAA Section 889 compliant, running 20+ analytics
-              directly on the camera: face recognition, ANPR, crowd counting, intrusion and fire detection and more.
-              Explore <CLink as={NextLink} href="/why-choose-arcisai" sx={inlineLink}>why teams choose ArcisAI</CLink> or
-              see the full <CLink as={NextLink} href="/certifications" sx={inlineLink}>certifications</CLink>.
-            </Text>
-          </VStack>
-=======
       <Box py={{ base: 10, md: 8 }} px={4}>
         <Container maxW="1100px">
           {/* The prose column stays flush-left with the hero heading and buttons
@@ -300,7 +261,6 @@ const JalandharWarriors = () => {
               </AspectRatio>
             </Box>
           </Flex>
->>>>>>> eda4366db0ccbc2ab87393adc825167c03dcb69a
         </Container>
       </Box>
 
