@@ -3,7 +3,7 @@ import Partners from '@/src/views/Partners/Partners';
 export const metadata = {
   title: 'Become an ArcisAI Channel Partner | Dealer Program',
   description:
-    "Join ArcisAI's dealer and channel partner program — India's BIS-ER & STQC-certified, Made-in-India AI CCTV brand. Priority intake for system integrators and resellers in Gujarat and Maharashtra.",
+    "Join ArcisAI's dealer and channel partner program — India's BIS-ER & STQC-certified, Made-in-India AI CCTV brand for system integrators and resellers.",
   keywords: [
     'ArcisAI channel partner',
     'ArcisAI dealer program',

@@ -719,7 +719,7 @@ const seoPageDataTier2Cities = {
   "cctv-cameras-kolhapur": {
     slug: "cctv-cameras-kolhapur",
     title: "AI CCTV Cameras in Kolhapur | Foundry & Sugar Industry | ArcisAI",
-    metaDescription: "ArcisAI AI CCTV for Kolhapur — foundry MIDC, sugar mills, APMC markets, Mahalaxmi tourism. BIS-ER R-72003735, STQC VMS, IP67. Fast Maharashtra deployment. Free survey.",
+    metaDescription: "ArcisAI AI CCTV for Kolhapur — foundry MIDC, sugar mills, APMC markets, Mahalaxmi tourism. BIS-ER R-72003735, STQC VMS, IP67. Fast Maharashtra deployment.",
     keywords: [
       "CCTV camera Kolhapur", "AI CCTV Kolhapur", "security camera foundry Kolhapur",
       "CCTV sugar mill Kolhapur", "surveillance MIDC Kolhapur engineering",

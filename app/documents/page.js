@@ -3,7 +3,7 @@ import Documents from '@/src/views/Documents/Documents';
 const SITE_URL = 'https://www.arcisai.io';
 const TITLE = 'Documents & User Manuals | ArcisAI';
 const DESCRIPTION =
-  'Download official ArcisAI user manuals, datasheets, and product guides. Get the latest installation and operation documentation for ArcisAI Eco-Series, S-Series, NVRs, and Bridge Devices.';
+  'Download official ArcisAI user manuals, datasheets, and product guides — installation and operation docs for Eco-Series, S-Series, NVRs, and Bridge Devices.';
 
 export const metadata = {
   title: TITLE.replace(/\s*\|\s*ArcisAI$/, ""),

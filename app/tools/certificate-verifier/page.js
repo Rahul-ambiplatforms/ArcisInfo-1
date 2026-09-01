@@ -3,7 +3,7 @@ import CertificateVerifier from '@/src/views/Tools/CertificateVerifier';
 const SITE_URL = 'https://www.arcisai.io';
 const TITLE = 'BIS-ER & STQC Certificate Verifier | Check if CCTV is Certified to Sell in India | ArcisAI';
 const DESCRIPTION =
-  'Free tool to verify BIS-ER and STQC CCTV certificates on official government portals. Check if a CCTV camera brand is legally eligible to sell in India under the April 2026 mandate.';
+  'Free tool to verify BIS-ER and STQC CCTV certificates on official government portals — check if a brand is legal to sell in India.';
 
 export const metadata = {
   title: TITLE.replace(/\s*\|\s*ArcisAI$/, ""),

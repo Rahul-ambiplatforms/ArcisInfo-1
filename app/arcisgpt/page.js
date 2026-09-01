@@ -3,7 +3,7 @@ import MainProduct from '@/src/views/Series/MainProduct';
 export const metadata = {
   title: 'ArcisGPT | Conversational AI for CCTV — Talk to Your Footage',
   description:
-    'ArcisGPT is India’s conversational AI for surveillance — search your CCTV footage in plain language. Ask "show all unauthorized entries after 9pm" and get the clip instantly, plus AI video summaries. GenAI video intelligence by ArcisAI.',
+    'ArcisGPT is India’s conversational AI for surveillance — search your CCTV footage in plain language.',
   keywords: [
     'ArcisGPT', 'conversational AI CCTV', 'conversational AI for surveillance India',
     'talk to your CCTV footage', 'natural language video search India', 'AI video search India',

@@ -53,13 +53,18 @@ export function stripBrandSuffix(title = '') {
   return String(title).replace(/\s*[|\-–]\s*ArcisAI\s*$/i, '').trim();
 }
 
-/** Title-case a slug segment: "banking-atm-security" → "Banking Atm Security". */
+// Words that must stay fully upper-cased instead of naive title-casing
+// ("Cctv", "Nvr", "Vms" reads as a typo, not an acronym). Anywhere a slug
+// segment case-insensitively matches one of these, render it upper-cased.
+const ACRONYMS = new Set(['ai', 'cctv', 'nvr', 'vms', 'anpr', 'ptz', 'abd', 'sla', 'roi']);
+
+/** Title-case a slug segment, preserving known acronyms: "ai-ptz-cctv-camera" → "AI PTZ CCTV Camera". */
 export function humanizeSlug(slug = '') {
   return String(slug)
     .replace(/^\/+/, '')
     .split('-')
     .filter(Boolean)
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .map((w) => (ACRONYMS.has(w.toLowerCase()) ? w.toUpperCase() : w.charAt(0).toUpperCase() + w.slice(1)))
     .join(' ');
 }
 
@@ -217,6 +222,16 @@ export function buildSeoPageMetadata({ pageData, path, fallbackTitle, fallbackDe
       url: canonical,
       type: 'website',
       images: [{ url: ogImage || '/og/home.jpg', width: 1200, height: 630 }],
+    },
+    // Without an explicit `twitter` block here, Next.js metadata resolution
+    // falls back to the root layout's generic default
+    // ("NDAA-compliant, STQC-certified edge AI cameras...") on every one of
+    // these ~250 SEO landing pages instead of the page's own title/description.
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [ogImage || '/og/home.jpg'],
     },
   };
 }

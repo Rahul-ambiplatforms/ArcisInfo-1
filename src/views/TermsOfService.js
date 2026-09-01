@@ -38,7 +38,7 @@ function TermsOfService({ headingHide }) {
           mb={4}
         >
           {!headingHide && (
-            <Heading size="lg" mb={{ base: 2, md: 0 }}>
+            <Heading as="h1" size="lg" mb={{ base: 2, md: 0 }}>
               Terms of Services
             </Heading>
           )}

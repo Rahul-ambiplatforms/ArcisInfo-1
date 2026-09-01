@@ -1249,7 +1249,7 @@ const seoPageData = {
   "ndaa-compliant-cctv-india": {
     slug: "ndaa-compliant-cctv-india",
     title: "NDAA-Compliant, Made-in-India CCTV — Secure Surveillance | ArcisAI",
-    metaDescription: "Need NDAA-compliant, data-sovereign CCTV in India? ArcisAI offers STQC and BIS-ER certified, Made-in-India AI cameras with secure firmware and no data sovereignty concerns.",
+    metaDescription: "Need NDAA-compliant, data-sovereign CCTV in India? ArcisAI offers STQC and BIS-ER certified, Made-in-India AI cameras.",
     keywords: ["NDAA compliant CCTV India", "data sovereign CCTV", "secure CCTV India", "made in India CCTV"],
     heroTitle: "NDAA-Compliant, Made-in-India CCTV",
     heroSubtitle: "Data Sovereignty Without Compromise",
@@ -1269,7 +1269,7 @@ const seoPageData = {
   "made-in-india-cctv-brand": {
     slug: "made-in-india-cctv-brand",
     title: "Best Made-in-India CCTV Camera Brand 2026 | ArcisAI",
-    metaDescription: "ArcisAI is a Made-in-India AI CCTV brand by Adiance Technologies, STQC and BIS-ER certified, with its own factory, edge AI, and ArcisGPT. Built for Make-in-India procurement.",
+    metaDescription: "ArcisAI is a Made-in-India AI CCTV brand by Adiance Technologies, STQC and BIS-ER certified, with its own factory, edge AI, and ArcisGPT.",
     keywords: ["made in India CCTV brand", "Indian CCTV camera brand", "made in India CCTV camera", "Indian AI CCTV"],
     heroTitle: "Best Made-in-India CCTV Brand",
     heroSubtitle: "Designed and Manufactured in India",
@@ -1289,7 +1289,7 @@ const seoPageData = {
   "best-enterprise-cctv-india": {
     slug: "best-enterprise-cctv-india",
     title: "Best Enterprise AI Surveillance in India 2026 | ArcisAI",
-    metaDescription: "ArcisAI delivers enterprise-grade AI surveillance in India: edge AI cameras, Cloud VMS, ArcisGPT, 30+ models, and STQC/BIS-ER certification for large-scale deployments.",
+    metaDescription: "ArcisAI delivers enterprise-grade AI surveillance in India — edge AI cameras, Cloud VMS, ArcisGPT, and STQC/BIS-ER certification.",
     keywords: ["enterprise CCTV India", "enterprise AI surveillance", "business CCTV India", "scalable CCTV India"],
     heroTitle: "Best Enterprise AI Surveillance in India",
     heroSubtitle: "Scalable, Certified, AI-First",

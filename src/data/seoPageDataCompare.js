@@ -2,7 +2,7 @@ const seoPageDataCompare = {
   "arcisai-vs-hikvision": {
     slug: "/compare/arcisai-vs-hikvision",
     title: "ArcisAI vs Hikvision | NDAA Compliant AI Camera Alternative",
-    metaDescription: "Compare ArcisAI by Adiance with Hikvision. ArcisAI offers NDAA-compliant AI cameras with edge computing, zero cybersecurity risk, and advanced analytics — the trusted alternative to banned Chinese cameras.",
+    metaDescription: "ArcisAI vs Hikvision: NDAA-compliant edge AI cameras with zero cybersecurity risk — the trusted alternative to banned Chinese cameras.",
     keywords: ["ArcisAI vs Hikvision", "Hikvision alternative", "NDAA compliant cameras", "Hikvision ban alternative", "non-Chinese security cameras", "AI camera comparison"],
     heroTitle: "ArcisAI vs Hikvision",
     heroSubtitle: "NDAA Compliant AI Camera Alternative",
@@ -40,7 +40,7 @@ const seoPageDataCompare = {
   "arcisai-vs-dahua": {
     slug: "/compare/arcisai-vs-dahua",
     title: "ArcisAI vs Dahua | Secure AI Camera Alternative to Dahua",
-    metaDescription: "Compare ArcisAI by Adiance with Dahua. ArcisAI offers NDAA-compliant AI cameras with edge analytics as a secure, trusted alternative to Dahua cameras facing bans and restrictions worldwide.",
+    metaDescription: "ArcisAI vs Dahua: NDAA-compliant edge AI cameras — a secure, trusted alternative to Dahua cameras facing bans worldwide.",
     keywords: ["ArcisAI vs Dahua", "Dahua alternative", "Dahua camera replacement", "NDAA compliant Dahua alternative", "secure camera alternative", "Dahua ban replacement"],
     heroTitle: "ArcisAI vs Dahua",
     heroSubtitle: "Trusted & Secure Camera Alternative",
@@ -72,7 +72,7 @@ const seoPageDataCompare = {
   "arcisai-vs-axis-communications": {
     slug: "/compare/arcisai-vs-axis-communications",
     title: "ArcisAI vs Axis Communications | AI-Native Camera Comparison",
-    metaDescription: "Compare ArcisAI by Adiance with Axis Communications. See how ArcisAI's edge AI-native design outperforms Axis in built-in analytics, cost efficiency, and deployment flexibility.",
+    metaDescription: "ArcisAI vs Axis Communications: edge AI-native design that outperforms Axis on built-in analytics, cost, and deployment flexibility.",
     keywords: ["ArcisAI vs Axis", "Axis Communications alternative", "Axis camera comparison", "AI camera vs Axis", "edge AI camera comparison", "Axis alternative with AI"],
     heroTitle: "ArcisAI vs Axis Communications",
     heroSubtitle: "AI-Native vs Legacy Platform",
@@ -104,7 +104,7 @@ const seoPageDataCompare = {
   "arcisai-vs-hanwha-vision": {
     slug: "/compare/arcisai-vs-hanwha-vision",
     title: "ArcisAI vs Hanwha Vision (Wisenet) | Edge AI Camera Comparison",
-    metaDescription: "Compare ArcisAI with Hanwha Vision (formerly Samsung Wisenet). ArcisAI delivers superior edge AI analytics, competitive pricing, and seamless cloud integration for modern surveillance needs.",
+    metaDescription: "ArcisAI vs Hanwha Vision (formerly Samsung Wisenet): superior edge AI analytics, competitive pricing, and seamless cloud integration.",
     keywords: ["ArcisAI vs Hanwha Vision", "Hanwha Wisenet alternative", "Samsung Wisenet comparison", "AI camera vs Hanwha", "Wisenet alternative edge AI"],
     heroTitle: "ArcisAI vs Hanwha Vision",
     heroSubtitle: "Edge AI Performance Comparison",
@@ -136,7 +136,7 @@ const seoPageDataCompare = {
   "arcisai-vs-bosch-security": {
     slug: "/compare/arcisai-vs-bosch-security",
     title: "ArcisAI vs Bosch Security | Next-Gen AI Camera Alternative",
-    metaDescription: "Compare ArcisAI by Adiance with Bosch Security cameras. ArcisAI offers more advanced edge AI, lower TCO, cloud-native architecture, and faster innovation cycles vs Bosch's enterprise cameras.",
+    metaDescription: "ArcisAI vs Bosch Security: more advanced edge AI, lower TCO, and a cloud-native architecture than Bosch's enterprise cameras.",
     keywords: ["ArcisAI vs Bosch", "Bosch security camera alternative", "Bosch camera comparison", "AI camera vs Bosch", "edge AI alternative Bosch"],
     heroTitle: "ArcisAI vs Bosch Security",
     heroSubtitle: "Innovation vs Legacy Enterprise",
@@ -168,7 +168,7 @@ const seoPageDataCompare = {
   "arcisai-vs-vivotek": {
     slug: "/compare/arcisai-vs-vivotek",
     title: "ArcisAI vs VIVOTEK | AI-Powered Camera Comparison",
-    metaDescription: "Compare ArcisAI by Adiance with VIVOTEK cameras. See how ArcisAI's superior edge AI, cloud integration, and competitive pricing make it the better choice for modern AI surveillance.",
+    metaDescription: "ArcisAI vs VIVOTEK: superior edge AI, cloud integration, and competitive pricing make ArcisAI the better choice for AI surveillance.",
     keywords: ["ArcisAI vs VIVOTEK", "VIVOTEK alternative", "VIVOTEK camera comparison", "AI camera vs VIVOTEK", "edge AI camera VIVOTEK alternative"],
     heroTitle: "ArcisAI vs VIVOTEK",
     heroSubtitle: "Superior AI at Competitive Pricing",
@@ -200,7 +200,7 @@ const seoPageDataCompare = {
   "ndaa-compliant-cameras": {
     slug: "/compare/ndaa-compliant-cameras",
     title: "Best NDAA Compliant Cameras 2026 | ArcisAI by Adiance",
-    metaDescription: "Looking for NDAA Section 889 compliant cameras? ArcisAI by Adiance offers the most advanced NDAA-compliant AI cameras with edge computing, trusted supply chain, and zero Chinese components.",
+    metaDescription: "Looking for NDAA Section 889 compliant cameras? ArcisAI offers advanced edge AI cameras with a trusted, zero-China supply chain.",
     keywords: ["NDAA compliant cameras", "NDAA Section 889 cameras", "NDAA approved security cameras", "compliant surveillance cameras", "non-Chinese security cameras 2026", "government approved cameras"],
     heroTitle: "NDAA Compliant AI Cameras",
     heroSubtitle: "Trusted Security for Government & Enterprise",
@@ -297,7 +297,7 @@ const seoPageDataCompare = {
   "arcisai-vs-chinese-cameras": {
     slug: "/compare/arcisai-vs-chinese-cameras",
     title: "ArcisAI vs Chinese Cameras | Why Switch from Chinese Surveillance Brands",
-    metaDescription: "Why organizations worldwide are replacing Chinese surveillance cameras with ArcisAI. Compare cybersecurity, compliance, AI capabilities, and data sovereignty of ArcisAI vs Chinese camera brands.",
+    metaDescription: "Why organizations worldwide are replacing Chinese surveillance cameras with ArcisAI — compare cybersecurity, compliance, and data sovereignty.",
     keywords: ["Chinese camera alternative", "replace Chinese cameras", "Chinese surveillance risk", "cybersecurity camera comparison", "data sovereignty cameras", "secure camera replacement"],
     heroTitle: "ArcisAI vs Chinese Camera Brands",
     heroSubtitle: "Security, Compliance & Superior AI",
@@ -329,7 +329,7 @@ const seoPageDataCompare = {
   "arcisai-vs-verkada": {
     slug: "/compare/arcisai-vs-verkada",
     title: "ArcisAI vs Verkada | Enterprise AI Camera Comparison 2026",
-    metaDescription: "Compare ArcisAI by Adiance with Verkada. See how ArcisAI delivers comparable cloud-managed AI cameras at significantly lower TCO with more flexible deployment options and no vendor lock-in.",
+    metaDescription: "ArcisAI vs Verkada: comparable cloud-managed AI cameras at significantly lower TCO, with more flexible deployment and no lock-in.",
     keywords: ["ArcisAI vs Verkada", "Verkada alternative", "Verkada competitor", "cloud managed cameras", "enterprise AI cameras", "Verkada pricing alternative", "AI camera comparison 2026"],
     heroTitle: "ArcisAI vs Verkada",
     heroSubtitle: "Enterprise Cloud Cameras Without the Premium Price Tag",
@@ -368,7 +368,7 @@ const seoPageDataCompare = {
   "arcisai-vs-rhombus": {
     slug: "/compare/arcisai-vs-rhombus",
     title: "ArcisAI vs Rhombus | AI Cloud Camera Comparison 2026",
-    metaDescription: "Compare ArcisAI by Adiance with Rhombus Systems. Discover how ArcisAI offers deeper edge AI analytics, GenAI video search, and more flexible deployment than Rhombus at competitive pricing.",
+    metaDescription: "ArcisAI vs Rhombus Systems: deeper edge AI analytics, GenAI video search, and more flexible deployment at competitive pricing.",
     keywords: ["ArcisAI vs Rhombus", "Rhombus alternative", "Rhombus competitor", "AI cloud cameras", "enterprise security cameras", "Rhombus comparison", "cloud camera systems 2026"],
     heroTitle: "ArcisAI vs Rhombus",
     heroSubtitle: "Next-Generation AI Cameras vs Cloud-First Platform",

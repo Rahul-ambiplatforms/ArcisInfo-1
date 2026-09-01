@@ -8,7 +8,7 @@ const CANONICAL = `${SITE}/faq`;
 export const metadata = {
   title: 'ArcisAI FAQ | AI CCTV Questions Answered',
   description:
-    'Frequently asked questions about ArcisAI products, features, pricing, installation, and support. Everything you need to know about our AI surveillance cameras and VMS.',
+    'Frequently asked questions about ArcisAI products, features, pricing, installation, and support.',
   keywords: [
     'ArcisAI FAQ', 'AI CCTV questions', 'surveillance FAQ',
     'CCTV installation help', 'VMS support questions',

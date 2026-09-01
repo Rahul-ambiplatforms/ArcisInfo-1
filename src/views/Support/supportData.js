@@ -363,7 +363,7 @@ export const supportCategories = [
   {
     slug: 'nvr-connectivity',
     title: 'NVR Connectivity & Configuration',
-    description: 'NVR setup, camera linking, and recordings',
+    description: 'NVR setup and camera linking',
     iconName: 'FiHardDrive',
     accent: '#5EEAD4',
     accentSoft: 'rgba(94, 234, 212, 0.12)',

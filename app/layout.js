@@ -104,7 +104,7 @@ export const metadata = {
     template: '%s | ArcisAI',
   },
   description:
-    'ArcisAI by Adiance Technologies delivers enterprise AI CCTV cameras with NDAA compliance and STQC certification. Edge AI, Cloud VMS, ArcisGPT, and Bridge Device for global markets.',
+    'ArcisAI by Adiance Technologies delivers enterprise AI CCTV cameras with NDAA compliance and STQC certification.',
   keywords: [
     'AI CCTV cameras', 'NDAA compliant cameras', 'enterprise surveillance',
     'STQC certified', 'edge AI analytics', 'cloud VMS', 'ArcisAI',
@@ -164,7 +164,7 @@ function buildCsp() {
     "style-src 'self' 'unsafe-inline'",
     "img-src 'self' data: blob: https:",
     "font-src 'self' data:",
-    "frame-src https://www.googletagmanager.com https://www.facebook.com https://www.youtube.com https://www.youtube-nocookie.com",
+    "frame-src https://www.googletagmanager.com https://www.facebook.com",
     `connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.facebook.com https://connect.facebook.net https://www.arcisai.io https://arcisai.io https://vmukti.com https://hook.eu1.make.com https://etaems.arcisai.io:5000${extraConnect}`,
     "media-src 'self' https:",
     "object-src 'none'",

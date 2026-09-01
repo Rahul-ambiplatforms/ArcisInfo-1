@@ -1,4 +1,5 @@
 import Products from '@/src/views/Product/Products';
+import { humanizeSlug } from '@/src/data/buildSeoPageSchemas';
 
 // Prerendered so the HTML is edge-cacheable instead of rendered per request.
 // Keys mirror src/views/Product/Data/Content.js, which the view resolves by
@@ -16,10 +17,9 @@ export function generateStaticParams() {
 export async function generateMetadata(props) {
   const params = await props.params;
   const { productId } = params;
-  const name = productId
-    .split('-')
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(' ');
+  // humanizeSlug keeps AI/CCTV/PTZ etc. upper-cased instead of naive
+  // title-case turning them into "Ai" / "Cctv" / "Ptz".
+  const name = humanizeSlug(productId);
 
   return {
     title: `${name} | S-Series AI Camera`,
@@ -30,6 +30,12 @@ export async function generateMetadata(props) {
       description: `ArcisAI ${name} — premium S-Series AI surveillance camera.`,
       url: `https://arcisai.io/s-series/${productId}`,
       images: [{ url: '/og/s-series.jpg', width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${name} | S-Series AI Camera | ArcisAI`,
+      description: `ArcisAI ${name} — premium S-Series AI surveillance camera.`,
+      images: ['/og/s-series.jpg'],
     },
   };
 }

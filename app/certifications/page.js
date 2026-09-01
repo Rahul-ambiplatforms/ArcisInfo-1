@@ -3,7 +3,7 @@ import Certifications from '@/src/views/Certifications/Certifications';
 export const metadata = {
   title: 'ArcisAI Certifications | BIS-ER & STQC Certified CCTV',
   description:
-    "ArcisAI's BIS-ER certified hardware (R-72003735 ER01:2024) and STQC-certified VMS, with ISO 27001:2022, CE, FCC, RoHS and ONVIF. Made in India, NDAA compliant — verify on official portals.",
+    "ArcisAI's BIS-ER certified hardware (R-72003735 ER01:2024) and STQC-certified VMS, with ISO 27001:2022, CE, FCC, RoHS and ONVIF.",
   keywords: [
     'ArcisAI certifications', 'BIS-ER certified CCTV', 'STQC certified VMS',
     'NDAA compliant CCTV India', 'ISO 27001 CCTV', 'made in India CCTV certification',

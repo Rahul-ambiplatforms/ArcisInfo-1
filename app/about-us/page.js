@@ -3,7 +3,7 @@ import AboutUs from '@/src/views/AboutUs/AboutUs';
 export const metadata = {
   title: 'About ArcisAI | Adiance Technologies - Enterprise AI Surveillance',
   description:
-    'ArcisAI is the flagship brand of Adiance Technologies. NDAA-compliant, STQC-certified AI CCTV with in-house manufacturing, edge AI R&D, and global enterprise deployments across US, UAE, UK, and India.',
+    'ArcisAI is the flagship brand of Adiance Technologies — NDAA-compliant, STQC-certified AI CCTV with in-house manufacturing and global deployments.',
   keywords: [
     'about ArcisAI', 'Adiance Technologies', 'NDAA compliant manufacturer',
     'STQC certified', 'AI camera company', 'enterprise surveillance manufacturer',

@@ -1,72 +1,60 @@
+import { notFound } from 'next/navigation';
 import Solutions from '@/src/views/Solution/Solutions';
 import { getSolutionSEO } from '@/src/views/Solution/Data/SEOContent';
 
-const SOLUTION_META = {
-  'edge-ai': {
-    title: 'Edge AI Surveillance Solutions',
-    description: 'Enterprise edge AI surveillance solutions with on-device processing, face recognition, ANPR, and crowd analytics. Real-time insights without cloud dependency.',
-  },
-  'corporate': {
-    title: 'Corporate Office Surveillance',
-    description: 'AI surveillance for corporate offices — access control, visitor management, perimeter security, and employee safety with edge AI cameras.',
-  },
-  'retail': {
-    title: 'Retail Surveillance & Analytics',
-    description: 'AI-powered retail surveillance with footfall analytics, queue management, theft detection, and customer behavior insights.',
-  },
-  'banking': {
-    title: 'Banking & Finance Surveillance',
-    description: 'Secure banking surveillance with ATM monitoring, vault security, ANPR, and AI-based fraud detection cameras.',
-  },
-  'smart-city': {
-    title: 'Smart City Surveillance',
-    description: 'Smart city AI surveillance with crowd analytics, traffic monitoring, ANPR, and emergency response integration.',
-  },
-  'healthcare': {
-    title: 'Healthcare Surveillance',
-    description: 'Healthcare facility surveillance with patient safety monitoring, PPE compliance, and restricted area access control.',
-  },
-  'manufacturing': {
-    title: 'Manufacturing & Factory Surveillance',
-    description: 'Industrial AI surveillance for manufacturing — PPE compliance, equipment monitoring, fire detection, and worker safety analytics.',
-  },
-  'logistics': {
-    title: 'Logistics & Warehouse Surveillance',
-    description: 'Logistics surveillance with inventory monitoring, dock security, vehicle tracking, and ANPR for warehouses and distribution centers.',
-  },
-};
+// NOTE: deliberately NOT importing `Solution` from Data/Content.js here.
+// That file's data objects pull in raw .svg icon imports, and Content.js is
+// otherwise only ever reached through Solutions.js — a 'use client'
+// component, where Next's SVGR webpack rule handles them fine. Importing it
+// directly into this file (a Server Component) routes those same .svg files
+// through the server compiler instead, which failed to parse them ("no
+// loaders configured") in testing. getSolutionSEO() below has the exact same
+// key set ('edge-ai' | 'cloud-ai' | 'generative-ai') without importing any
+// SVGs, so it's used as the "does this id have real content" check instead.
+const REAL_SOLUTION_IDS = new Set(['edge-ai', 'cloud-ai', 'generative-ai']);
 
-// Prerender every solution page. Without this the route had no static output,
-// so Next rendered it per-request and sent
-// `Cache-Control: private, no-cache, no-store` — measured on the live
-// deployment as a 1,334 ms TTFB with `cf-cache-status: BYPASS`, i.e. Cloudflare
-// caching nothing. Prerendering makes the HTML cacheable at the edge.
-// dynamicParams stays at its default (true), so any id not listed here still
-// renders on demand exactly as before.
+// SEO audit fix (2026-09-01): generateStaticParams previously listed 8 ids
+// ('edge-ai' + 7 others — corporate/retail/banking/smart-city/healthcare/
+// manufacturing/logistics) that had curated metadata (title/description/OG)
+// but NO entry in `Solution` (src/views/Solution/Data/Content.js). Solutions.js
+// resolves `Solution[solutionId]`, finds nothing, and renders a bare
+// "Solution not found" placeholder — while this route kept returning HTTP 200
+// with real-looking meta tags. That is a textbook soft-404: crawlers see rich
+// metadata promising real content and an empty body, which is exactly the
+// "Soft 404" bucket GSC's Page Indexing report flags as a website-caused
+// indexing failure.
+//
+// Meanwhile 'cloud-ai' and 'generative-ai' DO have full real entries in
+// `Solution` (and matching curated SEO in SEOContent.js) but were never in
+// generateStaticParams, so they had no static build output and weren't
+// discoverable via the sitemap.
+//
+// Fix: only prerender/serve the ids that actually have content —
+// REAL_SOLUTION_IDS below, which is exactly ['edge-ai', 'cloud-ai',
+// 'generative-ai']. The 7 orphaned ids are 301-redirected in
+// next.config.js to the equivalent page that already has real content
+// (or, for 'corporate', which has no equivalent, simply removed — a real
+// 404 there is honest; a fake 200 was not).
 export const revalidate = 86400;
 
 export function generateStaticParams() {
-  return Object.keys(SOLUTION_META).map((solutionId) => ({ solutionId }));
+  return Array.from(REAL_SOLUTION_IDS).map((solutionId) => ({ solutionId }));
 }
 
 export async function generateMetadata(props) {
   const params = await props.params;
   const { solutionId } = params;
 
-  // Prefer the keyword-optimized copy from SEOContent.js (this is what
-  // react-helmet-async used to inject client-side). Fall back to the inline
-  // SOLUTION_META map for solutions that don't have a SEOContent entry yet,
-  // and finally to a generic computed title.
-  const solutionSEO = getSolutionSEO(solutionId);
-  const fallback = SOLUTION_META[solutionId] || {
-    title: `${solutionId.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())} Surveillance Solutions`,
-    description: `AI surveillance solutions for ${solutionId.replace(/-/g, ' ')} — edge AI cameras, cloud VMS, and smart analytics from ArcisAI.`,
-  };
+  if (!REAL_SOLUTION_IDS.has(solutionId)) {
+    return { title: 'Page Not Found', robots: { index: false, follow: false } };
+  }
 
-  const title = solutionSEO?.metatitle ?? fallback.title;
-  const description = solutionSEO?.metadescription ?? fallback.description;
-  const canonical =
-    solutionSEO?.canonical ?? `https://arcisai.io/solution/${solutionId}`;
+  const solutionSEO = getSolutionSEO(solutionId);
+  const title = solutionSEO?.metatitle ?? `${solutionId.replace(/-/g, ' ')} Surveillance Solutions`;
+  const description =
+    solutionSEO?.metadescription ??
+    `AI surveillance solutions for ${solutionId.replace(/-/g, ' ')} — edge AI cameras, cloud VMS, and smart analytics from ArcisAI.`;
+  const canonical = solutionSEO?.canonical ?? `https://arcisai.io/solution/${solutionId}`;
   const ogImage = solutionSEO?.ogimage ?? '/og/solutions.jpg';
 
   return {
@@ -91,5 +79,13 @@ export async function generateMetadata(props) {
 
 export default async function SolutionPage(props) {
   const params = await props.params;
+  // Real 404 (not a 200 "Solution not found" placeholder) for any id with no
+  // backing content — see the soft-404 note above. Solutions.js (a 'use
+  // client' component) does the equivalent `Solution[solutionId]` check
+  // itself and would render nothing useful anyway; this just makes sure the
+  // HTTP status is honest before it gets that far.
+  if (!REAL_SOLUTION_IDS.has(params.solutionId)) {
+    notFound();
+  }
   return <Solutions solutionId={params.solutionId} />;
 }

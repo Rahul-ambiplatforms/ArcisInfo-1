@@ -243,7 +243,7 @@ const seoPageDataGujaratCities = {
   "cctv-cameras-rajkot": {
     slug: "cctv-cameras-rajkot",
     title: "AI CCTV Cameras in Rajkot | SME & Engineering Security | ArcisAI",
-    metaDescription: "ArcisAI AI CCTV in Rajkot — BIS-ER certified, STQC-approved VMS for manufacturing SMEs, engineering workshops & auto-component units. 8 edge AI detections. Free quote.",
+    metaDescription: "ArcisAI AI CCTV in Rajkot — BIS-ER certified, STQC-approved VMS for manufacturing SMEs, engineering workshops & auto-component units. 8 edge AI detections.",
     keywords: [
       "CCTV camera Rajkot", "AI CCTV Rajkot", "security camera Rajkot",
       "CCTV for manufacturing SME Rajkot", "BIS certified CCTV Rajkot",

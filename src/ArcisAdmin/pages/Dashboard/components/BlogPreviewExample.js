@@ -404,7 +404,7 @@ const BlogsOverviewDash = () => {
         <meta property="og:url" content={currentUrl} />
         <meta property="og:type" content="article" />
         {/* <meta property="og:type" content={currentUrl} /> */}
-        <meta property="og:site_name" content="Vmukti Solutions" />
+        <meta property="og:site_name" content="ArcisAI" />
         <meta property="og:image" content={mainImageOg} />
         <meta property="og:locale" content="en_US" />
         <meta

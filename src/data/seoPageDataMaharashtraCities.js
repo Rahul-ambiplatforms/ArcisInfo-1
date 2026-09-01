@@ -245,7 +245,7 @@ const seoPageDataMaharashtraCities = {
   "cctv-cameras-nashik": {
     slug: "cctv-cameras-nashik",
     title: "AI CCTV Cameras in Nashik | Manufacturing, Pharma & Winery Security | ArcisAI",
-    metaDescription: "ArcisAI AI CCTV in Nashik — BIS-ER & STQC-certified for Ambad MIDC manufacturing, pharma units, wineries & agricultural cold chains. 8 edge AI detections. Free quote.",
+    metaDescription: "ArcisAI AI CCTV in Nashik — BIS-ER & STQC-certified for Ambad MIDC manufacturing, pharma units, wineries & agricultural cold chains. 8 edge AI detections.",
     keywords: [
       "CCTV camera Nashik", "AI CCTV Nashik", "BIS certified CCTV Nashik",
       "MIDC Ambad security camera", "pharma CCTV Nashik", "winery surveillance Nashik",

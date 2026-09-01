@@ -2,7 +2,7 @@ const seoPageDataExpansion5 = {
   "stqc-certified-ai-cctv-camera-india": {
     "slug": "stqc-certified-ai-cctv-camera-india",
     "title": "STQC Certified AI CCTV Camera India | ArcisAI by Adiance",
-    "metaDescription": "ArcisAI is India's STQC certified AI CCTV camera brand with government-approved VMS. Mandatory compliance since April 2026. Edge AI, Cloud AI, and GenAI surveillance — fully certified, fully Indian.",
+    "metaDescription": "ArcisAI is India's STQC certified AI CCTV camera brand with government-approved VMS. Mandatory compliance since April 2026.",
     "keywords": ["STQC certified CCTV camera", "STQC certified VMS India", "STQC approved surveillance camera", "government certified CCTV India", "STQC CCTV compliance 2025", "STQC AI camera", "Indian certified CCTV brand"],
     "heroTitle": "India's STQC Certified AI CCTV — Compliant, Intelligent, Trusted",
     "heroDescription": "Since April 2026, only STQC-certified cameras can be sold and installed in India. ArcisAI carries STQC certification on both its cameras and its Video Management System — putting it in an elite group of manufacturers that meet the government's highest security and quality standards. Every ArcisAI product is designed, manufactured, and certified in India.",
@@ -27,7 +27,7 @@ const seoPageDataExpansion5 = {
   "arcisgpt-genai-surveillance-platform": {
     "slug": "arcisgpt-genai-surveillance-platform",
     "title": "ArcisGPT — GenAI Powered Surveillance | Natural Language Video Search",
-    "metaDescription": "ArcisGPT brings Generative AI to CCTV surveillance. Search video footage using natural language, get AI-generated incident summaries, and track anything — the first Indian GPT-powered surveillance platform.",
+    "metaDescription": "ArcisGPT brings Generative AI to CCTV — search footage in natural language and get AI incident summaries, from ArcisAI.",
     "keywords": ["GenAI surveillance", "GPT powered CCTV", "ArcisGPT", "natural language video search", "AI video search CCTV", "generative AI security camera", "conversational CCTV", "GPT surveillance India"],
     "heroTitle": "ArcisGPT — Talk to Your Surveillance System",
     "heroDescription": "ArcisGPT is India's first Generative AI engine built for video surveillance. Instead of scrubbing through hours of footage, simply ask: 'Show me everyone who entered the loading dock after 10 PM' or 'Find the red truck from yesterday.' ArcisGPT understands natural language, searches your video archive intelligently, and delivers results in seconds — transforming how security teams investigate, monitor, and respond.",
@@ -52,7 +52,7 @@ const seoPageDataExpansion5 = {
   "arcisai-bridge-device-abd-upgrade-cctv": {
     "slug": "arcisai-bridge-device-abd-upgrade-cctv",
     "title": "ArcisAI Bridge Device (ABD) | Upgrade Existing CCTV to Cloud AI",
-    "metaDescription": "Upgrade your existing CCTV cameras to cloud AI surveillance without replacing a single camera. ArcisAI Bridge Device (ABD) connects any ONVIF camera to ArcisAI VMS — plug and play, zero downtime.",
+    "metaDescription": "Upgrade your existing CCTV cameras to cloud AI surveillance without replacing a single camera.",
     "keywords": ["upgrade existing CCTV cloud", "CCTV bridge device India", "add AI to old cameras", "cloud adapter IP camera", "modernize CCTV without replacing", "ONVIF cloud VMS", "upgrade analog CCTV digital", "retrofit surveillance AI"],
     "heroTitle": "Upgrade Your Entire CCTV System — Without Changing a Single Camera",
     "heroDescription": "Most organizations want AI-powered cloud surveillance but can't afford to rip and replace hundreds of existing cameras. The ArcisAI Bridge Device (ABD) solves this. Simply connect ABD to your network and every ONVIF-compatible IP camera instantly joins the ArcisAI ecosystem — gaining cloud recording, AI analytics, remote access, and ArcisGPT capabilities. No rewiring. No downtime. No camera replacements.",
@@ -77,7 +77,7 @@ const seoPageDataExpansion5 = {
   "arcisai-vs-hikvision-alternative-india": {
     "slug": "arcisai-vs-hikvision-alternative-india",
     "title": "ArcisAI vs Hikvision | Best Indian Alternative to Hikvision CCTV",
-    "metaDescription": "Looking for a Hikvision alternative in India? ArcisAI offers STQC certified, Make in India AI cameras with GenAI capabilities that Hikvision doesn't have. Compare features, compliance, and pricing.",
+    "metaDescription": "Looking for a Hikvision alternative in India? ArcisAI offers STQC certified, Make in India AI cameras with GenAI capabilities that Hikvision doesn't have.",
     "keywords": ["Hikvision alternative India", "ArcisAI vs Hikvision", "replace Hikvision camera", "Indian alternative to Hikvision", "Hikvision banned India", "STQC alternative Hikvision", "better than Hikvision India"],
     "heroTitle": "Why Indian Enterprises Are Switching from Hikvision to ArcisAI",
     "heroDescription": "Hikvision faces US government bans, cybersecurity concerns, and compliance challenges in India. With STQC certification now mandatory, organizations need a trusted Indian alternative that doesn't compromise on technology. ArcisAI delivers everything Hikvision offers — plus Generative AI (ArcisGPT), government-grade certifications, and true data sovereignty with in-house Indian manufacturing.",
@@ -102,7 +102,7 @@ const seoPageDataExpansion5 = {
   "arcisai-vs-cp-plus-comparison": {
     "slug": "arcisai-vs-cp-plus-comparison",
     "title": "ArcisAI vs CP Plus | Premium AI CCTV Comparison India 2025",
-    "metaDescription": "ArcisAI vs CP Plus comparison: GenAI capabilities, STQC certification, in-house manufacturing vs OEM. See why enterprises choose ArcisAI over CP Plus for AI surveillance.",
+    "metaDescription": "ArcisAI vs CP Plus comparison: GenAI capabilities, STQC certification, in-house manufacturing vs OEM.",
     "keywords": ["ArcisAI vs CP Plus", "CP Plus alternative", "CP Plus vs ArcisAI", "better than CP Plus", "premium CCTV India comparison", "AI CCTV brand India", "CP Plus GenAI"],
     "heroTitle": "ArcisAI vs CP Plus — Which Indian CCTV Brand Leads in AI?",
     "heroDescription": "CP Plus is India's most recognized CCTV brand. But recognition doesn't mean innovation. ArcisAI, built by Adiance Technologies, brings Generative AI (ArcisGPT), true in-house manufacturing, STQC certification, and a complete edge-to-cloud ecosystem that CP Plus simply doesn't offer. Here's an honest comparison for enterprises making a critical security decision.",
@@ -127,7 +127,7 @@ const seoPageDataExpansion5 = {
   "make-in-india-ai-cctv-manufacturer": {
     "slug": "make-in-india-ai-cctv-manufacturer",
     "title": "Make in India AI CCTV | Adiance Technologies — In-House Manufacturing",
-    "metaDescription": "ArcisAI by Adiance Technologies — India's true Make in India AI CCTV manufacturer with in-house SMT lines, PCB assembly, and non-Chinese SoCs. From factory floor to your facility.",
+    "metaDescription": "ArcisAI by Adiance Technologies — India's true Make in India AI CCTV manufacturer with in-house SMT lines, PCB assembly, and non-Chinese SoCs.",
     "keywords": ["Make in India CCTV camera", "Indian CCTV manufacturer", "in-house CCTV manufacturing India", "Adiance Technologies", "indigenous AI camera India", "Indian surveillance brand", "Made in India security camera"],
     "heroTitle": "Made in India. Engineered for the World.",
     "heroDescription": "ArcisAI isn't just assembled in India — it's designed, engineered, and manufactured here. Adiance Technologies operates a dedicated factory with modern SMT (Surface Mount Technology) lines, automated PCB assembly, multi-stage quality control, and a vertically integrated production system. Every ArcisAI camera that ships has been built from PCB to final product under one roof in India.",
@@ -152,7 +152,7 @@ const seoPageDataExpansion5 = {
   "ai-cctv-smart-city-iccc-india": {
     "slug": "ai-cctv-smart-city-iccc-india",
     "title": "AI CCTV for Smart Cities & ICCC | ArcisAI Urban Surveillance",
-    "metaDescription": "ArcisAI smart city surveillance — ICCC integration, city-wide camera management, traffic analytics, crowd monitoring, and public safety AI. STQC certified for government Smart Cities Mission projects.",
+    "metaDescription": "ArcisAI smart city surveillance — ICCC integration, city-wide camera management, traffic analytics, crowd monitoring, and public safety AI.",
     "keywords": ["smart city CCTV India", "ICCC surveillance system", "smart city camera system", "AI urban surveillance", "city-wide CCTV management", "smart city AI analytics", "municipal CCTV India"],
     "heroTitle": "AI-Powered Surveillance for India's Smart Cities",
     "heroDescription": "Smart Cities need intelligent surveillance that goes beyond recording. ArcisAI delivers a complete smart city surveillance ecosystem — from ICCC integration and city-wide camera management to AI-powered crowd analytics, traffic monitoring, and public safety alerts. STQC certified and designed for the scale, complexity, and compliance requirements of India's Smart Cities Mission.",
@@ -177,7 +177,7 @@ const seoPageDataExpansion5 = {
   "ai-cctv-hospital-healthcare-surveillance": {
     "slug": "ai-cctv-hospital-healthcare-surveillance",
     "title": "AI CCTV for Hospitals & Healthcare | Patient Safety Surveillance",
-    "metaDescription": "ArcisAI provides AI surveillance for hospitals — ICU monitoring, restricted zone access control, patient safety, fall detection, and PPE compliance. STQC certified, HIPAA-aware.",
+    "metaDescription": "ArcisAI provides AI surveillance for hospitals — ICU monitoring, restricted zone access control, patient safety, fall detection, and PPE compliance.",
     "keywords": ["AI CCTV hospital India", "hospital surveillance camera", "ICU monitoring camera", "healthcare security AI", "patient safety CCTV", "hospital zone monitoring", "medical facility surveillance"],
     "heroTitle": "Intelligent Surveillance for Hospitals & Healthcare Facilities",
     "heroDescription": "Healthcare facilities face unique surveillance challenges — protecting patients in ICUs, controlling access to restricted areas like pharmacies and operating theaters, ensuring staff PPE compliance, and monitoring visitor flow. ArcisAI's healthcare surveillance solution combines Edge AI, Cloud AI, and GenAI to deliver real-time protection with the sensitivity healthcare demands.",
@@ -202,7 +202,7 @@ const seoPageDataExpansion5 = {
   "ai-cctv-banking-atm-security": {
     "slug": "ai-cctv-banking-atm-security",
     "title": "AI CCTV for Banking & ATM Security | Fraud Detection Surveillance",
-    "metaDescription": "ArcisAI provides AI surveillance for banks and ATMs — fraud detection, vault monitoring, ATM tampering alerts, and branch security. STQC certified for RBI compliance.",
+    "metaDescription": "ArcisAI provides AI surveillance for banks and ATMs — fraud detection, vault monitoring, ATM tampering alerts, and branch security.",
     "keywords": ["ATM surveillance AI", "bank security camera India", "ATM security camera STQC", "banking CCTV AI", "vault monitoring system", "bank branch surveillance", "RBI compliant CCTV", "fraud detection camera"],
     "heroTitle": "AI-Powered Security for Banks, ATMs & Financial Institutions",
     "heroDescription": "Banks and financial institutions require the highest standards of surveillance — from ATM tampering detection to vault monitoring, from branch security to fraud prevention. ArcisAI delivers STQC-certified, AI-powered surveillance that meets RBI guidelines and protects critical financial infrastructure with edge, cloud, and GenAI capabilities.",
@@ -227,7 +227,7 @@ const seoPageDataExpansion5 = {
   "ai-cctv-factory-manufacturing-ppe": {
     "slug": "ai-cctv-factory-manufacturing-ppe",
     "title": "AI CCTV for Factories & Manufacturing | PPE Detection & Worker Safety",
-    "metaDescription": "ArcisAI delivers AI surveillance for factories — PPE detection, worker safety monitoring, equipment zone protection, and compliance automation. Edge AI + Cloud AI for manufacturing.",
+    "metaDescription": "ArcisAI delivers AI surveillance for factories — PPE detection, worker safety monitoring, equipment zone protection, and compliance automation.",
     "keywords": ["factory PPE detection camera", "worker safety AI CCTV", "manufacturing surveillance AI", "industrial zone monitoring camera", "PPE compliance camera India", "factory safety camera", "industrial AI CCTV"],
     "heroTitle": "AI Surveillance for Safer, Smarter Factories",
     "heroDescription": "Manufacturing facilities face constant safety challenges — ensuring PPE compliance, protecting hazardous zones, monitoring heavy equipment areas, and maintaining worker safety across shifts. ArcisAI's industrial surveillance solution uses Edge AI for real-time detection and Cloud AI for compliance reporting, keeping your workforce safe and your facility compliant.",
@@ -252,7 +252,7 @@ const seoPageDataExpansion5 = {
   "natural-language-video-search-surveillance": {
     "slug": "natural-language-video-search-surveillance",
     "title": "Natural Language Video Search for Surveillance | AI-Powered CCTV Search",
-    "metaDescription": "Search surveillance footage by simply describing what you're looking for. ArcisAI's natural language video search uses GenAI to find incidents, people, and objects across thousands of hours of CCTV footage.",
+    "metaDescription": "Search CCTV footage by simply describing what you're looking for — ArcisAI's GenAI search finds incidents, people, and objects in seconds.",
     "keywords": ["natural language video search", "AI video search CCTV", "search surveillance footage", "CCTV footage search AI", "intelligent video search", "conversational surveillance search", "find person CCTV AI"],
     "heroTitle": "Search Your CCTV Footage Like You Search Google",
     "heroDescription": "What if you could search your surveillance footage by simply typing 'red car entering parking lot at night' or 'person in blue jacket near emergency exit'? ArcisAI's natural language video search makes this possible. Powered by ArcisGPT, it understands what you're looking for and retrieves matching footage from across all your cameras in seconds — no timestamps, no manual scrubbing, no wasted hours.",
@@ -277,7 +277,7 @@ const seoPageDataExpansion5 = {
   "replace-chinese-cctv-india-alternative": {
     "slug": "replace-chinese-cctv-india-alternative",
     "title": "Replace Chinese CCTV in India | Indigenous AI Surveillance Alternative",
-    "metaDescription": "Replace Hikvision, Dahua, and other Chinese CCTV cameras with ArcisAI — India's STQC certified, Make in India AI surveillance platform. Zero compromise on features, complete data sovereignty.",
+    "metaDescription": "Replace Hikvision, Dahua, and other Chinese CCTV cameras with ArcisAI — India's STQC certified, Make in India AI surveillance platform.",
     "keywords": ["replace Chinese CCTV India", "Chinese CCTV alternative", "non-Chinese surveillance camera", "Indian alternative Dahua", "data sovereignty CCTV India", "indigenous CCTV camera", "replace Hikvision Dahua India"],
     "heroTitle": "Replace Chinese CCTV with India's Most Advanced AI Surveillance",
     "heroDescription": "Chinese CCTV brands face mounting security concerns globally — US bans, UK restrictions, and Indian government scrutiny over data routing, backdoor vulnerabilities, and supply chain risks. Organizations across India are actively seeking indigenous alternatives that deliver equal or better technology without the cybersecurity baggage. ArcisAI is that alternative.",
@@ -302,7 +302,7 @@ const seoPageDataExpansion5 = {
   "ai-surveillance-oil-gas-critical-infrastructure": {
     "slug": "ai-surveillance-oil-gas-critical-infrastructure",
     "title": "AI Surveillance for Oil & Gas | Critical Infrastructure Security",
-    "metaDescription": "ArcisAI provides AI CCTV for oil & gas facilities — fire detection, restricted zone monitoring, PPE compliance, perimeter security. Edge AI for hazardous environments.",
+    "metaDescription": "ArcisAI provides AI CCTV for oil & gas facilities — fire detection, restricted zone monitoring, PPE compliance, perimeter security.",
     "keywords": ["oil gas surveillance AI", "fire detection AI camera", "critical infrastructure CCTV", "hazardous area surveillance", "oil refinery security camera", "pipeline monitoring AI", "petrochemical CCTV India"],
     "heroTitle": "AI-Powered Surveillance for Oil, Gas & Critical Infrastructure",
     "heroDescription": "Oil and gas facilities operate in high-risk environments where every second of detection matters. ArcisAI's industrial AI surveillance combines fire detection, restricted zone monitoring, PPE compliance, and perimeter security — all processed at the edge for instant response times. Purpose-built for refineries, pipelines, storage facilities, and petrochemical plants.",
@@ -327,7 +327,7 @@ const seoPageDataExpansion5 = {
   "best-ai-cctv-camera-india-2025": {
     "slug": "best-ai-cctv-camera-india-2025",
     "title": "Best AI CCTV Camera in India 2025 | Top AI Surveillance Brands Compared",
-    "metaDescription": "Comparing the best AI CCTV cameras in India for 2025 — ArcisAI, Hikvision, CP Plus, Dahua, Matrix. Features, certifications, AI capabilities, pricing, and which brand leads.",
+    "metaDescription": "Comparing the best AI CCTV cameras in India for 2025 — ArcisAI, Hikvision, CP Plus, Dahua, Matrix.",
     "keywords": ["best AI CCTV camera India", "top CCTV brand India 2025", "AI surveillance camera comparison", "best CCTV camera India", "top AI security camera", "CCTV camera brand ranking India", "best surveillance system India"],
     "heroTitle": "Best AI CCTV Camera in India 2025 — The Definitive Comparison",
     "heroDescription": "Choosing an AI CCTV camera in India in 2025 requires evaluating more than just megapixels and price. With STQC certification now mandatory, Chinese brands under scrutiny, and GenAI capabilities emerging, the landscape has fundamentally changed. This comparison covers every major brand — technology, compliance, manufacturing origin, AI capabilities, and total value.",
@@ -352,7 +352,7 @@ const seoPageDataExpansion5 = {
   "stqc-compliance-guide-cctv-2025": {
     "slug": "stqc-compliance-guide-cctv-2025",
     "title": "STQC Compliance Guide for CCTV 2025 | Certification Requirements Explained",
-    "metaDescription": "Complete guide to STQC certification requirements for CCTV cameras and VMS in India. What changed in April 2026, which brands are certified, and how to ensure your surveillance is compliant.",
+    "metaDescription": "Complete guide to STQC certification for CCTV cameras and VMS in India — what changed in April 2026 and which brands are certified.",
     "keywords": ["STQC certification requirements", "STQC compliance CCTV 2025", "STQC approved camera list", "STQC VMS certification", "CCTV certification India", "STQC testing standards", "surveillance compliance India 2025"],
     "heroTitle": "STQC Certification for CCTV — Everything You Need to Know in 2025",
     "heroDescription": "Since April 2026, all CCTV cameras and Video Management Systems sold or installed in India must carry STQC certification. This mandate from MeitY has fundamentally changed the surveillance market — disqualifying non-compliant products and creating new requirements for procurement teams. This guide explains what STQC means, who is certified, and how to ensure your surveillance infrastructure is compliant.",
@@ -377,7 +377,7 @@ const seoPageDataExpansion5 = {
   "ai-surveillance-retail-footfall-analytics": {
     "slug": "ai-surveillance-retail-footfall-analytics",
     "title": "AI Surveillance for Retail | Footfall Analytics & Theft Prevention",
-    "metaDescription": "ArcisAI retail surveillance — footfall counting, heat map analytics, shrinkage detection, and customer behavior insights. Turn security cameras into business intelligence tools.",
+    "metaDescription": "ArcisAI retail surveillance — footfall counting, heat map analytics, shrinkage detection, and customer behavior insights.",
     "keywords": ["retail AI surveillance", "footfall analytics camera", "retail CCTV analytics", "shoplifting detection AI", "customer traffic counter", "retail heat map camera", "store analytics CCTV India"],
     "heroTitle": "Turn Your Retail Security Cameras into Business Intelligence",
     "heroDescription": "Retail surveillance shouldn't just catch shoplifters — it should optimize your business. ArcisAI transforms security cameras into powerful analytics tools that count footfall, map customer journeys, identify peak hours, detect shrinkage patterns, and deliver insights that improve store performance, staffing, and layout decisions.",

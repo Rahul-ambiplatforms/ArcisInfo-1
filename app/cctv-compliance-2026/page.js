@@ -3,7 +3,7 @@ import ComplianceGuide2026 from '@/src/views/Guides/ComplianceGuide2026';
 const SITE_URL = 'https://www.arcisai.io';
 const TITLE = 'India CCTV Compliance 2026: BIS-ER & STQC Certification Explained | ArcisAI';
 const DESCRIPTION =
-  'Plain-language guide to India\'s 2026 CCTV certification rules — what BIS-ER and STQC mean, who needs them, and how to verify any camera brand\'s certificate before you buy.';
+  'Plain-language guide to India\'s 2026 CCTV certification rules — what BIS-ER and STQC mean, who needs them, and how to verify a brand\'s certificate.';
 
 export const metadata = {
   title: TITLE.replace(/\s*\|\s*ArcisAI$/, ""),

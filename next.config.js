@@ -77,7 +77,7 @@ const nextConfig = {
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob: https:",
       "font-src 'self' data:",
-      "frame-src https://www.googletagmanager.com https://www.facebook.com https://www.youtube.com https://www.youtube-nocookie.com",
+      "frame-src https://www.googletagmanager.com https://www.facebook.com",
       `connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.facebook.com https://connect.facebook.net https://www.arcisai.io https://arcisai.io https://vmukti.com https://hook.eu1.make.com https://etaems.arcisai.io:5000${extraConnect}`,
       "media-src 'self' https:",
       "object-src 'none'",
@@ -109,22 +109,6 @@ const nextConfig = {
             key: "Permissions-Policy",
             value: "camera=(), microphone=(), geolocation=(), payment=()",
           },
-        ],
-      },
-      // The blog index is the one page whose content changes without a deploy,
-      // so it cannot inherit Next's ISR default of
-      // `s-maxage=<revalidate>, stale-while-revalidate=31532400`. That 365-day
-      // stale-while-revalidate window lets the browser and Cloudflare both serve
-      // the stored copy immediately and refresh behind the visitor, which put a
-      // newly published post one full page-load behind — it only appeared after
-      // a manual refresh. A short max-age with no stale-while-revalidate bounds
-      // end-to-end staleness to roughly two minutes instead.
-      // Exact `/blog` only: /blog/:slug is dynamic (`cache: 'no-store'`) and
-      // must keep its own headers.
-      {
-        source: "/blog",
-        headers: [
-          { key: "Cache-Control", value: "public, max-age=60, s-maxage=60" },
         ],
       },
       // Force every PDF under /pdfs/ to be downloaded as a file rather than
@@ -317,6 +301,68 @@ const nextConfig = {
       {
         source: "/compare/arcisai-vs-honeywell",
         destination: "/compare/ai-cctv-alternative-india",
+        permanent: true,
+        statusCode: 301,
+      },
+
+      // /BIS-ER-certification is the already-indexed, currently-canonical URL
+      // (mixed-case, matching the certification's own name) — changing its
+      // case now would mean redirecting the live/ranking URL, so instead we
+      // just make sure the natural all-lowercase variant someone would type
+      // or link to can't become a second, duplicate-content URL for the same
+      // page. Next.js route matching is case-sensitive, so this needs its
+      // own explicit redirect rather than being covered by the mixed-case
+      // route itself.
+      {
+        source: "/bis-er-certification",
+        destination: "/BIS-ER-certification",
+        permanent: true,
+        statusCode: 301,
+      },
+
+      // ─── Orphaned /solution/* pages -> their real content equivalents ──
+      // See app/solution/[solutionId]/page.js for the full explanation:
+      // these 6 ids had curated SEO metadata but no entry in the Solution
+      // content data, so they rendered as a 200 "Solution not found"
+      // placeholder (a soft 404). Each already has a page elsewhere on the
+      // site with real, substantial content on the same topic, so the fix is
+      // to consolidate ranking signal there instead of writing 6 new content
+      // pages from scratch. ('corporate' has no equivalent anywhere on the
+      // site, so it's left to 404 honestly rather than redirected somewhere
+      // unrelated.)
+      {
+        source: "/solution/retail",
+        destination: "/industry/retail-surveillance",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/solution/logistics",
+        destination: "/industry/warehouse-logistics-cctv",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/solution/smart-city",
+        destination: "/industry/smart-city-surveillance",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/solution/manufacturing",
+        destination: "/industry/manufacturing-surveillance",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/solution/healthcare",
+        destination: "/industry/healthcare-security",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/solution/banking",
+        destination: "/ai-cctv-banking-atm-security",
         permanent: true,
         statusCode: 301,
       },

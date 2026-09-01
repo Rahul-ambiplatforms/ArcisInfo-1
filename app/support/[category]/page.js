@@ -31,6 +31,12 @@ export async function generateMetadata(props) {
       url: canonical,
       images: [{ url: '/og/faq.jpg', width: 1200, height: 630 }],
     },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: ['/og/faq.jpg'],
+    },
   };
 }
 

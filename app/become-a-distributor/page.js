@@ -3,7 +3,7 @@ import DistributorProgram from '@/src/views/Partners/DistributorProgram';
 const SITE_URL = 'https://arcisai.io';
 const TITLE = 'Become an ArcisAI CCTV Dealer / Distributor in India | Channel Partner Program';
 const DESCRIPTION =
-  'Become a dealer or distributor for ArcisAI — India\'s STQC & BIS-ER certified, AI-native, Made-in-India CCTV brand. Tender-ready, healthy margins, full sales & marketing support. Apply now.';
+  'Become a dealer or distributor for ArcisAI — India\'s STQC & BIS-ER certified, AI-native, Made-in-India CCTV brand. Tender-ready, with healthy margins.';
 
 export const metadata = {
   title: TITLE,

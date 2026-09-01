@@ -3,7 +3,7 @@ import MainProduct from '@/src/views/Series/MainProduct';
 export const metadata = {
   title: 'ArcisAI Cloud VMS | STQC Certified Video Management System',
   description:
-    'Cloud & on-premise VMS with STQC certification. Multi-location monitoring, AI alerts, smart playback, ArcisGPT search, and centralized device management for enterprise deployments.',
+    'Cloud & on-premise VMS with STQC certification — multi-location monitoring, AI alerts, smart playback, and ArcisGPT search.',
   keywords: [
     'STQC certified VMS India', 'STQC certified video management software',
     'made in India cloud VMS', 'Indian cloud CCTV software', 'cloud VMS',

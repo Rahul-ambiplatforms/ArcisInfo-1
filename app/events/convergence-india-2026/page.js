@@ -3,7 +3,7 @@ import ConvergenceIndia2026 from '@/src/views/Events/ConvergenceIndia2026';
 export const metadata = {
   title: 'ArcisAI at Convergence India 2026 | AI Surveillance Exhibition',
   description:
-    'Visit ArcisAI at Convergence India 2026. Experience live demos of AI CCTV cameras, ArcisGPT video search, and Cloud VMS. Meet our team and explore enterprise surveillance solutions.',
+    'Visit ArcisAI at Convergence India 2026. Experience live demos of AI CCTV cameras, ArcisGPT video search, and Cloud VMS.',
   keywords: [
     'Convergence India 2026', 'ArcisAI exhibition', 'AI surveillance demo',
     'ArcisGPT demo', 'CCTV trade show India',

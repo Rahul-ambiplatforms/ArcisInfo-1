@@ -56,14 +56,16 @@ const STATIC_ROUTES = [
   ['/arcisgpt', 0.9, 'weekly'],
 
   // Solutions
+  // SEO audit fix (2026-09-01): 'corporate', 'retail', 'banking',
+  // 'smart-city', 'healthcare', 'manufacturing', and 'logistics' had no
+  // backing content (see app/solution/[solutionId]/page.js) and were
+  // rendering as a 200 soft-404 — now 301-redirected (or, for 'corporate',
+  // left to 404) rather than listed here as if they were real indexable
+  // pages. 'cloud-ai' and 'generative-ai' DO have real content and were
+  // previously missing from both this sitemap and generateStaticParams.
   ['/solution/edge-ai', 0.8, 'weekly'],
-  ['/solution/corporate', 0.8, 'weekly'],
-  ['/solution/retail', 0.8, 'weekly'],
-  ['/solution/banking', 0.8, 'weekly'],
-  ['/solution/smart-city', 0.8, 'weekly'],
-  ['/solution/healthcare', 0.8, 'weekly'],
-  ['/solution/manufacturing', 0.8, 'weekly'],
-  ['/solution/logistics', 0.8, 'weekly'],
+  ['/solution/cloud-ai', 0.8, 'weekly'],
+  ['/solution/generative-ai', 0.8, 'weekly'],
 
   // Trust / compliance — all were missing from the old static sitemap
   ['/certifications', 0.8, 'monthly'],

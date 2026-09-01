@@ -43,7 +43,7 @@ function PrivacyPolicy() {
           align={{ base: "flex-start", md: "center" }}
           mb={4}
         >
-          <Heading size="lg" mb={{ base: 2, md: 0 }}>
+          <Heading as="h1" size="lg" mb={{ base: 2, md: 0 }}>
             Privacy Policy
           </Heading>
           {/* color={secondaryTextColor} */}

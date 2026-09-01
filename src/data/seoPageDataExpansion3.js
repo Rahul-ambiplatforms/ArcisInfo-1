@@ -100,7 +100,7 @@ const seoPageDataExpansion3 = {
   "why-choose-non-chinese-soc-cctv": {
     "slug": "/why-choose-non-chinese-soc-cctv",
     "title": "Why Choose Non-Chinese SoC CCTV Cameras in 2026 | ArcisAI",
-    "metaDescription": "Discover why non-Chinese SoC CCTV cameras are the smarter choice for India. Data sovereignty, indigenous technology, STQC certification. ArcisAI — Made in India with non-Chinese SoC.",
+    "metaDescription": "Discover why non-Chinese SoC CCTV cameras are the smarter choice for India. Data sovereignty, indigenous technology, STQC certification.",
     "keywords": ["non-Chinese SoC CCTV", "Made in India CCTV camera", "indigenous CCTV technology", "data sovereignty CCTV", "STQC certified camera India", "best Indian CCTV brand"],
     "heroTitle": "Why Non-Chinese SoC CCTV Cameras Are the Future of India Security",
     "heroSubtitle": "Data Sovereignty | Indigenous Technology | STQC Certified",
@@ -138,7 +138,7 @@ const seoPageDataExpansion3 = {
   "ai-cctv-for-schools": {
     "slug": "/ai-cctv-for-schools",
     "title": "AI CCTV Cameras for Schools and Educational Institutions 2026 | ArcisAI",
-    "metaDescription": "AI CCTV cameras for schools, colleges, and educational campuses. Non-Chinese SoC, Made in India, STQC certified. Student safety with ArcisAI intelligent surveillance.",
+    "metaDescription": "AI CCTV cameras for schools, colleges, and educational campuses. Non-Chinese SoC, Made in India, STQC certified.",
     "keywords": ["CCTV for schools", "AI CCTV school", "campus security camera", "school surveillance system India", "student safety CCTV"],
     "heroTitle": "AI CCTV for Schools — Protecting India Next Generation",
     "heroSubtitle": "Non-Chinese SoC | Made in India | Student Safety First",

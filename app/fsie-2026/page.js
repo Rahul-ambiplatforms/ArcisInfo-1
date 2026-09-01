@@ -14,7 +14,7 @@ const GA4_ID = 'G-FGCHHSNZ7D';
 export const metadata = {
   title: 'ArcisAI at FSIE Mumbai 2026: Booth C13',
   description:
-    'Meet ArcisAI at FSIE Mumbai 2026 (3–5 Sep), Fire & Security India Expo, Booth C13, Jio World Convention Centre. Live demos of STQC & BIS-ER certified AI CCTV, Cloud VMS and ArcisGPT. Book your meeting slot.',
+    'Meet ArcisAI at FSIE Mumbai 2026 (3–5 Sep), Fire & Security India Expo, Booth C13, Jio World Convention Centre.',
   keywords: [
     'FSIE', 'FSIE 2026', 'FSIE Mumbai', 'FSIE in Mumbai', 'FSIE Mumbai 2026', 'FSIE2026',
     'Fire & Security India Expo', 'Fire Security India Expo', 'ArcisAI FSIE 2026',
