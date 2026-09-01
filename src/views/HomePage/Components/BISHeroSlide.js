@@ -16,7 +16,11 @@ const BISHeroSlide = ({ showExploreButton = true }) => {
       w="100%"
       px={{ base: 0, md: 8 }}
       align={{ base: "flex-start", md: "center" }}
-      pt={{ base: "18vh", sm: "16vh", md: "90px" }}
+      // The hero wrapper pulls itself up by `-35%` of its WIDTH, so the
+      // clearance has to be width-based too — `vh` here let the text slide
+      // under the fixed header/marquee on short or wide phones. 35vw cancels
+      // the pull exactly, leaving a constant offset at every mobile size.
+      pt={{ base: "calc(35vw + 28px)", md: "90px" }}
       pb={{ base: 0, md: 12 }}
       direction={{ base: "column", md: "row" }}
     >
@@ -29,9 +33,14 @@ const BISHeroSlide = ({ showExploreButton = true }) => {
       >
         <Heading
           as="h1"
-          fontSize={{ base: "6.5vw", sm: "28px", md: "48px", lg: "60px" }}
+          // clamp() instead of vw-at-base + px-at-breakpoints: that mix made the
+          // text shrink ~10% crossing 480px (vw had grown past the `sm` value)
+          // and jump 71% at 768px. This scales monotonically and still lands on
+          // the old desktop sizes — 46.8px at 768px, capped at 60px from 992px.
+          fontSize="clamp(22px, 6.1vw, 60px)"
           fontWeight="400"
-          lineHeight={{ base: "8vw", sm: "36px", md: "60px", lg: "76px" }}
+          // Unitless: tracks fontSize automatically, so the two can't drift.
+          lineHeight="1.25"
           bgGradient="linear(90.64deg, #171717 19.68%, #7F56D9 78.79%)"
           bgClip="text"
           mb={{ base: 2, md: 4 }}
@@ -46,9 +55,11 @@ const BISHeroSlide = ({ showExploreButton = true }) => {
         </Heading>
 
         <Text
-          fontSize={{ base: "3vw", sm: "13px", md: "16px", lg: "18px" }}
+          // Was `3vw` at base, which rendered 9.6px on a 320px phone. The 14px
+          // floor is the point of this clamp; the cap keeps the old lg size.
+          fontSize="clamp(14px, 2.1vw, 18px)"
           fontWeight="400"
-          lineHeight={{ base: "4.5vw", sm: "20px", md: "28px" }}
+          lineHeight="1.6"
           color="#333"
           mb={{ base: 2, md: 6 }}
           maxW={{ base: "90%", md: "500px" }}
