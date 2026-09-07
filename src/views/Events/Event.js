@@ -28,6 +28,10 @@ import { FaXTwitter } from "react-icons/fa6";
 import CustomButton from "../../Components/CustomButton";
 import EventIcon from "../../Components/Icons/event_close.svg";
 
+// Set to true to auto-open the popup on first page load. When false the modal
+// still works in controlled mode (the header banner's CTA passes isOpen/onClose).
+const SHOW_EVENT_POPUP_ON_LOAD = false;
+
 // Track if popup has been shown in this session (resets on refresh)
 let hasShownPopup = false;
 
@@ -67,7 +71,7 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
   });
 
   useEffect(() => {
-    if (!isControlled && !hasShownPopup) {
+    if (SHOW_EVENT_POPUP_ON_LOAD && !isControlled && !hasShownPopup) {
       internalOnOpen();
       hasShownPopup = true;
     }

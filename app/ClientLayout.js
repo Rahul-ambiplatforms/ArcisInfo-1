@@ -11,7 +11,7 @@ import FloatingContact from '@/src/Components/FloatingContact';
 const Footer = dynamic(() => import('@/src/Components/Footer/Footer'), { ssr: true });
 
 // Keep in sync with App.js — set to true to show the event banner
-const SHOW_EVENT_BANNER = true;
+const SHOW_EVENT_BANNER = false;
 
 /**
  * ClientLayout renders the global Header and Footer around every public page.
