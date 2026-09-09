@@ -1,4 +1,6 @@
 import ComplianceGuide2026 from '@/src/views/Guides/ComplianceGuide2026';
+import { buildHreflang } from '@/src/data/hreflang';
+import Breadcrumbs from '@/src/Components/Breadcrumbs';
 
 const SITE_URL = 'https://www.arcisai.io';
 const TITLE = 'India CCTV Compliance 2026: BIS-ER & STQC Certification Explained | ArcisAI';
@@ -13,7 +15,7 @@ export const metadata = {
     'is my CCTV legal India', 'ER01 2024 CCTV', 'BIS CCTV registration', 'certified CCTV India guide',
     'how to verify CCTV certificate',
   ],
-  alternates: { canonical: `${SITE_URL}/cctv-compliance-2026` },
+  alternates: { canonical: `${SITE_URL}/cctv-compliance-2026`, languages: buildHreflang(`${SITE_URL}/cctv-compliance-2026`) },
   openGraph: {
     title: TITLE, description: DESCRIPTION, url: `${SITE_URL}/cctv-compliance-2026`,
     type: 'article', siteName: 'ArcisAI',
@@ -60,6 +62,14 @@ export default function ComplianceGuidePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {/* SEO audit fix (2026-09-07, checklist item #59): visible trail
+          matching the BreadcrumbList schema above — was JSON-LD-only before. */}
+      <Breadcrumbs
+        crumbs={[
+          { name: 'Home', href: '/' },
+          { name: 'CCTV Compliance 2026 Guide' },
+        ]}
+      />
       <ComplianceGuide2026 />
     </>
   );

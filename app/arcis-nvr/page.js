@@ -1,4 +1,5 @@
 import MainProduct from '@/src/views/Series/MainProduct';
+import { buildHreflang } from '@/src/data/hreflang';
 
 export const metadata = {
   title: 'ArcisAI NVR | AI-Powered Network Video Recorder',
@@ -8,12 +9,18 @@ export const metadata = {
     'ArcisAI NVR', 'network video recorder', 'AI NVR',
     'multi-camera recorder', 'enterprise NVR',
   ],
-  alternates: { canonical: 'https://arcisai.io/arcis-nvr' },
+  alternates: { canonical: 'https://arcisai.io/arcis-nvr', languages: buildHreflang('https://arcisai.io/arcis-nvr') },
   openGraph: {
     title: 'ArcisAI NVR | AI-Powered Network Video Recorder',
     description: 'Intelligent NVR with edge AI, multi-camera support, and cloud backup.',
     url: 'https://arcisai.io/arcis-nvr',
     images: [{ url: '/og/nvr.jpg', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ArcisAI NVR | AI-Powered Network Video Recorder',
+    description: 'Intelligent NVR with edge AI, multi-camera support, and cloud backup.',
+    images: ['/og/nvr.jpg'],
   },
 };
 

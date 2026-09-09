@@ -1,4 +1,5 @@
 import CertificateVerifier from '@/src/views/Tools/CertificateVerifier';
+import { buildHreflang } from '@/src/data/hreflang';
 
 const SITE_URL = 'https://www.arcisai.io';
 const TITLE = 'BIS-ER & STQC Certificate Verifier | Check if CCTV is Certified to Sell in India | ArcisAI';
@@ -13,7 +14,7 @@ export const metadata = {
     'verify CCTV certification India', 'CCTV legal to sell India 2026',
     'BIS ER01 2024 verification', 'STQC certified CCTV check', 'crsbis CCTV verify',
   ],
-  alternates: { canonical: `${SITE_URL}/tools/certificate-verifier` },
+  alternates: { canonical: `${SITE_URL}/tools/certificate-verifier`, languages: buildHreflang(`${SITE_URL}/tools/certificate-verifier`) },
   openGraph: {
     title: TITLE, description: DESCRIPTION,
     url: `${SITE_URL}/tools/certificate-verifier`, type: 'website', siteName: 'ArcisAI',

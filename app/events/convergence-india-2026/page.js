@@ -1,4 +1,5 @@
 import ConvergenceIndia2026 from '@/src/views/Events/ConvergenceIndia2026';
+import { buildHreflang } from '@/src/data/hreflang';
 
 export const metadata = {
   title: 'ArcisAI at Convergence India 2026 | AI Surveillance Exhibition',
@@ -8,12 +9,18 @@ export const metadata = {
     'Convergence India 2026', 'ArcisAI exhibition', 'AI surveillance demo',
     'ArcisGPT demo', 'CCTV trade show India',
   ],
-  alternates: { canonical: 'https://arcisai.io/events/convergence-india-2026' },
+  alternates: { canonical: 'https://arcisai.io/events/convergence-india-2026', languages: buildHreflang('https://arcisai.io/events/convergence-india-2026') },
   openGraph: {
     title: 'ArcisAI at Convergence India 2026',
     description: 'Experience live demos of AI CCTV cameras and ArcisGPT at Convergence India 2026.',
     url: 'https://arcisai.io/events/convergence-india-2026',
     images: [{ url: '/og/convergence-india-2026.jpg', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ArcisAI at Convergence India 2026',
+    description: 'Experience live demos of AI CCTV cameras and ArcisGPT at Convergence India 2026.',
+    images: ['/og/convergence-india-2026.jpg'],
   },
 };
 

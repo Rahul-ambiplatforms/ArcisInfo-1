@@ -3,7 +3,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-for-education-industry",
     "category": "industry",
     "title": "CCTV for Education | ArcisAI Campus Security",
-    "metaDescription": "AI CCTV for educational institutions. Campus security, student safety monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV for schools and colleges — real-time intrusion alerts, gate and playground monitoring, STQC-certified VMS built for student safety.",
     "keywords": [
       "\"CCTV Education Industry\"",
       "\"surveillance Education Industry\"",
@@ -89,7 +89,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-for-healthcare-industry",
     "category": "industry",
     "title": "CCTV for Healthcare | ArcisAI Medical Security",
-    "metaDescription": "AI CCTV for hospitals & clinics. Patient safety, asset protection. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV for hospitals and clinics — patient-area monitoring, pharmacy and asset protection, STQC-certified VMS with 24/7 alerts.",
     "keywords": [
       "\"CCTV Healthcare Industry\"",
       "\"surveillance Healthcare Industry\"",
@@ -175,7 +175,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-for-retail-industry",
     "category": "industry",
     "title": "CCTV for Retail | ArcisAI Store Security",
-    "metaDescription": "AI CCTV for retail stores. Loss prevention, customer analytics. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV for retail stores — shoplifting alerts, footfall and queue analytics, STQC-certified VMS that doubles as a sales-insight tool.",
     "keywords": [
       "\"CCTV Retail Industry\"",
       "\"surveillance Retail Industry\"",
@@ -264,7 +264,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-for-logistics-warehousing",
     "category": "industry",
     "title": "CCTV for Logistics | ArcisAI Warehouse Security",
-    "metaDescription": "AI CCTV for warehouses & logistics. Inventory tracking, fleet monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV for warehouses and logistics hubs — loading-bay monitoring, inventory-area alerts, fleet-yard coverage, STQC-certified VMS built for 24/7 operations.",
     "keywords": [
       "\"CCTV Logistics & Warehousing\"",
       "\"surveillance Logistics & Warehousing\"",
@@ -350,7 +350,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-for-hospitality-industry",
     "category": "industry",
     "title": "CCTV for Hotels | ArcisAI Hospitality Security",
-    "metaDescription": "AI CCTV for hotels & resorts. Guest safety, asset protection. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV for hotels and resorts — lobby and perimeter monitoring, guest-safety alerts, STQC-certified VMS built for hospitality operations.",
     "keywords": [
       "\"CCTV Hospitality Industry\"",
       "\"surveillance Hospitality Industry\"",
@@ -436,7 +436,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-for-temples-religious-places",
     "category": "industry",
     "title": "CCTV for Temples | ArcisAI Religious Site Security",
-    "metaDescription": "AI CCTV for temples & religious sites. Devotee safety, donation security. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV for temples and religious sites — festival crowd monitoring, donation-box security, STQC-certified VMS built for public trust sites.",
     "keywords": [
       "\"CCTV Temples & Religious Places\"",
       "\"surveillance Temples & Religious Places\"",
@@ -522,7 +522,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-for-smart-city-projects",
     "category": "industry",
     "title": "CCTV for Smart Cities | ArcisAI Urban Security",
-    "metaDescription": "AI CCTV for smart city projects. Traffic management, public safety. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV for smart city projects — traffic and ANPR analytics, public-safety alerts, BIS-ER & STQC certified for government tenders.",
     "keywords": [
       "\"CCTV Smart City Projects\"",
       "\"surveillance Smart City Projects\"",
@@ -608,7 +608,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-for-parking-management",
     "category": "industry",
     "title": "CCTV for Parking | ArcisAI Parking Security",
-    "metaDescription": "AI CCTV for parking facilities. ANPR, space management, vehicle tracking. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV for parking facilities — ANPR recognition, space-occupancy analytics, entry/exit tracking, STQC-certified VMS for malls and offices.",
     "keywords": [
       "\"CCTV Parking Management\"",
       "\"surveillance Parking Management\"",
@@ -694,7 +694,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-for-traffic-management",
     "category": "industry",
     "title": "CCTV for Traffic | ArcisAI Traffic Monitoring",
-    "metaDescription": "AI CCTV for traffic management. Speed detection, violation monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV for traffic management — speed-violation and signal-jump detection, junction analytics, BIS-ER & STQC certified for municipalities.",
     "keywords": [
       "\"CCTV Traffic Management\"",
       "\"surveillance Traffic Management\"",
@@ -780,7 +780,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-assam",
     "category": "state",
     "title": "CCTV Cameras in Assam | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Assam. Tea garden security, flood monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Assam — tea-estate perimeter security, flood-level monitoring, STQC & BIS-ER certified, built for Assam's climate. Free survey.",
     "keywords": [
       "\"CCTV Assam\"",
       "\"surveillance Assam\"",
@@ -866,7 +866,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-meghalaya",
     "category": "state",
     "title": "CCTV Cameras in Meghalaya | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Meghalaya. Mining security, tourism monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Meghalaya — mining-site security, tourist-area monitoring, STQC & BIS-ER certified, weatherproof design. Free quote.",
     "keywords": [
       "\"CCTV Meghalaya\"",
       "\"surveillance Meghalaya\"",
@@ -952,7 +952,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-manipur",
     "category": "state",
     "title": "CCTV Cameras in Manipur | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Manipur. Border security, cultural site protection. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Manipur — border-area monitoring, heritage-site protection, STQC & BIS-ER certified, Made in India. Free survey.",
     "keywords": [
       "\"CCTV Manipur\"",
       "\"surveillance Manipur\"",
@@ -1038,7 +1038,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-tripura",
     "category": "state",
     "title": "CCTV Cameras in Tripura | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Tripura. Border monitoring, rubber plantation security. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Tripura — border monitoring, rubber-plantation security, STQC & BIS-ER certified, Made in India. Free quote.",
     "keywords": [
       "\"CCTV Tripura\"",
       "\"surveillance Tripura\"",
@@ -1124,7 +1124,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-mizoram",
     "category": "state",
     "title": "CCTV Cameras in Mizoram | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Mizoram. Border security, bamboo industry monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Mizoram — border-area security, bamboo-industry monitoring, STQC & BIS-ER certified, built for hill terrain. Free survey.",
     "keywords": [
       "\"CCTV Mizoram\"",
       "\"surveillance Mizoram\"",
@@ -1210,7 +1210,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-nagaland",
     "category": "state",
     "title": "CCTV Cameras in Nagaland | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Nagaland. Heritage protection, festival security. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Nagaland — heritage-site protection, festival crowd security, STQC & BIS-ER certified, Made in India. Free quote.",
     "keywords": [
       "\"CCTV Nagaland\"",
       "\"surveillance Nagaland\"",
@@ -1296,7 +1296,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-arunachal-pradesh",
     "category": "state",
     "title": "CCTV Cameras in Arunachal Pradesh | ArcisAI",
-    "metaDescription": "AI CCTV for Arunachal Pradesh. Border monitoring, monastery security. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Arunachal Pradesh — border-area monitoring, monastery security, STQC & BIS-ER certified, built for remote sites. Free quote.",
     "keywords": [
       "\"CCTV Arunachal Pradesh\"",
       "\"surveillance Arunachal Pradesh\"",
@@ -1382,7 +1382,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-sikkim",
     "category": "state",
     "title": "CCTV Cameras in Sikkim | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Sikkim. Tourism security, monastery protection. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Sikkim — monastery and tourist-site security, high-altitude cameras, STQC & BIS-ER certified, Made in India. Free survey.",
     "keywords": [
       "\"CCTV Sikkim\"",
       "\"surveillance Sikkim\"",
@@ -1468,7 +1468,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-goa",
     "category": "state",
     "title": "CCTV Cameras in Goa | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Goa. Beach security, tourism monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Goa — beach and coastal security, tourism-site monitoring, STQC & BIS-ER certified, salt-air resistant housing. Free quote.",
     "keywords": [
       "\"CCTV Goa\"",
       "\"surveillance Goa\"",
@@ -1554,7 +1554,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-himachal-pradesh",
     "category": "state",
     "title": "CCTV Cameras in Himachal Pradesh | ArcisAI",
-    "metaDescription": "AI CCTV for Himachal Pradesh. Tourism security, apple orchard monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Himachal Pradesh — tourist-town security, orchard monitoring, STQC & BIS-ER certified, built for hill climates. Free survey.",
     "keywords": [
       "\"CCTV Himachal Pradesh\"",
       "\"surveillance Himachal Pradesh\"",
@@ -1640,7 +1640,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-uttarakhand",
     "category": "state",
     "title": "CCTV Cameras in Uttarakhand | ArcisAI",
-    "metaDescription": "AI CCTV for Uttarakhand. Pilgrimage security, disaster monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Uttarakhand — pilgrimage-route security, disaster-zone monitoring, STQC & BIS-ER certified, Made in India. Free quote.",
     "keywords": [
       "\"CCTV Uttarakhand\"",
       "\"surveillance Uttarakhand\"",
@@ -1726,7 +1726,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-jharkhand",
     "category": "state",
     "title": "CCTV Cameras in Jharkhand | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Jharkhand. Mining security, industrial monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Jharkhand — mining-site security, steel-plant monitoring, STQC & BIS-ER certified, Made in India. Free survey.",
     "keywords": [
       "\"CCTV Jharkhand\"",
       "\"surveillance Jharkhand\"",
@@ -1812,7 +1812,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-chhattisgarh",
     "category": "state",
     "title": "CCTV Cameras in Chhattisgarh | ArcisAI",
-    "metaDescription": "AI CCTV for Chhattisgarh. Mining security, steel plant monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Chhattisgarh — mining-site and steel-plant security, industrial monitoring, STQC & BIS-ER certified. Free quote.",
     "keywords": [
       "\"CCTV Chhattisgarh\"",
       "\"surveillance Chhattisgarh\"",
@@ -1898,7 +1898,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-visakhapatnam",
     "category": "city",
     "title": "CCTV Cameras in Visakhapatnam | ArcisAI",
-    "metaDescription": "AI CCTV for Vizag. Port security, industrial monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Visakhapatnam — port and shipyard security, industrial-corridor monitoring, STQC & BIS-ER certified. Free survey.",
     "keywords": [
       "\"CCTV Visakhapatnam\"",
       "\"surveillance Visakhapatnam\"",
@@ -1984,7 +1984,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-mysore",
     "category": "city",
     "title": "CCTV Cameras in Mysore | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Mysore. Palace security, heritage monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Mysore — palace and heritage-site security, tourist-area monitoring, STQC & BIS-ER certified, Made in India. Free quote.",
     "keywords": [
       "\"CCTV Mysore\"",
       "\"surveillance Mysore\"",
@@ -2070,7 +2070,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-mangalore",
     "category": "city",
     "title": "CCTV Cameras in Mangalore | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Mangalore. Port security, coastal monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Mangalore — port and coastal security, industrial monitoring, STQC & BIS-ER certified, salt-air resistant. Free survey.",
     "keywords": [
       "\"CCTV Mangalore\"",
       "\"surveillance Mangalore\"",
@@ -2156,7 +2156,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-hubli",
     "category": "city",
     "title": "CCTV Cameras in Hubli | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Hubli. Commercial security, textile industry monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Hubli — textile-mill security, warehouse and commercial-hub monitoring, STQC & BIS-ER certified, Made in India. Free quote.",
     "keywords": [
       "\"CCTV Hubli\"",
       "\"surveillance Hubli\"",
@@ -2242,7 +2242,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-belgaum",
     "category": "city",
     "title": "CCTV Cameras in Belgaum | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Belgaum. Military cantonment security, sugar industry monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Belgaum — cantonment-area security, sugar-mill monitoring, STQC & BIS-ER certified, Made in India. Free quote.",
     "keywords": [
       "\"CCTV Belgaum\"",
       "\"surveillance Belgaum\"",
@@ -2328,7 +2328,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-guwahati",
     "category": "city",
     "title": "CCTV Cameras in Guwahati | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Guwahati. Temple security, flood monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Guwahati — temple and ghat security, flood-level monitoring, STQC & BIS-ER certified, built for Assam's climate. Free survey.",
     "keywords": [
       "\"CCTV Guwahati\"",
       "\"surveillance Guwahati\"",
@@ -2414,7 +2414,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-bhubaneswar",
     "category": "city",
     "title": "CCTV Cameras in Bhubaneswar | ArcisAI",
-    "metaDescription": "AI CCTV for Bhubaneswar. Temple security, smart city monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Bhubaneswar — temple-complex security, smart-city monitoring, STQC & BIS-ER certified, Made in India. Free quote.",
     "keywords": [
       "\"CCTV Bhubaneswar\"",
       "\"surveillance Bhubaneswar\"",
@@ -2500,7 +2500,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-raipur",
     "category": "city",
     "title": "CCTV Cameras in Raipur | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Raipur. Steel plant security, mining monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Raipur — steel-plant and mining security, industrial-corridor monitoring, STQC & BIS-ER certified. Free survey.",
     "keywords": [
       "\"CCTV Raipur\"",
       "\"surveillance Raipur\"",
@@ -2586,7 +2586,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-ranchi",
     "category": "city",
     "title": "CCTV Cameras in Ranchi | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Ranchi. Mining security, educational monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Ranchi — mining-site security, campus and institutional monitoring, STQC & BIS-ER certified, Made in India. Free quote.",
     "keywords": [
       "\"CCTV Ranchi\"",
       "\"surveillance Ranchi\"",
@@ -2672,7 +2672,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-dehradun",
     "category": "city",
     "title": "CCTV Cameras in Dehradun | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Dehradun. Tourism security, boarding school monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Dehradun — boarding-school security, tourist-area monitoring, STQC & BIS-ER certified, Made in India. Free survey.",
     "keywords": [
       "\"CCTV Dehradun\"",
       "\"surveillance Dehradun\"",
@@ -2758,7 +2758,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-shimla",
     "category": "city",
     "title": "CCTV Cameras in Shimla | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Shimla. Heritage security, tourism monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Shimla — heritage-site security, tourist-season monitoring, STQC & BIS-ER certified, built for hill weather. Free quote.",
     "keywords": [
       "\"CCTV Shimla\"",
       "\"surveillance Shimla\"",
@@ -2844,7 +2844,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-jammu",
     "category": "city",
     "title": "CCTV Cameras in Jammu | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Jammu. Pilgrimage security, strategic monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Jammu — pilgrimage-route security, strategic-site monitoring, STQC & BIS-ER certified, Made in India. Free survey.",
     "keywords": [
       "\"CCTV Jammu\"",
       "\"surveillance Jammu\"",
@@ -2930,7 +2930,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-srinagar",
     "category": "city",
     "title": "CCTV Cameras in Srinagar | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Srinagar. Strategic security, tourism monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Srinagar — tourist-area security, Dal Lake and houseboat monitoring, STQC & BIS-ER certified, Made in India. Free quote.",
     "keywords": [
       "\"CCTV Srinagar\"",
       "\"surveillance Srinagar\"",
@@ -3016,7 +3016,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-amritsar",
     "category": "city",
     "title": "CCTV Cameras in Amritsar | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Amritsar. Golden Temple security, textile monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Amritsar — Golden Temple perimeter security, textile-mill monitoring, STQC & BIS-ER certified, Made in India. Free survey.",
     "keywords": [
       "\"CCTV Amritsar\"",
       "\"surveillance Amritsar\"",
@@ -3102,7 +3102,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-ludhiana",
     "category": "city",
     "title": "CCTV Cameras in Ludhiana | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Ludhiana. Industrial security, manufacturing monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Ludhiana — industrial-unit security, manufacturing-floor monitoring, STQC & BIS-ER certified, Made in India. Free quote.",
     "keywords": [
       "\"CCTV Ludhiana\"",
       "\"surveillance Ludhiana\"",
@@ -3188,7 +3188,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-jalandhar",
     "category": "city",
     "title": "CCTV Cameras in Jalandhar | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Jalandhar. Sports goods security, manufacturing monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Jalandhar — sports-goods factory security, manufacturing monitoring, STQC & BIS-ER certified, Made in India. Free quote.",
     "keywords": [
       "\"CCTV Jalandhar\"",
       "\"surveillance Jalandhar\"",
@@ -3274,7 +3274,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-meerut",
     "category": "city",
     "title": "CCTV Cameras in Meerut | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Meerut. Industrial security, residential monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Meerut — industrial-unit and society security, sports-goods factory monitoring, STQC & BIS-ER certified. Free survey.",
     "keywords": [
       "\"CCTV Meerut\"",
       "\"surveillance Meerut\"",
@@ -3360,7 +3360,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-agra",
     "category": "city",
     "title": "CCTV Cameras in Agra | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Agra. Heritage security, tourism monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Agra — heritage-site and tourist-area security, leather-industry monitoring, STQC & BIS-ER certified. Free quote.",
     "keywords": [
       "\"CCTV Agra\"",
       "\"surveillance Agra\"",
@@ -3446,7 +3446,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-varanasi",
     "category": "city",
     "title": "CCTV Cameras in Varanasi | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Varanasi. Temple security, ghat monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Varanasi — ghat and temple-complex security, pilgrimage-crowd monitoring, STQC & BIS-ER certified, Made in India. Free survey.",
     "keywords": [
       "\"CCTV Varanasi\"",
       "\"surveillance Varanasi\"",
@@ -3532,7 +3532,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-allahabad",
     "category": "city",
     "title": "CCTV Cameras in Allahabad | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Allahabad. Pilgrimage security, Kumbh Mela monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Allahabad — Kumbh Mela crowd security, pilgrimage-route monitoring, STQC & BIS-ER certified for high-density events. Free quote.",
     "keywords": [
       "\"CCTV Allahabad\"",
       "\"surveillance Allahabad\"",
@@ -3618,7 +3618,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-kanpur",
     "category": "city",
     "title": "CCTV Cameras in Kanpur | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Kanpur. Leather industry security, industrial monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Kanpur — leather-industry security, tannery and industrial monitoring, STQC & BIS-ER certified, Made in India. Free survey.",
     "keywords": [
       "\"CCTV Kanpur\"",
       "\"surveillance Kanpur\"",
@@ -3704,7 +3704,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-gorakhpur",
     "category": "city",
     "title": "CCTV Cameras in Gorakhpur | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Gorakhpur. Ashram security, medical hub monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Gorakhpur — ashram and medical-hub security, hospital-campus monitoring, STQC & BIS-ER certified, Made in India. Free quote.",
     "keywords": [
       "\"CCTV Gorakhpur\"",
       "\"surveillance Gorakhpur\"",
@@ -3790,7 +3790,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-bareilly",
     "category": "city",
     "title": "CCTV Cameras in Bareilly | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Bareilly. Trading hub security, commercial monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Bareilly — trading-hub security, market and commercial-complex monitoring, STQC & BIS-ER certified, Made in India. Free survey.",
     "keywords": [
       "\"CCTV Bareilly\"",
       "\"surveillance Bareilly\"",
@@ -3876,7 +3876,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-moradabad",
     "category": "city",
     "title": "CCTV Cameras in Moradabad | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Moradabad. Brass industry security, manufacturing monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Moradabad — brass-industry factory security, export-unit monitoring, STQC & BIS-ER certified, Made in India. Free quote.",
     "keywords": [
       "\"CCTV Moradabad\"",
       "\"surveillance Moradabad\"",
@@ -3962,7 +3962,7 @@ const seoPageDataExpansion = {
     "slug": "cctv-cameras-aligarh",
     "category": "city",
     "title": "CCTV Cameras in Aligarh | ArcisAI Surveillance",
-    "metaDescription": "AI CCTV for Aligarh. Lock industry security, educational monitoring. STQC certified.",
+    "metaDescription": "ArcisAI AI CCTV cameras in Aligarh — lock-industry factory security, campus monitoring, STQC & BIS-ER certified, Made in India. Free survey.",
     "keywords": [
       "\"CCTV Aligarh\"",
       "\"surveillance Aligarh\"",

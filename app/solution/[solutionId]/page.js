@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Solutions from '@/src/views/Solution/Solutions';
 import { getSolutionSEO } from '@/src/views/Solution/Data/SEOContent';
+import { buildHreflang } from '@/src/data/hreflang';
 
 // NOTE: deliberately NOT importing `Solution` from Data/Content.js here.
 // That file's data objects pull in raw .svg icon imports, and Content.js is
@@ -60,7 +61,7 @@ export async function generateMetadata(props) {
   return {
     title,
     description,
-    alternates: { canonical },
+    alternates: { canonical, languages: buildHreflang(canonical) },
     openGraph: {
       title,
       description,

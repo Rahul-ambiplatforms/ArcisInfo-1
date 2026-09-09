@@ -1,4 +1,5 @@
 import MediaKit from '@/src/views/Press/MediaKit';
+import { buildHreflang } from '@/src/data/hreflang';
 
 const SITE_URL = 'https://www.arcisai.io';
 const TITLE = 'Press & Media Kit | ArcisAI — Facts, Certifications, Boilerplate';
@@ -12,7 +13,7 @@ export const metadata = {
     'ArcisAI press kit', 'ArcisAI media kit', 'ArcisAI boilerplate', 'ArcisAI facts',
     'ArcisAI press contact', 'ArcisAI certifications', 'ArcisAI news',
   ],
-  alternates: { canonical: `${SITE_URL}/press` },
+  alternates: { canonical: `${SITE_URL}/press`, languages: buildHreflang(`${SITE_URL}/press`) },
   openGraph: {
     title: TITLE, description: DESCRIPTION, url: `${SITE_URL}/press`,
     type: 'website', siteName: 'ArcisAI',

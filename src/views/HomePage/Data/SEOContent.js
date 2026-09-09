@@ -15,23 +15,15 @@ export const homeSEO = {
       url: "https://arcisai.io/",
       datePublished: "2024-07-24",
       dateModified: "2025-05-05",
-      publisher: {
-        "@type": "Organization",
-        name: "ArcisAI - AI CCTV Camera Brand",
-        url: "https://arcisai.io/",
-        logo: {
-          "@type": "ImageObject",
-          url: "https://arcisai.io/images/ArcisAi.webp",
-          width: 107,
-          height: 24,
-        },
-        sameAs: [
-          "https://www.facebook.com/thearcisai/",
-          "https://www.instagram.com/_arcisai_/",
-          "https://www.linkedin.com/company/thearcisai/",
-          "https://x.com/arcisai",
-        ],
-      },
+      // SEO audit fix (2026-09-07, checklist item #41): this used to be a full
+      // inline Organization object with its own name/logo/address/foundingDate
+      // that conflicted with the canonical Organization schema in app/layout.js
+      // (different founding date, different address formatting, no shared @id) —
+      // two competing Organization entities for the same page confuses
+      // structured-data parsers. Now just references the single canonical
+      // Organization by its @id instead of duplicating (and drifting from) its
+      // fields.
+      publisher: { "@id": "https://arcisai.io/#organization" },
       primaryImageOfPage: {
         "@type": "ImageObject",
         url: "Image Link",
@@ -42,39 +34,17 @@ export const homeSEO = {
       inLanguage: "en-US",
     },
 
-    // Organization Schema
-    {
-      "@context": "http://schema.org",
-      "@type": "Organization",
-      name: "ArcisAI - AI CCTV Camera Brand",
-      url: "https://arcisai.io/",
-      logo: "https://arcisai.io/images/ArcisAi.webp",
-      contactPoint: {
-        "@type": "ContactPoint",
-        telephone: "+91 9687779999",
-        email: "marketing@arcisai.io",
-        contactType: "Sales",
-        areaServed: "Global",
-      },
-      sameAs: [
-        "https://www.facebook.com/thearcisai/",
-        "https://www.instagram.com/_arcisai_/",
-        "https://www.linkedin.com/company/thearcisai/",
-        "https://x.com/arcisai",
-      ],
-      address: {
-        "@type": "PostalAddress",
-        streetAddress:
-          "7, Arista@Eight Corporate House, Near Satyam House, Behind Rajpath Club, Bodakdev",
-        addressLocality: "Ahmedabad",
-        addressRegion: "Gujarat",
-        postalCode: "380054",
-        addressCountry: "IN",
-      },
-      foundingDate: "2003",
-      description:
-        "Discover ArcisAI – India’s first AI CCTV camera brand with 8 inbuilt EdgeAI detections, delivering smarter & faster surveillance via cloud VMS & Free mobile app.",
-    },
+    // Organization Schema — REMOVED (SEO audit fix, checklist item #41,
+    // 2026-09-07). This used to be a second, standalone Organization entity
+    // with its own name ("ArcisAI - AI CCTV Camera Brand" vs. the canonical
+    // "ArcisAI"), its own logo, a differently-formatted address, and a
+    // conflicting foundingDate ("2003", which is actually Adiance's founding
+    // year — layout.js correctly attributes 2003 to the parentOrganization and
+    // 2021 to ArcisAI itself). Live-verified: this produced two competing
+    // Organization JSON-LD blocks on the homepage alongside the canonical one
+    // in app/layout.js (which has a shared @id, the correct legalName,
+    // certifications, and areaServed). Removed the duplicate; the WebPage
+    // schema above now references the canonical Organization by @id instead.
 
     // LocalBusiness Schema
     {

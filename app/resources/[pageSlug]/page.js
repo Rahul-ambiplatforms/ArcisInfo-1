@@ -44,10 +44,17 @@ export default async function ResourcePage(props) {
 
   const schemas = buildSeoPageSchemas({ pageData, path: `/resources/${params.pageSlug}` });
 
+  // SEO audit fix (2026-09-08, checklist item #51): cross-links sibling
+  // /resources pages to each other via the same crawlable relatedLinks block
+  // used by the /[slug] catch-all. Excludes the current page.
+  const relatedLinks = getResourceLinks()
+    .filter((l) => l.slug !== params.pageSlug)
+    .map((l) => ({ ...l, slug: `resources/${l.slug}` }));
+
   return (
     <>
       <SeoPageSchemaScripts schemas={schemas} />
-      <SEOLandingPage pageData={pageData} slugKey={resolveSeoKey(override) || params.pageSlug} />
+      <SEOLandingPage pageData={pageData} slugKey={resolveSeoKey(override) || params.pageSlug} relatedLinks={relatedLinks} />
     </>
   );
 }

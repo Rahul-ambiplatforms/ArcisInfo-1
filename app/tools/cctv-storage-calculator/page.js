@@ -1,4 +1,5 @@
 import StorageCalculator from '@/src/views/Tools/StorageCalculator';
+import { buildHreflang } from '@/src/data/hreflang';
 
 const SITE_URL = 'https://www.arcisai.io';
 const TITLE = 'CCTV Storage Calculator | NVR & Hard Disk Size Estimator | ArcisAI';
@@ -13,7 +14,7 @@ export const metadata = {
     'how much storage for CCTV', 'CCTV storage size estimator', 'IP camera storage calculator',
     'NVR hard disk size', 'CCTV recording storage calculator',
   ],
-  alternates: { canonical: `${SITE_URL}/tools/cctv-storage-calculator` },
+  alternates: { canonical: `${SITE_URL}/tools/cctv-storage-calculator`, languages: buildHreflang(`${SITE_URL}/tools/cctv-storage-calculator`) },
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,

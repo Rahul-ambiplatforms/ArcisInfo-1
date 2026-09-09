@@ -1,4 +1,5 @@
 import DistributorProgram from '@/src/views/Partners/DistributorProgram';
+import { buildHreflang } from '@/src/data/hreflang';
 
 const SITE_URL = 'https://arcisai.io';
 const TITLE = 'Become an ArcisAI CCTV Dealer / Distributor in India | Channel Partner Program';
@@ -13,7 +14,7 @@ export const metadata = {
     'become a CCTV dealer', 'AI CCTV distributor India', 'Made in India CCTV dealer',
     'CCTV channel partner India', 'STQC certified CCTV distributor', 'GeM CCTV supplier partner',
   ],
-  alternates: { canonical: `${SITE_URL}/become-a-distributor` },
+  alternates: { canonical: `${SITE_URL}/become-a-distributor`, languages: buildHreflang(`${SITE_URL}/become-a-distributor`) },
   openGraph: {
     title: TITLE, description: DESCRIPTION, url: `${SITE_URL}/become-a-distributor`,
     type: 'website', siteName: 'ArcisAI',

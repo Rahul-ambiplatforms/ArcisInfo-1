@@ -225,12 +225,15 @@ const nextConfig = {
         permanent: true,
         statusCode: 301,
       },
-      {
-        source: "/products",
-        destination: "/s-series",
-        permanent: true,
-        statusCode: 301,
-      },
+      // SEO audit fix (2026-09-08, checklist items #7/#9/#52/#98): "/products"
+      // used to 301 straight to "/s-series", which meant the site's single
+      // most common CTA ("View Products", used on ~250 landing pages and the
+      // homepage) sent 100% of its link equity to S-Series alone —
+      // Eco-Series, the Bridge Device, the NVR, Cloud VMS and ArcisGPT got
+      // none of it. "/products" is now a real hub page (app/products/page.js)
+      // listing every product line, so this redirect is removed; the
+      // sub-path redirects below (which pointed old /products/<slug> URLs at
+      // their real pages) are unaffected and still needed.
       {
         source: "/products/s-series",
         destination: "/s-series",

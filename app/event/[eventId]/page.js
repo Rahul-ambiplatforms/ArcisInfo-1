@@ -1,5 +1,6 @@
 import IFSEC from '@/src/views/EventPage/IFSEC';
 import { humanizeSlug } from '@/src/data/buildSeoPageSchemas';
+import { buildHreflang } from '@/src/data/hreflang';
 
 // Prerendered so the HTML is edge-cacheable instead of rendered per request.
 export const revalidate = 86400;
@@ -18,7 +19,7 @@ export async function generateMetadata(props) {
   return {
     title: `${name}`,
     description: `ArcisAI at ${name} — experience live demos of AI CCTV cameras, ArcisGPT, and Cloud VMS. Meet our team and explore enterprise surveillance solutions.`,
-    alternates: { canonical: `https://arcisai.io/event/${eventId}` },
+    alternates: { canonical: `https://arcisai.io/event/${eventId}`, languages: buildHreflang(`https://arcisai.io/event/${eventId}`) },
     openGraph: {
       title: ogTitle,
       description: ogDescription,

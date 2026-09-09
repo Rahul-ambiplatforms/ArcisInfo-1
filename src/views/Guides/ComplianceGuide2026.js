@@ -21,10 +21,18 @@ const ComplianceGuide2026 = () => (
     <Heading as="h1" fontSize={{ base: '30px', md: '46px' }} fontWeight="700" mb={4} lineHeight="1.15">
       India CCTV Compliance 2026: BIS-ER &amp; STQC Explained
     </Heading>
-    <Text color="whiteAlpha.800" fontSize={{ base: 'md', md: 'lg' }} mb={8}>
+    <Text color="whiteAlpha.800" fontSize={{ base: 'md', md: 'lg' }} mb={2}>
       India is moving to certified surveillance. This guide explains the BIS-ER and STQC certification
       requirements for CCTV in plain language — what they are, who needs them, and how to verify any
-      brand's certificate before you buy. Always confirm the latest official timeline on crsbis.in and stqc.gov.in.
+      brand's certificate before you buy. Always confirm the latest official timeline on{' '}
+      <Link href="https://crsbis.in/BIS/" isExternal color={ACCENT} textDecoration="underline">crsbis.in</Link> and{' '}
+      <Link href="https://www.stqc.gov.in/" isExternal color={ACCENT} textDecoration="underline">stqc.gov.in</Link>.
+    </Text>
+    {/* SEO audit fix (checklist item #83): visible "last reviewed" date for this
+        compliance-sensitive guide. Update whenever the certification timeline below
+        is re-checked against the official portals. */}
+    <Text fontSize="sm" color="whiteAlpha.600" mb={8}>
+      Last reviewed: September 2026
     </Text>
 
     <Box p={5} bg={CARD_BG} border="1px solid" borderColor={CARD_BORDER} borderRadius="xl" mb={10}>
@@ -42,8 +50,11 @@ const ComplianceGuide2026 = () => (
         The intent is cyber-secure, quality-assured surveillance — and to phase out non-certified products from
         the market. Government procurement already requires STQC compliance, and the requirement is extending
         across the broader market in 2026.</Text>
-      <Text>For the exact, current effective dates and product scope, always check the official BIS and STQC portals
-        (linked below) — timelines have shifted, so treat those as the source of truth.</Text>
+      <Text>For the exact, current effective dates and product scope, always check the official{' '}
+        <Link href="https://crsbis.in/BIS/" isExternal color={ACCENT} textDecoration="underline">BIS portal</Link>{' '}
+        and{' '}
+        <Link href="https://www.stqc.gov.in/" isExternal color={ACCENT} textDecoration="underline">STQC portal</Link>{' '}
+        — timelines have shifted, so treat those as the source of truth.</Text>
     </Section>
 
     <Section title="What is BIS-ER (ER01:2024)?">
@@ -59,7 +70,8 @@ const ComplianceGuide2026 = () => (
         <ListItem>• A published vulnerability-disclosure policy</ListItem>
       </List>
       <Text>A valid BIS-ER registration has an R-number (for example, ArcisAI's is R-72003735) that can be searched
-        on the BIS portal.</Text>
+        on the{' '}
+        <Link href="https://crsbis.in/BIS/" isExternal color={ACCENT} textDecoration="underline">BIS portal</Link>.</Text>
     </Section>
 
     <Section title="What is STQC certification?">
@@ -78,8 +90,9 @@ const ComplianceGuide2026 = () => (
 
     <Section title="How to verify a CCTV certificate (before you buy)">
       <List spacing={2} pl={2}>
-        <ListItem>1. <b>BIS-ER:</b> search the R-number on the BIS CRS portal (crsbis.in) and confirm the specific model is listed.</ListItem>
-        <ListItem>2. <b>STQC:</b> confirm the VMS/software certificate on stqc.gov.in.</ListItem>
+        <ListItem>1. <b>BIS-ER:</b> search the R-number on the BIS CRS portal (<Link href="https://crsbis.in/BIS/" isExternal color={ACCENT} textDecoration="underline">crsbis.in</Link>) and confirm the specific model is listed.</ListItem>
+        <ListItem>2. <b>STQC:</b> confirm the VMS/software certificate on{' '}
+          <Link href="https://www.stqc.gov.in/" isExternal color={ACCENT} textDecoration="underline">stqc.gov.in</Link>.</ListItem>
         <ListItem>3. <b>Both layers:</b> a product with only one is not fully compliant.</ListItem>
         <ListItem>4. <b>NDAA / origin:</b> for sensitive sites, confirm NDAA compliance and a clean supply chain.</ListItem>
       </List>
@@ -116,7 +129,11 @@ const ComplianceGuide2026 = () => (
       <Box><Text fontWeight="600" color="white">Does a camera need both BIS-ER and STQC?</Text>
         <Text>For full compliance — especially government/PSU/GeM — yes: BIS-ER for hardware and STQC for the software.</Text></Box>
       <Box><Text fontWeight="600" color="white">How do I check if a brand is really certified?</Text>
-        <Text>Search the BIS R-number on crsbis.in and the STQC certificate on stqc.gov.in, or use our free certificate verifier.</Text></Box>
+        <Text>Search the BIS R-number on{' '}
+          <Link href="https://crsbis.in/BIS/" isExternal color={ACCENT} textDecoration="underline">crsbis.in</Link>{' '}
+          and the STQC certificate on{' '}
+          <Link href="https://www.stqc.gov.in/" isExternal color={ACCENT} textDecoration="underline">stqc.gov.in</Link>,
+          or use our free certificate verifier.</Text></Box>
       <Box><Text fontWeight="600" color="white">Is ArcisAI certified?</Text>
         <Text>Yes — BIS-ER (R-72003735, ER01:2024) and STQC certified, plus ISO 27001:2022, NDAA compliant, Made in India.</Text></Box>
     </Section>

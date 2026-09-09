@@ -1,4 +1,5 @@
 import Certifications from '@/src/views/Certifications/Certifications';
+import { buildHreflang } from '@/src/data/hreflang';
 
 export const metadata = {
   title: 'ArcisAI Certifications | BIS-ER & STQC Certified CCTV',
@@ -8,12 +9,18 @@ export const metadata = {
     'ArcisAI certifications', 'BIS-ER certified CCTV', 'STQC certified VMS',
     'NDAA compliant CCTV India', 'ISO 27001 CCTV', 'made in India CCTV certification',
   ],
-  alternates: { canonical: 'https://arcisai.io/certifications' },
+  alternates: { canonical: 'https://arcisai.io/certifications', languages: buildHreflang('https://arcisai.io/certifications') },
   openGraph: {
     title: 'ArcisAI Certifications | BIS-ER & STQC Certified CCTV',
     description: 'BIS-ER certified hardware + STQC-certified VMS. Made in India, NDAA compliant. Verify on official portals.',
     url: 'https://arcisai.io/certifications',
     images: [{ url: '/og/home.jpg', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ArcisAI Certifications | BIS-ER & STQC Certified CCTV',
+    description: 'BIS-ER certified hardware + STQC-certified VMS. Made in India, NDAA compliant. Verify on official portals.',
+    images: ['/og/home.jpg'],
   },
 };
 

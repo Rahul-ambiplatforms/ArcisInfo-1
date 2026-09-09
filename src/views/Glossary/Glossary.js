@@ -217,7 +217,7 @@ const Glossary = () => {
                 <AccordionButton py={4} px={6} _hover={{ bg: "gray.50" }}>
                   <Box flex="1" textAlign="left">
                     <HStack spacing={3}>
-                      <Heading as="h3" size="sm" color="#0a0a0a">{item.term}</Heading>
+                      <Heading as="h2" size="sm" color="#0a0a0a">{item.term}</Heading>
                       <Badge fontSize="xs" colorScheme="gray" variant="subtle">{item.category}</Badge>
                     </HStack>
                   </Box>

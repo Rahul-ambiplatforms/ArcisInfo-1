@@ -28,6 +28,8 @@
 //    (Ahmedabad); claiming a local business at 72 cities is fabricated markup.
 //    Geographic pages now use `Service` + `areaServed`, which is accurate.
 
+import { buildHreflang } from './hreflang';
+
 export const SITE = 'https://arcisai.io';
 export const ORGANIZATION_ID = `${SITE}/#organization`;
 export const WEBSITE_ID = `${SITE}/#website`;
@@ -215,7 +217,7 @@ export function buildSeoPageMetadata({ pageData, path, fallbackTitle, fallbackDe
     title,
     description,
     ...(pageData?.keywords?.length ? { keywords: pageData.keywords } : {}),
-    alternates: { canonical },
+    alternates: { canonical, languages: buildHreflang(canonical) },
     openGraph: {
       title,
       description,

@@ -58,10 +58,20 @@ export default async function StatePage(props) {
     areaServed: humanizeSlug(params.pageSlug),
   });
 
+  // SEO audit fix (2026-09-08, checklist item #51): cross-links sibling
+  // /state pages to each other via the same crawlable relatedLinks block
+  // used by the /[slug] catch-all. Uses canonicalPathForKey() per link (like
+  // the metadata above) so a state that consolidates onto a /cctv-cameras-*
+  // URL links to that same canonical URL, not the non-canonical /state/ one.
+  // Excludes the current page.
+  const relatedLinks = getStateLinks()
+    .filter((l) => l.slug !== params.pageSlug)
+    .map((l) => ({ ...l, slug: (canonicalPathForKey(l.slug) || `/state/${l.slug}`).replace(/^\/+/, '') }));
+
   return (
     <>
       <SeoPageSchemaScripts schemas={schemas} />
-      <SEOLandingPage pageData={pageData} slugKey={resolveSeoKey(override) || params.pageSlug} />
+      <SEOLandingPage pageData={pageData} slugKey={resolveSeoKey(override) || params.pageSlug} relatedLinks={relatedLinks} />
     </>
   );
 }

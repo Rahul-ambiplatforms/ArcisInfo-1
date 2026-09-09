@@ -2,6 +2,7 @@ import Link from 'next/link';
 import HomeDashboard from '@/src/views/HomePage/HomeDashboard';
 import { homeSEO } from '@/src/views/HomePage/Data/SEOContent';
 import { getResourceLinks, getCompareLinks } from '@/src/data/resolveSeoPageData';
+import { buildHreflang } from '@/src/data/hreflang';
 
 // SEO copy is sourced from `homeSEO` (the same content that previously ran
 // client-side via react-helmet-async) so Google and JS-disabled crawlers see
@@ -17,7 +18,7 @@ export const metadata = {
     'best CCTV camera brand in India',
     'NDAA compliant cameras',
   ],
-  alternates: { canonical: homeSEO.canonical },
+  alternates: { canonical: homeSEO.canonical, languages: buildHreflang(homeSEO.canonical) },
   openGraph: {
     title: homeSEO.metatitle,
     description: homeSEO.metadescription,

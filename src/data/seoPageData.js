@@ -1016,7 +1016,7 @@ const seoPageData = {
     heroDescription: "Smart retail analytics, shrinkage prevention, footfall counting. ArcisAI delivers STQC-certified, edge AI-powered cameras with cloud VMS and ArcisGPT analytics.",
     category: "industry",
     sections: [
-      {title: "Why Retail Needs AI CCTV", stats: [{label:"AI Detections",value:"8+"},{label:"False Alarm Reduction",value:"95%"},{label:"Response Time",value:"<3 sec"},{label:"ROI Period",value:"6 months"}], features: ["Real-time AI threat detection on camera","Cloud VMS for multi-location monitoring","ArcisGPT: Natural language video search","STQC certified for government compliance","24/7 support with 99.9% uptime SLA"]},
+      {title: "Why Retail Needs a Smart Shop Camera & Footfall Counter", stats: [{label:"AI Detections",value:"8+"},{label:"False Alarm Reduction",value:"95%"},{label:"Response Time",value:"<3 sec"},{label:"ROI Period",value:"6 months"}], features: ["Real-time AI threat detection on camera","Cloud VMS for multi-location monitoring","ArcisGPT: Natural language video search","STQC certified for government compliance","24/7 support with 99.9% uptime SLA"]},
       {title: "Recommended Products", features: ["S-Series PTZ for large area coverage","S-Series Dome for indoor monitoring","ECO-Series for budget deployments","4G SIM cameras for remote sites","Bridge Device for legacy camera upgrade"]}
     ],
     faqs: [
@@ -1432,7 +1432,7 @@ const seoPageData = {
     keywords: ["cctv buyers guide india", "CCTV guide India", "surveillance guide 2026", "ArcisAI"],
     heroTitle: "CCTV Buyer's Guide India 2026", heroSubtitle: "Expert Guide by ArcisAI", heroDescription: "Complete guide to choosing the right CCTV camera for your needs in India",
     category: "resources",
-    sections: [{title: "Key Takeaways", features: ["Comprehensive India-specific guidance", "Updated for 2026 regulations including STQC mandate", "Expert recommendations from ArcisAI engineers", "Actionable steps you can implement today", "Free consultation available"]}],
+    sections: [{title: "Key Takeaways: Your CCTV Guide India Checklist", features: ["Comprehensive India-specific guidance", "Updated for 2026 regulations including STQC mandate", "Expert recommendations from ArcisAI engineers", "Actionable steps you can implement today", "Free consultation available"]}],
     faqs: [{q:"Is this guide free?",a:"Yes, all ArcisAI resources are free. We believe in educating the market about AI surveillance."},{q:"Can I get personalized advice?",a:"Absolutely. Contact our team for a free consultation tailored to your specific needs."}],
     cta: {title: "Need Expert Advice?", description: "Our surveillance consultants are ready to help.", buttonText: "Talk to Expert", buttonLink: "/contact-us?resource=cctv-buyers-guide-india"}
   },
@@ -1442,7 +1442,7 @@ const seoPageData = {
     keywords: ["how to choose cctv camera", "CCTV guide India", "surveillance guide 2026", "ArcisAI"],
     heroTitle: "How to Choose the Right CCTV Camera", heroSubtitle: "Expert Guide by ArcisAI", heroDescription: "Step-by-step guide: resolution, connectivity, storage, AI features",
     category: "resources",
-    sections: [{title: "Key Takeaways", features: ["Comprehensive India-specific guidance", "Updated for 2026 regulations including STQC mandate", "Expert recommendations from ArcisAI engineers", "Actionable steps you can implement today", "Free consultation available"]}],
+    sections: [{title: "Key Takeaways: How to Choose a CCTV Camera", features: ["Comprehensive India-specific guidance", "Updated for 2026 regulations including STQC mandate", "Expert recommendations from ArcisAI engineers", "Actionable steps you can implement today", "Free consultation available"]}],
     faqs: [{q:"Is this guide free?",a:"Yes, all ArcisAI resources are free. We believe in educating the market about AI surveillance."},{q:"Can I get personalized advice?",a:"Absolutely. Contact our team for a free consultation tailored to your specific needs."}],
     cta: {title: "Need Expert Advice?", description: "Our surveillance consultants are ready to help.", buttonText: "Talk to Expert", buttonLink: "/contact-us?resource=how-to-choose-cctv-camera"}
   },
@@ -1452,7 +1452,7 @@ const seoPageData = {
     keywords: ["stqc certification guide", "CCTV guide India", "surveillance guide 2026", "ArcisAI"],
     heroTitle: "STQC Certification for CCTV — Everything You Need to Know", heroSubtitle: "Expert Guide by ArcisAI", heroDescription: "What is STQC, why it's mandatory since April 2026, certified brands list",
     category: "resources",
-    sections: [{title: "Key Takeaways", features: ["Comprehensive India-specific guidance", "Updated for 2026 regulations including STQC mandate", "Expert recommendations from ArcisAI engineers", "Actionable steps you can implement today", "Free consultation available"]}],
+    sections: [{title: "Key Takeaways: STQC Certification Guide Essentials", features: ["Comprehensive India-specific guidance", "Updated for 2026 regulations including STQC mandate", "Expert recommendations from ArcisAI engineers", "Actionable steps you can implement today", "Free consultation available"]}],
     faqs: [{q:"Is this guide free?",a:"Yes, all ArcisAI resources are free. We believe in educating the market about AI surveillance."},{q:"Can I get personalized advice?",a:"Absolutely. Contact our team for a free consultation tailored to your specific needs."}],
     cta: {title: "Need Expert Advice?", description: "Our surveillance consultants are ready to help.", buttonText: "Talk to Expert", buttonLink: "/contact-us?resource=stqc-certification-guide"}
   },
@@ -1462,7 +1462,7 @@ const seoPageData = {
     keywords: ["cctv installation cost india", "CCTV guide India", "surveillance guide 2026", "ArcisAI"],
     heroTitle: "CCTV Installation Cost in India 2026", heroSubtitle: "Expert Guide by ArcisAI", heroDescription: "Complete pricing guide: camera costs, installation charges, monthly fees by city",
     category: "resources",
-    sections: [{title: "Key Takeaways", features: ["Comprehensive India-specific guidance", "Updated for 2026 regulations including STQC mandate", "Expert recommendations from ArcisAI engineers", "Actionable steps you can implement today", "Free consultation available"]}],
+    sections: [{title: "Key Takeaways: CCTV Installation Cost in India", features: ["Comprehensive India-specific guidance", "Updated for 2026 regulations including STQC mandate", "Expert recommendations from ArcisAI engineers", "Actionable steps you can implement today", "Free consultation available"]}],
     faqs: [{q:"Is this guide free?",a:"Yes, all ArcisAI resources are free. We believe in educating the market about AI surveillance."},{q:"Can I get personalized advice?",a:"Absolutely. Contact our team for a free consultation tailored to your specific needs."}],
     cta: {title: "Need Expert Advice?", description: "Our surveillance consultants are ready to help.", buttonText: "Talk to Expert", buttonLink: "/contact-us?resource=cctv-installation-cost-india"}
   },
@@ -1472,7 +1472,7 @@ const seoPageData = {
     keywords: ["ai surveillance roi calculator", "CCTV guide India", "surveillance guide 2026", "ArcisAI"],
     heroTitle: "AI Surveillance ROI Calculator", heroSubtitle: "Expert Guide by ArcisAI", heroDescription: "Calculate your return on investment from upgrading to AI CCTV cameras",
     category: "resources",
-    sections: [{title: "Key Takeaways", features: ["Comprehensive India-specific guidance", "Updated for 2026 regulations including STQC mandate", "Expert recommendations from ArcisAI engineers", "Actionable steps you can implement today", "Free consultation available"]}],
+    sections: [{title: "Key Takeaways: Calculating Your Surveillance ROI", features: ["Comprehensive India-specific guidance", "Updated for 2026 regulations including STQC mandate", "Expert recommendations from ArcisAI engineers", "Actionable steps you can implement today", "Free consultation available"]}],
     faqs: [{q:"Is this guide free?",a:"Yes, all ArcisAI resources are free. We believe in educating the market about AI surveillance."},{q:"Can I get personalized advice?",a:"Absolutely. Contact our team for a free consultation tailored to your specific needs."}],
     cta: {title: "Need Expert Advice?", description: "Our surveillance consultants are ready to help.", buttonText: "Talk to Expert", buttonLink: "/contact-us?resource=ai-surveillance-roi-calculator"}
   },
@@ -1482,7 +1482,7 @@ const seoPageData = {
     keywords: ["cctv camera comparison chart", "CCTV guide India", "surveillance guide 2026", "ArcisAI"],
     heroTitle: "CCTV Camera Comparison Chart 2026", heroSubtitle: "Expert Guide by ArcisAI", heroDescription: "Side-by-side comparison of top 10 CCTV brands in India",
     category: "resources",
-    sections: [{title: "Key Takeaways", features: ["Comprehensive India-specific guidance", "Updated for 2026 regulations including STQC mandate", "Expert recommendations from ArcisAI engineers", "Actionable steps you can implement today", "Free consultation available"]}],
+    sections: [{title: "Key Takeaways: Using This CCTV Camera Comparison", features: ["Comprehensive India-specific guidance", "Updated for 2026 regulations including STQC mandate", "Expert recommendations from ArcisAI engineers", "Actionable steps you can implement today", "Free consultation available"]}],
     faqs: [{q:"Is this guide free?",a:"Yes, all ArcisAI resources are free. We believe in educating the market about AI surveillance."},{q:"Can I get personalized advice?",a:"Absolutely. Contact our team for a free consultation tailored to your specific needs."}],
     cta: {title: "Need Expert Advice?", description: "Our surveillance consultants are ready to help.", buttonText: "Talk to Expert", buttonLink: "/contact-us?resource=cctv-camera-comparison-chart"}
   },
@@ -1492,7 +1492,7 @@ const seoPageData = {
     keywords: ["video surveillance laws india", "CCTV guide India", "surveillance guide 2026", "ArcisAI"],
     heroTitle: "Video Surveillance Laws in India", heroSubtitle: "Expert Guide by ArcisAI", heroDescription: "Legal guide to CCTV usage, privacy laws, data protection compliance",
     category: "resources",
-    sections: [{title: "Key Takeaways", features: ["Comprehensive India-specific guidance", "Updated for 2026 regulations including STQC mandate", "Expert recommendations from ArcisAI engineers", "Actionable steps you can implement today", "Free consultation available"]}],
+    sections: [{title: "Key Takeaways: Video Surveillance Laws You Must Know", features: ["Comprehensive India-specific guidance", "Updated for 2026 regulations including STQC mandate", "Expert recommendations from ArcisAI engineers", "Actionable steps you can implement today", "Free consultation available"]}],
     faqs: [{q:"Is this guide free?",a:"Yes, all ArcisAI resources are free. We believe in educating the market about AI surveillance."},{q:"Can I get personalized advice?",a:"Absolutely. Contact our team for a free consultation tailored to your specific needs."}],
     cta: {title: "Need Expert Advice?", description: "Our surveillance consultants are ready to help.", buttonText: "Talk to Expert", buttonLink: "/contact-us?resource=video-surveillance-laws-india"}
   },
@@ -1502,7 +1502,7 @@ const seoPageData = {
     keywords: ["cctv maintenance guide", "CCTV guide India", "surveillance guide 2026", "ArcisAI"],
     heroTitle: "CCTV Maintenance & Troubleshooting Guide", heroSubtitle: "Expert Guide by ArcisAI", heroDescription: "How to maintain your surveillance system for optimal performance",
     category: "resources",
-    sections: [{title: "Key Takeaways", features: ["Comprehensive India-specific guidance", "Updated for 2026 regulations including STQC mandate", "Expert recommendations from ArcisAI engineers", "Actionable steps you can implement today", "Free consultation available"]}],
+    sections: [{title: "Key Takeaways: CCTV Maintenance Guide Essentials", features: ["Comprehensive India-specific guidance", "Updated for 2026 regulations including STQC mandate", "Expert recommendations from ArcisAI engineers", "Actionable steps you can implement today", "Free consultation available"]}],
     faqs: [{q:"Is this guide free?",a:"Yes, all ArcisAI resources are free. We believe in educating the market about AI surveillance."},{q:"Can I get personalized advice?",a:"Absolutely. Contact our team for a free consultation tailored to your specific needs."}],
     cta: {title: "Need Expert Advice?", description: "Our surveillance consultants are ready to help.", buttonText: "Talk to Expert", buttonLink: "/contact-us?resource=cctv-maintenance-guide"}
   },
@@ -1512,7 +1512,7 @@ const seoPageData = {
     keywords: ["cloud vs onpremise surveillance", "CCTV guide India", "surveillance guide 2026", "ArcisAI"],
     heroTitle: "Cloud vs On-Premise Surveillance", heroSubtitle: "Expert Guide by ArcisAI", heroDescription: "Pros and cons of cloud VMS vs local NVR/DVR storage",
     category: "resources",
-    sections: [{title: "Key Takeaways", features: ["Comprehensive India-specific guidance", "Updated for 2026 regulations including STQC mandate", "Expert recommendations from ArcisAI engineers", "Actionable steps you can implement today", "Free consultation available"]}],
+    sections: [{title: "Key Takeaways: Cloud vs On-Premise Surveillance", features: ["Comprehensive India-specific guidance", "Updated for 2026 regulations including STQC mandate", "Expert recommendations from ArcisAI engineers", "Actionable steps you can implement today", "Free consultation available"]}],
     faqs: [{q:"Is this guide free?",a:"Yes, all ArcisAI resources are free. We believe in educating the market about AI surveillance."},{q:"Can I get personalized advice?",a:"Absolutely. Contact our team for a free consultation tailored to your specific needs."}],
     cta: {title: "Need Expert Advice?", description: "Our surveillance consultants are ready to help.", buttonText: "Talk to Expert", buttonLink: "/contact-us?resource=cloud-vs-onpremise-surveillance"}
   },
@@ -1522,7 +1522,7 @@ const seoPageData = {
     keywords: ["smart city surveillance guide", "CCTV guide India", "surveillance guide 2026", "ArcisAI"],
     heroTitle: "Smart City Surveillance Implementation Guide", heroSubtitle: "Expert Guide by ArcisAI", heroDescription: "How Indian cities are deploying AI surveillance for public safety",
     category: "resources",
-    sections: [{title: "Key Takeaways", features: ["Comprehensive India-specific guidance", "Updated for 2026 regulations including STQC mandate", "Expert recommendations from ArcisAI engineers", "Actionable steps you can implement today", "Free consultation available"]}],
+    sections: [{title: "Key Takeaways: This CCTV Guide India Playbook", features: ["Comprehensive India-specific guidance", "Updated for 2026 regulations including STQC mandate", "Expert recommendations from ArcisAI engineers", "Actionable steps you can implement today", "Free consultation available"]}],
     faqs: [{q:"Is this guide free?",a:"Yes, all ArcisAI resources are free. We believe in educating the market about AI surveillance."},{q:"Can I get personalized advice?",a:"Absolutely. Contact our team for a free consultation tailored to your specific needs."}],
     cta: {title: "Need Expert Advice?", description: "Our surveillance consultants are ready to help.", buttonText: "Talk to Expert", buttonLink: "/contact-us?resource=smart-city-surveillance-guide"}
   },

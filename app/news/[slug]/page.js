@@ -1,5 +1,6 @@
 import NewsContent from '@/src/views/News/NewsContent';
 import { humanizeSlug } from '@/src/data/buildSeoPageSchemas';
+import { buildHreflang } from '@/src/data/hreflang';
 
 export async function generateMetadata(props) {
   const params = await props.params;
@@ -11,7 +12,7 @@ export async function generateMetadata(props) {
   return {
     title: `${title}`,
     description: `Read the ArcisAI news article: ${title}.`,
-    alternates: { canonical: `https://arcisai.io/news/${slug}` },
+    alternates: { canonical: `https://arcisai.io/news/${slug}`, languages: buildHreflang(`https://arcisai.io/news/${slug}`) },
     openGraph: {
       title: ogTitle,
       description: ogDescription,

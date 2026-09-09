@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import SupportCategory from '@/src/views/Support/SupportCategory';
 import { supportCategories, getCategoryBySlug } from '@/src/views/Support/supportData';
+import { buildHreflang } from '@/src/data/hreflang';
 
 export function generateStaticParams() {
   return supportCategories.map((c) => ({ category: c.slug }));
@@ -24,7 +25,7 @@ export async function generateMetadata(props) {
   return {
     title,
     description,
-    alternates: { canonical },
+    alternates: { canonical, languages: buildHreflang(canonical) },
     openGraph: {
       title,
       description,

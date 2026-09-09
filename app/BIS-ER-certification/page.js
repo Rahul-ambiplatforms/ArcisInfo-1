@@ -1,4 +1,5 @@
 import BISCertification from '@/src/views/BISCertification/BISCertification';
+import { buildHreflang } from '@/src/data/hreflang';
 
 export const metadata = {
   title: 'BIS-ER Certified AI CCTV Cameras',
@@ -8,12 +9,18 @@ export const metadata = {
     'BIS certified CCTV', 'BIS-ER certification', 'ArcisAI BIS',
     'R-72003735', 'Indian surveillance compliance', 'BIS certified cameras',
   ],
-  alternates: { canonical: 'https://arcisai.io/BIS-ER-certification' },
+  alternates: { canonical: 'https://arcisai.io/BIS-ER-certification', languages: buildHreflang('https://arcisai.io/BIS-ER-certification') },
   openGraph: {
     title: 'BIS-ER Certified AI CCTV Cameras | ArcisAI',
     description: 'ArcisAI cameras are now BIS-ER certified. Compliant, secure, and deployment-ready AI surveillance for India.',
     url: 'https://arcisai.io/BIS-ER-certification',
     images: [{ url: '/images/BIS_bg.png', width: 1512, height: 919 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'BIS-ER Certified AI CCTV Cameras | ArcisAI',
+    description: 'ArcisAI cameras are now BIS-ER certified. Compliant, secure, and deployment-ready AI surveillance for India.',
+    images: ['/images/BIS_bg.png'],
   },
 };
 

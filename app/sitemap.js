@@ -43,6 +43,7 @@ const STATIC_ROUTES = [
   ['/global-oem-partnership', 0.7, 'monthly'],
 
   // Products
+  ['/products', 0.9, 'weekly'],
   ['/s-series', 0.9, 'weekly'],
   ['/s-series/ai-bullet-cctv-camera', 0.8, 'weekly'],
   ['/s-series/ai-ptz-cctv-camera', 0.8, 'weekly'],
@@ -102,6 +103,50 @@ const STATIC_ROUTES = [
   ['/terms-of-service', 0.3, 'yearly'],
 ];
 
+// SEO audit fix (2026-09-07, checklist item #40): image sitemap. Next.js's
+// built-in sitemap generator accepts an `images: string[]` field per entry and
+// renders it as <image:image><image:loc> using the Google image-sitemap
+// extension (adds the xmlns:image namespace automatically once any entry has
+// one) — so this doesn't need a second sitemap file, just this map feeding
+// into the existing generated one below. One representative image per static
+// route, taken from that route's own openGraph.images (same image already
+// served to link previews / social crawlers, so nothing new to source).
+const IMAGE_BY_PATH = {
+  '/': '/images/home_hero_1.webp',
+  '/about-us': '/og/about.jpg',
+  '/why-choose-arcisai': '/og/why-arcisai.jpg',
+  '/contact-us': '/og/contact.jpg',
+  '/partners': '/og/home.jpg',
+  '/become-a-distributor': '/images/home_hero_1.webp',
+  '/global-oem-partnership': '/images/home_hero_1.webp',
+  '/products': '/og/home.jpg',
+  '/s-series': '/og/s-series.jpg',
+  '/eco-series': '/og/eco-series.jpg',
+  '/arcis-bridge-device': '/og/bridge-device.jpg',
+  '/arcis-nvr': '/og/nvr.jpg',
+  '/cloud-vms': '/og/vms.jpg',
+  '/arcisgpt': '/og/arcisgpt.jpg',
+  '/certifications': '/og/home.jpg',
+  '/BIS-ER-certification': '/images/BIS_bg.png',
+  '/cctv-compliance-2026': '/images/home_hero_1.webp',
+  '/india-cctv-market-report-2026': '/images/home_hero_1.webp',
+  '/jalandhar-warriors': '/og/home.jpg',
+  '/fsie-2026': '/og/home.jpg',
+  '/blog': '/og/blog.jpg',
+  '/news': '/og/home.jpg',
+  '/press': '/images/home_hero_1.webp',
+  '/faq': '/og/faq.jpg',
+  '/glossary': '/og/glossary.jpg',
+  '/support': '/og/faq.jpg',
+  '/documents': '/images/home_hero_1.webp',
+  '/firmware': '/images/home_hero_1.webp',
+  '/tools': '/images/home_hero_1.webp',
+  '/tools/cctv-storage-calculator': '/images/home_hero_1.webp',
+  '/tools/certificate-verifier': '/images/home_hero_1.webp',
+  '/event': '/og/events.jpg',
+  '/events/convergence-india-2026': '/og/convergence-india-2026.jpg',
+};
+
 // Landing-page priority by category — city/state pages are long-tail, product
 // comparisons and industry pages carry more commercial intent.
 const PRIORITY_BY_CATEGORY = {
@@ -156,12 +201,17 @@ export const revalidate = 3600;
 export default async function sitemap() {
   const now = new Date();
 
-  const staticEntries = STATIC_ROUTES.map(([path, priority, changeFrequency]) => ({
-    url: path === '/' ? `${SITE}/` : `${SITE}${path}`,
-    lastModified: now,
-    changeFrequency,
-    priority,
-  }));
+  const staticEntries = STATIC_ROUTES.map(([path, priority, changeFrequency]) => {
+    const entry = {
+      url: path === '/' ? `${SITE}/` : `${SITE}${path}`,
+      lastModified: now,
+      changeFrequency,
+      priority,
+    };
+    const img = IMAGE_BY_PATH[path];
+    if (img) entry.images = [`${SITE}${img}`];
+    return entry;
+  });
 
   const supportEntries = supportCategories.map((c) => ({
     url: `${SITE}/support/${c.slug}`,

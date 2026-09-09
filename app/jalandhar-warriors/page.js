@@ -1,5 +1,6 @@
 import Script from 'next/script';
 import JalandharWarriors from '@/src/views/Campaigns/JalandharWarriors';
+import { buildHreflang } from '@/src/data/hreflang';
 
 // Direct GA4 connection for this page's cta_click event, scoped to this route
 // only. The site-wide GTM container (GTM-T5CXTDPH) is the only thing wired to
@@ -20,7 +21,7 @@ export const metadata = {
   keywords: [
     'Jalandhar Warriors', 'ArcisAI', 'AI CCTV India', 'Made in India surveillance',
   ],
-  alternates: { canonical: 'https://arcisai.io/jalandhar-warriors' },
+  alternates: { canonical: 'https://arcisai.io/jalandhar-warriors', languages: buildHreflang('https://arcisai.io/jalandhar-warriors') },
   openGraph: {
     title: 'Jalandhar Warriors: Powered by ArcisAI',
     description:

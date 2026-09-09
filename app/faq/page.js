@@ -2,6 +2,7 @@ import FAQHub from '@/src/views/FAQHub/FAQHub';
 import SeoPageSchemaScripts from '@/src/Components/SEO/SeoPageSchemaScripts';
 import { allFaqs } from '@/src/data/faqHubData';
 import { SITE, ORGANIZATION_ID, WEBSITE_ID } from '@/src/data/buildSeoPageSchemas';
+import { buildHreflang } from '@/src/data/hreflang';
 
 const CANONICAL = `${SITE}/faq`;
 
@@ -13,12 +14,18 @@ export const metadata = {
     'ArcisAI FAQ', 'AI CCTV questions', 'surveillance FAQ',
     'CCTV installation help', 'VMS support questions',
   ],
-  alternates: { canonical: CANONICAL },
+  alternates: { canonical: CANONICAL, languages: buildHreflang(CANONICAL) },
   openGraph: {
     title: 'ArcisAI FAQ | AI CCTV Questions Answered',
     description: 'Frequently asked questions about ArcisAI AI surveillance products and services.',
     url: CANONICAL,
     images: [{ url: '/og/faq.jpg', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ArcisAI FAQ | AI CCTV Questions Answered',
+    description: 'Frequently asked questions about ArcisAI AI surveillance products and services.',
+    images: ['/og/faq.jpg'],
   },
 };
 

@@ -48,10 +48,18 @@ export default async function ComparisonPage(props) {
 
   const schemas = buildSeoPageSchemas({ pageData, path: `/compare/${params.pageSlug}` });
 
+  // SEO audit fix (2026-09-08, checklist item #51): cross-links sibling
+  // /compare pages to each other via the same crawlable relatedLinks block
+  // used by the /[slug] catch-all — these pages had no contextual internal
+  // links to related content before. Excludes the current page.
+  const relatedLinks = getCompareLinks()
+    .filter((l) => l.slug !== params.pageSlug)
+    .map((l) => ({ ...l, slug: `compare/${l.slug}` }));
+
   return (
     <>
       <SeoPageSchemaScripts schemas={schemas} />
-      <SEOLandingPage pageData={pageData} slugKey={resolveSeoKey(override) || params.pageSlug} />
+      <SEOLandingPage pageData={pageData} slugKey={resolveSeoKey(override) || params.pageSlug} relatedLinks={relatedLinks} />
     </>
   );
 }

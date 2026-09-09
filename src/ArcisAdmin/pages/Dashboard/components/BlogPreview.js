@@ -452,7 +452,7 @@ const BlogPreview = ({ formData, components, faqTitle }) => {
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              {component.content.buttonText || "Click Here"}
+                              {component.content.buttonText || "Learn More"}
                             </Button>
                           </Box>
                         );

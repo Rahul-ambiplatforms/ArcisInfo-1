@@ -71,7 +71,15 @@ export async function generateMetadata(props) {
       : feature
         ? `ArcisAI AI CCTV ${feature} — advanced edge AI surveillance with real-time analytics, NDAA compliance, and enterprise reliability.`
         : `${name} — AI surveillance solutions from ArcisAI. NDAA-compliant cameras, cloud VMS, and edge AI analytics.`,
-    ogImage: '/og/home.jpg',
+    // SEO audit fix (2026-09-08, checklist item #13): every page through this
+    // catch-all (100+ city pages, ai-cctv-<feature> pages, and any other
+    // bare-slug landing page) fell back to the generic homepage OG image —
+    // /industry, /compare, /state and /resources already have their own
+    // distinct OG image per category (see their own page.js files), only
+    // this catch-all still used /og/home.jpg. New /og/location.jpg is a
+    // purpose-made "AI CCTV coverage across India" card, distinct from the
+    // homepage image.
+    ogImage: '/og/location.jpg',
   });
 }
 

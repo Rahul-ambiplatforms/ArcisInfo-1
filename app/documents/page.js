@@ -1,4 +1,5 @@
 import Documents from '@/src/views/Documents/Documents';
+import { buildHreflang } from '@/src/data/hreflang';
 
 const SITE_URL = 'https://www.arcisai.io';
 const TITLE = 'Documents & User Manuals | ArcisAI';
@@ -13,7 +14,7 @@ export const metadata = {
     'CCTV camera manual', 'AI camera installation guide', 'ArcisAI datasheet',
     'surveillance camera documentation',
   ],
-  alternates: { canonical: `${SITE_URL}/documents` },
+  alternates: { canonical: `${SITE_URL}/documents`, languages: buildHreflang(`${SITE_URL}/documents`) },
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,
@@ -83,4 +84,4 @@ export default function DocumentsPage() {
       <Documents />
     </>
   );
-}
+}

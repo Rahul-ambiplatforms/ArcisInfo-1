@@ -3,10 +3,20 @@ import React, { useEffect } from "react";
 import dynamic from "next/dynamic";
 import { useParams } from "next/navigation";
 import { Box, Text, Center } from "@chakra-ui/react";
+import NextLink from "next/link";
 import HeroSectionCarousel from "../../Components/HeroSectionCarousel";
 import { Solution } from "./Data/Content";
 import { getSolutionSEO } from "./Data/SEOContent";
 import PageContentWrapper from "../../Components/PageContentWrapper";
+
+// SEO audit fix (checklist items #48/#49): the 3 real solution pages had zero
+// cross-linking to each other — a static internal-link audit found this
+// orphan-cluster gap (same issue fixed on /s-series product pages).
+const SOLUTION_SIBLINGS = [
+  { slug: "edge-ai", title: "Edge AI Surveillance" },
+  { slug: "cloud-ai", title: "Cloud AI Surveillance" },
+  { slug: "generative-ai", title: "Generative AI Surveillance (ArcisGPT)" },
+];
 
 const WhatIsAI           = dynamic(() => import("./Components/WhatIsAI"));
 const OurClient          = dynamic(() => import("../../views/HomePage/Components/OurClient"));
@@ -61,6 +71,24 @@ const Solutions = ({ solutionId: solutionIdProp }) => {
         <WhyChoose data={solutionData.WhyChoose} />
         <CTAButton {...solutionData.CTAButton} />
         <FAQSection data={solutionData.FAQsData} />
+        {/* Visually-hidden but crawlable cross-links to sibling solution
+            pages (checklist items #48/#49) — same pattern as the
+            relatedLinks nav on the SEO landing pages. */}
+        <Box
+          as="nav"
+          aria-label="Other AI surveillance solutions"
+          position="absolute"
+          w="1px"
+          h="1px"
+          overflow="hidden"
+          clip="rect(0 0 0 0)"
+          whiteSpace="nowrap"
+          border="0"
+        >
+          {SOLUTION_SIBLINGS.filter((s) => s.slug !== solutionId).map((s) => (
+            <NextLink key={s.slug} href={`/solution/${s.slug}`}>{s.title}</NextLink>
+          ))}
+        </Box>
         {/* Add other sections here as needed */}
       </PageContentWrapper>
     </>

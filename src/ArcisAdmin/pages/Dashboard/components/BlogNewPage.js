@@ -593,7 +593,7 @@ const BlogNewPage = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
-                                {component.content.buttonText || "Click Here"}
+                                {component.content.buttonText || "Learn More"}
                               </Button>
                             </Box>
                           );

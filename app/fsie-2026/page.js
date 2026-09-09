@@ -1,5 +1,6 @@
 import Script from 'next/script';
 import FSIE2026 from '@/src/views/Events/FSIE2026';
+import { buildHreflang } from '@/src/data/hreflang';
 
 // Direct GA4 connection for this page's generate_lead / cta_click events,
 // scoped to this route only. See app/jalandhar-warriors/page.js for the full
@@ -22,7 +23,7 @@ export const metadata = {
     'who is exhibiting AI CCTV at FSIE 2026', 'AI CCTV demo Mumbai',
     'STQC certified CCTV', 'Jio World Convention Centre expo',
   ],
-  alternates: { canonical: 'https://arcisai.io/fsie-2026' },
+  alternates: { canonical: 'https://arcisai.io/fsie-2026', languages: buildHreflang('https://arcisai.io/fsie-2026') },
   openGraph: {
     title: 'ArcisAI at FSIE Mumbai 2026: Booth C13',
     description:

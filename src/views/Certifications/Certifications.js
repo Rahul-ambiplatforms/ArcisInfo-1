@@ -2,7 +2,7 @@
 import React from 'react';
 import {
   Box, Heading, Text, Stack, Table, Thead, Tbody, Tr, Th, Td,
-  TableContainer, List, ListItem, Divider, Badge,
+  TableContainer, List, ListItem, Divider, Badge, Link,
 } from '@chakra-ui/react';
 import PageContentWrapper from '../../Components/PageContentWrapper';
 
@@ -12,12 +12,17 @@ const ACCENT_DEEP = '#8266C9';
 const CARD_BG = 'rgba(255,255,255,0.04)';
 const CARD_BORDER = 'rgba(255,255,255,0.12)';
 
+// SEO audit fix (2026-09-07, checklist item #28): the "Verify at" column used to
+// be plain text (crsbis.in, stqc.gov.in, onvif.org) with no actual outbound link —
+// visitors and crawlers couldn't click through to the real government/standards
+// portals. Added a real URL per row (null where "Verify at" isn't a specific
+// external portal, e.g. "Certifying body" / "Manufacturer declaration").
 const certs = [
-  ['BIS-ER (ER01:2024)', 'CCTV camera hardware', 'R-72003735 ER01:2024', 'crsbis.in / lims.bis.gov.in'],
-  ['STQC', 'Video Management Software (VMS) & mobile app', 'STQC certified', 'stqc.gov.in'],
-  ['ISO/IEC 27001:2022', 'Information Security Management', 'Certified', 'Certifying body'],
-  ['CE / FCC / RoHS', 'Product safety & compliance', 'Compliant', 'Manufacturer declaration'],
-  ['ONVIF', 'Camera interoperability', 'Conformant', 'onvif.org'],
+  ['BIS-ER (ER01:2024)', 'CCTV camera hardware', 'R-72003735 ER01:2024', 'crsbis.in / lims.bis.gov.in', 'https://crsbis.in/BIS/'],
+  ['STQC', 'Video Management Software (VMS) & mobile app', 'STQC certified', 'stqc.gov.in', 'https://www.stqc.gov.in/'],
+  ['ISO/IEC 27001:2022', 'Information Security Management', 'Certified', 'Certifying body', null],
+  ['CE / FCC / RoHS', 'Product safety & compliance', 'Compliant', 'Manufacturer declaration', null],
+  ['ONVIF', 'Camera interoperability', 'Conformant', 'onvif.org', 'https://www.onvif.org/'],
 ];
 
 const essentials = [
@@ -29,10 +34,41 @@ const essentials = [
   'Published vulnerability-disclosure policy',
 ];
 
+// `a` stays a plain string (used verbatim in the FAQPage JSON-LD schema below —
+// schema.org text fields can't hold JSX). `aLink` is the same copy with the
+// portal names as real outbound links, rendered on the page instead of `a`
+// wherever it's set (SEO audit fix, checklist item #28: these used to be
+// plain-text domain mentions with no actual <a href> anywhere on the page).
 const faqs = [
-  { q: 'Is ArcisAI STQC certified?', a: 'ArcisAI holds STQC certification for its Video Management Software (VMS) and BIS-ER certification for camera hardware (certificate R-72003735 ER01:2024). You can verify on stqc.gov.in and crsbis.in.' },
+  {
+    q: 'Is ArcisAI STQC certified?',
+    a: 'ArcisAI holds STQC certification for its Video Management Software (VMS) and BIS-ER certification for camera hardware (certificate R-72003735 ER01:2024). You can verify on stqc.gov.in and crsbis.in.',
+    aLink: (
+      <>
+        ArcisAI holds STQC certification for its Video Management Software (VMS) and BIS-ER certification for
+        camera hardware (certificate R-72003735 ER01:2024). You can verify on{' '}
+        <Link href="https://www.stqc.gov.in/" isExternal color={ACCENT} textDecoration="underline">stqc.gov.in</Link>{' '}
+        and{' '}
+        <Link href="https://crsbis.in/BIS/" isExternal color={ACCENT} textDecoration="underline">crsbis.in</Link>.
+      </>
+    ),
+  },
   { q: 'Is ArcisAI legal to sell in India after April 2026?', a: "Yes. ArcisAI's certified, Made-in-India range meets India's BIS Essential Requirements for CCTV." },
-  { q: 'How can I verify ArcisAI certification myself?', a: 'Search the certificate number on crsbis.in / lims.bis.gov.in (BIS) and stqc.gov.in (STQC), and confirm the specific model is listed.' },
+  {
+    q: 'How can I verify ArcisAI certification myself?',
+    a: 'Search the certificate number on crsbis.in / lims.bis.gov.in (BIS) and stqc.gov.in (STQC), and confirm the specific model is listed.',
+    aLink: (
+      <>
+        Search the certificate number on{' '}
+        <Link href="https://crsbis.in/BIS/" isExternal color={ACCENT} textDecoration="underline">crsbis.in</Link>{' '}
+        /{' '}
+        <Link href="https://lims.bis.gov.in/" isExternal color={ACCENT} textDecoration="underline">lims.bis.gov.in</Link>{' '}
+        (BIS) and{' '}
+        <Link href="https://www.stqc.gov.in/" isExternal color={ACCENT} textDecoration="underline">stqc.gov.in</Link>{' '}
+        (STQC), and confirm the specific model is listed.
+      </>
+    ),
+  },
   { q: 'Is ArcisAI NDAA compliant?', a: 'Yes. ArcisAI products are NDAA compliant and built without high-risk foreign components, suitable for government and export deployments.' },
 ];
 
@@ -91,10 +127,17 @@ const Certifications = () => {
           >
             ArcisAI Certifications &amp; Compliance
           </Heading>
-          <Text fontSize={{ base: 'md', md: 'lg' }} color="whiteAlpha.800" mb={10} maxW="4xl">
+          <Text fontSize={{ base: 'md', md: 'lg' }} color="whiteAlpha.800" mb={2} maxW="4xl">
             ArcisAI holds BIS-ER certification for its CCTV camera hardware and STQC certification
             for its Video Management Software (VMS). Products are Made in India and NDAA compliant.
             Every claim below can be verified on the official government portals.
+          </Text>
+          {/* SEO audit fix (checklist item #83): a visible "last reviewed" date so
+              visitors and crawlers can see this compliance-sensitive page is actively
+              maintained, not stale. Update this string whenever the page's
+              certification claims are re-checked. */}
+          <Text fontSize="sm" color="whiteAlpha.600" mb={10}>
+            Last reviewed: September 2026
           </Text>
 
           <TableContainer
@@ -120,7 +163,13 @@ const Certifications = () => {
                     <Td color="white" fontWeight="600" borderColor={CARD_BORDER}>{c[0]}</Td>
                     <Td color="whiteAlpha.800" borderColor={CARD_BORDER}>{c[1]}</Td>
                     <Td color="whiteAlpha.800" borderColor={CARD_BORDER}>{c[2]}</Td>
-                    <Td color="whiteAlpha.700" borderColor={CARD_BORDER}>{c[3]}</Td>
+                    <Td color="whiteAlpha.700" borderColor={CARD_BORDER}>
+                      {c[4] ? (
+                        <Link href={c[4]} isExternal color={ACCENT} textDecoration="underline">{c[3]}</Link>
+                      ) : (
+                        c[3]
+                      )}
+                    </Td>
                   </Tr>
                 ))}
               </Tbody>
@@ -162,7 +211,7 @@ const Certifications = () => {
                 <Heading as="h3" fontSize="md" fontWeight="600" mb={2} color="white">
                   {f.q}
                 </Heading>
-                <Text color="whiteAlpha.800">{f.a}</Text>
+                <Text color="whiteAlpha.800">{f.aLink ? f.aLink : f.a}</Text>
               </Box>
             ))}
           </Stack>

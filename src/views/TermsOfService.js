@@ -51,7 +51,7 @@ function TermsOfService({ headingHide }) {
           These terms apply to all ArcisAI products.
         </Text>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={0}>
+          <Heading as="h2" size="md" mb={0}>
             1. Your Relationship with ArcisAI
           </Heading>
           <Text mb={0}>
@@ -68,7 +68,7 @@ function TermsOfService({ headingHide }) {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={0}>
+          <Heading as="h2" size="md" mb={0}>
             2. Accepting the Terms
           </Heading>
           <Text mb={0}>
@@ -95,7 +95,7 @@ function TermsOfService({ headingHide }) {
           </List>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={0}>
+          <Heading as="h2" size="md" mb={0}>
             3. Language of the Terms
           </Heading>
           <Text mb={0}>
@@ -112,7 +112,7 @@ function TermsOfService({ headingHide }) {
         </Box>
         {/* Added section 4 and 5 */}
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={0}>
+          <Heading as="h2" size="md" mb={0}>
             4. Provision of the Services by ArcisAI
           </Heading>
           <Text mb={0}>
@@ -131,7 +131,7 @@ function TermsOfService({ headingHide }) {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={0}>
+          <Heading as="h2" size="md" mb={0}>
             5. Use of the Services by You
           </Heading>
           <Text mb={0}>
@@ -172,7 +172,7 @@ function TermsOfService({ headingHide }) {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={0}>
+          <Heading as="h2" size="md" mb={0}>
             6. Privacy and Your Personal Information
           </Heading>
           <Text mb={0}>
@@ -185,7 +185,7 @@ function TermsOfService({ headingHide }) {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={0}>
+          <Heading as="h2" size="md" mb={0}>
             7. Content in the Services
           </Heading>
           <Text mb={0}>
@@ -254,7 +254,7 @@ function TermsOfService({ headingHide }) {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={0}>
+          <Heading as="h2" size="md" mb={0}>
             8. Other Content
           </Heading>
           <Text mb={0}>
@@ -279,7 +279,7 @@ function TermsOfService({ headingHide }) {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={0}>
+          <Heading as="h2" size="md" mb={0}>
             9. Proprietary Rights
           </Heading>
           <Text mb={0}>
@@ -328,7 +328,7 @@ function TermsOfService({ headingHide }) {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={0}>
+          <Heading as="h2" size="md" mb={0}>
             10. License from ArcisAI
           </Heading>
           <Text mb={0}>
@@ -356,7 +356,7 @@ function TermsOfService({ headingHide }) {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={0}>
+          <Heading as="h2" size="md" mb={0}>
             11. Content License from You
           </Heading>
           <Text mb={0}>
@@ -366,7 +366,7 @@ function TermsOfService({ headingHide }) {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={0}>
+          <Heading as="h2" size="md" mb={0}>
             12. Software Updates
           </Heading>
           <Text mb={0}>
@@ -380,7 +380,7 @@ function TermsOfService({ headingHide }) {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={0}>
+          <Heading as="h2" size="md" mb={0}>
             13. Ending Your Relationship with ArcisAI
           </Heading>
           <Text mb={0}>
@@ -416,7 +416,7 @@ function TermsOfService({ headingHide }) {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={0}>
+          <Heading as="h2" size="md" mb={0}>
             14. Exclusion of Warranties
           </Heading>
           <Text mb={0}>
@@ -466,7 +466,7 @@ function TermsOfService({ headingHide }) {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={0}>
+          <Heading as="h2" size="md" mb={0}>
             15. Limitation of liability
           </Heading>
           <Text mb={0}>
@@ -508,7 +508,7 @@ function TermsOfService({ headingHide }) {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={0}>
+          <Heading as="h2" size="md" mb={0}>
             16. Indemnification
           </Heading>
           <Text mb={0}>
@@ -532,7 +532,7 @@ function TermsOfService({ headingHide }) {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={0}>
+          <Heading as="h2" size="md" mb={0}>
             17. Copyright and Trademark Policies
           </Heading>
           <Text mb={0}>
@@ -544,7 +544,7 @@ function TermsOfService({ headingHide }) {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={0}>
+          <Heading as="h2" size="md" mb={0}>
             18. Advertisements
           </Heading>
           <Text mb={0}>
@@ -564,7 +564,7 @@ function TermsOfService({ headingHide }) {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={0}>
+          <Heading as="h2" size="md" mb={0}>
             19. Taxes, Raffles, and Auctions
           </Heading>
           <Text mb={0}>
@@ -598,7 +598,7 @@ function TermsOfService({ headingHide }) {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={0}>
+          <Heading as="h2" size="md" mb={0}>
             20. Changes to the Terms
           </Heading>
           <Text mb={0}>
@@ -611,7 +611,7 @@ function TermsOfService({ headingHide }) {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={0}>
+          <Heading as="h2" size="md" mb={0}>
             21. Dispute Resolution
           </Heading>
           <Text mb={0}>
@@ -675,7 +675,7 @@ function TermsOfService({ headingHide }) {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={0}>
+          <Heading as="h2" size="md" mb={0}>
             22. Force Majeure
           </Heading>
           <Text>
@@ -689,7 +689,7 @@ function TermsOfService({ headingHide }) {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={0}>
+          <Heading as="h2" size="md" mb={0}>
             23. Miscellaneous
           </Heading>
           <Text mb={0}>

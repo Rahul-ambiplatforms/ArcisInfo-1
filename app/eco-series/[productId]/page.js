@@ -1,5 +1,6 @@
 import Products from '@/src/views/Product/Products';
 import { humanizeSlug } from '@/src/data/buildSeoPageSchemas';
+import { buildHreflang } from '@/src/data/hreflang';
 
 // Prerendered so the HTML is edge-cacheable instead of rendered per request.
 // Keys mirror src/views/Product/Data/Content.js, which the view resolves by
@@ -24,7 +25,7 @@ export async function generateMetadata(props) {
   return {
     title: `${name} | ECO-Series AI Camera`,
     description: `Explore the ArcisAI ${name} — a budget-friendly ECO-Series AI CCTV camera with edge analytics, STQC certification, and reliable surveillance performance.`,
-    alternates: { canonical: `https://arcisai.io/eco-series/${productId}` },
+    alternates: { canonical: `https://arcisai.io/eco-series/${productId}`, languages: buildHreflang(`https://arcisai.io/eco-series/${productId}`) },
     openGraph: {
       title: `${name} | ECO-Series AI Camera | ArcisAI`,
       description: `ArcisAI ${name} — value ECO-Series AI surveillance camera.`,

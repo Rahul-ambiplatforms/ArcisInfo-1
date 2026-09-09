@@ -1,4 +1,5 @@
 import OEMExport from '@/src/views/Partners/OEMExport';
+import { buildHreflang } from '@/src/data/hreflang';
 
 const SITE_URL = 'https://arcisai.io';
 const TITLE = 'International CCTV Distribution & OEM Partnership | NDAA-Compliant Made-in-India CCTV';
@@ -13,7 +14,7 @@ export const metadata = {
     'AI CCTV OEM partner', 'Made in India CCTV export', 'CCTV distributor international',
     'private label CCTV cameras', 'surveillance OEM India', 'export CCTV manufacturer India',
   ],
-  alternates: { canonical: `${SITE_URL}/global-oem-partnership` },
+  alternates: { canonical: `${SITE_URL}/global-oem-partnership`, languages: buildHreflang(`${SITE_URL}/global-oem-partnership`) },
   openGraph: {
     title: TITLE, description: DESCRIPTION, url: `${SITE_URL}/global-oem-partnership`,
     type: 'website', siteName: 'ArcisAI',

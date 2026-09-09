@@ -1,4 +1,5 @@
 import Series from '@/src/views/Series/Series';
+import { buildHreflang } from '@/src/data/hreflang';
 
 export const metadata = {
   title: 'S-Series Premium AI CCTV Cameras',
@@ -8,12 +9,18 @@ export const metadata = {
     'S-Series camera', 'PTZ camera', 'dome camera', 'bullet camera',
     '4G SIM camera', 'WiFi CCTV', 'PoE camera', 'edge AI STQC',
   ],
-  alternates: { canonical: 'https://arcisai.io/s-series' },
+  alternates: { canonical: 'https://arcisai.io/s-series', languages: buildHreflang('https://arcisai.io/s-series') },
   openGraph: {
     title: 'S-Series Premium AI CCTV Cameras | ArcisAI',
     description: 'Premium PTZ, Dome, Bullet AI cameras with 4G, WiFi, PoE. STQC certified.',
     url: 'https://arcisai.io/s-series',
     images: [{ url: '/og/s-series.jpg', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'S-Series Premium AI CCTV Cameras | ArcisAI',
+    description: 'Premium PTZ, Dome, Bullet AI cameras with 4G, WiFi, PoE. STQC certified.',
+    images: ['/og/s-series.jpg'],
   },
 };
 

@@ -1,4 +1,5 @@
 import Firmware from '@/src/views/Firmware/Firmware';
+import { buildHreflang } from '@/src/data/hreflang';
 
 const SITE_URL = 'https://www.arcisai.io';
 const TITLE = 'Firmware Downloads | Camera Firmware Updates | ArcisAI';
@@ -12,7 +13,7 @@ export const metadata = {
     'ArcisAI firmware', 'CCTV firmware update', 'AI camera firmware',
     'IP camera firmware download', 'surveillance camera updates', 'ArcisAI release notes',
   ],
-  alternates: { canonical: `${SITE_URL}/firmware` },
+  alternates: { canonical: `${SITE_URL}/firmware`, languages: buildHreflang(`${SITE_URL}/firmware`) },
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,
@@ -66,4 +67,4 @@ export default function FirmwarePage() {
       <Firmware />
     </>
   );
-}
+}

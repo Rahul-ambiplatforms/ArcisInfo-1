@@ -1,4 +1,5 @@
 import Tools from '@/src/views/Tools/Tools';
+import { buildHreflang } from '@/src/data/hreflang';
 
 const SITE_URL = 'https://www.arcisai.io';
 const TITLE = 'Tools & Software Downloads | ArcisAI';
@@ -13,7 +14,7 @@ export const metadata = {
     'camera configuration tool', 'CCTV software download',
     'AI camera utilities', 'ArcisAI updates',
   ],
-  alternates: { canonical: `${SITE_URL}/tools` },
+  alternates: { canonical: `${SITE_URL}/tools`, languages: buildHreflang(`${SITE_URL}/tools`) },
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,

@@ -74,7 +74,7 @@ function PrivacyPolicy() {
           from time to time to reflect changes in our data practices.
         </Text>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={0}>
+          <Heading as="h2" size="md" mb={0}>
             THE INFORMATION WE COLLECT
           </Heading>
           <Text mb={0}>
@@ -162,7 +162,7 @@ function PrivacyPolicy() {
           </UnorderedList>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={0}>
+          <Heading as="h2" size="md" mb={0}>
             HOW WE USE THE INFORMATION WE COLLECT
           </Heading>
           <Text mb={0}>We may use the information we obtain about you to:</Text>
@@ -248,7 +248,7 @@ function PrivacyPolicy() {
         </Box>
         {/* Added section 4 and 5 */}
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={2}>
+          <Heading as="h2" size="md" mb={2}>
             THE INFORMATION WE SHARE
           </Heading>
           <Text mb={0}>
@@ -300,7 +300,7 @@ function PrivacyPolicy() {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={2}>
+          <Heading as="h2" size="md" mb={2}>
             HOW WE PROTECT PERSONAL INFORMATION
           </Heading>
           <Text mb={2}>
@@ -336,7 +336,7 @@ function PrivacyPolicy() {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={2}>
+          <Heading as="h2" size="md" mb={2}>
             HOW TO UPDATE YOUR PERSONAL INFORMATION
           </Heading>
           <Text mb={2}>
@@ -356,7 +356,7 @@ function PrivacyPolicy() {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={2}>
+          <Heading as="h2" size="md" mb={2}>
             HOW TO DELETE YOUR ACCOUNT DATA
           </Heading>
           <Text mb={2}>
@@ -379,7 +379,7 @@ function PrivacyPolicy() {
         </Text> */}
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={2}>
+          <Heading as="h2" size="md" mb={2}>
             ABOUT COOKIES, TRACKING CHOICES, AND THIRD PARTY SERVICE PROVIDERS
           </Heading>
           <Text mb={2}>
@@ -437,7 +437,7 @@ function PrivacyPolicy() {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={2}>
+          <Heading as="h2" size="md" mb={2}>
             INTERNATIONAL TRANSFER OF YOUR INFORMATION
           </Heading>
           <Text mb={2}>
@@ -451,7 +451,7 @@ function PrivacyPolicy() {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={2}>
+          <Heading as="h2" size="md" mb={2}>
             LINKS TO OTHER SITES
           </Heading>
           <Text mb={2}>
@@ -465,7 +465,7 @@ function PrivacyPolicy() {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={2}>
+          <Heading as="h2" size="md" mb={2}>
             DISPUTES
           </Heading>
           <Text mb={2}>
@@ -477,7 +477,7 @@ function PrivacyPolicy() {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={2}>
+          <Heading as="h2" size="md" mb={2}>
             CHILDREN’S PRIVACY
           </Heading>
           <Text mb={0}>
@@ -537,7 +537,7 @@ function PrivacyPolicy() {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={2}>
+          <Heading as="h2" size="md" mb={2}>
             YOUR PRIVACY RIGHTS
           </Heading>
           <Text mb={2}>
@@ -560,7 +560,7 @@ function PrivacyPolicy() {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={2}>
+          <Heading as="h2" size="md" mb={2}>
             GENERAL DATA PROTECTION REGULATION (GDPR)
           </Heading>
           <Text mb={2}>
@@ -572,7 +572,7 @@ function PrivacyPolicy() {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={2}>
+          <Heading as="h2" size="md" mb={2}>
             PRIVACY POLICY UPDATES
           </Heading>
           <Text mb={2}>
@@ -592,7 +592,7 @@ function PrivacyPolicy() {
           </Text>
         </Box>
         <Box mb={6}>
-          <Heading as="h4" size="md" mb={0}>
+          <Heading as="h2" size="md" mb={0}>
             HOW TO CONTACT US
           </Heading>
           <Text mb={0}>

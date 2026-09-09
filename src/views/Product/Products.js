@@ -2,12 +2,23 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import { useParams } from "next/navigation";
+import NextLink from "next/link";
 import HeroSectionCarousel from "../../Components/HeroSectionCarousel";
 import { Product } from "./Data/Content";
 import { getProductSEO } from "./Data/SEOContent";
 import { Box } from "@chakra-ui/react";
 import NotFound from "../NotFound";
 import PageContentWrapper from "../../Components/PageContentWrapper";
+
+// SEO audit fix (checklist items #48/#49): these 3 product-detail pages had
+// zero cross-linking to each other — a real orphan-cluster gap found via a
+// static internal-link audit. Small, stable set, so hardcoded here rather
+// than pulled from Data/Content.js.
+const S_SERIES_SIBLINGS = [
+  { slug: "ai-bullet-cctv-camera", title: "AI Bullet CCTV Camera" },
+  { slug: "ai-ptz-cctv-camera", title: "AI PTZ CCTV Camera" },
+  { slug: "ai-dome-cctv-camera", title: "AI Dome CCTV Camera" },
+];
 
 const CameraFeature      = dynamic(() => import("./Components/CameraFeature"));
 const CameraComparision  = dynamic(() => import("./Components/CameraComparision"));
@@ -78,6 +89,24 @@ const Products = ({ productId: productIdProp }) => {
         <WhyChooseArcis data={productData.whychoosearcis} />
         <CTAButton {...productData.CTAButton} />
         <FAQSection data={productData.FAQsData} />
+        {/* Visually-hidden but crawlable cross-links to sibling S-Series
+            product pages (checklist items #48/#49) — same pattern as the
+            relatedLinks nav on the SEO landing pages. */}
+        <Box
+          as="nav"
+          aria-label="Other S-Series cameras"
+          position="absolute"
+          w="1px"
+          h="1px"
+          overflow="hidden"
+          clip="rect(0 0 0 0)"
+          whiteSpace="nowrap"
+          border="0"
+        >
+          {S_SERIES_SIBLINGS.filter((s) => s.slug !== productId).map((s) => (
+            <NextLink key={s.slug} href={`/s-series/${s.slug}`}>{s.title}</NextLink>
+          ))}
+        </Box>
       </PageContentWrapper>
     </>
   );

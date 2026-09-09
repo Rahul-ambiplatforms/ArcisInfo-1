@@ -43,10 +43,20 @@ export default async function IndustryPage(props) {
 
   const schemas = buildSeoPageSchemas({ pageData, path: `/industry/${params.pageSlug}` });
 
+  // SEO audit fix (2026-09-08, checklist item #51): unlike the /[slug]
+  // catch-all (which already passes relatedLinks for city/feature pages),
+  // /industry pages had no cross-links to sibling industry pages at all —
+  // each one was an island with nothing pointing to related content. Reuses
+  // the same crawlable relatedLinks block SEOLandingPage.jsx already renders,
+  // just wired up here for the first time. Excludes the current page.
+  const relatedLinks = getIndustryLinks()
+    .filter((l) => l.slug !== params.pageSlug)
+    .map((l) => ({ ...l, slug: `industry/${l.slug}` }));
+
   return (
     <>
       <SeoPageSchemaScripts schemas={schemas} />
-      <SEOLandingPage pageData={pageData} slugKey={resolveSeoKey(override) || params.pageSlug} />
+      <SEOLandingPage pageData={pageData} slugKey={resolveSeoKey(override) || params.pageSlug} relatedLinks={relatedLinks} />
     </>
   );
 }

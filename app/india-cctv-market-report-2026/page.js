@@ -1,4 +1,5 @@
 import MarketReport2026 from '@/src/views/Guides/MarketReport2026';
+import { buildHreflang } from '@/src/data/hreflang';
 
 const SITE_URL = 'https://www.arcisai.io';
 const TITLE = 'India CCTV Market & Certification Report 2026 | BIS-ER, STQC & Market Shift | ArcisAI';
@@ -12,7 +13,7 @@ export const metadata = {
     'India CCTV market 2026', 'CCTV certification report India', 'BIS-ER STQC market impact',
     'India CCTV compliance data', 'CCTV industry India 2026', 'Made in India CCTV market',
   ],
-  alternates: { canonical: `${SITE_URL}/india-cctv-market-report-2026` },
+  alternates: { canonical: `${SITE_URL}/india-cctv-market-report-2026`, languages: buildHreflang(`${SITE_URL}/india-cctv-market-report-2026`) },
   openGraph: {
     title: TITLE, description: DESCRIPTION, url: `${SITE_URL}/india-cctv-market-report-2026`,
     type: 'article', siteName: 'ArcisAI',

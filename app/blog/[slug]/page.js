@@ -1,6 +1,8 @@
 import { cache } from 'react';
 import BlogsContent from '@/src/views/Blogs/BlogsContents';
 import { notFound } from 'next/navigation';
+import { buildHreflang } from '@/src/data/hreflang';
+import Breadcrumbs from '@/src/Components/Breadcrumbs';
 
 const API_BASE = process.env.API_BASE_URL || 'https://vmukti.com/backend/api';
 
@@ -72,7 +74,7 @@ export async function generateMetadata(props) {
     // missing, keep the previous templated slug title.
     title: realTitle ? { absolute: realTitle } : `${fallbackTitle} | ArcisAI Blog`,
     description,
-    alternates: { canonical },
+    alternates: { canonical, languages: buildHreflang(canonical) },
     openGraph: {
       title: ogTitle,
       description,
@@ -174,6 +176,15 @@ export default async function BlogPostPage(props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {/* SEO audit fix (2026-09-07, checklist item #59): visible trail
+          matching the BreadcrumbList schema above — was JSON-LD-only before. */}
+      <Breadcrumbs
+        crumbs={[
+          { name: 'Home', href: '/' },
+          { name: 'Blog', href: '/blog' },
+          { name: title },
+        ]}
       />
       <BlogsContent urlWords={slug} initialBlog={initialBlog} />
     </>

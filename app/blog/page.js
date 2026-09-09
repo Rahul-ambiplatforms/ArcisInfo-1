@@ -1,4 +1,5 @@
 import BlogsDashboard from '@/src/views/Blogs/BlogsDashboard';
+import { buildHreflang } from '@/src/data/hreflang';
 
 // Server-fetch the published blog list so the post <Link> cards are rendered
 // into the initial HTML (crawlable) instead of only after a client-side
@@ -19,7 +20,7 @@ const VMUKTI_BLOG_SLUGS = new Set([
   'logistics-video-analytics',
 ]);
 
-export const revalidate = 60;
+export const revalidate = 3600;
 
 async function getInitialBlogs() {
   try {
@@ -31,7 +32,7 @@ async function getInitialBlogs() {
           'x-tenant': 'arcis',
           'User-Agent': 'next-server',
         },
-        next: { revalidate: 60 },
+        next: { revalidate: 3600 },
       },
     );
     if (!res.ok) return [];
@@ -57,12 +58,18 @@ export const metadata = {
     'surveillance blog', 'AI security articles', 'video analytics insights',
     'smart city news', 'surveillance trends',
   ],
-  alternates: { canonical: 'https://arcisai.io/blog' },
+  alternates: { canonical: 'https://arcisai.io/blog', languages: buildHreflang('https://arcisai.io/blog') },
   openGraph: {
     title: 'ArcisAI Blog | AI Surveillance & Security Insights',
     description: 'Latest AI surveillance trends, product updates, and security best practices.',
     url: 'https://arcisai.io/blog',
     images: [{ url: '/og/blog.jpg', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ArcisAI Blog | AI Surveillance & Security Insights',
+    description: 'Latest AI surveillance trends, product updates, and security best practices.',
+    images: ['/og/blog.jpg'],
   },
 };
 

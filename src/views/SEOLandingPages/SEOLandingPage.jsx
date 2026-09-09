@@ -2,6 +2,7 @@
 import React from "react";
 import NextLink from "next/link";
 import { Box, Container, Heading, Text, SimpleGrid, VStack, HStack, Button, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Icon, Flex, Badge, Divider } from "@chakra-ui/react";
+import Breadcrumbs from "@/src/Components/Breadcrumbs";
 
 // Brand palette — matches site dark theme (body #171717, accents #9678E1 / #8266C9)
 const ACCENT = "#9678E1";
@@ -44,8 +45,21 @@ const SEOLandingPage = ({ pageData, slugKey, relatedLinks = [] }) => {
   // Still needed for the visible on-page FAQ accordion below.
   const faqItems = pageData.faqs || pageData.faq || [];
 
+  // Visible breadcrumb trail (SEO audit fix, checklist item #59) — matches
+  // the 2-level "Home > current page" BreadcrumbList JSON-LD emitted by
+  // src/data/buildSeoPageSchemas.js (same crumbName precedence:
+  // pageData.heroTitle falling back to pageData.title). There are no
+  // /compare, /industry, /resources or /state hub pages to link to as a
+  // middle crumb — see the comment in buildSeoPageSchemas.js — so, like the
+  // schema, this stays a 2-level trail rather than linking to a 404.
+  const crumbs = [
+    { name: 'Home', href: '/' },
+    { name: pageData.heroTitle || pageData.title || 'This page' },
+  ];
+
   return (
     <>
+      <Breadcrumbs crumbs={crumbs} />
       {/* Hero Section */}
       <Box bg={`linear-gradient(135deg, #171717 0%, #241d3a 50%, #171717 100%)`} color="white" py={{base: 16, md: 24}} position="relative" overflow="hidden">
         <Box position="absolute" top="0" left="0" right="0" bottom="0" bg={`radial-gradient(circle at 30% 50%, rgba(150,120,225,0.18) 0%, transparent 60%)`} />
