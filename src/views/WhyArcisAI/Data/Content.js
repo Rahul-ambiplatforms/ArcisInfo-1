@@ -23,7 +23,7 @@ export const WhyArcisAIContent = {
         "At ArcisAI, we give you real-time detection right from the camera, powerful cloud insights and ArcisGPT to help you find footage just by asking. We make CCTV simpler, faster and built entirely around your needs.",
       buttonText: "Request a Demo",
       buttonLink: "/contact-us",
-      image: "/images/camera3.webp",
+      image: "/images/arcis-ai-cctv-camera-hero.webp",
       d_image: "/images/whyarcis_hero.webp",
       m_image: "/images/whyarcis_hero.webp",
       sectionProps: {

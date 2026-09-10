@@ -498,12 +498,12 @@ export const homeContent = {
       //   product_type: "NVR/DVR",
       //   productarray: [
       //     {
-      //       image: "/images/screen.webp",
+      //       image: "/images/arcis-security-suite-dashboard.webp",
       //       product_name: "8 Channel NVR",
       //       link: "#",
       //     },
       //     {
-      //       image: "/images/screen.webp",
+      //       image: "/images/arcis-security-suite-dashboard.webp",
       //       product_name: "16 Channel DVR",
       //       link: "#",
       //     },

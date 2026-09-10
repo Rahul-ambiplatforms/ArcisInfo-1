@@ -1655,6 +1655,22 @@ export const Product = {
           answer:
             "They support IP network connectivity, PoE, 12V battery, and some 4G models. This allows flexible installation across commercial, industrial, and residential sites.",
         },
+        {
+          question: "Should I choose the metal or plastic bullet camera variant?",
+          answer:
+            "Metal-bodied models are the sturdier choice for exposed outdoor mounts, high-traffic industrial sites, and locations prone to tampering, while the plastic-bodied variants are a lighter, more budget-friendly option for standard perimeter and building coverage. Both carry the same IP66/IP67 weatherproofing, so the decision usually comes down to the level of physical durability the site needs.",
+        },
+        {
+          question:
+            "How is video stored, and can these cameras work with an NVR or VMS?",
+          answer:
+            "Every Eco-Series Bullet Camera records to an onboard microSD card of up to 128GB and is ONVIF-compatible, so it can also be added to an ArcisAI NVR or Cloud VMS for centralized recording, longer retention, and multi-camera playback alongside your other cameras.",
+        },
+        {
+          question: "What warranty do Eco-Series Bullet Cameras carry?",
+          answer:
+            "Eco-Series Bullet Cameras come with ArcisAI's standard 3-year manufacturer warranty covering hardware defects, with extended coverage up to 5 years available on request.",
+        },
       ],
     },
   },
@@ -2081,6 +2097,22 @@ export const Product = {
           question: "Do these cameras work in low-light areas?",
           answer:
             "Yes. All PTZ models include infrared night vision, ensuring clear footage even in dark or poorly lit spaces.",
+        },
+        {
+          question:
+            "What's the difference between the Full PTZ, Mini PTZ, and Baby PTZ variants?",
+          answer:
+            "Full PTZ models are built for wide-area, long-range coverage such as parking lots and factory yards. Mini PTZ trims the housing size for tighter mounting spots while keeping the same rotating mechanism, and Baby PTZ is the most compact option, suited to discreet indoor or lobby-style installations where a large rotating dome would stand out.",
+        },
+        {
+          question: "Can Eco-Series PTZ cameras connect to an NVR or VMS?",
+          answer:
+            "Yes. All models are ONVIF-compatible, so they integrate directly with an ArcisAI NVR or Cloud VMS for centralized viewing, longer recording retention, and management alongside other cameras on the same network.",
+        },
+        {
+          question: "What warranty is offered on Eco-Series PTZ cameras?",
+          answer:
+            "Eco-Series PTZ cameras carry ArcisAI's standard 3-year manufacturer warranty against hardware defects, with an option to extend coverage up to 5 years.",
         },
       ],
     },
@@ -2510,6 +2542,22 @@ export const Product = {
           question: "Can I use ArcisAI Dome Cameras in low-light areas?",
           answer:
             "Absolutely. Every Dome camera comes with IR night vision, ensuring clear monitoring in dark or poorly lit environments.",
+        },
+        {
+          question: "Should I pick the metal or plastic dome camera variant?",
+          answer:
+            "The metal-bodied dome is the more tamper-resistant option and suits exposed corridors, warehouses, and higher-traffic public areas, while the plastic-bodied dome is a lighter, more economical choice for offices, shops, and residential interiors. Both variants share the same IP66/IP67 weatherproofing and night-vision performance.",
+        },
+        {
+          question:
+            "Do Dome Cameras record locally, or do I need an NVR as well?",
+          answer:
+            "Each camera stores footage on an onboard microSD card of up to 128GB for standalone use, and is also ONVIF-compatible so it can be added to an ArcisAI NVR or Cloud VMS whenever you need longer retention or centralized multi-camera monitoring.",
+        },
+        {
+          question: "What warranty applies to Eco-Series Dome cameras?",
+          answer:
+            "Eco-Series Dome cameras are covered by ArcisAI's standard 3-year manufacturer warranty for hardware defects, with extended warranty terms of up to 5 years available.",
         },
       ],
     },

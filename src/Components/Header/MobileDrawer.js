@@ -1,5 +1,6 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
+import dynamic from 'next/dynamic';
 import {
   Box,
   Drawer,
@@ -18,10 +19,18 @@ import {
   Link,
   Text,
   Button,
+  InputGroup,
+  InputLeftElement,
+  Icon,
 } from '@chakra-ui/react';
+import { SearchIcon } from '@chakra-ui/icons';
 import NextLink from 'next/link';
 import CustomButton from '../CustomButton';
 import { dropdownData, directNavLinks, actionLinks, loginButton } from './navbarData';
+
+// Same lazy chunk as Navbar.js — only loaded once the visitor actually taps
+// into search from inside the drawer.
+const SearchModal = dynamic(() => import('./SearchModal'), { ssr: false });
 
 /**
  * Mobile menu drawer extracted into its own chunk so the entire Chakra Drawer
@@ -30,7 +39,12 @@ import { dropdownData, directNavLinks, actionLinks, loginButton } from './navbar
  * hydration cheap and the hamburger tap → next-paint under the INP budget.
  */
 export default function MobileDrawer({ isOpen, onClose }) {
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  const openSearch = () => setIsSearchOpen(true);
+
   return (
+    <>
     <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
       <DrawerOverlay backdropFilter="blur(5px)" />
       <DrawerContent bg="black" borderLeft="1px solid" borderColor="gray.800">
@@ -53,6 +67,30 @@ export default function MobileDrawer({ isOpen, onClose }) {
           </NextLink>
         </DrawerHeader>
         <DrawerBody px={0}>
+          <Box px={4} py={4} borderBottom="1px solid" borderColor="gray.900">
+            <InputGroup size="md" onClick={openSearch} cursor="pointer">
+              <InputLeftElement pointerEvents="none" h="100%">
+                <Icon as={SearchIcon} color="whiteAlpha.500" boxSize={4} />
+              </InputLeftElement>
+              <Box
+                as="button"
+                type="button"
+                w="full"
+                h="40px"
+                pl="40px"
+                textAlign="left"
+                borderRadius="md"
+                bg="whiteAlpha.50"
+                border="1px solid"
+                borderColor="whiteAlpha.300"
+                color="whiteAlpha.500"
+                fontSize="14px"
+                onClick={openSearch}
+              >
+                Search the site…
+              </Box>
+            </InputGroup>
+          </Box>
           <Stack
             spacing={0}
             divider={<Box borderColor="gray.900" borderBottomWidth="1px" />}
@@ -199,5 +237,9 @@ export default function MobileDrawer({ isOpen, onClose }) {
         </DrawerBody>
       </DrawerContent>
     </Drawer>
+    {isSearchOpen && (
+      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+    )}
+    </>
   );
 }

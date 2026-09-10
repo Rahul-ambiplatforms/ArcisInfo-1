@@ -77,7 +77,7 @@ const nextConfig = {
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob: https:",
       "font-src 'self' data:",
-      "frame-src https://www.googletagmanager.com https://www.facebook.com https://www.youtube.com https://www.youtube-nocookie.com",
+      "frame-src https://www.googletagmanager.com https://www.facebook.com",
       `connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.facebook.com https://connect.facebook.net https://www.arcisai.io https://arcisai.io https://vmukti.com https://hook.eu1.make.com https://etaems.arcisai.io:5000${extraConnect}`,
       "media-src 'self' https:",
       "object-src 'none'",
@@ -109,22 +109,6 @@ const nextConfig = {
             key: "Permissions-Policy",
             value: "camera=(), microphone=(), geolocation=(), payment=()",
           },
-        ],
-      },
-      // The blog index is the one page whose content changes without a deploy,
-      // so it cannot inherit Next's ISR default of
-      // `s-maxage=<revalidate>, stale-while-revalidate=31532400`. That 365-day
-      // stale-while-revalidate window lets the browser and Cloudflare both serve
-      // the stored copy immediately and refresh behind the visitor, which put a
-      // newly published post one full page-load behind — it only appeared after
-      // a manual refresh. A short max-age with no stale-while-revalidate bounds
-      // end-to-end staleness to roughly two minutes instead.
-      // Exact `/blog` only: /blog/:slug is dynamic (`cache: 'no-store'`) and
-      // must keep its own headers.
-      {
-        source: "/blog",
-        headers: [
-          { key: "Cache-Control", value: "public, max-age=60, s-maxage=60" },
         ],
       },
       // Force every PDF under /pdfs/ to be downloaded as a file rather than
@@ -425,6 +409,77 @@ const nextConfig = {
       {
         source: "/ai-cctv-for-banks-india",
         destination: "/ai-cctv-banking-atm-security",
+        permanent: true,
+        statusCode: 301,
+      },
+
+      // ─── Image SEO renames (checklist item #33) ─────────────────────────
+      // Generic, non-descriptive image filenames renamed to keyword-friendly
+      // ones so Google Images can better understand/rank them. Old paths may
+      // already be indexed, so redirect them to the new filenames.
+      {
+        source: "/images/camera2.webp",
+        destination: "/images/arcis-ai-camera-feature.webp",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/images/camera2-card.webp",
+        destination: "/images/arcis-ai-cctv-camera.webp",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/images/camera3.webp",
+        destination: "/images/arcis-ai-cctv-camera-hero.webp",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/images/camera3-card.webp",
+        destination: "/images/arcis-stqc-bis-certified-camera.webp",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/images/deviceimage-card.webp",
+        destination: "/images/arcis-cloud-vms-dashboard-multidevice.webp",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/images/combo.webp",
+        destination: "/images/nvr-dvr-cloud-vms-features.webp",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/images/multiview.webp",
+        destination: "/images/cctv-multi-camera-monitoring-view.webp",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/images/screen.webp",
+        destination: "/images/arcis-security-suite-dashboard.webp",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/images/productType.webp",
+        destination: "/images/arcis-dome-camera-product.webp",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/images/thankyou.webp",
+        destination: "/images/arcis-blog-dashboard-preview.webp",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/images/GPTStartedView.webp",
+        destination: "/images/arcisgpt-generative-ai-overview.webp",
         permanent: true,
         statusCode: 301,
       },

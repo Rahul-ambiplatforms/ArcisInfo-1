@@ -113,7 +113,7 @@ function ProductInfo() {
         >
           {/* Dome Camera */}
           <Image loading="lazy"
-            src="/images/productType.webp" htmlWidth="3459" htmlHeight="3318"
+            src="/images/arcis-dome-camera-product.webp" htmlWidth="3459" htmlHeight="3318"
             alt="Dome Camera"
             w={{ base: "500px", md: "700px", lg: "950px" }}
             h="auto"
@@ -147,7 +147,7 @@ function ProductInfo() {
           <Image loading="lazy"
             w={{ base: "100%", md: "860px" }}
             h={{ base: "auto", md: "488px" }}
-            src="/images/multiview.webp" htmlWidth="2578" htmlHeight="1464"
+            src="/images/cctv-multi-camera-monitoring-view.webp" htmlWidth="2578" htmlHeight="1464"
             alt="Surveillance"
             borderRadius="md"
             transition="transform 0.3s ease"

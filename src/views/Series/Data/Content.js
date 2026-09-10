@@ -761,7 +761,7 @@ export const Series = {
       },
     },
     features: {
-      d_image: "/images/combo.webp",
+      d_image: "/images/nvr-dvr-cloud-vms-features.webp",
       m_image: "/images/product_feature_dome_bg_mobile.webp",
       heading: "Cloud VMS Features That Make Surveillance Smarter and Safer",
       description: "",
@@ -901,7 +901,7 @@ export const Series = {
         {
           question: "Can users access the VMS from mobile or remote locations?",
           answer:
-            "Yes. ArcisAI is a proudly AI-based Indian CCTV camera company, designed and manufactured by Adiance Technologies, a leading Indian OEM in surveillance and electronics. We’re committed to Make-in-India innovation and real-world protection.",
+            "Yes. The STQC-certified ArcisAI VMS is accessible from anywhere through the ArcisAI Mobile App (available on both the Google Play Store and Apple App Store) as well as the browser-based VMS WebApp, so you can view live feeds, play back recorded footage, and receive smart detection alerts on your phone whether you're on-site or remote.",
         },
       ],
     },
@@ -1176,7 +1176,7 @@ export const Series = {
         {
           question: "Can users access the VMS from mobile or remote locations?",
           answer:
-            "Yes. ArcisAI is a proudly AI-based Indian CCTV camera company, designed and manufactured by Adiance Technologies, a leading Indian OEM in surveillance and electronics. We’re committed to Make-in-India innovation and real-world protection.",
+            "Yes. The STQC-certified ArcisAI VMS is accessible from anywhere through the ArcisAI Mobile App (available on both the Google Play Store and Apple App Store) as well as the browser-based VMS WebApp, so you can view live feeds, play back recorded footage, and receive smart detection alerts on your phone whether you're on-site or remote.",
         },
       ],
     },
@@ -1246,6 +1246,8 @@ export const Series = {
       paragraphs: [
         "The ArcisAI Bridge Device (ABD) is a compact, intelligent device that transforms your existing CCTV setup into a cloud-ready, smart surveillance system.",
         "Most organizations want AI-enabled, cloud-based monitoring, but replacing an entire camera setup is expensive and impractical. ABD allows you to keep every existing ONVIF camera and instantly connect it to the ArcisAI VMS platform, enabling centralized control, cloud storage, alerts, and reporting—all from a single interface.",
+        "Technically, ABD works as an edge-to-cloud gateway: it sits on the same local network as your existing cameras, pulls their ONVIF streams, and relays them to ArcisAI's Cloud VMS without requiring each camera to talk to the internet directly. That keeps footage flowing through one hardened, managed connection instead of exposing every camera individually, while giving you cloud accessibility, remote viewing, and off-site backup for hardware you already own.",
+        "A single ABD unit connects up to five existing ONVIF cameras, so a site with a mixed-brand analog-to-IP setup can typically bring its entire camera bank onto ArcisAI VMS with just one or two devices. This makes ABD a practical first step for offices, retail chains, and factories that installed CCTV years ago and now want cloud monitoring, AI alerts, and multi-site dashboards without a full hardware replacement.",
       ],
       sectionProps: {
         desktop: {
@@ -1423,6 +1425,21 @@ export const Series = {
             "Can I use ABD with a mix of ArcisAI and other brand cameras?",
           answer:
             "Absolutely. ABD supports hybrid deployments, allowing you to combine ArcisAI cameras with third-party cameras seamlessly on one platform.",
+        },
+        {
+          question: "Do I need to replace my existing cameras to use ABD?",
+          answer:
+            "No. ABD is designed specifically so you don't have to. As long as your existing cameras support ONVIF—which most IP cameras installed in the last several years do—ABD can bring them onto ArcisAI VMS as they are, with no camera swap required.",
+        },
+        {
+          question: "What happens to my footage if the internet connection drops?",
+          answer:
+            "ABD relies on a working network connection to relay streams to the cloud, so if connectivity is lost, cloud recording pauses until the link is restored. Cameras with their own onboard SD storage continue recording locally in the meantime, and that footage becomes available again in the VMS once the connection resumes.",
+        },
+        {
+          question: "How is ABD installed and configured?",
+          answer:
+            "ABD is installed on the same local network as your existing cameras. Once powered and connected, it's added to your ArcisAI VMS account, where it auto-discovers ONVIF-compatible cameras on the network for you to onboard—no rewiring or camera-side reconfiguration needed.",
         },
       ],
     },
@@ -1813,6 +1830,26 @@ export const Series = {
           question: "Can the NVR work with any brand’s CCTV cameras?",
           answer:
             "If the NVR is ONVIF compatible, it can work with most IP camera brands, ensuring flexible CCTV integration.",
+        },
+        {
+          question: "How much storage do I get, and can it be expanded?",
+          answer:
+            "The 4CH, 8CH, and 16CH models each take a single SATA drive up to 6TB, while the 32CH model supports two SATA drives up to 6TB each. Storage duration depends on the number of channels recording, their resolution, and your motion-detection settings, so higher-channel deployments with continuous recording will need larger or additional drives.",
+        },
+        {
+          question: "Do ArcisAI NVRs support PoE cameras directly?",
+          answer:
+            "Yes. The 4CH and 8CH models include built-in PoE ports (4 and 8 respectively) that power and connect compatible IP cameras over a single cable, removing the need for separate power supplies or PoE switches on smaller deployments.",
+        },
+        {
+          question: "Can footage be accessed remotely or backed up off-site?",
+          answer:
+            "Yes. Alongside local SATA recording, ArcisAI NVRs can be linked to ArcisAI's Cloud VMS for remote viewing and off-site backup, so recordings remain accessible and protected even if something happens to the on-site hardware.",
+        },
+        {
+          question: "What's the difference between the 16-channel and 32-channel models?",
+          answer:
+            "The 16-channel NVR (AD-N1681) supports up to 16 cameras at up to 8MP with 72 Mbps of access bandwidth on a single SATA bay, while the 32-channel model (AD-N3251) doubles the camera count to 32 at up to 5MP with 150 Mbps of bandwidth across two SATA bays—suited to larger sites like multi-floor buildings or campuses that need more channels rather than higher per-camera resolution.",
         },
       ],
     },

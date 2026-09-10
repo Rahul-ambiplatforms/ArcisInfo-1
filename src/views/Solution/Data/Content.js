@@ -347,7 +347,7 @@ export const Solution = {
         ],
         buttonText: "Request a Demo",
         buttonLink: "/contact-us",
-        image: "/images/camera3.webp",
+        image: "/images/arcis-ai-cctv-camera-hero.webp",
         d_image: "/images/solution_cloudai_hero.webp",
         m_image: "/images/solution_cloudai_hero_mobile.webp",
         sectionProps: {
@@ -404,7 +404,7 @@ export const Solution = {
       //   ],
       //   buttonText: "Request a Demo",
       //   buttonLink: "/contact-us",
-      //   image: "/images/camera3.webp",
+      //   image: "/images/arcis-ai-cctv-camera-hero.webp",
       //   d_image: "/images/solution_cloudai_hero.webp",
       //   m_image: "/images/solution_cloudai_hero_mobile.webp",
       //   sectionProps: {

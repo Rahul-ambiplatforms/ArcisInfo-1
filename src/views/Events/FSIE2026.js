@@ -192,7 +192,7 @@ const FSIE2026 = () => {
               >
                 <Image
                   loading="lazy"
-                  src="/images/camera3-card.webp"
+                  src="/images/arcis-stqc-bis-certified-camera.webp"
                   htmlWidth="720"
                   htmlHeight="450"
                   alt="ArcisAI STQC and BIS-ER certified AI CCTV camera"
@@ -264,7 +264,7 @@ const FSIE2026 = () => {
             <Box bg={PANEL} borderRadius="xl" border="1px solid" borderColor="whiteAlpha.100" p={6} w="100%" maxW="700px">
               <Image
                 loading="lazy"
-                src="/images/deviceimage-card.webp"
+                src="/images/arcis-cloud-vms-dashboard-multidevice.webp"
                 htmlWidth="1120"
                 htmlHeight="989"
                 alt="ArcisAI Cloud VMS and ArcisGPT dashboard on desktop, tablet and mobile"

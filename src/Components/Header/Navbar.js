@@ -24,7 +24,7 @@ import {
   Stack,
   Image,
 } from '@chakra-ui/react';
-import { HamburgerIcon } from '@chakra-ui/icons';
+import { HamburgerIcon, SearchIcon } from '@chakra-ui/icons';
 import CustomButton from '../CustomButton';
 import NavbarDownIcon from '../Icons/Navbar_down_icon.svg';
 import NextLink from 'next/link';
@@ -33,6 +33,10 @@ import { dropdownData, directNavLinks, actionLinks, loginButton } from './navbar
 // Drawer + Accordion subtree only loaded on first burger tap. Keeps initial
 // Navbar JS small and the hamburger tap → next-paint under the INP budget.
 const MobileDrawer = dynamic(() => import('./MobileDrawer'), { ssr: false });
+// Search modal (+ fuse.js + the search index it fetches) only loaded the
+// first time the search icon is tapped — same lazy-chunk pattern as the
+// mobile drawer above, so it never adds weight to the initial Navbar JS.
+const SearchModal = dynamic(() => import('./SearchModal'), { ssr: false });
 
 /* --- Dropdown Component with Hover and Click Support --- */
 const NavDropdown = memo(function NavDropdown({ title, data }) {
@@ -269,6 +273,13 @@ const Navbar = () => {
   const [drawerEverOpened, setDrawerEverOpened] = useState(false);
   const [, startBurgerTransition] = useTransition();
 
+  const {
+    isOpen: isSearchOpen,
+    onOpen: onSearchOpen,
+    onClose: onSearchClose,
+  } = useDisclosure();
+  const [searchEverOpened, setSearchEverOpened] = useState(false);
+
   const handleBurgerTap = useCallback(() => {
     // Let the tap's :active feedback paint first, then mount + open the drawer
     // off the input → next-paint critical path.
@@ -277,6 +288,11 @@ const Navbar = () => {
       onOpen();
     });
   }, [drawerEverOpened, onOpen]);
+
+  const handleSearchTap = useCallback(() => {
+    if (!searchEverOpened) setSearchEverOpened(true);
+    onSearchOpen();
+  }, [searchEverOpened, onSearchOpen]);
 
   return (
     <Box
@@ -386,6 +402,17 @@ const Navbar = () => {
           </CustomButton>
         </HStack>
 
+        {/* SEARCH */}
+        <IconButton
+          icon={<SearchIcon boxSize={4} />}
+          variant="ghost"
+          color="white"
+          onClick={handleSearchTap}
+          aria-label="Search the site"
+          _hover={{ bg: 'whiteAlpha.200', color: '#A4FF79' }}
+          mr={{ base: 1, lg: 0 }}
+        />
+
         {/* MOBILE BURGER */}
         <IconButton
           display={{ base: 'flex', lg: 'none' }}
@@ -401,6 +428,12 @@ const Navbar = () => {
       {/* Mobile drawer is dynamically imported and only mounted after the
           burger is tapped at least once. */}
       {drawerEverOpened && <MobileDrawer isOpen={isOpen} onClose={onClose} />}
+
+      {/* Search modal is dynamically imported and only mounted after the
+          search icon is tapped at least once. */}
+      {searchEverOpened && (
+        <SearchModal isOpen={isSearchOpen} onClose={onSearchClose} />
+      )}
     </Box>
   );
 };
