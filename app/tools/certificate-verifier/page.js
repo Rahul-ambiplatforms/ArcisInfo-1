@@ -1,7 +1,7 @@
 import CertificateVerifier from '@/src/views/Tools/CertificateVerifier';
 import { buildHreflang } from '@/src/data/hreflang';
 
-const SITE_URL = 'https://www.arcisai.io';
+const SITE_URL = 'https://arcisai.io';
 const TITLE = 'BIS-ER & STQC Certificate Verifier | Check if CCTV is Certified to Sell in India | ArcisAI';
 const DESCRIPTION =
   'Free tool to verify BIS-ER and STQC CCTV certificates on official government portals — check if a brand is legal to sell in India.';

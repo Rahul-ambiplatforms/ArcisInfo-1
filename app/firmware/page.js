@@ -1,7 +1,7 @@
 import Firmware from '@/src/views/Firmware/Firmware';
 import { buildHreflang } from '@/src/data/hreflang';
 
-const SITE_URL = 'https://www.arcisai.io';
+const SITE_URL = 'https://arcisai.io';
 const TITLE = 'Firmware Downloads | Camera Firmware Updates | ArcisAI';
 const DESCRIPTION =
   'Download the latest firmware updates and release notes for ArcisAI security cameras. Keep your surveillance hardware secure and up to date.';

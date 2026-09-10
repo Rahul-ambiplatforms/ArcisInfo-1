@@ -1,7 +1,7 @@
 import MarketReport2026 from '@/src/views/Guides/MarketReport2026';
 import { buildHreflang } from '@/src/data/hreflang';
 
-const SITE_URL = 'https://www.arcisai.io';
+const SITE_URL = 'https://arcisai.io';
 const TITLE = 'India CCTV Market & Certification Report 2026 | BIS-ER, STQC & Market Shift | ArcisAI';
 const DESCRIPTION =
   'Data report on India\'s shift to certified surveillance in 2026 — the BIS-ER & STQC mandate, market impact, and what it means for CCTV buyers. By ArcisAI.';
