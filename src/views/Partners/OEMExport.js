@@ -37,8 +37,8 @@ const OEMExport = () => (
           AI cameras you can distribute, or white-label as your own.
         </Text>
         <Stack direction={{ base: 'column', sm: 'row' }} spacing={4}>
-          <Button as="a" href={WA} size="lg" bg={ACCENT} color="white" _hover={{ bg: ACCENT_DEEP }}>Start on WhatsApp</Button>
-          <Button as="a" href="mailto:marketing@arcisai.io?subject=ArcisAI%20International%20OEM%2FExport%20Enquiry" size="lg" variant="outline" borderColor={CARD_BORDER} color="white" _hover={{ bg: 'whiteAlpha.100' }}>Email Export Team</Button>
+          <Button as="a" type={undefined} href={WA} size="lg" bg={ACCENT} color="white" _hover={{ bg: ACCENT_DEEP }}>Start on WhatsApp</Button>
+          <Button as="a" type={undefined} href="mailto:marketing@arcisai.io?subject=ArcisAI%20International%20OEM%2FExport%20Enquiry" size="lg" variant="outline" borderColor={CARD_BORDER} color="white" _hover={{ bg: 'whiteAlpha.100' }}>Email Export Team</Button>
         </Stack>
       </Container>
     </Box>
@@ -70,9 +70,9 @@ const OEMExport = () => (
         <Heading as="h2" fontSize={{ base: '24px', md: '32px' }} fontWeight="800" mb={3}>Let&apos;s build your surveillance line</Heading>
         <Text color="whiteAlpha.900" mb={6} maxW="640px" mx="auto">Tell us your market and volumes &mdash; we&apos;ll come back with a distribution or OEM proposal, pricing and samples.</Text>
         <Stack direction={{ base: 'column', sm: 'row' }} spacing={4} justify="center">
-          <Button as="a" href={WA} size="lg" bg="white" color={ACCENT_DEEP} fontWeight="700" _hover={{ bg: 'gray.100' }}>Start on WhatsApp</Button>
-          <Button as="a" href="mailto:marketing@arcisai.io?subject=ArcisAI%20International%20OEM%2FExport%20Enquiry" size="lg" variant="outline" borderColor="whiteAlpha.500" color="white" _hover={{ bg: 'whiteAlpha.200' }}>Email Export Team</Button>
-          <Button as={NextLink} href="/become-a-distributor" size="lg" variant="outline" borderColor="whiteAlpha.500" color="white" _hover={{ bg: 'whiteAlpha.200' }}>India distributor? →</Button>
+          <Button as="a" type={undefined} href={WA} size="lg" bg="white" color={ACCENT_DEEP} fontWeight="700" _hover={{ bg: 'gray.100' }}>Start on WhatsApp</Button>
+          <Button as="a" type={undefined} href="mailto:marketing@arcisai.io?subject=ArcisAI%20International%20OEM%2FExport%20Enquiry" size="lg" variant="outline" borderColor="whiteAlpha.500" color="white" _hover={{ bg: 'whiteAlpha.200' }}>Email Export Team</Button>
+          <Button as={NextLink} type={undefined} href="/become-a-distributor" size="lg" variant="outline" borderColor="whiteAlpha.500" color="white" _hover={{ bg: 'whiteAlpha.200' }}>India distributor? →</Button>
         </Stack>
       </Box>
     </Container>

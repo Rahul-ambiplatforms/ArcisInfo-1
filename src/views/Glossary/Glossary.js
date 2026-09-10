@@ -271,8 +271,8 @@ const Glossary = () => {
           </VStack>
           <Divider my={8} />
           <HStack spacing={4} justify="center">
-            <Button as={NextLink} href="/faq" variant="outline" colorScheme="gray">Browse FAQs</Button>
-            <Button as={NextLink} href="/contact-us" bg="#0a0a0a" color="white" _hover={{ bg: "#1a1a1a" }}>Contact Sales</Button>
+            <Button as={NextLink} type={undefined} href="/faq" variant="outline" colorScheme="gray">Browse FAQs</Button>
+            <Button as={NextLink} type={undefined} href="/contact-us" bg="#0a0a0a" color="white" _hover={{ bg: "#1a1a1a" }}>Contact Sales</Button>
           </HStack>
         </Container>
       </Box>

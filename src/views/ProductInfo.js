@@ -59,7 +59,7 @@ function ProductInfo() {
               fontSize={{ base: "sm", md: "md" }}
               color="#5B5B5C"
               w="100%"
-              align="justify"
+              textAlign="justify"
             >
               ArcisAI brings you the S-Series AI CCTV cameras designed for every
               need. Whether you need wireless flexibility, mobile connectivity,
@@ -69,7 +69,7 @@ function ProductInfo() {
               fontSize={{ base: "sm", md: "md" }}
               color="#5B5B5C"
               w="100%"
-              align="justify"
+              textAlign="justify"
             >
               Each S-Series camera includes 8 inbuilt EdgeAI detections such as
               unattended object, missing object, area, and line crossing, along

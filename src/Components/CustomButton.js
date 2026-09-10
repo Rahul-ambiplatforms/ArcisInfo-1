@@ -39,10 +39,6 @@ const CustomButton = ({
   glowColor,
   showTicks = true,
   textBgClip, // New prop
-  // Blocks interaction and dims the button while an async action is in flight.
-  // `loadingText` optionally replaces the label for the duration.
-  isLoading = false,
-  loadingText,
   // Custom (non-DOM) style props — destructured so they never leak onto the
   // native element via {...rest}. Chakra v2 forwards unrecognized props to the
   // DOM, so these must be consumed here.
@@ -88,12 +84,6 @@ const CustomButton = ({
     transition: "all 0.1s",
     cursor: "pointer",
     ...sx,
-    // Applied after `sx` so a caller's styles can't re-enable a loading button.
-    ...(isLoading && {
-      pointerEvents: "none",
-      opacity: 0.6,
-      cursor: "wait",
-    }),
     _hover: {
       bg: hoverBgColor,
       "& .corner-h": {
@@ -128,19 +118,11 @@ const CustomButton = ({
   const offset = "4px";
 
   return (
-    <Box
-      as={as}
-      onClick={onClick}
-      sx={buttonSx}
-      {...rest}
-      aria-busy={isLoading || undefined}
-      // `disabled` is only valid on a native <button>; for any other `as` the
-      // pointerEvents rule above is what blocks the click.
-      {...(as === "button" && isLoading ? { disabled: true } : {})}
-    >
+    <Box as={as} onClick={onClick} sx={buttonSx} {...rest}>
       {/* TOP LEFT CORNER */}
       <Box
         className="corner-h"
+        as="span"
         {...cornerLineBase}
         top={`-${offset}`}
         left={`-${offset}`}
@@ -149,6 +131,7 @@ const CustomButton = ({
       />
       <Box
         className="corner-v corner-v-top"
+        as="span"
         {...cornerLineBase}
         top={`-${offset}`}
         left={`-${offset}`}
@@ -159,6 +142,7 @@ const CustomButton = ({
       {/* TOP RIGHT CORNER */}
       <Box
         className="corner-h"
+        as="span"
         {...cornerLineBase}
         top={`-${offset}`}
         right={`-${offset}`}
@@ -167,6 +151,7 @@ const CustomButton = ({
       />
       <Box
         className="corner-v corner-v-top"
+        as="span"
         {...cornerLineBase}
         top={`-${offset}`}
         right={`-${offset}`}
@@ -177,6 +162,7 @@ const CustomButton = ({
       {/* BOTTOM RIGHT CORNER */}
       <Box
         className="corner-h"
+        as="span"
         {...cornerLineBase}
         bottom={`-${offset}`}
         right={`-${offset}`}
@@ -185,6 +171,7 @@ const CustomButton = ({
       />
       <Box
         className="corner-v corner-v-bottom"
+        as="span"
         {...cornerLineBase}
         bottom={`-${offset}`}
         right={`-${offset}`}
@@ -195,6 +182,7 @@ const CustomButton = ({
       {/* BOTTOM LEFT CORNER */}
       <Box
         className="corner-h"
+        as="span"
         {...cornerLineBase}
         bottom={`-${offset}`}
         left={`-${offset}`}
@@ -203,6 +191,7 @@ const CustomButton = ({
       />
       <Box
         className="corner-v corner-v-bottom"
+        as="span"
         {...cornerLineBase}
         bottom={`-${offset}`}
         left={`-${offset}`}
@@ -212,12 +201,12 @@ const CustomButton = ({
 
       {/* LEFT MIDDLE TICK */}
       {showTicks && (
-        <Box className="tick" {...tickBase} left="4px" />
+        <Box as="span" className="tick" {...tickBase} left="4px" />
       )}
 
       {/* RIGHT MIDDLE TICK */}
       {showTicks && (
-        <Box className="tick" {...tickBase} right="4px" />
+        <Box as="span" className="tick" {...tickBase} right="4px" />
       )}
 
       {/* BUTTON TEXT */}
@@ -235,7 +224,7 @@ const CustomButton = ({
         alignItems="center"
         justifyContent="center"
       >
-        {isLoading && loadingText ? loadingText : children}
+        {children}
       </Text>
     </Box>
   );

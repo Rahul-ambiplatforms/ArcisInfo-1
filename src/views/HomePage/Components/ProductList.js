@@ -193,7 +193,7 @@ const ProductList = ({ data }) => {
                 width="160px"
                 height="40px"
                 fontSize="16px"
-                backdropFilter="blur(`10px)"
+                backdropFilter="blur(10px)"
               >
                 {category.product_type}
               </CustomButton>
@@ -294,10 +294,8 @@ const ProductList = ({ data }) => {
                     <Image loading="lazy"
                       src={product.image}
                       alt={product.product_name}
-                      width="214"
-                      height="214"
                       decoding="async"
-                      // w="214px"
+                      w="214px"
                       h="214px"
                       // maxH="150px"
                       objectFit="contain"

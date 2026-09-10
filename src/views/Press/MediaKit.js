@@ -119,7 +119,7 @@ const MediaKit = () => (
         <Text color="whiteAlpha.900">marketing@arcisai.io</Text>
         <Text color="whiteAlpha.900">+91 96877 79999</Text>
         <Text color="whiteAlpha.700" mt={2} fontSize="sm">High-res logos, product images &amp; certificate copies on request.</Text>
-        <Button as={NextLink} href="/contact-us" mt={4} bg={ACCENT} color="white" _hover={{ bg: ACCENT_DEEP }} size="sm">Contact us</Button>
+        <Button as={NextLink} type={undefined} href="/contact-us" mt={4} bg={ACCENT} color="white" _hover={{ bg: ACCENT_DEEP }} size="sm">Contact us</Button>
       </Box>
     </SimpleGrid>
   </Container>

@@ -53,7 +53,7 @@ const PoweredBy = ({ data }) => {
                   fontSize={{ base: "16px", md: "20px" }}
                   lineHeight={{ base: "20px", md: "28px" }}
                   fontWeight="400"
-                  align="justify"
+                  textAlign="justify"
                   color="white"
                 >
                   {desc}

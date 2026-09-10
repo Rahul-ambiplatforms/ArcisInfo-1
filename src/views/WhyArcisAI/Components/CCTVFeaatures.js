@@ -97,7 +97,7 @@ const CCTVFeatures = ({ data }) => {
               fontSize={{ base: "16px", md: "18px" }}
               lineHeight={{ base: "24px", md: "28px" }}
               w={{ base: "100%", md: "60%" }}
-              align="justify"
+              textAlign="justify"
               position={{ md: "absolute" }}
               right={{ lg: "2%" }}
             >

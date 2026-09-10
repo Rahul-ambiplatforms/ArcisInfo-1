@@ -179,6 +179,7 @@ const NavDropdown = memo(function NavDropdown({ title, data }) {
                       <MenuItem
                         key={subIndex}
                         as={NextLink}
+                        type={false}
                         href={subItem.link}
                         bg="transparent"
                         _hover={{ bg: 'gray.800', color: 'white' }}
@@ -226,6 +227,7 @@ const NavDropdown = memo(function NavDropdown({ title, data }) {
                     <MenuItem
                       key={subIndex}
                       as={NextLink}
+                      type={false}
                       href={subItem.link}
                       bg="transparent"
                       _hover={{ bg: 'gray.800' }}
@@ -242,6 +244,7 @@ const NavDropdown = memo(function NavDropdown({ title, data }) {
               <MenuItem
                 key={index}
                 as={NextLink}
+                type={false}
                 href={item.link}
                 bg="transparent"
                 _hover={{ bg: 'gray.800' }}

@@ -38,7 +38,7 @@ const GoodbyeNVR = ({ data }) => {
               lineHeight={{ base: "24px", md: "28px" }}
               mb={6}
               w={{ base: "100%", md: "40%" }}
-              align="justify"
+              textAlign="justify"
             >
               {data.description}
             </Text>
@@ -47,7 +47,7 @@ const GoodbyeNVR = ({ data }) => {
               fontSize={{ base: "16px", md: "18px" }}
               lineHeight={{ base: "24px", md: "28px" }}
               w={{ base: "100%", md: "40%" }}
-              align="justify"
+              textAlign="justify"
             >
               {data.description2}
             </Text>

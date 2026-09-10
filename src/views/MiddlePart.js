@@ -331,7 +331,7 @@ function MiddlePart() {
             <Heading
               fontSize={{ base: "2xl", md: "4xl" }}
               mt={{ base: "4", md: "10" }}
-              align="left"
+              textAlign="left"
               // textAlign={"justify"}
             >
               AI Security Surveillance Suite: ArcisVMS & App
@@ -339,7 +339,6 @@ function MiddlePart() {
             <Text
               w="85%"
               fontSize={{ base: "sm", md: "sm" }}
-              align="left"
               textAlign={"justify"}
               lineHeight="1.1"
             >

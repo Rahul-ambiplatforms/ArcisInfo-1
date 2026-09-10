@@ -82,7 +82,7 @@ const MarketReport2026 = () => (
         <ListItem>• For sensitive/government sites, prioritise NDAA-compliant, Made-in-India supply chains.</ListItem>
       </List>
       <Box mt={3}>
-        <Button as={NextLink} href="/tools/certificate-verifier" bg={ACCENT} color="white" _hover={{ bg: ACCENT_DEEP }}>Verify a certificate (free tool) →</Button>
+        <Button as={NextLink} type={undefined} href="/tools/certificate-verifier" bg={ACCENT} color="white" _hover={{ bg: ACCENT_DEEP }}>Verify a certificate (free tool) →</Button>
       </Box>
     </Section>
 
@@ -92,7 +92,7 @@ const MarketReport2026 = () => (
       <Text color="whiteAlpha.900">ArcisAI (by Adiance Technologies, Ahmedabad) is certified on both layers — BIS-ER (R-72003735, ER01:2024)
         and STQC — plus ISO 27001:2022 and NDAA compliant, Made in India, with edge AI and ArcisGPT. It is positioned
         for exactly the certified, AI-first, domestic demand this report describes.</Text>
-      <Button as={NextLink} href="/certifications" bg="white" color={ACCENT_DEEP} fontWeight="700" _hover={{ bg: 'gray.100' }} mt={4}>See ArcisAI's certifications</Button>
+      <Button as={NextLink} type={undefined} href="/certifications" bg="white" color={ACCENT_DEEP} fontWeight="700" _hover={{ bg: 'gray.100' }} mt={4}>See ArcisAI's certifications</Button>
     </Box>
 
     <Section title="Methodology &amp; sources">

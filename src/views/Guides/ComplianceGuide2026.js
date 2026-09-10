@@ -97,7 +97,7 @@ const ComplianceGuide2026 = () => (
         <ListItem>4. <b>NDAA / origin:</b> for sensitive sites, confirm NDAA compliance and a clean supply chain.</ListItem>
       </List>
       <Box mt={4}>
-        <Button as={NextLink} href="/tools/certificate-verifier" bg={ACCENT} color="white" _hover={{ bg: ACCENT_DEEP }}>
+        <Button as={NextLink} type={undefined} href="/tools/certificate-verifier" bg={ACCENT} color="white" _hover={{ bg: ACCENT_DEEP }}>
           Verify a certificate with our free tool →
         </Button>
       </Box>
@@ -118,8 +118,8 @@ const ComplianceGuide2026 = () => (
         ISO 27001:2022 and NDAA compliance, Made in India. Fully eligible for legal sale and government/GeM procurement.
       </Text>
       <HStack spacing={3} flexWrap="wrap">
-        <Button as={NextLink} href="/certifications" bg="white" color={ACCENT_DEEP} fontWeight="700" _hover={{ bg: 'gray.100' }}>See ArcisAI certifications</Button>
-        <Button as={NextLink} href="/contact-us" variant="outline" color="white" borderColor="whiteAlpha.500" _hover={{ bg: 'whiteAlpha.200' }}>Talk to us</Button>
+        <Button as={NextLink} type={undefined} href="/certifications" bg="white" color={ACCENT_DEEP} fontWeight="700" _hover={{ bg: 'gray.100' }}>See ArcisAI certifications</Button>
+        <Button as={NextLink} type={undefined} href="/contact-us" variant="outline" color="white" borderColor="whiteAlpha.500" _hover={{ bg: 'whiteAlpha.200' }}>Talk to us</Button>
       </HStack>
     </Box>
 

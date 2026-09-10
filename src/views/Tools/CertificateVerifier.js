@@ -143,7 +143,7 @@ const CertificateVerifier = () => {
               <Badge bg="whiteAlpha.300" color="white">NDAA Compliant</Badge>
               <Badge bg="whiteAlpha.300" color="white">Made in India</Badge>
             </HStack>
-            <Button as={NextLink} href="/certifications" bg="white" color={ACCENT_DEEP} fontWeight="700"
+            <Button as={NextLink} type={undefined} href="/certifications" bg="white" color={ACCENT_DEEP} fontWeight="700"
               _hover={{ bg: 'gray.100' }} mt={2}>See all ArcisAI certifications</Button>
           </VStack>
         </Box>

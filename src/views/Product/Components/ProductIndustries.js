@@ -84,7 +84,7 @@ const ProductIndustries = ({ data }) => {
         fontSize={{ base: "16px", md: "20px", lg: "20px" }}
         mb={2}
         fontWeight="400"
-        align="left"
+        textAlign="left"
         ml={{ base: "2%", md: "2%" }}
       >
         {item.name}
@@ -93,7 +93,7 @@ const ProductIndustries = ({ data }) => {
         color="white"
         fontSize={{ base: "14px", md: "16px", lg: "16px" }}
         lineHeight={{ base: "15px", md: "20px", lg: "20px" }}
-        align="justify"
+        textAlign="justify"
         ml={{ base: "2%", md: "2%" }}
         w="95%"
       >
@@ -159,7 +159,7 @@ const ProductIndustries = ({ data }) => {
         fontSize={{ base: "16px", md: "20px", lg: "20px" }}
         mb={2}
         fontWeight="400"
-        align="left"
+        textAlign="left"
         ml={{ base: "2%", md: "2%" }}
       >
         {item.name}
@@ -168,7 +168,7 @@ const ProductIndustries = ({ data }) => {
         color="white"
         fontSize={{ base: "14px", md: "16px", lg: "16px" }}
         lineHeight={{ base: "15px", md: "20px", lg: "20px" }}
-        align="justify"
+        textAlign="justify"
         ml={{ base: "2%", md: "2%" }}
         w="95%"
       >

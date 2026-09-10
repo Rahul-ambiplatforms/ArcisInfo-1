@@ -432,7 +432,7 @@ const Footer = () => {
         <Flex
           direction={{ base: "column-reverse", md: "row" }}
           justify="space-between"
-          align={{ base: "left", md: "center" }}
+          align={{ base: "flex-start", md: "center" }}
           pt={4}
           gap={4}
         >
@@ -461,7 +461,7 @@ const Footer = () => {
           </Text>
 
           {/* Right: Powered By */}
-          <VStack align={{ base: "left", md: "flex-end" }} spacing={0}>
+          <VStack align={{ base: "flex-start", md: "flex-end" }} spacing={0}>
             <Text
               fontSize={{ base: "12px", md: "14px" }}
               color="white"

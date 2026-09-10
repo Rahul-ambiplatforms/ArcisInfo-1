@@ -194,9 +194,9 @@ const StorageCalculator = () => {
                 STQC-certified, India-hosted recording.
               </Text>
               <HStack spacing={3}>
-                <Button as={NextLink} href="/cloud-vms" bg="white" color={ACCENT_DEEP} fontWeight="700"
+                <Button as={NextLink} type={undefined} href="/cloud-vms" bg="white" color={ACCENT_DEEP} fontWeight="700"
                   _hover={{ bg: 'gray.100' }} size="sm">Explore Cloud VMS</Button>
-                <Button as={NextLink} href="/arcis-nvr" variant="outline" color="white"
+                <Button as={NextLink} type={undefined} href="/arcis-nvr" variant="outline" color="white"
                   borderColor="whiteAlpha.500" _hover={{ bg: 'whiteAlpha.200' }} size="sm">View NVRs</Button>
               </HStack>
             </Box>

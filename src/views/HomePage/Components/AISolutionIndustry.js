@@ -73,7 +73,7 @@ const AISolutionIndustry = ({ data }) => {
           as="p"
           textAlign="center"
           color="#fff"
-          fontSize={{ base: "14x", md: "20px" }}
+          fontSize={{ base: "14px", md: "20px" }}
           lineHeight={{ base: "18px", md: "25px" }}
           mx="auto"
           mb={{ base: 8, md: 16 }}

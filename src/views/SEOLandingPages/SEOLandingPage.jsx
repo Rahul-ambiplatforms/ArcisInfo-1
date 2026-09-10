@@ -20,7 +20,7 @@ const SEOLandingPage = ({ pageData, slugKey, relatedLinks = [] }) => {
         <VStack spacing={4}>
           <Heading color="white" size="xl">Page Not Found</Heading>
           <Text color="whiteAlpha.700">The page you're looking for doesn't exist.</Text>
-          <Button as={NextLink} href="/" bg={ACCENT} color="white" _hover={{bg: ACCENT_DEEP}}>Go Home</Button>
+          <Button as={NextLink} type={undefined} href="/" bg={ACCENT} color="white" _hover={{bg: ACCENT_DEEP}}>Go Home</Button>
         </VStack>
       </Box>
     );
@@ -77,10 +77,10 @@ const SEOLandingPage = ({ pageData, slugKey, relatedLinks = [] }) => {
             {pageData.heroDescription}
           </Text>
           <HStack spacing={4}>
-            <Button as={NextLink} href={pageData.cta?.buttonLink || "/contact-us"} bg={ACCENT} color="white" size="lg" _hover={{bg: ACCENT_DEEP, transform: "translateY(-2px)"}} transition="all 0.2s" fontWeight="600">
+            <Button as={NextLink} type={undefined} href={pageData.cta?.buttonLink || "/contact-us"} bg={ACCENT} color="white" size="lg" _hover={{bg: ACCENT_DEEP, transform: "translateY(-2px)"}} transition="all 0.2s" fontWeight="600">
               {pageData.cta?.buttonText || "Get Free Quote"}
             </Button>
-            <Button as={NextLink} href="/products" variant="outline" color="white" borderColor="whiteAlpha.400" size="lg" _hover={{bg: "whiteAlpha.100"}}>
+            <Button as={NextLink} type={undefined} href="/products" variant="outline" color="white" borderColor="whiteAlpha.400" size="lg" _hover={{bg: "whiteAlpha.100"}}>
               View Products
             </Button>
           </HStack>
@@ -146,7 +146,7 @@ const SEOLandingPage = ({ pageData, slugKey, relatedLinks = [] }) => {
           <Container maxW="700px">
             <Heading as="h2" size={{base: "lg", md: "xl"}} mb={4}>{pageData.cta.title}</Heading>
             <Text color="whiteAlpha.900" mb={8} fontSize="lg">{pageData.cta.description || pageData.cta.subtitle || ""}</Text>
-            <Button as={NextLink} href={pageData.cta.buttonLink || "/contact-us"} bg="white" color={ACCENT_DEEP} size="lg" px={10} _hover={{bg: "gray.100", transform: "translateY(-2px)"}} transition="all 0.2s" fontWeight="700">
+            <Button as={NextLink} type={undefined} href={pageData.cta.buttonLink || "/contact-us"} bg="white" color={ACCENT_DEEP} size="lg" px={10} _hover={{bg: "gray.100", transform: "translateY(-2px)"}} transition="all 0.2s" fontWeight="700">
               {pageData.cta.buttonText || "Get Free Quote"}
             </Button>
           </Container>

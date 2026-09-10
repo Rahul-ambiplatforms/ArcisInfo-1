@@ -151,6 +151,7 @@ export default function MobileDrawer({ isOpen, onClose }) {
               <Button
                 key={item.link}
                 as={NextLink}
+                type={undefined}
                 href={item.link}
                 variant="ghost"
                 color="white"
@@ -170,6 +171,7 @@ export default function MobileDrawer({ isOpen, onClose }) {
 
             <Button
               as={NextLink}
+              type={undefined}
               href={actionLinks[1].link}
               variant="ghost"
               color="white"

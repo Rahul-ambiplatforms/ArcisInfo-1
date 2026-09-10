@@ -74,7 +74,7 @@ const Products = ({ products = [] }) => {
               Talk to our team for a free consultation and quote based on your camera count, site size,
               and compliance requirements.
             </Text>
-            <Button as={NextLink} href="/contact-us" bg="white" color={ACCENT_DEEP} fontWeight="700" _hover={{ bg: 'gray.100' }}>
+            <Button as={NextLink} type={undefined} href="/contact-us" bg="white" color={ACCENT_DEEP} fontWeight="700" _hover={{ bg: 'gray.100' }}>
               Contact Us
             </Button>
           </Box>
