@@ -1,7 +1,7 @@
 import Tools from '@/src/views/Tools/Tools';
 import { buildHreflang } from '@/src/data/hreflang';
 
-const SITE_URL = 'https://www.arcisai.io';
+const SITE_URL = 'https://arcisai.io';
 const TITLE = 'Tools & Software Downloads | ArcisAI';
 const DESCRIPTION =
   'Download the latest ArcisAI tools, configuration utilities, and software updates for ArcisAI cameras and the Cloud VMS, along with their release notes.';

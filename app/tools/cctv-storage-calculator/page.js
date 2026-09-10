@@ -1,7 +1,7 @@
 import StorageCalculator from '@/src/views/Tools/StorageCalculator';
 import { buildHreflang } from '@/src/data/hreflang';
 
-const SITE_URL = 'https://www.arcisai.io';
+const SITE_URL = 'https://arcisai.io';
 const TITLE = 'CCTV Storage Calculator | NVR & Hard Disk Size Estimator | ArcisAI';
 const DESCRIPTION =
   'Free CCTV storage calculator — estimate NVR / hard disk size from camera count, resolution, codec and retention days. Accurate H.265/H.264 bitrate model by ArcisAI.';

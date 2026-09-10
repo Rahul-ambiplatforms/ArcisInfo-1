@@ -1,7 +1,7 @@
 import Documents from '@/src/views/Documents/Documents';
 import { buildHreflang } from '@/src/data/hreflang';
 
-const SITE_URL = 'https://www.arcisai.io';
+const SITE_URL = 'https://arcisai.io';
 const TITLE = 'Documents & User Manuals | ArcisAI';
 const DESCRIPTION =
   'Download official ArcisAI user manuals, datasheets, and product guides — installation and operation docs for Eco-Series, S-Series, NVRs, and Bridge Devices.';

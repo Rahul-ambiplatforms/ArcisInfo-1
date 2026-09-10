@@ -1,7 +1,7 @@
 import MediaKit from '@/src/views/Press/MediaKit';
 import { buildHreflang } from '@/src/data/hreflang';
 
-const SITE_URL = 'https://www.arcisai.io';
+const SITE_URL = 'https://arcisai.io';
 const TITLE = 'Press & Media Kit | ArcisAI — Facts, Certifications, Boilerplate';
 const DESCRIPTION =
   'ArcisAI press & media kit: company boilerplate, verifiable BIS-ER (R-72003735) & STQC certifications, product range, spokesperson quote and press contact.';
