@@ -126,6 +126,7 @@ const seoPageDataWifi = {
     },
   },
 
+  // ── WEST INDIA ─────────────────────────────────────────────────────────────
   "wifi-cctv-camera-ahmedabad": {
     slug: "wifi-cctv-camera-ahmedabad",
     title: "WiFi CCTV Camera in Ahmedabad | BIS-ER Certified | ArcisAI",
