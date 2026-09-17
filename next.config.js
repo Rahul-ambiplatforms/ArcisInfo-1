@@ -211,6 +211,46 @@ const nextConfig = {
         permanent: true,
         statusCode: 301,
       },
+      // SEO fix (2026-09-16): year-branded slugs moved to undated URLs. Both pages
+      // were still titled and slugged "2025" in September 2026 — a stale year in the
+      // SERP title suppresses CTR on exactly the commercial/compliance terms that
+      // matter most now the BIS-ER/STQC mandate is live (in force since 1 Apr 2026).
+      // The year now lives only in the title, so it can be refreshed annually
+      // without ever migrating the URL again.
+      {
+        source: "/best-ai-cctv-camera-india-2025",
+        destination: "/best-ai-cctv-camera-india",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/stqc-compliance-guide-cctv-2025",
+        destination: "/stqc-compliance-guide-cctv",
+        permanent: true,
+        statusCode: 301,
+      },
+      // Dead CMS post (2026-09-16): the blog list endpoint still reports this as
+      // published, but the detail endpoint returns nothing, so the page 404s.
+      // Filtered out of the sitemap in app/sitemap.js; this catches anyone who
+      // reaches the URL from an old link or an already-indexed result. Sent to
+      // the blog index rather than an unrelated post, since there is no
+      // equivalent replacement. Remove once the CMS record is fixed or retired.
+      {
+        source: "/blog/reduce-cctv-callbacks",
+        destination: "/blog",
+        permanent: true,
+        statusCode: 301,
+      },
+      // Keyword cannibalisation: /blog/best-ai-cctv-camera-for-business and
+      // /blog/best-ai-cctv-camera-office-business-security-india-2026 both target
+      // business/office intent. Consolidating the generic one into the specific
+      // one so they stop splitting ranking signal.
+      {
+        source: "/blog/best-ai-cctv-camera-for-business",
+        destination: "/blog/best-ai-cctv-camera-office-business-security-india-2026",
+        permanent: true,
+        statusCode: 301,
+      },
       {
         source: "/solutions",
         destination: "/solution/edge-ai",
