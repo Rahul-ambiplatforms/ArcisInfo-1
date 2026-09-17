@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from "react";
+import { trackLead } from "@/src/utils/track";
 import {
   Box,
   FormControl,
@@ -181,6 +182,13 @@ const ContactSection = () => {
       // console.log("RESPONSE::", JSON.stringify({ ...formData, "location": formData.location + " " + location2 , formType: "Contact" }));
       const data = await response.json();
       if (response.ok) {
+        // Conversion tracking (2026-09-16). This form is the main enquiry route
+        // on the site and fired no analytics event of any kind, so every lead it
+        // produced was invisible in GA4 — there was no way to tell whether this
+        // page converted at all. Fired only inside response.ok, so a failed
+        // submit is never counted as a lead.
+        trackLead("contact-us");
+
         toast({
           title: "Message Sent!",
           description: "We'll get back to you soon.",
