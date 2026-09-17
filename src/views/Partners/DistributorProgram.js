@@ -4,6 +4,7 @@ import {
   Box, Container, Heading, Text, SimpleGrid, Stack, Badge, Button, Divider, Flex, Icon,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
+import { trackCtaClick } from '@/src/utils/track';
 
 const ACCENT = '#9678E1';
 const ACCENT_DEEP = '#8266C9';
@@ -48,10 +49,10 @@ const DistributorProgram = () => (
           GeM &amp; PSU tenders, and the shift away from non-compliant imports after April 2026.
         </Text>
         <Stack direction={{ base: 'column', sm: 'row' }} spacing={4}>
-          <Button as="a" type={undefined} href={WA} size="lg" bg={ACCENT} color="white" _hover={{ bg: ACCENT_DEEP }}>
+          <Button as="a" type={undefined} href={WA} onClick={() => trackCtaClick('whatsapp', 'become-a-distributor')} size="lg" bg={ACCENT} color="white" _hover={{ bg: ACCENT_DEEP }}>
             Apply on WhatsApp
           </Button>
-          <Button as="a" type={undefined} href="mailto:marketing@arcisai.io?subject=ArcisAI%20Distributor%20Enquiry" size="lg" variant="outline" borderColor={CARD_BORDER} color="white" _hover={{ bg: 'whiteAlpha.100' }}>
+          <Button as="a" type={undefined} href="mailto:marketing@arcisai.io?subject=ArcisAI%20Distributor%20Enquiry" onClick={() => trackCtaClick('email', 'become-a-distributor')} size="lg" variant="outline" borderColor={CARD_BORDER} color="white" _hover={{ bg: 'whiteAlpha.100' }}>
             Email the Channel Team
           </Button>
         </Stack>
@@ -97,8 +98,8 @@ const DistributorProgram = () => (
         <Heading as="h2" fontSize={{ base: '24px', md: '32px' }} fontWeight="800" mb={3}>Ready to sell ArcisAI in your region?</Heading>
         <Text color="whiteAlpha.900" mb={6} maxW="620px" mx="auto">Join the certified, Made-in-India AI CCTV brand built for the post-2026 market. Talk to our channel team today.</Text>
         <Stack direction={{ base: 'column', sm: 'row' }} spacing={4} justify="center">
-          <Button as="a" type={undefined} href={WA} size="lg" bg="white" color={ACCENT_DEEP} fontWeight="700" _hover={{ bg: 'gray.100' }}>Apply on WhatsApp</Button>
-          <Button as="a" type={undefined} href="tel:+919687779999" size="lg" variant="outline" borderColor="whiteAlpha.500" color="white" _hover={{ bg: 'whiteAlpha.200' }}>Call +91 96877 79999</Button>
+          <Button as="a" type={undefined} href={WA} onClick={() => trackCtaClick('whatsapp', 'become-a-distributor')} size="lg" bg="white" color={ACCENT_DEEP} fontWeight="700" _hover={{ bg: 'gray.100' }}>Apply on WhatsApp</Button>
+          <Button as="a" type={undefined} href="tel:+919687779999" onClick={() => trackCtaClick('phone', 'become-a-distributor')} size="lg" variant="outline" borderColor="whiteAlpha.500" color="white" _hover={{ bg: 'whiteAlpha.200' }}>Call +91 96877 79999</Button>
           <Button as={NextLink} type={undefined} href="/global-oem-partnership" size="lg" variant="outline" borderColor="whiteAlpha.500" color="white" _hover={{ bg: 'whiteAlpha.200' }}>Exporting / OEM? →</Button>
         </Stack>
       </Box>
