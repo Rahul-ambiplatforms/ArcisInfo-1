@@ -142,6 +142,38 @@ export default async function BlogPostPage(props) {
     inLanguage: 'en-IN',
   };
 
+  // Robustness fix (2026-09-16) for the CMS-authored schemas (FAQPage, HowTo, etc.
+  // stored in blog.content.schemas).
+  //
+  // To be clear about what this does NOT fix: these were already present in the
+  // server HTML. BlogsContents.js carries 'use client', but it is a plain static
+  // import with no ssr:false, so Next.js still server-renders it, and its
+  // useState(initialBlog) seed means `blog` is populated during that server pass.
+  // Crawlers — including non-JS ones — were already seeing this schema.
+  //
+  // What was actually wrong: the old call was an unguarded
+  // blog.content.schemas.map(...). Any post where the CMS omits `schemas` (or
+  // returns null) throws during render and takes the whole page down. It also
+  // emitted schemaData verbatim, so a single malformed entry from the CMS shipped
+  // broken JSON-LD to search engines.
+  //
+  // So this moves the render server-side where the data already lives, guards the
+  // array, and validates each entry as JSON — anything unparseable is skipped
+  // rather than emitted. Emitting malformed JSON-LD is worse than emitting none.
+  const cmsSchemas = (
+    Array.isArray(initialBlog?.content?.schemas) ? initialBlog.content.schemas : []
+  )
+    .map((item) => item?.content?.schemaData)
+    .filter((raw) => {
+      if (typeof raw !== 'string' || !raw.trim()) return false;
+      try {
+        JSON.parse(raw);
+        return true;
+      } catch {
+        return false;
+      }
+    });
+
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -177,6 +209,13 @@ export default async function BlogPostPage(props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      {cmsSchemas.map((raw, index) => (
+        <script
+          key={`cms-schema-${index}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: raw }}
+        />
+      ))}
       {/* SEO audit fix (2026-09-07, checklist item #59): visible trail
           matching the BreadcrumbList schema above — was JSON-LD-only before. */}
       <Breadcrumbs
