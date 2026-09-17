@@ -28,6 +28,18 @@ const VMUKTI_BLOG_SLUGS = new Set([
   'logistics-video-analytics',
 ]);
 
+// Slugs the CMS list endpoint reports as published, but whose detail endpoint
+// (/blogs/urlWords/<slug>) returns nothing — so app/blog/[slug]/page.js calls
+// notFound() and the URL 404s. Listing a dead URL in the sitemap is a direct
+// instruction to crawl something broken, which costs crawl trust across the
+// whole domain, so they are filtered out here until the CMS record is fixed.
+// A 301 in next.config.js also catches anyone who reaches the URL directly.
+// Re-check periodically: once the CMS record is restored or deleted properly,
+// the corresponding entry here should be removed.
+const DEAD_BLOG_SLUGS = new Set([
+  'reduce-cctv-callbacks',
+]);
+
 // Hand-maintained routes only — anything driven by the SEO dataset, the
 // support data or the blog CMS is generated below.
 // Deliberately excluded: /admin/*, /thank-you, /blog-thank-you (no index
@@ -181,6 +193,7 @@ async function getBlogEntries(now) {
           b.status === 'published' &&
           b.metadata?.urlWords &&
           !VMUKTI_BLOG_SLUGS.has(b.metadata.urlWords) &&
+          !DEAD_BLOG_SLUGS.has(b.metadata.urlWords) &&
           !b.content?.title?.toLowerCase().includes('vmukti'),
       )
       .map((b) => ({
