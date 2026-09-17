@@ -15,12 +15,15 @@ import seoPageDataExpansion5 from './seoPageDataExpansion5';
 import seoPageDataGujaratCities from './seoPageDataGujaratCities';
 import seoPageDataMaharashtraCities from './seoPageDataMaharashtraCities';
 import seoPageDataTier2Cities from './seoPageDataTier2Cities';
+import seoPageDataWifi from './seoPageDataWifi';
+import seoPageData4G from './seoPageData4G';
 
 const allSeoData = {
   ...seoPageData, ...seoPageDataExpansion, ...seoPageDataGeo, ...seoPageDataCompare,
   ...seoPageDataCompliance, ...seoPageDataExpansion2, ...seoPageDataGeoIntl,
   ...seoPageDataExpansion3, ...seoPageDataExpansion4, ...seoPageDataExpansion5,
   ...seoPageDataGujaratCities, ...seoPageDataMaharashtraCities, ...seoPageDataTier2Cities,
+  ...seoPageDataWifi, ...seoPageData4G,
 };
 
 // Same multi-strategy lookup the client used before — now run on the server.
