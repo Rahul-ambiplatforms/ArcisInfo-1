@@ -14,7 +14,7 @@ export const homeSEO = {
         "Looking for a reliable AI CCTV camera provider? ArcisAI is a top CCTV brand in India offering AI-driven surveillance to protect your space, anytime, anywhere.",
       url: "https://arcisai.io/",
       datePublished: "2024-07-24",
-      dateModified: "2025-05-05",
+      dateModified: "2026-09-16",
       // SEO audit fix (2026-09-07, checklist item #41): this used to be a full
       // inline Organization object with its own name/logo/address/foundingDate
       // that conflicted with the canonical Organization schema in app/layout.js
@@ -24,11 +24,17 @@ export const homeSEO = {
       // Organization by its @id instead of duplicating (and drifting from) its
       // fields.
       publisher: { "@id": "https://arcisai.io/#organization" },
+      // SEO fix (2026-09-16): url was the literal placeholder string "Image Link",
+      // which is not a valid URL — this made the ImageObject unusable to every
+      // structured-data parser since the homepage launched. Now points at the same
+      // asset already used for ogimage above. Dimensions also corrected: the
+      // declared 174x123 did not match the real file (1920x1247); mismatched
+      // width/height on an ImageObject is itself a validation warning.
       primaryImageOfPage: {
         "@type": "ImageObject",
-        url: "Image Link",
-        width: 174,
-        height: 123,
+        url: "https://arcisai.io/images/home_hero_1.webp",
+        width: 1920,
+        height: 1247,
         caption: "CCTV Camera Brand | AI Security Camera Company",
       },
       inLanguage: "en-US",
