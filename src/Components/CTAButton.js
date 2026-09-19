@@ -12,6 +12,10 @@ const CTAButton = ({
   d_image,
   m_image,
   m_Image,
+    d_imageWidth,
+    d_imageHeight,
+    m_imageWidth,
+    m_imageHeight,
   data,
   buttonText,
   link,
@@ -80,6 +84,8 @@ const CTAButton = ({
         <Image loading="lazy"
           src={d_image}
           alt="Background"
+            width={d_imageWidth}
+            height={d_imageHeight}
           w="100%"
           h="auto"
           objectFit="cover"
@@ -90,6 +96,8 @@ const CTAButton = ({
         <Image loading="lazy"
           src={mobileImage}
           alt="Background Mobile"
+          width={m_imageWidth}
+          height={m_imageHeight}
           w="100%"
           h="auto"
           objectFit="cover"
