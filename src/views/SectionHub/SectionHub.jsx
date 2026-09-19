@@ -85,4 +85,4 @@ export default function SectionHub({ eyebrow, title, description, links = [], ba
     </Container>
     </Box>
     );
-}</Box>
+}
