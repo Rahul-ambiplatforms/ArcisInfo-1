@@ -100,6 +100,16 @@ const STATIC_ROUTES = [
   ['/documents', 0.6, 'monthly'],
   ['/firmware', 0.6, 'monthly'],
 
+    // Section hub pages (SEO audit fix, 2026-09-19): /industry, /resources,
+    // /compare and /state previously had no page at their own root — only
+    // their [slug] child route existed — so all four 404'd live and couldn't
+    // be submitted. Now that app/industry/page.js, app/resources/page.js,
+    // app/compare/page.js and app/state/page.js exist, list them here too.
+    ['/industry', 0.7, 'weekly'],
+    ['/resources', 0.7, 'weekly'],
+    ['/compare', 0.7, 'weekly'],
+    ['/state', 0.6, 'monthly'],
+
   // Tools
   ['/tools', 0.7, 'monthly'],
   ['/tools/cctv-storage-calculator', 0.7, 'monthly'],
