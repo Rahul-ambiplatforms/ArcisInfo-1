@@ -133,7 +133,7 @@ const SurveillanceStack = ({ data }) => {
             <Box overflow="hidden">
               <Image loading="lazy"
                 src={activeItem.image}
-                alt={activeItem.heading}
+                alt={activeItem.heading} width={activeItem.width} height={activeItem.height}
                 w="100%"
                 h="auto"
                 objectFit="contain"
