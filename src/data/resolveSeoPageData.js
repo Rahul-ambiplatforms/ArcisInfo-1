@@ -123,8 +123,15 @@ function linksForCategory(category) {
         // /state/cctv-cameras-assam, which duplicates /cctv-cameras-assam.
         !isTopLevelLocationKey(k),
     )
-    .map(([k, v]) => ({ slug: k, title: (v.heroTitle || v.title) || k }));
-}
+       .map(([k, v]) => ({
+               slug: k,
+               title: (v.heroTitle || v.title) || k,
+               // Added 2026-09-19 alongside the section hub pages (app/industry/page.js
+               // etc.) — those render a real card grid, not just a hidden link list, so
+               // callers need a description to show under each title. `title`/`slug`
+               // stay first for existing callers that only destructure those two.
+               description: v.metaDescription || v.heroDescription || '',
+       }));
 
 // Server-only: every CCTV city / industry landing-page link, for building a
 // crawlable internal-link index (fixes the orphan-page crawlability issue).
