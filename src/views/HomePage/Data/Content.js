@@ -532,6 +532,8 @@ export const homeContent = {
         description:
           "Get instant on-camera intelligence with real-time detections and alerts right at the device.",
         image: "/images/home_surveillance_1.webp",
+                width: 824,
+                height: 628,
         link: "/solution/edge-ai",
       },
       {
@@ -539,6 +541,8 @@ export const homeContent = {
         description:
           "Get deeper insights with powerful cloud analytics that scale as your video data grows.",
         image: "/images/home_surveillance_1.webp",
+                width: 824,
+                height: 628,
         link: "/solution/cloud-ai",
       },
       {
@@ -546,6 +550,8 @@ export const homeContent = {
         description:
           "Get answers instantly—just ask your cameras anything and let AI explain what’s happening.",
         image: "/images/home_surveillance_1.webp",
+                width: 824,
+                height: 628,
         link: "/solution/generative-ai",
       },
       {
@@ -553,6 +559,8 @@ export const homeContent = {
         description:
           "Get complete control from anywhere with a secure, all-in-one cloud video management system and Mobile App.",
         image: "/images/home_surveillance_1.webp",
+                width: 824,
+                height: 628,
         link: "/cloud-vms",
       },
     ],
@@ -603,6 +611,10 @@ export const homeContent = {
     buttonText: "Talk To Our Expert",
     d_image: "/images/home_cta_1.webp",
     m_Image: "/images/home_cta_mobile_1.webp",
+          d_imageWidth: 6052,
+          d_imageHeight: 2676,
+          m_imageWidth: 824,
+          m_imageHeight: 1446,
     link: "/contact-us",
     textPosition: {
       desktop: { top: "50%", left: "5%" },
