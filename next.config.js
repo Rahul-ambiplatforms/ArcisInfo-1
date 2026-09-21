@@ -8,6 +8,29 @@ const nextConfig = {
   // Reduces parse/compile work during hydration → lower INP. No code, UI, or
   // SEO change.
   experimental: {
+    // Fixes the /BIS-ER-certification redirect loop (2026-09-21).
+    //
+    // App Router file-system routes are already case-sensitive, but custom
+    // redirects/rewrites/headers are NOT — Next compiles their `source` with
+    // path-to-regexp's `i` flag unless this is set. That meant the rule
+    // `/bis-er-certification -> /BIS-ER-certification` also matched the
+    // canonical mixed-case URL, so /BIS-ER-certification 301'd to itself
+    // forever: an indexed, sitemap-listed page stuck in an infinite redirect.
+    //
+    // There is no per-rule case option (a custom pattern in `source` is still
+    // compiled case-insensitively), so this is the only way to keep that
+    // legacy lowercase redirect working instead of deleting it. It aligns
+    // custom-route matching with the file-system routing this app already
+    // has, and the blast radius was checked: /BIS-ER-certification is the only
+    // mixed-case URL in the sitemap, and the two uppercase redirect sources
+    // (/images/productType.webp, /images/GPTStartedView.webp) are referenced
+    // only at their exact case, so both still match.
+    //
+    // NOTE: this key is experimental. Re-verify it on any Next.js major
+    // upgrade; if it is ever removed, delete the /bis-er-certification
+    // redirect instead — the lowercase URL 404s on its own, which already
+    // prevents the duplicate-content case that rule was written for.
+    caseSensitiveRoutes: true,
     optimizePackageImports: [
       "react-icons",
       "react-icons/fa",
@@ -251,6 +274,26 @@ const nextConfig = {
         permanent: true,
         statusCode: 301,
       },
+      // Numeric compliance URLs (SEO fix, 2026-09-21). seoPageDataCompliance.js
+      // exports an ARRAY, and spreading an array into an object literal assigns
+      // its INDICES as keys — so /0 through /9 became live, indexable URLs while
+      // the real written slugs 404'd. src/data/resolveSeoPageData.js now re-keys
+      // that file by each entry's own `slug`, which removes the numeric keys.
+      // These ten redirects are the other half of that fix: /0../9 are indexed
+      // and were listed in the production sitemap, so they must not simply start
+      // 404ing. The mapping is the array's own order, which is what produced the
+      // index in the first place. Once Google has recrawled and these show no
+      // impressions, they can be retired.
+      { source: "/0", destination: "/ndaa-compliant-ai-security-cameras", permanent: true, statusCode: 301 },
+      { source: "/1", destination: "/saudi-arabia-pdpl-compliant-cctv-cameras", permanent: true, statusCode: 301 },
+      { source: "/2", destination: "/uae-data-protection-compliant-security-cameras", permanent: true, statusCode: 301 },
+      { source: "/3", destination: "/gdpr-compliant-cctv-camera-systems", permanent: true, statusCode: 301 },
+      { source: "/4", destination: "/eu-ai-act-compliant-ai-cameras", permanent: true, statusCode: 301 },
+      { source: "/5", destination: "/non-chinese-security-camera-alternatives", permanent: true, statusCode: 301 },
+      { source: "/6", destination: "/gcc-government-approved-security-cameras", permanent: true, statusCode: 301 },
+      { source: "/7", destination: "/taa-compliant-security-cameras", permanent: true, statusCode: 301 },
+      { source: "/8", destination: "/india-bis-certified-cctv-cameras", permanent: true, statusCode: 301 },
+      { source: "/9", destination: "/critical-infrastructure-security-cameras", permanent: true, statusCode: 301 },
       {
         source: "/solutions",
         destination: "/solution/edge-ai",

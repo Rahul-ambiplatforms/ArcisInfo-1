@@ -143,6 +143,7 @@ function linksForCategory(category) {
                // stay first for existing callers that only destructure those two.
                description: v.metaDescription || v.heroDescription || '',
        }));
+}
 
 // Server-only: every CCTV city / industry landing-page link, for building a
 // crawlable internal-link index (fixes the orphan-page crawlability issue).

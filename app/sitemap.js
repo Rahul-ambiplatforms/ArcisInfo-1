@@ -28,16 +28,25 @@ const VMUKTI_BLOG_SLUGS = new Set([
   'logistics-video-analytics',
 ]);
 
-// Slugs the CMS list endpoint reports as published, but whose detail endpoint
-// (/blogs/urlWords/<slug>) returns nothing — so app/blog/[slug]/page.js calls
-// notFound() and the URL 404s. Listing a dead URL in the sitemap is a direct
-// instruction to crawl something broken, which costs crawl trust across the
-// whole domain, so they are filtered out here until the CMS record is fixed.
-// A 301 in next.config.js also catches anyone who reaches the URL directly.
-// Re-check periodically: once the CMS record is restored or deleted properly,
-// the corresponding entry here should be removed.
+// Blog slugs the CMS list endpoint reports as published but which must not be
+// listed here, because the URL does not answer with a 200:
+//
+//   - reduce-cctv-callbacks — the detail endpoint (/blogs/urlWords/<slug>)
+//     returns nothing, so app/blog/[slug]/page.js calls notFound() and the URL
+//     404s. Remove this entry once the CMS record is restored or retired.
+//   - best-ai-cctv-camera-for-business — a live post that next.config.js now
+//     301s into best-ai-cctv-camera-office-business-security-india-2026 to stop
+//     the two splitting ranking signal. The destination is listed by the CMS in
+//     its own right, so dropping the source loses nothing.
+//
+// Either way, listing a URL that 404s or redirects is an instruction to crawl
+// something that is not the canonical page, which costs crawl trust across the
+// whole domain and shows up in Search Console as "Page with redirect" /
+// "Not found (404)". A 301 in next.config.js still catches anyone who reaches
+// these URLs from an old link or an already-indexed result.
 const DEAD_BLOG_SLUGS = new Set([
   'reduce-cctv-callbacks',
+  'best-ai-cctv-camera-for-business',
 ]);
 
 // Hand-maintained routes only — anything driven by the SEO dataset, the
@@ -197,18 +206,25 @@ async function getBlogEntries(now) {
     const json = await res.json();
     if (json?.status !== 'success' || !Array.isArray(json.data)) return [];
 
+    // CMS urlWords values are author-entered and are not guaranteed to be
+    // trimmed — "reduce-cctv-callbacks " ships with a trailing space. Left as
+    // is that breaks two things at once: the slug misses every Set lookup
+    // below (so the exclusion lists silently do nothing), and the emitted
+    // <loc> carries a stray space, which is not the URL the route actually
+    // serves. Normalise once here so the filters and the emitted URL agree.
     return json.data
+      .map((b) => ({ blog: b, slug: (b.metadata?.urlWords || '').trim() }))
       .filter(
-        (b) =>
-          b.status === 'published' &&
-          b.metadata?.urlWords &&
-          !VMUKTI_BLOG_SLUGS.has(b.metadata.urlWords) &&
-          !DEAD_BLOG_SLUGS.has(b.metadata.urlWords) &&
-          !b.content?.title?.toLowerCase().includes('vmukti'),
+        ({ blog, slug }) =>
+          blog.status === 'published' &&
+          slug &&
+          !VMUKTI_BLOG_SLUGS.has(slug) &&
+          !DEAD_BLOG_SLUGS.has(slug) &&
+          !blog.content?.title?.toLowerCase().includes('vmukti'),
       )
-      .map((b) => ({
-        url: `${SITE}/blog/${b.metadata.urlWords}`,
-        lastModified: b.updatedAt ? new Date(b.updatedAt) : now,
+      .map(({ blog, slug }) => ({
+        url: `${SITE}/blog/${slug}`,
+        lastModified: blog.updatedAt ? new Date(blog.updatedAt) : now,
         changeFrequency: 'monthly',
         priority: 0.7,
       }));
