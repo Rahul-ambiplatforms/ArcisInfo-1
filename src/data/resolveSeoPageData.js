@@ -18,9 +18,20 @@ import seoPageDataTier2Cities from './seoPageDataTier2Cities';
 import seoPageDataWifi from './seoPageDataWifi';
 import seoPageData4G from './seoPageData4G';
 
+// seoPageDataCompliance is the one sibling file that exports an ARRAY, not a
+// slug-keyed object (SEO fix, 2026-09-21). Spreading an array into an object
+// literal assigns its INDICES as keys ("0".."9"), not each entry's own
+// `slug` field -- that's why /0 through /9 were live, indexable URLs instead
+// of the real, written slugs (e.g. /ndaa-compliant-ai-security-cameras),
+// which 404'd. Re-key it by .slug here so it behaves like every other
+// seoPageData* file without having to change that file's own shape. The old
+// numeric paths now 301 to these slugs (see next.config.js).
+const seoPageDataComplianceKeyed = Object.fromEntries(
+  seoPageDataCompliance.map((entry) => [entry.slug, entry]),
+  );
 const allSeoData = {
   ...seoPageData, ...seoPageDataExpansion, ...seoPageDataGeo, ...seoPageDataCompare,
-  ...seoPageDataCompliance, ...seoPageDataExpansion2, ...seoPageDataGeoIntl,
+  ...seoPageDataComplianceKeyed, ...seoPageDataExpansion2, ...seoPageDataGeoIntl,
   ...seoPageDataExpansion3, ...seoPageDataExpansion4, ...seoPageDataExpansion5,
   ...seoPageDataGujaratCities, ...seoPageDataMaharashtraCities, ...seoPageDataTier2Cities,
   ...seoPageDataWifi, ...seoPageData4G,
