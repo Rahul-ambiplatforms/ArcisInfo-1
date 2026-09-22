@@ -241,6 +241,59 @@ const nextConfig = {
         permanent: true,
         statusCode: 301,
       },
+      // GSC "Not found (404)" / "Soft 404" cleanup (2026-09-22): these URLs
+      // are still reachable from old links or already-indexed results but
+      // have no current page and no existing redirect rule. Mapped to the
+      // closest live equivalent; sent 301 rather than left as a silent 404.
+      {
+        source: "/solution/gen-ai-cctv-camera",
+        destination: "/solution/generative-ai",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/blog/made-in-india-cctv-brand-ai-cctv-comparison-india-2026",
+        destination: "/compare/made-in-india-cctv-brand",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/blog/best-ai-cctv-brand-india-ai-cctv-comparison-2026",
+        destination: "/compare/best-ai-cctv-brand-india",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/blog/ndaa-compliant-cctv-india-ai-cctv-comparison-india-2026",
+        destination: "/compare/ndaa-compliant-cctv-india",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        // No combined NDAA-vs-Dahua page exists; nearest live equivalent.
+        source: "/blog/ndaa-compliant-cctv-india-vs-dahua-ai-camera-comparison-2026",
+        destination: "/compare/ndaa-compliant-cctv-india",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/blog/edge-ai-vs-cloud-video-surveillance",
+        destination: "/blog/edge-ai-vs-cloud-ai-video-surveillance-enterprise-buyers-guide-2026",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/blog/logistics-video-analytics",
+        destination: "/cctv-cameras-for-logistics-warehousing",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/book-a-demo",
+        destination: "/contact-us",
+        permanent: true,
+        statusCode: 301,
+      },
       // Keyword cannibalisation: /blog/best-ai-cctv-camera-for-business and
       // /blog/best-ai-cctv-camera-office-business-security-india-2026 both target
       // business/office intent. Consolidating the generic one into the specific
