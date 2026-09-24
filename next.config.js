@@ -8,6 +8,29 @@ const nextConfig = {
   // Reduces parse/compile work during hydration → lower INP. No code, UI, or
   // SEO change.
   experimental: {
+    // Fixes the /BIS-ER-certification redirect loop (2026-09-21).
+    //
+    // App Router file-system routes are already case-sensitive, but custom
+    // redirects/rewrites/headers are NOT — Next compiles their `source` with
+    // path-to-regexp's `i` flag unless this is set. That meant the rule
+    // `/bis-er-certification -> /BIS-ER-certification` also matched the
+    // canonical mixed-case URL, so /BIS-ER-certification 301'd to itself
+    // forever: an indexed, sitemap-listed page stuck in an infinite redirect.
+    //
+    // There is no per-rule case option (a custom pattern in `source` is still
+    // compiled case-insensitively), so this is the only way to keep that
+    // legacy lowercase redirect working instead of deleting it. It aligns
+    // custom-route matching with the file-system routing this app already
+    // has, and the blast radius was checked: /BIS-ER-certification is the only
+    // mixed-case URL in the sitemap, and the two uppercase redirect sources
+    // (/images/productType.webp, /images/GPTStartedView.webp) are referenced
+    // only at their exact case, so both still match.
+    //
+    // NOTE: this key is experimental. Re-verify it on any Next.js major
+    // upgrade; if it is ever removed, delete the /bis-er-certification
+    // redirect instead — the lowercase URL 404s on its own, which already
+    // prevents the duplicate-content case that rule was written for.
+    caseSensitiveRoutes: true,
     optimizePackageImports: [
       "react-icons",
       "react-icons/fa",
