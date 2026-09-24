@@ -187,6 +187,41 @@ export function getStateLinks() {
   return linksForCategory('state');
 }
 
+// Server-only: the WiFi CCTV cluster's own cross-link set (hub + city pages +
+// the buying guide), used in place of getCctvLocationLinks() on WiFi pages so
+// this small, deliberately-scoped cluster links to itself first rather than
+// only to the unrelated city/industry index. Added alongside the buying guide
+// (ArcisAI Accelerated WiFi CCTV SEO & GEO Sprint, Day 6 — internal linking).
+const WIFI_CLUSTER_KEYS = [
+  'wifi-cctv-camera',
+  'wifi-cctv-camera-ahmedabad',
+  'wifi-cctv-camera-mumbai',
+  'wifi-cctv-camera-pune',
+  'wifi-cctv-camera-surat',
+];
+
+export function getWifiLinks() {
+  const clusterLinks = WIFI_CLUSTER_KEYS
+    .filter((k) => allSeoData[k])
+    .map((k) => ({
+      slug: k,
+      title: allSeoData[k].heroTitle || allSeoData[k].title || k,
+    }));
+  const guide = allSeoData['wifi-cctv-camera-buying-guide'];
+  if (guide) {
+    clusterLinks.push({
+      slug: 'resources/wifi-cctv-camera-buying-guide',
+      title: guide.heroTitle || guide.title,
+    });
+  }
+  return clusterLinks;
+}
+
+/** True if `key` belongs to the WiFi cluster (hub or city page). */
+export function isWifiClusterKey(key) {
+  return WIFI_CLUSTER_KEYS.includes(key);
+}
+
 // Slugs that must never be handed to the /[slug] catch-all's
 // generateStaticParams: Next.js gives these static routes priority, so
 // prerendering the same path from the catch-all is a build-time conflict.
@@ -244,4 +279,76 @@ export function getAllSeoPageEntries() {
       path: canonicalPathForKey(k),
       category: (v && v.category) || null,
     }));
+}
+
+// Server-only: orphan-page fix (SEO audit, Day 5 — internal linking). These
+// 46 keys are real, published, sitemap-listed pages that no other page on the
+// site links to — no hub page, no relatedLinks block, nothing but sitemap
+// discovery. They round-trip through the same /[slug] catch-all as the city
+// cluster but don't match getCctvLocationLinks()'s `cctv-cameras-`/
+// `ai-cctv-cameras-` prefix filter and have no dedicated category (mostly
+// `geo`, `product`, or no category at all — compliance/certification pages,
+// "AI CCTV for <vertical>" geo-intent pages, ArcisGPT/ABD feature pages, and
+// a few /compare-style pages that were never added to getCompareLinks()).
+// Listed explicitly (not derived from a category filter) so this only ever
+// contains pages actually checked and confirmed real — adding a new orphan
+// later means adding it here on purpose, not silently by category match.
+const ORPHAN_CROSS_LINK_KEYS = [
+  'ai-cctv-for-schools-india',
+  'ai-cctv-for-hospitals-india',
+  'ai-cctv-for-factories-india',
+  'ai-cctv-for-warehouses-india',
+  'ai-cctv-for-retail-stores-india',
+  'ai-cctv-for-hotels-india',
+  'ai-cctv-for-apartments-india',
+  'ai-cctv-for-highways-india',
+  'ai-cctv-for-railway-stations-india',
+  'ai-cctv-for-temples-india',
+  'ai-cctv-for-smart-cities-india',
+  'ai-cctv-for-government-offices-india',
+  'best-stqc-certified-cctv-india',
+  'bis-certified-cctv-cameras-india',
+  'ndaa-compliant-ai-security-cameras',
+  'saudi-arabia-pdpl-compliant-cctv-cameras',
+  'uae-data-protection-compliant-security-cameras',
+  'gdpr-compliant-cctv-camera-systems',
+  'eu-ai-act-compliant-ai-cameras',
+  'non-chinese-security-camera-alternatives',
+  'gcc-government-approved-security-cameras',
+  'taa-compliant-security-cameras',
+  'india-bis-certified-cctv-cameras',
+  'critical-infrastructure-security-cameras',
+  'why-choose-non-chinese-soc-cctv',
+  'why-made-in-india-cctv',
+  'ai-vs-traditional-cctv',
+  'cctv-stqc-certification-guide',
+  'privacy-compliant-cctv-india',
+  'stqc-certified-ai-cctv-camera-india',
+  'arcisgpt-genai-surveillance-platform',
+  'arcisai-bridge-device-abd-upgrade-cctv',
+  'arcisai-vs-hikvision-alternative-india',
+  'arcisai-vs-cp-plus-comparison',
+  'make-in-india-ai-cctv-manufacturer',
+  'ai-cctv-smart-city-iccc-india',
+  'ai-cctv-hospital-healthcare-surveillance',
+  'ai-cctv-banking-atm-security',
+  'ai-cctv-factory-manufacturing-ppe',
+  'natural-language-video-search-surveillance',
+  'replace-chinese-cctv-india-alternative',
+  'ai-surveillance-oil-gas-critical-infrastructure',
+  'best-ai-cctv-camera-india',
+  'stqc-compliance-guide-cctv',
+  'ai-surveillance-retail-footfall-analytics',
+  '4g-cctv-camera',
+];
+
+export function getOrphanCrossLinks(excludeKey) {
+  return ORPHAN_CROSS_LINK_KEYS.filter((k) => allSeoData[k] && k !== excludeKey).map((k) => ({
+    slug: k,
+    title: allSeoData[k].heroTitle || allSeoData[k].title || k,
+  }));
+}
+
+export function isOrphanClusterKey(key) {
+  return ORPHAN_CROSS_LINK_KEYS.includes(key);
 }

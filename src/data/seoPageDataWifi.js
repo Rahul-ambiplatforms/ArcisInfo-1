@@ -346,6 +346,119 @@ const seoPageDataWifi = {
       secondaryButtonLink: "/become-a-distributor?source=wifi-surat",
     },
   },
+
+  // ── SUPPORTING GUIDE ──────────────────────────────────────────────────────
+  // Added per the ArcisAI Accelerated WiFi CCTV SEO & GEO Sprint (Day 6):
+  // a single buying guide covering WiFi-vs-wired decision factors, linked
+  // from and to the hub + city pages via getWifiLinks() (resolveSeoPageData.js).
+  // Every spec claim here reuses only what WIFI_SPECS / the hub entry above
+  // already state — nothing new is asserted about range, battery, or pricing
+  // that isn't already published, per the standing rule against inventing
+  // data. Network/storage guidance (bandwidth, retention math) is general
+  // engineering fact, not an ArcisAI-specific claim.
+  "wifi-cctv-camera-buying-guide": {
+    slug: "wifi-cctv-camera-buying-guide",
+    title: "WiFi CCTV Camera Buying Guide 2026 | WiFi vs Wired | ArcisAI",
+    metaDescription:
+      "How to choose a WiFi CCTV camera in India: WiFi vs PoE vs 4G, range and bandwidth, storage options, indoor/outdoor selection, AI detection, and a BIS-ER certification checklist.",
+    keywords: [
+      "wifi cctv camera buying guide", "wifi vs poe cctv", "wifi vs wired cctv camera",
+      "wifi vs 4g cctv camera", "how to choose wifi cctv camera",
+      "wifi cctv camera checklist india", "wireless cctv camera guide",
+    ],
+    heroTitle: "WiFi CCTV Camera Buying Guide",
+    heroSubtitle: "WiFi vs PoE vs 4G, storage, range and a certification checklist",
+    heroDescription:
+      "A practical guide to choosing between WiFi, PoE and 4G CCTV cameras, sizing storage and bandwidth correctly, and confirming certification before you buy — written for Indian buyers evaluating options for a home, shop, office or industrial site.",
+    category: "resources",
+    sections: [
+      {
+        title: "WiFi vs PoE vs 4G — which connection type fits your site",
+        content:
+          "The three connection types solve different problems, and the right choice depends on what already exists at the site, not on which is 'better' in the abstract. WiFi cameras connect over an existing 2.4GHz network — no cable run, so they suit finished interiors, rented premises and sites where drilling or trenching is unwelcome or impossible. PoE (Power over Ethernet) cameras run a single cable that carries both power and data — more reliable for permanent, high-camera-count installations such as a new-build warehouse or a large office where cabling is planned in from the start, because a wired link doesn't compete with other WiFi traffic and doesn't depend on router range. 4G cameras use a SIM card and need no local network infrastructure at all — the right choice for a site with no broadband, or a temporary location such as a construction site or event.",
+        features: [
+          "WiFi: fastest to install, needs an existing 2.4GHz network in range",
+          "PoE: most reliable for permanent, multi-camera, new-build installations",
+          "4G: works with no local network at all, at the cost of a SIM data plan",
+          "Many sites mix connection types by area rather than standardising on one",
+        ],
+      },
+      {
+        title: "Range, bandwidth and storage — getting the sizing right",
+        content:
+          "A WiFi camera's usable range depends on walls, interference from other 2.4GHz devices, and the router's own coverage — the general rule is that if a phone gets a full-strength WiFi signal at the mounting point, the camera will connect reliably; if the signal is marginal, either move the router, add an extender, or use a wired connection instead. On bandwidth: a 3MP stream compressed in H.264/H.265 uses noticeably less data than raw video, but router capacity still matters once several cameras share one network — check how many camera connections your router and internet plan can realistically support before ordering more units than the network can carry. On storage: onboard microSD recording keeps footage local to the camera and independent of network uptime, while cloud storage adds an ongoing subscription cost but survives a stolen or damaged camera. Retention length is a simple multiplication — resolution and frame rate determine footage size per hour, multiplied by how many days you need to keep — so confirm the card capacity or cloud plan against your actual retention requirement rather than assuming a default is enough.",
+        features: [
+          "Check phone WiFi signal strength at the mount point before buying",
+          "Confirm how many simultaneous camera connections your router/plan supports",
+          "microSD storage keeps footage local; cloud storage survives camera theft or damage",
+          "Size storage against your actual retention requirement, not a default assumption",
+        ],
+      },
+      {
+        title: "Indoor vs outdoor selection",
+        content:
+          "An outdoor-rated camera needs a weather-resistance rating (commonly IP66 or better) and protection against electrical surges from lightning strikes on exposed cabling or antennas — an indoor-only camera installed outdoors will fail faster from moisture and temperature cycling even if it initially appears to work. Night vision range matters more outdoors, where there is no ambient light source after dark; confirm the IR range in metres against the actual distance you need to cover, not just the presence of 'night vision' as a feature. For India specifically, an operating temperature range that covers summer heat (camera bodies mounted outdoors run hotter than ambient air) is worth checking rather than assuming.",
+        features: [
+          "Outdoor: confirm an IP-rating and surge/lightning protection, not just 'weatherproof'",
+          "Confirm IR night-vision range in metres against your actual coverage distance",
+          "Check the stated operating temperature range covers local summer conditions",
+        ],
+      },
+      {
+        title: "AI detection features worth checking",
+        content:
+          "Basic motion detection alerts on any movement, including trees, shadows and passing vehicles, which produces enough false alerts that most people eventually mute notifications entirely. Human detection and other AI-based event filters are trained to distinguish a person (or vehicle, depending on the model) from other motion, cutting false alerts substantially. When comparing cameras, ask specifically what the AI detection distinguishes — 'AI' on a spec sheet can mean anything from real on-device human detection to a marketing label on ordinary motion sensing — and, where possible, ask for a demonstration rather than relying on the spec sheet alone.",
+        features: [
+          "Plain motion detection alerts on any movement, including irrelevant motion",
+          "Human/vehicle detection filters out most false alerts from plain motion",
+          "Ask what the 'AI' on a spec sheet actually distinguishes before buying",
+          "Ask for a live demonstration rather than relying on the spec sheet alone",
+        ],
+      },
+      {
+        title: "Certification checklist before you buy",
+        content:
+          "Since 1 April 2026, CCTV sold in India must meet BIS Essential Requirements (BIS-ER) — this is a legal registration, not an optional badge, and it is worth confirming before purchase rather than after. A camera's BIS-ER registration number can be checked independently on the BIS register; do not accept a supplier's claim without a checkable number. Separately, if the product includes a Video Management System (VMS) or app, ask whether that software itself carries a distinct certification (such as STQC) — hardware and software certifications are not the same thing, and a certified camera does not automatically mean the software behind it has been evaluated.",
+        features: [
+          "BIS-ER registration is a legal requirement for CCTV sold in India since 1 April 2026",
+          "Verify the registration number on the BIS register — don't accept a claim on trust",
+          "Ask whether the VMS/app software carries its own separate certification",
+          "Use a free certificate verifier tool where the supplier offers one",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Should I choose WiFi, PoE, or a 4G CCTV camera?",
+        a: "It depends on the site, not on which is inherently better. WiFi suits finished interiors and rented premises where you cannot run cable. PoE suits permanent, multi-camera, new-build installations where reliability matters more than installation speed. 4G suits sites with no local broadband at all. Many installations mix all three by area.",
+      },
+      {
+        q: "How much WiFi range do I actually need?",
+        a: "If a phone gets a strong WiFi signal at the exact spot you plan to mount the camera, the camera will typically connect reliably. A marginal phone signal at that spot usually means a marginal camera connection too — move the router, add an extender, or use a wired camera at that location instead.",
+      },
+      {
+        q: "Is microSD storage or cloud storage better for a WiFi CCTV camera?",
+        a: "microSD keeps footage local to the camera and doesn't depend on network uptime or an ongoing subscription, but it's lost if the camera itself is stolen or damaged. Cloud storage survives that scenario but adds a recurring cost. Many buyers use both — microSD as the primary record, cloud as backup for critical areas.",
+      },
+      {
+        q: "What does BIS-ER certification actually guarantee?",
+        a: "It confirms the camera has been registered against India's Essential Requirements for electronic products — a legal requirement for CCTV sold in India since 1 April 2026. It does not by itself certify the software (VMS/app) behind the camera, which is typically a separate certification such as STQC. Always verify the registration number independently rather than accepting a supplier's claim.",
+      },
+      {
+        q: "Does ArcisAI sell WiFi, PoE and 4G cameras?",
+        a: "Yes. ArcisAI's WiFi range covers finished interiors and rented premises; the wired S-Series and Eco-Series ranges suit permanent installations; and 4G variants are available for sites without reliable local broadband. Contact us with your site details for a specific recommendation.",
+      },
+    ],
+    cta: {
+      title: "Not sure which connection type fits your site?",
+      description:
+        "Tell us about the location and we'll recommend WiFi, PoE or 4G based on what's actually there — not a generic default.",
+      buttonText: "Request a Recommendation",
+      buttonLink: "/contact-us?resource=wifi-cctv-camera-buying-guide",
+      secondaryButtonText: "See WiFi Cameras",
+      secondaryButtonLink: "/wifi-cctv-camera",
+    },
+  },
 };
 
 export default seoPageDataWifi;

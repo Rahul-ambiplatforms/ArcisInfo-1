@@ -5,6 +5,10 @@ import {
   resolveSeoPageData,
   resolveSeoKey,
   getCctvLocationLinks,
+  getWifiLinks,
+  isWifiClusterKey,
+  getOrphanCrossLinks,
+  isOrphanClusterKey,
   getTopLevelSeoSlugs,
   sectionForKey,
 } from '@/src/data/resolveSeoPageData';
@@ -121,13 +125,30 @@ export default async function SlugPage(props) {
     areaServed: paramsOverride.city ? humanizeSlug(paramsOverride.city) : undefined,
   });
 
+  // Orphan-page fix (SEO audit, Day 5 — internal linking): 46 published,
+  // sitemap-listed pages under this same catch-all had zero real inbound
+  // links (sitemap discovery only) — see getOrphanCrossLinks() for the full
+  // rationale. Orphan pages now cross-link to their siblings plus the main
+  // city cluster (so they connect into the rest of the site, not just each
+  // other); every ordinary city-cluster page now also links out to the
+  // orphan cluster, so those 46 pages pick up real inbound links from the
+  // ~150 already-indexed city pages, not only from one another.
+  let relatedLinks;
+  if (isWifiClusterKey(resolvedKey)) {
+    relatedLinks = getWifiLinks();
+  } else if (isOrphanClusterKey(resolvedKey)) {
+    relatedLinks = [...getOrphanCrossLinks(resolvedKey), ...getCctvLocationLinks()];
+  } else {
+    relatedLinks = [...getCctvLocationLinks(), ...getOrphanCrossLinks()];
+  }
+
   return (
     <>
       <SeoPageSchemaScripts schemas={schemas} />
       <SEOLandingPage
         pageData={pageData}
         slugKey={resolveSeoKey(paramsOverride) || slug}
-        relatedLinks={getCctvLocationLinks()}
+        relatedLinks={relatedLinks}
       />
     </>
   );

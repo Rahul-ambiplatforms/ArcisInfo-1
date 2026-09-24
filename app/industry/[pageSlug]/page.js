@@ -1,7 +1,7 @@
 import SEOLandingPage from '@/src/views/SEOLandingPages/SEOLandingPage';
 import SeoPageSchemaScripts from '@/src/Components/SEO/SeoPageSchemaScripts';
 import { notFound } from 'next/navigation';
-import { resolveSeoPageData, resolveSeoKey, getIndustryLinks } from '@/src/data/resolveSeoPageData';
+import { resolveSeoPageData, resolveSeoKey, getIndustryLinks, getWifiLinks } from '@/src/data/resolveSeoPageData';
 import { buildSeoPageSchemas, buildSeoPageMetadata, humanizeSlug } from '@/src/data/buildSeoPageSchemas';
 
 // Prerender the industry landing pages so crawlers get static HTML instead of
@@ -49,9 +49,16 @@ export default async function IndustryPage(props) {
   // each one was an island with nothing pointing to related content. Reuses
   // the same crawlable relatedLinks block SEOLandingPage.jsx already renders,
   // just wired up here for the first time. Excludes the current page.
-  const relatedLinks = getIndustryLinks()
-    .filter((l) => l.slug !== params.pageSlug)
-    .map((l) => ({ ...l, slug: `industry/${l.slug}` }));
+  // manufacturing-surveillance and warehouse-logistics-cctv now recommend
+  // WiFi cameras for site offices/cabins in their copy (Day 2, WiFi sprint) —
+  // give that mention an actual crawlable link rather than plain text.
+  const WIFI_CROSS_LINK_KEYS = new Set(['manufacturing-surveillance', 'warehouse-logistics-cctv']);
+  const relatedLinks = [
+    ...getIndustryLinks()
+      .filter((l) => l.slug !== params.pageSlug)
+      .map((l) => ({ ...l, slug: `industry/${l.slug}` })),
+    ...(WIFI_CROSS_LINK_KEYS.has(params.pageSlug) ? getWifiLinks() : []),
+  ];
 
   return (
     <>

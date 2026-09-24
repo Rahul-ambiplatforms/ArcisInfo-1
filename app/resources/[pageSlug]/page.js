@@ -1,7 +1,7 @@
 import SEOLandingPage from '@/src/views/SEOLandingPages/SEOLandingPage';
 import SeoPageSchemaScripts from '@/src/Components/SEO/SeoPageSchemaScripts';
 import { notFound } from 'next/navigation';
-import { resolveSeoPageData, resolveSeoKey, getResourceLinks } from '@/src/data/resolveSeoPageData';
+import { resolveSeoPageData, resolveSeoKey, getResourceLinks, getWifiLinks } from '@/src/data/resolveSeoPageData';
 import { buildSeoPageSchemas, buildSeoPageMetadata, humanizeSlug } from '@/src/data/buildSeoPageSchemas';
 
 // Statically prerender the resource landing pages so crawlers get fast static
@@ -47,9 +47,15 @@ export default async function ResourcePage(props) {
   // SEO audit fix (2026-09-08, checklist item #51): cross-links sibling
   // /resources pages to each other via the same crawlable relatedLinks block
   // used by the /[slug] catch-all. Excludes the current page.
-  const relatedLinks = getResourceLinks()
-    .filter((l) => l.slug !== params.pageSlug)
-    .map((l) => ({ ...l, slug: `resources/${l.slug}` }));
+  // The WiFi buying guide additionally cross-links to the WiFi hub + city
+  // pages (its natural next step for a reader), on top of its sibling
+  // /resources/* links — see getWifiLinks() in resolveSeoPageData.js.
+  const relatedLinks = [
+    ...getResourceLinks()
+      .filter((l) => l.slug !== params.pageSlug)
+      .map((l) => ({ ...l, slug: `resources/${l.slug}` })),
+    ...(params.pageSlug === 'wifi-cctv-camera-buying-guide' ? getWifiLinks() : []),
+  ];
 
   return (
     <>

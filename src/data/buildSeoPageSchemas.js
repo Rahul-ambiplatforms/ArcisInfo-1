@@ -210,8 +210,34 @@ export function buildSeoPageSchemas({ pageData, path, areaServed } = {}) {
  */
 export function buildSeoPageMetadata({ pageData, path, fallbackTitle, fallbackDescription, ogImage } = {}) {
   const canonical = toAbsoluteUrl(path);
-  const title = stripBrandSuffix(pageData?.title || fallbackTitle || humanizeSlug(path));
+  const rawTitle = pageData?.title || fallbackTitle || humanizeSlug(path);
   const description = pageData?.metaDescription || fallbackDescription || '';
+
+  // Duplicate-brand-name fix (SEO audit, Day 4): the root layout applies a
+  // `"%s | ArcisAI"` title template to every page. ~111 of the ~242 SEO
+  // dataset entries author their OWN full title already ending in a brand
+  // descriptor — "... | ArcisAI Dealer & Installation", "... | ArcisAI
+  // Surveillance", "... | ArcisAI Campus Security" — because
+  // `stripBrandSuffix()` only strips a *bare* trailing "| ArcisAI", these
+  // titles kept their authored suffix and then got a second, redundant
+  // "| ArcisAI" appended by the template, e.g. final rendered:
+  // "Best AI CCTV Cameras in Delhi | ArcisAI Dealer & Installation | ArcisAI".
+  // Fix: when the authored title already mentions the brand anywhere, use
+  // Next's `title.absolute` so it renders exactly as authored (no template
+  // append, no copy change). Entries with no brand mention at all (~12, e.g.
+  // "Best AI CCTV Brand in India 2026") keep the old stripped-string
+  // behavior so they still pick up the template's "| ArcisAI" as before —
+  // unaffected by this fix.
+  const hasBrandMention = /ArcisAI/i.test(rawTitle);
+  const strippedTitle = stripBrandSuffix(rawTitle);
+  // finalTitleText is the literal rendered string, for OG/Twitter (which
+  // never receive the root template). The `title` field itself stays a
+  // plain string (not `{absolute}`) in the no-brand-mention case so Next's
+  // own "%s | ArcisAI" template still appends the brand exactly once, same
+  // as before this fix — only the already-branded titles switch to
+  // `{absolute}` to stop the double append.
+  const finalTitleText = hasBrandMention ? rawTitle.trim() : `${strippedTitle} | ArcisAI`;
+  const title = hasBrandMention ? { absolute: finalTitleText } : strippedTitle;
 
   return {
     title,
@@ -219,7 +245,10 @@ export function buildSeoPageMetadata({ pageData, path, fallbackTitle, fallbackDe
     ...(pageData?.keywords?.length ? { keywords: pageData.keywords } : {}),
     alternates: { canonical, languages: buildHreflang(canonical) },
     openGraph: {
-      title,
+      // OG/Twitter titles are never run through Next's title template, so
+      // they always take the plain final string (not the {absolute} object
+      // used above for the `title` field itself).
+      title: finalTitleText,
       description,
       url: canonical,
       type: 'website',
@@ -231,7 +260,7 @@ export function buildSeoPageMetadata({ pageData, path, fallbackTitle, fallbackDe
     // these ~250 SEO landing pages instead of the page's own title/description.
     twitter: {
       card: 'summary_large_image',
-      title,
+      title: finalTitleText,
       description,
       images: [ogImage || '/og/home.jpg'],
     },

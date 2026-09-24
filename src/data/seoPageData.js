@@ -1077,9 +1077,10 @@ const seoPageData = {
     category: "industry",
     sections: [
       {title: "Why Manufacturing Needs AI CCTV", stats: [{label:"AI Detections",value:"8+"},{label:"False Alarm Reduction",value:"95%"},{label:"Response Time",value:"<3 sec"},{label:"ROI Period",value:"6 months"}], features: ["Real-time AI threat detection on camera","Cloud VMS for multi-location monitoring","ArcisGPT: Natural language video search","STQC certified for government compliance","24/7 support with 99.9% uptime SLA"]},
-      {title: "Recommended Products", features: ["S-Series PTZ for large area coverage","S-Series Dome for indoor monitoring","ECO-Series for budget deployments","4G SIM cameras for remote sites","Bridge Device for legacy camera upgrade"]}
+      {title: "Recommended Products", features: ["S-Series PTZ for large area coverage","S-Series Dome for indoor monitoring","ECO-Series for budget deployments","WiFi cameras for offices, cabins and finished admin areas within the site","4G SIM cameras for remote sites","Bridge Device for legacy camera upgrade"]}
     ],
     faqs: [
+      {q:"Do you offer WiFi cameras for factory offices and admin areas?",a:"Yes. The main production floor is typically better served by PoE or S-Series wired cameras for reliability, but WiFi cameras cover offices, cabins and other finished areas where running cable is impractical. See our WiFi CCTV camera range."},
       {q:"What ArcisAI cameras are best for Manufacturing?",a:"We recommend S-Series for premium Manufacturing deployments and ECO-Series for cost-effective coverage. Our team provides free site surveys to recommend the optimal configuration."},
       {q:"Is ArcisAI STQC certified for Manufacturing?",a:"Yes, ArcisAI is STQC certified — mandatory for all government and regulated Manufacturing installations since April 2026."},
       {q:"How does ArcisGPT help Manufacturing?",a:"ArcisGPT lets you search video footage in plain English. Ask 'Show me all unauthorized entries after 9pm' and get instant results across all cameras."}
@@ -1097,9 +1098,10 @@ const seoPageData = {
     category: "industry",
     sections: [
       {title: "Why Warehouse & Logistics Needs AI CCTV", stats: [{label:"AI Detections",value:"8+"},{label:"False Alarm Reduction",value:"95%"},{label:"Response Time",value:"<3 sec"},{label:"ROI Period",value:"6 months"}], features: ["Real-time AI threat detection on camera","Cloud VMS for multi-location monitoring","ArcisGPT: Natural language video search","STQC certified for government compliance","24/7 support with 99.9% uptime SLA"]},
-      {title: "Recommended Products", features: ["S-Series PTZ for large area coverage","S-Series Dome for indoor monitoring","ECO-Series for budget deployments","4G SIM cameras for remote sites","Bridge Device for legacy camera upgrade"]}
+      {title: "Recommended Products", features: ["S-Series PTZ for large area coverage","S-Series Dome for indoor monitoring","ECO-Series for budget deployments","WiFi cameras for site offices and dispatch cabins where cabling is impractical","4G SIM cameras for remote sites","Bridge Device for legacy camera upgrade"]}
     ],
     faqs: [
+      {q:"Can WiFi cameras cover a warehouse office or dispatch cabin?",a:"Yes. WiFi cameras suit warehouse offices, dispatch cabins and other finished areas where cabling is impractical, while the main floor and dock doors are typically better served by wired or PoE cameras. See our WiFi CCTV camera range."},
       {q:"What ArcisAI cameras are best for Warehouse & Logistics?",a:"We recommend S-Series for premium Warehouse & Logistics deployments and ECO-Series for cost-effective coverage. Our team provides free site surveys to recommend the optimal configuration."},
       {q:"Is ArcisAI STQC certified for Warehouse & Logistics?",a:"Yes, ArcisAI is STQC certified — mandatory for all government and regulated Warehouse & Logistics installations since April 2026."},
       {q:"How does ArcisGPT help Warehouse & Logistics?",a:"ArcisGPT lets you search video footage in plain English. Ask 'Show me all unauthorized entries after 9pm' and get instant results across all cameras."}
