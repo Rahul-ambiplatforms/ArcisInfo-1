@@ -1,3 +1,4 @@
+import { notFound } from 'next/navigation';
 import Products from '@/src/views/Product/Products';
 import { humanizeSlug } from '@/src/data/buildSeoPageSchemas';
 import { buildHreflang } from '@/src/data/hreflang';
@@ -7,17 +8,36 @@ import { buildHreflang } from '@/src/data/hreflang';
 // stripping dashes from the URL segment.
 export const revalidate = 86400;
 
+// SEO audit fix (2026-09-28) — same soft-404 as the S-Series route; see the
+// note in app/s-series/[productId]/page.js. This set is exactly the three
+// ECO-Series keys getProductSEO() maps (bulletcctvcamera / ptzcctvcamera /
+// domecctvcamera) and exactly the three URLs in app/sitemap.js, so
+// /eco-series/ai-bullet-cctv-camera no longer serves the S-Series page under
+// an eco-series canonical.
+//
+// NOTE: /eco-series/ai-baby-bullet-camera appears in Footer.js but only inside
+// a commented-out JSX block, so nothing on the site links to it. It has no
+// entry in Data/Content.js and never has — it soft-404'd before this change
+// and is a genuine 404 after it, which is the honest answer for a product page
+// that does not exist.
+const ECO_SERIES_PRODUCT_IDS = new Set([
+  'bullet-cctv-camera',
+  'ptz-cctv-camera',
+  'dome-cctv-camera',
+]);
+
 export function generateStaticParams() {
-  return [
-    { productId: 'bullet-cctv-camera' },
-    { productId: 'ptz-cctv-camera' },
-    { productId: 'dome-cctv-camera' },
-  ];
+  return Array.from(ECO_SERIES_PRODUCT_IDS).map((productId) => ({ productId }));
 }
 
 export async function generateMetadata(props) {
   const params = await props.params;
   const { productId } = params;
+
+  if (!ECO_SERIES_PRODUCT_IDS.has(productId)) {
+    return { title: 'Page Not Found', robots: { index: false, follow: false } };
+  }
+
   // humanizeSlug keeps CCTV/PTZ etc. upper-cased instead of naive title-case
   // turning them into "Cctv" / "Ptz".
   const name = humanizeSlug(productId);
@@ -43,5 +63,10 @@ export async function generateMetadata(props) {
 
 export default async function EcoSeriesProductPage(props) {
   const params = await props.params;
+  // Real 404 instead of a 200 wrapped around Products.js's <NotFound /> —
+  // see the soft-404 note above.
+  if (!ECO_SERIES_PRODUCT_IDS.has(params.productId)) {
+    notFound();
+  }
   return <Products productId={params.productId} seriesPrefix="eco-series" />;
 }

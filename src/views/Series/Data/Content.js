@@ -692,7 +692,12 @@ export const Series = {
         "STQC-approved Cloud video management system that allows organizations to centralize and manage all their surveillance cameras, video recordings, and AI analytics from a single platform.",
         "Designed for India's modern surveillance needs, it ensures reliable performance, easy operations, real-time monitoring, and fully compliant data management—ideal for government agencies, enterprises, and multi-location deployments.",
       ],
-      image: "/images/Standardisation_Testing_And_Quality_Certification.webp",
+      // Filename case fix (2026-09-28): the asset on disk (and in git) is
+      // "..._and_..." — this was the only reference spelling it "_And_", so it
+      // 404'd on the case-sensitive production filesystem while resolving fine
+      // on case-insensitive local Windows/macOS. Same image, same block, as
+      // the identical `informationData` under `cloudVMS` below.
+      image: "/images/Standardisation_Testing_and_Quality_Certification.webp",
 
       sectionProps: {
         desktop: {

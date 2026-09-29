@@ -205,9 +205,27 @@ const ProductList = ({ data }) => {
         {activeProducts && activeProducts.length > 0 && (
           <Box
             display={{ base: "flex", md: isThreeProducts ? "flex" : "grid" }}
+            // Column counts are capped at what actually fits, because the
+            // cards below are a fixed 290px wide from `md` up. A fixed-width
+            // grid item pins its `1fr` track to 290px (an auto minimum is
+            // min-content), so the row is always
+            // `columns * 290 + (columns - 1) * 24` regardless of the
+            // container — and `justifyContent: center` then spills it
+            // symmetrically past both edges of the page.
+            //
+            // Measured before this change (page scrollWidth vs viewport):
+            //   768px  -> 3 cols = 918px in a 728px box  ->  75px of page scroll
+            //   900px  -> 3 cols = 918px in an 860px box ->   9px
+            //   992px  -> 4 cols = 1232px in a 928px box -> 120px
+            //   1024px -> 4 cols = 1232px in a 960px box -> 104px
+            //   1150px -> 4 cols = 1232px in a 1086px box ->  41px
+            // 1280px and 1440px were already clean (the 32px side padding
+            // absorbs the 8px spill at 1280), so `xl` keeps 4 columns and
+            // nothing changes at desktop widths.
             gridTemplateColumns={{
-              md: "repeat(3, 1fr)",
-              lg: "repeat(4, 1fr)",
+              md: "repeat(2, 1fr)",
+              lg: "repeat(3, 1fr)",
+              xl: "repeat(4, 1fr)",
             }}
             flexWrap={{ base: "nowrap", md: "wrap" }}
             gap={{ base: 4, md: 6 }}

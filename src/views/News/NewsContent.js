@@ -36,15 +36,32 @@ function formatDate(value) {
   });
 }
 
-const NewsContent = ({ urlWords: urlWordsProp }) => {
+// `initialNews` is the article app/news/[slug]/page.js already resolved on the
+// server (see newsServer.js). When it is present the component renders it
+// straight away — identical markup on server and client, so no hydration
+// mismatch — and skips the fetch below entirely. It is null only when the
+// backend was unreachable during the server render, in which case this
+// component fetches and reports errors exactly as it always did.
+const NewsContent = ({ urlWords: urlWordsProp, initialNews = null }) => {
   const routerParams = useParams();
   const router = useRouter();
   const urlWords = urlWordsProp ?? routerParams?.slug;
-  const [news, setNews] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [news, setNews] = useState(initialNews);
+  const [loading, setLoading] = useState(!initialNews);
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    // Server already resolved this article. Re-syncing state (rather than
+    // relying on the useState initializer alone) matters for client-side
+    // navigation between two /news/<slug> pages: the component instance is
+    // reused, so a new `initialNews` prop has to replace the previous
+    // article's state.
+    if (initialNews) {
+      setNews(initialNews);
+      setError(null);
+      setLoading(false);
+      return undefined;
+    }
     let cancelled = false;
     const load = async () => {
       try {
@@ -67,7 +84,7 @@ const NewsContent = ({ urlWords: urlWordsProp }) => {
     return () => {
       cancelled = true;
     };
-  }, [urlWords]);
+  }, [urlWords, initialNews]);
 
   if (loading) {
     return (

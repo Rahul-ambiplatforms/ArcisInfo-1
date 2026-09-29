@@ -21,15 +21,36 @@ import PageContentWrapper from "../../components/ui/PageContentWrapper";
 import { Helmet } from "react-helmet-async";
 
 const Dashboard = () => {
-  const jwt = localStorage.getItem("jwtToken");
-  const role = localStorage.getItem("userRole");
   const router = useRouter();
 
+  // SSR crash fix (2026-09-28): `jwt`/`role` used to be read straight from
+  // localStorage here, in the render body. `'use client'` does not mean
+  // browser-only — Next.js still renders this component on the server, where
+  // `localStorage` does not exist, so every request to /admin/dashboard threw
+  // `ReferenceError: localStorage is not defined` and returned HTTP 500.
+  //
+  // Reading the session in an effect keeps the browser-only API in the
+  // browser, which is the only place it can work at all: the token is written
+  // to localStorage by the OTP step (pages/OTP/OtpVerification.js) and is
+  // never available to the server, so a server render could never have
+  // produced an authenticated view. The auth model is unchanged — same
+  // localStorage keys, same redirect to /admin, same "render nothing without
+  // a token" guard below.
+  //
+  // `null` means "not resolved yet": the server render and the first client
+  // paint. Both render nothing, so server and client output match (no
+  // hydration mismatch) and admin content still never reaches an
+  // unauthenticated visitor.
+  const [session, setSession] = useState(null);
+
   useEffect(() => {
+    const jwt = localStorage.getItem("jwtToken");
+    const role = localStorage.getItem("userRole");
+    setSession({ jwt, role });
     if (!jwt) {
       router.replace("/admin");
     }
-  }, [jwt]);
+  }, [router]);
 
   // If not logged in, don't render anything until redirect completes
   const [currentPage, setCurrentPage] = useState(1);
@@ -39,7 +60,10 @@ const Dashboard = () => {
   const [jobView, setJobView] = useState("create"); // 'create' | 'list'
   const [editingJob, setEditingJob] = useState(null);
 
-  if (!jwt) return null;
+  // Unresolved session (server render + first client paint) or no token:
+  // render nothing, exactly as before. The effect above redirects to /admin.
+  if (!session?.jwt) return null;
+  const role = session.role;
   // Filter blogs based on search query
   const filteredBlogs = blogData.filter((blog) =>
     blog.description.toLowerCase().includes(searchQuery.toLowerCase())

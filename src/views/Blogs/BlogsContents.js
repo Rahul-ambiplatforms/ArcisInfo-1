@@ -31,7 +31,15 @@ import { getBlogs, getBlogById, getBlogByUrlWords } from "./blog";
 // import ImagePop from "../../components/Animation/Image/ImagePop";
 
 // Helper function to render Slate content
-const renderSlateContent = (content) => {
+//
+// `inline` makes block-ish nodes render as phrasing content (<span>) instead of
+// <div>/<p>. Callers that place this output inside a <p> or an <h2>-<h6> must
+// pass it: those elements may only contain phrasing content, so a nested
+// <div>/<p> makes the HTML parser close the parent early and re-parent the
+// markup. The resulting DOM no longer matches the tree React rendered on the
+// server, which is what threw hydration error #418 on every blog post.
+// display="block" keeps the visual layout identical to the previous markup.
+const renderSlateContent = (content, inline = false) => {
   if (!content) return null;
   return content.map((node, i) => {
     if (!node) return null;
@@ -46,14 +54,40 @@ const renderSlateContent = (content) => {
         </span>
       );
     } else if (node.type) {
-      const children = node.children ? renderSlateContent(node.children) : null;
+      const children = node.children
+        ? renderSlateContent(node.children, inline)
+        : null;
       switch (node.type) {
-        case "paragraph":
-          return (
+        case "paragraph": {
+          // Some authored paragraphs contain a list. A <ul>/<ol> inside a <p>
+          // is invalid, so drop the <Text> wrapper in that case and keep the
+          // surrounding <Box> (a div), which renders identically.
+          const hasBlockChild = (node.children || []).some(
+            (c) =>
+              c && (c.type === "bulleted-list" || c.type === "numbered-list"),
+          );
+          if (inline) {
+            return (
+              <Box
+                as="span"
+                key={i}
+                display="block"
+                textAlign={node.align || "left"}
+              >
+                {children}
+              </Box>
+            );
+          }
+          return hasBlockChild ? (
+            <Box key={i} textAlign={node.align || "left"}>
+              {children}
+            </Box>
+          ) : (
             <Box key={i}>
               <Text textAlign={node.align || "left"}>{children}</Text>
             </Box>
           );
+        }
         case "bulleted-list":
           return (
             <UnorderedList key={i} spacing={2} my="2">
@@ -89,7 +123,11 @@ const renderSlateContent = (content) => {
             </Box>
           );
         default:
-          return <div key={i}>{children}</div>;
+          return inline ? (
+            <span key={i}>{children}</span>
+          ) : (
+            <div key={i}>{children}</div>
+          );
       }
     }
     return null;
@@ -198,7 +236,8 @@ const TableOfContents = ({ components }) => {
                 textOverflow: "ellipsis",
               }}
             >
-              {renderSlateContent(heading.content.text)}
+              {/* inline: this sits inside <Text>, which renders a <p>. */}
+              {renderSlateContent(heading.content.text, true)}
             </Text>
             {/* --- END: Modified Text component --- */}
           </Flex>
@@ -635,7 +674,17 @@ const BlogsOverviewDash = ({ urlWords: urlWordsProp, initialBlog }) => {
 
           {mainImageUrl && (
             <Box mb={6}>
-              <Image loading="lazy"
+              {/* This is the LCP element on every blog post and it sits above
+                  the fold, so it must not be lazy: `loading="lazy"` kept the
+                  preload scanner from fetching it, which both delayed LCP and
+                  meant the image arrived long after first paint with no space
+                  reserved for it — the whole article below jumped down ~690px
+                  when it landed. Measured on /blog/poe-camera before this
+                  change: LCP 1868ms, CLS 0.2648 from a single 0.2636 shift. */}
+              <Image
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
                 src={mainImageUrl}
                 alt={content.imageText || "Blog image"}
                 borderRadius="24px"
@@ -719,7 +768,7 @@ const BlogsOverviewDash = ({ urlWords: urlWordsProp, initialBlog }) => {
                             fontSize="36px"
                             mb={{ base: 2, md: 2 }}
                           >
-                            {renderSlateContent(group.heading.content.text)}
+                            {renderSlateContent(group.heading.content.text, true)}
                           </Heading>
                         )}
                         {group.heading.type === "h3" && (
@@ -730,7 +779,7 @@ const BlogsOverviewDash = ({ urlWords: urlWordsProp, initialBlog }) => {
                             mb={{ base: 2, md: 1 }}
                             mt="-2"
                           >
-                            {renderSlateContent(group.heading.content.text)}
+                            {renderSlateContent(group.heading.content.text, true)}
                           </Heading>
                         )}
                         {group.heading.type === "h4" && (
@@ -740,17 +789,21 @@ const BlogsOverviewDash = ({ urlWords: urlWordsProp, initialBlog }) => {
                             fontSize="16px"
                             mb={{ base: 1, md: 0 }}
                           >
-                            {renderSlateContent(group.heading.content.text)}
+                            {renderSlateContent(group.heading.content.text, true)}
                           </Heading>
                         )}
                       </Box>
                     )}
                     {group.content.map((component) => {
                       switch (component.type) {
+                        // Deliberately not `as="p"`: this is a content
+                        // container and the authored content may include
+                        // lists, which are invalid inside a <p>. As a div it
+                        // can hold block content, so the normal (non-inline)
+                        // renderer is used. Rendering is unchanged.
                         case "p":
                           return (
                             <Box
-                              as="p"
                               key={component.id}
                               fontSize="16px"
                               mb="-1"
@@ -853,7 +906,11 @@ const BlogsOverviewDash = ({ urlWords: urlWordsProp, initialBlog }) => {
               {faqComponents.length > 0 && (
                 <Box>
                   <Heading as="h2" fontSize="36px" mb={4}>
-                    <Text fontSize="36px" color="black">
+                    {/* as="span": <Text> renders a <p>, and a <p> inside an
+                        <h2> is invalid — the parser closed the heading early,
+                        which was the last remaining source of the hydration
+                        mismatch. Styling is unchanged. */}
+                    <Text as="span" display="block" fontSize="36px" color="black">
                       {content.faqs?.title || "Frequently Asked Questions"}
                     </Text>
                   </Heading>

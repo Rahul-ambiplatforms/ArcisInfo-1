@@ -1,3 +1,9 @@
+// Every `cta.buttonLink` below points at "/contact-us", the final URL.
+// They used to point at "/contact", which next.config.js 301s to "/contact-us"
+// — so each of these 29 rendered CTAs cost a redirect hop before the visitor
+// (or a crawler following the link) reached the real page. The redirect rule
+// stays in place for old and external links; internal links just should not
+// need it.
 const seoPageDataGeo = {
   // STATE PAGES (15)
   "cctv-cameras-maharashtra": {
@@ -46,7 +52,7 @@ const seoPageDataGeo = {
       { question: "Which cities in Maharashtra can get ArcisAI installation?", answer: "We cover all major cities including Mumbai, Pune, Nagpur, Aurangabad, Nashik, and Kolhapur with local service centers and 24/7 support." },
       { question: "Do you provide cloud storage for CCTV footage in Maharashtra?", answer: "Yes, we offer encrypted cloud storage, on-premise servers, and hybrid solutions compliant with data protection laws applicable in India." }
     ],
-    cta: { title: "Secure Your Business Today", description: "Get a free security audit for your Maharashtra facility", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Secure Your Business Today", description: "Get a free security audit for your Maharashtra facility", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   "cctv-cameras-karnataka": {
@@ -95,7 +101,7 @@ const seoPageDataGeo = {
       { question: "Are ArcisAI cameras suitable for medical facilities?", answer: "Yes, our HIPAA-aligned encryption, BIS certification, and secure cloud storage make ArcisAI ideal for hospitals and healthcare institutions across Karnataka." },
       { question: "Do you have local support in Bengaluru?", answer: "Yes, we have a dedicated Bengaluru service center with 24/7 technical support, maintenance, and emergency response for all ArcisAI installations." }
     ],
-    cta: { title: "Get Enterprise Security Now", description: "Free assessment for your Karnataka facility", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Get Enterprise Security Now", description: "Free assessment for your Karnataka facility", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   "cctv-cameras-tamil-nadu": {
@@ -144,7 +150,7 @@ const seoPageDataGeo = {
       { question: "Can ArcisAI monitor textile production floors?", answer: "Absolutely. Our AI modules detect quality issues, track production flow, and integrate with manufacturing systems for comprehensive floor monitoring." },
       { question: "What government compliance does ArcisAI offer?", answer: "ArcisAI is STQC and BIS certified, Make-in-India approved, and eligible for government tenders and public infrastructure projects." }
     ],
-    cta: { title: "Secure Tamil Nadu's Future", description: "Enterprise-grade security for your facility", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Secure Tamil Nadu's Future", description: "Enterprise-grade security for your facility", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   "cctv-cameras-telangana": {
@@ -193,7 +199,7 @@ const seoPageDataGeo = {
       { question: "Can ArcisAI support Hyderabad's Smart City initiatives?", answer: "Yes, our ANPR, crowd analytics, and real-time monitoring modules are designed for smart city deployments and government infrastructure projects." },
       { question: "What's the average setup time for ArcisAI in Hyderabad?", answer: "Most installations are completed in 2-3 days with our local service team, minimal downtime, and comprehensive staff training included." }
     ],
-    cta: { title: "Transform Hyderabad's Security", description: "Smart city-ready CCTV solutions", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Transform Hyderabad's Security", description: "Smart city-ready CCTV solutions", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   "cctv-cameras-gujarat": {
@@ -242,7 +248,7 @@ const seoPageDataGeo = {
       { question: "What ANPR capabilities does ArcisAI offer for logistics?", answer: "Our ANPR module automatically reads vehicle registration plates, integrates with inventory systems, and enables real-time tracking across industrial complexes." },
       { question: "Are ArcisAI cameras suitable for chemical plants?", answer: "Absolutely. We offer explosion-proof cameras with ATEX compliance and environmental monitoring modules designed for hazardous industrial environments." }
     ],
-    cta: { title: "Protect Your Enterprise", description: "Industry-specific CCTV solutions", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Protect Your Enterprise", description: "Industry-specific CCTV solutions", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   "cctv-cameras-rajasthan": {
@@ -291,7 +297,7 @@ const seoPageDataGeo = {
       { question: "Can ArcisAI monitor marble quarries safely?", answer: "Absolutely. Our AI-powered quarry monitoring, intrusion detection, and automated alerts are designed for mining and high-risk industrial environments." },
       { question: "What government certifications does ArcisAI have?", answer: "ArcisAI is STQC and BIS certified, Make-in-India approved, and eligible for government tenders across all Rajasthan districts." }
     ],
-    cta: { title: "Secure Rajasthan's Future", description: "Weather-resistant CCTV solutions", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Secure Rajasthan's Future", description: "Weather-resistant CCTV solutions", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   "cctv-cameras-uttar-pradesh": {
@@ -340,7 +346,7 @@ const seoPageDataGeo = {
       { question: "Can ArcisAI help Lucknow with Smart City initiatives?", answer: "Absolutely. Our ANPR, crowd analytics, and real-time monitoring modules are designed for smart city projects and government infrastructure." },
       { question: "How does ArcisAI handle monitoring of religious sites?", answer: "Our AI crowd management system respects privacy while providing security, and includes features for managing high-traffic periods sensitively." }
     ],
-    cta: { title: "Protect UP's Growth", description: "Smart surveillance solutions", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Protect UP's Growth", description: "Smart surveillance solutions", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   "cctv-cameras-west-bengal": {
@@ -389,7 +395,7 @@ const seoPageDataGeo = {
       { question: "Can ArcisAI monitor steel plants safely?", answer: "Absolutely. Our hazmat-rated cameras and worker safety AI modules are designed for extreme industrial environments like steel manufacturing." },
       { question: "What STQC certifications does ArcisAI hold?", answer: "ArcisAI is fully STQC and BIS certified, approved for government projects, and trusted by major industries across West Bengal." }
     ],
-    cta: { title: "Secure West Bengal", description: "Industry-specific CCTV solutions", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Secure West Bengal", description: "Industry-specific CCTV solutions", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   "cctv-cameras-kerala": {
@@ -438,7 +444,7 @@ const seoPageDataGeo = {
       { question: "Can ArcisAI meet HIPAA requirements for hospitals?", answer: "Absolutely. Our STQC-certified cameras include encrypted data handling, secure cloud storage, and HIPAA-aligned security protocols." },
       { question: "What marine certifications does ArcisAI have for ports?", answer: "Our marine-grade cameras are IP67-rated, corrosion-resistant, and certified for tropical port operations like Kochi." }
     ],
-    cta: { title: "Secure Kerala's Future", description: "Climate-optimized CCTV solutions", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Secure Kerala's Future", description: "Climate-optimized CCTV solutions", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   "cctv-cameras-madhya-pradesh": {
@@ -487,7 +493,7 @@ const seoPageDataGeo = {
       { question: "What production monitoring capabilities does ArcisAI offer?", answer: "Our AI modules monitor production flow, detect quality issues, integrate with manufacturing systems, and provide real-time analytics." },
       { question: "Is ArcisAI suitable for government procurement in Bhopal?", answer: "Absolutely. We're STQC & BIS certified, Make-in-India approved, and eligible for government tenders across Madhya Pradesh." }
     ],
-    cta: { title: "Secure MP's Economy", description: "Industry-specific surveillance", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Secure MP's Economy", description: "Industry-specific surveillance", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   "cctv-cameras-punjab": {
@@ -536,7 +542,7 @@ const seoPageDataGeo = {
       { question: "Can ArcisAI support Chandigarh's Smart City goals?", answer: "Absolutely. Our ANPR and traffic management modules are designed for smart city projects with government-approved technology." },
       { question: "How does ArcisAI help protect Punjab's agricultural sector?", answer: "Our weather-resistant cameras and ANPR logistics tracking protect farms, cold storage facilities, and grain markets from theft and loss." }
     ],
-    cta: { title: "Protect Punjab's Future", description: "Sector-specific CCTV solutions", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Protect Punjab's Future", description: "Sector-specific CCTV solutions", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   "cctv-cameras-andhra-pradesh": {
@@ -585,7 +591,7 @@ const seoPageDataGeo = {
       { question: "Can ArcisAI monitor steel plants safely?", answer: "Absolutely. Our hazmat-rated cameras and worker safety AI are designed for extreme industrial environments like steel manufacturing." },
       { question: "What features does ArcisAI offer for commercial logistics?", answer: "Our ANPR module automatically tracks vehicle movements, integrates with inventory systems, and provides real-time logistics analytics." }
     ],
-    cta: { title: "Secure Andhra Pradesh", description: "Industrial CCTV solutions", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Secure Andhra Pradesh", description: "Industrial CCTV solutions", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   "cctv-cameras-odisha": {
@@ -634,7 +640,7 @@ const seoPageDataGeo = {
       { question: "Is ArcisAI suitable for steel plants like Rourkela?", answer: "Absolutely. Our STQC-certified hazmat-rated cameras are trusted by major steel facilities for worker safety and production monitoring." },
       { question: "What make-in-India credentials does ArcisAI have?", answer: "ArcisAI is STQC & BIS certified, Make-in-India approved, and eligible for all government procurement in Odisha." }
     ],
-    cta: { title: "Secure Odisha's Industries", description: "Mining & steel CCTV solutions", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Secure Odisha's Industries", description: "Mining & steel CCTV solutions", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   "cctv-cameras-jharkhand": {
@@ -683,7 +689,7 @@ const seoPageDataGeo = {
       { question: "Is ArcisAI suitable for Jamshedpur's steel industry?", answer: "Absolutely. Our cameras are trusted by leading steel facilities for worker safety, production monitoring, and facility security." },
       { question: "What government support does ArcisAI provide in Jharkhand?", answer: "ArcisAI is STQC & BIS certified, Make-in-India approved, and eligible for all government tenders and projects in Jharkhand." }
     ],
-    cta: { title: "Secure Jharkhand's Resources", description: "Mining & industrial CCTV", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Secure Jharkhand's Resources", description: "Mining & industrial CCTV", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   "cctv-cameras-chhattisgarh": {
@@ -732,7 +738,7 @@ const seoPageDataGeo = {
       { question: "Is ArcisAI suitable for Bhilai Steel operations?", answer: "Absolutely. Our cameras are trusted by major steel facilities for production monitoring, worker safety, and facility security." },
       { question: "What government certifications does ArcisAI have in Chhattisgarh?", answer: "ArcisAI is STQC & BIS certified, Make-in-India approved, and eligible for all government procurement in Chhattisgarh." }
     ],
-    cta: { title: "Secure Chhattisgarh's Future", description: "Mining & industrial surveillance", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Secure Chhattisgarh's Future", description: "Mining & industrial surveillance", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   // USE-CASE + GEO COMBO PAGES (15)
@@ -782,7 +788,7 @@ const seoPageDataGeo = {
       { question: "Can ArcisAI help with school bus safety?", answer: "Yes, our ANPR bus tracking, driver monitoring, and GPS integration provide real-time safety updates to parents and school administration." },
       { question: "What certifications does ArcisAI have for schools?", answer: "ArcisAI is STQC and BIS certified, making us suitable for government and private schools across India with compliance guarantees." }
     ],
-    cta: { title: "Secure Your School Now", description: "Complete student safety solution", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Secure Your School Now", description: "Complete student safety solution", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   "ai-cctv-for-hospitals-india": {
@@ -831,7 +837,7 @@ const seoPageDataGeo = {
       { question: "Can ArcisAI detect patient falls automatically?", answer: "Yes, our AI-powered fall detection system sends immediate alerts to nursing staff, reducing response time and preventing serious injuries." },
       { question: "What certifications does ArcisAI have for healthcare?", answer: "ArcisAI is STQC and BIS certified, HIPAA-aligned, and trusted by leading hospitals across India for sensitive healthcare environments." }
     ],
-    cta: { title: "Protect Your Patients Today", description: "HIPAA-compliant healthcare security", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Protect Your Patients Today", description: "HIPAA-compliant healthcare security", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   "ai-cctv-for-factories-india": {
@@ -880,7 +886,7 @@ const seoPageDataGeo = {
       { question: "Can ArcisAI detect worker safety violations?", answer: "Yes, our AI-powered system detects PPE violations, unsafe behaviors, and hazardous conditions, sending immediate alerts to supervisors." },
       { question: "What STQC certifications does ArcisAI have for factories?", answer: "ArcisAI is fully STQC and BIS certified, meeting all government standards for industrial manufacturing environments across India." }
     ],
-    cta: { title: "Optimize Your Factory Now", description: "AI-powered manufacturing surveillance", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Optimize Your Factory Now", description: "AI-powered manufacturing surveillance", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   "ai-cctv-for-warehouses-india": {
@@ -929,7 +935,7 @@ const seoPageDataGeo = {
       { question: "Can ArcisAI integrate with warehouse management systems?", answer: "Yes, our ANPR and inventory tracking systems integrate seamlessly with WMS, ERP, and logistics platforms for end-to-end visibility." },
       { question: "What theft prevention features does ArcisAI offer?", answer: "Our AI detects intrusions, unauthorized access, suspicious behavior patterns, and triggers real-time alerts to security and management." }
     ],
-    cta: { title: "Secure Your Warehouse", description: "AI-powered inventory protection", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Secure Your Warehouse", description: "AI-powered inventory protection", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   "ai-cctv-for-retail-stores-india": {
@@ -978,7 +984,7 @@ const seoPageDataGeo = {
       { question: "Can ArcisAI provide customer behavior analytics?", answer: "Yes, our face recognition and movement analytics provide insights into customer traffic, dwell time, and engagement patterns for optimization." },
       { question: "What compliance certifications does ArcisAI have for retail?", answer: "ArcisAI is STQC and BIS certified, ensuring compliance with Indian retail security standards and government regulations." }
     ],
-    cta: { title: "Boost Retail Profitability", description: "AI-powered store security", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Boost Retail Profitability", description: "AI-powered store security", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   // REMOVED (SEO, keyword cannibalisation): this banking/ATM entry duplicated
@@ -1031,7 +1037,7 @@ const seoPageDataGeo = {
       { question: "Can ArcisAI manage crowds during events?", answer: "Yes, our crowd analytics track capacity, monitor movement patterns, and alert staff to overcrowding or emergency situations." },
       { question: "What certifications does ArcisAI have for hotels?", answer: "ArcisAI is STQC and BIS certified, trusted by leading 5-star hotels and resort chains across India for guest safety." }
     ],
-    cta: { title: "Enhance Guest Safety", description: "Hospitality-grade security solution", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Enhance Guest Safety", description: "Hospitality-grade security solution", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   "ai-cctv-for-apartments-india": {
@@ -1080,7 +1086,7 @@ const seoPageDataGeo = {
       { question: "Can ArcisAI track vehicles in apartment parking?", answer: "Yes, our ANPR technology automatically identifies vehicles, detects unauthorized parking, and tracks movement for complete parking security." },
       { question: "What privacy protections does ArcisAI offer residents?", answer: "ArcisAI respects resident privacy through encrypted storage, role-based access control, and AI-based monitoring that avoids intrusive recording." }
     ],
-    cta: { title: "Secure Your Apartment Complex", description: "Residential security solution", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Secure Your Apartment Complex", description: "Residential security solution", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   "ai-cctv-for-highways-india": {
@@ -1129,7 +1135,7 @@ const seoPageDataGeo = {
       { question: "Can ArcisAI help reduce traffic congestion?", answer: "Yes, our AI analyzes traffic patterns in real-time, detects congestion, and provides data to authorities for optimized flow management." },
       { question: "What emergency response features does ArcisAI offer?", answer: "Our system detects accidents automatically, alerts emergency services, and provides real-time situation updates for rapid response." }
     ],
-    cta: { title: "Secure Your Highways", description: "Smart traffic CCTV solution", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Secure Your Highways", description: "Smart traffic CCTV solution", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   "ai-cctv-for-railway-stations-india": {
@@ -1178,7 +1184,7 @@ const seoPageDataGeo = {
       { question: "Can ArcisAI detect suspicious activity automatically?", answer: "Yes, our threat detection AI identifies suspicious behavior, unattended objects, and unusual activity with real-time alerts to railway security." },
       { question: "What STQC certifications does ArcisAI have for railways?", answer: "ArcisAI is STQC and BIS certified, approved by Indian Railways for passenger safety and infrastructure protection." }
     ],
-    cta: { title: "Protect Railway Passengers", description: "Railway-grade security solution", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Protect Railway Passengers", description: "Railway-grade security solution", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   "ai-cctv-for-temples-india": {
@@ -1227,7 +1233,7 @@ const seoPageDataGeo = {
       { question: "Can ArcisAI manage large pilgrimage crowds?", answer: "Yes, our crowd analytics track movement patterns, manage capacity, and prevent overcrowding during major festivals and pilgrimages." },
       { question: "How are donations and sacred valuables protected?", answer: "Our STQC-certified cameras monitor donation areas with intrusion detection and encrypted storage protecting sensitive footage." }
     ],
-    cta: { title: "Secure Your Temple", description: "Respectful security for religious sites", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Secure Your Temple", description: "Respectful security for religious sites", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   "ai-cctv-for-smart-cities-india": {
@@ -1276,7 +1282,7 @@ const seoPageDataGeo = {
       { question: "What ANPR capabilities does ArcisAI offer cities?", answer: "Our ANPR provides vehicle identification, traffic flow analytics, parking management, and congestion detection at city scale." },
       { question: "Is ArcisAI suitable for government smart city projects?", answer: "Yes, ArcisAI is STQC and BIS certified, make-in-India approved, and eligible for government smart city initiatives across India." }
     ],
-    cta: { title: "Build Your Smart City", description: "Integrated urban surveillance solution", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Build Your Smart City", description: "Integrated urban surveillance solution", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   "ai-cctv-for-government-offices-india": {
@@ -1325,7 +1331,7 @@ const seoPageDataGeo = {
       { question: "How does ArcisAI protect classified information in government offices?", answer: "Our multi-layer encryption, tamper detection, and access controls protect sensitive footage while maintaining government compliance." },
       { question: "Can ArcisAI integrate with government security protocols?", answer: "Absolutely. Our systems are designed to integrate seamlessly with government security infrastructure and visitor management systems." }
     ],
-    cta: { title: "Secure Government Operations", description: "Government-approved CCTV solution", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Secure Government Operations", description: "Government-approved CCTV solution", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   "best-stqc-certified-cctv-india": {
@@ -1374,7 +1380,7 @@ const seoPageDataGeo = {
       { question: "Are ArcisAI cameras eligible for government tenders?", answer: "Yes, our STQC certification makes ArcisAI cameras automatically eligible for all government tenders, procurement processes, and public infrastructure projects." },
       { question: "Why is STQC certification important?", answer: "STQC certification ensures quality, security, and performance standards critical for government infrastructure, financial institutions, and public safety systems." }
     ],
-    cta: { title: "Choose STQC Certified CCTV", description: "Government-approved quality assurance", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Choose STQC Certified CCTV", description: "Government-approved quality assurance", buttonText: "Get Quote", buttonLink: "/contact-us" }
   },
 
   "bis-certified-cctv-cameras-india": {
@@ -1423,7 +1429,7 @@ const seoPageDataGeo = {
       { question: "Are ArcisAI cameras both STQC and BIS certified?", answer: "Yes, ArcisAI cameras are dual-certified with both STQC and BIS, ensuring maximum government compliance and quality assurance." },
       { question: "Is BIS certification mandatory for government projects?", answer: "BIS certification is mandatory for many government and critical infrastructure projects, making ArcisAI cameras automatically compliant." }
     ],
-    cta: { title: "Choose BIS Certified Safety", description: "Dual certification assurance", buttonText: "Get Quote", buttonLink: "/contact" }
+    cta: { title: "Choose BIS Certified Safety", description: "Dual certification assurance", buttonText: "Get Quote", buttonLink: "/contact-us" }
   }
 };
 

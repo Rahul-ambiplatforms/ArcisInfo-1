@@ -123,6 +123,15 @@ const CustomButton = ({
       transform: "scale(0.95)",
       ...(sx._active || {}),
     },
+    // Keyboard focus indicator. This component defined _hover and _active but
+    // nothing for focus, so tabbing to it (the header LOGIN button, among
+    // others) showed no indicator at all. _focusVisible only matches keyboard
+    // focus, so pointer users see no change.
+    _focusVisible: {
+      outline: "2px solid #A4FF79",
+      outlineOffset: "3px",
+      ...(sx._focusVisible || {}),
+    },
   };
 
   const offset = "4px";

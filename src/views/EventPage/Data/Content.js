@@ -497,7 +497,10 @@ export const IFSECData = {
     buttonText: "Book a Live Demo",
     d_image: "/images/abd_cta.webp",
     m_Image: "/images/whyarcis_cta_mobile.webp",
-    link: "/contact",
+    // Points at the final URL: "/contact" is a 301 to "/contact-us"
+    // (next.config.js). The redirect stays for old/external links; internal
+    // links should not spend a hop.
+    link: "/contact-us",
     textPosition: {
       desktop: { top: "50%", left: "0%" },
       mobile: { top: "50%", left: "0%" },

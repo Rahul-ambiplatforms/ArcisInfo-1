@@ -2,6 +2,8 @@
 import React, {
   memo,
   useCallback,
+  useEffect,
+  useRef,
   useState,
   useTransition,
 } from 'react';
@@ -38,14 +40,39 @@ const MobileDrawer = dynamic(() => import('./MobileDrawer'), { ssr: false });
 // mobile drawer above, so it never adds weight to the initial Navbar JS.
 const SearchModal = dynamic(() => import('./SearchModal'), { ssr: false });
 
+// The desktop bar needs ~1309px to lay out at full size (logo 150 + nav 737 +
+// actions 302 + search 40 + padding 64). It was being shown from Chakra's `lg`
+// (992px), ~317px short, so between 992px and ~1125px the logo was squeezed to
+// zero width and LOGIN + Search were pushed outside the viewport — invisible
+// and unclickable, and invisible to overflow checks too because <nav> is
+// position:fixed.
+//
+// Chakra's tokens have no stop between lg (992) and xl (1280), so these are raw
+// media queries. The desktop bar now appears at 1280px, and a small amount of
+// spacing is tightened between 1280px and 1439px to buy the ~30px that makes
+// 1280 fit comfortably. At 1440px and above nothing changes at all.
+const DESKTOP_NAV = '@media (min-width: 1280px)';
+const BELOW_DESKTOP = '@media (max-width: 1279px)';
+const TIGHT = '@media (min-width: 1280px) and (max-width: 1439px)';
+
 /* --- Dropdown Component with Hover and Click Support --- */
 const NavDropdown = memo(function NavDropdown({ title, data }) {
   const [isOpen, setIsOpen] = useState(false);
+  const buttonRef = useRef(null);
+  // How the menu was opened. Chakra's useMenu always restores focus to the
+  // MenuButton on close — `shouldFocus: true` is hard-coded in its
+  // useFocusOnHide call and is not exposed as a Menu prop. That is correct for
+  // click/keyboard, but after a pointer-only hover it left :focus-visible on
+  // the button, so the item kept painting Chakra's blue focus ring with the
+  // pointer nowhere near it. We only undo that focus for pointer-driven
+  // closes; keyboard opens keep the ring, which is what keyboard users need.
+  const openedByKeyboard = useRef(false);
+  // Armed for a moment after a pointer-driven close, to reject the focus
+  // Chakra hands back to the button. See handleMouseLeave / handleFocus.
+  const suppressRefocus = useRef(false);
+  const suppressTimer = useRef(null);
 
-  const handleMouseEnter = useCallback(() => setIsOpen(true), []);
-  const handleMouseLeave = useCallback(() => setIsOpen(false), []);
-  const handleClick = useCallback(() => setIsOpen((v) => !v), []);
-  const closeMenu = useCallback(() => setIsOpen(false), []);
+  useEffect(() => () => clearTimeout(suppressTimer.current), []);
 
   const isMegaMenu = title === 'PRODUCTS';
 
@@ -53,10 +80,103 @@ const NavDropdown = memo(function NavDropdown({ title, data }) {
   const groups = data.items?.filter((item) => item.group) || [];
   const standaloneItems = data.items?.filter((item) => !item.group) || [];
 
-  // State for tracking which product is being hovered (for PRODUCTS menu)
-  const [hoveredProduct, setHoveredProduct] = useState(
-    isMegaMenu ? 'Eco Series' : null
+  // Which product row the pointer is ACTUALLY over. Starts null and is reset
+  // to null whenever the menu closes: seeding it (it used to default to
+  // 'Eco Series') painted a hover highlight on a row nobody was pointing at,
+  // and never clearing it meant the last-hovered row stayed highlighted the
+  // next time the menu opened.
+  const [hoveredProduct, setHoveredProduct] = useState(null);
+  // The right column still needs something to show before the pointer reaches
+  // a row, so it falls back to the first group. This drives CONTENT ONLY — the
+  // left-hand highlight is driven by hoveredProduct alone, so the fallback can
+  // never render as a fake hover.
+  const activeProduct = hoveredProduct ?? groups[0]?.group ?? null;
+
+  // Hover-to-open only where the pointer can actually hover. On touch,
+  // mouseenter is synthesised from a tap and races the click handler, so those
+  // devices fall through to plain tap-to-toggle.
+  const canHover = useCallback(
+    () =>
+      typeof window !== 'undefined' &&
+      typeof window.matchMedia === 'function' &&
+      window.matchMedia('(hover: hover) and (pointer: fine)').matches,
+    [],
   );
+
+  const close = useCallback(() => {
+    setIsOpen(false);
+    setHoveredProduct(null);
+  }, []);
+
+  const handleMouseEnter = useCallback(() => {
+    if (!canHover()) return;
+    openedByKeyboard.current = false;
+    setIsOpen(true);
+  }, [canHover]);
+
+  const handleMouseLeave = useCallback(() => {
+    if (!canHover()) return;
+    if (!openedByKeyboard.current) {
+      // Chakra restores focus to the button roughly one frame after the menu
+      // hides (measured at ~17ms). requestAnimationFrame races that and loses,
+      // so instead arm a short one-shot window and reject the focus in the
+      // focus handler itself, whenever it actually arrives.
+      suppressRefocus.current = true;
+      clearTimeout(suppressTimer.current);
+      suppressTimer.current = setTimeout(() => {
+        suppressRefocus.current = false;
+      }, 300);
+    }
+    close();
+  }, [canHover, close]);
+
+  const handleFocus = useCallback((event) => {
+    if (!suppressRefocus.current) return;
+    // One-shot: disarm immediately so a later Tab to this button is never
+    // affected, and so only Chakra's own restore is ever rejected.
+    suppressRefocus.current = false;
+    clearTimeout(suppressTimer.current);
+    // If the pointer came back onto the button, the focus is legitimate.
+    if (!event.currentTarget.matches(':hover')) {
+      event.currentTarget.blur();
+    }
+  }, []);
+
+  const handleKeyDown = useCallback((event) => {
+    if (['Enter', ' ', 'ArrowDown', 'ArrowUp'].includes(event.key)) {
+      openedByKeyboard.current = true;
+    }
+  }, []);
+
+  const handleClick = useCallback(
+    (event) => {
+      // Keyboard-generated clicks report detail === 0. Leave those entirely to
+      // Chakra's own toggle so Enter/Space behave natively.
+      if (event.detail === 0) {
+        openedByKeyboard.current = true;
+        return;
+      }
+      openedByKeyboard.current = false;
+      if (canHover()) {
+        // Hover already opened this menu. Chakra's MenuButton merges our
+        // onClick ahead of its internal onToggle via callAllHandlers, which
+        // stops on defaultPrevented — so preventing default here keeps the
+        // click from closing the menu the pointer just opened.
+        event.preventDefault();
+        setIsOpen(true);
+        return;
+      }
+      // Touch / no-hover pointers: tap toggles.
+      setIsOpen((v) => {
+        if (v) setHoveredProduct(null);
+        return !v;
+      });
+    },
+    [canHover],
+  );
+
+  const closeMenu = close;
+
   // Re-rendering the mega-menu right column on every mousemove is overkill
   // and can spike INP if the user moves the pointer while interacting. Defer
   // the hover-state update so it commits off the input critical path.
@@ -69,11 +189,15 @@ const NavDropdown = memo(function NavDropdown({ title, data }) {
     <Menu
       isOpen={isOpen}
       onOpen={() => setIsOpen(true)}
-      onClose={() => setIsOpen(false)}
+      onClose={close}
       gutter={0}
       autoSelect={false}
+      // Without isLazy every MenuList — including the PRODUCTS mega menu — is
+      // mounted and re-rendered on the initial page render even while closed.
+      isLazy
     >
       <MenuButton
+        ref={buttonRef}
         as={Button}
         variant="ghost"
         rightIcon={<Icon as={NavbarDownIcon} boxSize={3} />}
@@ -86,6 +210,8 @@ const NavDropdown = memo(function NavDropdown({ title, data }) {
         letterSpacing="0.5px"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        onFocus={handleFocus}
+        onKeyDown={handleKeyDown}
         onClick={handleClick}
       >
         {title}
@@ -130,6 +256,9 @@ const NavDropdown = memo(function NavDropdown({ title, data }) {
                       color="white"
                       fontSize="14px"
                       fontWeight="500"
+                      // hoveredProduct, NOT activeProduct: the right column's
+                      // fallback must never render as a highlight on a row the
+                      // pointer is not on.
                       bg={
                         hoveredProduct === item.group
                           ? 'gray.800'
@@ -175,15 +304,15 @@ const NavDropdown = memo(function NavDropdown({ title, data }) {
 
             {/* Right Column: Subpages (shown on hover) */}
             <Box w="50%" py={2} px={4}>
-              {hoveredProduct && (
+              {activeProduct && (
                 <Stack spacing={1}>
                   {groups
-                    .find((item) => item.group === hoveredProduct)
+                    .find((item) => item.group === activeProduct)
                     ?.items?.map((subItem, subIndex) => (
                       <MenuItem
                         key={subIndex}
                         as={NextLink}
-                        type={false}
+                        type={undefined}
                         href={subItem.link}
                         bg="transparent"
                         _hover={{ bg: 'gray.800', color: 'white' }}
@@ -231,7 +360,7 @@ const NavDropdown = memo(function NavDropdown({ title, data }) {
                     <MenuItem
                       key={subIndex}
                       as={NextLink}
-                      type={false}
+                      type={undefined}
                       href={subItem.link}
                       bg="transparent"
                       _hover={{ bg: 'gray.800' }}
@@ -248,7 +377,7 @@ const NavDropdown = memo(function NavDropdown({ title, data }) {
               <MenuItem
                 key={index}
                 as={NextLink}
-                type={false}
+                type={undefined}
                 href={item.link}
                 bg="transparent"
                 _hover={{ bg: 'gray.800' }}
@@ -314,23 +443,56 @@ const Navbar = () => {
         w="100%"
         mx="auto"
         px={{ base: 2, lg: 8 }}
+        sx={{ [TIGHT]: { paddingInline: '24px' } }}
       >
-        <Flex gap="4" align="center" justify="center">
-          {/* LOGO */}
-          <NextLink href="/">
+        <Flex
+          gap="4"
+          align="center"
+          justify="center"
+          minW={0}
+          sx={{ [TIGHT]: { gap: '12px' } }}
+        >
+          {/* LOGO — wrapped in Box as={NextLink} purely so it can carry a
+              _focusVisible rule; a bare NextLink takes no style props and the
+              logo was the one header stop with no visible keyboard focus
+              indicator. Mouse users see no change: _focusVisible never matches
+              on pointer interaction. */}
+          <Box
+            as={NextLink}
+            href="/"
+            display="inline-flex"
+            borderRadius="md"
+            _focusVisible={{
+              outline: '2px solid #A4FF79',
+              outlineOffset: '3px',
+            }}
+          >
+            {/* flexShrink=0: as a flex item the logo had no shrink guard, so
+                when the bar ran out of room it absorbed all of the shrink and
+                collapsed to 0px wide — the brand mark and the home link simply
+                vanished. Verified by isolation: forcing flex-shrink:0 restored
+                it to 150px. */}
             <Image
               loading="lazy"
               src="/images/ArcisAi_logo.webp" htmlWidth="601" htmlHeight="120"
               alt="ArcisAI Logo"
               w="150px"
               h="30px"
+              flexShrink={0}
               cursor="pointer"
               _hover={{ opacity: 0.8 }}
             />
-          </NextLink>
+          </Box>
 
           {/* DESKTOP NAV - Center */}
-          <HStack spacing={2} display={{ base: 'none', lg: 'flex' }}>
+          <HStack
+            spacing={2}
+            display="none"
+            sx={{
+              [DESKTOP_NAV]: { display: 'flex' },
+              [TIGHT]: { gap: '4px' },
+            }}
+          >
             <NavDropdown
               title={dropdownData.solutions.title}
               data={dropdownData.solutions}
@@ -376,7 +538,11 @@ const Navbar = () => {
         {/* RIGHT ACTIONS */}
         <HStack
           spacing={6}
-          display={{ base: 'none', lg: 'flex' }}
+          display="none"
+          sx={{
+            [DESKTOP_NAV]: { display: 'flex' },
+            [TIGHT]: { gap: '16px' },
+          }}
           alignItems="center"
           flexShrink={0}
         >
@@ -410,12 +576,16 @@ const Navbar = () => {
           onClick={handleSearchTap}
           aria-label="Search the site"
           _hover={{ bg: 'whiteAlpha.200', color: '#A4FF79' }}
-          mr={{ base: 1, lg: 0 }}
+          flexShrink={0}
+          // Keeps a gap from the burger wherever the burger is shown, which is
+          // now everything below DESKTOP_NAV rather than below lg.
+          sx={{ [BELOW_DESKTOP]: { marginRight: '4px' } }}
         />
 
         {/* MOBILE BURGER */}
         <IconButton
-          display={{ base: 'flex', lg: 'none' }}
+          display="flex"
+          sx={{ [DESKTOP_NAV]: { display: 'none' } }}
           icon={<HamburgerIcon boxSize={6} />}
           variant="ghost"
           color="white"

@@ -136,7 +136,14 @@ const Highlight = ({ text, tokens }) => {
 
 /* ---------- Cards ---------- */
 
-const SupportCard = ({ category }) => {
+// `headingLevel` keeps the document outline correct in both states of this
+// page. The "Related Topics" <h2> above the card grid only renders while a
+// search is active, so in the default (browse) view the cards sit directly
+// under the page <h1> — hardcoding them to h3 skipped a level (h1 → h3).
+// They are h2 when they are the first level under the <h1>, and h3 when the
+// search heading is above them. `fontSize` is set explicitly below, so the
+// level changes the semantics only and never the rendered size.
+const SupportCard = ({ category, headingLevel = 'h2' }) => {
   const IconComp = iconMap[category.iconName] || FiHelpCircle;
   return (
     <Box
@@ -201,7 +208,7 @@ const SupportCard = ({ category }) => {
 
         <Box>
           <Heading
-            as="h3"
+            as={headingLevel}
             fontSize="lg"
             color="white"
             fontFamily="WixMadeforDisplay"
@@ -540,7 +547,12 @@ const SupportHub = () => {
             )}
             <SimpleGrid columns={{ base: 1, sm: 2, lg: 3, xl: 4 }} spacing={5}>
               {matchingCategories.map((category) => (
-                <SupportCard key={category.slug} category={category} />
+                <SupportCard
+                  key={category.slug}
+                  category={category}
+                  // h3 only when the "Related Topics" <h2> above is rendered.
+                  headingLevel={isSearching ? 'h3' : 'h2'}
+                />
               ))}
             </SimpleGrid>
           </Box>

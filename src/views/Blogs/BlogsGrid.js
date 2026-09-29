@@ -395,12 +395,26 @@ export default function BlogsContent({ initialBlogs = [] }) {
                     </Text>
                   </Box>
                   <Box flex="1" />
+                  {/* This footer row used to be unwrappable, which made it
+                      the card's min-content width (~403px measured). A grid
+                      item's `1fr` track cannot go below its min-content, so
+                      at the `md` (768px) two-column breakpoint the two tracks
+                      resolved to 405px each — 2*405 + 24 gap = 834px inside a
+                      753px grid — and the page scrolled horizontally by 74px.
+                      `flexWrap` lets the row reflow instead of pinning the
+                      track. `whiteSpace: nowrap` stays on the chips below so a
+                      date or a name still never breaks mid-value; wrapping
+                      here only moves whole chips onto the next line, and only
+                      when they no longer fit. */}
                   <Flex
                     justifyContent="space-between"
                     p={{ base: "2", md: "5" }}
+                    flexWrap="wrap"
+                    gap="2"
                   >
                     <Box
                       display="flex"
+                      flexWrap="wrap"
                       whiteSpace="nowrap"
                       gap="4"
                       alignItems="center"
