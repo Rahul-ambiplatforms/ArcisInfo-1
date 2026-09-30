@@ -18,7 +18,7 @@ export const metadata = {
   title: 'AI CCTV Cameras by State | ArcisAI',
   description:
     'ArcisAI AI CCTV camera dealers, installation, and support by Indian state.',
-  keywords: ['CCTV by state India', 'AI CCTV dealers by state'],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: CANONICAL, languages: buildHreflang(CANONICAL) },
   openGraph: {
     title: 'AI CCTV Cameras by State | ArcisAI',

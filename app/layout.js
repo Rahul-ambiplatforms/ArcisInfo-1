@@ -105,10 +105,9 @@ export const metadata = {
   },
   description:
     'ArcisAI by Adiance Technologies delivers enterprise AI CCTV cameras with NDAA compliance and STQC certification.',
-  keywords: [
-    'AI CCTV cameras', 'NDAA compliant cameras', 'enterprise surveillance',
-    'STQC certified', 'edge AI analytics', 'cloud VMS', 'ArcisAI',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed the sitewide meta-keywords
+  // tag — ignored by search engines and flagged as an obsolete tag
+  // present on every page.
   authors: [{ name: 'ArcisAI', url: 'https://arcisai.io' }],
   creator: 'ArcisAI by Adiance Technologies',
   openGraph: {

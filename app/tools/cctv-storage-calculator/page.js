@@ -9,11 +9,7 @@ const DESCRIPTION =
 export const metadata = {
   title: TITLE.replace(/\s*\|\s*ArcisAI$/, ""),
   description: DESCRIPTION,
-  keywords: [
-    'CCTV storage calculator', 'NVR storage calculator', 'CCTV hard disk calculator',
-    'how much storage for CCTV', 'CCTV storage size estimator', 'IP camera storage calculator',
-    'NVR hard disk size', 'CCTV recording storage calculator',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: `${SITE_URL}/tools/cctv-storage-calculator`, languages: buildHreflang(`${SITE_URL}/tools/cctv-storage-calculator`) },
   openGraph: {
     title: TITLE,

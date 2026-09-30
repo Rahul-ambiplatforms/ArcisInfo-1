@@ -9,10 +9,7 @@ const DESCRIPTION =
 export const metadata = {
   title: TITLE.replace(/\s*\|\s*ArcisAI$/, ""),
   description: DESCRIPTION,
-  keywords: [
-    'India CCTV market 2026', 'CCTV certification report India', 'BIS-ER STQC market impact',
-    'India CCTV compliance data', 'CCTV industry India 2026', 'Made in India CCTV market',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: `${SITE_URL}/india-cctv-market-report-2026`, languages: buildHreflang(`${SITE_URL}/india-cctv-market-report-2026`) },
   openGraph: {
     title: TITLE, description: DESCRIPTION, url: `${SITE_URL}/india-cctv-market-report-2026`,

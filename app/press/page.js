@@ -9,10 +9,7 @@ const DESCRIPTION =
 export const metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  keywords: [
-    'ArcisAI press kit', 'ArcisAI media kit', 'ArcisAI boilerplate', 'ArcisAI facts',
-    'ArcisAI press contact', 'ArcisAI certifications', 'ArcisAI news',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: `${SITE_URL}/press`, languages: buildHreflang(`${SITE_URL}/press`) },
   openGraph: {
     title: TITLE, description: DESCRIPTION, url: `${SITE_URL}/press`,

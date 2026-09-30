@@ -10,10 +10,7 @@ export const metadata = {
   title: 'ArcisAI FAQ | AI CCTV Questions Answered',
   description:
     'Frequently asked questions about ArcisAI products, features, pricing, installation, and support.',
-  keywords: [
-    'ArcisAI FAQ', 'AI CCTV questions', 'surveillance FAQ',
-    'CCTV installation help', 'VMS support questions',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: CANONICAL, languages: buildHreflang(CANONICAL) },
   openGraph: {
     title: 'ArcisAI FAQ | AI CCTV Questions Answered',

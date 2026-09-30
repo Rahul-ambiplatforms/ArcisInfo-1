@@ -5,16 +5,7 @@ export const metadata = {
   title: 'Become an ArcisAI Channel Partner | Dealer Program',
   description:
     "Join ArcisAI's dealer and channel partner program — India's BIS-ER & STQC-certified, Made-in-India AI CCTV brand for system integrators and resellers.",
-  keywords: [
-    'ArcisAI channel partner',
-    'ArcisAI dealer program',
-    'AI CCTV dealer India',
-    'CCTV distributor Gujarat',
-    'CCTV distributor Maharashtra',
-    'security camera reseller India',
-    'system integrator CCTV',
-    'Made in India CCTV partner',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: 'https://arcisai.io/partners', languages: buildHreflang('https://arcisai.io/partners') },
   openGraph: {
     title: 'Become an ArcisAI Channel Partner | Dealer Program',

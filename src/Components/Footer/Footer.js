@@ -216,6 +216,10 @@ const Footer = () => {
             <Stack align={"flex-start"} spacing={2}>
               <ListHeader>RESOURCES</ListHeader>
               <FooterLink href={"/blog"}>Blogs</FooterLink>
+              {/* SEO fix (2026-09-30, SEO-007): new /locations hub
+                  (app/locations/page.js) -- link it from the footer so it's
+                  reachable sitewide, not just in the sitemap. */}
+              <FooterLink href={"/locations"}>Locations</FooterLink>
               <FooterLink href={"/documents"}>Documents</FooterLink>
               <FooterLink href={"/faq"}>FAQ</FooterLink>
               <FooterLink href={"/tools"}>Tools</FooterLink>
@@ -456,8 +460,8 @@ const Footer = () => {
             color="white"
             flex="1"
           >
-            Copyright © 2025 ArcisAI. All rights reserved. An ISO 27001:2022,
-            ISO 9001:2015 Certified
+            Copyright © {new Date().getFullYear()} ArcisAI. All rights reserved. An ISO
+            27001:2022, ISO 9001:2015 Certified
           </Text>
 
           {/* Right: Powered By */}

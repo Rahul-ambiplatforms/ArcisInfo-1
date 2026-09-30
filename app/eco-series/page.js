@@ -5,10 +5,7 @@ export const metadata = {
   title: 'ECO-Series Value AI Cameras | Affordable Smart CCTV',
   description:
     'ECO-Series PTZ, Dome, Bullet cameras for budget-conscious deployments. Same powerful AI capabilities at value pricing. 30+ models available with edge AI analytics.',
-  keywords: [
-    'ECO-Series camera', 'affordable CCTV', 'budget surveillance',
-    'AI camera value', 'cost-effective security camera',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: 'https://arcisai.io/eco-series', languages: buildHreflang('https://arcisai.io/eco-series') },
   openGraph: {
     // Kept identical to the resolved <title> tag (this page's `title` above +

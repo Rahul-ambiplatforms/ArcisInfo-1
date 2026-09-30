@@ -5,10 +5,7 @@ export const metadata = {
   title: 'About ArcisAI | Adiance Technologies - Enterprise AI Surveillance',
   description:
     'ArcisAI is the flagship brand of Adiance Technologies — NDAA-compliant, STQC-certified AI CCTV with in-house manufacturing and global deployments.',
-  keywords: [
-    'about ArcisAI', 'Adiance Technologies', 'NDAA compliant manufacturer',
-    'STQC certified', 'AI camera company', 'enterprise surveillance manufacturer',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: 'https://arcisai.io/about-us', languages: buildHreflang('https://arcisai.io/about-us') },
   openGraph: {
     title: 'About ArcisAI | Adiance Technologies',

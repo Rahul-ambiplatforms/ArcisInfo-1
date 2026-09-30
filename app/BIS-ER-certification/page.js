@@ -5,10 +5,7 @@ export const metadata = {
   title: 'BIS-ER Certified AI CCTV Cameras',
   description:
     'ArcisAI cameras are now BIS-ER certified (R-72003735 ER01:2024). Compliant, secure, and deployment-ready AI surveillance systems for India.',
-  keywords: [
-    'BIS certified CCTV', 'BIS-ER certification', 'ArcisAI BIS',
-    'R-72003735', 'Indian surveillance compliance', 'BIS certified cameras',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: 'https://arcisai.io/BIS-ER-certification', languages: buildHreflang('https://arcisai.io/BIS-ER-certification') },
   openGraph: {
     title: 'BIS-ER Certified AI CCTV Cameras | ArcisAI',

@@ -5,10 +5,7 @@ export const metadata = {
   title: 'AI Surveillance Glossary | CCTV & Security Terms',
   description:
     'Complete glossary of AI surveillance, CCTV, video analytics, and security technology terms. Understand NDAA, STQC, ANPR, edge AI, VMS, and more.',
-  keywords: [
-    'surveillance glossary', 'CCTV terms', 'AI security terminology',
-    'video analytics glossary', 'NDAA definition', 'VMS glossary',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: 'https://arcisai.io/glossary', languages: buildHreflang('https://arcisai.io/glossary') },
   openGraph: {
     title: 'AI Surveillance Glossary | ArcisAI',

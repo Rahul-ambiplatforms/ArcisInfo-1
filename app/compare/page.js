@@ -17,7 +17,7 @@ export const metadata = {
 title: 'ArcisAI vs Other CCTV Brands — Comparisons | ArcisAI',
 description:
 'Side-by-side comparisons of ArcisAI AI CCTV cameras against other CCTV and surveillance brands, on certification, compliance, and features.',
-keywords: ['ArcisAI comparison', 'CCTV brand comparison', 'AI CCTV vs'],
+// SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
 alternates: { canonical: CANONICAL, languages: buildHreflang(CANONICAL) },
 openGraph: {
 title: 'ArcisAI vs Other CCTV Brands — Comparisons | ArcisAI',

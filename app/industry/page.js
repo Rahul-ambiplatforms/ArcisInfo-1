@@ -22,7 +22,7 @@ export const metadata = {
   title: 'AI CCTV Solutions by Industry | ArcisAI',
   description:
     'AI-powered CCTV surveillance solutions for every industry — retail, healthcare, education, banking, logistics, manufacturing, transportation, and more.',
-  keywords: ['AI CCTV by industry', 'industry surveillance solutions', 'AI CCTV use cases'],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: CANONICAL, languages: buildHreflang(CANONICAL) },
   openGraph: {
     title: 'AI CCTV Solutions by Industry | ArcisAI',

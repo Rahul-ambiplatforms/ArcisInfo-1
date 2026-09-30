@@ -240,6 +240,23 @@ const nextConfig = {
       // matter most now the BIS-ER/STQC mandate is live (in force since 1 Apr 2026).
       // The year now lives only in the title, so it can be refreshed annually
       // without ever migrating the URL again.
+      // SEO fix (2026-09-30, SEO-006): /cctv-cameras-gurgaon and
+      // /cctv-cameras-gurugram are two independent dataset entries for the
+      // same city (Gurgaon was officially renamed Gurugram) with near-
+      // identical template copy — a duplicate-content pair splitting search
+      // equity. /cctv-cameras-gurugram is the one already listed in
+      // sitemap.js, so it stays canonical; this 301s the other. The
+      // now-orphaned "cctv-cameras-gurgaon" entry in
+      // src/data/seoPageDataExpansion3.js is intentionally left in place
+      // (unreachable — redirects() is checked before routing) rather than
+      // deleted, so its content/history isn't lost; remove it in a follow-up
+      // cleanup once this redirect has been live a while.
+      {
+        source: "/cctv-cameras-gurgaon",
+        destination: "/cctv-cameras-gurugram",
+        permanent: true,
+        statusCode: 301,
+      },
       {
         source: "/best-ai-cctv-camera-india-2025",
         destination: "/best-ai-cctv-camera-india",

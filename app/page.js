@@ -10,14 +10,7 @@ import { buildHreflang } from '@/src/data/hreflang';
 export const metadata = {
   title: homeSEO.metatitle,
   description: homeSEO.metadescription,
-  keywords: [
-    'STQC certified CCTV camera',
-    'BIS-ER certified CCTV camera',
-    'made in India CCTV camera',
-    'STQC certified surveillance system',
-    'best CCTV camera brand in India',
-    'NDAA compliant cameras',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: homeSEO.canonical, languages: buildHreflang(homeSEO.canonical) },
   openGraph: {
     title: homeSEO.metatitle,

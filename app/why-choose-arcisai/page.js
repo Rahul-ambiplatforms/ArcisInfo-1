@@ -5,10 +5,7 @@ export const metadata = {
   title: 'Why Choose ArcisAI | Benefits of AI CCTV Surveillance',
   description:
     'Discover why enterprises worldwide choose ArcisAI. NDAA compliance, STQC certification, in-house manufacturing, edge AI, and 24/7 cloud VMS — built for scale.',
-  keywords: [
-    'why ArcisAI', 'benefits AI CCTV', 'NDAA compliant advantages',
-    'STQC certified benefits', 'enterprise surveillance advantages',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: 'https://arcisai.io/why-choose-arcisai', languages: buildHreflang('https://arcisai.io/why-choose-arcisai') },
   openGraph: {
     title: 'Why Choose ArcisAI | Benefits of AI CCTV Surveillance',

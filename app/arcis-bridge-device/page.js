@@ -5,12 +5,7 @@ export const metadata = {
   title: 'ArcisAI Bridge Device (ABD) | Legacy Camera Converter to AI',
   description:
     'Convert any ONVIF camera to a smart AI surveillance device with the ArcisAI Bridge Device (ABD).',
-  keywords: [
-    'convert ONVIF camera to AI', 'add AI to existing CCTV India',
-    'retrofit AI to existing CCTV', 'upgrade legacy CCTV to AI India',
-    'AI gateway for CCTV', 'ONVIF to AI converter', 'bridge device',
-    'camera converter', 'legacy camera upgrade', 'ABD ArcisAI',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: 'https://arcisai.io/arcis-bridge-device', languages: buildHreflang('https://arcisai.io/arcis-bridge-device') },
   openGraph: {
     title: 'ArcisAI Bridge Device (ABD) | Legacy Camera Converter to AI',

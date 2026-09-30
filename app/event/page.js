@@ -5,10 +5,7 @@ export const metadata = {
   title: 'Events | ArcisAI Surveillance Trade Shows & Conferences',
   description:
     'Meet ArcisAI at global surveillance and security trade shows. Demo AI cameras, VMS, and ArcisGPT live. Connect with our team at IFSEC, Convergence India, and more.',
-  keywords: [
-    'ArcisAI events', 'surveillance trade show', 'CCTV exhibition',
-    'security conference', 'IFSEC', 'Convergence India',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: 'https://arcisai.io/event', languages: buildHreflang('https://arcisai.io/event') },
   openGraph: {
     title: 'Events | ArcisAI Surveillance Trade Shows & Conferences',

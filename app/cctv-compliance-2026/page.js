@@ -10,11 +10,7 @@ const DESCRIPTION =
 export const metadata = {
   title: TITLE.replace(/\s*\|\s*ArcisAI$/, ""),
   description: DESCRIPTION,
-  keywords: [
-    'CCTV compliance India 2026', 'BIS-ER certification explained', 'STQC certification CCTV',
-    'is my CCTV legal India', 'ER01 2024 CCTV', 'BIS CCTV registration', 'certified CCTV India guide',
-    'how to verify CCTV certificate',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: `${SITE_URL}/cctv-compliance-2026`, languages: buildHreflang(`${SITE_URL}/cctv-compliance-2026`) },
   openGraph: {
     title: TITLE, description: DESCRIPTION, url: `${SITE_URL}/cctv-compliance-2026`,

@@ -54,7 +54,15 @@ export default function SectionHub({ eyebrow, title, description, links = [], ba
       ) : (
       <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} spacing={5}>
         {links.map((l) => (
-        <NextLink key={l.slug} href={`/${basePath}/${l.slug}`} style={{ textDecoration: 'none' }}>
+        <NextLink
+          key={l.slug}
+          // SEO fix (2026-09-30, /locations hub): basePath="" previously
+          // produced `//slug` -- a protocol-relative URL the browser reads
+          // as a different host, not a broken-looking but harmless link.
+          // Every existing caller (state/industry/compare/resources) passes
+          // a real basePath so this is additive, not a behavior change for them.
+          href={basePath ? `/${basePath}/${l.slug}` : `/${l.slug}`}
+          style={{ textDecoration: 'none' }}>
         <VStack
           align="start"
           spacing={3}

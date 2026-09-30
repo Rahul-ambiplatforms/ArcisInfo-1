@@ -17,9 +17,7 @@ export const metadata = {
   title: 'Jalandhar Warriors: Official Campaign Hub',
   description:
     'The official Jalandhar Warriors campaign hub, powered by ArcisAI, India’s Made-in-India, STQC & BIS-ER certified AI CCTV brand.',
-  keywords: [
-    'Jalandhar Warriors', 'ArcisAI', 'AI CCTV India', 'Made in India surveillance',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: 'https://arcisai.io/jalandhar-warriors', languages: buildHreflang('https://arcisai.io/jalandhar-warriors') },
   openGraph: {
     title: 'Jalandhar Warriors: Powered by ArcisAI',

@@ -10,11 +10,7 @@ const DESCRIPTION =
 export const metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  keywords: [
-    'ArcisAI dealer', 'ArcisAI distributor', 'CCTV dealership India', 'CCTV distributor India',
-    'become a CCTV dealer', 'AI CCTV distributor India', 'Made in India CCTV dealer',
-    'CCTV channel partner India', 'STQC certified CCTV distributor', 'GeM CCTV supplier partner',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: `${SITE_URL}/become-a-distributor`, languages: buildHreflang(`${SITE_URL}/become-a-distributor`) },
   openGraph: {
     title: TITLE, description: DESCRIPTION, url: `${SITE_URL}/become-a-distributor`,
