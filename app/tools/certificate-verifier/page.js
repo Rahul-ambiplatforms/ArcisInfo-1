@@ -9,11 +9,7 @@ const DESCRIPTION =
 export const metadata = {
   title: TITLE.replace(/\s*\|\s*ArcisAI$/, ""),
   description: DESCRIPTION,
-  keywords: [
-    'BIS-ER certificate verify', 'STQC certificate check', 'is CCTV BIS certified',
-    'verify CCTV certification India', 'CCTV legal to sell India 2026',
-    'BIS ER01 2024 verification', 'STQC certified CCTV check', 'crsbis CCTV verify',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: `${SITE_URL}/tools/certificate-verifier`, languages: buildHreflang(`${SITE_URL}/tools/certificate-verifier`) },
   openGraph: {
     title: TITLE, description: DESCRIPTION,

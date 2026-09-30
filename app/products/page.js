@@ -20,10 +20,7 @@ const DESCRIPTION =
 export const metadata = {
   title: TITLE.replace(/\s*\|\s*ArcisAI$/, ''),
   description: DESCRIPTION,
-  keywords: [
-    'CCTV camera India', 'AI CCTV products', 'ArcisAI products', 'AI CCTV camera range',
-    'BIS-ER certified CCTV', 'STQC certified VMS', 'Made in India CCTV',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: `${SITE_URL}/products`, languages: buildHreflang(`${SITE_URL}/products`) },
   openGraph: {
     title: TITLE, description: DESCRIPTION, url: `${SITE_URL}/products`,

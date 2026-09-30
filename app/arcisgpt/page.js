@@ -5,12 +5,7 @@ export const metadata = {
   title: 'ArcisGPT | Conversational AI for CCTV — Talk to Your Footage',
   description:
     'ArcisGPT is India’s conversational AI for surveillance — search your CCTV footage in plain language.',
-  keywords: [
-    'ArcisGPT', 'conversational AI CCTV', 'conversational AI for surveillance India',
-    'talk to your CCTV footage', 'natural language video search India', 'AI video search India',
-    'generative AI CCTV India', 'GenAI surveillance', 'AI footage search', 'video summarization AI',
-    'visual intelligence', 'video evidence retrieval', 'LLM video analytics',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: 'https://arcisai.io/arcisgpt', languages: buildHreflang('https://arcisai.io/arcisgpt') },
   openGraph: {
     title: 'ArcisGPT | Gen AI Visual Intelligence & Smart Video Search',

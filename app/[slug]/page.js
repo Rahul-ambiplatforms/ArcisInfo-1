@@ -4,7 +4,7 @@ import {notFound, permanentRedirect} from 'next/navigation';
 import {
   resolveSeoPageData,
   resolveSeoKey,
-  getCctvLocationLinks,
+  getCuratedLocationLinks,
   getWifiLinks,
   isWifiClusterKey,
   getOrphanCrossLinks,
@@ -133,13 +133,19 @@ export default async function SlugPage(props) {
   // other); every ordinary city-cluster page now also links out to the
   // orphan cluster, so those 46 pages pick up real inbound links from the
   // ~150 already-indexed city pages, not only from one another.
+  // SEO fix (2026-09-30, SEO-012): getCctvLocationLinks() calls below were
+  // dumping the full 74+-city list (unbounded, self-links included) into
+  // every page's relatedLinks -- see getCuratedLocationLinks() for why this
+  // caps/rotates/self-excludes instead of hand-picking a "nearby cities"
+  // list. getOrphanCrossLinks() is untouched -- it's a separate, deliberate
+  // fix and must keep returning its full set.
   let relatedLinks;
   if (isWifiClusterKey(resolvedKey)) {
     relatedLinks = getWifiLinks();
   } else if (isOrphanClusterKey(resolvedKey)) {
-    relatedLinks = [...getOrphanCrossLinks(resolvedKey), ...getCctvLocationLinks()];
+    relatedLinks = [...getOrphanCrossLinks(resolvedKey), ...getCuratedLocationLinks(resolvedKey)];
   } else {
-    relatedLinks = [...getCctvLocationLinks(), ...getOrphanCrossLinks()];
+    relatedLinks = [...getCuratedLocationLinks(resolvedKey), ...getOrphanCrossLinks()];
   }
 
   return (

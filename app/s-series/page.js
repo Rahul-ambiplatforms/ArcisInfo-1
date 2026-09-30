@@ -5,10 +5,7 @@ export const metadata = {
   title: 'S-Series Premium AI CCTV Cameras',
   description:
     'Premium S-Series PTZ, Dome, Bullet AI cameras. 4G SIM, WiFi, PoE variants with edge AI, STQC certified. Enterprise-grade surveillance for demanding environments.',
-  keywords: [
-    'S-Series camera', 'PTZ camera', 'dome camera', 'bullet camera',
-    '4G SIM camera', 'WiFi CCTV', 'PoE camera', 'edge AI STQC',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: 'https://arcisai.io/s-series', languages: buildHreflang('https://arcisai.io/s-series') },
   openGraph: {
     title: 'S-Series Premium AI CCTV Cameras | ArcisAI',

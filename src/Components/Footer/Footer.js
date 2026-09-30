@@ -223,6 +223,10 @@ const Footer = () => {
             <Stack align={"flex-start"} spacing={2}>
               <ListHeader>RESOURCES</ListHeader>
               <FooterLink href={"/blog"}>Blogs</FooterLink>
+              {/* SEO fix (2026-09-30, SEO-007): new /locations hub
+                  (app/locations/page.js) -- link it from the footer so it's
+                  reachable sitewide, not just in the sitemap. */}
+              <FooterLink href={"/locations"}>Locations</FooterLink>
               <FooterLink href={"/documents"}>Documents</FooterLink>
               <FooterLink href={"/faq"}>FAQ</FooterLink>
               <FooterLink href={"/tools"}>Tools</FooterLink>

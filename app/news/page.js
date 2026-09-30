@@ -5,13 +5,7 @@ export const metadata = {
   title: 'News & Press Releases',
   description:
     'Latest news, announcements and press releases from ArcisAI. Stay up to date with our newest AI surveillance products, events and milestones.',
-  keywords: [
-    'ArcisAI news',
-    'AI surveillance news',
-    'press releases',
-    'announcements',
-    'company updates',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: 'https://arcisai.io/news', languages: buildHreflang('https://arcisai.io/news') },
   openGraph: {
     title: 'News & Press Releases | ArcisAI',

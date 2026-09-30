@@ -17,6 +17,7 @@ import seoPageDataMaharashtraCities from './seoPageDataMaharashtraCities';
 import seoPageDataTier2Cities from './seoPageDataTier2Cities';
 import seoPageDataWifi from './seoPageDataWifi';
 import seoPageData4G from './seoPageData4G';
+import { humanizeSlug } from './buildSeoPageSchemas';
 
 // seoPageDataCompliance is the one sibling file that exports an ARRAY, not a
 // slug-keyed object (SEO fix, 2026-09-21). Spreading an array into an object
@@ -158,13 +159,90 @@ export function getCctvLocationLinks() {
     .map(([k, v]) => ({ slug: k, title: (v && (v.heroTitle || v.title)) || k }));
 }
 
+// SEO fix (2026-09-30, SEO-012): getCctvLocationLinks() above returns every
+// city page (74+) with no bound and no self-exclusion -- app/[slug]/page.js
+// was spreading the ENTIRE list into every location page's relatedLinks,
+// including the page linking to itself. Deep-dived this before touching it:
+// the sibling /compare, /industry and /state routes already self-exclude and
+// stay small (~9-26 links); this is the one route dumping the full city
+// inventory, unbounded, on every page.
+//
+// Deliberately NOT gutting this to a hand-picked "same state" list -- the
+// data files don't carry a real state field (Gujarat/Maharashtra live in
+// their own files, but most cities don't), and guessing one per city risks
+// shipping wrong geography. Instead: exclude the current page, strip the
+// brand-suffix noise from the anchor text (was raw title-tag text, e.g.
+// "...| ArcisAI Dealer & Installation"), and cap the count per page while
+// deterministically rotating which slice of the full list each page gets
+// (seeded by the page's own key) -- so link equity/discovery still reaches
+// every city across the site in aggregate, just not 74+ on one page.
+// getOrphanCrossLinks() is untouched -- that's the separate, deliberate fix
+// that gives 46 previously-orphaned pages real inbound links and must keep
+// returning its full set regardless of this cap.
+function hashKey(key) {
+  let h = 0;
+  for (let i = 0; i < key.length; i += 1) {
+    h = (h * 31 + key.charCodeAt(i)) >>> 0;
+  }
+  return h;
+}
+
+// Short, human anchor text derived from the slug itself ("CCTV Cameras in
+// Gandhinagar") rather than the page's own heroTitle/title fields -- those
+// are long marketing copy meant for the page itself (e.g. Gandhinagar's is
+// "AI CCTV for Gandhinagar -- India's Most Planned Capital Needs India's
+// Most Certified Surveillance"), not a link label, and using them as one
+// was exactly the "anchors copied straight from title tags" complaint.
+function cityAnchorText(slug) {
+  const cityPart = slug.replace(/^(ai-)?cctv-cameras-/, '');
+  return `CCTV Cameras in ${humanizeSlug(cityPart)}`;
+}
+
+export function getCuratedLocationLinks(excludeKey, limit = 12) {
+  const all = getCctvLocationLinks()
+    .filter((l) => l.slug !== excludeKey)
+    .map((l) => ({ ...l, title: cityAnchorText(l.slug) }));
+  if (all.length <= limit) return all;
+  const start = hashKey(excludeKey || '') % all.length;
+  const rotated = [...all.slice(start), ...all.slice(0, start)];
+  return rotated.slice(0, limit);
+}
+
+// SEO fix (2026-09-30, SEO-001): these 10 /resources/* entries share one
+// identical boilerplate body — the same 5-bullet "Key Takeaways" list and the
+// same 2 generic FAQs, word-for-word, with no real guide content — while
+// their own meta descriptions promise specifics (a certified-brands list,
+// city-by-city pricing, legal citations) that don't exist on the page. That
+// mismatch between promise and content is exactly what a thin-content /
+// doorway-page classifier flags, and 10 near-identical bodies compound it
+// into a duplicate-content cluster besides.
+//
+// Noindexed here (not deleted, not 410'd) so the URLs and their data stay
+// intact for whoever rewrites them with real, sourced content — remove a key
+// from this list the same day its page gets real content, so it can be
+// resubmitted for indexing.
+export const THIN_CONTENT_RESOURCE_SLUGS = new Set([
+  'cctv-buyers-guide-india',
+  'how-to-choose-cctv-camera',
+  'stqc-certification-guide',
+  'cctv-installation-cost-india',
+  'ai-surveillance-roi-calculator',
+  'cctv-camera-comparison-chart',
+  'video-surveillance-laws-india',
+  'cctv-maintenance-guide',
+  'cloud-vs-onpremise-surveillance',
+  'smart-city-surveillance-guide',
+]);
+
 // Server-only: every /resources/<slug> landing-page link, for building a
 // crawlable internal-link index. The /resources/* pages are a fully orphaned
 // cluster (no site link points into them), so these links create the crawl
 // entry point. Uses the bare data KEY as the slug (skips any leading-slash
 // keys, which don't round-trip through the /resources/[pageSlug] route).
+// Excludes THIN_CONTENT_RESOURCE_SLUGS — noindexed pages shouldn't also be
+// the thing driving crawl budget into the rest of the cluster.
 export function getResourceLinks() {
-  return linksForCategory('resources');
+  return linksForCategory('resources').filter((l) => !THIN_CONTENT_RESOURCE_SLUGS.has(l.slug));
 }
 
 // Server-only: every /compare/<slug> landing-page link, for building a

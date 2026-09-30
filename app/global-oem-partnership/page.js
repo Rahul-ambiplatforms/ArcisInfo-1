@@ -10,11 +10,7 @@ const DESCRIPTION =
 export const metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  keywords: [
-    'CCTV OEM India', 'CCTV ODM manufacturer India', 'white label CCTV', 'NDAA compliant CCTV OEM',
-    'AI CCTV OEM partner', 'Made in India CCTV export', 'CCTV distributor international',
-    'private label CCTV cameras', 'surveillance OEM India', 'export CCTV manufacturer India',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: `${SITE_URL}/global-oem-partnership`, languages: buildHreflang(`${SITE_URL}/global-oem-partnership`) },
   openGraph: {
     title: TITLE, description: DESCRIPTION, url: `${SITE_URL}/global-oem-partnership`,

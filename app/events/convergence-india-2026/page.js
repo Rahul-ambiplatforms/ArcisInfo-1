@@ -5,10 +5,7 @@ export const metadata = {
   title: 'ArcisAI at Convergence India 2026 | AI Surveillance Exhibition',
   description:
     'Visit ArcisAI at Convergence India 2026. Experience live demos of AI CCTV cameras, ArcisGPT video search, and Cloud VMS.',
-  keywords: [
-    'Convergence India 2026', 'ArcisAI exhibition', 'AI surveillance demo',
-    'ArcisGPT demo', 'CCTV trade show India',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: 'https://arcisai.io/events/convergence-india-2026', languages: buildHreflang('https://arcisai.io/events/convergence-india-2026') },
   openGraph: {
     title: 'ArcisAI at Convergence India 2026',

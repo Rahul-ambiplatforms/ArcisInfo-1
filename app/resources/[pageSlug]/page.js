@@ -1,7 +1,7 @@
 import SEOLandingPage from '@/src/views/SEOLandingPages/SEOLandingPage';
 import SeoPageSchemaScripts from '@/src/Components/SEO/SeoPageSchemaScripts';
 import { notFound } from 'next/navigation';
-import { resolveSeoPageData, resolveSeoKey, getResourceLinks, getWifiLinks } from '@/src/data/resolveSeoPageData';
+import { resolveSeoPageData, resolveSeoKey, getResourceLinks, getWifiLinks, THIN_CONTENT_RESOURCE_SLUGS } from '@/src/data/resolveSeoPageData';
 import { buildSeoPageSchemas, buildSeoPageMetadata, humanizeSlug } from '@/src/data/buildSeoPageSchemas';
 
 // Statically prerender the resource landing pages so crawlers get fast static
@@ -23,13 +23,21 @@ export async function generateMetadata(props) {
   }
 
   const name = humanizeSlug(pageSlug);
-  return buildSeoPageMetadata({
+  const meta = buildSeoPageMetadata({
     pageData,
     path: `/resources/${pageSlug}`,
     fallbackTitle: `${name} | AI Surveillance Resources`,
     fallbackDescription: `ArcisAI resource: ${name}. In-depth guides, whitepapers, and technical documentation on AI CCTV and surveillance.`,
     ogImage: '/og/resources.jpg',
   });
+
+  // SEO fix (2026-09-30, SEO-001): see THIN_CONTENT_RESOURCE_SLUGS —
+  // noindex,follow until the page has real, non-boilerplate content. Remove
+  // this override for a slug the same day its content is rewritten.
+  if (THIN_CONTENT_RESOURCE_SLUGS.has(pageSlug)) {
+    return { ...meta, robots: { index: false, follow: true } };
+  }
+  return meta;
 }
 
 export default async function ResourcePage(props) {

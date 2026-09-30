@@ -5,12 +5,7 @@ export const metadata = {
   title: 'ArcisAI Cloud VMS | STQC Certified Video Management System',
   description:
     'Cloud & on-premise VMS with STQC certification — multi-location monitoring, AI alerts, smart playback, and ArcisGPT search.',
-  keywords: [
-    'STQC certified VMS India', 'STQC certified video management software',
-    'made in India cloud VMS', 'Indian cloud CCTV software', 'cloud VMS',
-    'video management system', 'AI video management software India',
-    'surveillance software', 'centralized monitoring', 'cloud CCTV',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: 'https://arcisai.io/cloud-vms', languages: buildHreflang('https://arcisai.io/cloud-vms') },
   openGraph: {
     title: 'ArcisAI Cloud VMS | STQC Certified Video Management System',

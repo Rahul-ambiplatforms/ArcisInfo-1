@@ -17,7 +17,7 @@ export const metadata = {
 title: 'CCTV & Surveillance Resources | ArcisAI',
 description:
 'Guides, comparisons, and reference material on AI CCTV, compliance, and surveillance technology from ArcisAI.',
-keywords: ['CCTV resources', 'AI CCTV guides', 'surveillance reference'],
+// SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
 alternates: { canonical: CANONICAL, languages: buildHreflang(CANONICAL) },
 openGraph: {
 title: 'CCTV & Surveillance Resources | ArcisAI',

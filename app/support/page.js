@@ -16,17 +16,7 @@ export const metadata = {
   title: 'ArcisAI Support Center | Camera FAQs & Troubleshooting',
   description:
     'Browse all ArcisAI camera FAQs — troubleshoot offline cameras, video quality, recordings, cloud storage, network access, alerts, firmware updates, and more.',
-  keywords: [
-    'ArcisAI support',
-    'ArcisAI FAQs',
-    'AI CCTV FAQs',
-    'camera troubleshooting',
-    'camera offline help',
-    'camera setup support',
-    'cloud VMS help',
-    'firmware update issues',
-    'ArcisAI help center',
-    ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: 'https://arcisai.io/support', languages: buildHreflang('https://arcisai.io/support') },
   openGraph: {
     title: 'ArcisAI Support Center | Camera FAQs & Troubleshooting',

@@ -1,4 +1,4 @@
-import { getAllSeoPageEntries } from '@/src/data/resolveSeoPageData';
+import { getAllSeoPageEntries, THIN_CONTENT_RESOURCE_SLUGS } from '@/src/data/resolveSeoPageData';
 import { supportCategories } from '@/src/views/Support/supportData';
 
 // Generated sitemap, replacing the hand-maintained public/sitemap.xml.
@@ -118,6 +118,8 @@ const STATIC_ROUTES = [
     ['/resources', 0.7, 'weekly'],
     ['/compare', 0.7, 'weekly'],
     ['/state', 0.6, 'monthly'],
+    // SEO fix (2026-09-30, SEO-007): app/locations/page.js is a new hub, add it here too.
+    ['/locations', 0.7, 'weekly'],
 
   // Tools
   ['/tools', 0.7, 'monthly'],
@@ -259,8 +261,12 @@ export default async function sitemap() {
     priority: 0.5,
   }));
 
+  // SEO fix (2026-09-30, SEO-001): the 10 boilerplate /resources/* pages are
+  // noindexed in app/resources/[pageSlug]/page.js — a sitemap must never list
+  // a URL that isn't meant to be indexed, so they're excluded here too.
   const seoEntries = getAllSeoPageEntries()
     .filter((e) => e.path)
+    .filter((e) => !THIN_CONTENT_RESOURCE_SLUGS.has(e.key))
     .map((e) => ({
       url: `${SITE}${e.path}`,
       lastModified: now,

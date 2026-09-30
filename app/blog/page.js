@@ -54,10 +54,7 @@ export const metadata = {
   title: 'ArcisAI Blog | AI Surveillance & Security Insights',
   description:
     'Latest in AI surveillance, smart cities, edge analytics, and video intelligence. Industry trends, product updates, and security best practices from ArcisAI.',
-  keywords: [
-    'surveillance blog', 'AI security articles', 'video analytics insights',
-    'smart city news', 'surveillance trends',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: 'https://arcisai.io/blog', languages: buildHreflang('https://arcisai.io/blog') },
   openGraph: {
     title: 'ArcisAI Blog | AI Surveillance & Security Insights',

@@ -242,7 +242,10 @@ export function buildSeoPageMetadata({ pageData, path, fallbackTitle, fallbackDe
   return {
     title,
     description,
-    ...(pageData?.keywords?.length ? { keywords: pageData.keywords } : {}),
+    // SEO fix (2026-09-30, SEO-018): the meta-keywords tag is ignored by
+    // Google/Bing and, on these location/topic pages, exposed each page's
+    // full locality/keyword list to anyone viewing source. Dropped sitewide
+    // for this shared builder (~270 SEO landing pages) rather than kept.
     alternates: { canonical, languages: buildHreflang(canonical) },
     openGraph: {
       // OG/Twitter titles are never run through Next's title template, so
@@ -252,7 +255,8 @@ export function buildSeoPageMetadata({ pageData, path, fallbackTitle, fallbackDe
       description,
       url: canonical,
       type: 'website',
-      images: [{ url: ogImage || '/og/home.jpg', width: 1200, height: 630 }],
+      siteName: 'ArcisAI',
+      images: [{ url: ogImage || '/og/home.jpg', width: 1200, height: 630, alt: finalTitleText }],
     },
     // Without an explicit `twitter` block here, Next.js metadata resolution
     // falls back to the root layout's generic default

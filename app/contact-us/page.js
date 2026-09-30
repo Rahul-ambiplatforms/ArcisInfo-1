@@ -6,10 +6,7 @@ export const metadata = {
   title: 'Contact ArcisAI | Get Surveillance Solutions',
   description:
     'Contact ArcisAI for demos, pricing, and technical consultation. Request a quote for AI CCTV, VMS, Bridge Device, or custom surveillance solutions.',
-  keywords: [
-    'contact ArcisAI', 'demo request', 'pricing inquiry',
-    'technical support', 'surveillance quote',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   // The en-IN / en / x-default hreflang set used to be declared inside
   // ContactUs.js via <Helmet>, where it never reached the server HTML. Moved
   // here so the alternates are actually emitted. Widened to the sitewide

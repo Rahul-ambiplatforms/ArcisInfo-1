@@ -9,11 +9,7 @@ const DESCRIPTION =
 export const metadata = {
   title: TITLE.replace(/\s*\|\s*ArcisAI$/, ""),
   description: DESCRIPTION,
-  keywords: [
-    'ArcisAI tools', 'ArcisAI software', 'ArcisAI configurator',
-    'camera configuration tool', 'CCTV software download',
-    'AI camera utilities', 'ArcisAI updates',
-  ],
+  // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: `${SITE_URL}/tools`, languages: buildHreflang(`${SITE_URL}/tools`) },
   openGraph: {
     title: TITLE,

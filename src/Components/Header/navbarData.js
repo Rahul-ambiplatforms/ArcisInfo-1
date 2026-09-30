@@ -21,6 +21,18 @@ export const dropdownData = {
   products: {
     title: "PRODUCTS",
     items: [
+      // SEO fix (2026-09-30, SEO-020): neither the /products hub nor /arcisgpt
+      // was linked from primary navigation, despite both being real,
+      // sitemap-listed pages (priority 0.9) — orphaned from internal link
+      // equity and from the crawl path entirely for a user browsing the menu.
+      {
+        label: "All Products",
+        link: "/products",
+      },
+      {
+        label: "ArcisGPT",
+        link: "/arcisgpt",
+      },
       {
         group: "S-Series",
         groupLink: "/s-series",
