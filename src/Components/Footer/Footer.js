@@ -344,8 +344,10 @@ const Footer = () => {
               />
             </NextLink> */}
 
-          {/* Right Side: Partner/Contact Links + Contact Info */}
-          {/* From xl up this becomes a row (CONTACT US beside the contact
+          {/* Right Side: Contact Info */}
+          {/* (The footer CONTACT US link that used to sit beside the details
+              has been removed; the notes below predate that.)
+              From xl up this becomes a row (CONTACT US beside the contact
               details) and stops shrinking, so website / email / phone fit on
               one line instead of the phone dropping to a second row.
               flexShrink=0 makes the badge HStack beside it yield the width
@@ -371,33 +373,8 @@ const Footer = () => {
             gap={6}
             sx={{ "@media (min-width: 1024px)": { flexShrink: 0 } }}
           >
-            {/* Partner and Contact Links */}
-            <HStack
-              spacing={3}
-              fontSize={{ base: "14px", md: "16px" }}
-              fontWeight="400"
-              mb={{ base: 2, xl: 0 }}
-            >
-              {/* <Link
-                as={NextLink}
-                to="/partner-with-us"
-                 color="white"
-                textDecoration="underline"
-                _hover={{ color: "gray.300" }}
-              >
-                PARTNER WITH US
-              </Link>
-              <Text color="white">|</Text> */}
-              <Link
-                as={NextLink}
-                href="/contact-us"
-                color="white"
-                textDecoration="underline"
-                _hover={{ color: "gray.300" }}
-              >
-                CONTACT US
-              </Link>
-            </HStack>
+            {/* The footer CONTACT US link that sat here was removed: the
+                header already carries Contact Us on every page. */}
 
             {/* Contact Information */}
             <VStack

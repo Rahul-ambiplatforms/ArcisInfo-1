@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   Box,
   Heading,
@@ -61,6 +61,26 @@ const EmptyState = ({ searchTerm }) => {
       </Text>
     </Box>
   );
+};
+
+// Blog pagination is mirrored in `?page=N` (page 1 = no param). Browser-only:
+// call these from effects and event handlers, never during render.
+const readPageFromUrl = () => {
+  const n = parseInt(
+    new URLSearchParams(window.location.search).get("page"),
+    10
+  );
+  return Number.isFinite(n) && n >= 1 ? n : 1;
+};
+
+const writePageToUrl = (page, mode) => {
+  const url = new URL(window.location.href);
+  if (page > 1) url.searchParams.set("page", String(page));
+  else url.searchParams.delete("page");
+  if (url.href === window.location.href) return;
+  // Other query params and the hash are kept; only `page` is touched.
+  if (mode === "push") window.history.pushState(null, "", url);
+  else window.history.replaceState(null, "", url);
 };
 
 export default function BlogsContent({ initialBlogs = [] }) {
@@ -150,16 +170,74 @@ export default function BlogsContent({ initialBlogs = [] }) {
     currentPage * blogsPerPage
   );
 
-  // If filtering/searching shrinks the list below the current page, snap back
-  // to page 1 so the user isn't stranded on an empty page.
+  // --- Pagination <-> URL + scroll ---------------------------------------
+  // Pagination used to live only in React state: the URL never changed, so
+  // /blog?page=2 opened page 1, Back/Forward skipped straight off the blog,
+  // and after clicking a page number the viewport stayed down by the pager.
+  // The page is now mirrored in `?page=N` (omitted for page 1) with the
+  // History API. useSearchParams is deliberately NOT used: on this statically
+  // rendered route it forces a client-side bailout, which would drop the blog
+  // cards out of the server HTML. The first render is always page 1 (the
+  // server cannot see the query string), then the effect below applies ?page.
+  // readPageFromUrl / writePageToUrl are defined at module scope above.
+  const listingTopRef = useRef(null);
+
+  // Bring the "Recent blog posts" heading back under the fixed 96px navbar.
+  // Deferred a frame so it runs after the new page of cards has rendered.
+  const scrollToListingTop = useCallback(() => {
+    requestAnimationFrame(() => {
+      const el = listingTopRef.current;
+      if (!el) return;
+      const NAV_OFFSET = 96 + 16;
+      const top = Math.max(
+        0,
+        el.getBoundingClientRect().top + window.scrollY - NAV_OFFSET
+      );
+      const reduceMotion = window.matchMedia?.(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+      window.scrollTo({ top, behavior: reduceMotion ? "auto" : "smooth" });
+    });
+  }, []);
+
+  // Apply ?page on load, and follow Back/Forward between blog pages.
   useEffect(() => {
-    if (currentPage > totalPages) setCurrentPage(1);
-  }, [currentPage, totalPages]);
+    const blogPath = window.location.pathname;
+    setCurrentPage(readPageFromUrl());
+    const onPopState = () => {
+      // Back/Forward to a different route: leave it to the router.
+      if (window.location.pathname !== blogPath) return;
+      setCurrentPage(readPageFromUrl());
+      scrollToListingTop();
+    };
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, [scrollToListingTop]);
+
+  const goToPage = (page) => {
+    if (page !== currentPage) {
+      writePageToUrl(page, "push");
+      setCurrentPage(page);
+    }
+    scrollToListingTop();
+  };
+
+  // If filtering/searching shrinks the list below the current page, snap back
+  // to page 1 so the user isn't stranded on an empty page. Skipped while the
+  // client fetch is still loading, so a ?page=N link is not reset to page 1
+  // before the list it points into has arrived.
+  useEffect(() => {
+    if (!isLoading && currentPage > totalPages) {
+      setCurrentPage(1);
+      writePageToUrl(1, "replace");
+    }
+  }, [currentPage, totalPages, isLoading]);
 
   // Handler for changing search term
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
     setCurrentPage(1); // Reset to first page on new search
+    writePageToUrl(1, "replace");
   };
 
   // Handler for clearing search
@@ -167,6 +245,7 @@ export default function BlogsContent({ initialBlogs = [] }) {
     setSearchTerm("");
     setDebouncedSearch("");
     setCurrentPage(1);
+    writePageToUrl(1, "replace");
   };
 
   // Handler for changing sort order
@@ -174,6 +253,7 @@ export default function BlogsContent({ initialBlogs = [] }) {
     if (sortOrder !== newOrder) {
       setSortOrder(newOrder);
       setCurrentPage(1); // Reset to first page on sort change
+      writePageToUrl(1, "replace");
     }
   };
 
@@ -206,8 +286,9 @@ export default function BlogsContent({ initialBlogs = [] }) {
           ) : null
         )}
       </Box>
-      {/* Header */}
+      {/* Header — also the scroll target after a page change. */}
       <Flex
+        ref={listingTopRef}
         direction={{ base: "column", md: "row" }}
         justifyContent="space-between"
         mt={{ base: "5%", md: "0" }}
@@ -285,7 +366,7 @@ export default function BlogsContent({ initialBlogs = [] }) {
                 cursor="pointer"
                 // bgColor={sortOrder === "oldest" ? "#e0e0e0" : "white"}
                 bg="white"
-                _hover="white"
+                _hover={{ bg: "white" }}
                 transform="rotate(90deg)"
                 onClick={() => handleSortChange("oldest")}
                 isDisabled={isLoading || blogs.length === 0}
@@ -311,7 +392,7 @@ export default function BlogsContent({ initialBlogs = [] }) {
                 cursor="pointer"
                 // bgColor={sortOrder === "latest" ? "#e0e0e0" : "white"}
                 bg="white"
-                _hover="white"
+                _hover={{ bg: "white" }}
                 transform="rotate(90deg)"
                 onClick={() => handleSortChange("latest")}
                 isDisabled={isLoading || blogs.length === 0}
@@ -427,7 +508,7 @@ export default function BlogsContent({ initialBlogs = [] }) {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <g clip-path="url(#clip0_5166_926)">
+                          <g clipPath="url(#clip0_5166_926)">
                             <path
                               d="M10.502 4.11673e-07C8.42529 4.20711e-07 6.39527 0.61579 4.66857 1.7695C2.94188 2.92321 1.59607 4.56303 0.801316 6.4816C0.00656746 8.40016 -0.201425 10.5113 0.203641 12.5481C0.608706 14.5849 1.60864 16.4558 3.07699 17.9243C4.54534 19.3928 6.41617 20.3929 8.45291 20.7981C10.4896 21.2034 12.6008 20.9956 14.5195 20.201C16.4381 19.4064 18.078 18.0608 19.2319 16.3342C20.3858 14.6076 21.0018 12.5776 21.002 10.501C21.0025 9.12191 20.7312 7.75625 20.2038 6.48205C19.6763 5.20784 18.9029 4.05006 17.9278 3.07486C16.9527 2.09967 15.795 1.32617 14.5208 0.798572C13.2467 0.270974 11.881 -0.000385799 10.502 4.11673e-07ZM10.502 18.9006C8.84048 18.9006 7.21631 18.4079 5.83484 17.4848C4.45337 16.5618 3.37665 15.2498 2.74083 13.7148C2.10501 12.1798 1.93865 10.4907 2.26278 8.86113C2.58692 7.23157 3.387 5.73473 4.56184 4.55989C5.73669 3.38504 7.23353 2.58497 8.86308 2.26083C10.4926 1.93669 12.1817 2.10305 13.7167 2.73887C15.2517 3.37469 16.5637 4.45141 17.4868 5.83288C18.4099 7.21435 18.9025 8.83852 18.9025 10.5C18.8961 12.726 18.0089 14.859 16.4349 16.433C14.8609 18.007 12.7279 18.8941 10.502 18.9006Z"
                               fill="#9678E1"
@@ -537,7 +618,7 @@ export default function BlogsContent({ initialBlogs = [] }) {
             _hover={{ bg: "#ded5f5ff" }}
             isDisabled={totalPages === 1}
             onClick={() => {
-              setCurrentPage((prev) => (prev === 1 ? totalPages : prev - 1));
+              goToPage(currentPage === 1 ? totalPages : currentPage - 1);
             }}
             minW={8}
             px={0}
@@ -609,7 +690,7 @@ export default function BlogsContent({ initialBlogs = [] }) {
                   minW={8}
                   px={0}
                   _hover={isActive ? {} : { bg: "#ded5f5ff" }}
-                  onClick={() => setCurrentPage(page)}
+                  onClick={() => goToPage(page)}
                   isDisabled={totalPages === 1}
                 >
                   {page}
@@ -628,7 +709,7 @@ export default function BlogsContent({ initialBlogs = [] }) {
             _hover={{ bg: "#ded5f5ff" }}
             isDisabled={totalPages === 1}
             onClick={() => {
-              setCurrentPage((prev) => (prev === totalPages ? 1 : prev + 1));
+              goToPage(currentPage === totalPages ? 1 : currentPage + 1);
             }}
             minW={8}
             px={0}

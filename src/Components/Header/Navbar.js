@@ -535,13 +535,19 @@ const Navbar = () => {
           </HStack>
         </Flex>
 
-        {/* RIGHT ACTIONS */}
+        {/* RIGHT ACTIONS — ml="auto" absorbs all free space so this group
+            sits against the search icon instead of being centred by the
+            parent's space-between. mr keeps a gap before the search icon;
+            TIGHT drops it because at 1280px the bar has only ~2px of free
+            space, so any margin there would overlap SUPPORT. */}
         <HStack
           spacing={6}
           display="none"
+          ml="auto"
+          mr={4}
           sx={{
             [DESKTOP_NAV]: { display: 'flex' },
-            [TIGHT]: { gap: '16px' },
+            [TIGHT]: { gap: '16px', marginRight: 0 },
           }}
           alignItems="center"
           flexShrink={0}
