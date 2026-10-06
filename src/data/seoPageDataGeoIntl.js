@@ -13,7 +13,7 @@ const seoPageDataGeoIntl = {
       {
         title: "Why UAE Enterprises Choose ArcisAI",
         content: "The UAE's rapid urbanization and smart city initiatives demand next-generation surveillance. ArcisAI delivers enterprise-grade AI cameras with face recognition, ANPR, and real-time intrusion detection. Our cameras support Arabic language interfaces and comply with UAE data sovereignty requirements.",
-        stats: [{ value: "7", label: "Emirates Covered" }, { value: "99.9%", label: "Uptime SLA" }, { value: "<50ms", label: "AI Response Time" }],
+        stats: [{ value: "7", label: "Emirates Covered" }, { value: "99.9%", label: "Uptime Target" }, { value: "<50ms", label: "AI Response Time" }],
         features: ["Face Recognition & ANPR", "Arabic Language Support", "UAE Data Sovereignty Compliant"]
       },
       {
@@ -42,7 +42,7 @@ const seoPageDataGeoIntl = {
       {
         title: "Powering Vision 2030 Smart Cities",
         content: "Saudi Arabia's Vision 2030 demands world-class security infrastructure. ArcisAI delivers AI cameras with crowd analytics for Hajj management, face recognition for corporate campuses in Riyadh, and ANPR for NEOM and smart city projects across the Kingdom.",
-        stats: [{ value: "13", label: "Regions Covered" }, { value: "99.9%", label: "Uptime SLA" }, { value: "1M+", label: "Faces Processed Daily" }],
+        stats: [{ value: "13", label: "Regions Covered" }, { value: "99.9%", label: "Uptime Target" }, { value: "1M+", label: "Faces Processed Daily" }],
         features: ["Crowd Analytics for Hajj", "Vision 2030 Compliant", "Arabic Interface"]
       },
       {
@@ -114,7 +114,7 @@ const seoPageDataGeoIntl = {
       {
         title: "Enterprise Surveillance Across Australia",
         content: "Australia's diverse security landscape requires adaptable AI surveillance. ArcisAI delivers cameras with face recognition, wildlife detection for rural properties, ANPR for logistics hubs, and crowd analytics for major events across Sydney, Melbourne, Brisbane, Perth, and Adelaide.",
-        stats: [{ value: "6", label: "States Covered" }, { value: "99.9%", label: "Uptime SLA" }, { value: "24/7", label: "AEST Support" }],
+        stats: [{ value: "6", label: "States Covered" }, { value: "99.9%", label: "Uptime Target" }, { value: "24/7", label: "AEST Support" }],
         features: ["Privacy Act Compliant", "Bushfire Detection AI", "Remote Site Monitoring"]
       }
     ],

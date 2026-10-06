@@ -1,3 +1,8 @@
+// Bare slug -> sectioned URL map (generated; see scripts/generate-seo-section-redirects.mjs).
+// Served as config-level redirects instead of permanentRedirect() inside the
+// prerendered /[slug] page, which produced a doubled "x,x" Location on production.
+const seoSectionRedirects = require("./src/data/seoSectionRedirects.json");
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -263,9 +268,26 @@ const nextConfig = {
         permanent: true,
         statusCode: 301,
       },
+      // SEO-005 (2026-10-06): STQC-for-CCTV cluster consolidated onto ONE winner,
+      // /cctv-stqc-certification-guide. The two losers targeted the same query with
+      // near-identical copy; /stqc-compliance-guide-cctv also asserted a blanket
+      // "mandatory for all CCTV" claim the audit flagged as inaccurate. Old
+      // -2025 URL now points straight at the winner (no redirect chain).
       {
         source: "/stqc-compliance-guide-cctv-2025",
-        destination: "/stqc-compliance-guide-cctv",
+        destination: "/cctv-stqc-certification-guide",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/stqc-compliance-guide-cctv",
+        destination: "/cctv-stqc-certification-guide",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
+        source: "/resources/stqc-certification-guide",
+        destination: "/cctv-stqc-certification-guide",
         permanent: true,
         statusCode: 301,
       },
@@ -318,6 +340,15 @@ const nextConfig = {
       },
       {
         source: "/blog/edge-ai-vs-cloud-video-surveillance",
+        destination: "/blog/edge-ai-vs-cloud-ai-video-surveillance-enterprise-buyers-guide-2026",
+        permanent: true,
+        statusCode: 301,
+      },
+      // GSC "Not found (404)" (2026-10-06): CMS post is gone. Closest live
+      // buyer's guide on the same topic (AI video surveillance); change the
+      // destination if the content team republishes or prefers another post.
+      {
+        source: "/blog/ai-video-analytics-buyers-guide",
         destination: "/blog/edge-ai-vs-cloud-ai-video-surveillance-enterprise-buyers-guide-2026",
         permanent: true,
         statusCode: 301,
@@ -699,6 +730,18 @@ const nextConfig = {
         permanent: true,
         statusCode: 301,
       },
+
+      // Section redirects (generated, 2026-10-06). The STQC cluster losers point
+      // straight at the winner so there is never a redirect chain.
+      ...Object.entries(seoSectionRedirects).map(([slug, destination]) => ({
+        source: `/${slug}`,
+        destination:
+          destination === "/resources/stqc-certification-guide"
+            ? "/cctv-stqc-certification-guide"
+            : destination,
+        permanent: true,
+        statusCode: 301,
+      })),
     ];
   },
 };

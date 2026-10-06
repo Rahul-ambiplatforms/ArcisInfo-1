@@ -13,7 +13,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Mumbai. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Mumbai Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Mumbai"]},
+      {title: "Why Mumbai Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Mumbai"]},
       {title: "Products Available in Mumbai", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -33,7 +33,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Delhi. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Delhi Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Delhi"]},
+      {title: "Why Delhi Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Delhi"]},
       {title: "Products Available in Delhi", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -53,7 +53,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Bangalore. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Bangalore Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Bangalore"]},
+      {title: "Why Bangalore Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Bangalore"]},
       {title: "Products Available in Bangalore", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -73,7 +73,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Hyderabad. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Hyderabad Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Hyderabad"]},
+      {title: "Why Hyderabad Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Hyderabad"]},
       {title: "Products Available in Hyderabad", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -93,7 +93,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Chennai. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Chennai Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Chennai"]},
+      {title: "Why Chennai Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Chennai"]},
       {title: "Products Available in Chennai", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -113,7 +113,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Pune. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Pune Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Pune"]},
+      {title: "Why Pune Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Pune"]},
       {title: "Products Available in Pune", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -133,7 +133,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Ahmedabad. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Ahmedabad Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Ahmedabad"]},
+      {title: "Why Ahmedabad Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Ahmedabad"]},
       {title: "Products Available in Ahmedabad", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -153,7 +153,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Kolkata. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Kolkata Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Kolkata"]},
+      {title: "Why Kolkata Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Kolkata"]},
       {title: "Products Available in Kolkata", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -173,7 +173,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Jaipur. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Jaipur Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Jaipur"]},
+      {title: "Why Jaipur Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Jaipur"]},
       {title: "Products Available in Jaipur", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -193,7 +193,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Lucknow. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Lucknow Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Lucknow"]},
+      {title: "Why Lucknow Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Lucknow"]},
       {title: "Products Available in Lucknow", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -213,7 +213,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Chandigarh. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Chandigarh Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Chandigarh"]},
+      {title: "Why Chandigarh Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Chandigarh"]},
       {title: "Products Available in Chandigarh", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -233,7 +233,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Indore. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Indore Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Indore"]},
+      {title: "Why Indore Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Indore"]},
       {title: "Products Available in Indore", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -253,7 +253,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Nagpur. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Nagpur Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Nagpur"]},
+      {title: "Why Nagpur Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Nagpur"]},
       {title: "Products Available in Nagpur", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -273,7 +273,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Bhopal. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Bhopal Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Bhopal"]},
+      {title: "Why Bhopal Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Bhopal"]},
       {title: "Products Available in Bhopal", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -293,7 +293,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Visakhapatnam. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Visakhapatnam Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Visakhapatnam"]},
+      {title: "Why Visakhapatnam Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Visakhapatnam"]},
       {title: "Products Available in Visakhapatnam", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -313,7 +313,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Patna. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Patna Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Patna"]},
+      {title: "Why Patna Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Patna"]},
       {title: "Products Available in Patna", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -333,7 +333,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Vadodara. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Vadodara Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Vadodara"]},
+      {title: "Why Vadodara Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Vadodara"]},
       {title: "Products Available in Vadodara", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -353,7 +353,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Ghaziabad. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Ghaziabad Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Ghaziabad"]},
+      {title: "Why Ghaziabad Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Ghaziabad"]},
       {title: "Products Available in Ghaziabad", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -373,7 +373,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Ludhiana. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Ludhiana Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Ludhiana"]},
+      {title: "Why Ludhiana Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Ludhiana"]},
       {title: "Products Available in Ludhiana", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -393,7 +393,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Agra. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Agra Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Agra"]},
+      {title: "Why Agra Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Agra"]},
       {title: "Products Available in Agra", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -413,7 +413,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Nashik. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Nashik Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Nashik"]},
+      {title: "Why Nashik Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Nashik"]},
       {title: "Products Available in Nashik", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -433,7 +433,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Faridabad. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Faridabad Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Faridabad"]},
+      {title: "Why Faridabad Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Faridabad"]},
       {title: "Products Available in Faridabad", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -453,7 +453,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Meerut. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Meerut Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Meerut"]},
+      {title: "Why Meerut Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Meerut"]},
       {title: "Products Available in Meerut", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -473,7 +473,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Rajkot. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Rajkot Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Rajkot"]},
+      {title: "Why Rajkot Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Rajkot"]},
       {title: "Products Available in Rajkot", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -493,7 +493,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Varanasi. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Varanasi Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Varanasi"]},
+      {title: "Why Varanasi Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Varanasi"]},
       {title: "Products Available in Varanasi", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -513,7 +513,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Srinagar. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Srinagar Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Srinagar"]},
+      {title: "Why Srinagar Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Srinagar"]},
       {title: "Products Available in Srinagar", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -533,7 +533,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Aurangabad. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Aurangabad Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Aurangabad"]},
+      {title: "Why Aurangabad Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Aurangabad"]},
       {title: "Products Available in Aurangabad", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -553,7 +553,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Dhanbad. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Dhanbad Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Dhanbad"]},
+      {title: "Why Dhanbad Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Dhanbad"]},
       {title: "Products Available in Dhanbad", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -573,7 +573,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Amritsar. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Amritsar Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Amritsar"]},
+      {title: "Why Amritsar Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Amritsar"]},
       {title: "Products Available in Amritsar", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -593,7 +593,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Prayagraj. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Prayagraj Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Prayagraj"]},
+      {title: "Why Prayagraj Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Prayagraj"]},
       {title: "Products Available in Prayagraj", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -613,7 +613,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Ranchi. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Ranchi Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Ranchi"]},
+      {title: "Why Ranchi Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Ranchi"]},
       {title: "Products Available in Ranchi", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -633,7 +633,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Howrah. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Howrah Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Howrah"]},
+      {title: "Why Howrah Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Howrah"]},
       {title: "Products Available in Howrah", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -653,7 +653,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Coimbatore. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Coimbatore Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Coimbatore"]},
+      {title: "Why Coimbatore Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Coimbatore"]},
       {title: "Products Available in Coimbatore", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -673,7 +673,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Jabalpur. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Jabalpur Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Jabalpur"]},
+      {title: "Why Jabalpur Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Jabalpur"]},
       {title: "Products Available in Jabalpur", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -693,7 +693,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Gwalior. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Gwalior Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Gwalior"]},
+      {title: "Why Gwalior Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Gwalior"]},
       {title: "Products Available in Gwalior", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -713,7 +713,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Vijayawada. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Vijayawada Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Vijayawada"]},
+      {title: "Why Vijayawada Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Vijayawada"]},
       {title: "Products Available in Vijayawada", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -733,7 +733,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Jodhpur. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Jodhpur Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Jodhpur"]},
+      {title: "Why Jodhpur Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Jodhpur"]},
       {title: "Products Available in Jodhpur", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -753,7 +753,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Madurai. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Madurai Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Madurai"]},
+      {title: "Why Madurai Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Madurai"]},
       {title: "Products Available in Madurai", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -773,7 +773,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Raipur. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Raipur Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Raipur"]},
+      {title: "Why Raipur Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Raipur"]},
       {title: "Products Available in Raipur", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -793,7 +793,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Kota. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Kota Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Kota"]},
+      {title: "Why Kota Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Kota"]},
       {title: "Products Available in Kota", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -813,7 +813,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Guwahati. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Guwahati Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Guwahati"]},
+      {title: "Why Guwahati Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Guwahati"]},
       {title: "Products Available in Guwahati", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -833,7 +833,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Dehradun. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Dehradun Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Dehradun"]},
+      {title: "Why Dehradun Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Dehradun"]},
       {title: "Products Available in Dehradun", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -853,7 +853,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Noida. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Noida Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Noida"]},
+      {title: "Why Noida Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Noida"]},
       {title: "Products Available in Noida", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -873,7 +873,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Gurugram. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Gurugram Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Gurugram"]},
+      {title: "Why Gurugram Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Gurugram"]},
       {title: "Products Available in Gurugram", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -893,7 +893,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Thane. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Thane Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Thane"]},
+      {title: "Why Thane Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Thane"]},
       {title: "Products Available in Thane", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -913,7 +913,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Navi Mumbai. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Navi Mumbai Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Navi Mumbai"]},
+      {title: "Why Navi Mumbai Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Navi Mumbai"]},
       {title: "Products Available in Navi Mumbai", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -933,7 +933,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Kochi. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Kochi Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Kochi"]},
+      {title: "Why Kochi Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Kochi"]},
       {title: "Products Available in Kochi", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -953,7 +953,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Thiruvananthapuram. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Thiruvananthapuram Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Thiruvananthapuram"]},
+      {title: "Why Thiruvananthapuram Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Thiruvananthapuram"]},
       {title: "Products Available in Thiruvananthapuram", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -973,7 +973,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Mysore. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Mysore Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Mysore"]},
+      {title: "Why Mysore Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Mysore"]},
       {title: "Products Available in Mysore", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -993,7 +993,7 @@ const seoPageData = {
     heroDescription: "ArcisAI brings STQC-certified, Made-in-India AI cameras to Bhubaneswar. 8 AI detections on camera, cloud VMS, instant GPT-powered insights. Professional installation & support.",
     category: "city",
     sections: [
-      {title: "Why Bhubaneswar Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime SLA", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Bhubaneswar"]},
+      {title: "Why Bhubaneswar Businesses Choose ArcisAI", stats: [{label: "AI Detections", value: "8+"}, {label: "Camera Models", value: "30+"}, {label: "Uptime Target", value: "99.9%"}, {label: "Cities Served", value: "50+"}], features: ["STQC certified — mandatory for govt projects", "Edge AI — detections happen on camera, not cloud", "4G SIM cameras — no WiFi needed", "Cloud VMS with ArcisGPT smart search", "Professional installation in Bhubaneswar"]},
       {title: "Products Available in Bhubaneswar", features: ["S-Series Premium: PTZ, Dome, Bullet (4G/WiFi/PoE)", "ECO-Series Value: Same AI at affordable prices", "Bridge Device: Convert existing cameras to AI", "Cloud VMS: Monitor all locations from one dashboard", "ArcisGPT: Ask questions about your footage in plain English"]}
     ],
     faqs: [
@@ -1016,7 +1016,7 @@ const seoPageData = {
     heroDescription: "Smart retail analytics, shrinkage prevention, footfall counting. ArcisAI delivers STQC-certified, edge AI-powered cameras with cloud VMS and ArcisGPT analytics.",
     category: "industry",
     sections: [
-      {title: "Why Retail Needs a Smart Shop Camera & Footfall Counter", stats: [{label:"AI Detections",value:"8+"},{label:"False Alarm Reduction",value:"95%"},{label:"Response Time",value:"<3 sec"},{label:"ROI Period",value:"6 months"}], features: ["Real-time AI threat detection on camera","Cloud VMS for multi-location monitoring","ArcisGPT: Natural language video search","STQC certified for government compliance","24/7 support with 99.9% uptime SLA"]},
+      {title: "Why Retail Needs a Smart Shop Camera & Footfall Counter", stats: [{label:"AI Detections",value:"8+"},{label:"Typical False Alarm Reduction",value:"95%"},{label:"Typical Response Time",value:"<3 sec"},{label:"Typical ROI Period",value:"6 months"}], features: ["Real-time AI threat detection on camera","Cloud VMS for multi-location monitoring","ArcisGPT: Natural language video search","STQC certified for government compliance","24/7 support with 99.9% uptime SLA"]},
       {title: "Recommended Products", features: ["S-Series PTZ for large area coverage","S-Series Dome for indoor monitoring","ECO-Series for budget deployments","4G SIM cameras for remote sites","Bridge Device for legacy camera upgrade"]}
     ],
     faqs: [
@@ -1036,7 +1036,7 @@ const seoPageData = {
     heroDescription: "Hospital surveillance, patient monitoring, access control. ArcisAI delivers STQC-certified, edge AI-powered cameras with cloud VMS and ArcisGPT analytics.",
     category: "industry",
     sections: [
-      {title: "Why Healthcare Needs AI CCTV", stats: [{label:"AI Detections",value:"8+"},{label:"False Alarm Reduction",value:"95%"},{label:"Response Time",value:"<3 sec"},{label:"ROI Period",value:"6 months"}], features: ["Real-time AI threat detection on camera","Cloud VMS for multi-location monitoring","ArcisGPT: Natural language video search","STQC certified for government compliance","24/7 support with 99.9% uptime SLA"]},
+      {title: "Why Healthcare Needs AI CCTV", stats: [{label:"AI Detections",value:"8+"},{label:"Typical False Alarm Reduction",value:"95%"},{label:"Typical Response Time",value:"<3 sec"},{label:"Typical ROI Period",value:"6 months"}], features: ["Real-time AI threat detection on camera","Cloud VMS for multi-location monitoring","ArcisGPT: Natural language video search","STQC certified for government compliance","24/7 support with 99.9% uptime SLA"]},
       {title: "Recommended Products", features: ["S-Series PTZ for large area coverage","S-Series Dome for indoor monitoring","ECO-Series for budget deployments","4G SIM cameras for remote sites","Bridge Device for legacy camera upgrade"]}
     ],
     faqs: [
@@ -1056,7 +1056,7 @@ const seoPageData = {
     heroDescription: "School and campus security with AI threat detection. ArcisAI delivers STQC-certified, edge AI-powered cameras with cloud VMS and ArcisGPT analytics.",
     category: "industry",
     sections: [
-      {title: "Why Education Needs AI CCTV", stats: [{label:"AI Detections",value:"8+"},{label:"False Alarm Reduction",value:"95%"},{label:"Response Time",value:"<3 sec"},{label:"ROI Period",value:"6 months"}], features: ["Real-time AI threat detection on camera","Cloud VMS for multi-location monitoring","ArcisGPT: Natural language video search","STQC certified for government compliance","24/7 support with 99.9% uptime SLA"]},
+      {title: "Why Education Needs AI CCTV", stats: [{label:"AI Detections",value:"8+"},{label:"Typical False Alarm Reduction",value:"95%"},{label:"Typical Response Time",value:"<3 sec"},{label:"Typical ROI Period",value:"6 months"}], features: ["Real-time AI threat detection on camera","Cloud VMS for multi-location monitoring","ArcisGPT: Natural language video search","STQC certified for government compliance","24/7 support with 99.9% uptime SLA"]},
       {title: "Recommended Products", features: ["S-Series PTZ for large area coverage","S-Series Dome for indoor monitoring","ECO-Series for budget deployments","4G SIM cameras for remote sites","Bridge Device for legacy camera upgrade"]}
     ],
     faqs: [
@@ -1076,7 +1076,7 @@ const seoPageData = {
     heroDescription: "Factory floor monitoring, safety compliance, quality control. ArcisAI delivers STQC-certified, edge AI-powered cameras with cloud VMS and ArcisGPT analytics.",
     category: "industry",
     sections: [
-      {title: "Why Manufacturing Needs AI CCTV", stats: [{label:"AI Detections",value:"8+"},{label:"False Alarm Reduction",value:"95%"},{label:"Response Time",value:"<3 sec"},{label:"ROI Period",value:"6 months"}], features: ["Real-time AI threat detection on camera","Cloud VMS for multi-location monitoring","ArcisGPT: Natural language video search","STQC certified for government compliance","24/7 support with 99.9% uptime SLA"]},
+      {title: "Why Manufacturing Needs AI CCTV", stats: [{label:"AI Detections",value:"8+"},{label:"Typical False Alarm Reduction",value:"95%"},{label:"Typical Response Time",value:"<3 sec"},{label:"Typical ROI Period",value:"6 months"}], features: ["Real-time AI threat detection on camera","Cloud VMS for multi-location monitoring","ArcisGPT: Natural language video search","STQC certified for government compliance","24/7 support with 99.9% uptime SLA"]},
       {title: "Recommended Products", features: ["S-Series PTZ for large area coverage","S-Series Dome for indoor monitoring","ECO-Series for budget deployments","WiFi cameras for offices, cabins and finished admin areas within the site","4G SIM cameras for remote sites","Bridge Device for legacy camera upgrade"]}
     ],
     faqs: [
@@ -1097,7 +1097,7 @@ const seoPageData = {
     heroDescription: "Warehouse monitoring, inventory tracking, loading dock security. ArcisAI delivers STQC-certified, edge AI-powered cameras with cloud VMS and ArcisGPT analytics.",
     category: "industry",
     sections: [
-      {title: "Why Warehouse & Logistics Needs AI CCTV", stats: [{label:"AI Detections",value:"8+"},{label:"False Alarm Reduction",value:"95%"},{label:"Response Time",value:"<3 sec"},{label:"ROI Period",value:"6 months"}], features: ["Real-time AI threat detection on camera","Cloud VMS for multi-location monitoring","ArcisGPT: Natural language video search","STQC certified for government compliance","24/7 support with 99.9% uptime SLA"]},
+      {title: "Why Warehouse & Logistics Needs AI CCTV", stats: [{label:"AI Detections",value:"8+"},{label:"Typical False Alarm Reduction",value:"95%"},{label:"Typical Response Time",value:"<3 sec"},{label:"Typical ROI Period",value:"6 months"}], features: ["Real-time AI threat detection on camera","Cloud VMS for multi-location monitoring","ArcisGPT: Natural language video search","STQC certified for government compliance","24/7 support with 99.9% uptime SLA"]},
       {title: "Recommended Products", features: ["S-Series PTZ for large area coverage","S-Series Dome for indoor monitoring","ECO-Series for budget deployments","WiFi cameras for site offices and dispatch cabins where cabling is impractical","4G SIM cameras for remote sites","Bridge Device for legacy camera upgrade"]}
     ],
     faqs: [
@@ -1118,7 +1118,7 @@ const seoPageData = {
     heroDescription: "STQC-certified surveillance for government buildings and defense installations. ArcisAI delivers STQC-certified, edge AI-powered cameras with cloud VMS and ArcisGPT analytics.",
     category: "industry",
     sections: [
-      {title: "Why Government & Defense Needs AI CCTV", stats: [{label:"AI Detections",value:"8+"},{label:"False Alarm Reduction",value:"95%"},{label:"Response Time",value:"<3 sec"},{label:"ROI Period",value:"6 months"}], features: ["Real-time AI threat detection on camera","Cloud VMS for multi-location monitoring","ArcisGPT: Natural language video search","STQC certified for government compliance","24/7 support with 99.9% uptime SLA"]},
+      {title: "Why Government & Defense Needs AI CCTV", stats: [{label:"AI Detections",value:"8+"},{label:"Typical False Alarm Reduction",value:"95%"},{label:"Typical Response Time",value:"<3 sec"},{label:"Typical ROI Period",value:"6 months"}], features: ["Real-time AI threat detection on camera","Cloud VMS for multi-location monitoring","ArcisGPT: Natural language video search","STQC certified for government compliance","24/7 support with 99.9% uptime SLA"]},
       {title: "Recommended Products", features: ["S-Series PTZ for large area coverage","S-Series Dome for indoor monitoring","ECO-Series for budget deployments","4G SIM cameras for remote sites","Bridge Device for legacy camera upgrade"]}
     ],
     faqs: [
@@ -1138,7 +1138,7 @@ const seoPageData = {
     heroDescription: "City-wide AI surveillance for traffic, crowd management, public safety. ArcisAI delivers STQC-certified, edge AI-powered cameras with cloud VMS and ArcisGPT analytics.",
     category: "industry",
     sections: [
-      {title: "Why Smart City Needs AI CCTV", stats: [{label:"AI Detections",value:"8+"},{label:"False Alarm Reduction",value:"95%"},{label:"Response Time",value:"<3 sec"},{label:"ROI Period",value:"6 months"}], features: ["Real-time AI threat detection on camera","Cloud VMS for multi-location monitoring","ArcisGPT: Natural language video search","STQC certified for government compliance","24/7 support with 99.9% uptime SLA"]},
+      {title: "Why Smart City Needs AI CCTV", stats: [{label:"AI Detections",value:"8+"},{label:"Typical False Alarm Reduction",value:"95%"},{label:"Typical Response Time",value:"<3 sec"},{label:"Typical ROI Period",value:"6 months"}], features: ["Real-time AI threat detection on camera","Cloud VMS for multi-location monitoring","ArcisGPT: Natural language video search","STQC certified for government compliance","24/7 support with 99.9% uptime SLA"]},
       {title: "Recommended Products", features: ["S-Series PTZ for large area coverage","S-Series Dome for indoor monitoring","ECO-Series for budget deployments","4G SIM cameras for remote sites","Bridge Device for legacy camera upgrade"]}
     ],
     faqs: [
@@ -1158,7 +1158,7 @@ const seoPageData = {
     heroDescription: "Hotel and resort surveillance with guest privacy compliance. ArcisAI delivers STQC-certified, edge AI-powered cameras with cloud VMS and ArcisGPT analytics.",
     category: "industry",
     sections: [
-      {title: "Why Hospitality Needs AI CCTV", stats: [{label:"AI Detections",value:"8+"},{label:"False Alarm Reduction",value:"95%"},{label:"Response Time",value:"<3 sec"},{label:"ROI Period",value:"6 months"}], features: ["Real-time AI threat detection on camera","Cloud VMS for multi-location monitoring","ArcisGPT: Natural language video search","STQC certified for government compliance","24/7 support with 99.9% uptime SLA"]},
+      {title: "Why Hospitality Needs AI CCTV", stats: [{label:"AI Detections",value:"8+"},{label:"Typical False Alarm Reduction",value:"95%"},{label:"Typical Response Time",value:"<3 sec"},{label:"Typical ROI Period",value:"6 months"}], features: ["Real-time AI threat detection on camera","Cloud VMS for multi-location monitoring","ArcisGPT: Natural language video search","STQC certified for government compliance","24/7 support with 99.9% uptime SLA"]},
       {title: "Recommended Products", features: ["S-Series PTZ for large area coverage","S-Series Dome for indoor monitoring","ECO-Series for budget deployments","4G SIM cameras for remote sites","Bridge Device for legacy camera upgrade"]}
     ],
     faqs: [
@@ -1178,7 +1178,7 @@ const seoPageData = {
     heroDescription: "Construction site monitoring, property surveillance. ArcisAI delivers STQC-certified, edge AI-powered cameras with cloud VMS and ArcisGPT analytics.",
     category: "industry",
     sections: [
-      {title: "Why Real Estate & Construction Needs AI CCTV", stats: [{label:"AI Detections",value:"8+"},{label:"False Alarm Reduction",value:"95%"},{label:"Response Time",value:"<3 sec"},{label:"ROI Period",value:"6 months"}], features: ["Real-time AI threat detection on camera","Cloud VMS for multi-location monitoring","ArcisGPT: Natural language video search","STQC certified for government compliance","24/7 support with 99.9% uptime SLA"]},
+      {title: "Why Real Estate & Construction Needs AI CCTV", stats: [{label:"AI Detections",value:"8+"},{label:"Typical False Alarm Reduction",value:"95%"},{label:"Typical Response Time",value:"<3 sec"},{label:"Typical ROI Period",value:"6 months"}], features: ["Real-time AI threat detection on camera","Cloud VMS for multi-location monitoring","ArcisGPT: Natural language video search","STQC certified for government compliance","24/7 support with 99.9% uptime SLA"]},
       {title: "Recommended Products", features: ["S-Series PTZ for large area coverage","S-Series Dome for indoor monitoring","ECO-Series for budget deployments","4G SIM cameras for remote sites","Bridge Device for legacy camera upgrade"]}
     ],
     faqs: [
@@ -1198,7 +1198,7 @@ const seoPageData = {
     heroDescription: "Highway surveillance, toll booth monitoring, vehicle tracking. ArcisAI delivers STQC-certified, edge AI-powered cameras with cloud VMS and ArcisGPT analytics.",
     category: "industry",
     sections: [
-      {title: "Why Transportation Needs AI CCTV", stats: [{label:"AI Detections",value:"8+"},{label:"False Alarm Reduction",value:"95%"},{label:"Response Time",value:"<3 sec"},{label:"ROI Period",value:"6 months"}], features: ["Real-time AI threat detection on camera","Cloud VMS for multi-location monitoring","ArcisGPT: Natural language video search","STQC certified for government compliance","24/7 support with 99.9% uptime SLA"]},
+      {title: "Why Transportation Needs AI CCTV", stats: [{label:"AI Detections",value:"8+"},{label:"Typical False Alarm Reduction",value:"95%"},{label:"Typical Response Time",value:"<3 sec"},{label:"Typical ROI Period",value:"6 months"}], features: ["Real-time AI threat detection on camera","Cloud VMS for multi-location monitoring","ArcisGPT: Natural language video search","STQC certified for government compliance","24/7 support with 99.9% uptime SLA"]},
       {title: "Recommended Products", features: ["S-Series PTZ for large area coverage","S-Series Dome for indoor monitoring","ECO-Series for budget deployments","4G SIM cameras for remote sites","Bridge Device for legacy camera upgrade"]}
     ],
     faqs: [
@@ -1218,7 +1218,7 @@ const seoPageData = {
     heroDescription: "Refinery monitoring, pipeline surveillance, hazardous area cameras. ArcisAI delivers STQC-certified, edge AI-powered cameras with cloud VMS and ArcisGPT analytics.",
     category: "industry",
     sections: [
-      {title: "Why Oil & Gas Needs AI CCTV", stats: [{label:"AI Detections",value:"8+"},{label:"False Alarm Reduction",value:"95%"},{label:"Response Time",value:"<3 sec"},{label:"ROI Period",value:"6 months"}], features: ["Real-time AI threat detection on camera","Cloud VMS for multi-location monitoring","ArcisGPT: Natural language video search","STQC certified for government compliance","24/7 support with 99.9% uptime SLA"]},
+      {title: "Why Oil & Gas Needs AI CCTV", stats: [{label:"AI Detections",value:"8+"},{label:"Typical False Alarm Reduction",value:"95%"},{label:"Typical Response Time",value:"<3 sec"},{label:"Typical ROI Period",value:"6 months"}], features: ["Real-time AI threat detection on camera","Cloud VMS for multi-location monitoring","ArcisGPT: Natural language video search","STQC certified for government compliance","24/7 support with 99.9% uptime SLA"]},
       {title: "Recommended Products", features: ["S-Series PTZ for large area coverage","S-Series Dome for indoor monitoring","ECO-Series for budget deployments","4G SIM cameras for remote sites","Bridge Device for legacy camera upgrade"]}
     ],
     faqs: [

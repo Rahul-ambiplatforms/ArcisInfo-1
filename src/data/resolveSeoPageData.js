@@ -415,7 +415,6 @@ const ORPHAN_CROSS_LINK_KEYS = [
   'replace-chinese-cctv-india-alternative',
   'ai-surveillance-oil-gas-critical-infrastructure',
   'best-ai-cctv-camera-india',
-  'stqc-compliance-guide-cctv',
   'ai-surveillance-retail-footfall-analytics',
   '4g-cctv-camera',
 ];

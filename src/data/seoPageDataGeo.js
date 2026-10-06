@@ -21,7 +21,7 @@ const seoPageDataGeo = {
         content: "Maharashtra's vibrant economy spans manufacturing in Aurangabad, IT hubs in Pune, and commercial centers in Mumbai. ArcisAI delivers STQC-certified cameras with AI-powered analytics to secure retail chains, factories, and corporate offices across the state.",
         stats: [
           { value: "50+", label: "Cities Covered" },
-          { value: "99.9%", label: "Uptime SLA" },
+          { value: "99.9%", label: "Uptime Target" },
           { value: "45ms", label: "Avg Response Time" }
         ],
         features: ["Face Recognition & ANPR", "Real-time Intrusion Detection", "Cloud & On-Premise Options"]
@@ -1017,7 +1017,7 @@ const seoPageDataGeo = {
         stats: [
           { value: "1500+", label: "Hotels Monitored" },
           { value: "Real-Time", label: "Capacity Tracking" },
-          { value: "25ms", label: "Response Time" }
+          { value: "25ms", label: "Typical Response Time" }
         ],
         features: ["Crowd Analytics", "Capacity Management", "Emergency Alerts"]
       },

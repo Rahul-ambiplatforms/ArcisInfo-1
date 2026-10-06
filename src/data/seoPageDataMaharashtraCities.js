@@ -46,7 +46,7 @@ const seoPageDataMaharashtraCities = {
         stats: [
           { label: "Camera Models", value: "30+" },
           { label: "Night Vision", value: "30 m" },
-          { label: "Uptime SLA", value: "99.9%" },
+          { label: "Uptime Target", value: "99.9%" },
           { label: "Mobile App", value: "Included" }
         ],
         features: [

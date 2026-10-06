@@ -267,6 +267,8 @@ export default async function sitemap() {
   const seoEntries = getAllSeoPageEntries()
     .filter((e) => e.path)
     .filter((e) => !THIN_CONTENT_RESOURCE_SLUGS.has(e.key))
+    // SEO-005: 301'd to /cctv-stqc-certification-guide in next.config.js
+    .filter((e) => e.key !== 'stqc-compliance-guide-cctv')
     .map((e) => ({
       url: `${SITE}${e.path}`,
       lastModified: now,

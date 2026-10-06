@@ -43,7 +43,7 @@ const seoPageDataGujaratCities = {
         content: "From Fortune 500 offices in GIFT City Corridor to large housing societies in Bopal and Shela, and from the textile markets of Raipur Darwaja to the diamond bourses near Vastrapur, Ahmedabad's security needs are as diverse as its economy. ArcisAI cameras deploy in days, integrate with existing access-control systems, and provide a unified cloud VMS dashboard — whether you have 5 cameras or 500.",
         stats: [
           { label: "Camera Models", value: "30+" },
-          { label: "Uptime SLA", value: "99.9%" },
+          { label: "Uptime Target", value: "99.9%" },
           { label: "Night Vision", value: "30 m" },
           { label: "Resolution", value: "Up to 4K" }
         ],
@@ -199,7 +199,7 @@ const seoPageDataGujaratCities = {
         content: "Beyond Vadodara's GIDC clusters, the city has a growing enterprise corporate market with IT campuses, educational institutions, and large commercial developments around Alkapuri and Race Course Road. ArcisAI's unified cloud VMS lets security teams manage cameras across multiple buildings and sites from a single dashboard — with ArcisGPT enabling natural-language incident search. The BIS-ER and STQC certifications make ArcisAI fully compliant for government-tendered installations at institutions such as MSU Baroda, Central Railway workshops, and public infrastructure projects.",
         stats: [
           { label: "Camera Models", value: "30+" },
-          { label: "Uptime SLA", value: "99.9%" },
+          { label: "Uptime Target", value: "99.9%" },
           { label: "Multi-Site", value: "Unified VMS" },
           { label: "Support", value: "Gujarat HQ" }
         ],

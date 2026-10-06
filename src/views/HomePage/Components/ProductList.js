@@ -312,6 +312,8 @@ const ProductList = ({ data }) => {
                     <Image loading="lazy"
                       src={product.image}
                       alt={product.product_name}
+                      width="214"
+                      height="214"
                       decoding="async"
                       w="214px"
                       h="214px"
