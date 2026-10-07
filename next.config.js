@@ -482,6 +482,12 @@ const nextConfig = {
         statusCode: 301,
       },
       {
+        source: "/arcisai-vs-honeywell",
+        destination: "/compare/ai-cctv-alternative-india",
+        permanent: true,
+        statusCode: 301,
+      },
+      {
         source: "/compare/arcisai-vs-honeywell",
         destination: "/compare/ai-cctv-alternative-india",
         permanent: true,
