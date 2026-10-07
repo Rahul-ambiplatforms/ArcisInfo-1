@@ -84,6 +84,32 @@ const seoPageDataWifi = {
           "4G and PoE variants available where WiFi is not the right fit",
         ],
       },
+      {
+        title: "AD-90AIWFBDP vs AD-90AIWFBDP-PTZ: how the two models compare",
+        content:
+          "Both models share the same 3MP sensor, 4mm fixed lens, 2304x1296 main stream, 2.4GHz WiFi, ONVIF support and IP66 outdoor housing. The practical differences are storage, night lighting and physical size, set out below from the published datasheets.",
+        features: [
+          "Storage: AD-90AIWFBDP takes microSD up to 128GB; AD-90AIWFBDP-PTZ supports cloud storage and microSD up to 256GB",
+          "Night vision: AD-90AIWFBDP has IR up to 20 metres with intelligent fill light; AD-90AIWFBDP-PTZ has six infrared LEDs plus white light, 20 to 30 metres infrared and 15 to 20 metres white light",
+          "Wireless: AD-90AIWFBDP is 2.4GHz WiFi; AD-90AIWFBDP-PTZ is 2.4GHz IEEE 802.11b/g/n",
+          "Operating range: AD-90AIWFBDP up to 50 degrees Celsius; AD-90AIWFBDP-PTZ from minus 20 to 50 degrees Celsius",
+          "Power: AD-90AIWFBDP runs on DC12V 1A; AD-90AIWFBDP-PTZ runs on DC12V at up to 15W",
+          "Size: AD-90AIWFBDP is 165 x 191.5 x 132.8 mm; AD-90AIWFBDP-PTZ is 150 x 162 x 315 mm and weighs 850g",
+          "Datasheets: arcisai.io/pdfs/AD-90AIWFBDP.pdf for the first model; the PTZ datasheet is available from our team",
+        ],
+      },
+      {
+        title: "Power, internet and installation: what a WiFi camera still needs",
+        content:
+          "WiFi describes how the video travels, not how the camera is powered. Both ArcisAI WiFi models need a DC12V power supply at the camera, so you still need a power point or a power run, even though no network cable is required. Live viewing and cloud storage depend on your internet connection; the camera also has a wired Ethernet port if you later want to move off WiFi. Recording to a microSD card is stored on the camera itself.",
+        features: [
+          "Power cable needed: yes, DC12V at the camera; only the network cable is removed",
+          "Network: 2.4GHz WiFi, with a 10/100M wired Ethernet port on the same unit",
+          "Remote viewing and cloud storage need a working internet connection",
+          "Local storage: microSD in the camera",
+          "Installation and after-sales support: Contact the ArcisAI team for installation and after-sales support",
+        ],
+      },
     ],
     faqs: [
       {
@@ -109,6 +135,22 @@ const seoPageDataWifi = {
       {
         q: "Should I choose WiFi or 4G?",
         a: "Choose WiFi when the site already has reliable broadband and the cost of the job is in the cabling. Choose 4G when there is no dependable network at the location. ArcisAI makes both, so the answer depends on the site rather than on what we happen to sell.",
+      },
+      {
+        q: "Is a WiFi CCTV camera really wireless? Does it still need a power cable?",
+        a: "The video is wireless, the power is not. Both ArcisAI WiFi models need a DC12V power supply at the camera. Only the network cable is removed, which is usually the expensive and disruptive part of an installation.",
+      },
+      {
+        q: "What is the difference between the AD-90AIWFBDP and the AD-90AIWFBDP-PTZ?",
+        a: "Both are 3MP, 2.4GHz WiFi, IP66 outdoor cameras with two-way audio and ONVIF. The AD-90AIWFBDP takes microSD up to 128GB and has IR night vision up to 20 metres. The AD-90AIWFBDP-PTZ supports cloud storage and microSD up to 256GB, and adds white light alongside infrared for night coverage.",
+      },
+      {
+        q: "Do I need internet for the camera to work?",
+        a: "Remote live viewing and cloud storage need a working internet connection. Footage recorded to the microSD card is stored on the camera itself. For sites with no dependable broadband, ArcisAI also makes 4G cameras.",
+      },
+      {
+        q: "How much does an ArcisAI WiFi camera cost?",
+        a: "Pricing depends on the model, quantity and any cloud storage plan, so we quote against your requirement rather than publish a single price. Use the Request a Quote button on this page and our team will share current pricing, or dealer pricing if you install or resell.",
       },
       {
         q: "Do you appoint dealers and distributors for WiFi cameras?",
