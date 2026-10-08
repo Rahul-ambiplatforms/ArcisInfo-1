@@ -51,7 +51,7 @@ const FAQS = [
   },
   {
     q: 'How can I get ArcisAI for my organisation?',
-    a: 'Contact the ArcisAI team for a demo or quote. Cameras are available across ArcisAI\'s AI CCTV lineup in PoE, Wi-Fi and 4G-SIM variants, with a 3-year warranty (extendable to 5).',
+    a: 'Contact the ArcisAI team for a demo or quote. Cameras are available across ArcisAI\'s AI CCTV lineup in PoE, Wi-Fi and 4G-SIM variants, with a 2-year warranty.',
   },
 ];
 
