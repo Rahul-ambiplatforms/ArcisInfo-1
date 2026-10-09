@@ -269,6 +269,8 @@ export default async function sitemap() {
     .filter((e) => !THIN_CONTENT_RESOURCE_SLUGS.has(e.key))
     // SEO-005: 301'd to /cctv-stqc-certification-guide in next.config.js
     .filter((e) => e.key !== 'stqc-compliance-guide-cctv')
+    // SEO-006: 301'd to /cctv-cameras-gurugram in next.config.js (duplicate city entry)
+    .filter((e) => e.key !== 'cctv-cameras-gurgaon')
     .map((e) => ({
       url: `${SITE}${e.path}`,
       lastModified: now,

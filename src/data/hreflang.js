@@ -17,12 +17,15 @@
  * be silently wiped by every child page. This helper is meant to be spread
  * into every page's own `alternates` block instead.
  */
-const LOCALES = ['x-default', 'en', 'en-IN', 'en-US', 'en-GB', 'en-AE', 'en-SG', 'en-AU'];
-
+//
+// 2026-10-09 (SEO audit follow-up): every locale above pointed at the same URL,
+// which adds eight redundant annotations per page without describing any
+// alternate version. The site has no localized or regional URLs, so there is
+// nothing for hreflang to connect. buildHreflang now returns an empty set and
+// Next.js emits no hreflang <link> tags. If region-specific URLs (e.g. /en-us/)
+// are ever launched, return one reciprocal entry per real URL plus x-default,
+// and give each URL a self-referencing canonical. Call sites are unchanged.
 export function buildHreflang(canonicalUrl) {
-  const languages = {};
-  for (const locale of LOCALES) {
-    languages[locale] = canonicalUrl;
-  }
-  return languages;
+  void canonicalUrl;
+  return {};
 }

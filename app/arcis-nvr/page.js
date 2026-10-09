@@ -2,21 +2,21 @@ import MainProduct from '@/src/views/Series/MainProduct';
 import { buildHreflang } from '@/src/data/hreflang';
 
 export const metadata = {
-  title: 'ArcisAI NVR | AI-Powered Network Video Recorder',
+  title: 'CCTV Network Video Recorders (NVRs) | 4 to 32 Channel',
   description:
-    'ArcisAI NVR delivers intelligent video recording with edge AI capabilities, multi-camera support, and cloud backup for enterprise and SMB surveillance deployments.',
+    'Explore ArcisAI NVR options for local recording in 4, 8, 16 and 32 channel configurations. See how camera count, retention and storage affect sizing, and request a recommendation.',
   // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: 'https://arcisai.io/arcis-nvr', languages: buildHreflang('https://arcisai.io/arcis-nvr') },
   openGraph: {
-    title: 'ArcisAI NVR | AI-Powered Network Video Recorder',
-    description: 'Intelligent NVR with edge AI, multi-camera support, and cloud backup.',
+    title: 'CCTV Network Video Recorders (NVRs) | ArcisAI',
+    description: 'Explore ArcisAI NVR options in 4, 8, 16 and 32 channel configurations.',
     url: 'https://arcisai.io/arcis-nvr',
     images: [{ url: '/og/nvr.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ArcisAI NVR | AI-Powered Network Video Recorder',
-    description: 'Intelligent NVR with edge AI, multi-camera support, and cloud backup.',
+    title: 'CCTV Network Video Recorders (NVRs) | ArcisAI',
+    description: 'Explore ArcisAI NVR options in 4, 8, 16 and 32 channel configurations.',
     images: ['/og/nvr.jpg'],
   },
 };

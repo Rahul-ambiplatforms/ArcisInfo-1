@@ -44,18 +44,18 @@ export async function generateMetadata(props) {
 
   return {
     title: `${name} | ECO-Series AI Camera`,
-    description: `Explore the ArcisAI ${name} — a budget-friendly ECO-Series AI CCTV camera with edge analytics, STQC certification, and reliable surveillance performance.`,
+    description: `Explore the ArcisAI ${name} from the ECO-Series range. See available models and connectivity options, then request a quote or recommendation.`,
     alternates: { canonical: `https://arcisai.io/eco-series/${productId}`, languages: buildHreflang(`https://arcisai.io/eco-series/${productId}`) },
     openGraph: {
       title: `${name} | ECO-Series AI Camera | ArcisAI`,
-      description: `ArcisAI ${name} — value ECO-Series AI surveillance camera.`,
+      description: `ArcisAI ${name} from the ECO-Series range.`,
       url: `https://arcisai.io/eco-series/${productId}`,
       images: [{ url: '/og/eco-series.jpg', width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
       title: `${name} | ECO-Series AI Camera | ArcisAI`,
-      description: `ArcisAI ${name} — value ECO-Series AI surveillance camera.`,
+      description: `ArcisAI ${name} from the ECO-Series range.`,
       images: ['/og/eco-series.jpg'],
     },
   };

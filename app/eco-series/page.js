@@ -4,7 +4,7 @@ import { buildHreflang } from '@/src/data/hreflang';
 export const metadata = {
   title: 'ECO-Series Value AI Cameras | Affordable Smart CCTV',
   description:
-    'ECO-Series PTZ, Dome, Bullet cameras for budget-conscious deployments. Same powerful AI capabilities at value pricing. 30+ models available with edge AI analytics.',
+    'Explore ArcisAI ECO-Series bullet, dome and PTZ cameras with Wi-Fi, PoE and 4G options. Compare models and request a recommendation.',
   // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: 'https://arcisai.io/eco-series', languages: buildHreflang('https://arcisai.io/eco-series') },
   openGraph: {

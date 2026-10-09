@@ -5,6 +5,7 @@ import HeroSection from "./Components/HeroSection";
 import { AboutUsContent } from "./Data/Content";
 import { aboutUsSEO } from "./Data/SEOContent";
 import PageContentWrapper from "../../Components/PageContentWrapper";
+import RelatedLinks from "../../Components/RelatedLinks";
 
 const PoweredBy    = dynamic(() => import("./Components/PoweredBy"));
 const VisionMission = dynamic(() => import("./Components/VisionMission"));
@@ -41,6 +42,17 @@ const AboutUs = () => {
         />
         <Innovation data={AboutUsContent.Innovation} />
         <CTAButton {...AboutUsContent.CTAButton} />
+        <RelatedLinks
+          title="Explore ArcisAI"
+          links={[
+            { href: "/certifications", label: "Review certification information" },
+            { href: "/cctv-compliance-2026", label: "BIS-ER and STQC buyer guide" },
+            { href: "/s-series", label: "S-Series AI cameras" },
+            { href: "/cloud-vms", label: "Cloud VMS" },
+            { href: "/partners", label: "Become an ArcisAI channel partner" },
+            { href: "/contact-us", label: "Contact the team" },
+          ]}
+        />
       </PageContentWrapper>
     </>
   );

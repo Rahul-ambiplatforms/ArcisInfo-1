@@ -1,7 +1,7 @@
 export const homeSEO = {
-  metatitle: "ArcisAI | BIS-ER & STQC Certified CCTV Cameras in India",
+  metatitle: "ArcisAI | AI CCTV Cameras & Video Surveillance in India",
   metadescription:
-    "ArcisAI offers BIS-ER & STQC Certified CCTV cameras, STQC Certified VMS in India. Made-in-India surveillance for government, enterprise, office & home use.",
+    "Explore ArcisAI AI CCTV cameras, video management and analytics. Compare product families, check supported features and request a project consultation.",
   ogimage: "https://arcisai.io/images/home_hero_1.webp",
   canonical: "https://arcisai.io/",
   schema: [
