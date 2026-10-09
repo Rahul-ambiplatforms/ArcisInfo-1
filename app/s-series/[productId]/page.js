@@ -46,18 +46,18 @@ export async function generateMetadata(props) {
 
   return {
     title: `${name} | S-Series AI Camera`,
-    description: `Explore the ArcisAI ${name} — a premium S-Series AI CCTV camera with edge AI analytics, STQC certification, and enterprise-grade reliability.`,
+    description: `Explore the ArcisAI ${name} from the S-Series range. See available models, connectivity options and supported analytics, then request a recommendation.`,
     alternates: { canonical: `https://arcisai.io/s-series/${productId}`, languages: buildHreflang(`https://arcisai.io/s-series/${productId}`) },
     openGraph: {
       title: `${name} | S-Series AI Camera | ArcisAI`,
-      description: `ArcisAI ${name} — premium S-Series AI surveillance camera.`,
+      description: `ArcisAI ${name} from the S-Series range.`,
       url: `https://arcisai.io/s-series/${productId}`,
       images: [{ url: '/og/s-series.jpg', width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
       title: `${name} | S-Series AI Camera | ArcisAI`,
-      description: `ArcisAI ${name} — premium S-Series AI surveillance camera.`,
+      description: `ArcisAI ${name} from the S-Series range.`,
       images: ['/og/s-series.jpg'],
     },
   };

@@ -5,6 +5,31 @@ import { useParams } from "next/navigation";
 import { Series as SeriesData } from "./Data/Content";
 import { SEOContent } from "./Data/SEOContent";
 import HeroSectionCarousel from "../../Components/HeroSectionCarousel";
+import RelatedLinks from "../../Components/RelatedLinks";
+
+// Contextual internal links per product page (destinations all exist as routes).
+const RELATED = {
+  cloudVMS: [
+    { href: "/arcisgpt", label: "See natural-language video search with ArcisGPT" },
+    { href: "/arcis-nvr", label: "Compare NVR options for local recording" },
+    { href: "/arcis-bridge-device", label: "Connect existing ONVIF cameras with the Arcis Bridge Device" },
+    { href: "/contact-us", label: "Request a Cloud VMS demo" },
+  ],
+  nvrDvrSeries: [
+    { href: "/cloud-vms", label: "Explore Cloud VMS for multi-site monitoring" },
+    { href: "/solution/edge-ai", label: "Learn how on-camera AI works" },
+    { href: "/contact-us", label: "Ask for an ArcisGPT demo" },
+  ],
+  nvr: [
+    { href: "/tools/cctv-storage-calculator", label: "Estimate storage with the CCTV storage calculator" },
+    { href: "/cloud-vms", label: "Explore Cloud VMS" },
+    { href: "/contact-us", label: "Request an NVR recommendation" },
+  ],
+  arcisBridgeDevice: [
+    { href: "/cloud-vms", label: "Explore Cloud VMS" },
+    { href: "/contact-us", label: "Talk to the team about your existing cameras" },
+  ],
+};
 
 const Information    = dynamic(() => import("../../Components/Information"));
 const OurClient      = dynamic(() => import("../HomePage/Components/OurClient"));
@@ -71,6 +96,7 @@ const MainProduct = ({ seriesType = "nvrDvrSeries", seriesId: seriesIdProp }) =>
       <Innovation data={seriesData.Innovation} />
       <CTAButton {...seriesData.CTAButton1} />
       <FAQSection data={seriesData.FAQsData} />
+      <RelatedLinks links={RELATED[selectedSeries]} />
     </>
   );
 };

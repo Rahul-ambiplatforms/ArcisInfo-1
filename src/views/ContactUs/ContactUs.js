@@ -329,8 +329,7 @@ const ContactSection = () => {
                     maxW="1200px"
                     mx="auto"
                   >
-                    You Deserve More Than Just a Camera - You Deserve
-                    Intelligence
+                    Request a CCTV Quote, Demo or Consultation
                   </Heading>
 
                   {/* Description Paragraph */}

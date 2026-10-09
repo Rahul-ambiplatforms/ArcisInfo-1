@@ -8,6 +8,7 @@ import { SEOContent } from "./Data/SEOContent";
 import { Box } from "@chakra-ui/react";
 import NotFound from "../NotFound";
 import PageContentWrapper from "../../Components/PageContentWrapper";
+import RelatedLinks from "../../Components/RelatedLinks";
 
 const ProductList = dynamic(() => import("../HomePage/Components/ProductList"));
 const CTAButton   = dynamic(() => import("../../Components/CTAButton"));
@@ -60,6 +61,23 @@ const Series = ({ seriesId: seriesIdProp }) => {
         <HeroSection data={seriesData.hero} />
         <ProductList data={seriesData.productList} />
         {seriesData.CTAButton && <CTAButton {...seriesData.CTAButton} />}
+        <RelatedLinks
+          links={
+            seriesId === "s-series"
+              ? [
+                  { href: "/contact-us", label: "Request a camera recommendation" },
+                  { href: "/solution/edge-ai", label: "How on-camera AI works" },
+                  { href: "/arcis-nvr", label: "Compare NVR options" },
+                  { href: "/wifi-cctv-camera", label: "Wi-Fi CCTV camera options" },
+                ]
+              : [
+                  { href: "/wifi-cctv-camera", label: "Wi-Fi CCTV camera options" },
+                  { href: "/arcis-nvr", label: "Compare NVR options" },
+                  { href: "/s-series", label: "Compare the S-Series range" },
+                  { href: "/contact-us", label: "Request a camera recommendation" },
+                ]
+          }
+        />
       </PageContentWrapper>
     </>
   );

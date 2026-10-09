@@ -3,9 +3,9 @@ import { buildHreflang } from '@/src/data/hreflang';
 import Breadcrumbs from '@/src/Components/Breadcrumbs';
 
 const SITE_URL = 'https://arcisai.io';
-const TITLE = 'India CCTV Compliance 2026: BIS-ER & STQC Certification Explained | ArcisAI';
+const TITLE = 'BIS-ER & STQC CCTV Rules in India (2026) | ArcisAI';
 const DESCRIPTION =
-  'Plain-language guide to India\'s 2026 CCTV certification rules — what BIS-ER and STQC mean, who needs them, and how to verify a brand\'s certificate.';
+  'Understand what BIS-ER and STQC mean for CCTV buyers, which product layer each applies to, and how to check a brand\'s certificate against official records.';
 
 export const metadata = {
   title: TITLE.replace(/\s*\|\s*ArcisAI$/, ""),

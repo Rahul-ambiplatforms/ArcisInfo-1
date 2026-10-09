@@ -190,14 +190,16 @@ const StorageCalculator = () => {
             <Divider borderColor="whiteAlpha.300" />
             <Box>
               <Text fontSize="sm" color="whiteAlpha.900" mb={3}>
-                Skip the on-prem disks — ArcisAI Cloud VMS scales storage automatically with
-                STQC-certified, India-hosted recording.
+                Prefer not to manage on-site disks? ArcisAI Cloud VMS offers cloud recording. Share your
+                camera count and retention period with the team to size either option.
               </Text>
               <HStack spacing={3}>
                 <Button as={NextLink} type={undefined} href="/cloud-vms" bg="white" color={ACCENT_DEEP} fontWeight="700"
                   _hover={{ bg: 'gray.100' }} size="sm">Explore Cloud VMS</Button>
                 <Button as={NextLink} type={undefined} href="/arcis-nvr" variant="outline" color="white"
                   borderColor="whiteAlpha.500" _hover={{ bg: 'whiteAlpha.200' }} size="sm">View NVRs</Button>
+                <Button as={NextLink} type={undefined} href="/contact-us" variant="outline" color="white"
+                  borderColor="whiteAlpha.500" _hover={{ bg: 'whiteAlpha.200' }} size="sm">Request sizing help</Button>
               </HStack>
             </Box>
           </VStack>
@@ -210,6 +212,34 @@ const StorageCalculator = () => {
         override field. Calculation: cameras × bitrate(Mbps) × 0.45 × hours/day × retention days ×
         density, +10% headroom; 1&nbsp;TB = 1000&nbsp;GB (decimal).
       </Text>
+
+      <Box as="section" mt={12} maxW="3xl" aria-labelledby="calc-method">
+        <Heading as="h2" id="calc-method" fontSize={{ base: 'xl', md: '2xl' }} fontWeight="600" mb={3}>
+          How this CCTV storage calculator works
+        </Heading>
+        <Text color="whiteAlpha.800" mb={3}>
+          The estimate multiplies the number of cameras by the recording bitrate, the hours recorded per day
+          and the retention period, then adds 10% headroom. One megabit per second of continuous recording is
+          about 0.45 GB per hour (decimal units, 1 TB = 1000 GB).
+        </Text>
+        <Text color="whiteAlpha.800" mb={3}>
+          Default bitrates used when you do not enter your own: 2MP at 2 Mbps (H.265) or 4 Mbps (H.264); 4MP at
+          4 or 8 Mbps; 5MP at 5 or 10 Mbps; 8MP (4K) at 8 or 16 Mbps. Real bitrate depends on scene activity,
+          frame rate and encoder settings, so enter your camera's configured bitrate for a closer figure.
+        </Text>
+        <Text color="whiteAlpha.800" mb={3}>
+          Worked example with the default inputs: 8 cameras at 4MP H.265 (4 Mbps), recording 24 hours a day for 30
+          days. Each camera records about 43.2 GB per day, so 8 cameras for 30 days is about 10,368 GB. With 10%
+          headroom that is roughly 11.4 TB, which fits on one 12 TB drive.
+        </Text>
+        <Text color="whiteAlpha.800">
+          Once you have a figure, you can compare{' '}
+          <Link as={NextLink} href="/arcis-nvr" color={ACCENT} textDecoration="underline">NVR options</Link>{' '}
+          or ask the team to{' '}
+          <Link as={NextLink} href="/contact-us" color={ACCENT} textDecoration="underline">help size a storage plan</Link>.
+          Results are shown on this page without any sign-up.
+        </Text>
+      </Box>
     </Container>
   );
 };

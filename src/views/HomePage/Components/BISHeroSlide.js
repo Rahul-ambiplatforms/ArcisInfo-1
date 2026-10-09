@@ -46,11 +46,10 @@ const BISHeroSlide = ({ showExploreButton = true }) => {
           mb={{ base: 2, md: 4 }}
           mt={{ base: 2, md: 4 }}
         >
-          ArcisAI Cameras: {" "}
+          AI CCTV Cameras, Video Management {" "}
           <br />
-          {/* Now{" "} */}
           <Text as="span" fontWeight="700">
-          BIS-ER Certified by STQC Certification
+          and Analytics from ArcisAI
           </Text>
         </Heading>
 

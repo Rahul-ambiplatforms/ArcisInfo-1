@@ -290,9 +290,9 @@ export const Series = {
     hero: [
       {
         id: 1,
-        heading: "India’s Most Advanced AI-Powered Cloud VMS",
+        heading: "ArcisGPT: Search CCTV Footage in Plain Language",
         description:
-          "AI-powered, STQC-certified Cloud Video management system designed for India’s modern, large-scale surveillance needs with secure monitoring and smart analytics.",
+          "ArcisGPT lets you search recorded surveillance video by describing what you want to find, instead of scrubbing through footage manually. Talk to our team to see how it works with your cameras.",
         d_image: "/images/STQC_hero_main.webp",
         m_image: "/images/STQC_hero_main.webp",
         buttonText: "Talk to our Expert",
@@ -687,10 +687,10 @@ export const Series = {
       // },
     ],
     informationData: {
-      title: "What Is ArcisAI STQC Cloud VMS?",
+      title: "What Is ArcisGPT?",
       paragraphs: [
-        "STQC-approved Cloud video management system that allows organizations to centralize and manage all their surveillance cameras, video recordings, and AI analytics from a single platform.",
-        "Designed for India's modern surveillance needs, it ensures reliable performance, easy operations, real-time monitoring, and fully compliant data management—ideal for government agencies, enterprises, and multi-location deployments.",
+        "ArcisGPT is the natural-language search layer for ArcisAI surveillance video. Instead of scrubbing through hours of recordings, you describe what you are looking for, for example \"vehicle entries after 10 PM yesterday\", and review the matching footage.",
+        "It works alongside ArcisAI Cloud VMS, which brings live view, playback and alerts from multiple sites into one platform. Talk to our team to see how ArcisGPT works with your cameras and setup.",
       ],
       // Filename case fix (2026-09-28): the asset on disk (and in git) is
       // "..._and_..." — this was the only reference spelling it "_And_", so it
@@ -768,7 +768,7 @@ export const Series = {
     features: {
       d_image: "/images/nvr-dvr-cloud-vms-features.webp",
       m_image: "/images/product_feature_dome_bg_mobile.webp",
-      heading: "Cloud VMS Features That Make Surveillance Smarter and Safer",
+      heading: "What You Can Do with ArcisGPT",
       description: "",
       styles: {
         contentMarginTop: {
@@ -795,20 +795,11 @@ export const Series = {
         },
       },
       featuresList: [
-        { name: "STQC Certified VMS", icon: <FeatureIcon1 /> },
-        { name: "Quick Camera Onboarding", icon: <FeatureIcon2 /> },
-        { name: "Live View &  Playback", icon: <FeatureIcon3 /> },
+        { name: "Natural Language Video Search", icon: <FeatureIcon1 /> },
+        { name: "Search by Describing an Event", icon: <FeatureIcon2 /> },
+        { name: "Review Matching Footage", icon: <FeatureIcon3 /> },
         { name: "AI Detection & Analytics", icon: <FeatureIcon4 /> },
-        { name: "Natural Language Video Search", icon: <FeatureIcon5 /> },
-        { name: "Event Reports", icon: <FeatureIcon6 /> },
-        { name: "Multi-Location Monitoring", icon: <FeatureIcon7 /> },
-        { name: "Smart Timeline Playback", icon: <FeatureIcon8 /> },
-        { name: "Role-Based Access Control", icon: <FeatureIcon9 /> },
-        {
-          name: "Intuitive User Interface",
-          icon: <FeatureIcon10 />,
-        },
-        { name: "ONVIF Compatibility", icon: <FeatureIcon11 /> },
+        { name: "Works with ArcisAI Cloud VMS", icon: <FeatureIcon5 /> },
       ],
     },
     Innovation: {
@@ -855,8 +846,8 @@ export const Series = {
       ],
     },
     CTAButton1: {
-      data: "Discover ArcisAI's STQC-Certified Cloud VMS for Smarter Surveillance",
-      buttonText: "Try ArcisGPT",
+      data: "See How ArcisGPT Searches Your CCTV Footage",
+      buttonText: "Request an ArcisGPT Demo",
       d_image: "/images/home_cta_1.webp",
       m_Image: "/images/home_cta_mobile_1.webp",
       link: "/contact-us",
@@ -899,14 +890,14 @@ export const Series = {
       heading: "FAQs",
       data: [
         {
-          question: "How secure is the video data stored in ArcisAI cloud VMS>",
+          question: "What is ArcisGPT?",
           answer:
-            "All video streams and recordings are secured with end-to-end encryption and SQTC-compliant data protection standards, ensuring tamper-proof, safe, and audit-ready storage.",
+            "ArcisGPT is the natural-language search layer for ArcisAI surveillance video. You describe what you want to find in plain language and review the matching footage instead of scrubbing through recordings manually.",
         },
         {
-          question: "Can users access the VMS from mobile or remote locations?",
+          question: "How does ArcisGPT relate to ArcisAI Cloud VMS?",
           answer:
-            "Yes. The STQC-certified ArcisAI VMS is accessible from anywhere through the ArcisAI Mobile App (available on both the Google Play Store and Apple App Store) as well as the browser-based VMS WebApp, so you can view live feeds, play back recorded footage, and receive smart detection alerts on your phone whether you're on-site or remote.",
+            "ArcisAI Cloud VMS brings live view, playback and alerts from cameras at multiple locations into one platform. ArcisGPT adds plain-language search on top of that video. Contact our team to see how it fits your setup.",
         },
       ],
     },
@@ -915,9 +906,9 @@ export const Series = {
     hero: [
       {
         id: 1,
-        heading: "India’s Most Advanced AI-Powered Cloud VMS",
+        heading: "AI-Powered Cloud VMS for Multi-Site Video Management",
         description:
-          "AI-powered, STQC-certified Cloud Video management system designed for India’s modern, large-scale surveillance needs with secure monitoring and smart analytics.",
+          "ArcisAI Cloud VMS brings live view, playback and alerts from cameras at multiple locations into one platform, with smart analytics for monitoring teams.",
         d_image: "/images/STQC_hero_main.webp",
         m_image: "/images/STQC_hero_main_mobile.webp",
         buttonText: "Request Demo",

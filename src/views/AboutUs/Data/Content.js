@@ -56,7 +56,7 @@ export const AboutUsContent = {
         textHover: "",
       },
     },
-    heading: "India’s First Complete AI CCTV Ecosystem",
+    heading: "ArcisAI: AI CCTV Cameras, Cloud VMS and Video Intelligence",
     subheading:
       "Smarter Surveillance. Real-Time Intelligence. Trusted Performance.",
     description: [

@@ -3,6 +3,8 @@ import React from "react";
 import NextLink from "next/link";
 import { Box, Container, Heading, Text, SimpleGrid, VStack, HStack, Button, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Icon, Flex, Badge, Divider } from "@chakra-ui/react";
 import Breadcrumbs from "@/src/Components/Breadcrumbs";
+import GA4Direct from "@/src/Components/GA4Direct";
+import { track } from "@/src/utils/track";
 
 // Brand palette — matches site dark theme (body #171717, accents #9678E1 / #8266C9)
 const ACCENT = "#9678E1";
@@ -59,6 +61,7 @@ const SEOLandingPage = ({ pageData, slugKey, relatedLinks = [] }) => {
 
   return (
     <>
+      <GA4Direct />
       <Breadcrumbs crumbs={crumbs} />
       {/* Hero Section */}
       <Box bg={`linear-gradient(135deg, #171717 0%, #241d3a 50%, #171717 100%)`} color="white" py={{base: 16, md: 24}} position="relative" overflow="hidden">
@@ -77,10 +80,10 @@ const SEOLandingPage = ({ pageData, slugKey, relatedLinks = [] }) => {
             {pageData.heroDescription}
           </Text>
           <HStack spacing={4}>
-            <Button as={NextLink} type={undefined} href={pageData.cta?.buttonLink || "/contact-us"} bg={ACCENT} color="white" size="lg" _hover={{bg: ACCENT_DEEP, transform: "translateY(-2px)"}} transition="all 0.2s" fontWeight="600">
+            <Button as={NextLink} type={undefined} onClick={() => track("quote_click", { cta_location: "hero", page_key: slugKey, cta_text: pageData.cta?.buttonText || "Get Free Quote" })} href={pageData.cta?.buttonLink || "/contact-us"} bg={ACCENT} color="white" size="lg" _hover={{bg: ACCENT_DEEP, transform: "translateY(-2px)"}} transition="all 0.2s" fontWeight="600">
               {pageData.cta?.buttonText || "Get Free Quote"}
             </Button>
-            <Button as={NextLink} type={undefined} href="/products" variant="outline" color="white" borderColor="whiteAlpha.400" size="lg" _hover={{bg: "whiteAlpha.100"}}>
+            <Button as={NextLink} type={undefined} onClick={() => track("view_products_click", { cta_location: "hero", page_key: slugKey })} href="/products" variant="outline" color="white" borderColor="whiteAlpha.400" size="lg" _hover={{bg: "whiteAlpha.100"}}>
               View Products
             </Button>
           </HStack>
@@ -146,7 +149,7 @@ const SEOLandingPage = ({ pageData, slugKey, relatedLinks = [] }) => {
           <Container maxW="700px">
             <Heading as="h2" size={{base: "lg", md: "xl"}} mb={4}>{pageData.cta.title}</Heading>
             <Text color="whiteAlpha.900" mb={8} fontSize="lg">{pageData.cta.description || pageData.cta.subtitle || ""}</Text>
-            <Button as={NextLink} type={undefined} href={pageData.cta.buttonLink || "/contact-us"} bg="white" color={ACCENT_DEEP} size="lg" px={10} _hover={{bg: "gray.100", transform: "translateY(-2px)"}} transition="all 0.2s" fontWeight="700">
+            <Button as={NextLink} type={undefined} onClick={() => track("quote_click", { cta_location: "footer", page_key: slugKey, cta_text: pageData.cta.buttonText || "Get Free Quote" })} href={pageData.cta.buttonLink || "/contact-us"} bg="white" color={ACCENT_DEEP} size="lg" px={10} _hover={{bg: "gray.100", transform: "translateY(-2px)"}} transition="all 0.2s" fontWeight="700">
               {pageData.cta.buttonText || "Get Free Quote"}
             </Button>
           </Container>
