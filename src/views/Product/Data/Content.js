@@ -1669,7 +1669,7 @@ export const Product = {
         {
           question: "What warranty do Eco-Series Bullet Cameras carry?",
           answer:
-            "Eco-Series Bullet Cameras come with ArcisAI's standard 3-year manufacturer warranty covering hardware defects, with extended coverage up to 5 years available on request.",
+            "Eco-Series Bullet Cameras come with ArcisAI's standard 2-year manufacturer warranty covering hardware defects.",
         },
       ],
     },
@@ -2112,7 +2112,7 @@ export const Product = {
         {
           question: "What warranty is offered on Eco-Series PTZ cameras?",
           answer:
-            "Eco-Series PTZ cameras carry ArcisAI's standard 3-year manufacturer warranty against hardware defects, with an option to extend coverage up to 5 years.",
+            "Eco-Series PTZ cameras carry ArcisAI's standard 2-year manufacturer warranty against hardware defects.",
         },
       ],
     },
@@ -2557,7 +2557,7 @@ export const Product = {
         {
           question: "What warranty applies to Eco-Series Dome cameras?",
           answer:
-            "Eco-Series Dome cameras are covered by ArcisAI's standard 3-year manufacturer warranty for hardware defects, with extended warranty terms of up to 5 years available.",
+            "Eco-Series Dome cameras are covered by ArcisAI's standard 2-year manufacturer warranty for hardware defects.",
         },
       ],
     },
