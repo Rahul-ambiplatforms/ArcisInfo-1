@@ -161,6 +161,23 @@ export function buildSeoPageSchemas({ pageData, path, areaServed } = {}) {
         seller: { '@id': ORGANIZATION_ID },
       },
     });
+  } else if (category === 'products' && pageData.model) {
+    // Model-level page: Product with only datasheet-verifiable properties.
+    // No offers (no published price), no aggregateRating (no reviews on-site).
+    schemas.push({
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      '@id': `${url}#product`,
+      name: pageData.productName || pageData.heroTitle || name,
+      description,
+      url,
+      sku: pageData.model,
+      mpn: pageData.model,
+      model: pageData.model,
+      category: 'AI CCTV Cameras',
+      brand: { '@type': 'Brand', name: 'ArcisAI' },
+      manufacturer: { '@id': ORGANIZATION_ID },
+    });
   } else {
     const service = {
       '@context': 'https://schema.org',

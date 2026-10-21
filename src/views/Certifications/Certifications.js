@@ -5,6 +5,7 @@ import {
   TableContainer, List, ListItem, Divider, Badge, Link,
 } from '@chakra-ui/react';
 import PageContentWrapper from '../../Components/PageContentWrapper';
+import RelatedLinks from '../../Components/RelatedLinks';
 
 // Brand palette (matches site dark theme: body #171717, accents #9678E1 / #8266C9)
 const ACCENT = '#9678E1';
@@ -216,6 +217,16 @@ const Certifications = () => {
             ))}
           </Stack>
         </Box>
+        <RelatedLinks
+          title="Related pages"
+          links={[
+            { href: '/BIS-ER-certification', label: 'BIS-ER registration for ArcisAI cameras' },
+            { href: '/cctv-compliance-2026', label: 'BIS-ER and STQC rules for CCTV buyers in India' },
+            { href: '/tools/certificate-verifier', label: 'Certificate verifier tool' },
+            { href: '/wifi-cctv-camera', label: 'WiFi CCTV cameras with datasheets' },
+            { href: '/documents', label: 'Documents and user manuals' },
+          ]}
+        />
       </PageContentWrapper>
     </>
   );

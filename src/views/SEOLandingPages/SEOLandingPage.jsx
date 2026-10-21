@@ -68,7 +68,7 @@ const SEOLandingPage = ({ pageData, slugKey, relatedLinks = [] }) => {
         <Box position="absolute" top="0" left="0" right="0" bottom="0" bg={`radial-gradient(circle at 30% 50%, rgba(150,120,225,0.18) 0%, transparent 60%)`} />
         <Container maxW="1200px" position="relative" zIndex={1}>
           <Badge bg="whiteAlpha.200" color="white" px={3} py={1} borderRadius="full" mb={4} fontSize="xs" textTransform="uppercase" letterSpacing="wider">
-            {pageData.category === "city" ? "City Coverage" : pageData.category === "compare" ? "Comparison" : pageData.category === "resources" ? "Resource Guide" : pageData.category === "state" ? "State Coverage" : "Industry Solution"}
+            {pageData.category === "city" ? "City Coverage" : pageData.category === "compare" ? "Comparison" : pageData.category === "resources" ? "Resource Guide" : pageData.category === "products" ? "Product" : pageData.category === "state" ? "State Coverage" : "Industry Solution"}
           </Badge>
           <Heading as="h1" size={{base: "xl", md: "2xl"}} mb={4} fontWeight="700" lineHeight="1.2">
             {pageData.heroTitle}
@@ -97,6 +97,11 @@ const SEOLandingPage = ({ pageData, slugKey, relatedLinks = [] }) => {
             <Heading as="h2" size={{base: "lg", md: "xl"}} mb={8} color="white" fontWeight="700">
               {section.title}
             </Heading>
+            {pageData.showSectionContent && section.content && (
+              <Text color="whiteAlpha.800" fontSize={{base: "md", md: "lg"}} lineHeight="1.7" mb={8} maxW="900px">
+                {section.content}
+              </Text>
+            )}
             {section.stats && (
               <SimpleGrid columns={{base: 2, md: 4}} spacing={6} mb={8}>
                 {section.stats.map((stat, i) => (
@@ -120,6 +125,44 @@ const SEOLandingPage = ({ pageData, slugKey, relatedLinks = [] }) => {
           </Container>
         </Box>
       ))}
+
+      {/* Optional, data-driven link blocks (datasheet downloads and related
+          product pages). Rendered only when the entry supplies them, so no
+          other landing page changes. Plain crawlable anchors. */}
+      {(pageData.datasheets?.length > 0 || pageData.relatedPages?.length > 0) && (
+        <Box py={{base: 12, md: 16}} bg="#171717">
+          <Container maxW="1200px">
+            {pageData.datasheets?.length > 0 && (
+              <>
+                <Heading as="h2" size={{base: "lg", md: "xl"}} mb={4} color="white" fontWeight="700">
+                  Datasheets and manuals
+                </Heading>
+                <VStack align="start" spacing={2} mb={pageData.relatedPages?.length > 0 ? 10 : 0}>
+                  {pageData.datasheets.map((d) => (
+                    <NextLink key={d.href} href={d.href} style={{ color: ACCENT, textDecoration: "underline" }}>
+                      {d.label}
+                    </NextLink>
+                  ))}
+                </VStack>
+              </>
+            )}
+            {pageData.relatedPages?.length > 0 && (
+              <>
+                <Heading as="h2" size={{base: "lg", md: "xl"}} mb={4} color="white" fontWeight="700">
+                  Related pages
+                </Heading>
+                <VStack align="start" spacing={2}>
+                  {pageData.relatedPages.map((l) => (
+                    <NextLink key={l.href} href={l.href} style={{ color: ACCENT, textDecoration: "underline" }}>
+                      {l.label}
+                    </NextLink>
+                  ))}
+                </VStack>
+              </>
+            )}
+          </Container>
+        </Box>
+      )}
 
       {/* FAQ Section — supports both 'faqs' and 'faq' keys, both {q,a} and {question,answer} formats */}
       {faqItems.length > 0 && (

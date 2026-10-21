@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from "react";
-import { trackLead } from "@/src/utils/track";
+import { trackLead, getAttribution } from "@/src/utils/track";
 import {
   Box,
   FormControl,
@@ -120,6 +120,12 @@ const ContactSection = () => {
 
     setIsLoading(true);
 
+    // Where this lead came from (UTM, ?interest, ?city, landing page, referrer).
+    const attr = getAttribution();
+    const leadSource = attr.utm_source
+      ? "Arcis Website Contact (" + attr.utm_source + (attr.utm_campaign ? "/" + attr.utm_campaign : "") + ")"
+      : "Arcis Website Contact";
+
     // Send lead to ArcisAI Sales Agent (non-blocking)
     fetch(SALES_AGENT_URL, {
       method: "POST",
@@ -129,7 +135,7 @@ const ContactSection = () => {
         email: formData.email,
         phone: formData.countryCode + formData.phone,
         company: formData.company,
-        source: "Arcis Website Contact",
+        source: leadSource,
         notes: "Customer Type: " + formData.customerType + " | Cameras For: " + formData.camerasFor + " | Quantity: " + formData.customerQuantity + " | Message: " + formData.message,
         metadata: {
           location: location2 + " " + formData.location,
@@ -137,6 +143,7 @@ const ContactSection = () => {
           cameras_for: formData.camerasFor,
           quantity: formData.customerQuantity,
           page_url: window.location.href,
+          attribution: attr,
         }
       }),
     }).catch(() => { });
@@ -151,7 +158,12 @@ const ContactSection = () => {
         email: formData.email,
         phone: formData.countryCode + formData.phone,
         company: formData.company,
-        source: "Arcis Website Contact",
+        source: leadSource,
+        attribution: attr,
+        interest: attr.interest || "",
+        city: attr.city || "",
+        landingPage: attr.landing_page || "",
+        referrer: attr.referrer || "",
 
         customerType: formData.customerType,
         camerasFor: formData.camerasFor,

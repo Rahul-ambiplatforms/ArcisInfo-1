@@ -438,6 +438,15 @@ const nextConfig = {
         permanent: true,
         statusCode: 301,
       },
+      // WiFi category URL used in advertising / partner documents. One-hop 301
+      // to the existing national WiFi page so it does not compete as a
+      // second indexable category URL.
+      {
+        source: "/products/wifi-cctv-cameras",
+        destination: "/wifi-cctv-camera",
+        permanent: true,
+        statusCode: 301,
+      },
       // Redirect common broken/legacy VMS paths to the canonical VMS page
       {
         source: "/vms",

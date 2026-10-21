@@ -42,7 +42,7 @@ const seoPageDataMaharashtraCities = {
       },
       {
         title: "Retail, Hospitality & Smart City Deployments Across Mumbai",
-        content: "Mumbai's retail corridors — Linking Road, Phoenix Mills, Oberoi Mall, Palladium — face loss-prevention challenges at a scale unique to India's largest consumer market. ArcisAI's people-counting and footfall analytics help mall operators optimize staffing, while shrinkage detection AI alerts loss-prevention teams the moment threshold behaviours are detected. Under the Mumbai Smart City Mission, the city has been deploying AI cameras across public spaces, junctions, and transit hubs. ArcisAI's cameras are Made in India with a non-Chinese SoC, BIS-ER registered, and STQC-certified — fulfilling the indigenisation and data-sovereignty requirements of government smart-city tenders. Deployment and support across Mumbai is handled through ArcisAI's authorized Maharashtra dealer-partner network, ensuring fast turnaround on installation, commissioning, and AMC.",
+        content: "Mumbai's retail corridors — Linking Road, Phoenix Mills, Oberoi Mall, Palladium — face loss-prevention challenges at a scale unique to India's largest consumer market. ArcisAI's people-counting and footfall analytics help mall operators optimize staffing, while shrinkage detection AI alerts loss-prevention teams the moment threshold behaviours are detected. Under the Mumbai Smart City Mission, the city has been deploying AI cameras across public spaces, junctions, and transit hubs. ArcisAI's cameras are Made in India with a non-Chinese SoC, BIS-ER registered, and STQC-certified — fulfilling the indigenisation and data-sovereignty requirements of government smart-city tenders. Contact ArcisAI to confirm installation, commissioning and AMC options for your Mumbai site.",
         stats: [
           { label: "Camera Models", value: "30+" },
           { label: "Night Vision", value: "30 m" },
@@ -55,7 +55,7 @@ const seoPageDataMaharashtraCities = {
           "Hotel & hospitality: lobby, corridor, car park monitoring with privacy-compliant face detection",
           "4G SIM cameras for dockside and remote industrial locations without fibre",
           "ArcisAI Bridge Device: add edge AI to existing camera infrastructure at BFSI/society sites",
-          "Maharashtra dealer network: fast deployment & support across all Mumbai zones"
+          "Installation and AMC: contact the team to confirm availability for your Mumbai site"
         ]
       }
     ],
@@ -74,12 +74,12 @@ const seoPageDataMaharashtraCities = {
       },
       {
         q: "Does ArcisAI have installation and support coverage in Mumbai?",
-        a: "ArcisAI serves Mumbai through an authorized Maharashtra dealer-partner network, ensuring professional installation, commissioning, and AMC across all zones — South Mumbai, BKC, Western Suburbs, Eastern Suburbs, Navi Mumbai, and Thane. ArcisAI's headquarters in Ahmedabad coordinates rapid support escalation for critical deployments."
+        a: "Contact ArcisAI with your Mumbai location and requirement. The team will confirm what installation, commissioning and AMC support is available for your site."
       }
     ],
     cta: {
       title: "Secure Your Mumbai Property with Certified AI Surveillance",
-      description: "BFSI-grade encryption, STQC-certified VMS, BIS-ER certified cameras — free site survey across Mumbai for banks, societies, retail, and logistics sites.",
+      description: "BFSI-grade encryption, STQC-certified VMS, BIS-ER certified cameras — request a site survey across Mumbai for banks, societies, retail, and logistics sites.",
       buttonText: "Get Free Quote",
       buttonLink: "/contact-us?city=mumbai"
     }
@@ -120,12 +120,12 @@ const seoPageDataMaharashtraCities = {
       },
       {
         title: "Pune's Universities, Residential Zones & Commercial Corridors",
-        content: "Pune is home to COEP, PICT, Symbiosis, Savitribai Phule University, and hundreds of smaller colleges — all managing large, diverse student populations across sprawling campuses. ArcisAI's scalable cloud VMS lets campus security teams centrally monitor entry points, parking zones, and hostel perimeters with people-counting and anomaly alerts sent directly to their mobile app. Residential hubs in Baner, Wakad, Kothrud, and Viman Nagar have a growing population of young working professionals whose housing societies expect smart, app-controlled gate management. For Pune's retail corridors — Phoenix Palladium, Seasons Mall, MG Road — footfall analytics and AI-powered shrinkage detection provide the intelligence that traditional cameras cannot. Maharashtra dealer-partner support ensures fast installation and AMC across all Pune zones.",
+        content: "Pune is home to COEP, PICT, Symbiosis, Savitribai Phule University, and hundreds of smaller colleges — all managing large, diverse student populations across sprawling campuses. ArcisAI's scalable cloud VMS lets campus security teams centrally monitor entry points, parking zones, and hostel perimeters with people-counting and anomaly alerts sent directly to their mobile app. Residential hubs in Baner, Wakad, Kothrud, and Viman Nagar have a growing population of young working professionals whose housing societies expect smart, app-controlled gate management. For Pune's retail corridors — Phoenix Palladium, Seasons Mall, MG Road — footfall analytics and AI-powered shrinkage detection provide the intelligence that traditional cameras cannot. Contact ArcisAI to confirm installation and AMC options for your Pune site.",
         stats: [
           { label: "Camera Models", value: "30+" },
           { label: "Mobile App", value: "Included" },
           { label: "ArcisGPT", value: "Included" },
-          { label: "Support", value: "MH Dealer Network" }
+          { label: "Support", value: "On request" }
         ],
         features: [
           "University campuses: people counting, perimeter alerts, mobile command centre",
@@ -152,12 +152,12 @@ const seoPageDataMaharashtraCities = {
       },
       {
         q: "Does ArcisAI support installation and AMC across all parts of Pune including PCMC?",
-        a: "ArcisAI covers all of Pune and PCMC through its authorized Maharashtra dealer-partner network — including Hinjewadi, Baner, Kothrud, Viman Nagar, Chakan, Pimpri, Chinchwad, and Shivajinagar. Fast deployment and responsive AMC support are co-ordinated through the dealer network with technical escalation to ArcisAI's Ahmedabad headquarters."
+        a: "Contact ArcisAI with your Pune or PCMC location and requirement. The team will confirm what installation and AMC support is available for your site."
       }
     ],
     cta: {
       title: "Certified AI Security for Pune's IT Parks, Auto Plants & Societies",
-      description: "BIS-ER + STQC certified, non-Chinese SoC, ArcisGPT — free site survey across Pune, PCMC, and Chakan.",
+      description: "BIS-ER + STQC certified, non-Chinese SoC, ArcisGPT — request a site survey across Pune, PCMC, and Chakan.",
       buttonText: "Get Free Quote",
       buttonLink: "/contact-us?city=pune"
     }
@@ -167,7 +167,7 @@ const seoPageDataMaharashtraCities = {
   "cctv-cameras-nagpur": {
     slug: "cctv-cameras-nagpur",
     title: "AI CCTV Cameras in Nagpur | MIHAN, Logistics & Government | ArcisAI",
-    metaDescription: "ArcisAI AI CCTV in Nagpur — BIS-ER & STQC-certified for MIHAN SEZ, logistics hubs & government offices. Central-India distribution made secure. Free site survey.",
+    metaDescription: "ArcisAI AI CCTV in Nagpur — BIS-ER & STQC-certified for MIHAN SEZ, logistics hubs & government offices. Central-India distribution made secure. Request a site survey.",
     keywords: [
       "CCTV camera Nagpur", "AI CCTV Nagpur", "MIHAN SEZ security camera",
       "logistics CCTV Nagpur", "BIS certified CCTV Nagpur", "government CCTV Nagpur",
@@ -203,7 +203,7 @@ const seoPageDataMaharashtraCities = {
           { label: "Camera Models", value: "30+" },
           { label: "Night Vision", value: "30 m" },
           { label: "ArcisGPT", value: "Included" },
-          { label: "Support", value: "MH Dealer Network" }
+          { label: "Support", value: "On request" }
         ],
         features: [
           "Government offices & legislature complex: BIS-ER + STQC + GeM for full compliance",
@@ -235,7 +235,7 @@ const seoPageDataMaharashtraCities = {
     ],
     cta: {
       title: "Certified AI Surveillance for Nagpur's Logistics, Government & Industrial Sites",
-      description: "BIS-ER + STQC + GeM listed — free site survey for MIHAN, warehouses, government offices, and educational campuses across Nagpur.",
+      description: "BIS-ER + STQC + GeM listed — request a site survey for MIHAN, warehouses, government offices, and educational campuses across Nagpur.",
       buttonText: "Get Free Quote",
       buttonLink: "/contact-us?city=nagpur"
     }
@@ -281,7 +281,7 @@ const seoPageDataMaharashtraCities = {
           { label: "4G SIM Cameras", value: "Available" },
           { label: "Night Vision", value: "30 m" },
           { label: "Camera Models", value: "30+" },
-          { label: "Support", value: "MH Dealer Network" }
+          { label: "Support", value: "On request" }
         ],
         features: [
           "Vineyard & winery: 4G SIM cameras for off-grid outdoor perimeter monitoring",
@@ -313,7 +313,7 @@ const seoPageDataMaharashtraCities = {
     ],
     cta: {
       title: "Protect Nashik's Manufacturing, Pharma & Wineries with Certified AI CCTV",
-      description: "BIS-ER + STQC certified, GMP-compliant, 4G SIM options — free site survey for Nashik MIDC, pharma, wineries, and residential societies.",
+      description: "BIS-ER + STQC certified, GMP-compliant, 4G SIM options — request a site survey for Nashik MIDC, pharma, wineries, and residential societies.",
       buttonText: "Get Free Quote",
       buttonLink: "/contact-us?city=nashik"
     }
@@ -359,7 +359,7 @@ const seoPageDataMaharashtraCities = {
           { label: "Camera Models", value: "30+" },
           { label: "Night Vision", value: "30 m" },
           { label: "Industrial Rating", value: "IP67" },
-          { label: "Support", value: "MH Dealer Network" }
+          { label: "Support", value: "On request" }
         ],
         features: [
           "Wagle Estate: compact cameras with on-device AI for dense factory-plot deployments",
@@ -391,7 +391,7 @@ const seoPageDataMaharashtraCities = {
     ],
     cta: {
       title: "Upgrade Your Thane Society or Industrial Unit to AI Surveillance",
-      description: "BIS-ER + STQC certified, ANPR gate management, ArcisGPT — free site survey for Thane societies, Wagle Estate, and retail across Thane.",
+      description: "BIS-ER + STQC certified, ANPR gate management, ArcisGPT — request a site survey for Thane societies, Wagle Estate, and retail across Thane.",
       buttonText: "Get Free Quote",
       buttonLink: "/contact-us?city=thane"
     }

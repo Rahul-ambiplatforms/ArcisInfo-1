@@ -4,6 +4,7 @@ import BISHeroSection from "./Components/HeroSection";
 import CertificationBenefits from "./Components/CertificationBenefits";
 import DecisionMakers from "./Components/DecisionMakers";
 import BISCta from "./Components/BISCta";
+import RelatedLinks from "@/src/Components/RelatedLinks";
 
 const BISCertification = () => {
   return (
@@ -17,6 +18,16 @@ const BISCertification = () => {
       <CertificationBenefits />
       <DecisionMakers />
       <BISCta />
+      <RelatedLinks
+        title="Related pages"
+        links={[
+          { href: '/certifications', label: 'Certifications overview: hardware and software certificates explained' },
+          { href: '/tools/certificate-verifier', label: 'Certificate verifier tool' },
+          { href: '/cctv-compliance-2026', label: 'BIS-ER and STQC rules for CCTV buyers in India' },
+          { href: '/wifi-cctv-camera', label: 'WiFi CCTV cameras with datasheets' },
+          { href: '/contact-us', label: 'Contact ArcisAI' },
+        ]}
+      />
     </>
   );
 };

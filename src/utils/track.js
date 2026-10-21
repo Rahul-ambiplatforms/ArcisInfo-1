@@ -57,3 +57,41 @@ export function trackLead(source, params = {}) {
 export function trackCtaClick(channel, location, params = {}) {
   track('cta_click', { cta_channel: channel, cta_location: location, ...params });
 }
+
+// ---- Lead attribution (added 2026-10-13) ----------------------------------
+// Remembers where a visitor first came from (UTM / ?interest / ?city / referrer
+// / landing page) for the browser session, so the contact form can tell the CRM
+// which page, campaign and city produced each lead. Storage is wrapped in
+// try/catch: if it is blocked the values are simply read from the current URL.
+const ATTR_KEY = 'arcis_attr_v1';
+const ATTR_PARAMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'interest', 'city', 'source', 'resource'];
+
+export function captureAttribution() {
+  if (typeof window === 'undefined') return {};
+  let stored = {};
+  try { stored = JSON.parse(window.sessionStorage.getItem(ATTR_KEY) || '{}'); } catch (e) { stored = {}; }
+  const current = {};
+  try {
+    const sp = new URLSearchParams(window.location.search);
+    ATTR_PARAMS.forEach((k) => { const v = sp.get(k); if (v) current[k] = v.slice(0, 120); });
+  } catch (e) { /* ignore */ }
+  const next = { ...stored };
+  if (!next.landing_page) {
+    next.landing_page = window.location.pathname;
+    next.referrer = (document.referrer || '').slice(0, 200);
+  }
+  Object.keys(current).forEach((k) => { next[k] = current[k]; });
+  try { window.sessionStorage.setItem(ATTR_KEY, JSON.stringify(next)); } catch (e) { /* ignore */ }
+  return next;
+}
+
+export function getAttribution() {
+  return captureAttribution();
+}
+
+// Click events for the non-form lead channels.
+export function trackContactClick(channel, location) {
+  try {
+    track('contact_click', { channel, location: location || 'floating', page_path: typeof window !== 'undefined' ? window.location.pathname : '' });
+  } catch (e) { /* never block a click */ }
+}

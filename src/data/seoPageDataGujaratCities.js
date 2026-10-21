@@ -9,7 +9,7 @@ const seoPageDataGujaratCities = {
   "cctv-cameras-ahmedabad": {
     slug: "cctv-cameras-ahmedabad",
     title: "AI CCTV Cameras in Ahmedabad | BIS-ER & STQC Certified | ArcisAI",
-    metaDescription: "ArcisAI AI CCTV in Ahmedabad — BIS-ER (R-72003735) & STQC-certified VMS, 8 edge AI detections, ArcisGPT. Ahmedabad HQ means same-day support. Free site survey.",
+    metaDescription: "ArcisAI AI CCTV in Ahmedabad — BIS-ER (R-72003735) & STQC-certified VMS, 8 edge AI detections, ArcisGPT. ArcisAI is headquartered in Ahmedabad. Request a site survey.",
     keywords: [
       "CCTV camera Ahmedabad", "AI CCTV Ahmedabad", "BIS certified CCTV Ahmedabad",
       "STQC certified surveillance Ahmedabad", "ArcisAI Ahmedabad", "security camera SG Highway",
@@ -17,7 +17,7 @@ const seoPageDataGujaratCities = {
     ],
     heroTitle: "AI-Powered CCTV for Ahmedabad — Headquartered Here, Built for Gujarat",
     heroSubtitle: "BIS-ER R-72003735 | STQC-Certified VMS | ArcisAI Ahmedabad HQ",
-    heroDescription: "ArcisAI is headquartered in Ahmedabad — giving Gujarat businesses the fastest local installation, support, and service in the country. Deploy BIS-ER and STQC-certified AI surveillance across your corporate campus, industrial estate, housing society, or retail chain.",
+    heroDescription: "ArcisAI is headquartered in Ahmedabad — so Gujarat businesses can speak directly with the team. Contact us to confirm installation and support options for your site. Deploy BIS-ER and STQC-certified AI surveillance across your corporate campus, industrial estate, housing society, or retail chain.",
     category: "city",
     sections: [
       {
@@ -27,12 +27,12 @@ const seoPageDataGujaratCities = {
           { label: "AI Detections On-Device", value: "8+" },
           { label: "BIS-ER Reg. No.", value: "R-72003735" },
           { label: "VMS Certification", value: "STQC" },
-          { label: "Support Response", value: "Same Day" }
+          { label: "Head Office", value: "Ahmedabad" }
         ],
         features: [
           "BIS-ER certified (ER01:2024) — mandatory for all new Indian installations",
           "STQC-certified Video Management System — one of very few in India",
-          "ArcisAI HQ in Ahmedabad: fastest installation & support turnaround in Gujarat",
+          "ArcisAI HQ in Ahmedabad: contact the team to confirm installation and support for your site",
           "Edge AI: intrusion detection, face detection, people counting, ANPR — on camera",
           "ArcisGPT: search your footage in plain Gujarati or English",
           "4G SIM cameras for Naroda & Vatva industrial zones with poor network coverage"
@@ -60,7 +60,7 @@ const seoPageDataGujaratCities = {
     faqs: [
       {
         q: "Is ArcisAI headquartered in Ahmedabad?",
-        a: "Yes. ArcisAI (by Adiance Technologies) is based in Ahmedabad, Gujarat. This means Ahmedabad customers receive the fastest installation timelines, same-day on-site support, and direct access to our engineering team — advantages no out-of-state brand can match."
+        a: "Yes. ArcisAI (by Adiance Technologies) is based in Ahmedabad, Gujarat. Ahmedabad customers can contact the team directly to discuss installation and support for their site."
       },
       {
         q: "Does ArcisAI hold BIS-ER certification required since April 2026?",
@@ -68,7 +68,7 @@ const seoPageDataGujaratCities = {
       },
       {
         q: "Which Ahmedabad areas does ArcisAI cover for installation?",
-        a: "ArcisAI installs across all of Ahmedabad — SG Highway, Prahlad Nagar, Satellite, Bopal, Naroda, Vatva, Odhav, CG Road, Maninagar, Chandkheda, and GIFT City. Our local Ahmedabad team handles site surveys, installation, and AMC."
+        a: "Share your Ahmedabad location and requirement, and the team will confirm what site survey, installation and AMC support is available for it."
       },
       {
         q: "What AI features are available on ArcisAI cameras in Ahmedabad?",
@@ -77,7 +77,7 @@ const seoPageDataGujaratCities = {
     ],
     cta: {
       title: "Get AI CCTV for Your Ahmedabad Property",
-      description: "ArcisAI is locally headquartered — free site survey, same-day support, and professional installation across Ahmedabad.",
+      description: "ArcisAI is headquartered in Ahmedabad. Tell us about your site to request a quote or site survey.",
       buttonText: "Get Free Quote",
       buttonLink: "/contact-us?city=ahmedabad"
     }
@@ -87,7 +87,7 @@ const seoPageDataGujaratCities = {
   "cctv-cameras-surat": {
     slug: "cctv-cameras-surat",
     title: "AI CCTV Cameras in Surat | Diamond & Textile Security | ArcisAI",
-    metaDescription: "ArcisAI AI CCTV in Surat — protect diamond polishing units, textile mills & retail. BIS-ER certified, STQC-approved VMS, 8 edge AI detections. Free site survey.",
+    metaDescription: "ArcisAI AI CCTV in Surat — protect diamond polishing units, textile mills & retail. BIS-ER certified, STQC-approved VMS, 8 edge AI detections. Request a site survey.",
     keywords: [
       "CCTV camera Surat", "AI CCTV Surat", "diamond unit security Surat",
       "CCTV for textile factory Surat", "BIS certified CCTV Surat",
@@ -100,7 +100,7 @@ const seoPageDataGujaratCities = {
     sections: [
       {
         title: "Security Built for Surat's Diamond & Textile Industries",
-        content: "Surat's diamond industry handles billions of rupees in rough and polished stones daily across thousands of polishing units concentrated in Varachha, Katargam, and Sagrampura. A single security lapse in a diamond unit can result in crore-level losses. ArcisAI S-Series cameras with 4K resolution, AI-powered intrusion detection, and encrypted cloud storage are deployed across Surat diamond units to provide round-the-clock perimeter monitoring, unauthorized access alerts, and forensic-quality footage. For textile mills in Pandesara, Udhna, and Sachin GIDC, ArcisAI cameras monitor production floors, loading docks, and fabric storage areas — deterring pilferage and providing accountability across every shift.",
+        content: "Surat's diamond industry handles billions of rupees in rough and polished stones daily across thousands of polishing units concentrated in Varachha, Katargam, and Sagrampura. A single security lapse in a diamond unit can result in crore-level losses. ArcisAI S-Series cameras with 4K resolution, AI-powered intrusion detection, and encrypted cloud storage can provide round-the-clock perimeter monitoring, unauthorized access alerts, and forensic-quality footage. For textile mills in Pandesara, Udhna, and Sachin GIDC, ArcisAI cameras monitor production floors, loading docks, and fabric storage areas — deterring pilferage and providing accountability across every shift.",
         stats: [
           { label: "Resolution", value: "Up to 4K" },
           { label: "Night Vision", value: "30 m" },
@@ -118,7 +118,7 @@ const seoPageDataGujaratCities = {
       },
       {
         title: "Why Surat Businesses Trust ArcisAI",
-        content: "Surat businesses have long relied on imported camera brands — but BIS-ER certification mandates (since April 2026) have changed the landscape. ArcisAI is one of the very few Indian brands carrying BIS-ER registration R-72003735 and STQC certification on its Video Management System, making it fully compliant for insurance, government, and export-audit requirements. With ArcisAI's Ahmedabad headquarters just 270 km away, Surat customers receive rapid installation and next-day on-site support — a genuine local advantage.",
+        content: "Surat businesses have long relied on imported camera brands — but BIS-ER certification mandates (since April 2026) have changed the landscape. ArcisAI is one of the very few Indian brands carrying BIS-ER registration R-72003735 and STQC certification on its Video Management System, making it fully compliant for insurance, government, and export-audit requirements. ArcisAI is headquartered in Ahmedabad, in the same state. Contact the team to confirm installation and support options for your Surat site.",
         stats: [
           { label: "BIS-ER Reg.", value: "R-72003735" },
           { label: "VMS Cert.", value: "STQC" },
@@ -130,7 +130,7 @@ const seoPageDataGujaratCities = {
           "On-device AI: no dependency on internet for core detections",
           "ArcisGPT: search footage by plain-language queries like 'show me all entries after 10 PM'",
           "Multi-site cloud dashboard for diamond house groups with multiple units",
-          "AMC and spare-parts support from Gujarat dealer network",
+          "AMC and spare-parts support: contact the team to confirm availability for your site",
           "Non-Chinese SoC architecture — data sovereignty for sensitive industries"
         ]
       }
@@ -146,7 +146,7 @@ const seoPageDataGujaratCities = {
       },
       {
         q: "Does ArcisAI have installation and support in Surat?",
-        a: "Yes. ArcisAI has an authorized dealer and installation network covering Varachha, Katargam, Pandesara, Udhna, Ring Road, and Sachin GIDC. With our Ahmedabad headquarters, we can dispatch support engineers to Surat within the same business day for critical installations."
+        a: "Please contact the team with your Surat location and requirement. ArcisAI will confirm the installation and support options available for your site."
       },
       {
         q: "Is ArcisAI compliant with BIS-ER requirements for new camera installations in Surat?",
@@ -155,7 +155,7 @@ const seoPageDataGujaratCities = {
     ],
     cta: {
       title: "Protect Your Surat Business with Certified AI Surveillance",
-      description: "Free site survey for diamond units, textile mills, and retail — BIS-ER and STQC-certified ArcisAI cameras, Gujarat support network.",
+      description: "Request a site survey for diamond units, textile mills and retail. Contact the ArcisAI team to confirm installation and support for your site.",
       buttonText: "Get Free Quote",
       buttonLink: "/contact-us?city=surat"
     }
@@ -233,7 +233,7 @@ const seoPageDataGujaratCities = {
     ],
     cta: {
       title: "Certified AI Surveillance for Vadodara Industrial & Enterprise Sites",
-      description: "Free site survey for GIDC, pharmaceutical, and enterprise campuses — BIS-ER and STQC-certified ArcisAI cameras, Gujarat-based support.",
+      description: "Request a site survey for GIDC, pharmaceutical, and enterprise campuses — BIS-ER and STQC-certified ArcisAI cameras, Gujarat-based support.",
       buttonText: "Get Free Quote",
       buttonLink: "/contact-us?city=vadodara"
     }
@@ -287,7 +287,7 @@ const seoPageDataGujaratCities = {
           "Non-Chinese SoC: data sovereignty for export-oriented businesses",
           "ArcisGPT: natural-language incident search in Gujarati or English",
           "ArcisAI Bridge Device: add AI to existing camera infrastructure",
-          "AMC and support from Rajkot-area authorized dealer network"
+          "AMC and support options — contact ArcisAI to confirm availability in Rajkot"
         ]
       }
     ],
@@ -306,12 +306,12 @@ const seoPageDataGujaratCities = {
       },
       {
         q: "Does ArcisAI provide installation and support in Rajkot?",
-        a: "Yes. ArcisAI has an authorized dealer and service network in Rajkot covering Aji GIDC, Shapar-Veraval, Metoda, Kalawad Road, and the main city areas. With our Ahmedabad headquarters, we can provide rapid support dispatch for critical installations across Saurashtra."
+        a: "ArcisAI is headquartered in Ahmedabad, Gujarat. Support and AMC availability for Rajkot sites (Aji GIDC, Shapar-Veraval, Metoda and city areas) depends on the site, so please contact ArcisAI to confirm what can be arranged."
       }
     ],
     cta: {
       title: "Affordable AI Security for Rajkot's Manufacturing Businesses",
-      description: "Free site survey for GIDC units, engineering workshops, and retail — BIS-ER certified, Made in India, Gujarat-based support.",
+      description: "Request a site survey for GIDC units, engineering workshops, and retail — BIS-ER certified, Made in India, Gujarat-based support.",
       buttonText: "Get Free Quote",
       buttonLink: "/contact-us?city=rajkot"
     }
@@ -321,7 +321,7 @@ const seoPageDataGujaratCities = {
   "cctv-cameras-gandhinagar": {
     slug: "cctv-cameras-gandhinagar",
     title: "AI CCTV Cameras in Gandhinagar | GIFT City & Smart City | ArcisAI",
-    metaDescription: "ArcisAI AI CCTV in Gandhinagar — BIS-ER & STQC-certified for GIFT City, state govt, ICCC smart-city. Made in India, edge AI, GeM listed. Free site survey.",
+    metaDescription: "ArcisAI AI CCTV in Gandhinagar — BIS-ER & STQC-certified for GIFT City, state govt, ICCC smart-city. Made in India, edge AI, GeM listed. Request a site survey.",
     keywords: [
       "CCTV camera Gandhinagar", "AI CCTV Gandhinagar", "GIFT City security camera",
       "smart city CCTV Gandhinagar", "BIS certified CCTV Gandhinagar",
@@ -357,7 +357,7 @@ const seoPageDataGujaratCities = {
           { label: "Camera Models", value: "30+" },
           { label: "ArcisGPT", value: "Included" },
           { label: "ANPR", value: "On-Device" },
-          { label: "Support", value: "Same-Day (Ahmedabad HQ)" }
+          { label: "Head Office", value: "Ahmedabad" }
         ],
         features: [
           "GIFT City: encrypted VMS, audit-ready footage, IFSC compliance-ready",
@@ -365,7 +365,7 @@ const seoPageDataGujaratCities = {
           "Sector residential: ANPR gate cameras for planned township entry points",
           "University campus: people counting, perimeter monitoring, mobile alerts",
           "ArcisGPT: natural-language incident search for ICCC operators",
-          "Same-day support from Ahmedabad HQ — 30 minutes from Gandhinagar"
+          "Head office in Ahmedabad, close to Gandhinagar"
         ]
       }
     ],
@@ -384,7 +384,7 @@ const seoPageDataGujaratCities = {
       },
       {
         q: "How quickly can ArcisAI support an installation in Gandhinagar?",
-        a: "ArcisAI is headquartered in Ahmedabad — approximately 30 minutes from Gandhinagar. This means site surveys, installations, and emergency support calls in Gandhinagar can be handled same-day, with no waiting for technicians to travel from out-of-state."
+        a: "ArcisAI is headquartered in Ahmedabad — approximately 30 minutes from Gandhinagar. Contact ArcisAI to discuss site surveys, installation and support for Gandhinagar; timelines are confirmed per project."
       }
     ],
     cta: {

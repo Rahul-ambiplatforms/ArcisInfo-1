@@ -70,6 +70,9 @@ export const SECTION_BY_CATEGORY = {
   industry: 'industry',
   resources: 'resources',
   state: 'state',
+  // Model-level product pages live at /products/<model>; the bare key would
+  // otherwise also resolve through the /[slug] catch-all (duplicate URL).
+  products: 'products',
 };
 
 /**
@@ -250,6 +253,11 @@ export function getResourceLinks() {
 // cluster (only a redirect stub points at one of them), so these links create
 // the crawl entry point. Uses the bare data KEY as the slug (skips any
 // leading-slash keys, which don't round-trip through the compare route).
+// Server-only: every /products/<model> model page (generateStaticParams).
+export function getProductModelLinks() {
+  return linksForCategory('products');
+}
+
 export function getCompareLinks() {
   return linksForCategory('compare');
 }
@@ -272,6 +280,9 @@ export function getStateLinks() {
 // (ArcisAI Accelerated WiFi CCTV SEO & GEO Sprint, Day 6 — internal linking).
 const WIFI_CLUSTER_KEYS = [
   'wifi-cctv-camera',
+  'wifi-cctv-camera-dome',
+  'wifi-cctv-camera-bullet',
+  'wifi-cctv-camera-ptz',
   'wifi-cctv-camera-ahmedabad',
   'wifi-cctv-camera-mumbai',
   'wifi-cctv-camera-pune',
@@ -285,6 +296,14 @@ export function getWifiLinks() {
       slug: k,
       title: allSeoData[k].heroTitle || allSeoData[k].title || k,
     }));
+  ['ad-90aiwfbdp', 'ad-90aiwfbdp-ptz']
+    .filter((k) => allSeoData[k])
+    .forEach((k) => {
+      clusterLinks.push({
+        slug: `products/${k}`,
+        title: allSeoData[k].heroTitle || allSeoData[k].title || k,
+      });
+    });
   const guide = allSeoData['wifi-cctv-camera-buying-guide'];
   if (guide) {
     clusterLinks.push({

@@ -12,6 +12,8 @@ This file is a plain summary of the public ArcisAI website for people and softwa
 - [S-Series cameras](https://arcisai.io/s-series): bullet, dome and PTZ cameras with on-camera analytics; connectivity options vary by model (4G, Wi-Fi, PoE).
 - [ECO-Series cameras](https://arcisai.io/eco-series): bullet, dome and PTZ cameras in the ECO range.
 - [Wi-Fi CCTV cameras](https://arcisai.io/wifi-cctv-camera): Wi-Fi camera models and how they compare.
+- [Wi-Fi dome camera](https://arcisai.io/wifi-cctv-camera-dome), [Wi-Fi bullet camera](https://arcisai.io/wifi-cctv-camera-bullet) and [Wi-Fi PTZ camera](https://arcisai.io/wifi-cctv-camera-ptz): specifications taken from the published datasheets.
+- Model pages: [AD-90AIWFBDP](https://arcisai.io/products/ad-90aiwfbdp) and [AD-90AIWFBDP-PTZ](https://arcisai.io/products/ad-90aiwfbdp-ptz).
 - [NVRs](https://arcisai.io/arcis-nvr): network video recorders in 4, 8, 16 and 32 channel configurations.
 - [Cloud VMS](https://arcisai.io/cloud-vms): video management for cameras at one or many locations.
 - [Arcis Bridge Device](https://arcisai.io/arcis-bridge-device): connects existing ONVIF cameras to ArcisAI VMS.
