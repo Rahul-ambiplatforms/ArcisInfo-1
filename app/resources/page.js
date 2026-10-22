@@ -14,7 +14,7 @@ const CANONICAL = `${SITE}/resources`;
 export const revalidate = 86400;
 
 export const metadata = {
-title: 'CCTV & Surveillance Resources | ArcisAI',
+title: 'CCTV & Surveillance Resources',
 description:
 'Guides, comparisons, and reference material on AI CCTV, compliance, and surveillance technology from ArcisAI.',
 // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.

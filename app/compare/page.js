@@ -14,7 +14,7 @@ const CANONICAL = `${SITE}/compare`;
 export const revalidate = 86400;
 
 export const metadata = {
-title: 'ArcisAI vs Other CCTV Brands — Comparisons | ArcisAI',
+title: 'ArcisAI vs Other CCTV Brands — Comparisons',
 description:
 'Side-by-side comparisons of ArcisAI AI CCTV cameras against other CCTV and surveillance brands, on certification, compliance, and features.',
 // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.

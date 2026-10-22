@@ -15,7 +15,7 @@ const CANONICAL = `${SITE}/state`;
 export const revalidate = 86400;
 
 export const metadata = {
-  title: 'AI CCTV Cameras by State | ArcisAI',
+  title: 'AI CCTV Cameras by State',
   description:
     'ArcisAI AI CCTV camera dealers, installation, and support by Indian state.',
   // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.

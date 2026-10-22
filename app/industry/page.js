@@ -19,7 +19,7 @@ const CANONICAL = `${SITE}/industry`;
 export const revalidate = 86400;
 
 export const metadata = {
-  title: 'AI CCTV Solutions by Industry | ArcisAI',
+  title: 'AI CCTV Solutions by Industry',
   description:
     'AI-powered CCTV surveillance solutions for every industry — retail, healthcare, education, banking, logistics, manufacturing, transportation, and more.',
   // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.

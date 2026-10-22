@@ -19,7 +19,7 @@ const CANONICAL = `${SITE}/locations`;
 export const revalidate = 86400;
 
 export const metadata = {
-  title: 'AI CCTV Camera Locations | ArcisAI',
+  title: 'AI CCTV Camera Locations',
   description:
     'ArcisAI AI CCTV camera dealers, installation, and support across every city ArcisAI serves.',
   alternates: { canonical: CANONICAL, languages: buildHreflang(CANONICAL) },
