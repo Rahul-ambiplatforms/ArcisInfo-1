@@ -52,6 +52,9 @@ const DistributorProgram = () => (
           <Button as="a" type={undefined} href={WA} onClick={() => trackCtaClick('whatsapp', 'become-a-distributor')} size="lg" bg={ACCENT} color="white" _hover={{ bg: ACCENT_DEEP }}>
             Apply on WhatsApp
           </Button>
+          <Button as={NextLink} type={undefined} href="/contact-us?type=partner" onClick={() => trackCtaClick('enquiry_form', 'become-a-distributor')} size="lg" variant="outline" borderColor="whiteAlpha.500" color="white" _hover={{ bg: 'whiteAlpha.200' }}>
+            Fill the Enquiry Form
+          </Button>
           <Button as="a" type={undefined} href="mailto:marketing@arcisai.io?subject=ArcisAI%20Distributor%20Enquiry" onClick={() => trackCtaClick('email', 'become-a-distributor')} size="lg" variant="outline" borderColor={CARD_BORDER} color="white" _hover={{ bg: 'whiteAlpha.100' }}>
             Email the Channel Team
           </Button>

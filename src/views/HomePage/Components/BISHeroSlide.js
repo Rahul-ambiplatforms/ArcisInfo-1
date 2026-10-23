@@ -30,6 +30,14 @@ const BISHeroSlide = ({ showExploreButton = true }) => {
         ml={{ base: 0, md: "32px" }}
         textAlign={{ base: "center", md: "left" }}
         w="100%"
+        // Mobile only: the copy sits on top of the product photo, so give it a
+        // soft light panel — otherwise the heading, badge and certificate text
+        // run across the cameras and are hard to read.
+        bg={{ base: "rgba(255,255,255,0.82)", md: "transparent" }}
+        backdropFilter={{ base: "blur(6px)", md: "none" }}
+        borderRadius={{ base: "16px", md: 0 }}
+        mx={{ base: "auto", md: 0 }}
+        py={{ base: 3, md: 0 }}
       >
         <Heading
           as="h1"
@@ -99,6 +107,26 @@ const BISHeroSlide = ({ showExploreButton = true }) => {
             display={{ base: "none", md: "block" }}
           />
 
+          {/* Mobile: Explore More sits in the flow under the badge, not
+              floating over the photo where the WhatsApp/Call buttons cover it */}
+          {showExploreButton && (
+            <Box display={{ base: "block", md: "none" }} mt={2} mb={1}>
+              <CustomButton
+                onClick={() => window.open("/BIS-ER-certification", "_self")}
+                width="140px"
+                height="40px"
+                bgColor="rgba(0, 0, 0, 0.05)"
+                hoverBgColor="rgba(0, 0, 0, 0.1)"
+                borderColor="#1a1a2e"
+                hoverBorderColor="#5B2EAF"
+                textColor="#1a1a2e"
+                hoverTextColor="#5B2EAF"
+                fontSize="14px"
+              >
+                Explore More
+              </CustomButton>
+            </Box>
+          )}
         </Flex>
 
         {/* Desktop: button inline */}
@@ -121,32 +149,6 @@ const BISHeroSlide = ({ showExploreButton = true }) => {
           </Box>
         )}
       </Box>
-
-      {/* Mobile: Explore More button positioned at bottom-right over camera images */}
-      {showExploreButton && (
-        <Box
-          display={{ base: "flex", md: "none" }}
-          position="absolute"
-          bottom={{ base: "15vh", sm: "120px" }}
-          right="24px"
-          zIndex={2}
-        >
-          <CustomButton
-            onClick={() => window.open("/BIS-ER-certification", "_self")}
-            width="140px"
-            height="40px"
-            bgColor="rgba(0, 0, 0, 0.05)"
-            hoverBgColor="rgba(0, 0, 0, 0.1)"
-            borderColor="#1a1a2e"
-            hoverBorderColor="#5B2EAF"
-            textColor="#1a1a2e"
-            hoverTextColor="#5B2EAF"
-            fontSize="14px"
-          >
-            Explore More
-          </CustomButton>
-        </Box>
-      )}
     </Flex>
   );
 };

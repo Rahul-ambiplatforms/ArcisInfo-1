@@ -19,12 +19,12 @@ const Btn = ({ href, label, bg, children, isExternal, onClick }) => (
       display="flex"
       alignItems="center"
       justifyContent="center"
-      w={{ base: '52px', md: '56px' }}
-      h={{ base: '52px', md: '56px' }}
+      w={{ base: '44px', md: '56px' }}
+      h={{ base: '44px', md: '56px' }}
       borderRadius="full"
       bg={bg}
       color="white"
-      fontSize="24px"
+      fontSize={{ base: '20px', md: '24px' }}
       boxShadow="0 4px 14px rgba(0,0,0,0.35)"
       transition="transform 0.15s"
       _hover={{ transform: 'scale(1.08)', textDecoration: 'none' }}
@@ -38,8 +38,8 @@ export default function FloatingContact() {
   // Record first-touch source (UTM / landing page) once per session.
   useEffect(() => { captureAttribution(); }, []);
   return (
-    <Box position="fixed" bottom={{ base: '16px', md: '24px' }} right={{ base: '16px', md: '24px' }} zIndex={1400}>
-      <VStack spacing={3}>
+    <Box position="fixed" bottom={{ base: '12px', md: '24px' }} right={{ base: '10px', md: '24px' }} zIndex={1400}>
+      <VStack spacing={{ base: 2, md: 3 }}>
         <Btn href={WA} label="Chat on WhatsApp" bg="#25D366" isExternal onClick={() => trackContactClick('whatsapp', 'floating')}>
           <FaWhatsapp />
         </Btn>

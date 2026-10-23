@@ -3,7 +3,7 @@ import { buildHreflang } from '@/src/data/hreflang';
 import GA4Direct from '@/src/Components/GA4Direct';
 
 export const metadata = {
-  title: 'Contact ArcisAI | CCTV Quote, Demo & Consultation',
+  title: 'Contact Us | CCTV Quote, Demo & Consultation',
   description:
     'Request a CCTV quote, product demo or technical consultation from ArcisAI. Tell us about your site and requirement and the team will get back to you.',
   // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.

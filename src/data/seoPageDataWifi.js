@@ -32,7 +32,7 @@ const seoPageDataWifi = {
     slug: "wifi-cctv-camera",
     title: "WiFi CCTV Camera India | BIS-ER Certified Wireless Security | ArcisAI",
     metaDescription:
-      "ArcisAI WiFi CCTV cameras — 3MP, 2.4GHz wireless, two-way audio, human detection, IP66 outdoor rated. BIS-ER R-72003735 certified and made in India. Dealer enquiries welcome.",
+      "ArcisAI WiFi CCTV cameras — 3MP, 2.4GHz wireless, two-way audio, human detection, IP66. BIS-ER R-72003735 certified, made in India. Dealers welcome.",
     keywords: [
       "wifi cctv camera", "wifi cctv camera india", "wireless cctv camera",
       "wifi security camera india", "wifi camera for home", "outdoor wifi cctv camera",
@@ -193,7 +193,7 @@ const seoPageDataWifi = {
     slug: "wifi-cctv-camera-ahmedabad",
     title: "WiFi CCTV Camera in Ahmedabad | BIS-ER Certified | ArcisAI",
     metaDescription:
-      "WiFi CCTV cameras in Ahmedabad from ArcisAI — 3MP wireless, IP66 outdoor, BIS-ER R-72003735 certified. ArcisAI is headquartered in Ahmedabad. Dealer enquiries welcome.",
+      "WiFi CCTV cameras in Ahmedabad from ArcisAI — 3MP wireless, IP66, BIS-ER R-72003735 certified. Headquartered in Ahmedabad. Dealer enquiries welcome.",
     keywords: [
       "wifi cctv camera Ahmedabad", "wireless cctv camera Ahmedabad",
       "wifi security camera Ahmedabad", "cctv dealer Ahmedabad",
@@ -270,7 +270,7 @@ const seoPageDataWifi = {
     slug: "wifi-cctv-camera-mumbai",
     title: "WiFi CCTV Camera in Mumbai | BIS-ER Certified Wireless | ArcisAI",
     metaDescription:
-      "WiFi CCTV cameras in Mumbai from ArcisAI — 3MP wireless, IP66, BIS-ER R-72003735 certified, made in India. Ideal for rented and space-constrained premises. Dealer enquiries welcome.",
+      "WiFi CCTV cameras in Mumbai from ArcisAI — 3MP wireless, IP66, BIS-ER R-72003735 certified, made in India. For rented and compact premises. Dealer enquiries welcome.",
     keywords: [
       "wifi cctv camera Mumbai", "wireless cctv camera Mumbai",
       "wifi security camera Mumbai", "cctv dealer Mumbai",
@@ -347,7 +347,7 @@ const seoPageDataWifi = {
     slug: "wifi-cctv-camera-pune",
     title: "WiFi CCTV Camera in Pune | BIS-ER Certified Wireless | ArcisAI",
     metaDescription:
-      "WiFi CCTV cameras in Pune from ArcisAI — 3MP wireless, IP66 outdoor, BIS-ER R-72003735 certified. For offices, societies and rented premises. Dealer enquiries welcome.",
+      "WiFi CCTV cameras in Pune from ArcisAI — 3MP wireless, IP66, BIS-ER R-72003735 certified. For offices, societies and rented premises. Dealer enquiries welcome.",
     keywords: [
       "wifi cctv camera Pune", "wireless cctv camera Pune",
       "wifi security camera Pune", "cctv dealer Pune",
@@ -424,7 +424,7 @@ const seoPageDataWifi = {
     slug: "wifi-cctv-camera-surat",
     title: "WiFi CCTV Camera in Surat | BIS-ER Certified Wireless | ArcisAI",
     metaDescription:
-      "WiFi CCTV cameras in Surat from ArcisAI — 3MP wireless, IP66, BIS-ER R-72003735 certified, made in India. For textile markets, showrooms and offices. Dealer enquiries welcome.",
+      "WiFi CCTV cameras in Surat from ArcisAI — 3MP wireless, IP66, BIS-ER R-72003735 certified, made in India. For textile markets, showrooms, offices. Dealers welcome.",
     keywords: [
       "wifi cctv camera Surat", "wireless cctv camera Surat",
       "wifi security camera Surat", "cctv dealer Surat",
@@ -1172,7 +1172,7 @@ const seoPageDataWifi = {
     slug: "wifi-cctv-camera-buying-guide",
     title: "WiFi CCTV Camera Buying Guide 2026 | WiFi vs Wired | ArcisAI",
     metaDescription:
-      "How to choose a WiFi CCTV camera in India: WiFi vs PoE vs 4G, range and bandwidth, storage options, indoor/outdoor selection, AI detection, and a BIS-ER certification checklist.",
+      "How to choose a WiFi CCTV camera in India: WiFi vs PoE vs 4G, range, bandwidth, storage, indoor/outdoor choice, AI detection and a BIS-ER certification checklist.",
     keywords: [
       "wifi cctv camera buying guide", "wifi vs poe cctv", "wifi vs wired cctv camera",
       "wifi vs 4g cctv camera", "how to choose wifi cctv camera",

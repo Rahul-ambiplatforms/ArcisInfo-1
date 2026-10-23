@@ -9,7 +9,7 @@ const seoPageDataGujaratCities = {
   "cctv-cameras-ahmedabad": {
     slug: "cctv-cameras-ahmedabad",
     title: "AI CCTV Cameras in Ahmedabad | BIS-ER & STQC Certified | ArcisAI",
-    metaDescription: "ArcisAI AI CCTV in Ahmedabad — BIS-ER (R-72003735) & STQC-certified VMS, 8 edge AI detections, ArcisGPT. ArcisAI is headquartered in Ahmedabad. Request a site survey.",
+    metaDescription: "ArcisAI AI CCTV in Ahmedabad — BIS-ER (R-72003735) & STQC-certified VMS, 8 edge AI detections, ArcisGPT. Headquartered in Ahmedabad. Request a site survey.",
     keywords: [
       "CCTV camera Ahmedabad", "AI CCTV Ahmedabad", "BIS certified CCTV Ahmedabad",
       "STQC certified surveillance Ahmedabad", "ArcisAI Ahmedabad", "security camera SG Highway",

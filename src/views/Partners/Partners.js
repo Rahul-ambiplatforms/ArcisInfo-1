@@ -259,7 +259,7 @@ const Partners = () => {
             </Heading>
             <Text color="whiteAlpha.900" mb={8} maxW="2xl" mx="auto">
               Tell us about your business, the geographies you cover, and the types of projects you
-              handle. Our partner team will be in touch within two business days.
+              handle. Our partner team will be in touch.
             </Text>
             <Button
               as="a"
