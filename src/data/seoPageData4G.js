@@ -20,7 +20,7 @@ const seoPageData4G = {
     slug: "4g-cctv-camera",
     title: "4G SIM CCTV Camera India | BIS-ER Certified | ArcisAI",
     metaDescription:
-      "ArcisAI 4G SIM CCTV cameras — 3MP, works on cellular with no broadband required, two-way audio, human detection, IP66. BIS-ER R-72003735 certified, made in India. Dealer enquiries welcome.",
+      "ArcisAI 4G SIM CCTV cameras — 3MP, on 4G, no broadband needed, two-way audio, human detection, IP66. BIS-ER R-72003735 certified, made in India. Dealers welcome.",
     keywords: [
       "4g cctv camera", "4g sim camera", "sim card cctv camera",
       "4g security camera india", "cctv camera without internet",

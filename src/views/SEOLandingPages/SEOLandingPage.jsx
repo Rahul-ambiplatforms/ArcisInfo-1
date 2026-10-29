@@ -73,10 +73,10 @@ const SEOLandingPage = ({ pageData, slugKey, relatedLinks = [] }) => {
           <Heading as="h1" size={{base: "xl", md: "2xl"}} mb={4} fontWeight="700" lineHeight="1.2">
             {pageData.heroTitle}
           </Heading>
-          <Text fontSize={{base: "md", md: "lg"}} color="whiteAlpha.800" mb={3} fontWeight="500">
+          <Text fontSize={{base: "md", md: "lg"}} color="whiteAlpha.900" mb={3} fontWeight="500">
             {pageData.heroSubtitle}
           </Text>
-          <Text fontSize={{base: "sm", md: "md"}} color="whiteAlpha.600" maxW="700px" mb={8}>
+          <Text fontSize={{base: "sm", md: "md"}} color="whiteAlpha.800" maxW="700px" mb={8}>
             {pageData.heroDescription}
           </Text>
           <HStack spacing={4}>

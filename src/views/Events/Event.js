@@ -12,7 +12,6 @@ import {
   Select,
   Text,
   VStack,
-  useBreakpointValue,
   Image,
   Modal,
   ModalOverlay,
@@ -27,20 +26,24 @@ import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import CustomButton from "../../Components/CustomButton";
 import EventIcon from "../../Components/Icons/event_close.svg";
+// Current event details live in src/data/currentEvent.js — swap them there when
+// the next expo comes around. Previous posters stay in /public/images.
+import {
+  EVENT_DATES,
+  EVENT_BOOTH,
+  EVENT_VENUE,
+  EVENT_POSTER,
+  EVENT_POSTER_ALT,
+  isEventLive,
+} from "../../data/currentEvent";
 
 // Set to true to auto-open the popup on first page load. When false the modal
 // still works in controlled mode (the header banner's CTA passes isOpen/onClose).
-const SHOW_EVENT_POPUP_ON_LOAD = false;
+// Either way it stops auto-opening once the event is over (isEventLive).
+const SHOW_EVENT_POPUP_ON_LOAD = true;
 
 // Track if popup has been shown in this session (resets on refresh)
 let hasShownPopup = false;
-
-// Current event. Swap these when the next expo comes around — previous posters
-// stay in /public/images so they can be pointed at again.
-const EVENT_DATES = ["3rd Sep 2026", "4th Sep 2026", "5th Sep 2026"];
-const EVENT_BOOTH = "Booth C13";
-const EVENT_VENUE = "Jio World Convention Centre";
-const EVENT_POSTER_ALT = "ArcisAI at Jio World Convention Centre 2026 Booth C13";
 
 const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
   const {
@@ -61,17 +64,8 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
   // Enter-key submits, which never touch the button at all.
   const submittingRef = useRef(false);
 
-  // Determine which image to show based on screen size
-  // TODO: desktop is temporarily reusing the 4:5 poster. Swap `lg` to a 1:1
-  // FSIE poster (~2464x2464) once that artwork exists, and restore the square
-  // image box below.
-  const eventImageSrc = useBreakpointValue({
-    base: "/images/event_popup_fsie.webp",
-    lg: "/images/event_popup_fsie.webp",
-  });
-
   useEffect(() => {
-    if (SHOW_EVENT_POPUP_ON_LOAD && !isControlled && !hasShownPopup) {
+    if (SHOW_EVENT_POPUP_ON_LOAD && isEventLive() && !isControlled && !hasShownPopup) {
       internalOnOpen();
       hasShownPopup = true;
     }
@@ -316,7 +310,7 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
 
               <Flex
                 overflow="hidden"
-                direction={{ base: "column-reverse", lg: "row" }}
+                direction={{ base: "column", md: "column-reverse", lg: "row" }}
                 w={{
                   base: "90vw",
                   sm: "500px",
@@ -326,23 +320,28 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
                 mx="auto"
                 boxShadow="2xl"
               >
-                {/* Event Poster - Bottom on mobile, Left on desktop.
-                    On mobile it carries the same horizontal padding as the form
-                    so its edges line up with the input fields. aspectRatio sits
-                    on the Image (not the Box) so that padding can't squash the
-                    4:5 art — width drives height at every breakpoint. */}
+                {/* Event Poster - Top on phones (so a visitor sees the event
+                    before the form), bottom on tablets, left on desktop.
+                    On phones the top padding keeps the absolute close button
+                    (20px + 48px) clear of the poster's top-right corner.
+                    Below desktop it carries the same horizontal padding as the
+                    form so its edges line up with the input fields. aspectRatio
+                    sits on the Image (not the Box) so that padding can't squash
+                    the 1:1 art — width drives height at every breakpoint. Match
+                    the ratio to the poster when it changes (FSIE's was 1368 / 1708). */}
                 <Box
                   w={{ base: "100%", lg: "42%" }}
                   px={{ base: 4, md: 6, lg: 0 }}
-                  pb={{ base: 4, md: 6, lg: 0 }}
+                  pt={{ base: 20, md: 0 }}
+                  pb={{ base: 0, md: 6, lg: 0 }}
                   alignSelf={{ base: "center", lg: "flex-start" }}
                   flexShrink={0}
                 >
                   <Image loading="lazy"
-                    src={eventImageSrc}
+                    src={EVENT_POSTER}
                     alt={EVENT_POSTER_ALT}
                     w="100%"
-                    aspectRatio="1368 / 1708"
+                    aspectRatio="1 / 1"
                     objectFit="cover"
                   />
                 </Box>
@@ -351,7 +350,7 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
                 <Box
                   flex={{ base: "0 0 auto", lg: "1" }}
                   minW={0}
-                  mt={{ base: 14, lg: 10 }}
+                  mt={{ base: 0, md: 14, lg: 10 }}
                   p={{ base: 4, md: 6, lg: 8 }}
                 >
                   <VStack

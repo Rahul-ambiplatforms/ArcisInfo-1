@@ -167,7 +167,7 @@ const seoPageDataMaharashtraCities = {
   "cctv-cameras-nagpur": {
     slug: "cctv-cameras-nagpur",
     title: "AI CCTV Cameras in Nagpur | MIHAN, Logistics & Government | ArcisAI",
-    metaDescription: "ArcisAI AI CCTV in Nagpur — BIS-ER & STQC-certified for MIHAN SEZ, logistics hubs & government offices. Central-India distribution made secure. Request a site survey.",
+    metaDescription: "ArcisAI AI CCTV in Nagpur — BIS-ER & STQC-certified for MIHAN SEZ, logistics hubs & government offices. Request a site survey.",
     keywords: [
       "CCTV camera Nagpur", "AI CCTV Nagpur", "MIHAN SEZ security camera",
       "logistics CCTV Nagpur", "BIS certified CCTV Nagpur", "government CCTV Nagpur",

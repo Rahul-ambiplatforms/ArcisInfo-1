@@ -1371,7 +1371,7 @@ const seoPageData = {
   "4g-cameras-vs-wifi-cameras": {
     slug: "4g-cameras-vs-wifi-cameras",
     title: "4G vs WiFi CCTV Camera — Which Suits Your Site | ArcisAI",
-    metaDescription: "4G and WiFi CCTV are different categories, not rivals. The deciding question is whether your site has dependable broadband. A straight selection guide from ArcisAI, who make both.",
+    metaDescription: "4G and WiFi CCTV are different categories, not rivals. The deciding question is whether your site has dependable broadband. A selection guide from ArcisAI.",
     keywords: ["4g vs wifi cctv camera", "4g cameras vs wifi cameras", "wifi or 4g cctv camera", "cctv camera without internet", "which cctv camera for site without broadband"],
     heroTitle: "4G or WiFi? It Depends on One Thing",
     heroSubtitle: "Two different categories for two different site conditions — not better and worse",

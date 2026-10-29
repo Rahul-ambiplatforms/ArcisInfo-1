@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { trackLead, getAttribution } from "@/src/utils/track";
 import {
   Box,
@@ -45,6 +45,18 @@ const ContactSection = () => {
   });
 
   const [location2, setLocation2] = useState("");
+
+  // Partner/dealer enquiries arrive from /become-a-distributor and /partners as
+  // /contact-us?type=partner. Pre-select "Distributor" so those leads are
+  // labelled as channel enquiries in the lead notes. Only when still empty.
+  useEffect(() => {
+    try {
+      const t = new URLSearchParams(window.location.search).get("type");
+      if (t === "partner" || t === "distributor") {
+        setFormData((prev) => (prev.customerType ? prev : { ...prev, customerType: "Distributor" }));
+      }
+    } catch (e) { /* ignore */ }
+  }, []);
 
   const [isLoading, setIsLoading] = useState(false);
   const toast = useToast();
@@ -373,8 +385,8 @@ const ContactSection = () => {
 
                   {/* Features Grid */}
                   <SimpleGrid
-                    columns={{ base: 2, md: 4 }}
-                    spacing={{ base: "8px", md: "16px", lg: "16px" }}
+                    columns={{ base: 4, md: 4 }}
+                    spacing={{ base: "4px", md: "16px", lg: "16px" }}
                     w="100%"
                     mx="auto"
                     mt={{ base: "8px", md: "12px", lg: "16px" }}
@@ -384,7 +396,7 @@ const ContactSection = () => {
                       <VStack key={index}>
                         {/* Icon Box with Dashed Border */}
                         <Center
-                          w={{ base: "80px", md: "100px", lg: "120px" }}
+                          w={{ base: "56px", md: "100px", lg: "120px" }}
                           // h={{ base: "80px", md: "100px", lg: "120px" }}
                           position="relative"
                         // border="2px dashed"
@@ -395,8 +407,8 @@ const ContactSection = () => {
                           <Image loading="lazy"
                             src={feature.image}
                             alt={feature.name}
-                            w={{ base: "50px", md: "60px", lg: "70px" }}
-                            h={{ base: "50px", md: "60px", lg: "70px" }}
+                            w={{ base: "36px", md: "60px", lg: "70px" }}
+                            h={{ base: "36px", md: "60px", lg: "70px" }}
                             objectFit="contain"
                           // filter="brightness(0) invert(1)"
                           />
@@ -422,7 +434,7 @@ const ContactSection = () => {
               w="100%"
               mx="auto"
               px={{ base: "16px", md: "32px", lg: "64px" }}
-              py={{ base: "40px", md: "60px", lg: "80px" }}
+              py={{ base: "24px", md: "60px", lg: "80px" }}
               bg="#171717"
               position="relative"
               zIndex={1}
@@ -468,6 +480,7 @@ const ContactSection = () => {
                     <Input
                       placeholder="Enter your name"
                       name="name"
+                      autoComplete="name"
                       value={formData.name}
                       onChange={handleChange}
                       bg="rgba(255,255,255,0.2)"
@@ -479,7 +492,7 @@ const ContactSection = () => {
                         border: "1px solid #9678E1",
                         boxShadow: "0 0 0 1px #9678E1",
                       }}
-                      fontSize={{ base: "14px", md: "15px", lg: "16px" }}
+                      fontSize={{ base: "16px", md: "16px", lg: "16px" }}
                       px="16px"
                     />
                   </FormControl>
@@ -496,6 +509,7 @@ const ContactSection = () => {
                     <Input
                       placeholder="Enter your email"
                       name="email"
+                      autoComplete="email"
                       type="email"
                       value={formData.email}
                       onChange={handleChange}
@@ -509,7 +523,7 @@ const ContactSection = () => {
                         border: "1px solid #9678E1",
                         boxShadow: "0 0 0 1px #9678E1",
                       }}
-                      fontSize={{ base: "14px", md: "15px", lg: "16px" }}
+                      fontSize={{ base: "16px", md: "16px", lg: "16px" }}
                       px="16px"
                     />
                   </FormControl>
@@ -536,6 +550,7 @@ const ContactSection = () => {
                       <Input
                         placeholder="Enter your phone number"
                         name="phone"
+                        autoComplete="tel-national"
                         type="tel"
                         value={formData.phone}
                         onChange={handleChange}
@@ -550,7 +565,7 @@ const ContactSection = () => {
                           border: "1px solid #9678E1",
                           boxShadow: "0 0 0 1px #9678E1",
                         }}
-                        fontSize={{ base: "14px", md: "15px", lg: "16px" }}
+                        fontSize={{ base: "16px", md: "16px", lg: "16px" }}
                         px="16px"
                         flex="1"
                       />
@@ -577,6 +592,7 @@ const ContactSection = () => {
                     <Input
                       placeholder="Enter your company name"
                       name="company"
+                      autoComplete="organization"
                       value={formData.company}
                       onChange={handleChange}
                       bg="rgba(255,255,255,0.2)"
@@ -589,7 +605,7 @@ const ContactSection = () => {
                         border: "1px solid #9678E1",
                         boxShadow: "0 0 0 1px #9678E1",
                       }}
-                      fontSize={{ base: "14px", md: "15px", lg: "16px" }}
+                      fontSize={{ base: "16px", md: "16px", lg: "16px" }}
                       px="16px"
                     />
                   </FormControl>
@@ -618,7 +634,7 @@ const ContactSection = () => {
                         border: "1px solid #9678E1",
                         boxShadow: "0 0 0 1px #9678E1",
                       }}
-                      fontSize={{ base: "14px", md: "15px", lg: "16px" }}
+                      fontSize={{ base: "16px", md: "16px", lg: "16px" }}
                       px="16px"
                     />
                   </FormControl>
@@ -647,7 +663,7 @@ const ContactSection = () => {
                         border: "1px solid #9678E1",
                         boxShadow: "0 0 0 1px #9678E1",
                       }}
-                      fontSize={{ base: "14px", md: "15px", lg: "16px" }}
+                      fontSize={{ base: "16px", md: "16px", lg: "16px" }}
                       px="16px"
                     />
                   </FormControl>
@@ -684,7 +700,7 @@ const ContactSection = () => {
                         border: "1px solid #9678E1",
                         boxShadow: "0 0 0 1px #9678E1",
                       }}
-                      fontSize={{ base: "14px", md: "16px", lg: "16px" }}
+                      fontSize={{ base: "16px", md: "16px", lg: "16px" }}
                     // px="16px"
                     >
                       <option
@@ -738,7 +754,7 @@ const ContactSection = () => {
                         border: "1px solid #9678E1",
                         boxShadow: "0 0 0 1px #9678E1",
                       }}
-                      fontSize={{ base: "14px", md: "15px", lg: "16px" }}
+                      fontSize={{ base: "16px", md: "16px", lg: "16px" }}
                     // px="16px"
                     >
                       <option
@@ -798,7 +814,7 @@ const ContactSection = () => {
                     </Select>
                   </FormControl>
 
-                  <FormControl isRequired>
+                  <FormControl>
                     <FormLabel
                       fontSize={{ base: "12px", md: "13px", lg: "14px" }}
                       fontWeight="500"
@@ -824,7 +840,7 @@ const ContactSection = () => {
                         border: "1px solid #9678E1",
                         boxShadow: "0 0 0 1px #9678E1",
                       }}
-                      fontSize={{ base: "14px", md: "15px", lg: "16px" }}
+                      fontSize={{ base: "16px", md: "16px", lg: "16px" }}
                       px="16px"
                     />
                   </FormControl>
@@ -865,7 +881,7 @@ const ContactSection = () => {
                         border: "1px solid #9678E1",
                         boxShadow: "0 0 0 1px #9678E1",
                       }}
-                      fontSize={{ base: "14px", md: "15px", lg: "16px" }}
+                      fontSize={{ base: "16px", md: "16px", lg: "16px" }}
                       px="16px"
                       py="12px"
                     // resize="vertical"
@@ -905,7 +921,7 @@ const ContactSection = () => {
                         hoverBorderColor="#A4FF79"
                         textColor="white"
                         hoverTextColor="#A4FF79"
-                        fontSize={{ base: "14px", md: "15px", lg: "16px" }}
+                        fontSize={{ base: "16px", md: "16px", lg: "16px" }}
                         fontWeight="500"
                         showGlow={false}
                         as="button"
