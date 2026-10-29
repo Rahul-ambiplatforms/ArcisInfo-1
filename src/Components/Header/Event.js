@@ -34,7 +34,7 @@ const MarqueeText = ({ children }) => {
 const Event = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const eventText =
-    "Meet ArcisAI at Jio World Convention Centre on 3–5 September 2026. Visit us at Booth No. C13 to see India's first AI CCTV camera, along with our latest AI-powered CCTV cameras, VMS & Cloud solutions.";
+    "Meet ArcisAI at IFSEC India 2026, Bharat Mandapam, New Delhi on 3–5 December 2026. Visit us at Booth E-10 to see India's first AI CCTV camera, along with our latest AI-powered CCTV cameras, VMS & Cloud solutions.";
 
   return (
     <>
