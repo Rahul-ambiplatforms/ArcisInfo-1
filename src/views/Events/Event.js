@@ -42,6 +42,22 @@ import {
 // Either way it stops auto-opening once the event is over (isEventLive).
 const SHOW_EVENT_POPUP_ON_LOAD = true;
 
+// "Who you are" options. Sent to the backend as `customerType`, the same field
+// name the Contact Us form uses.
+const CUSTOMER_TYPES = [
+  "Government",
+  "Stockist",
+  "Regional Distributor",
+  "Sub Regional Distributor",
+  "Dealer",
+  "System Integrator",
+  "Installer",
+  "Customer",
+  "New Customer",
+  "End User",
+  "Other",
+];
+
 // Track if popup has been shown in this session (resets on refresh)
 let hasShownPopup = false;
 
@@ -77,6 +93,7 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
     phone: "",
     date: EVENT_DATES[0],
     time: "",
+    customerType: "",
   });
 
   const BACKEND_URL = "https://vmukti.com/backend/api/send-email-arcis";
@@ -101,7 +118,8 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
       !formData.email ||
       !formData.phone ||
       !formData.date ||
-      !formData.time
+      !formData.time ||
+      !formData.customerType
     ) {
       return;
     }
@@ -125,6 +143,7 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
       email: formData.email,
       phone: formData.phone,
       slot: `${formData.date} at ${formData.time}`,
+      customerType: formData.customerType,
       formType: "Event",
     };
 
@@ -605,7 +624,7 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
                       </FormControl>
                     </SimpleGrid>
 
-                    {/* Row 3: Phone Number & Submit Button */}
+                    {/* Row 3: Phone Number & Who you are */}
                     <SimpleGrid
                       columns={{ base: 1, md: 2 }}
                       spacing={{ base: 3, md: 4 }}
@@ -652,16 +671,57 @@ const Event = ({ isOpen: controlledIsOpen, onClose: controlledOnClose }) => {
                         </InputGroup>
                       </FormControl>
 
-                      {/* Submit Button */}
-                      <Box>
+                      <FormControl isRequired>
                         <FormLabel
                           fontSize="14px"
                           fontWeight="500"
                           mb={{ base: "4px", md: "8px" }}
-                          color="transparent"
+                          color="white"
                         >
-                          .
+                          Who you are
                         </FormLabel>
+                        <Select
+                          placeholder="Select option"
+                          name="customerType"
+                          value={formData.customerType}
+                          onChange={handleChange}
+                          bg="rgba(255,255,255,0.2)"
+                          border="none"
+                          h={{ base: "44px", md: "52px" }}
+                          color="white"
+                          _focus={{
+                            border: "1px solid #A4FF79",
+                            boxShadow: "0 0 0 1px #A4FF79",
+                          }}
+                          fontSize="16px"
+                          borderRadius="0"
+                          sx={{
+                            option: {
+                              bg: "black",
+                              color: "white",
+                              _hover: { bg: "#333" },
+                            },
+                          }}
+                        >
+                          {CUSTOMER_TYPES.map((type) => (
+                            <option
+                              key={type}
+                              value={type}
+                              style={{ background: "black", color: "white" }}
+                            >
+                              {type}
+                            </option>
+                          ))}
+                        </Select>
+                      </FormControl>
+                    </SimpleGrid>
+
+                    {/* Row 4: Submit Button */}
+                    <SimpleGrid
+                      columns={{ base: 1, md: 2 }}
+                      spacing={{ base: 3, md: 4 }}
+                    >
+                      <Box>
                         <CustomButton
                           type="submit"
                           width={{ base: "100%", md: "60%" }}
