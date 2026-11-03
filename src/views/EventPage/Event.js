@@ -1,7 +1,8 @@
 'use client';
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-import { Box, Container, Flex, VStack, Text, Heading, HStack, Icon, useDisclosure } from "@chakra-ui/react";
+import { Box, Container, Flex, VStack, Text, Heading, HStack, Icon, Link as CLink, useDisclosure } from "@chakra-ui/react";
+import NextLink from "next/link";
 import { MdPlace } from "react-icons/md";
 import EventHeroSection from "./Components/HeroSection";
 import CustomButton from "../../Components/CustomButton";
@@ -47,9 +48,14 @@ const UpcomingEventBanner = () => {
               Live demos of our AI-powered cameras and NVRs at Bharat Mandapam, New Delhi.
             </Text>
           </VStack>
-          <CustomButton onClick={onOpen} width="220px" height="46px" fontSize="15px" fontWeight="600" hoverBorderColor="#A4FF79">
-            Book a Meeting Slot
-          </CustomButton>
+          <VStack spacing={2} align={{ base: 'center', md: 'flex-end' }}>
+            <CustomButton onClick={onOpen} width="220px" height="46px" fontSize="15px" fontWeight="600" hoverBorderColor="#A4FF79">
+              Book a Meeting Slot
+            </CustomButton>
+            <CLink as={NextLink} href="/ifsec-india-2026" color="#A4FF79" textDecoration="underline" fontSize="sm" _hover={{ color: '#C7FFB0' }}>
+              View the IFSEC India 2026 page &rarr;
+            </CLink>
+          </VStack>
         </Flex>
       </Container>
       <EventPopup isOpen={isOpen} onClose={onClose} />
