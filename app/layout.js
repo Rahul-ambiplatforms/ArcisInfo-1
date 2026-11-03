@@ -110,6 +110,16 @@ export const metadata = {
   // present on every page.
   authors: [{ name: 'ArcisAI', url: 'https://arcisai.io' }],
   creator: 'ArcisAI by Adiance Technologies',
+  // Favicon fix (2026-11-03): the CRA → Next.js move dropped the old
+  // <link rel="icon">, so no page linked an icon and Google showed a globe in
+  // results. Google wants a square icon in a multiple of 48px, hence the 192px PNG.
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '48x48' },
+      { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
+    ],
+    apple: { url: '/apple-touch-icon.png', sizes: '180x180' },
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
