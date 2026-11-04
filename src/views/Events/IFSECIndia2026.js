@@ -151,10 +151,33 @@ const IFSECIndia2026 = () => {
     if (submitting) return;
     setSubmitting(true);
     try {
-      await fetch(BACKEND_URL, {
+      // Fields the email template has a row for go under its names (Company,
+      // Location, Customer Type, Lead Source, PageUrl, Message). The ones only
+      // this page has travel in extraFields, which the backend prints as
+      // "Label: value". formType gives these leads their own subject line.
+      const response = await fetch(BACKEND_URL, {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, formType: `IFSEC-2026 (${form.enquiryType || 'General'})` }),
-      }).catch(() => {});
+        body: JSON.stringify({
+          name: form.name,
+          company: form.company,
+          email: form.email,
+          phone: form.phone,
+          location: form.cityCountry,
+          customerType: form.businessType,
+          message: form.message,
+          pageUrl: window.location.href,
+          leadType: 'Arcis Website-(IFSEC India 2026)',
+          formType: 'IFSEC India 2026',
+          extraFields: {
+            'Enquiry Type': form.enquiryType,
+            'Product Interest': form.productInterest,
+            'Preferred Meeting Time': form.meetingTime,
+          },
+        }),
+      });
+      // Without this a failed send still showed "Request received" and the
+      // lead was lost; now the visitor sees the error and keeps their input.
+      if (!response.ok) throw new Error(`Email backend returned ${response.status}`);
       pushDL({
         event: 'generate_lead', form_name: 'ifsec_2026',
         enquiry_type: form.enquiryType || undefined,
