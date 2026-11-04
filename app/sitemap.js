@@ -98,6 +98,7 @@ const STATIC_ROUTES = [
   // Campaign / event landing pages
   ['/jalandhar-warriors', 0.7, 'weekly'],
   ['/fsie-2026', 0.7, 'weekly'],
+  ['/ifsec-india-2026', 0.8, 'weekly'],
 
   // Content hubs
   ['/blog', 0.9, 'daily'],
@@ -165,6 +166,7 @@ const IMAGE_BY_PATH = {
   '/india-cctv-market-report-2026': '/images/home_hero_1.webp',
   '/jalandhar-warriors': '/og/home.jpg',
   '/fsie-2026': '/og/home.jpg',
+  '/ifsec-india-2026': '/og/events.jpg',
   '/blog': '/og/blog.jpg',
   '/news': '/og/home.jpg',
   '/press': '/images/home_hero_1.webp',
