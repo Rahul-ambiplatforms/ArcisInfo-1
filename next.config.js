@@ -2,6 +2,8 @@
 // Served as config-level redirects instead of permanentRedirect() inside the
 // prerendered /[slug] page, which produced a doubled "x,x" Location on production.
 const seoSectionRedirects = require("./src/data/seoSectionRedirects.json");
+// States whose canonical page is /state/<x> (no /cctv-cameras-<x> entry). See ARC-018 below.
+const STATES_WITHOUT_CITY_PAGE = new Set(["delhi-ncr", "bihar"]);
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -528,6 +530,14 @@ const nextConfig = {
       // pages from scratch. ('corporate' has no equivalent anywhere on the
       // site, so it's left to 404 honestly rather than redirected somewhere
       // unrelated.)
+      // SEO fix (2026-11-14, ARC-007): plural "/solutions/" typo URL still
+      // reported 404 in GSC -- send it to the live page.
+      {
+        source: "/solutions/pharmaceutical-manufacturing",
+        destination: "/industry/solutions-pharmaceutical-manufacturing",
+        permanent: true,
+        statusCode: 301,
+      },
       {
         source: "/solution/retail",
         destination: "/industry/retail-surveillance",
@@ -748,12 +758,19 @@ const nextConfig = {
 
       // Section redirects (generated, 2026-10-06). The STQC cluster losers point
       // straight at the winner so there is never a redirect chain.
+      // SEO fix (2026-11-14, ARC-018): 13 of the /state/<x> targets are not
+      // canonical -- they canonicalise to /cctv-cameras-<x>, so /west-bengal
+      // went /west-bengal -> /state/west-bengal (canonical elsewhere). Send
+      // those bare slugs straight to the canonical URL. delhi-ncr and bihar
+      // have no /cctv-cameras-<x> page and keep their /state/ target.
       ...Object.entries(seoSectionRedirects).map(([slug, destination]) => ({
         source: `/${slug}`,
         destination:
           destination === "/resources/stqc-certification-guide"
             ? "/cctv-stqc-certification-guide"
-            : destination,
+            : destination.startsWith("/state/") && !STATES_WITHOUT_CITY_PAGE.has(slug)
+              ? `/cctv-cameras-${slug}`
+              : destination,
         permanent: true,
         statusCode: 301,
       })),

@@ -3,7 +3,8 @@ import { buildHreflang } from '@/src/data/hreflang';
 import GA4Direct from '@/src/Components/GA4Direct';
 
 const SITE_URL = 'https://arcisai.io';
-const TITLE = 'International CCTV Distribution & OEM Partnership | NDAA-Compliant Made-in-India CCTV';
+// SEO fix (2026-11-14, ARC-017): was 95 chars rendered; the root "%s | ArcisAI" template adds the brand.
+const TITLE = 'CCTV OEM & International Distribution';
 const DESCRIPTION =
   'Distribute ArcisAI or white-label NDAA-compliant, Made-in-India AI CCTV for US, UK, EU, GCC & ANZ markets.';
 

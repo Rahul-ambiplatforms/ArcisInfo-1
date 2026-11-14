@@ -87,14 +87,10 @@ const websiteSchema = {
   name: 'ArcisAI',
   url: SITE,
   publisher: { '@id': `${SITE}/#organization` },
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: `${SITE}/search?q={search_term_string}`,
-    },
-    'query-input': 'required name=search_term_string',
-  },
+  // SEO fix (2026-11-14, ARC-007): removed the SearchAction potentialAction.
+  // Its urlTemplate pointed at /search, which has no route and returns 404
+  // (GSC "Not found (404)" validation failed on it). Site search is a client
+  // modal (SearchModal.js), not a URL. Re-add only if a real /search page ships.
 };
 
 export const metadata = {

@@ -61,7 +61,9 @@ export default function SectionHub({ eyebrow, title, description, links = [], ba
           // as a different host, not a broken-looking but harmless link.
           // Every existing caller (state/industry/compare/resources) passes
           // a real basePath so this is additive, not a behavior change for them.
-          href={basePath ? `/${basePath}/${l.slug}` : `/${l.slug}`}
+          // ARC-018 (2026-11-14): an explicit canonical href wins, so hubs never
+          // link to a URL that only canonicalises elsewhere.
+          href={l.href || (basePath ? `/${basePath}/${l.slug}` : `/${l.slug}`)}
           style={{ textDecoration: 'none' }}>
         <VStack
           align="start"

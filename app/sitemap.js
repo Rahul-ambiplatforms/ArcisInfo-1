@@ -72,6 +72,8 @@ const STATIC_ROUTES = [
   ['/eco-series', 0.9, 'weekly'],
   ['/eco-series/bullet-cctv-camera', 0.8, 'weekly'],
   ['/eco-series/ptz-cctv-camera', 0.8, 'weekly'],
+  // ARC-009 (2026-11-14): live, indexable product page that was missing here.
+  ['/eco-series/dome-cctv-camera', 0.8, 'weekly'],
   ['/arcis-bridge-device', 0.8, 'weekly'],
   ['/arcis-nvr', 0.8, 'weekly'],
   ['/cloud-vms', 0.9, 'weekly'],

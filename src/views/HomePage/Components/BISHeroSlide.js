@@ -9,7 +9,14 @@ import {
 } from "@chakra-ui/react";
 import CustomButton from "../../../Components/CustomButton";
 
-const BISHeroSlide = ({ showExploreButton = true }) => {
+// ARC-015 (2026-11-14): `headingLead` / `headingStrong` let the BIS-ER page
+// give this shared slide its own <h1> instead of repeating the homepage H1.
+// Defaults keep the homepage exactly as before.
+const BISHeroSlide = ({
+  showExploreButton = true,
+  headingLead = "AI CCTV Cameras, Video Management",
+  headingStrong = "and Analytics from ArcisAI",
+}) => {
   return (
     <Flex
       h="100%"
@@ -54,10 +61,10 @@ const BISHeroSlide = ({ showExploreButton = true }) => {
           mb={{ base: 2, md: 4 }}
           mt={{ base: 2, md: 4 }}
         >
-          AI CCTV Cameras, Video Management {" "}
+          {headingLead} {" "}
           <br />
           <Text as="span" fontWeight="700">
-          and Analytics from ArcisAI
+          {headingStrong}
           </Text>
         </Heading>
 

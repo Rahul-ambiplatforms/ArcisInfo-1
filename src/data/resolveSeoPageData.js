@@ -27,9 +27,74 @@ import { humanizeSlug } from './buildSeoPageSchemas';
 // which 404'd. Re-key it by .slug here so it behaves like every other
 // seoPageData* file without having to change that file's own shape. The old
 // numeric paths now 301 to these slugs (see next.config.js).
+// SEO fix (2026-11-14, ARC-002): these 10 entries were written in a different
+// shape ({ h1, content, features, ctaText }) from every other entry the
+// shared SEOLandingPage template renders ({ heroTitle, heroSubtitle,
+// heroDescription, sections, cta }). The template therefore rendered an empty
+// <h1>, two empty <p>s and no body -- only the FAQ showed. Normalise them here,
+// once, into the standard shape.
+//
+// Claim-review gate: the body copy of these pages makes regulatory claims
+// (e.g. "NDAA Section 889 certified", FedRAMP, "approved status across all six
+// GCC nations", "TAA certification", "BIS IS 19901:2021") that have not been
+// verified against ArcisAI's actual certificates. Until a person has checked
+// an entry and set `claimsReviewed: true` on it in seoPageDataCompliance.js,
+// the page renders only its heading + summary + contact CTA, is served
+// noindex,follow, and is left out of the sitemap (see isPendingClaimReview()).
+// Setting the flag publishes the full body, FAQ and FAQ schema automatically.
+const COMPLIANCE_SECTION_TITLES = ['Overview', 'How ArcisAI approaches it', 'Capabilities', 'Deployment and documentation'];
+
+function normalizeComplianceEntry(entry) {
+  if (!entry || entry.heroTitle) return entry; // already standard shape
+  const reviewed = entry.claimsReviewed === true;
+  const paragraphs = String(entry.content || '')
+    .split(/\n\s*\n/)
+    .map((p) => p.trim())
+    .filter(Boolean);
+  const features = Array.isArray(entry.features) ? entry.features : [];
+  const sections = reviewed
+    ? [
+        ...paragraphs.map((content, i) => ({
+          title: COMPLIANCE_SECTION_TITLES[i] || 'More detail',
+          content,
+        })),
+        ...(features.length ? [{ title: 'Key capabilities', features }] : []),
+      ]
+    : [];
+  // While unreviewed, keep the visible hero free of approval/certification
+  // claims: drop "Government Approved" from the heading and use a neutral
+  // summary instead of the meta description.
+  const rawHeading = entry.h1 || entry.title || '';
+  const heroTitle = reviewed ? rawHeading : rawHeading.replace(/\s*Government Approved\s*/i, ' ').replace(/\s+/g, ' ').trim();
+  const heroDescription = reviewed
+    ? entry.metaDescription || ''
+    : 'Edge AI CCTV cameras and video management from ArcisAI, made in India. Talk to our team about your site, your regulatory requirements and the documentation you need.';
+  return {
+    ...entry,
+    heroTitle,
+    heroSubtitle: entry.marketData?.region || '',
+    heroDescription,
+    showSectionContent: true,
+    sections,
+    faqs: reviewed ? entry.faqs || [] : [],
+    cta: {
+      title: entry.ctaText || 'Talk to the ArcisAI team',
+      description: 'Tell us about your site and requirements and our team will get back to you.',
+      buttonText: 'Contact Us',
+      buttonLink: '/contact-us',
+    },
+    pendingClaimReview: !reviewed,
+  };
+}
+
 const seoPageDataComplianceKeyed = Object.fromEntries(
-  seoPageDataCompliance.map((entry) => [entry.slug, entry]),
+  seoPageDataCompliance.map((entry) => [entry.slug, normalizeComplianceEntry(entry)]),
 );
+
+// True for compliance pages whose claims have not yet been human-verified.
+export function isPendingClaimReview(key) {
+  return Boolean(seoPageDataComplianceKeyed[key]?.pendingClaimReview);
+}
 
 const allSeoData = {
   ...seoPageData, ...seoPageDataExpansion, ...seoPageDataGeo, ...seoPageDataCompare,
@@ -270,7 +335,9 @@ export function getIndustryLinks() {
 }
 
 export function getStateLinks() {
-  return linksForCategory('state');
+  // ARC-018 (2026-11-14): most /state/<x> pages canonicalise to
+  // /cctv-cameras-<x>; link to the canonical URL directly.
+  return linksForCategory('state').map((l) => ({ ...l, href: canonicalPathForKey(l.slug) || `/state/${l.slug}` }));
 }
 
 // Server-only: the WiFi CCTV cluster's own cross-link set (hub + city pages +
@@ -371,6 +438,8 @@ export function getTopLevelSeoSlugs() {
 export function getAllSeoPageEntries() {
   return Object.entries(allSeoData)
     .filter(([k]) => !k.startsWith('/'))
+    // ARC-002: keep unreviewed compliance pages out of the sitemap.
+    .filter(([k]) => !isPendingClaimReview(k))
     .map(([k, v]) => ({
       key: k,
       path: canonicalPathForKey(k),

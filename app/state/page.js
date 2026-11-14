@@ -56,7 +56,7 @@ const schemas = [
     itemListElement: links.map((l, i) => ({
       '@type': 'ListItem',
       position: i + 1,
-      url: `${SITE}/state/${l.slug}`,
+      url: `${SITE}${l.href || `/state/${l.slug}`}`,
       name: l.title,
     })),
   },

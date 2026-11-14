@@ -49,9 +49,33 @@ const getBlog = cache(async (slug) => {
   }
 });
 
+// SEO overrides (2026-11-14, ARC-005 / ARC-006): title + meta description for
+// posts with high Search Console impressions but very low CTR. Kept in code
+// so they apply regardless of the CMS record; remove an entry once the CMS
+// metaTitle/metaDescription have been updated to match. Body copy is NOT
+// changed here -- that still lives in the CMS.
+const BLOG_SEO_OVERRIDES = {
+  'is-hikvision-banned-in-india-2026': {
+    title: 'Is Hikvision Banned in India? No – The 2026 STQC Rule Explained',
+    description:
+      "Hikvision isn't banned by name. Since 1 April 2026, IP CCTV cameras sold in India must pass STQC security testing. What this means for buyers and installers.",
+  },
+  'two-way-audio-cctv-camera': {
+    title: 'Two-Way Audio CCTV Camera: How Talk-Back Works & What to Buy',
+    description:
+      'See how a two-way audio (talk-back) CCTV camera works, where it helps most, and what to check before you buy one for your home, shop or office.',
+  },
+  'cctv-camera-with-mobile-app': {
+    title: 'CCTV Camera With Mobile App: See All Cameras on One Phone',
+    description:
+      'View every CCTV camera at home or work from one phone app – live view, recordings and AI alerts. See how the ArcisAI app works and what to look for.',
+  },
+};
+
 export async function generateMetadata(props) {
   const params = await props.params;
   const { slug } = params;
+  const seoOverride = BLOG_SEO_OVERRIDES[slug] || null;
   // Shared with the page render via cache() — no extra request.
   const blog = await getBlog(slug);
 
@@ -60,8 +84,9 @@ export async function generateMetadata(props) {
 
   // Prefer the real CMS SEO fields; fall back to slug-derived values so
   // metadata generation never depends on the backend being reachable.
-  const realTitle = blog?.content?.metaTitle || blog?.metadata?.metaTitle || null;
+  const realTitle = seoOverride?.title || blog?.content?.metaTitle || blog?.metadata?.metaTitle || null;
   const description =
+    seoOverride?.description ||
     blog?.content?.metaDescription ||
     blog?.metadata?.metaDescription ||
     `Read the ArcisAI blog article: ${fallbackTitle}. Insights on AI surveillance, smart cities, edge analytics, and video intelligence.`;

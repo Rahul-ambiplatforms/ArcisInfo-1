@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { FaChevronRight } from "react-icons/fa";
 import { useRouter } from "next/navigation";
+import NextLink from "next/link";
 import { homeContent } from "../Data/Content";
 import RightButtonSvg from "../../../Components/Icons/RightButton.svg";
 import CustomButton from "../../../Components/CustomButton";
@@ -329,7 +330,18 @@ const ProductList = ({ data }) => {
                       fontSize={{ base: "16px", md: "20px" }}
                       lineHeight={{ base: "20px", md: "25px" }}
                     >
-                      {product.product_name}
+                      {/* ARC-010 (2026-11-14): the card navigates via
+                          router.push(), which crawlers can't follow, so the
+                          product pages had no inbound links in the HTML.
+                          A real <a href> on the name fixes discovery without
+                          changing the design or the card's click behaviour. */}
+                      <NextLink
+                        href={product.link}
+                        onClick={(e) => e.stopPropagation()}
+                        style={{ color: "inherit", textDecoration: "none" }}
+                      >
+                        {product.product_name}
+                      </NextLink>
                     </Text>
 
                     <CustomButton
