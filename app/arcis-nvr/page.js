@@ -4,7 +4,7 @@ import { buildHreflang } from '@/src/data/hreflang';
 export const metadata = {
   title: 'CCTV Network Video Recorders (NVRs) | 4 to 32 Channel',
   description:
-    'Explore ArcisAI NVR options for local recording in 4, 8, 16 and 32 channel configurations. See how camera count, retention and storage affect sizing, and request a recommendation.',
+    'ArcisAI NVRs for local recording in 4, 8, 16 and 32 channels. See how camera count, retention and storage affect sizing, and get a recommendation.',
   // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.
   alternates: { canonical: 'https://arcisai.io/arcis-nvr', languages: buildHreflang('https://arcisai.io/arcis-nvr') },
   openGraph: {

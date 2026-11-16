@@ -164,7 +164,7 @@ const seoPageDataGujaratCities = {
   // VADODARA — Petrochemical, pharmaceutical & enterprise industrial hub
   "cctv-cameras-vadodara": {
     slug: "cctv-cameras-vadodara",
-    title: "AI CCTV Cameras in Vadodara | Industrial & Enterprise Security | ArcisAI",
+    title: "AI CCTV Cameras in Vadodara | Industrial Security | ArcisAI",
     metaDescription: "ArcisAI AI CCTV in Vadodara — BIS-ER certified, STQC-approved VMS for GIDC Nandesari petrochemical, pharma & enterprise campuses. 8 edge AI detections. Free quote.",
     keywords: [
       "CCTV camera Vadodara", "AI CCTV Vadodara", "industrial CCTV Nandesari GIDC",

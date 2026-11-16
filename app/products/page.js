@@ -4,7 +4,7 @@ import { buildHreflang } from '@/src/data/hreflang';
 const SITE_URL = 'https://arcisai.io';
 const TITLE = 'CCTV Camera Products India | AI CCTV, NVR, VMS & More | ArcisAI';
 const DESCRIPTION =
-  'Explore the full ArcisAI product range — S-Series and Eco-Series AI CCTV cameras, the Arcis Bridge Device, Arcis NVR, Cloud VMS, and ArcisGPT. BIS-ER & STQC certified, Made in India.';
+  'ArcisAI products: S-Series and Eco-Series AI CCTV cameras, Bridge Device, NVR, Cloud VMS and ArcisGPT. BIS-ER certified cameras, Made in India.';
 
 // SEO audit fix (2026-09-08, checklist items #7, #9, #52, #98): "/products"
 // used to just 301-redirect to "/s-series" (see next.config.js — that

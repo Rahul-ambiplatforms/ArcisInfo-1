@@ -161,9 +161,12 @@ export function buildSeoPageSchemas({ pageData, path, areaServed } = {}) {
         seller: { '@id': ORGANIZATION_ID },
       },
     });
-  } else if (category === 'products' && pageData.model) {
+  } else if (category === 'products' && pageData.model && pageData.emitProductSchema) {
     // Model-level page: Product with only datasheet-verifiable properties.
     // No offers (no published price), no aggregateRating (no reviews on-site).
+    // ARC-004 (2026-11-16): off by default – without offers/review/rating
+    // Google reports this Product item as invalid. Set `emitProductSchema: true`
+    // on a model entry only once a real public price (offers) is added.
     schemas.push({
       '@context': 'https://schema.org',
       '@type': 'Product',

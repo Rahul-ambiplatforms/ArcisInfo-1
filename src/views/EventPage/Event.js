@@ -88,6 +88,19 @@ const Event = () => {
       <EventHeroSection data={EventData.hero} />
       <UpcomingEventBanner />
       <EventCarousel data={EventData.carousel} />
+      {/* ARC-010 (2026-11-16): crawlable links to the individual event pages,
+          which had no inbound links anywhere on the site. */}
+      <Box bg="#0F0F0F" py={{ base: 8, md: 10 }} px={4}>
+        <Container maxW="1100px">
+          <Heading as="h2" size="md" color="white" fontWeight="700" mb={4}>All ArcisAI events</Heading>
+          <VStack align="flex-start" spacing={2}>
+            <CLink as={NextLink} href="/ifsec-india-2026" color="#A4FF79" textDecoration="underline">IFSEC India 2026 – New Delhi</CLink>
+            <CLink as={NextLink} href="/fsie-2026" color="#A4FF79" textDecoration="underline">FSIE 2026</CLink>
+            <CLink as={NextLink} href="/events/convergence-india-2026" color="#A4FF79" textDecoration="underline">Convergence India 2026</CLink>
+            <CLink as={NextLink} href="/event/ifsec-india-2025" color="#A4FF79" textDecoration="underline">IFSEC India 2025</CLink>
+          </VStack>
+        </Container>
+      </Box>
       <CTAButton {...EventData.cta} />
     </Box>
   );

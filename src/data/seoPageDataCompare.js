@@ -296,7 +296,7 @@ const seoPageDataCompare = {
 
   "arcisai-vs-chinese-cameras": {
     slug: "/compare/arcisai-vs-chinese-cameras",
-    title: "ArcisAI vs Chinese Cameras | Why Switch from Chinese Surveillance Brands",
+    title: "ArcisAI vs Chinese CCTV Cameras: Why Indian Buyers Switch",
     metaDescription: "Why organizations worldwide are replacing Chinese surveillance cameras with ArcisAI — compare cybersecurity, compliance, and data sovereignty.",
     keywords: ["Chinese camera alternative", "replace Chinese cameras", "Chinese surveillance risk", "cybersecurity camera comparison", "data sovereignty cameras", "secure camera replacement"],
     heroTitle: "ArcisAI vs Chinese Camera Brands",

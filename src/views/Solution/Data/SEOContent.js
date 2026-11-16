@@ -1,7 +1,7 @@
 export const edgeAISEO = {
   metatitle: "Edge AI CCTV: Real-Time Intelligence Inside the Camera",
   metadescription:
-    "Explore ArcisAI cameras with on-camera AI. Learn how edge processing works, how it differs from cloud AI, and request a demo to see the detections supported by each model.",
+    "Explore ArcisAI cameras with on-camera AI. Learn how edge processing works, how it differs from cloud AI, and which detections each model supports.",
   ogimage: "https://arcisai.io/images/solution_edgeai_hero.webp",
   canonical: "https://arcisai.io/solution/edge-ai",
   schema: [
@@ -86,7 +86,7 @@ export const edgeAISEO = {
 
 export const cloudAISEO = {
   metatitle:
-    "Cloud AI CCTV Camera for Scalable, Smarter Surveillance – ArcisAI",
+    "Cloud AI CCTV Cameras for Scalable Surveillance",
   metadescription:
     "Enhance your ArcisAI's AI CCTV cameras with CloudAI - a subscription-based alerts that unlocks advanced detections, analytics, and insights powered by the cloud.",
   ogimage: "https://arcisai.io/images/solution_cloudai_hero.webp",
@@ -96,7 +96,7 @@ export const cloudAISEO = {
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      name: "Cloud AI CCTV Camera for Scalable, Smarter Surveillance – ArcisAI",
+      name: "Cloud AI CCTV Cameras for Scalable Surveillance",
       description:
         "Enhance your ArcisAI’s AI CCTV cameras with CloudAI - a subscription-based alerts that unlocks advanced detections, analytics, and insights powered by the cloud.",
       url: "https://arcisai.io/solution/cloud-ai",
@@ -164,7 +164,7 @@ export const cloudAISEO = {
 };
 
 export const genAISEO = {
-  metatitle: "ArcisAI GenAI – Smarter CCTV Search and Video Summarization",
+  metatitle: "GenAI for CCTV: Smart Search & Video Summaries",
   metadescription:
     "ArcisAI GenAI turns hours of CCTV footage into instant summaries. Search, analyze, and retrieve key moments with natural language commands for faster decisions.",
   ogimage: "https://arcisai.io/images/solution_genai_hero.webp",
@@ -174,7 +174,7 @@ export const genAISEO = {
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      name: "ArcisAI GenAI – Smarter CCTV Search and Video Summarization",
+      name: "GenAI for CCTV: Smart Search & Video Summaries",
       description:
         "ArcisAI GenAI turns hours of CCTV footage into instant summaries. Search, analyze, and retrieve key moments with natural language commands for faster decisions.",
       url: "https://arcisai.io/solution/generative-ai",

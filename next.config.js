@@ -2,6 +2,20 @@
 // Served as config-level redirects instead of permanentRedirect() inside the
 // prerendered /[slug] page, which produced a doubled "x,x" Location on production.
 const seoSectionRedirects = require("./src/data/seoSectionRedirects.json");
+// ARC-011 (2026-11-16): duplicate-topic pages merged into one winner per topic
+// (winner = most Search Console clicks/impressions, Aug–Nov 2026). Sources 301
+// to the winner; every other redirect that pointed at a merged source is
+// re-pointed straight at the winner so there is never a chain.
+const seoMergeRedirects = require("./src/data/seoMergeRedirects.json");
+function applySeoMerges(rules) {
+  const repoint = (r) =>
+    seoMergeRedirects[r.destination] ? { ...r, destination: seoMergeRedirects[r.destination] } : r;
+  const merges = Object.entries(seoMergeRedirects).map(([source, destination]) => ({
+    source, destination, permanent: true, statusCode: 301,
+  }));
+  // Keep the www -> apex host rule first, then the merges, then everything else.
+  return [rules[0], ...merges, ...rules.slice(1).filter((r) => !seoMergeRedirects[r.source]).map(repoint)];
+}
 // States whose canonical page is /state/<x> (no /cctv-cameras-<x> entry). See ARC-018 below.
 const STATES_WITHOUT_CITY_PAGE = new Set(["delhi-ncr", "bihar"]);
 
@@ -233,7 +247,7 @@ const nextConfig = {
 
   // ─── Legacy URL Redirects (301) ─────────────────────────────────────────────
   async redirects() {
-    return [
+    return applySeoMerges([
       {
         source: "/:path*",
         has: [{ type: "host", value: "www.arcisai.io" }],
@@ -774,7 +788,7 @@ const nextConfig = {
         permanent: true,
         statusCode: 301,
       })),
-    ];
+    ]);
   },
 };
 

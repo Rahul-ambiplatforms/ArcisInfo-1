@@ -89,7 +89,7 @@ const seoPageDataMaharashtraCities = {
   // PUNE — IT/ITES (Hinjewadi), auto manufacturing (Chakan/PCMC), education
   "cctv-cameras-pune": {
     slug: "cctv-cameras-pune",
-    title: "AI CCTV Cameras in Pune | IT Park & Auto Manufacturing Security | ArcisAI",
+    title: "AI CCTV Cameras in Pune | IT Park & Factory Security | ArcisAI",
     metaDescription: "ArcisAI AI CCTV in Pune — BIS-ER & STQC-certified for Hinjewadi IT parks, Chakan auto plants & university campuses. 8 edge AI detections, ArcisGPT. Free quote.",
     keywords: [
       "CCTV camera Pune", "AI CCTV Pune", "BIS certified CCTV Pune",
@@ -167,7 +167,7 @@ const seoPageDataMaharashtraCities = {
   // NAGPUR — MIHAN logistics, government, central-India distribution hub
   "cctv-cameras-nagpur": {
     slug: "cctv-cameras-nagpur",
-    title: "AI CCTV Cameras in Nagpur | MIHAN, Logistics & Government | ArcisAI",
+    title: "AI CCTV Cameras in Nagpur | MIHAN & Logistics | ArcisAI",
     metaDescription: "ArcisAI AI CCTV in Nagpur — BIS-ER & STQC-certified for MIHAN SEZ, logistics hubs & government offices. Request a site survey.",
     keywords: [
       "CCTV camera Nagpur", "AI CCTV Nagpur", "MIHAN SEZ security camera",
@@ -245,7 +245,7 @@ const seoPageDataMaharashtraCities = {
   // NASHIK — Manufacturing, wineries, agriculture, pharma
   "cctv-cameras-nashik": {
     slug: "cctv-cameras-nashik",
-    title: "AI CCTV Cameras in Nashik | Manufacturing, Pharma & Winery Security | ArcisAI",
+    title: "AI CCTV Cameras in Nashik | Factory & Pharma Security | ArcisAI",
     metaDescription: "ArcisAI AI CCTV in Nashik — BIS-ER & STQC-certified for Ambad MIDC manufacturing, pharma units, wineries & agricultural cold chains. 8 edge AI detections.",
     keywords: [
       "CCTV camera Nashik", "AI CCTV Nashik", "BIS certified CCTV Nashik",
@@ -323,7 +323,7 @@ const seoPageDataMaharashtraCities = {
   // THANE — Dense residential societies + industrial (Wagle Estate)
   "cctv-cameras-thane": {
     slug: "cctv-cameras-thane",
-    title: "AI CCTV Cameras in Thane | Residential Societies & Wagle Estate | ArcisAI",
+    title: "AI CCTV Cameras in Thane | Societies & Wagle Estate | ArcisAI",
     metaDescription: "ArcisAI AI CCTV in Thane — BIS-ER & STQC-certified for dense CHS societies, Wagle Estate industrial, Majiwada & Ghodbunder Road. ANPR gate management. Free quote.",
     keywords: [
       "CCTV camera Thane", "AI CCTV Thane", "BIS certified CCTV Thane",

@@ -14,7 +14,7 @@ import { buildHreflang } from '@/src/data/hreflang';
 export const metadata = {
   title: 'IFSEC India 2026: Meet ArcisAI at Booth E-10',
   description:
-    'Meet ArcisAI at IFSEC India 2026, Booth E-10, Hall 5GF, Bharat Mandapam, New Delhi (3–5 Dec). Explore AI CCTV cameras, Edge AI, Cloud AI and intelligent video surveillance.',
+    'Meet ArcisAI at IFSEC India 2026, Booth E-10, Hall 5GF, Bharat Mandapam, New Delhi (3–5 Dec). See AI CCTV cameras, Edge AI and Cloud AI live.',
   alternates: { canonical: 'https://arcisai.io/ifsec-india-2026', languages: buildHreflang('https://arcisai.io/ifsec-india-2026') },
   openGraph: {
     title: 'Meet ArcisAI at IFSEC India 2026 | Booth E-10, Hall 5GF',

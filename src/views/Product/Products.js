@@ -66,9 +66,15 @@ const Products = ({ productId: productIdProp }) => {
           the document. The meta/title/canonical tags that used to sit here
           were dead for the same reason and are already emitted by the route's
           `metadata` export. */}
+      {/* ARC-004 (2026-11-16): Product entities are skipped. These pages have no
+          public price, reviews or rating, so Google's Product snippets report
+          flagged every one as invalid ("Either offers, review, or
+          aggregateRating should be specified"). Prices stay private by
+          decision, and fake reviews/ratings are never added, so the Product
+          block is not emitted at all. FAQ and Breadcrumb schema still render. */}
       {productSEO.schema &&
         productSEO.schema.length > 0 &&
-        productSEO.schema.map((schema, index) => (
+        productSEO.schema.filter((schema) => schema && schema['@type'] !== 'Product').map((schema, index) => (
           <script
             key={`schema-${index}`}
             type="application/ld+json"

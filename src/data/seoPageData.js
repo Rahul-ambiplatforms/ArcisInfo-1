@@ -6,7 +6,7 @@ const seoPageData = {
   "cctv-cameras-mumbai": {
     slug: "cctv-cameras-mumbai",
     title: "AI CCTV Cameras in Mumbai | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Mumbai. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Mumbai: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Mumbai", "AI CCTV Mumbai", "best CCTV dealer Mumbai", "surveillance camera Mumbai", "STQC certified CCTV Mumbai", "ArcisAI Mumbai"],
     heroTitle: "AI-Powered CCTV Solutions in Mumbai",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Mumbai",
@@ -26,7 +26,7 @@ const seoPageData = {
   "cctv-cameras-delhi": {
     slug: "cctv-cameras-delhi",
     title: "AI CCTV Cameras in Delhi | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Delhi. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Delhi: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Delhi", "AI CCTV Delhi", "best CCTV dealer Delhi", "surveillance camera Delhi", "STQC certified CCTV Delhi", "ArcisAI Delhi"],
     heroTitle: "AI-Powered CCTV Solutions in Delhi",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Delhi",
@@ -46,7 +46,7 @@ const seoPageData = {
   "cctv-cameras-bangalore": {
     slug: "cctv-cameras-bangalore",
     title: "AI CCTV Cameras in Bangalore | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Bangalore. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Bangalore: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Bangalore", "AI CCTV Bangalore", "best CCTV dealer Bangalore", "surveillance camera Bangalore", "STQC certified CCTV Bangalore", "ArcisAI Bangalore"],
     heroTitle: "AI-Powered CCTV Solutions in Bangalore",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Bangalore",
@@ -66,7 +66,7 @@ const seoPageData = {
   "cctv-cameras-hyderabad": {
     slug: "cctv-cameras-hyderabad",
     title: "AI CCTV Cameras in Hyderabad | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Hyderabad. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Hyderabad: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Hyderabad", "AI CCTV Hyderabad", "best CCTV dealer Hyderabad", "surveillance camera Hyderabad", "STQC certified CCTV Hyderabad", "ArcisAI Hyderabad"],
     heroTitle: "AI-Powered CCTV Solutions in Hyderabad",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Hyderabad",
@@ -86,7 +86,7 @@ const seoPageData = {
   "cctv-cameras-chennai": {
     slug: "cctv-cameras-chennai",
     title: "AI CCTV Cameras in Chennai | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Chennai. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Chennai: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Chennai", "AI CCTV Chennai", "best CCTV dealer Chennai", "surveillance camera Chennai", "STQC certified CCTV Chennai", "ArcisAI Chennai"],
     heroTitle: "AI-Powered CCTV Solutions in Chennai",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Chennai",
@@ -106,7 +106,7 @@ const seoPageData = {
   "cctv-cameras-pune": {
     slug: "cctv-cameras-pune",
     title: "AI CCTV Cameras in Pune | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Pune. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Pune: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Pune", "AI CCTV Pune", "best CCTV dealer Pune", "surveillance camera Pune", "STQC certified CCTV Pune", "ArcisAI Pune"],
     heroTitle: "AI-Powered CCTV Solutions in Pune",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Pune",
@@ -126,7 +126,7 @@ const seoPageData = {
   "cctv-cameras-ahmedabad": {
     slug: "cctv-cameras-ahmedabad",
     title: "AI CCTV Cameras in Ahmedabad | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Ahmedabad. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Ahmedabad: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Ahmedabad", "AI CCTV Ahmedabad", "best CCTV dealer Ahmedabad", "surveillance camera Ahmedabad", "STQC certified CCTV Ahmedabad", "ArcisAI Ahmedabad"],
     heroTitle: "AI-Powered CCTV Solutions in Ahmedabad",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Ahmedabad",
@@ -146,7 +146,7 @@ const seoPageData = {
   "cctv-cameras-kolkata": {
     slug: "cctv-cameras-kolkata",
     title: "AI CCTV Cameras in Kolkata | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Kolkata. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Kolkata: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Kolkata", "AI CCTV Kolkata", "best CCTV dealer Kolkata", "surveillance camera Kolkata", "STQC certified CCTV Kolkata", "ArcisAI Kolkata"],
     heroTitle: "AI-Powered CCTV Solutions in Kolkata",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Kolkata",
@@ -166,7 +166,7 @@ const seoPageData = {
   "cctv-cameras-jaipur": {
     slug: "cctv-cameras-jaipur",
     title: "AI CCTV Cameras in Jaipur | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Jaipur. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Jaipur: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Jaipur", "AI CCTV Jaipur", "best CCTV dealer Jaipur", "surveillance camera Jaipur", "STQC certified CCTV Jaipur", "ArcisAI Jaipur"],
     heroTitle: "AI-Powered CCTV Solutions in Jaipur",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Jaipur",
@@ -186,7 +186,7 @@ const seoPageData = {
   "cctv-cameras-lucknow": {
     slug: "cctv-cameras-lucknow",
     title: "AI CCTV Cameras in Lucknow | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Lucknow. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Lucknow: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Lucknow", "AI CCTV Lucknow", "best CCTV dealer Lucknow", "surveillance camera Lucknow", "STQC certified CCTV Lucknow", "ArcisAI Lucknow"],
     heroTitle: "AI-Powered CCTV Solutions in Lucknow",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Lucknow",
@@ -206,7 +206,7 @@ const seoPageData = {
   "cctv-cameras-chandigarh": {
     slug: "cctv-cameras-chandigarh",
     title: "AI CCTV Cameras in Chandigarh | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Chandigarh. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Chandigarh: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Chandigarh", "AI CCTV Chandigarh", "best CCTV dealer Chandigarh", "surveillance camera Chandigarh", "STQC certified CCTV Chandigarh", "ArcisAI Chandigarh"],
     heroTitle: "AI-Powered CCTV Solutions in Chandigarh",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Chandigarh",
@@ -226,7 +226,7 @@ const seoPageData = {
   "cctv-cameras-indore": {
     slug: "cctv-cameras-indore",
     title: "AI CCTV Cameras in Indore | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Indore. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Indore: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Indore", "AI CCTV Indore", "best CCTV dealer Indore", "surveillance camera Indore", "STQC certified CCTV Indore", "ArcisAI Indore"],
     heroTitle: "AI-Powered CCTV Solutions in Indore",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Indore",
@@ -246,7 +246,7 @@ const seoPageData = {
   "cctv-cameras-nagpur": {
     slug: "cctv-cameras-nagpur",
     title: "AI CCTV Cameras in Nagpur | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Nagpur. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Nagpur: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Nagpur", "AI CCTV Nagpur", "best CCTV dealer Nagpur", "surveillance camera Nagpur", "STQC certified CCTV Nagpur", "ArcisAI Nagpur"],
     heroTitle: "AI-Powered CCTV Solutions in Nagpur",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Nagpur",
@@ -266,7 +266,7 @@ const seoPageData = {
   "cctv-cameras-bhopal": {
     slug: "cctv-cameras-bhopal",
     title: "AI CCTV Cameras in Bhopal | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Bhopal. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Bhopal: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Bhopal", "AI CCTV Bhopal", "best CCTV dealer Bhopal", "surveillance camera Bhopal", "STQC certified CCTV Bhopal", "ArcisAI Bhopal"],
     heroTitle: "AI-Powered CCTV Solutions in Bhopal",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Bhopal",
@@ -286,7 +286,7 @@ const seoPageData = {
   "cctv-cameras-visakhapatnam": {
     slug: "cctv-cameras-visakhapatnam",
     title: "AI CCTV Cameras in Visakhapatnam | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Visakhapatnam. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Visakhapatnam: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Visakhapatnam", "AI CCTV Visakhapatnam", "best CCTV dealer Visakhapatnam", "surveillance camera Visakhapatnam", "STQC certified CCTV Visakhapatnam", "ArcisAI Visakhapatnam"],
     heroTitle: "AI-Powered CCTV Solutions in Visakhapatnam",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Visakhapatnam",
@@ -306,7 +306,7 @@ const seoPageData = {
   "cctv-cameras-patna": {
     slug: "cctv-cameras-patna",
     title: "AI CCTV Cameras in Patna | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Patna. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Patna: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Patna", "AI CCTV Patna", "best CCTV dealer Patna", "surveillance camera Patna", "STQC certified CCTV Patna", "ArcisAI Patna"],
     heroTitle: "AI-Powered CCTV Solutions in Patna",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Patna",
@@ -326,7 +326,7 @@ const seoPageData = {
   "cctv-cameras-vadodara": {
     slug: "cctv-cameras-vadodara",
     title: "AI CCTV Cameras in Vadodara | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Vadodara. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Vadodara: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Vadodara", "AI CCTV Vadodara", "best CCTV dealer Vadodara", "surveillance camera Vadodara", "STQC certified CCTV Vadodara", "ArcisAI Vadodara"],
     heroTitle: "AI-Powered CCTV Solutions in Vadodara",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Vadodara",
@@ -346,7 +346,7 @@ const seoPageData = {
   "cctv-cameras-ghaziabad": {
     slug: "cctv-cameras-ghaziabad",
     title: "AI CCTV Cameras in Ghaziabad | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Ghaziabad. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Ghaziabad: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Ghaziabad", "AI CCTV Ghaziabad", "best CCTV dealer Ghaziabad", "surveillance camera Ghaziabad", "STQC certified CCTV Ghaziabad", "ArcisAI Ghaziabad"],
     heroTitle: "AI-Powered CCTV Solutions in Ghaziabad",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Ghaziabad",
@@ -366,7 +366,7 @@ const seoPageData = {
   "cctv-cameras-ludhiana": {
     slug: "cctv-cameras-ludhiana",
     title: "AI CCTV Cameras in Ludhiana | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Ludhiana. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Ludhiana: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Ludhiana", "AI CCTV Ludhiana", "best CCTV dealer Ludhiana", "surveillance camera Ludhiana", "STQC certified CCTV Ludhiana", "ArcisAI Ludhiana"],
     heroTitle: "AI-Powered CCTV Solutions in Ludhiana",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Ludhiana",
@@ -386,7 +386,7 @@ const seoPageData = {
   "cctv-cameras-agra": {
     slug: "cctv-cameras-agra",
     title: "AI CCTV Cameras in Agra | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Agra. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Agra: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Agra", "AI CCTV Agra", "best CCTV dealer Agra", "surveillance camera Agra", "STQC certified CCTV Agra", "ArcisAI Agra"],
     heroTitle: "AI-Powered CCTV Solutions in Agra",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Agra",
@@ -406,7 +406,7 @@ const seoPageData = {
   "cctv-cameras-nashik": {
     slug: "cctv-cameras-nashik",
     title: "AI CCTV Cameras in Nashik | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Nashik. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Nashik: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Nashik", "AI CCTV Nashik", "best CCTV dealer Nashik", "surveillance camera Nashik", "STQC certified CCTV Nashik", "ArcisAI Nashik"],
     heroTitle: "AI-Powered CCTV Solutions in Nashik",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Nashik",
@@ -426,7 +426,7 @@ const seoPageData = {
   "cctv-cameras-faridabad": {
     slug: "cctv-cameras-faridabad",
     title: "AI CCTV Cameras in Faridabad | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Faridabad. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Faridabad: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Faridabad", "AI CCTV Faridabad", "best CCTV dealer Faridabad", "surveillance camera Faridabad", "STQC certified CCTV Faridabad", "ArcisAI Faridabad"],
     heroTitle: "AI-Powered CCTV Solutions in Faridabad",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Faridabad",
@@ -446,7 +446,7 @@ const seoPageData = {
   "cctv-cameras-meerut": {
     slug: "cctv-cameras-meerut",
     title: "AI CCTV Cameras in Meerut | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Meerut. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Meerut: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Meerut", "AI CCTV Meerut", "best CCTV dealer Meerut", "surveillance camera Meerut", "STQC certified CCTV Meerut", "ArcisAI Meerut"],
     heroTitle: "AI-Powered CCTV Solutions in Meerut",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Meerut",
@@ -466,7 +466,7 @@ const seoPageData = {
   "cctv-cameras-rajkot": {
     slug: "cctv-cameras-rajkot",
     title: "AI CCTV Cameras in Rajkot | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Rajkot. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Rajkot: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Rajkot", "AI CCTV Rajkot", "best CCTV dealer Rajkot", "surveillance camera Rajkot", "STQC certified CCTV Rajkot", "ArcisAI Rajkot"],
     heroTitle: "AI-Powered CCTV Solutions in Rajkot",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Rajkot",
@@ -486,7 +486,7 @@ const seoPageData = {
   "cctv-cameras-varanasi": {
     slug: "cctv-cameras-varanasi",
     title: "AI CCTV Cameras in Varanasi | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Varanasi. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Varanasi: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Varanasi", "AI CCTV Varanasi", "best CCTV dealer Varanasi", "surveillance camera Varanasi", "STQC certified CCTV Varanasi", "ArcisAI Varanasi"],
     heroTitle: "AI-Powered CCTV Solutions in Varanasi",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Varanasi",
@@ -506,7 +506,7 @@ const seoPageData = {
   "cctv-cameras-srinagar": {
     slug: "cctv-cameras-srinagar",
     title: "AI CCTV Cameras in Srinagar | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Srinagar. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Srinagar: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Srinagar", "AI CCTV Srinagar", "best CCTV dealer Srinagar", "surveillance camera Srinagar", "STQC certified CCTV Srinagar", "ArcisAI Srinagar"],
     heroTitle: "AI-Powered CCTV Solutions in Srinagar",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Srinagar",
@@ -526,7 +526,7 @@ const seoPageData = {
   "cctv-cameras-aurangabad": {
     slug: "cctv-cameras-aurangabad",
     title: "AI CCTV Cameras in Aurangabad | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Aurangabad. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Aurangabad: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Aurangabad", "AI CCTV Aurangabad", "best CCTV dealer Aurangabad", "surveillance camera Aurangabad", "STQC certified CCTV Aurangabad", "ArcisAI Aurangabad"],
     heroTitle: "AI-Powered CCTV Solutions in Aurangabad",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Aurangabad",
@@ -546,7 +546,7 @@ const seoPageData = {
   "cctv-cameras-dhanbad": {
     slug: "cctv-cameras-dhanbad",
     title: "AI CCTV Cameras in Dhanbad | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Dhanbad. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Dhanbad: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Dhanbad", "AI CCTV Dhanbad", "best CCTV dealer Dhanbad", "surveillance camera Dhanbad", "STQC certified CCTV Dhanbad", "ArcisAI Dhanbad"],
     heroTitle: "AI-Powered CCTV Solutions in Dhanbad",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Dhanbad",
@@ -566,7 +566,7 @@ const seoPageData = {
   "cctv-cameras-amritsar": {
     slug: "cctv-cameras-amritsar",
     title: "AI CCTV Cameras in Amritsar | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Amritsar. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Amritsar: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Amritsar", "AI CCTV Amritsar", "best CCTV dealer Amritsar", "surveillance camera Amritsar", "STQC certified CCTV Amritsar", "ArcisAI Amritsar"],
     heroTitle: "AI-Powered CCTV Solutions in Amritsar",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Amritsar",
@@ -586,7 +586,7 @@ const seoPageData = {
   "cctv-cameras-allahabad": {
     slug: "cctv-cameras-allahabad",
     title: "AI CCTV Cameras in Prayagraj | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Prayagraj. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Prayagraj: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Prayagraj", "AI CCTV Prayagraj", "best CCTV dealer Prayagraj", "surveillance camera Prayagraj", "STQC certified CCTV Prayagraj", "ArcisAI Prayagraj"],
     heroTitle: "AI-Powered CCTV Solutions in Prayagraj",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Prayagraj",
@@ -606,7 +606,7 @@ const seoPageData = {
   "cctv-cameras-ranchi": {
     slug: "cctv-cameras-ranchi",
     title: "AI CCTV Cameras in Ranchi | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Ranchi. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Ranchi: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Ranchi", "AI CCTV Ranchi", "best CCTV dealer Ranchi", "surveillance camera Ranchi", "STQC certified CCTV Ranchi", "ArcisAI Ranchi"],
     heroTitle: "AI-Powered CCTV Solutions in Ranchi",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Ranchi",
@@ -626,7 +626,7 @@ const seoPageData = {
   "cctv-cameras-howrah": {
     slug: "cctv-cameras-howrah",
     title: "AI CCTV Cameras in Howrah | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Howrah. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Howrah: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Howrah", "AI CCTV Howrah", "best CCTV dealer Howrah", "surveillance camera Howrah", "STQC certified CCTV Howrah", "ArcisAI Howrah"],
     heroTitle: "AI-Powered CCTV Solutions in Howrah",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Howrah",
@@ -646,7 +646,7 @@ const seoPageData = {
   "cctv-cameras-coimbatore": {
     slug: "cctv-cameras-coimbatore",
     title: "AI CCTV Cameras in Coimbatore | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Coimbatore. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Coimbatore: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Coimbatore", "AI CCTV Coimbatore", "best CCTV dealer Coimbatore", "surveillance camera Coimbatore", "STQC certified CCTV Coimbatore", "ArcisAI Coimbatore"],
     heroTitle: "AI-Powered CCTV Solutions in Coimbatore",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Coimbatore",
@@ -666,7 +666,7 @@ const seoPageData = {
   "cctv-cameras-jabalpur": {
     slug: "cctv-cameras-jabalpur",
     title: "AI CCTV Cameras in Jabalpur | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Jabalpur. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Jabalpur: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Jabalpur", "AI CCTV Jabalpur", "best CCTV dealer Jabalpur", "surveillance camera Jabalpur", "STQC certified CCTV Jabalpur", "ArcisAI Jabalpur"],
     heroTitle: "AI-Powered CCTV Solutions in Jabalpur",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Jabalpur",
@@ -686,7 +686,7 @@ const seoPageData = {
   "cctv-cameras-gwalior": {
     slug: "cctv-cameras-gwalior",
     title: "AI CCTV Cameras in Gwalior | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Gwalior. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Gwalior: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Gwalior", "AI CCTV Gwalior", "best CCTV dealer Gwalior", "surveillance camera Gwalior", "STQC certified CCTV Gwalior", "ArcisAI Gwalior"],
     heroTitle: "AI-Powered CCTV Solutions in Gwalior",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Gwalior",
@@ -706,7 +706,7 @@ const seoPageData = {
   "cctv-cameras-vijayawada": {
     slug: "cctv-cameras-vijayawada",
     title: "AI CCTV Cameras in Vijayawada | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Vijayawada. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Vijayawada: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Vijayawada", "AI CCTV Vijayawada", "best CCTV dealer Vijayawada", "surveillance camera Vijayawada", "STQC certified CCTV Vijayawada", "ArcisAI Vijayawada"],
     heroTitle: "AI-Powered CCTV Solutions in Vijayawada",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Vijayawada",
@@ -726,7 +726,7 @@ const seoPageData = {
   "cctv-cameras-jodhpur": {
     slug: "cctv-cameras-jodhpur",
     title: "AI CCTV Cameras in Jodhpur | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Jodhpur. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Jodhpur: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Jodhpur", "AI CCTV Jodhpur", "best CCTV dealer Jodhpur", "surveillance camera Jodhpur", "STQC certified CCTV Jodhpur", "ArcisAI Jodhpur"],
     heroTitle: "AI-Powered CCTV Solutions in Jodhpur",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Jodhpur",
@@ -746,7 +746,7 @@ const seoPageData = {
   "cctv-cameras-madurai": {
     slug: "cctv-cameras-madurai",
     title: "AI CCTV Cameras in Madurai | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Madurai. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Madurai: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Madurai", "AI CCTV Madurai", "best CCTV dealer Madurai", "surveillance camera Madurai", "STQC certified CCTV Madurai", "ArcisAI Madurai"],
     heroTitle: "AI-Powered CCTV Solutions in Madurai",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Madurai",
@@ -766,7 +766,7 @@ const seoPageData = {
   "cctv-cameras-raipur": {
     slug: "cctv-cameras-raipur",
     title: "AI CCTV Cameras in Raipur | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Raipur. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Raipur: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Raipur", "AI CCTV Raipur", "best CCTV dealer Raipur", "surveillance camera Raipur", "STQC certified CCTV Raipur", "ArcisAI Raipur"],
     heroTitle: "AI-Powered CCTV Solutions in Raipur",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Raipur",
@@ -786,7 +786,7 @@ const seoPageData = {
   "cctv-cameras-kota": {
     slug: "cctv-cameras-kota",
     title: "AI CCTV Cameras in Kota | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Kota. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Kota: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Kota", "AI CCTV Kota", "best CCTV dealer Kota", "surveillance camera Kota", "STQC certified CCTV Kota", "ArcisAI Kota"],
     heroTitle: "AI-Powered CCTV Solutions in Kota",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Kota",
@@ -806,7 +806,7 @@ const seoPageData = {
   "cctv-cameras-guwahati": {
     slug: "cctv-cameras-guwahati",
     title: "AI CCTV Cameras in Guwahati | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Guwahati. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Guwahati: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Guwahati", "AI CCTV Guwahati", "best CCTV dealer Guwahati", "surveillance camera Guwahati", "STQC certified CCTV Guwahati", "ArcisAI Guwahati"],
     heroTitle: "AI-Powered CCTV Solutions in Guwahati",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Guwahati",
@@ -826,7 +826,7 @@ const seoPageData = {
   "cctv-cameras-dehradun": {
     slug: "cctv-cameras-dehradun",
     title: "AI CCTV Cameras in Dehradun | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Dehradun. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Dehradun: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Dehradun", "AI CCTV Dehradun", "best CCTV dealer Dehradun", "surveillance camera Dehradun", "STQC certified CCTV Dehradun", "ArcisAI Dehradun"],
     heroTitle: "AI-Powered CCTV Solutions in Dehradun",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Dehradun",
@@ -846,7 +846,7 @@ const seoPageData = {
   "cctv-cameras-noida": {
     slug: "cctv-cameras-noida",
     title: "AI CCTV Cameras in Noida | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Noida. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Noida: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Noida", "AI CCTV Noida", "best CCTV dealer Noida", "surveillance camera Noida", "STQC certified CCTV Noida", "ArcisAI Noida"],
     heroTitle: "AI-Powered CCTV Solutions in Noida",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Noida",
@@ -866,7 +866,7 @@ const seoPageData = {
   "cctv-cameras-gurugram": {
     slug: "cctv-cameras-gurugram",
     title: "AI CCTV Cameras in Gurugram | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Gurugram. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Gurugram: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Gurugram", "AI CCTV Gurugram", "best CCTV dealer Gurugram", "surveillance camera Gurugram", "STQC certified CCTV Gurugram", "ArcisAI Gurugram"],
     heroTitle: "AI-Powered CCTV Solutions in Gurugram",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Gurugram",
@@ -886,7 +886,7 @@ const seoPageData = {
   "cctv-cameras-thane": {
     slug: "cctv-cameras-thane",
     title: "AI CCTV Cameras in Thane | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Thane. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Thane: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Thane", "AI CCTV Thane", "best CCTV dealer Thane", "surveillance camera Thane", "STQC certified CCTV Thane", "ArcisAI Thane"],
     heroTitle: "AI-Powered CCTV Solutions in Thane",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Thane",
@@ -906,7 +906,7 @@ const seoPageData = {
   "cctv-cameras-navi-mumbai": {
     slug: "cctv-cameras-navi-mumbai",
     title: "AI CCTV Cameras in Navi Mumbai | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Navi Mumbai. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Navi Mumbai: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Navi Mumbai", "AI CCTV Navi Mumbai", "best CCTV dealer Navi Mumbai", "surveillance camera Navi Mumbai", "STQC certified CCTV Navi Mumbai", "ArcisAI Navi Mumbai"],
     heroTitle: "AI-Powered CCTV Solutions in Navi Mumbai",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Navi Mumbai",
@@ -926,7 +926,7 @@ const seoPageData = {
   "cctv-cameras-kochi": {
     slug: "cctv-cameras-kochi",
     title: "AI CCTV Cameras in Kochi | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Kochi. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Kochi: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Kochi", "AI CCTV Kochi", "best CCTV dealer Kochi", "surveillance camera Kochi", "STQC certified CCTV Kochi", "ArcisAI Kochi"],
     heroTitle: "AI-Powered CCTV Solutions in Kochi",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Kochi",
@@ -945,8 +945,8 @@ const seoPageData = {
   },
   "cctv-cameras-thiruvananthapuram": {
     slug: "cctv-cameras-thiruvananthapuram",
-    title: "AI CCTV Cameras in Thiruvananthapuram | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Thiruvananthapuram. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    title: "AI CCTV Cameras in Thiruvananthapuram | ArcisAI Dealer",
+    metaDescription: "ArcisAI AI CCTV cameras in Thiruvananthapuram: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Thiruvananthapuram", "AI CCTV Thiruvananthapuram", "best CCTV dealer Thiruvananthapuram", "surveillance camera Thiruvananthapuram", "STQC certified CCTV Thiruvananthapuram", "ArcisAI Thiruvananthapuram"],
     heroTitle: "AI-Powered CCTV Solutions in Thiruvananthapuram",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Thiruvananthapuram",
@@ -966,7 +966,7 @@ const seoPageData = {
   "cctv-cameras-mysore": {
     slug: "cctv-cameras-mysore",
     title: "AI CCTV Cameras in Mysore | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Mysore. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Mysore: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Mysore", "AI CCTV Mysore", "best CCTV dealer Mysore", "surveillance camera Mysore", "STQC certified CCTV Mysore", "ArcisAI Mysore"],
     heroTitle: "AI-Powered CCTV Solutions in Mysore",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Mysore",
@@ -986,7 +986,7 @@ const seoPageData = {
   "cctv-cameras-bhubaneswar": {
     slug: "cctv-cameras-bhubaneswar",
     title: "AI CCTV Cameras in Bhubaneswar | Dealer & Installation",
-    metaDescription: "ArcisAI: India's #1 AI CCTV camera brand now in Bhubaneswar. STQC certified, edge AI, cloud VMS. S-Series & ECO-Series cameras. Get free installation quote.",
+    metaDescription: "ArcisAI AI CCTV cameras in Bhubaneswar: Made in India, BIS-ER certified, with edge AI and cloud VMS. S-Series & ECO-Series. Get a free installation quote.",
     keywords: ["CCTV camera Bhubaneswar", "AI CCTV Bhubaneswar", "best CCTV dealer Bhubaneswar", "surveillance camera Bhubaneswar", "STQC certified CCTV Bhubaneswar", "ArcisAI Bhubaneswar"],
     heroTitle: "AI-Powered CCTV Solutions in Bhubaneswar",
     heroSubtitle: "India's Most Advanced AI Surveillance — Now in Bhubaneswar",
@@ -1170,7 +1170,7 @@ const seoPageData = {
   },
   "real-estate-construction": {
     slug: "real-estate-construction",
-    title: "Real Estate & Construction AI CCTV Solutions | Surveillance",
+    title: "AI CCTV for Real Estate & Construction Sites",
     metaDescription: "ArcisAI Construction site monitoring, property surveillance. STQC certified, edge AI analytics, cloud VMS with ArcisGPT. Made in India.",
     keywords: ["construction camera","site monitoring","real estate CCTV","ArcisAI","STQC certified","AI surveillance India"],
     heroTitle: "AI Surveillance for Real Estate & Construction",
@@ -1392,7 +1392,7 @@ const seoPageData = {
   },
   "indian-vs-chinese-cctv": {
     slug: "indian-vs-chinese-cctv",
-    title: "Indian CCTV Brands vs Chinese CCTV Brands — Detailed Comparison 2026 | ArcisAI",
+    title: "Indian vs Chinese CCTV Brands: 2026 Comparison | ArcisAI",
     metaDescription: "Compare Indian CCTV Brands vs Chinese CCTV Brands: features, pricing, AI capabilities, certifications. Find out which is better for your surveillance needs in India.",
     keywords: ["indian vs chinese cctv", "Indian CCTV Brands vs Chinese CCTV Brands", "Chinese CCTV Brands alternative", "best CCTV India 2026"],
     heroTitle: "Indian CCTV Brands vs Chinese CCTV Brands",
@@ -1412,7 +1412,7 @@ const seoPageData = {
   },
   "stqc-certified-vs-non-certified": {
     slug: "stqc-certified-vs-non-certified",
-    title: "STQC Certified vs Non-Certified — Detailed Comparison 2026 | ArcisAI",
+    title: "STQC Certified vs Non-Certified CCTV (2026) | ArcisAI",
     metaDescription: "Compare STQC Certified vs Non-Certified: features, pricing, AI capabilities, certifications. Find out which is better for your surveillance needs in India.",
     keywords: ["stqc certified vs non certified", "STQC Certified vs Non-Certified", "Non-Certified alternative", "best CCTV India 2026"],
     heroTitle: "STQC Certified vs Non-Certified",
@@ -1451,7 +1451,7 @@ const seoPageData = {
     cta: {title: "Need Expert Advice?", description: "Our surveillance consultants are ready to help.", buttonText: "Talk to Expert", buttonLink: "/contact-us?resource=how-to-choose-cctv-camera"}
   },
   "stqc-certification-guide": {
-    slug: "stqc-certification-guide", title: "STQC Certification for CCTV — Everything You Need to Know | ArcisAI",
+    slug: "stqc-certification-guide", title: "STQC Certification for CCTV: What You Need to Know | ArcisAI",
     metaDescription: "What is STQC, why it's mandatory since April 2026, certified brands list. Expert guide by ArcisAI — India's first premium AI CCTV brand.",
     keywords: ["stqc certification guide", "CCTV guide India", "surveillance guide 2026", "ArcisAI"],
     heroTitle: "STQC Certification for CCTV — Everything You Need to Know", heroSubtitle: "Expert Guide by ArcisAI", heroDescription: "What is STQC, why it's mandatory since April 2026, certified brands list",
@@ -1619,7 +1619,7 @@ const seoPageData = {
     cta: {title: "Find ArcisAI Dealer in Rajasthan", description: "Connect with your nearest authorized partner.", buttonText: "Find Dealer", buttonLink: "/contact-us?state=rajasthan"}
   },
   "madhya-pradesh": {
-    slug: "madhya-pradesh", title: "AI CCTV Cameras in Madhya Pradesh | ArcisAI Dealers & Installation",
+    slug: "madhya-pradesh", title: "AI CCTV Cameras in Madhya Pradesh | ArcisAI Dealers",
     metaDescription: "ArcisAI AI CCTV cameras across Madhya Pradesh — Bhopal, Indore, Jabalpur, Gwalior. STQC certified, Made in India. Dealer network, installation, cloud VMS.",
     keywords: ["CCTV camera Madhya Pradesh", "AI surveillance Madhya Pradesh", "CCTV dealer Madhya Pradesh", "ArcisAI Madhya Pradesh", "STQC certified camera Madhya Pradesh"],
     heroTitle: "AI CCTV Solutions Across Madhya Pradesh", heroSubtitle: "India's Most Advanced Surveillance — Now Statewide in Madhya Pradesh",
@@ -1663,7 +1663,7 @@ const seoPageData = {
     cta: {title: "Find ArcisAI Dealer in Kerala", description: "Connect with your nearest authorized partner.", buttonText: "Find Dealer", buttonLink: "/contact-us?state=kerala"}
   },
   "andhra-pradesh": {
-    slug: "andhra-pradesh", title: "AI CCTV Cameras in Andhra Pradesh | ArcisAI Dealers & Installation",
+    slug: "andhra-pradesh", title: "AI CCTV Cameras in Andhra Pradesh | ArcisAI Dealers",
     metaDescription: "ArcisAI AI CCTV cameras across Andhra Pradesh — Visakhapatnam, Vijayawada, Tirupati. STQC certified, Made in India. Dealer network, installation, cloud VMS.",
     keywords: ["CCTV camera Andhra Pradesh", "AI surveillance Andhra Pradesh", "CCTV dealer Andhra Pradesh", "ArcisAI Andhra Pradesh", "STQC certified camera Andhra Pradesh"],
     heroTitle: "AI CCTV Solutions Across Andhra Pradesh", heroSubtitle: "India's Most Advanced Surveillance — Now Statewide in Andhra Pradesh",

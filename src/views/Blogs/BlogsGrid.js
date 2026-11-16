@@ -22,6 +22,11 @@ import {
 import { CloseIcon, SearchIcon, InfoIcon } from "@chakra-ui/icons";
 import Link from "next/link";
 import { getBlogs } from "./blog";
+import seoMergeRedirects from "@/src/data/seoMergeRedirects.json";
+
+const MERGED_BLOG_SLUGS = new Set(
+  Object.keys(seoMergeRedirects).filter((p) => p.startsWith("/blog/")).map((p) => p.replace("/blog/", ""))
+);
 
 // Slugs of blogs that belong to VMukti and must not appear on the ArcisAI
 // site. The shared backend has no per-site flag, so we filter by urlWords
@@ -135,6 +140,8 @@ export default function BlogsContent({ initialBlogs = [] }) {
               // ARC-018 (2026-11-14): CMS lists this post as published but its
               // detail page is gone (it 301s to /blog), so don't link to it.
               (b.metadata?.urlWords || "").trim() !== "reduce-cctv-callbacks" &&
+              // ARC-011 (2026-11-16): merged posts 301 elsewhere – don't list them.
+              !MERGED_BLOG_SLUGS.has((b.metadata?.urlWords || "").trim()) &&
               !b.content?.title?.toLowerCase().includes("vmukti")
           );
           setAllBlogs(filtered);

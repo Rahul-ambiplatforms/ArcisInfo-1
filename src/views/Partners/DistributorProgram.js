@@ -5,6 +5,7 @@ import {
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { trackCtaClick } from '@/src/utils/track';
+import DealerLeadForm from '@/src/Components/DealerLeadForm';
 
 const ACCENT = '#9678E1';
 const ACCENT_DEEP = '#8266C9';
@@ -52,7 +53,7 @@ const DistributorProgram = () => (
           <Button as="a" type={undefined} href={WA} onClick={() => trackCtaClick('whatsapp', 'become-a-distributor')} size="lg" bg={ACCENT} color="white" _hover={{ bg: ACCENT_DEEP }}>
             Apply on WhatsApp
           </Button>
-          <Button as={NextLink} type={undefined} href="/contact-us?type=partner" onClick={() => trackCtaClick('enquiry_form', 'become-a-distributor')} size="lg" variant="outline" borderColor="whiteAlpha.500" color="white" _hover={{ bg: 'whiteAlpha.200' }}>
+          <Button as={NextLink} type={undefined} href="#dealer-form" onClick={() => trackCtaClick('enquiry_form', 'become-a-distributor')} size="lg" variant="outline" borderColor="whiteAlpha.500" color="white" _hover={{ bg: 'whiteAlpha.200' }}>
             Fill the Enquiry Form
           </Button>
           <Button as="a" type={undefined} href="mailto:marketing@arcisai.io?subject=ArcisAI%20Distributor%20Enquiry" onClick={() => trackCtaClick('email', 'become-a-distributor')} size="lg" variant="outline" borderColor={CARD_BORDER} color="white" _hover={{ bg: 'whiteAlpha.100' }}>
@@ -63,6 +64,9 @@ const DistributorProgram = () => (
     </Box>
 
     <Container maxW="1100px" py={{ base: 12, md: 16 }}>
+      {/* ARC-013 (2026-11-16): on-page dealer enquiry form */}
+      <DealerLeadForm />
+
       {/* Why partner */}
       <Heading as="h2" fontSize={{ base: '24px', md: '34px' }} fontWeight="700" mb={8}>Why partner with ArcisAI</Heading>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={5} mb={16}>
