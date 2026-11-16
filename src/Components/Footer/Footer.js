@@ -242,6 +242,13 @@ const Footer = () => {
               <FooterLink href={"/india-cctv-market-report-2026"}>
                 CCTV Market Report 2026
               </FooterLink>
+              {/* ARC-010 (2026-11-14): these hub pages are live and in the
+                  sitemap but no page linked to them. */}
+              <FooterLink href={"/industry"}>Industries</FooterLink>
+              <FooterLink href={"/compare"}>Comparisons</FooterLink>
+              <FooterLink href={"/resources"}>Guides</FooterLink>
+              <FooterLink href={"/glossary"}>Glossary</FooterLink>
+              <FooterLink href={"/firmware"}>Firmware</FooterLink>
             </Stack>
 
             {/* TOP LOCATIONS — internal links so city pages aren't orphaned */}

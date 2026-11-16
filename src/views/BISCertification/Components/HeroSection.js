@@ -21,7 +21,11 @@ const BISHeroSection = () => {
       }}
     >
       <Box w="100%" h="100%" position="relative" zIndex={1}>
-        <BISHeroSlide showExploreButton={false} />
+        <BISHeroSlide
+          showExploreButton={false}
+          headingLead="BIS-ER Certified"
+          headingStrong="AI CCTV Cameras by ArcisAI"
+        />
       </Box>
     </Box>
   );

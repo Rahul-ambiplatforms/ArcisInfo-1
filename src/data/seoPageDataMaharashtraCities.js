@@ -8,8 +8,9 @@ const seoPageDataMaharashtraCities = {
   // MUMBAI — BFSI HQs, high-rise societies, retail, ports/logistics, AI smart-city push
   "cctv-cameras-mumbai": {
     slug: "cctv-cameras-mumbai",
-    title: "AI CCTV Cameras in Mumbai | BFSI & Smart City Security | ArcisAI",
-    metaDescription: "ArcisAI AI CCTV in Mumbai — BIS-ER (R-72003735) & STQC-certified VMS for BFSI HQs, high-rise societies, ports & retail. Financial-grade, encrypted, audit-ready.",
+    // SEO fix (2026-11-14, ARC-006): 1,460 impressions / 13 clicks at pos 3.2 in 28d.
+    title: "AI CCTV Cameras in Mumbai for Offices & Societies | ArcisAI",
+    metaDescription: "AI CCTV cameras for Mumbai offices, banks, housing societies and shops. BIS-ER certified cameras with STQC-certified VMS. Get a free quote from ArcisAI.",
     keywords: [
       "CCTV camera Mumbai", "AI CCTV Mumbai", "BIS certified CCTV Mumbai",
       "STQC certified surveillance Mumbai", "BFSI security camera Mumbai",

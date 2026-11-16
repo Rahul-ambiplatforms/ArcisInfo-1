@@ -62,7 +62,7 @@ export async function generateMetadata(props) {
   const feature = slug.startsWith('ai-cctv-') ? humanizeSlug(slug.replace('ai-cctv-', '')) : null;
   const name = humanizeSlug(slug);
 
-  return buildSeoPageMetadata({
+  const metadata = buildSeoPageMetadata({
     pageData,
     path: `/${slug}`,
     fallbackTitle: city
@@ -85,6 +85,12 @@ export async function generateMetadata(props) {
     // homepage image.
     ogImage: '/og/location.jpg',
   });
+  // ARC-002: compliance pages awaiting claim review stay out of the index
+  // (links still followed) until `claimsReviewed: true` is set on the entry.
+  if (pageData.pendingClaimReview) {
+    metadata.robots = { index: false, follow: true };
+  }
+  return metadata;
 }
 
 export default async function SlugPage(props) {

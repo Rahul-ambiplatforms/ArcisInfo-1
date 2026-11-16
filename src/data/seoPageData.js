@@ -1290,8 +1290,9 @@ const seoPageData = {
   },
   "best-enterprise-cctv-india": {
     slug: "best-enterprise-cctv-india",
-    title: "Best Enterprise AI Surveillance in India 2026 | ArcisAI",
-    metaDescription: "ArcisAI delivers enterprise-grade AI surveillance in India — edge AI cameras, Cloud VMS, ArcisGPT, and STQC/BIS-ER certification.",
+    // SEO fix (2026-11-14, ARC-006): 1,297 impressions / 2 clicks at pos 4.1 in 28d.
+    title: "Best Enterprise CCTV in India (2026): How to Choose | ArcisAI",
+    metaDescription: "Compare enterprise CCTV options in India on AI analytics, VMS, STQC/BIS-ER certification and support – and see the questions to ask every vendor.",
     keywords: ["enterprise CCTV India", "enterprise AI surveillance", "business CCTV India", "scalable CCTV India"],
     heroTitle: "Best Enterprise AI Surveillance in India",
     heroSubtitle: "Scalable, Certified, AI-First",
