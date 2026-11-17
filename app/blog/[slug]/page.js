@@ -201,8 +201,32 @@ export default async function BlogPostPage(props) {
     initialBlog?.content?.metaDescription ||
     initialBlog?.metadata?.metaDescription ||
     null;
+  // ARC-028 (2026-11-17): some posts name a real author only inside the
+  // CMS-authored JSON-LD (blog.content.schemas), while content.author is empty.
+  // That page then carried two conflicting authors (Organization here, Person in
+  // the CMS schema). Reuse the CMS Person name when the plain field is empty, so
+  // the page states one author. Nothing is invented: the name is already
+  // published on the page by the CMS.
+  const cmsPersonAuthor = (() => {
+    const list = Array.isArray(initialBlog?.content?.schemas) ? initialBlog.content.schemas : [];
+    for (const item of list) {
+      try {
+        const parsed = JSON.parse(item?.content?.schemaData || '');
+        const nodes = [].concat(parsed?.['@graph'] || parsed);
+        for (const node of nodes) {
+          const a = node && node.author ? [].concat(node.author)[0] : null;
+          if (a && a['@type'] === 'Person' && typeof a.name === 'string' && a.name.trim()) {
+            return a.name.trim();
+          }
+        }
+      } catch {
+        /* skip malformed CMS schema */
+      }
+    }
+    return null;
+  })();
   const authorName =
-    initialBlog?.content?.author || initialBlog?.blogAuthor || null;
+    initialBlog?.content?.author || initialBlog?.blogAuthor || cmsPersonAuthor || null;
   const datePublished = initialBlog?.createdAt || null;
   const dateModified = initialBlog?.updatedAt || initialBlog?.createdAt || null;
 

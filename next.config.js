@@ -155,6 +155,16 @@ const nextConfig = {
           },
         ],
       },
+      // ARC-027 (2026-11-17): keep non-production copies of the site (the
+      // DigitalOcean dev app, preview hosts, localhost) out of search engines.
+      // Any request whose Host is NOT arcisai.io / www.arcisai.io gets
+      // X-Robots-Tag: noindex, nofollow. Production is unaffected. robots.txt
+      // stays crawlable on purpose so Google can see this header.
+      {
+        source: "/(.*)",
+        missing: [{ type: "host", value: "(www\\.)?arcisai\\.io" }],
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
       // The blog index is the one page whose content changes without a deploy,
       // so it cannot inherit Next's ISR default of
       // `s-maxage=<revalidate>, stale-while-revalidate=31532400`. That 365-day
