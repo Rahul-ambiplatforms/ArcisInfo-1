@@ -68,7 +68,14 @@ const ContactSection = () => {
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     if (name === "phone") {
-      const digitsOnly = value.replace(/\D/g, "").slice(0, 10);
+      // ARC-029 (2026-11-18): browser autofill (autoComplete="tel-national",
+      // added 23 Oct) can paste "+91 98765 43210" or "098765 43210". The old
+      // code kept the FIRST 10 digits, which saved a wrong number
+      // ("9198765432"). Drop a leading 91 / 0 only when there are more than
+      // 10 digits, then keep 10. Normal typing is unchanged.
+      let digitsOnly = value.replace(/\D/g, "");
+      if (digitsOnly.length > 10) digitsOnly = digitsOnly.replace(/^(?:91|0)/, "");
+      digitsOnly = digitsOnly.slice(0, 10);
       setFormData((prev) => ({
         ...prev,
         [name]: digitsOnly,

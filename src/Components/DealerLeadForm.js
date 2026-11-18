@@ -41,7 +41,13 @@ export default function DealerLeadForm() {
 
   const onChange = (e) => {
     const { name, value } = e.target;
-    setForm((p) => ({ ...p, [name]: name === 'phone' ? value.replace(/\D/g, '').slice(0, 10) : value }));
+    // Same autofill-safe phone cleaning as the contact form (ARC-029).
+    const cleanPhone = (v) => {
+      let d = v.replace(/\D/g, '');
+      if (d.length > 10) d = d.replace(/^(?:91|0)/, '');
+      return d.slice(0, 10);
+    };
+    setForm((p) => ({ ...p, [name]: name === 'phone' ? cleanPhone(value) : value }));
   };
 
   const onSubmit = async (e) => {
