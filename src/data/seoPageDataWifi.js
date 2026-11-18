@@ -30,7 +30,7 @@ const seoPageDataWifi = {
   // ── HUB ────────────────────────────────────────────────────────────────────
   "wifi-cctv-camera": {
     slug: "wifi-cctv-camera",
-    title: "WiFi CCTV Camera India | BIS-ER Certified Wireless Security | ArcisAI",
+    title: "WiFi CCTV Camera India | BIS-ER Certified | ArcisAI",
     metaDescription:
       "ArcisAI WiFi CCTV cameras — 3MP, 2.4GHz wireless, two-way audio, human detection, IP66. BIS-ER R-72003735 certified, made in India. Dealers welcome.",
     keywords: [
@@ -507,7 +507,7 @@ const seoPageDataWifi = {
 
   "wifi-cctv-camera-dome": {
     slug: "wifi-cctv-camera-dome",
-    title: "WiFi Dome CCTV Camera India | 3MP Dual-Band, Two-Way Audio | ArcisAI",
+    title: "WiFi Dome CCTV Camera | 3MP, Two-Way Audio | ArcisAI",
     metaDescription:
       "ArcisAI S-Series WiFi dome CCTV camera: 3MP, 2.4 and 5GHz WiFi, two-way audio, IP66, microSD up to 256GB, ONVIF. See specs and request a quote.",
     keywords: [

@@ -1,4 +1,5 @@
 import { getAllSeoPageEntries, THIN_CONTENT_RESOURCE_SLUGS } from '@/src/data/resolveSeoPageData';
+import seoMergeRedirects from '@/src/data/seoMergeRedirects.json';
 import { supportCategories } from '@/src/views/Support/supportData';
 
 // Generated sitemap, replacing the hand-maintained public/sitemap.xml.
@@ -47,6 +48,11 @@ const VMUKTI_BLOG_SLUGS = new Set([
 const DEAD_BLOG_SLUGS = new Set([
   'reduce-cctv-callbacks',
   'best-ai-cctv-camera-for-business',
+  // ARC-011 (2026-11-16): blog posts merged into a stronger page on the same
+  // topic – next.config.js 301s them (src/data/seoMergeRedirects.json).
+  ...Object.keys(seoMergeRedirects)
+    .filter((path) => path.startsWith('/blog/'))
+    .map((path) => path.replace('/blog/', '')),
 ]);
 
 // Hand-maintained routes only — anything driven by the SEO dataset, the

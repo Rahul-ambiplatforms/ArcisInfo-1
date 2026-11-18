@@ -126,7 +126,7 @@ const seoPageDataExpansion5 = {
 
   "make-in-india-ai-cctv-manufacturer": {
     "slug": "make-in-india-ai-cctv-manufacturer",
-    "title": "Make in India AI CCTV | Adiance Technologies — In-House Manufacturing",
+    "title": "Make in India AI CCTV Manufacturer | ArcisAI by Adiance",
     "metaDescription": "ArcisAI by Adiance Technologies — India's true Make in India AI CCTV manufacturer with in-house SMT lines, PCB assembly, and non-Chinese SoCs.",
     "keywords": ["Make in India CCTV camera", "Indian CCTV manufacturer", "in-house CCTV manufacturing India", "Adiance Technologies", "indigenous AI camera India", "Indian surveillance brand", "Made in India security camera"],
     "heroTitle": "Made in India. Engineered for the World.",
@@ -201,7 +201,7 @@ const seoPageDataExpansion5 = {
 
   "ai-cctv-banking-atm-security": {
     "slug": "ai-cctv-banking-atm-security",
-    "title": "AI CCTV for Banking & ATM Security | Fraud Detection Surveillance",
+    "title": "AI CCTV for Banks & ATMs | Fraud Detection | ArcisAI",
     "metaDescription": "ArcisAI provides AI surveillance for banks and ATMs — fraud detection, vault monitoring, ATM tampering alerts, and branch security.",
     "keywords": ["ATM surveillance AI", "bank security camera India", "ATM security camera STQC", "banking CCTV AI", "vault monitoring system", "bank branch surveillance", "RBI compliant CCTV", "fraud detection camera"],
     "heroTitle": "AI-Powered Security for Banks, ATMs & Financial Institutions",
@@ -226,7 +226,7 @@ const seoPageDataExpansion5 = {
 
   "ai-cctv-factory-manufacturing-ppe": {
     "slug": "ai-cctv-factory-manufacturing-ppe",
-    "title": "AI CCTV for Factories & Manufacturing | PPE Detection & Worker Safety",
+    "title": "AI CCTV for Factories | PPE Detection & Safety | ArcisAI",
     "metaDescription": "ArcisAI delivers AI surveillance for factories — PPE detection, worker safety monitoring, equipment zone protection, and compliance automation.",
     "keywords": ["factory PPE detection camera", "worker safety AI CCTV", "manufacturing surveillance AI", "industrial zone monitoring camera", "PPE compliance camera India", "factory safety camera", "industrial AI CCTV"],
     "heroTitle": "AI Surveillance for Safer, Smarter Factories",
@@ -251,7 +251,7 @@ const seoPageDataExpansion5 = {
 
   "natural-language-video-search-surveillance": {
     "slug": "natural-language-video-search-surveillance",
-    "title": "Natural Language Video Search for Surveillance | AI-Powered CCTV Search",
+    "title": "Natural Language Video Search for CCTV | ArcisAI",
     "metaDescription": "Search CCTV footage by simply describing what you're looking for — ArcisAI's GenAI search finds incidents, people, and objects in seconds.",
     "keywords": ["natural language video search", "AI video search CCTV", "search surveillance footage", "CCTV footage search AI", "intelligent video search", "conversational surveillance search", "find person CCTV AI"],
     "heroTitle": "Search Your CCTV Footage Like You Search Google",
@@ -276,7 +276,7 @@ const seoPageDataExpansion5 = {
 
   "replace-chinese-cctv-india-alternative": {
     "slug": "replace-chinese-cctv-india-alternative",
-    "title": "Replace Chinese CCTV in India | Indigenous AI Surveillance Alternative",
+    "title": "Replace Chinese CCTV in India | Indian Alternative | ArcisAI",
     "metaDescription": "Replace Hikvision, Dahua, and other Chinese CCTV cameras with ArcisAI — India's STQC certified, Make in India AI surveillance platform.",
     "keywords": ["replace Chinese CCTV India", "Chinese CCTV alternative", "non-Chinese surveillance camera", "Indian alternative Dahua", "data sovereignty CCTV India", "indigenous CCTV camera", "replace Hikvision Dahua India"],
     "heroTitle": "Replace Chinese CCTV with India's Most Advanced AI Surveillance",
@@ -301,7 +301,7 @@ const seoPageDataExpansion5 = {
 
   "ai-surveillance-oil-gas-critical-infrastructure": {
     "slug": "ai-surveillance-oil-gas-critical-infrastructure",
-    "title": "AI Surveillance for Oil & Gas | Critical Infrastructure Security",
+    "title": "AI Surveillance for Oil & Gas Sites | ArcisAI",
     "metaDescription": "ArcisAI provides AI CCTV for oil & gas facilities — fire detection, restricted zone monitoring, PPE compliance, perimeter security.",
     "keywords": ["oil gas surveillance AI", "fire detection AI camera", "critical infrastructure CCTV", "hazardous area surveillance", "oil refinery security camera", "pipeline monitoring AI", "petrochemical CCTV India"],
     "heroTitle": "AI-Powered Surveillance for Oil, Gas & Critical Infrastructure",
@@ -326,7 +326,7 @@ const seoPageDataExpansion5 = {
 
   "best-ai-cctv-camera-india": {
     "slug": "best-ai-cctv-camera-india",
-    "title": "Best AI CCTV Camera in India 2026 | Top AI Surveillance Brands Compared",
+    "title": "Best AI CCTV Camera in India 2026: Brands Compared",
     "metaDescription": "Comparing the best AI CCTV cameras in India for 2026 — ArcisAI, Hikvision, CP Plus, Dahua, Matrix.",
     "keywords": ["best AI CCTV camera India", "top CCTV brand India 2026", "AI surveillance camera comparison", "best CCTV camera India", "top AI security camera", "CCTV camera brand ranking India", "best surveillance system India"],
     "heroTitle": "Best AI CCTV Camera in India 2026 — The Definitive Comparison",
@@ -351,7 +351,7 @@ const seoPageDataExpansion5 = {
 
   "stqc-compliance-guide-cctv": {
     "slug": "stqc-compliance-guide-cctv",
-    "title": "STQC Compliance Guide for CCTV 2026 | Certification Requirements Explained",
+    "title": "STQC Compliance Guide for CCTV 2026: Requirements",
     "metaDescription": "Complete guide to STQC certification for CCTV cameras and VMS in India — what changed in April 2026 and which brands are certified.",
     "keywords": ["STQC certification requirements", "STQC compliance CCTV 2026", "STQC approved camera list", "STQC VMS certification", "CCTV certification India", "STQC testing standards", "surveillance compliance India 2026"],
     "heroTitle": "STQC Certification for CCTV — Everything You Need to Know in 2026",
@@ -376,7 +376,7 @@ const seoPageDataExpansion5 = {
 
   "ai-surveillance-retail-footfall-analytics": {
     "slug": "ai-surveillance-retail-footfall-analytics",
-    "title": "AI Surveillance for Retail | Footfall Analytics & Theft Prevention",
+    "title": "AI Retail Surveillance | Footfall & Theft Analytics | ArcisAI",
     "metaDescription": "ArcisAI retail surveillance — footfall counting, heat map analytics, shrinkage detection, and customer behavior insights.",
     "keywords": ["retail AI surveillance", "footfall analytics camera", "retail CCTV analytics", "shoplifting detection AI", "customer traffic counter", "retail heat map camera", "store analytics CCTV India"],
     "heroTitle": "Turn Your Retail Security Cameras into Business Intelligence",

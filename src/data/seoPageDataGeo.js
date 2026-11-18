@@ -57,7 +57,7 @@ const seoPageDataGeo = {
 
   "cctv-cameras-karnataka": {
     slug: "/cctv-cameras-karnataka",
-    title: "AI CCTV Cameras Karnataka | STQC Certified Security Solution | ArcisAI",
+    title: "AI CCTV Cameras in Karnataka | STQC Certified | ArcisAI",
     metaDescription: "AI-powered CCTV cameras in Karnataka with STQC & BIS certification. Secure Bengaluru, Mysore, Mangalore with face recognition and smart analytics.",
     keywords: ["CCTV cameras Karnataka", "AI surveillance Bengaluru", "Mysore security cameras", "Mangalore CCTV", "STQC certified"],
     heroTitle: "Next-Gen CCTV Security for Karnataka",

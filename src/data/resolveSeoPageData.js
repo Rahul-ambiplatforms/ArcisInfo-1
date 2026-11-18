@@ -18,6 +18,7 @@ import seoPageDataTier2Cities from './seoPageDataTier2Cities';
 import seoPageDataWifi from './seoPageDataWifi';
 import seoPageData4G from './seoPageData4G';
 import { humanizeSlug } from './buildSeoPageSchemas';
+import seoMergeRedirects from './seoMergeRedirects.json';
 
 // seoPageDataCompliance is the one sibling file that exports an ARRAY, not a
 // slug-keyed object (SEO fix, 2026-09-21). Spreading an array into an object
@@ -103,6 +104,18 @@ const allSeoData = {
   ...seoPageDataGujaratCities, ...seoPageDataMaharashtraCities, ...seoPageDataTier2Cities,
   ...seoPageDataWifi, ...seoPageData4G,
 };
+
+// ARC-011 (2026-11-16): landing pages merged into a stronger page on the same
+// topic. next.config.js 301s their URLs to the winner (seoMergeRedirects.json);
+// dropping the entries here keeps them out of the sitemap, the hub pages and
+// every related-links block, so nothing links to a redirect. Blog sources in
+// the same file are handled in app/sitemap.js and the blog list instead.
+export const MERGED_SEO_KEYS = new Set(
+  Object.keys(seoMergeRedirects)
+    .filter((path) => !path.startsWith('/blog/'))
+    .map((path) => path.split('/').filter(Boolean).pop()),
+);
+for (const key of MERGED_SEO_KEYS) delete allSeoData[key];
 
 // Same multi-strategy lookup the client used before — now run on the server.
 export function resolveSeoKey({ category, pageSlug, city, slug, seriesId } = {}) {

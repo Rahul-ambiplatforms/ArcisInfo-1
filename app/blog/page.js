@@ -1,5 +1,10 @@
 import BlogsDashboard from '@/src/views/Blogs/BlogsDashboard';
 import { buildHreflang } from '@/src/data/hreflang';
+import seoMergeRedirects from '@/src/data/seoMergeRedirects.json';
+
+const MERGED_BLOG_SLUGS = new Set(
+  Object.keys(seoMergeRedirects).filter((p) => p.startsWith('/blog/')).map((p) => p.replace('/blog/', '')),
+);
 
 // Server-fetch the published blog list so the post <Link> cards are rendered
 // into the initial HTML (crawlable) instead of only after a client-side
@@ -45,6 +50,8 @@ async function getInitialBlogs() {
         // ARC-018 (2026-11-14): CMS still lists this post as published but its
         // detail page is gone (it 301s to /blog), so don't link to it.
         (b.metadata?.urlWords || '').trim() !== 'reduce-cctv-callbacks' &&
+        // ARC-011 (2026-11-16): merged posts 301 elsewhere – don't list them.
+        !MERGED_BLOG_SLUGS.has((b.metadata?.urlWords || '').trim()) &&
         !b.content?.title?.toLowerCase().includes('vmukti'),
     );
   } catch (e) {

@@ -2,7 +2,7 @@ import ConvergenceIndia2026 from '@/src/views/Events/ConvergenceIndia2026';
 import { buildHreflang } from '@/src/data/hreflang';
 
 export const metadata = {
-  title: 'ArcisAI at Convergence India 2026 | AI Surveillance Exhibition',
+  title: 'ArcisAI at Convergence India 2026 | AI CCTV Expo',
   description:
     'Visit ArcisAI at Convergence India 2026. Experience live demos of AI CCTV cameras, ArcisGPT video search, and Cloud VMS.',
   // SEO fix (2026-09-30, SEO-018): removed obsolete meta-keywords tag.

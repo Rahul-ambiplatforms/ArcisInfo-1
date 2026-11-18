@@ -70,6 +70,64 @@ const BLOG_SEO_OVERRIDES = {
     description:
       'View every CCTV camera at home or work from one phone app – live view, recordings and AI alerts. See how the ArcisAI app works and what to look for.',
   },
+  // ARC-017 (2026-11-16): title <= 65 chars / description 70-165 chars.
+  // Only the field that was out of range is overridden; the rest still comes from the CMS.
+  'fsie-2026-ai-fire-security-industry-india': {
+    title: "FSIE 2026: How AI Is Changing India's Fire & Security Sector",
+  },
+  'arcisai-sponsors-jalandhar-warriors-sher-e-punjab-t20-league': {
+    title: "ArcisAI Partners With Jalandhar Warriors | Sher-e-Punjab T20",
+  },
+  'cctv-after-sales-support-guide': {
+    title: "CCTV After-Sales Support: Why It Beats Specs | ArcisAI",
+  },
+  'arcisai-mobile-app-ai-insights-camera-health-login': {
+    title: "New ArcisAI Mobile App: AI Insights & Camera Health",
+    description:
+      "The new ArcisAI mobile app brings AI Insights, camera health checks, mobile number login, a support assistant and full CCTV control from anywhere.",
+  },
+  'arcisai-vs-hikvision-vs-dahua-ai-camera-comparison-2026': {
+    description:
+      "ArcisAI vs Hikvision vs Dahua AI cameras for enterprise security: edge AI, STQC certification, data sovereignty, pricing and analytics compared.",
+  },
+  'best-ai-cctv-cameras-enterprise-security-2026': {
+    description:
+      "A guide to the best AI CCTV cameras for enterprise security in 2026. ArcisAI, Hikvision, Dahua and Axis compared on edge AI, STQC and features.",
+  },
+  'edge-ai-cctv-cameras-on-camera-processing-future-surveillance': {
+    title: "Edge AI CCTV Cameras: Why On-Camera AI Wins | ArcisAI",
+    description:
+      "How edge AI on CCTV cameras cuts cloud dependency, lowers alert delay and keeps video data local. Learn how ArcisAI edge AI cameras work.",
+  },
+  'how-to-choose-ai-cctv-camera-smart-city-projects-india-2026': {
+    title: "Choosing AI CCTV for Smart City Projects in India | ArcisAI",
+    description:
+      "How to pick AI CCTV cameras for Indian smart city projects: edge AI, cloud VMS, STQC compliance, BIS certification and scale requirements.",
+  },
+  'edge-ai-vs-cloud-ai-video-surveillance-enterprise-buyers-guide-2026': {
+    title: "Edge AI vs Cloud AI CCTV: 2026 Buyer's Guide | ArcisAI",
+    description:
+      "Edge AI vs cloud AI for enterprise video surveillance: latency, bandwidth, privacy, total cost and scale compared to help you buy right.",
+  },
+  'best-ai-cctv-camera-home-security-india-2026': {
+    description:
+      "The best AI CCTV cameras for home security in India in 2026. Compare edge AI, cloud storage, night vision and alerts from ArcisAI, CP Plus and more.",
+  },
+  'arcisai-vs-cp-plus-ai-cctv-comparison-2026': {
+    title: "ArcisAI vs CP Plus: AI CCTV Comparison 2026",
+    description:
+      "ArcisAI vs CP Plus AI CCTV cameras in 2026: edge AI, STQC certification, cloud VMS, pricing and analytics compared to help you choose.",
+  },
+  'best-ai-cctv-camera-office-business-security-india-2026': {
+    title: "Best AI CCTV for Office & Business Security 2026 | ArcisAI",
+    description:
+      "The best AI CCTV cameras for office and business security in India in 2026: edge AI analytics, people counting, access control and compliance.",
+  },
+  'ai-cctv-camera-for-bank-security': {
+    title: "AI CCTV Cameras for Bank & ATM Security | ArcisAI",
+    description:
+      "How AI CCTV cameras help banks and ATMs spot threats early, prevent fraud and improve day-to-day safety. See what to look for in a bank camera.",
+  },
 };
 
 export async function generateMetadata(props) {
@@ -143,8 +201,32 @@ export default async function BlogPostPage(props) {
     initialBlog?.content?.metaDescription ||
     initialBlog?.metadata?.metaDescription ||
     null;
+  // ARC-028 (2026-11-17): some posts name a real author only inside the
+  // CMS-authored JSON-LD (blog.content.schemas), while content.author is empty.
+  // That page then carried two conflicting authors (Organization here, Person in
+  // the CMS schema). Reuse the CMS Person name when the plain field is empty, so
+  // the page states one author. Nothing is invented: the name is already
+  // published on the page by the CMS.
+  const cmsPersonAuthor = (() => {
+    const list = Array.isArray(initialBlog?.content?.schemas) ? initialBlog.content.schemas : [];
+    for (const item of list) {
+      try {
+        const parsed = JSON.parse(item?.content?.schemaData || '');
+        const nodes = [].concat(parsed?.['@graph'] || parsed);
+        for (const node of nodes) {
+          const a = node && node.author ? [].concat(node.author)[0] : null;
+          if (a && a['@type'] === 'Person' && typeof a.name === 'string' && a.name.trim()) {
+            return a.name.trim();
+          }
+        }
+      } catch {
+        /* skip malformed CMS schema */
+      }
+    }
+    return null;
+  })();
   const authorName =
-    initialBlog?.content?.author || initialBlog?.blogAuthor || null;
+    initialBlog?.content?.author || initialBlog?.blogAuthor || cmsPersonAuthor || null;
   const datePublished = initialBlog?.createdAt || null;
   const dateModified = initialBlog?.updatedAt || initialBlog?.createdAt || null;
 

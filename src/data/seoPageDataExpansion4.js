@@ -289,7 +289,7 @@ const seoPageDataExpansion4 = {
 
   "why-made-in-india-cctv": {
     "slug": "/why-made-in-india-cctv",
-    "title": "Why Made in India CCTV Cameras Are the Smart Choice 2026 | ArcisAI",
+    "title": "Why Choose Made in India CCTV Cameras (2026) | ArcisAI",
     "metaDescription": "Discover why Made in India CCTV cameras with non-Chinese SoC are the smart choice. Data sovereignty, Atmanirbhar Bharat, STQC certification.",
     "keywords": ["Made in India CCTV", "Indian CCTV brand", "Atmanirbhar CCTV camera", "indigenous surveillance camera", "best Indian CCTV manufacturer"],
     "heroTitle": "Made in India CCTV — Why Indigenous Cameras Win",
@@ -365,7 +365,7 @@ const seoPageDataExpansion4 = {
 
   "cctv-stqc-certification-guide": {
     "slug": "/cctv-stqc-certification-guide",
-    "title": "STQC Certification for CCTV Cameras — Complete Guide 2026 | ArcisAI",
+    "title": "STQC Certification for CCTV Cameras: 2026 Guide | ArcisAI",
     "metaDescription": "What is STQC certification for CCTV cameras? A complete guide to the standards, why they matter, and how ArcisAI is certified.",
     "keywords": ["STQC certified CCTV", "STQC certification camera", "government certified CCTV India", "STQC camera standards", "CCTV certification requirements"],
     "heroTitle": "STQC Certification for CCTV — What It Means and Why It Matters",

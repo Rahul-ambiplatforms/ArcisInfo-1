@@ -2,6 +2,20 @@
 // Served as config-level redirects instead of permanentRedirect() inside the
 // prerendered /[slug] page, which produced a doubled "x,x" Location on production.
 const seoSectionRedirects = require("./src/data/seoSectionRedirects.json");
+// ARC-011 (2026-11-16): duplicate-topic pages merged into one winner per topic
+// (winner = most Search Console clicks/impressions, Aug–Nov 2026). Sources 301
+// to the winner; every other redirect that pointed at a merged source is
+// re-pointed straight at the winner so there is never a chain.
+const seoMergeRedirects = require("./src/data/seoMergeRedirects.json");
+function applySeoMerges(rules) {
+  const repoint = (r) =>
+    seoMergeRedirects[r.destination] ? { ...r, destination: seoMergeRedirects[r.destination] } : r;
+  const merges = Object.entries(seoMergeRedirects).map(([source, destination]) => ({
+    source, destination, permanent: true, statusCode: 301,
+  }));
+  // Keep the www -> apex host rule first, then the merges, then everything else.
+  return [rules[0], ...merges, ...rules.slice(1).filter((r) => !seoMergeRedirects[r.source]).map(repoint)];
+}
 // States whose canonical page is /state/<x> (no /cctv-cameras-<x> entry). See ARC-018 below.
 const STATES_WITHOUT_CITY_PAGE = new Set(["delhi-ncr", "bihar"]);
 
@@ -141,6 +155,16 @@ const nextConfig = {
           },
         ],
       },
+      // ARC-027 (2026-11-17): keep non-production copies of the site (the
+      // DigitalOcean dev app, preview hosts, localhost) out of search engines.
+      // Any request whose Host is NOT arcisai.io / www.arcisai.io gets
+      // X-Robots-Tag: noindex, nofollow. Production is unaffected. robots.txt
+      // stays crawlable on purpose so Google can see this header.
+      {
+        source: "/(.*)",
+        missing: [{ type: "host", value: "(www\\.)?arcisai\\.io" }],
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
       // The blog index is the one page whose content changes without a deploy,
       // so it cannot inherit Next's ISR default of
       // `s-maxage=<revalidate>, stale-while-revalidate=31532400`. That 365-day
@@ -233,7 +257,7 @@ const nextConfig = {
 
   // ─── Legacy URL Redirects (301) ─────────────────────────────────────────────
   async redirects() {
-    return [
+    return applySeoMerges([
       {
         source: "/:path*",
         has: [{ type: "host", value: "www.arcisai.io" }],
@@ -774,7 +798,7 @@ const nextConfig = {
         permanent: true,
         statusCode: 301,
       })),
-    ];
+    ]);
   },
 };
 

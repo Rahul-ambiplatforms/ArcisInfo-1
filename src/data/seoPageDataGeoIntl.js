@@ -190,7 +190,7 @@ const seoPageDataGeoIntl = {
   // US METRO AREA PAGES
   "ai-cctv-cameras-new-york": {
     slug: "/ai-cctv-cameras-new-york",
-    title: "AI CCTV Cameras in New York | NDAA Compliant Enterprise Security | ArcisAI",
+    title: "AI CCTV Cameras in New York | NDAA Compliant | ArcisAI",
     metaDescription: "NDAA-compliant AI CCTV for New York City enterprises — edge AI facial recognition, ANPR, and crowd analytics from ArcisAI.",
     keywords: ["CCTV cameras New York", "AI surveillance NYC", "NDAA compliant cameras New York", "enterprise security cameras NYC", "AI cameras Manhattan", "corporate security New York"],
     heroTitle: "AI CCTV Solutions for New York Enterprises",
@@ -221,7 +221,7 @@ const seoPageDataGeoIntl = {
 
   "ai-cctv-cameras-washington-dc": {
     slug: "/ai-cctv-cameras-washington-dc",
-    title: "AI CCTV Cameras in Washington DC | NDAA Compliant | Federal Approved | ArcisAI",
+    title: "AI CCTV Cameras in Washington DC | NDAA Compliant | ArcisAI",
     metaDescription: "NDAA-compliant AI CCTV cameras for Washington DC federal agencies, government contractors, and defense facilities. Section 889 certified edge AI surveillance.",
     keywords: ["CCTV cameras Washington DC", "NDAA compliant cameras DC", "federal security cameras", "government CCTV Washington", "Section 889 cameras DC", "defense contractor cameras"],
     heroTitle: "NDAA-Compliant AI Cameras for Washington DC",
@@ -251,7 +251,7 @@ const seoPageDataGeoIntl = {
 
   "ai-cctv-cameras-houston": {
     slug: "/ai-cctv-cameras-houston",
-    title: "AI CCTV Cameras in Houston | Oil & Gas, Enterprise Security | ArcisAI",
+    title: "AI CCTV Cameras in Houston | Oil & Gas Security | ArcisAI",
     metaDescription: "AI CCTV cameras for Houston enterprises, oil & gas facilities, petrochemical plants, and corporate campuses. NDAA compliant edge AI with explosion-proof options.",
     keywords: ["CCTV cameras Houston", "AI surveillance Houston Texas", "oil gas security cameras", "petrochemical CCTV", "enterprise cameras Houston", "NDAA compliant cameras Texas"],
     heroTitle: "AI Security Cameras for Houston & the Energy Corridor",
@@ -281,7 +281,7 @@ const seoPageDataGeoIntl = {
 
   "ai-cctv-cameras-los-angeles": {
     slug: "/ai-cctv-cameras-los-angeles",
-    title: "AI CCTV Cameras in Los Angeles | Enterprise & CCPA Compliant | ArcisAI",
+    title: "AI CCTV Cameras in Los Angeles | Enterprise Security | ArcisAI",
     metaDescription: "AI CCTV cameras for Los Angeles enterprises. NDAA and CCPA compliant with edge AI processing.",
     keywords: ["CCTV cameras Los Angeles", "AI surveillance LA", "CCPA compliant cameras", "enterprise security cameras LA", "NDAA cameras California", "smart cameras Los Angeles"],
     heroTitle: "AI Camera Solutions for Los Angeles Enterprises",
@@ -311,7 +311,7 @@ const seoPageDataGeoIntl = {
 
   "ai-cctv-cameras-chicago": {
     slug: "/ai-cctv-cameras-chicago",
-    title: "AI CCTV Cameras in Chicago | Enterprise Security | NDAA Compliant | ArcisAI",
+    title: "AI CCTV Cameras in Chicago | NDAA Compliant | ArcisAI",
     metaDescription: "NDAA-compliant AI CCTV cameras for Chicago enterprises. Edge AI surveillance for corporate offices, manufacturing, healthcare, and logistics across the Midwest.",
     keywords: ["CCTV cameras Chicago", "AI surveillance Chicago", "NDAA cameras Illinois", "enterprise security Chicago", "manufacturing CCTV Midwest", "corporate cameras Chicago"],
     heroTitle: "AI-Powered Security for Chicago & the Midwest",
@@ -341,7 +341,7 @@ const seoPageDataGeoIntl = {
   // GLOBAL USE CASE PAGES
   "solutions-data-center-security": {
     slug: "/solutions/data-center-security",
-    title: "AI CCTV Cameras for Data Center Security | NDAA Compliant | ArcisAI",
+    title: "AI CCTV for Data Center Security | NDAA Compliant | ArcisAI",
     metaDescription: "Secure data centers with NDAA-compliant AI cameras — edge processing, biometric access verification, and environmental monitoring.",
     keywords: ["data center security cameras", "AI CCTV data center", "NDAA compliant data center surveillance", "server room cameras", "colocation security", "edge AI data center"],
     heroTitle: "AI Camera Security for Data Centers",
@@ -400,7 +400,7 @@ const seoPageDataGeoIntl = {
 
   "solutions-pharmaceutical-manufacturing": {
     slug: "/solutions/pharmaceutical-manufacturing",
-    title: "AI Cameras for Pharmaceutical Manufacturing & GMP Compliance | ArcisAI",
+    title: "AI Cameras for Pharma Manufacturing & GMP | ArcisAI",
     metaDescription: "AI CCTV for pharmaceutical facilities — GMP compliance monitoring, clean room surveillance, and PPE detection from ArcisAI.",
     keywords: ["pharmaceutical CCTV cameras", "GMP compliance cameras", "clean room surveillance", "pharma manufacturing security", "controlled substance monitoring", "FDA compliant cameras"],
     heroTitle: "AI Surveillance for Pharmaceutical Manufacturing",
@@ -429,7 +429,7 @@ const seoPageDataGeoIntl = {
 
   "solutions-critical-infrastructure-protection": {
     slug: "/solutions/critical-infrastructure-protection",
-    title: "AI Cameras for Critical Infrastructure Protection | NDAA Compliant | ArcisAI",
+    title: "AI Cameras for Critical Infrastructure | ArcisAI",
     metaDescription: "NDAA-compliant AI cameras for critical infrastructure: power plants, water treatment, telecommunications, and utilities.",
     keywords: ["critical infrastructure cameras", "power plant security cameras", "utility security CCTV", "water treatment surveillance", "NERC CIP cameras", "critical infrastructure protection"],
     heroTitle: "AI Cameras for Critical Infrastructure Protection",
@@ -460,7 +460,7 @@ const seoPageDataGeoIntl = {
   // ABU DHABI SPECIFIC
   "ai-cctv-cameras-abu-dhabi": {
     slug: "/ai-cctv-cameras-abu-dhabi",
-    title: "AI CCTV Cameras in Abu Dhabi | Enterprise & Government Security | ArcisAI",
+    title: "AI CCTV Cameras in Abu Dhabi | Enterprise Security | ArcisAI",
     metaDescription: "AI surveillance cameras for Abu Dhabi enterprises, government facilities, and smart city projects.",
     keywords: ["CCTV cameras Abu Dhabi", "AI surveillance Abu Dhabi", "enterprise security Abu Dhabi", "smart city cameras Abu Dhabi", "government CCTV UAE"],
     heroTitle: "AI Security Cameras for Abu Dhabi",
