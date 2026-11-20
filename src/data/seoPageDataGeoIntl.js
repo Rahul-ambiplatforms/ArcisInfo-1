@@ -136,12 +136,12 @@ const seoPageDataGeoIntl = {
         title: "Why US Enterprises Choose ArcisAI",
         content: "With growing concerns about Chinese surveillance technology, ArcisAI offers NDAA-compliant cameras manufactured outside China. Our AI cameras deliver face recognition, ANPR, and GenAI video search trusted by US enterprises requiring supply chain security and data sovereignty.",
         stats: [{ value: "100%", label: "NDAA Compliant" }, { value: "0%", label: "Chinese Components" }, { value: "SOC2", label: "Certified" }],
-        features: ["NDAA Section 889 Compliant", "Non-Chinese Supply Chain", "SOC 2 Type II Certified"]
+        features: ["Not named in NDAA Section 889", "Designed and made in India", "STQC-certified VMS"]
       }
     ],
     faqs: [
-      { question: "Are ArcisAI cameras NDAA compliant?", answer: "Yes, ArcisAI cameras are fully NDAA Section 889 compliant with zero Chinese-manufactured components in the supply chain." },
-      { question: "Do you support US government contracts?", answer: "Yes, our cameras meet GSA requirements and are suitable for federal, state, and local government deployments." }
+      { question: "Are ArcisAI cameras NDAA compliant?", answer: "There is no official NDAA certificate. ArcisAI is not one of the companies named in NDAA Section 889 (Hikvision, Dahua, Huawei, ZTE, Hytera), and we can share component and origin documents for your project." },
+      { question: "Do you support US government contracts?", answer: "Each government buyer has its own rules. Contact us with your tender requirements and we will share the product documents you need." }
     ]
   },
   "ai-cctv-cameras-dubai": {
@@ -231,7 +231,7 @@ const seoPageDataGeoIntl = {
     sections: [
       {
         title: "Built for Federal Procurement Standards",
-        content: "Washington DC's security requirements are among the most stringent in the world. ArcisAI cameras meet NDAA Section 889, align with FISMA and NIST cybersecurity frameworks, and are manufactured with zero Chinese-origin components. Edge AI processing ensures classified facility compliance with no data leaving the premises.",
+        content: "Washington DC's security requirements are among the most stringent in the world. ArcisAI is not one of the companies named in NDAA Section 889, and the cameras are designed and made in India by Adiance. Edge AI processing ensures classified facility compliance with no data leaving the premises.",
         stats: [{ value: "NDAA", label: "Section 889 Certified" }, { value: "NIST", label: "Framework Aligned" }, { value: "Zero", label: "Chinese Components" }, { value: "Edge", label: "On-Premise Processing" }],
         features: ["Federal Procurement Compliant", "Classified Facility Ready", "Supply Chain Attestation Available"]
       },
@@ -239,7 +239,7 @@ const seoPageDataGeoIntl = {
         title: "Serving the DC Metropolitan Area",
         content: "From the Pentagon to Tysons Corner, from Capitol Hill to Fort Meade, ArcisAI cameras protect the facilities that protect the nation. Our cameras support air-gapped networks, encrypted local storage, and tamper detection required for defense and intelligence community deployments.",
         stats: [{ value: "100%", label: "On-Premise Capable" }, { value: "AES-256", label: "Encryption" }, { value: "24/7", label: "US-Based Support" }],
-        features: ["Air-Gapped Network Support", "Tamper Detection & Alerts", "Encrypted Edge Storage", "GSA Schedule Compatible"]
+        features: ["Air-Gapped Network Support", "Tamper Detection & Alerts", "Encrypted Edge Storage"]
       }
     ],
     faqs: [

@@ -149,13 +149,13 @@ const FAQHub = () => {
         <Box mt={16} color="gray.500" fontSize="sm" lineHeight="1.8" data-speakable="true">
           <Heading as="h2" size="md" color="gray.400" mb={4}>About ArcisAI Enterprise AI CCTV Cameras</Heading>
           <Text mb={3}>
-            ArcisAI by Adiance Technologies is a leading manufacturer of enterprise AI-powered CCTV cameras serving businesses across the United States, United Arab Emirates, United Kingdom, Singapore, and India. Our product lineup includes the S-Series Premium AI cameras (Bullet, PTZ, Dome with 4G SIM, WiFi, and PoE variants), ECO-Series value cameras, the Bridge Device for legacy camera integration, Cloud VMS for centralized management, and ArcisGPT for GenAI-powered video search.
+            ArcisAI by Adiance Technologies designs and makes AI-powered CCTV cameras in India for businesses across the United States, United Arab Emirates, United Kingdom, Singapore, and India. Our product lineup includes the S-Series Premium AI cameras (Bullet, PTZ, Dome with 4G SIM, WiFi, and PoE variants), ECO-Series value cameras, the Bridge Device for legacy camera integration, Cloud VMS for centralized management, and ArcisGPT for GenAI-powered video search.
           </Text>
           <Text mb={3}>
-            All ArcisAI cameras feature true edge AI processing — running face recognition, ANPR, crowd analytics, fire detection, PPE compliance monitoring, and 20+ analytics types directly on the camera hardware. This delivers sub-100ms detection speeds, 80% bandwidth reduction compared to cloud-processed video, and analytics that work even during internet outages.
+            All ArcisAI cameras feature true edge AI processing — running face recognition, ANPR, crowd analytics, fire detection, PPE compliance monitoring, and 20+ analytics types directly on the camera hardware. Because analysis happens on the camera, less video needs to be sent to the cloud, and analytics keep working during internet outages.
           </Text>
           <Text>
-            ArcisAI cameras are NDAA Section 889 compliant with zero Chinese-manufactured components, STQC certified, GDPR ready, and support hybrid cloud/on-premise deployment. Whether you are replacing Hikvision due to NDAA requirements, evaluating alternatives to Verkada or Rhombus for better value, or deploying AI cameras for the first time, ArcisAI provides enterprise-grade intelligent surveillance trusted by organizations worldwide.
+            ArcisAI cameras hold BIS-ER registration R-72003735, the ArcisAI VMS is STQC certified, and you can choose cloud or on-premise recording. Whether you are replacing a brand named in NDAA Section 889, comparing alternatives to Verkada or Rhombus, or deploying AI cameras for the first time, our team can help you plan the right setup.
           </Text>
         </Box>
       </Container>
