@@ -81,7 +81,7 @@ const seoPageDataExpansion2 = {
             "100% NDAA-compliant certification with verified component sourcing",
             "Local edge AI processing with zero cloud dependency",
             "Made in India by Adiance - full supply chain transparency",
-            "GDPR, PDPL, and EU AI Act compliant architecture",
+            "Privacy features that support GDPR and PDPL projects",
             "Military-grade encryption for all data flows",
             "Integration with government-approved VMS systems"
           ]

@@ -135,33 +135,13 @@ export function buildSeoPageSchemas({ pageData, path, areaServed } = {}) {
   });
 
   // ── Primary entity ────────────────────────────────────────────────────────
-  // Comparison pages genuinely describe the camera product, so they keep
-  // Product markup. Every other page describes a deployment of the service in
-  // a place or an industry, so Product would not be the main content of the
-  // page — those get a Service entity instead.
-  if (category === 'compare') {
-    schemas.push({
-      '@context': 'https://schema.org',
-      '@type': 'Product',
-      '@id': `${url}#product`,
-      name: 'ArcisAI AI CCTV Camera',
-      description,
-      url,
-      category: 'AI CCTV Cameras',
-      brand: { '@type': 'Brand', name: 'ArcisAI' },
-      manufacturer: { '@id': ORGANIZATION_ID },
-      // Range matches the pricing published on /faq. No `offerCount` and no
-      // `aggregateRating` — neither is verifiable on-page.
-      offers: {
-        '@type': 'AggregateOffer',
-        priceCurrency: 'USD',
-        lowPrice: '149',
-        highPrice: '1499',
-        availability: 'https://schema.org/InStock',
-        seller: { '@id': ORGANIZATION_ID },
-      },
-    });
-  } else if (category === 'products' && pageData.model && pageData.emitProductSchema) {
+  // ARC-030 (2026-11-19): comparison pages used to emit a Product with an
+  // AggregateOffer (USD 149–1,499, InStock). No price is shown on those pages,
+  // and Google requires Product offers to match visible page content, so the
+  // markup was misleading. Comparison pages now fall through to the Service
+  // entity like every other landing page. A Product without offers, review or
+  // rating would only be reported as invalid in Search Console (see ARC-004).
+  if (category === 'products' && pageData.model && pageData.emitProductSchema) {
     // Model-level page: Product with only datasheet-verifiable properties.
     // No offers (no published price), no aggregateRating (no reviews on-site).
     // ARC-004 (2026-11-16): off by default – without offers/review/rating

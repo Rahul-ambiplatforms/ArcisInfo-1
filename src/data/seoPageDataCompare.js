@@ -204,18 +204,18 @@ const seoPageDataCompare = {
     keywords: ["NDAA compliant cameras", "NDAA Section 889 cameras", "NDAA approved security cameras", "compliant surveillance cameras", "non-Chinese security cameras 2026", "government approved cameras"],
     heroTitle: "NDAA Compliant AI Cameras",
     heroSubtitle: "Trusted Security for Government & Enterprise",
-    heroDescription: "ArcisAI by Adiance delivers the most advanced NDAA Section 889 compliant cameras available. Built with zero Chinese-manufactured components, full supply chain transparency, and cutting-edge AI analytics.",
+    heroDescription: "ArcisAI by Adiance makes AI CCTV cameras in India. ArcisAI is not one of the companies named in NDAA Section 889, and we share component and origin documents for your project on request.",
     category: "compare",
     sections: [
       {
         title: "What is NDAA Section 889 Compliance?",
-        content: "NDAA Section 889 prohibits US federal agencies and their contractors from procuring telecommunications and video surveillance equipment from specific Chinese manufacturers including Hikvision, Dahua, Huawei, ZTE, and Hytera. Compliance is mandatory for all federal contracts, grants, and loans. ArcisAI by Adiance is fully NDAA compliant with zero Chinese-manufactured components in our entire product line, verified through complete supply chain documentation.",
+        content: "NDAA Section 889 prohibits US federal agencies and their contractors from procuring telecommunications and video surveillance equipment from specific Chinese manufacturers including Hikvision, Dahua, Huawei, ZTE, and Hytera. Compliance is mandatory for all federal contracts, grants, and loans. There is no official NDAA certificate; buyers and contractors self-declare. ArcisAI is a Made-in-India brand that is not named in the law, and we provide component and origin documents for your tender on request.",
         stats: [
           { value: "100%", label: "NDAA Compliant" },
           { value: "Zero", label: "Chinese Components" },
           { value: "Full", label: "Supply Chain Transparency" }
         ],
-        features: ["NDAA Section 889 fully compliant", "Zero Chinese-manufactured components", "Complete supply chain documentation", "TAA (Trade Agreements Act) compliant", "GSA Schedule eligible"]
+        features: ["Not a company named in NDAA Section 889", "Designed and made in India by Adiance", "Component and origin documents on request", "STQC-certified VMS", "BIS-ER registered cameras (R-72003735)"]
       },
       {
         title: "ArcisAI: More Than Just Compliant",
@@ -273,7 +273,7 @@ const seoPageDataCompare = {
           { value: "Zero", label: "Chinese Components" },
           { value: "Full Stack", label: "HW + FW + SW + AI" }
         ],
-        features: ["100% in-house hardware design", "100% in-house firmware development", "100% in-house VMS and app", "Zero Chinese component dependency", "Faster security patch deployment"]
+        features: ["100% in-house hardware design", "100% in-house firmware development", "100% in-house VMS and app", "Faster security patch deployment"]
       },
       {
         title: "Product Range & Target Market",
@@ -290,7 +290,7 @@ const seoPageDataCompare = {
       { q: "Is ArcisAI better than CP Plus for government projects?", a: "For government projects requiring end-to-end certification, ArcisAI is the clear choice. It is the only Indian brand with BIS/ER certified cameras, STQC certified VMS, and STQC certified mobile app — the complete certified stack that government tenders increasingly require." },
       { q: "How does ArcisAI compare to CP Plus on price?", a: "ArcisAI targets the premium segment while CP Plus covers budget to professional ranges. However, ArcisAI's built-in edge AI eliminates the cost of separate analytics servers, making total deployment cost competitive for AI-enabled installations." },
       { q: "Does ArcisAI have the same distribution reach as CP Plus?", a: "CP Plus has India's largest CCTV distribution network. ArcisAI focuses on direct enterprise and government channels, system integrators, and export markets where certification and compliance are the primary selection criteria." },
-      { q: "Why choose ArcisAI over CP Plus for exports?", a: "ArcisAI is NDAA compliant, GDPR ready, and EU AI Act compliant with zero Chinese components — critical requirements for US, European, and Middle Eastern government projects. CP Plus faces scrutiny in some export markets due to component sourcing questions." }
+      { q: "Why choose ArcisAI over CP Plus for exports?", a: "ArcisAI is a Made-in-India brand that is not named in NDAA Section 889, and it offers privacy features such as masking zones and on-premise recording that help with GDPR projects. CP Plus faces scrutiny in some export markets due to component sourcing questions." }
     ]
   },
 
