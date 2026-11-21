@@ -10,7 +10,7 @@
 // so the team can tell them apart. On success it fires `dealer_submit_success`
 // (plus the shared `generate_lead`) – mark `dealer_submit_success` as a key
 // event in GA4 so dealer leads are counted separately from contact leads.
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Box, Heading, Text, SimpleGrid, FormControl, FormLabel, Input, Select, Textarea, Button, useToast,
 } from '@chakra-ui/react';
@@ -38,6 +38,15 @@ export default function DealerLeadForm() {
   const [form, setForm] = useState(EMPTY);
   const [sending, setSending] = useState(false);
   const [done, setDone] = useState(false);
+
+  // Pre-fill the city when the visitor arrives from a city page
+  // (/become-a-distributor?city=Coimbatore). Only when the field is empty.
+  useEffect(() => {
+    try {
+      const c = new URLSearchParams(window.location.search).get('city');
+      if (c) setForm((p) => (p.city ? p : { ...p, city: c.slice(0, 60) }));
+    } catch (e) { /* ignore */ }
+  }, []);
 
   const onChange = (e) => {
     const { name, value } = e.target;
