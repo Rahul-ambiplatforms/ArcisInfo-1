@@ -6,6 +6,7 @@ import {
 } from '@chakra-ui/react';
 import PageContentWrapper from '../../Components/PageContentWrapper';
 import RelatedLinks from '../../Components/RelatedLinks';
+import CertStatement from '@/src/Components/CertStatement';
 
 // Brand palette (matches site dark theme: body #171717, accents #9678E1 / #8266C9)
 const ACCENT = '#9678E1';
@@ -128,6 +129,8 @@ const Certifications = () => {
           >
             ArcisAI Certifications &amp; Compliance
           </Heading>
+          {/* T16 — approved certification line (crawlable HTML) */}
+          <CertStatement align="left" color="white" mt={3} mb={4} />
           <Text fontSize={{ base: 'md', md: 'lg' }} color="whiteAlpha.800" mb={2} maxW="4xl">
             ArcisAI holds BIS-ER certification for its CCTV camera hardware and STQC certification
             for its Video Management Software (VMS). Products are Made in India and NDAA compliant.

@@ -40,7 +40,7 @@ import {
 // Set to true to auto-open the popup on first page load. When false the modal
 // still works in controlled mode (the header banner's CTA passes isOpen/onClose).
 // Either way it stops auto-opening once the event is over (isEventLive).
-const SHOW_EVENT_POPUP_ON_LOAD = true;
+const SHOW_EVENT_POPUP_ON_LOAD = false; // T15 — popup is now controlled by IfsecPopupGate (10s / 50% scroll, home only, once)
 
 // Track if popup has been shown in this session (resets on refresh)
 let hasShownPopup = false;

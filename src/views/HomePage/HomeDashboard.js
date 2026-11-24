@@ -9,6 +9,8 @@ import { homeContent } from "./Data/Content";
 import { homeSEO } from "./Data/SEOContent";
 import BISHeroSlide from "./Components/BISHeroSlide";
 import Event from "../Events/Event";
+import CertStatement from "@/src/Components/CertStatement";
+import IfsecPopupGate from "@/src/Components/IfsecPopupGate";
 
 const bisSlide = {
   id: "bis",
@@ -83,7 +85,10 @@ const HomeDashboard = () => {
         />
       ))}
       <PageContentWrapper noPadding>
-        <Event />
+        {/* T15 — IFSEC popup now opens after 10s / 50% scroll, home only, once */}
+        <IfsecPopupGate bare>
+          {(close) => <Event isOpen onClose={close} />}
+        </IfsecPopupGate>
         <HeroSectionCarousel data={heroSlides} />
         <ProductList />
         <Certifications />
@@ -140,6 +145,9 @@ const HomeDashboard = () => {
               </Text>{" "}
               CCTV Camera Brand
             </Heading>
+
+            {/* T16 — approved certification line (crawlable HTML) */}
+            <CertStatement align="left" color="white" mt={2} mb={4} />
 
             <Text
               as="p"
