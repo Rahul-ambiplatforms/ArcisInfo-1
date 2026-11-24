@@ -5,6 +5,8 @@ import CertificationBenefits from "./Components/CertificationBenefits";
 import DecisionMakers from "./Components/DecisionMakers";
 import BISCta from "./Components/BISCta";
 import RelatedLinks from "@/src/Components/RelatedLinks";
+import CertStatement from "@/src/Components/CertStatement";
+import { Box } from "@chakra-ui/react";
 
 const BISCertification = () => {
   return (
@@ -15,6 +17,10 @@ const BISCertification = () => {
           already emitted by the route's `metadata` export. */}
 
       <BISHeroSection />
+      {/* T16 — approved certification line (crawlable HTML), directly below the H1 hero */}
+      <Box bg="#171717" px={4} py={{ base: 4, md: 5 }}>
+        <CertStatement color="white" />
+      </Box>
       <CertificationBenefits />
       <DecisionMakers />
       <BISCta />

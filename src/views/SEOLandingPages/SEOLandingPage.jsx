@@ -186,6 +186,39 @@ const SEOLandingPage = ({ pageData, slugKey, relatedLinks = [] }) => {
         </Box>
       )}
 
+      {/* Dealer / installer band (2026-11-20). Every landing page gets a clear
+          route for CCTV dealers, installers and system integrators to apply as
+          ArcisAI partners. On city pages the city is passed on so the dealer
+          form is pre-filled and the CRM sees where the enquiry came from.
+          Facts only: BIS-ER registration, STQC-certified VMS, Made in India. */}
+      {(() => {
+        const cityName = typeof slugKey === "string" && slugKey.startsWith("cctv-cameras-") && !slugKey.startsWith("cctv-cameras-for-")
+          ? slugKey.replace("cctv-cameras-", "").split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ")
+          : "";
+        const href = cityName
+          ? `/become-a-distributor?city=${encodeURIComponent(cityName)}#dealer-form`
+          : "/become-a-distributor#dealer-form";
+        return (
+          <Box py={{ base: 10, md: 12 }} bg="#1f1f1f" borderTop="1px solid" borderColor={CARD_BORDER}>
+            <Container maxW="900px">
+              <Flex direction={{ base: "column", md: "row" }} align={{ base: "flex-start", md: "center" }} justify="space-between" gap={6}>
+                <Box>
+                  <Heading as="h2" size="md" color="white" mb={2}>
+                    {cityName ? `CCTV dealer or installer in ${cityName}?` : "CCTV dealer, installer or system integrator?"}
+                  </Heading>
+                  <Text color="whiteAlpha.800">
+                    Become an ArcisAI partner. Sell Made-in-India AI cameras with BIS-ER registration and an STQC-certified VMS, backed by Adiance.
+                  </Text>
+                </Box>
+                <Button as={NextLink} type={undefined} href={href} onClick={() => track("dealer_cta_click", { cta_location: "landing_band", page_key: slugKey, city: cityName || undefined })} bg={ACCENT} color="white" size="lg" flexShrink={0} _hover={{ bg: ACCENT_DEEP }}>
+                  Become a Dealer
+                </Button>
+              </Flex>
+            </Container>
+          </Box>
+        );
+      })()}
+
       {/* CTA Section */}
       {pageData.cta && (
         <Box py={{base: 16, md: 20}} bg={`linear-gradient(135deg, ${ACCENT_DEEP} 0%, ${ACCENT} 100%)`} color="white" textAlign="center">
