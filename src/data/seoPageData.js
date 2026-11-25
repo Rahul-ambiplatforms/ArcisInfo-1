@@ -1432,7 +1432,7 @@ const seoPageData = {
   },
   "cctv-buyers-guide-india": {
     slug: "cctv-buyers-guide-india", title: "CCTV Buyer's Guide India 2026 | ArcisAI",
-    metaDescription: "Complete guide to choosing the right CCTV camera for your needs in India. Expert guide by ArcisAI — India's first premium AI CCTV brand.",
+    metaDescription: "Complete guide to choosing the right CCTV camera for your needs in India. Expert guide by ArcisAI, a Made-in-India AI CCTV brand by Adiance.",
     keywords: ["cctv buyers guide india", "CCTV guide India", "surveillance guide 2026", "ArcisAI"],
     heroTitle: "CCTV Buyer's Guide India 2026", heroSubtitle: "Expert Guide by ArcisAI", heroDescription: "Complete guide to choosing the right CCTV camera for your needs in India",
     category: "resources",
@@ -1442,7 +1442,7 @@ const seoPageData = {
   },
   "how-to-choose-cctv-camera": {
     slug: "how-to-choose-cctv-camera", title: "How to Choose the Right CCTV Camera | ArcisAI",
-    metaDescription: "Step-by-step guide: resolution, connectivity, storage, AI features. Expert guide by ArcisAI — India's first premium AI CCTV brand.",
+    metaDescription: "Step-by-step guide: resolution, connectivity, storage, AI features. Expert guide by ArcisAI, a Made-in-India AI CCTV brand by Adiance.",
     keywords: ["how to choose cctv camera", "CCTV guide India", "surveillance guide 2026", "ArcisAI"],
     heroTitle: "How to Choose the Right CCTV Camera", heroSubtitle: "Expert Guide by ArcisAI", heroDescription: "Step-by-step guide: resolution, connectivity, storage, AI features",
     category: "resources",
@@ -1452,7 +1452,7 @@ const seoPageData = {
   },
   "stqc-certification-guide": {
     slug: "stqc-certification-guide", title: "STQC Certification for CCTV: What You Need to Know | ArcisAI",
-    metaDescription: "What is STQC, why it's mandatory since April 2026, certified brands list. Expert guide by ArcisAI — India's first premium AI CCTV brand.",
+    metaDescription: "What is STQC, why it's mandatory since April 2026, certified brands list. Expert guide by ArcisAI, a Made-in-India AI CCTV brand by Adiance.",
     keywords: ["stqc certification guide", "CCTV guide India", "surveillance guide 2026", "ArcisAI"],
     heroTitle: "STQC Certification for CCTV — Everything You Need to Know", heroSubtitle: "Expert Guide by ArcisAI", heroDescription: "What is STQC, why it's mandatory since April 2026, certified brands list",
     category: "resources",
@@ -1462,7 +1462,7 @@ const seoPageData = {
   },
   "cctv-installation-cost-india": {
     slug: "cctv-installation-cost-india", title: "CCTV Installation Cost in India 2026 | ArcisAI",
-    metaDescription: "Complete pricing guide: camera costs, installation charges, monthly fees by city. Expert guide by ArcisAI — India's first premium AI CCTV brand.",
+    metaDescription: "Complete pricing guide: camera costs, installation charges, monthly fees by city. Expert guide by ArcisAI, a Made-in-India AI CCTV brand by Adiance.",
     keywords: ["cctv installation cost india", "CCTV guide India", "surveillance guide 2026", "ArcisAI"],
     heroTitle: "CCTV Installation Cost in India 2026", heroSubtitle: "Expert Guide by ArcisAI", heroDescription: "Complete pricing guide: camera costs, installation charges, monthly fees by city",
     category: "resources",
@@ -1472,7 +1472,7 @@ const seoPageData = {
   },
   "ai-surveillance-roi-calculator": {
     slug: "ai-surveillance-roi-calculator", title: "AI Surveillance ROI Calculator | ArcisAI",
-    metaDescription: "Calculate your return on investment from upgrading to AI CCTV cameras. Expert guide by ArcisAI — India's first premium AI CCTV brand.",
+    metaDescription: "Calculate your return on investment from upgrading to AI CCTV cameras. Expert guide by ArcisAI, a Made-in-India AI CCTV brand by Adiance.",
     keywords: ["ai surveillance roi calculator", "CCTV guide India", "surveillance guide 2026", "ArcisAI"],
     heroTitle: "AI Surveillance ROI Calculator", heroSubtitle: "Expert Guide by ArcisAI", heroDescription: "Calculate your return on investment from upgrading to AI CCTV cameras",
     category: "resources",
@@ -1482,7 +1482,7 @@ const seoPageData = {
   },
   "cctv-camera-comparison-chart": {
     slug: "cctv-camera-comparison-chart", title: "CCTV Camera Comparison Chart 2026 | ArcisAI",
-    metaDescription: "Side-by-side comparison of top 10 CCTV brands in India. Expert guide by ArcisAI — India's first premium AI CCTV brand.",
+    metaDescription: "Side-by-side comparison of top 10 CCTV brands in India. Expert guide by ArcisAI, a Made-in-India AI CCTV brand by Adiance.",
     keywords: ["cctv camera comparison chart", "CCTV guide India", "surveillance guide 2026", "ArcisAI"],
     heroTitle: "CCTV Camera Comparison Chart 2026", heroSubtitle: "Expert Guide by ArcisAI", heroDescription: "Side-by-side comparison of top 10 CCTV brands in India",
     category: "resources",
@@ -1492,7 +1492,7 @@ const seoPageData = {
   },
   "video-surveillance-laws-india": {
     slug: "video-surveillance-laws-india", title: "Video Surveillance Laws in India | ArcisAI",
-    metaDescription: "Legal guide to CCTV usage, privacy laws, data protection compliance. Expert guide by ArcisAI — India's first premium AI CCTV brand.",
+    metaDescription: "Legal guide to CCTV usage, privacy laws, data protection compliance. Expert guide by ArcisAI, a Made-in-India AI CCTV brand by Adiance.",
     keywords: ["video surveillance laws india", "CCTV guide India", "surveillance guide 2026", "ArcisAI"],
     heroTitle: "Video Surveillance Laws in India", heroSubtitle: "Expert Guide by ArcisAI", heroDescription: "Legal guide to CCTV usage, privacy laws, data protection compliance",
     category: "resources",
@@ -1502,7 +1502,7 @@ const seoPageData = {
   },
   "cctv-maintenance-guide": {
     slug: "cctv-maintenance-guide", title: "CCTV Maintenance & Troubleshooting Guide | ArcisAI",
-    metaDescription: "How to maintain your surveillance system for optimal performance. Expert guide by ArcisAI — India's first premium AI CCTV brand.",
+    metaDescription: "How to maintain your surveillance system for optimal performance. Expert guide by ArcisAI, a Made-in-India AI CCTV brand by Adiance.",
     keywords: ["cctv maintenance guide", "CCTV guide India", "surveillance guide 2026", "ArcisAI"],
     heroTitle: "CCTV Maintenance & Troubleshooting Guide", heroSubtitle: "Expert Guide by ArcisAI", heroDescription: "How to maintain your surveillance system for optimal performance",
     category: "resources",
@@ -1512,7 +1512,7 @@ const seoPageData = {
   },
   "cloud-vs-onpremise-surveillance": {
     slug: "cloud-vs-onpremise-surveillance", title: "Cloud vs On-Premise Surveillance | ArcisAI",
-    metaDescription: "Pros and cons of cloud VMS vs local NVR/DVR storage. Expert guide by ArcisAI — India's first premium AI CCTV brand.",
+    metaDescription: "Pros and cons of cloud VMS vs local NVR/DVR storage. Expert guide by ArcisAI, a Made-in-India AI CCTV brand by Adiance.",
     keywords: ["cloud vs onpremise surveillance", "CCTV guide India", "surveillance guide 2026", "ArcisAI"],
     heroTitle: "Cloud vs On-Premise Surveillance", heroSubtitle: "Expert Guide by ArcisAI", heroDescription: "Pros and cons of cloud VMS vs local NVR/DVR storage",
     category: "resources",
@@ -1522,7 +1522,7 @@ const seoPageData = {
   },
   "smart-city-surveillance-guide": {
     slug: "smart-city-surveillance-guide", title: "Smart City Surveillance Implementation Guide | ArcisAI",
-    metaDescription: "How Indian cities are deploying AI surveillance for public safety. Expert guide by ArcisAI — India's first premium AI CCTV brand.",
+    metaDescription: "How Indian cities are deploying AI surveillance for public safety. Expert guide by ArcisAI, a Made-in-India AI CCTV brand by Adiance.",
     keywords: ["smart city surveillance guide", "CCTV guide India", "surveillance guide 2026", "ArcisAI"],
     heroTitle: "Smart City Surveillance Implementation Guide", heroSubtitle: "Expert Guide by ArcisAI", heroDescription: "How Indian cities are deploying AI surveillance for public safety",
     category: "resources",

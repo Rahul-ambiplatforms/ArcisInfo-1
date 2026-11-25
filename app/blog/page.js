@@ -47,9 +47,6 @@ async function getInitialBlogs() {
       (b) =>
         b.status === 'published' &&
         !VMUKTI_BLOG_SLUGS.has(b.metadata?.urlWords) &&
-        // ARC-018 (2026-11-14): CMS still lists this post as published but its
-        // detail page is gone (it 301s to /blog), so don't link to it.
-        (b.metadata?.urlWords || '').trim() !== 'reduce-cctv-callbacks' &&
         // ARC-011 (2026-11-16): merged posts 301 elsewhere – don't list them.
         !MERGED_BLOG_SLUGS.has((b.metadata?.urlWords || '').trim()) &&
         !b.content?.title?.toLowerCase().includes('vmukti'),

@@ -317,18 +317,9 @@ const nextConfig = {
         permanent: true,
         statusCode: 301,
       },
-      // Dead CMS post (2026-09-16): the blog list endpoint still reports this as
-      // published, but the detail endpoint returns nothing, so the page 404s.
-      // Filtered out of the sitemap in app/sitemap.js; this catches anyone who
-      // reaches the URL from an old link or an already-indexed result. Sent to
-      // the blog index rather than an unrelated post, since there is no
-      // equivalent replacement. Remove once the CMS record is fixed or retired.
-      {
-        source: "/blog/reduce-cctv-callbacks",
-        destination: "/blog",
-        permanent: true,
-        statusCode: 301,
-      },
+      // (2026-11-23) The /blog/reduce-cctv-callbacks -> /blog redirect was
+      // removed: the CMS slug had a trailing space, now fixed, so the post
+      // answers 200 again.
       // GSC "Not found (404)" / "Soft 404" cleanup (2026-09-22): these URLs
       // are still reachable from old links or already-indexed results but
       // have no current page and no existing redirect rule. Mapped to the
