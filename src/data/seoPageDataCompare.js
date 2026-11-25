@@ -387,7 +387,7 @@ const seoPageDataCompare = {
       },
       {
         title: "AI Analytics Depth: Edge AI vs Cloud Analytics",
-        content: "Rhombus processes most analytics in the cloud, which means bandwidth consumption and latency. ArcisAI runs deep learning inference directly on the camera hardware — face recognition, ANPR, behavioral analytics, crowd counting, fire detection, and PPE compliance all happen at the edge in sub-100ms. This means faster alerts, lower bandwidth costs, and analytics that work even when internet connectivity is interrupted.",
+        content: "Rhombus processes most analytics in the cloud, which means bandwidth consumption and latency. ArcisAI runs deep learning inference directly on the camera hardware — face recognition, ANPR, behavioral analytics, crowd counting, fire detection, and PPE compliance all happen at the edge, on the camera itself. This means faster alerts, lower bandwidth costs, and analytics that work even when internet connectivity is interrupted.",
         features: ["Sub-100ms edge AI detection vs cloud latency", "Analytics work offline during connectivity loss", "80% bandwidth reduction vs cloud-processed video", "20+ AI analytics types built-in", "Custom AI model deployment on-camera"]
       },
       {

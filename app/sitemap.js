@@ -32,9 +32,6 @@ const VMUKTI_BLOG_SLUGS = new Set([
 // Blog slugs the CMS list endpoint reports as published but which must not be
 // listed here, because the URL does not answer with a 200:
 //
-//   - reduce-cctv-callbacks — the detail endpoint (/blogs/urlWords/<slug>)
-//     returns nothing, so app/blog/[slug]/page.js calls notFound() and the URL
-//     404s. Remove this entry once the CMS record is restored or retired.
 //   - best-ai-cctv-camera-for-business — a live post that next.config.js now
 //     301s into best-ai-cctv-camera-office-business-security-india-2026 to stop
 //     the two splitting ranking signal. The destination is listed by the CMS in
@@ -46,7 +43,6 @@ const VMUKTI_BLOG_SLUGS = new Set([
 // "Not found (404)". A 301 in next.config.js still catches anyone who reaches
 // these URLs from an old link or an already-indexed result.
 const DEAD_BLOG_SLUGS = new Set([
-  'reduce-cctv-callbacks',
   'best-ai-cctv-camera-for-business',
   // ARC-011 (2026-11-16): blog posts merged into a stronger page on the same
   // topic – next.config.js 301s them (src/data/seoMergeRedirects.json).

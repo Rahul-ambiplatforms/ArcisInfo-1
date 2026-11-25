@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { Box, useToast } from "@chakra-ui/react"
 import BlogHeader from "./BlogHeader"
 import BlogList from "./BlogList"
@@ -16,24 +16,32 @@ const BlogListPage = ({ onEditBlog }) => {
   const [isLoading, setIsLoading] = useState(true)
   const toast = useToast()
   const blogsPerPage = 10
+  // Ignore responses from older requests (fast typing fires many searches).
+  const latestRequest = useRef(0)
 
   // Fetch blogs from the database
   const fetchBlogs = async () => {
     try {
+      const requestId = ++latestRequest.current
       setIsLoading(true)
       const requestPage = searchQuery ? 1 : currentPage
       const requestLimit = searchQuery ? 1000 : blogsPerPage
+      // Search is done here (not on the server) so it also matches the URL
+      // slug and meta title, e.g. "hikvision" finds is-hikvision-banned-in-india-2026.
       const response = await getBlogs(
         requestPage,
         requestLimit,
-        statusFilter === 'all' ? undefined : statusFilter,
-        searchQuery || undefined
+        statusFilter === 'all' ? undefined : statusFilter
       )
+      if (requestId !== latestRequest.current) return
       if (response.status === 'success') {
         let list = response.data || []
         if (searchQuery) {
-          const q = searchQuery.toLowerCase()
-          list = list.filter(b => (b?.content?.title || '').toLowerCase().includes(q))
+          const q = searchQuery.trim().toLowerCase()
+          list = list.filter(b =>
+            [b?.content?.title, b?.metadata?.urlWords, b?.metadata?.metaTitle]
+              .some(v => (v || '').toLowerCase().includes(q))
+          )
           setBlogs(list)
           setTotalPages(list.length > 0 ? 1 : 0)
         } else {
@@ -99,4 +107,4 @@ const BlogListPage = ({ onEditBlog }) => {
   )
 }
 
-export default BlogListPage
+export default BlogListPage

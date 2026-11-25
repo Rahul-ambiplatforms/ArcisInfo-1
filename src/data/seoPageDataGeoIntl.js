@@ -200,7 +200,7 @@ const seoPageDataGeoIntl = {
     sections: [
       {
         title: "Enterprise Security for NYC's Dynamic Environment",
-        content: "New York's dense urban environment demands cameras that perform in challenging conditions. ArcisAI cameras deliver reliable AI analytics in crowded lobbies, dimly lit parking garages, and high-traffic retail locations. Edge AI processing ensures sub-300ms alerts without straining your corporate network.",
+        content: "New York's dense urban environment demands cameras that perform in challenging conditions. ArcisAI cameras deliver reliable AI analytics in crowded lobbies, dimly lit parking garages, and high-traffic retail locations. Edge AI processing sends fast alerts without straining your corporate network.",
         stats: [{ value: "NDAA", label: "Section 889 Compliant" }, { value: "<300ms", label: "Alert Latency" }, { value: "4K", label: "Resolution" }, { value: "-40°C+", label: "All-Weather" }],
         features: ["Facial Recognition at Building Entrances", "ANPR for Parking & Fleet Management", "Crowd Analytics for Retail & Public Spaces"]
       },
@@ -316,7 +316,7 @@ const seoPageDataGeoIntl = {
     keywords: ["CCTV cameras Chicago", "AI surveillance Chicago", "NDAA cameras Illinois", "enterprise security Chicago", "manufacturing CCTV Midwest", "corporate cameras Chicago"],
     heroTitle: "AI-Powered Security for Chicago & the Midwest",
     heroSubtitle: "Enterprise Edge AI Cameras for America's Heartland",
-    heroDescription: "Protect Chicago-area corporate headquarters, manufacturing plants, and logistics hubs with NDAA-compliant AI cameras. Edge processing for sub-300ms alerts in any weather.",
+    heroDescription: "Protect Chicago-area corporate headquarters, manufacturing plants, and logistics hubs with NDAA-compliant AI cameras. Edge processing for fast alerts in any weather.",
     category: "geo",
     sections: [
       {
