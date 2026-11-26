@@ -60,7 +60,7 @@ const seoPageDataCompare = {
       {
         title: "Technical Superiority: ArcisAI Edge AI",
         content: "Dahua cameras offer basic analytics like motion detection and line crossing. ArcisAI cameras feature true edge AI with deep learning capabilities — object classification, behavioral analysis, anomaly detection, and scene understanding all processed on-device. This means faster response times, lower bandwidth usage, and more intelligent alerting without expensive server infrastructure.",
-        features: ["Deep learning on-device processing", "Advanced behavioral analytics", "Scene understanding and context", "Sub-100ms detection latency", "80% bandwidth reduction vs cloud processing"]
+        features: ["Deep learning on-device processing", "Advanced behavioral analytics", "Scene understanding and context", "On-camera AI detection", "Lower bandwidth use than cloud processing"]
       }
     ],
     faq: [
@@ -91,8 +91,8 @@ const seoPageDataCompare = {
       },
       {
         title: "Cost Comparison: ArcisAI vs Axis",
-        content: "An Axis camera with comparable AI capabilities requires the base camera, ACAP analytics licenses (per feature, per camera), and often a dedicated analytics server. ArcisAI includes all AI capabilities in the camera price — object detection, facial recognition, behavioral analytics, and edge processing are all built-in. For a 100-camera deployment, ArcisAI typically saves 30-45% on total cost of ownership.",
-        features: ["All-inclusive AI — no per-feature licensing", "No separate analytics server required", "30-45% lower TCO for 100+ camera deployments", "Free firmware and AI model updates", "Simplified procurement and budgeting"]
+        content: "An Axis camera with comparable AI capabilities requires the base camera, ACAP analytics licenses (per feature, per camera), and often a dedicated analytics server. ArcisAI includes all AI capabilities in the camera price — object detection, facial recognition, behavioral analytics, and edge processing are all built-in. For a 100-camera deployment, this can lower total cost of ownership. Ask for a quote for your site to compare.",
+        features: ["All-inclusive AI — no per-feature licensing", "No separate analytics server required", "Can lower TCO for 100+ camera deployments", "Free firmware and AI model updates", "Simplified procurement and budgeting"]
       }
     ],
     faq: [
@@ -151,12 +151,12 @@ const seoPageDataCompare = {
           { value: "GenAI", label: "Integration Ready" },
           { value: "40%", label: "Lower Entry Cost" }
         ],
-        features: ["Monthly OTA AI model updates vs annual", "GenAI platform integration", "40% lower entry cost vs Bosch premium", "Edge-to-cloud intelligence pipeline", "Flexible deployment models"]
+        features: ["Monthly OTA AI model updates vs annual", "GenAI platform integration", "Lower entry cost than premium imported brands", "Edge-to-cloud intelligence pipeline", "Flexible deployment models"]
       },
       {
         title: "Total Cost of Ownership Comparison",
-        content: "Bosch cameras command premium pricing with additional costs for analytics licenses, Bosch Video Management System, and specialized installation requirements. ArcisAI offers all-inclusive pricing with built-in analytics, free ArcisAI Cloud VMS integration, and standard installation requirements. For comparable 50-camera deployments, ArcisAI typically delivers 35-50% cost savings.",
-        features: ["All-inclusive analytics — no extra licenses", "Free ArcisAI Cloud VMS integration", "Standard installation — no proprietary requirements", "35-50% lower TCO for mid-size deployments", "Scalable pricing model"]
+        content: "Bosch cameras command premium pricing with additional costs for analytics licenses, Bosch Video Management System, and specialized installation requirements. ArcisAI offers all-inclusive pricing with built-in analytics, free ArcisAI Cloud VMS integration, and standard installation requirements. For comparable 50-camera deployments, ArcisAI can cost less. Ask for a quote for your site to compare.",
+        features: ["All-inclusive analytics — no extra licenses", "Free ArcisAI Cloud VMS integration", "Standard installation — no proprietary requirements", "Can lower TCO for mid-size deployments", "Scalable pricing model"]
       }
     ],
     faq: [
@@ -353,7 +353,7 @@ const seoPageDataCompare = {
       },
       {
         title: "Total Cost of Ownership: ArcisAI Advantage",
-        content: "Verkada's subscription model means ongoing annual costs per camera that compound over time. A 100-camera deployment with Verkada can cost $50,000-$100,000+ annually in licensing alone. ArcisAI's model includes edge AI capabilities built into the camera hardware with optional cloud VMS licensing at a fraction of the cost. Over a 5-year period, ArcisAI typically delivers 40-60% savings compared to Verkada.",
+        content: "Verkada's subscription model means ongoing annual costs per camera that compound over time. A 100-camera deployment with Verkada can cost $50,000-$100,000+ annually in licensing alone. ArcisAI's model includes edge AI capabilities built into the camera hardware with optional cloud VMS licensing at a fraction of the cost. Over a 5-year period, ArcisAI can cost less than Verkada. Ask for a quote for your site to compare.",
         features: ["No per-camera annual license required", "Edge processing reduces cloud storage costs", "Camera hardware includes AI — no add-on fees", "Flexible cloud VMS tiers based on actual usage", "Migration support from existing Verkada deployments"]
       }
     ],
@@ -388,7 +388,7 @@ const seoPageDataCompare = {
       {
         title: "AI Analytics Depth: Edge AI vs Cloud Analytics",
         content: "Rhombus processes most analytics in the cloud, which means bandwidth consumption and latency. ArcisAI runs deep learning inference directly on the camera hardware — face recognition, ANPR, behavioral analytics, crowd counting, fire detection, and PPE compliance all happen at the edge, on the camera itself. This means faster alerts, lower bandwidth costs, and analytics that work even when internet connectivity is interrupted.",
-        features: ["Sub-100ms edge AI detection vs cloud latency", "Analytics work offline during connectivity loss", "80% bandwidth reduction vs cloud-processed video", "20+ AI analytics types built-in", "Custom AI model deployment on-camera"]
+        features: ["Edge AI detection without cloud round-trips", "Analytics work offline during connectivity loss", "Lower bandwidth use than cloud-processed video", "20+ AI analytics types built-in", "Custom AI model deployment on-camera"]
       },
       {
         title: "Deployment Flexibility and Scale",

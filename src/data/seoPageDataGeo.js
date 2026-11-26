@@ -12,7 +12,7 @@ const seoPageDataGeo = {
     metaDescription: "Premium AI-powered CCTV cameras in Maharashtra. STQC & BIS certified. Smart surveillance for Mumbai, Pune, Nagpur with face recognition & ANPR.",
     keywords: ["CCTV cameras Maharashtra", "AI surveillance Mumbai", "STQC certified CCTV", "security cameras Pune", "video surveillance Nagpur"],
     heroTitle: "AI CCTV Solutions Across Maharashtra",
-    heroSubtitle: "India's First Premium AI CCTV Brand",
+    heroSubtitle: "Made-in-India AI CCTV Brand",
     heroDescription: "Protect Mumbai, Pune, and beyond with STQC & BIS certified AI cameras featuring face recognition and intrusion detection.",
     category: "geo",
     sections: [

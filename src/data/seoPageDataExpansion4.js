@@ -319,7 +319,7 @@ const seoPageDataExpansion4 = {
     "faqs": [
       {"q": "Are Made in India CCTV cameras as good as imported ones?", "a": "ArcisAI Made in India cameras with non-Chinese SoC match and often exceed imported cameras in AI capabilities, offering 4K resolution, edge AI, ArcisGPT search, and cloud VMS — all while guaranteeing data sovereignty."},
       {"q": "Do government projects require Made in India CCTV?", "a": "Increasingly yes. Central and state governments give procurement preference to Made in India surveillance equipment with indigenous components. ArcisAI is STQC certified and GEM Portal listed for government projects."},
-      {"q": "What is the cost difference between Indian and imported CCTV?", "a": "ArcisAI Made in India cameras are competitively priced and offer lower total cost of ownership with local warranty, AMC support, and no import duty — typically 15-25% more affordable than comparable imported alternatives."},
+      {"q": "What is the cost difference between Indian and imported CCTV?", "a": "ArcisAI Made in India cameras are competitively priced and offer lower total cost of ownership with local warranty, AMC support, and no import duty, which can make them more affordable than comparable imported alternatives."},
       {"q": "Does ArcisAI export Made in India cameras?", "a": "Yes, ArcisAI exports indigenous AI CCTV cameras to multiple countries, demonstrating that Made in India quality meets global standards while offering data sovereignty advantages."}
     ],
     "cta": {"title": "Choose Made in India — Choose ArcisAI", "subtitle": "Join the Atmanirbhar surveillance revolution. Get a free demo of India finest AI CCTV cameras."}
@@ -357,7 +357,7 @@ const seoPageDataExpansion4 = {
     "faqs": [
       {"q": "Is AI CCTV worth the upgrade from traditional cameras?", "a": "AI CCTV delivers 10x the value of traditional cameras. Real-time threat detection, automated alerts, and natural language search eliminate the need for 24/7 human monitoring and reduce incident response time from hours to seconds."},
       {"q": "Can AI CCTV work with my existing camera infrastructure?", "a": "ArcisAI offers both complete AI camera systems and AI video analytics that can be applied to existing camera feeds through our cloud VMS platform, allowing phased upgrades."},
-      {"q": "How much does AI CCTV cost compared to traditional?", "a": "ArcisAI AI cameras are typically 20-40% more than basic traditional cameras, but the ROI is dramatic — reduced security staff costs, faster incident response, and proactive threat prevention deliver payback within 6-12 months."},
+      {"q": "How much does AI CCTV cost compared to traditional?", "a": "AI cameras usually cost more than basic traditional cameras. The return comes from fewer manual checks, faster incident response and alerts before a problem grows. The exact price depends on the model and quantity, so ask our team for a quote."},
       {"q": "Does AI CCTV require internet to work?", "a": "ArcisAI edge AI processes analytics on-device without internet. Core detection, alerts, and recording work offline. Cloud VMS enables remote access and multi-site management when connected."}
     ],
     "cta": {"title": "Upgrade to AI CCTV with ArcisAI", "subtitle": "See the AI difference live. Book a free demo comparing AI vs traditional surveillance."}
