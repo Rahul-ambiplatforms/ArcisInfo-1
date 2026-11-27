@@ -87,7 +87,7 @@ const MediaKit = () => (
         <Heading as="h3" fontSize="lg" fontWeight="600" mb={3} color={ACCENT}>What makes it newsworthy</Heading>
         <List spacing={2} color="whiteAlpha.900">
           <ListItem>One of few Indian brands certified on BOTH hardware &amp; software</ListItem>
-          <ListItem>India's first conversational-AI CCTV (ArcisGPT)</ListItem>
+          <ListItem>ArcisGPT: a conversational AI assistant for CCTV</ListItem>
           <ListItem>8 AI detections on the camera itself (edge AI)</ListItem>
           <ListItem>Bridge Device — no rip-and-replace upgrade</ListItem>
           <ListItem>Made in India; NDAA compliant; GeM/PSU ready</ListItem>

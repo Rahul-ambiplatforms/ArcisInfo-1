@@ -393,7 +393,7 @@ function GenAiInfo() {
             ml={{ base: "8", md: "0" }}
             w={{ base: "80%", md: "70%" }}
           >
-            Unlock the Power of India's First Gen AI Solution in Video
+            Unlock the Power of Gen AI in Video
             Surveillance –{" "}
             <Text as="span" fontWeight="bold" color="#9678E1">
               ArcisGPT Proudly Made in India.

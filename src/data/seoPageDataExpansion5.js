@@ -14,7 +14,7 @@ const seoPageDataExpansion5 = {
       {"title": "Edge AI Built-In", "description": "Every S-Series camera runs AI analytics at the edge — line crossing, face detection, human detection, area intrusion — without sending data to external servers. Data sovereignty by design."},
       {"title": "Rapid Deployment", "description": "Pilot in days, scale in weeks. ArcisAI's plug-and-play architecture means STQC-compliant surveillance can be operational across multiple sites within the project timeline."}
     ],
-    "benefits": ["Only STQC certified end-to-end ecosystem in India (cameras + VMS + cloud)", "Meets all government procurement compliance requirements", "In-house manufacturing ensures supply chain security", "Edge AI processing keeps sensitive data on-premises", "7 global certifications including ISO 27001:2022", "OEM/ODM capability for white-label government projects"],
+    "benefits": ["BIS-ER certified cameras with STQC-certified VMS and cloud", "Meets all government procurement compliance requirements", "In-house manufacturing ensures supply chain security", "Edge AI processing keeps sensitive data on-premises", "7 global certifications including ISO 27001:2022", "OEM/ODM capability for white-label government projects"],
     "faq": [
       {"q": "What is STQC certification for CCTV cameras?", "a": "STQC (Standardisation Testing and Quality Certification) is India's government body under MeitY that certifies electronic products for quality, security, and reliability. Since April 2026, all CCTV cameras and VMS software sold in India must carry STQC certification — making it mandatory for both private and government installations."},
       {"q": "Is ArcisAI STQC certified?", "a": "Yes. ArcisAI holds STQC certification for its Video Management System (VMS) and camera products. This makes ArcisAI one of the few Indian brands with a fully certified surveillance ecosystem."},
@@ -30,7 +30,7 @@ const seoPageDataExpansion5 = {
     "metaDescription": "ArcisGPT brings Generative AI to CCTV — search footage in natural language and get AI incident summaries, from ArcisAI.",
     "keywords": ["GenAI surveillance", "GPT powered CCTV", "ArcisGPT", "natural language video search", "AI video search CCTV", "generative AI security camera", "conversational CCTV", "GPT surveillance India"],
     "heroTitle": "ArcisGPT — Talk to Your Surveillance System",
-    "heroDescription": "ArcisGPT is India's first Generative AI engine built for video surveillance. Instead of scrubbing through hours of footage, simply ask: 'Show me everyone who entered the loading dock after 10 PM' or 'Find the red truck from yesterday.' ArcisGPT understands natural language, searches your video archive intelligently, and delivers results in seconds — transforming how security teams investigate, monitor, and respond.",
+    "heroDescription": "ArcisGPT is a Generative AI engine built for video surveillance. Instead of scrubbing through hours of footage, simply ask: 'Show me everyone who entered the loading dock after 10 PM' or 'Find the red truck from yesterday.' ArcisGPT understands natural language, searches your video archive intelligently, and delivers results in seconds — transforming how security teams investigate, monitor, and respond.",
     "features": [
       {"title": "Natural Language Video Search", "description": "Type queries in plain English or Hindi — 'person with backpack near gate 3' or 'vehicle parked in no-parking zone' — and ArcisGPT instantly retrieves matching footage from hours, days, or weeks of recordings."},
       {"title": "Track Anything — Object or Person", "description": "Select any object or person in a video frame and ArcisGPT tracks their movement across cameras and time. Follow a suspect, a vehicle, or a package across your entire facility without manual camera switching."},
@@ -64,12 +64,12 @@ const seoPageDataExpansion5 = {
       {"title": "Multi-Camera Scalability", "description": "Each ABD supports multiple cameras. Add more ABDs as you scale. Manage hundreds of cameras across multiple sites from a single ArcisAI VMS dashboard."},
       {"title": "Secure & Reliable", "description": "Enterprise-grade encryption, local failover storage, and automatic reconnection ensure your surveillance never goes down — even during internet outages."}
     ],
-    "benefits": ["Upgrade 100+ cameras to cloud AI for a fraction of replacement cost", "Works with any ONVIF-compatible IP camera from any manufacturer", "Zero downtime during deployment — plug in and go", "Instantly gain AI analytics, cloud recording, and remote access", "Compatible with ArcisGPT for natural language video search", "Reduces total cost of ownership by 60-80% vs. full replacement"],
+    "benefits": ["Upgrade 100+ cameras to cloud AI for a fraction of replacement cost", "Works with any ONVIF-compatible IP camera from any manufacturer", "Zero downtime during deployment — plug in and go", "Instantly gain AI analytics, cloud recording, and remote access", "Compatible with ArcisGPT for natural language video search", "Can cost much less than replacing every camera"],
     "faq": [
       {"q": "What cameras work with the ArcisAI Bridge Device?", "a": "ABD works with any ONVIF-compatible IP camera — regardless of manufacturer. If your camera supports ONVIF protocol, it supports ArcisAI. This includes cameras from Hikvision, Dahua, Axis, Bosch, and hundreds of other brands."},
       {"q": "How many cameras can one ABD support?", "a": "Each ABD can connect and manage multiple cameras. The exact number depends on resolution and bandwidth requirements. For large deployments, multiple ABDs can be managed from a single ArcisAI VMS instance."},
       {"q": "Do I need to replace my existing NVR?", "a": "No. ABD works alongside your existing NVR. It adds cloud recording, AI analytics, and remote access as a parallel layer — your existing local recording continues uninterrupted."},
-      {"q": "What's the ROI of using ABD vs. replacing cameras?", "a": "Typically, ABD deployment costs 60-80% less than replacing an equivalent number of cameras. For a 100-camera facility, this translates to savings of several lakhs while gaining superior AI and cloud capabilities."}
+      {"q": "What's the ROI of using ABD vs. replacing cameras?", "a": "Typically, ABD deployment usually costs much less than replacing the same number of cameras. Ask our team for a quote for your site. For a 100-camera facility, this translates to savings of several lakhs while gaining superior AI and cloud capabilities."}
     ],
     "cta": {"title": "Calculate Your Upgrade Savings", "subtitle": "See how much you save by upgrading with ABD instead of replacing cameras."}
   },
@@ -143,7 +143,7 @@ const seoPageDataExpansion5 = {
     "faq": [
       {"q": "Is ArcisAI truly Made in India?", "a": "Yes. ArcisAI by Adiance Technologies manufactures cameras in-house on its own SMT lines in India using non-Chinese SoCs. The entire ecosystem — cameras, VMS, cloud platform, and AI models — is designed and built in India."},
       {"q": "Does ArcisAI use Chinese components?", "a": "ArcisAI uses non-Chinese System-on-Chip (SoC) processors and designs its own PCBs. This is critical for government installations where Chinese-origin components face restrictions and data sovereignty concerns."},
-      {"q": "Can ArcisAI be used in government projects?", "a": "Absolutely. ArcisAI holds STQC certification, BIS certification, and ISO 27001 — meeting all procurement requirements for government tenders, Smart Cities Mission projects, defense installations, and public infrastructure."},
+      {"q": "Can ArcisAI be used in government projects?", "a": "Absolutely. ArcisAI holds STQC certification, BIS certification, and ISO 27001. Check each tender's eligibility rules before you bid."},
       {"q": "Does ArcisAI offer OEM/ODM for channel partners?", "a": "Yes. ArcisAI offers white-label manufacturing for system integrators and channel partners who want Indian-manufactured, STQC-certified cameras under their own brand."}
     ],
     "cta": {"title": "Partner with India's AI CCTV Manufacturer", "subtitle": "Explore OEM/ODM opportunities or request a product demo."}
@@ -162,13 +162,13 @@ const seoPageDataExpansion5 = {
       {"title": "Crowd & Traffic Analytics", "description": "AI-powered crowd density monitoring, traffic flow analysis, vehicle counting, and congestion detection. Real-time alerts when crowd sizes or traffic conditions exceed safety thresholds."},
       {"title": "Public Safety Surveillance", "description": "Human detection, face recognition, suspicious object detection, and area intrusion alerts help law enforcement maintain public safety across parks, transit stations, and public spaces."},
       {"title": "Multi-Site City-Wide Deployment", "description": "ArcisAI VMS manages cameras across hundreds of locations from a single dashboard — perfect for city-wide deployments spanning wards, zones, and municipal boundaries."},
-      {"title": "STQC Compliant for Government", "description": "Meets all procurement requirements for Smart Cities Mission tenders. STQC certified VMS, BIS certified hardware, ISO 27001 information security — zero compliance gaps."}
+      {"title": "STQC Compliant for Government", "description": "Built for Smart Cities Mission tender requirements. STQC certified VMS, BIS certified hardware, ISO 27001 information security."}
     ],
     "benefits": ["Complete Smart City surveillance ecosystem — cameras + VMS + cloud AI", "ICCC integration ready with unified dashboard", "STQC certified for government procurement compliance", "Handles city-wide deployments with thousands of cameras", "AI analytics for crowd, traffic, and public safety", "Made in India — meets all domestic procurement preferences"],
     "faq": [
       {"q": "Can ArcisAI integrate with existing ICCC infrastructure?", "a": "Yes. ArcisAI VMS is designed for ICCC integration, providing video feeds, AI analytics, and alert management through standard protocols. The system can complement existing city infrastructure without requiring complete replacement."},
       {"q": "How many cameras can ArcisAI VMS manage for a smart city?", "a": "ArcisAI VMS is architected for city-scale deployments and can manage thousands of cameras across distributed locations. The hierarchical architecture supports ward-level, zone-level, and city-level management views."},
-      {"q": "Is ArcisAI approved for Smart Cities Mission projects?", "a": "ArcisAI holds STQC certification for both VMS and camera products, meeting the mandatory compliance requirements for Smart Cities Mission procurement. Combined with BIS and ISO 27001 certifications, ArcisAI meets all government tender qualifications."},
+      {"q": "Is ArcisAI approved for Smart Cities Mission projects?", "a": "ArcisAI cameras are BIS-ER certified (R-72003735) and its VMS is STQC certified. Always check each tender's exact eligibility rules before you bid."},
       {"q": "Does ArcisAI support ANPR for traffic management?", "a": "Yes. ArcisAI's AI analytics include vehicle detection, counting, and recognition capabilities. The platform supports traffic monitoring, speed detection, and wrong-way alerts as part of its smart city traffic management features."}
     ],
     "cta": {"title": "Deploy Smart City Surveillance", "subtitle": "Contact us for a Smart City deployment assessment and ICCC integration demo."}
@@ -214,7 +214,7 @@ const seoPageDataExpansion5 = {
       {"title": "Multi-Branch Central Monitoring", "description": "ArcisAI VMS manages cameras across hundreds of bank branches and ATMs from a single centralized security operations center — with live feeds, alerts, and instant playback."},
       {"title": "RBI & STQC Compliance", "description": "STQC certified VMS, ISO 27001 information security, and surveillance capabilities aligned with RBI guidelines for banking security and ATM surveillance requirements."}
     ],
-    "benefits": ["ATM tampering and skimming detection in real-time", "Vault monitoring with facial recognition access control", "Multi-branch centralized security operations", "STQC certified — meets RBI surveillance guidelines", "ArcisGPT for instant incident investigation across branches", "60-80% cost savings upgrading existing cameras via ABD"],
+    "benefits": ["ATM tampering and skimming detection in real-time", "Vault monitoring with facial recognition access control", "Multi-branch centralized security operations", "STQC certified — meets RBI surveillance guidelines", "ArcisGPT for instant incident investigation across branches", "Lower-cost upgrade of existing cameras via ABD"],
     "faq": [
       {"q": "What RBI surveillance requirements does ArcisAI meet?", "a": "ArcisAI provides 24/7 recording, tamper detection, remote monitoring, and audit trail capabilities required by RBI guidelines for ATM and branch surveillance. The STQC certified VMS and ISO 27001 certification demonstrate compliance with security standards."},
       {"q": "Can ArcisAI detect ATM skimming devices?", "a": "ArcisAI's Edge AI can detect unusual objects and modifications to ATM machines, along with suspicious behavior patterns near ATMs such as prolonged loitering or device installation attempts. Combined with instant alerts, this helps prevent skimming attacks."},
